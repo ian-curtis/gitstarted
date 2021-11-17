@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- This frontmatter division will contain all content before the -->
+<!-- first chapter.  Fill in and comment/uncomment to see how this -->
+<!-- works.                                                        -->
+
+<frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
+  <titlepage>
+    <author>
+      <personname>Ian Curtis</personname>
+      <!-- <department>My department</department> -->
+      <!-- <institution>My school</institution> -->
+    </author>
+    <date><today/></date>
+  </titlepage>
+
+  <colophon>
+    <!-- <website>
+      <name><c>my-website.org</c></name>
+      <address>http://my.website.org</address>
+    </website> -->
+
+    <copyright>
+      <!-- In addition to specifying the copyright holder, you should  -->
+      <!-- include a license, such as the cc-by-sa license shown below -->
+      <!-- so people reading your book know how they can use it.       -->
+      <year>2021</year>
+      <holder>Ian Curtis</holder>
+      <!-- <minilicense><image source="../images/by-sa.png" /></minilicense> -->
+      <shortlicense>
+        <!-- <image source="../images/by-sa.png" width="15%"/>  -->
+        This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. 
+        To view a copy of this license, visit 
+        <url href="http://creativecommons.org/licenses/by-sa/4.0/">http://creativecommons.org/licenses/by-sa/4.0/</url>
+      </shortlicense>
+
+    </copyright>
+
+  </colophon>
+
+  <!-- <dedication>
+    <p>
+      To anyone who has no idea what Git is.
+    </p>
+  </dedication>
+
+  <acknowledgement>
+    <p>
+      I would like to thank...
+    </p>
+
+  </acknowledgement> -->
+
+  <!-- Prefaces here -->
+  <!-- <xi:include href="fm_materials" /> -->
+
+</frontmatter>
+
