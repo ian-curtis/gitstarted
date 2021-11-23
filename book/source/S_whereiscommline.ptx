@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="whereiscommline">
+  <title>Where is the Command Line?</title>
+  
+  <introduction>
+    <p>
+      If you have a computer, you have a terminal. You may not have ever used it or known it was there,
+      but it's hiding, waiting for use. Let's find it.
+    </p>
+  </introduction>
+  
+  <subsection xml:id="SS_commline-mac">
+    <title>On a Mac</title>
+      <p>
+        Luckily, the terminal is easy to find on a Mac: it's called <c>terminal.app</c> and can be 
+        found in numerous ways.
+        <ul>
+          <li>
+            <p>
+              (Recommended) Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search.
+              Start typing <q>terminal</q> and the app should pop up quickly. Press <kbd>Enter</kbd> 
+              or click on the result.
+            </p>
+          </li>
+          <li>
+            <p>
+              Navigate to the Applications folder in the Finder. Then, open the Utilities folder and 
+              double click on <c>terminal.app</c>
+            </p>
+          </li>
+          <li>
+            <p>
+              Find it through the Launchpad. What's the Launchpad, you ask? On most Mac keyboards, it 
+              is on the key corresponding to <kbd>F4</kbd> and looks like a bunch of boxes arranged in 
+              rows. You can also access the Launchpad by clicking the Launchpad icon in the Dock (also 
+              boxes arranged in rows) or by going into the Applications folder in the Finder and double 
+              clicking on the <c>Launchpad.app</c> icon. 
+            </p>
+            <p>
+              Once in the Launchpad, find the Terminal. You can either search for it in the search bar 
+              at the tope of the screen or scroll through your apps until you find it. (Note: it might 
+              be in the Other folder).
+            </p>
+          </li>
+        </ul>
+        Once you open the terminal, you should be presented with a blank screen, such as the one shown 
+        in <xref ref="mac-term-start"/>
+        <figure xml:id="mac-term-start">
+          <caption>Opening Screen for Mac Terminal</caption>
+          <image source="mac-term-start.png">
+            <description></description>
+            
+          </image>
+        </figure>
+      </p>
+      <assemblage>
+        <title>Note</title>
+        <p>
+          At the top of my terminal, it says <q>iancurtis<mdash/> -bash</q>. This indicates that
+          I am using the <c>bash</c> shell. This is no longer the default for MacOS Catalina and later 
+          (as the terminal states). 
+          I will be sticking with <c>bash</c> in this book to avoid differences between Windows and Mac 
+          instructions. 
+          If yours states something else (such as <c>zsh</c> or <c>fish</c>) and you would like to 
+          use <c>bash</c> to follow along, paste <c>chsh -s /bin/bash</c>
+          <fn>This command stands for <q>CHange the SHell to the shell called bash in the bin folder</q></fn> 
+          into the command line, press <kbd>Enter</kbd>, 
+          enter your password to your computer, and restart the terminal. Otherwise, you are free to 
+          stick with the default shell; just know that there may be slight differences between this 
+          textbook and your terminal.
+        </p>
+      </assemblage>
+  </subsection>
+
+  <subsection xml:id="S_commline-windows">
+    <title>On Windows</title>
+    <p>
+      For Windows users, the situation is a slightly more complicated. The underlying makeup of the 
+      operating systems on Windows is differet than the basis for MacOS and other Unix-like systems 
+      (such as Linux). This means that certain applications for Windows do not have a MacOS 
+      compliment (and likewise some Mac applications do not have Windows versions). In addition, the 
+      file system and organization are different bewteen the two, as we shall see later.
+    </p>
+    <p>
+      All this to say that separate instructions must be given for Windows users for certain tasks. 
+      To make life easier for you, me, and everyone else, I recommend <em>not</em> using the default 
+      Windows terminal which looks like <xref ref="windows-term-start"/>. 
+      <aside>
+        <p>
+          The default terminal for Windows is usually the Command Prompt. To access it, activate the 
+          search feature of your computer by clicking the search box at the bottom of 
+          your screen or by typing <kbd>Windows</kbd> + <kbd>S</kbd>. Then search for <q>command prompt</q>
+          and click on the result that comes up. You should see a screen that looks like 
+          <xref ref="windows-term-start"/>.
+        </p>
+      </aside>
+      
+      <figure xml:id="windows-term-start">
+        <caption>Opening Screen for Windows Command Prompt</caption>
+        <!-- <image source="windows-term-start.png">
+          <description></description>
+        </image> -->
+      </figure>
+    </p>
+    <p>
+      Instead, let's use a new terminal (Git Bash) that works well with Git (and conveniently uses the 
+      <c>bash</c> shell which allows me to use the same instructions for Mac as Windows). Detailed 
+      download instructions can be found in <xref text="title" ref="materials"></xref>. I will assume 
+      that you are using Git Bash for the remainder of the book.
+    </p>
+    <p>
+      Once you open Git Bash for the first time, you should see something like the screen in 
+      <xref ref="windows-bash-start"/>.
+      <figure xml:id="windows-bash-start">
+        <caption>Opening Screen for Git Bash (Windows)</caption>
+        <!-- <image source="windows-bash-start.png">
+          <description></description>
+        </image> -->
+      </figure>
+    </p>
+  </subsection>
+  <subsection>
+    <title>On Linux (*)</title>
+      
+  </subsection>
+</section>

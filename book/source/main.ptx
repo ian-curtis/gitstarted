@@ -11,7 +11,7 @@
     <title>Better Git Started</title>
     <subtitle>An Introduction to the Command Line, Git, and Github</subtitle>
 
-    <!-- <xi:include href="./frontmatter.ptx" /> -->
+    <xi:include href="./frontmatter.ptx" />
 
     <xi:include href="./C_commandline.ptx"/>
     

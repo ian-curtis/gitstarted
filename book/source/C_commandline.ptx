@@ -4,7 +4,13 @@
   <title>The Command Line</title>
   <introduction>
     <p>
-      So you came here to learn about Git? Stop right there! In order to learn Git, let's begin with 
+      So you came here to learn about Git? 
+    </p>
+    <p>
+      Stop right there! 
+    </p>
+    <p>
+      In order to learn Git, let's begin with 
       something a little less complex: the command line. Yep, the <q>hacker screen</q>, the plain-looking 
       interface you often see in spy movies. While we won't be doing any hacking, we will need to have 
       and understanding of the command line, its purpose, and some of its useful functions. 
@@ -16,8 +22,9 @@
     </p>
   </introduction>
 
-  <xi:include href="./S_commlinebasics.ptx" />
-  <!-- <xi:include href="./S_commlinecomms" />
-  <xi:include href="./S_commlinecustomize" /> -->
+  <xi:include href="./S_whatiscommline.ptx" />
+  <xi:include href="./S_whereiscommline.ptx" />
+  <xi:include href="./S_commlinecomms.ptx" />
+  <!-- <xi:include href="./S_commlinecustomize" /> -->
 
 </chapter>
