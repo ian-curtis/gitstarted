@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="S_whatiscommline">
+  <title>What is the Command Line? (*)</title>
+  <idx><h>command line</h></idx>
+  <idx><h>command prompt</h></idx>
+  <idx><h>command-line interface</h></idx>
+  <idx><h>terminal</h></idx>
+  <idx><h>shell</h></idx>
+  
+    <p>
+      The first step to tackling the command line is to not be scared. Sure, it looks daunting and if you 
+      make a mistake you might some lengthy error messages, but at the very least, the command line 
+      <em>is just another way to interact with your computer</em>.
+    </p>
+  
+    <p>
+      The <term>command line</term> (also known as a <term>command prompt</term>,  
+      <term>command-line interface</term>, or <term>terminal</term>) is an application that accepts 
+      lines of text and sends that text to your computer which performs an action. 
+
+      You may also hear about shells. A <term>shell</term> helps make the command line more interactive 
+      and user friendly. Some shells add colors,  informative information, and/or predictive text. We will 
+      return to shells and command line customization in <xref provisional="commline customize"/>. For 
+      now, do not worry about the details behind shells. A knowledge of them is not necessary to use Git, 
+      but they can help make things a little easier.
+    </p>
+    <p>
+      Terminals are powerful and fast. Think of them as a more direct way to interact with your computer.
+      You can delete files with the terminal. You can create new files. You can move files. You can open 
+      files. And more. There are many, many complicated and hard-to-comprehend functions of the command 
+      line. Rest assured, this chapter sticks with the basics; we will learn necessary functions for 
+      using Git (and a few others).
+    </p>
+
+      <!-- tk More juicy details on the command line? -->
+
+</section>
