@@ -24,14 +24,14 @@
     <!-- The attribute @chapter-start give the number of the first    -->
     <!-- chapter.  @level says how deep (chapter->section->subsection)-->
     <!-- numbering should appear.                                     -->
-      <!-- For use with a book organized by parts
-    <divisions part-structure="decorative" chapter-start="1" level="3"/>
-      -->
+      <!-- For use with a book organized by parts -->
+    <divisions chapter-start="0" level="3"/>
+    
     <!-- The next elements say how the levels deep to break up the    -->
     <!-- numbering of the respective elements. Can't be more than the -->
     <!-- @level on divisions above.                                   -->
     <blocks level="2"/>
-    <projects level="0"/>
+    <projects level="1"/>
     <equations level="1"/>
     <footnotes level="0"/>
   </numbering>
@@ -54,7 +54,7 @@
     <!-- @colors now implemented                               -->
     <!-- also @knowls, @toc, and @banner, although no          -->
     <!-- alternative styles exist yet for those.               -->
-    <css style="default" colors="blue_red"/>
+    <css style="default" colors="ruby_turquoise"/>
     <!-- Magic IDs identify HTML pages to analytics services   -->
     <!-- Presence implies relevant Javascript will be added    -->
     <!-- StatCounter requires both values to be set            -->

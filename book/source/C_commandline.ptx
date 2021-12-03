@@ -24,7 +24,8 @@
 
   <xi:include href="./S_whatiscommline.ptx" />
   <xi:include href="./S_whereiscommline.ptx" />
-  <xi:include href="./S_commlinecomms.ptx" />
-  <!-- <xi:include href="./S_commlinecustomize" /> -->
+  <xi:include href="./S_commands.ptx" />
+  <xi:include href="S_advcommands.ptx" />
+  <xi:include href="./S_commlinecustom.ptx" />
 
 </chapter>

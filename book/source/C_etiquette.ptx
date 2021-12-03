@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="C_etiquette" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Basic Computer Etiquette</title>
+  
+  <introduction>
+    <p>
+      For those who do not have a lot of experience with computers, start here for an introduction 
+      into certain computer basics. This book assumes that you are familiar with the content in this 
+      chapter. Don't worry, I don't assume you know anything about the <q>command line</q> (this 
+      will be introduced in <xref ref="S_whatiscommline"/>) or Git (<xref provisional="C_git"/>). 
+    </p>
+    <p>
+      However, for the content of this book to make sense, a few basics must be covered, such as proper 
+      file naming and a knowledge of common file extensions. Taking the time to read this chapter 
+      <em>will</em> pay off in the long run and will make using the command line and Git simpler 
+      (and we love simplicity, espeically with computers!).
+    </p>
+  </introduction>
+
+  <xi:include href="S_filenames.ptx" />
+  <xi:include href="S_fileextensions.ptx" />
+
+</chapter>
