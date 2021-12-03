@@ -1,6 +1,173 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <section xml:id="S_fileextensions">
-  <title>File Paths and Extensions (*)</title>
-  
+  <title>File Extensions (*)</title>
+  <idx><h>file extensions</h></idx>
+  <idx><h>file</h><h>extensions</h></idx>
+  <introduction>
+    <p>
+      There are many different types of files. At the very basics, we have images, videos, documents, and 
+      songs, but there are so many more. Even within each of those categories, there are numerous types.
+      You may be familiar with a PDF and a Word Document. Both of those could be classified as 
+      <q>documents</q>, but are interacted with very differently. Whether you are an advanced computer 
+      programmer or someone who uses a computer for every-day purposes, an understanding of file 
+      extensions is essential. <term>File extensions</term> help us understand what type of file we 
+      are working with and give us an idea of how we can interact with that file. The following chunks
+      give common (and some not so common) extensions for various categories. Refer back to this 
+      section often, espeically if you find yourself forgetting what a file is.
+    </p>
+    <p>
+      Hint: <kbd>Control</kbd> + <kbd>F</kbd> or <kbd>Command</kbd> + <kbd>F</kbd> work well on this page.
+    </p>
+  </introduction>
+
+  <subsection xml:id="extensions-images">
+    <title>Images</title>
+
+    <p>
+      Why would we need more than on extension for an image? A photo is a photo, right? Wrong.
+      Each of the file extensions have unique aspects and features. For instance, the Apple <c>.heic</c>
+      file often takes up less storage space. However, not all programs can open them. 
+      The <url href="https://guides.lib.umich.edu/c.php?g=282942&amp;p=1885348">University of Michigan</url> 
+      and <url href="https://kinsta.com/blog/image-file-types/">Kinsta</url>
+      have great guides on the differences between some image file extensions. The table here just lists 
+      the extensions and what they are, not the details on their use.
+    </p>
+    
+    <table xml:id="tbl-image-extensions">
+        <title>Image File Extensions</title>
+        <tabular halign="center">
+          <row header="yes">
+            <cell>Extension</cell>
+            <cell>File Type</cell>
+          </row>
+          <row>
+            <cell><c>.jpg</c> or <c>.jpeg</c></cell>
+            <cell>Joint Photographic Experts Groups image</cell>
+          </row>
+          <row>
+            <cell><c>.png</c></cell>
+            <cell>Portable Network Graphics image</cell>
+          </row>
+          <row>
+            <cell><c>.svg</c></cell>
+            <cell>Scalable Vector Graphics image</cell>
+          </row>
+          <row>
+            <cell><c>.gif</c></cell>
+            <cell>A looped image/video blend</cell>
+          </row>
+          <row>
+            <cell><c>.eps</c></cell>
+            <cell>Encapsulated PostScript (vector) image</cell>
+          </row>
+          <row>
+            <cell><c>.bmp</c></cell>
+            <cell>Bitmap image</cell>
+          </row>
+          <row>
+            <cell><c>.tif</c> or <c>.tiff</c></cell>
+            <cell>Tagged Image File Format</cell>
+          </row>
+          <row>
+            <cell><c>.raw</c></cell>
+            <cell>Raw image (usually from a camera)</cell>
+          </row>
+          <row>
+            <cell><c>.HEIF</c></cell>
+            <cell>High Efficiency Image File</cell>
+          </row>
+          <row>
+            <cell><c>.HEIC</c></cell>
+            <cell>High Efficiency Image Container (Apple)</cell>
+          </row>
+           <row>
+            <cell><c>.psd</c></cell>
+            <cell>Adobe Photoshop</cell>
+          </row>
+           <row>
+            <cell><c>.ai</c></cell>
+            <cell>Adobe Illustrator</cell>
+          </row>
+        </tabular>
+      </table>
+
+  </subsection>
+
+  <subsection xml:id="extensions-videos">
+    <title>Videos</title>
+
+    <p>
+      <url href="https://www.adobe.com/creativecloud/video/discover/best-video-format.html">Adobe</url> 
+      has a great guide on the differences between some video file extensions. The table here just lists 
+      the extensions and what they are, not the details on their use.
+    </p>
+    
+    <table xml:id="tbl-video-extensions">
+        <title>Video File Extensions</title>
+        <tabular halign="center">
+          <row header="yes">
+            <cell>Extension</cell>
+            <cell>File Type</cell>
+          </row>
+          <row>
+            <cell><c>.mp4</c></cell>
+            <cell>MPEG-4</cell>
+          </row>
+          <row>
+            <cell><c>.mov</c></cell>
+            <cell>QuickTime Movie</cell>
+          </row>
+          <row>
+            <cell><c>.wmv</c></cell>
+            <cell>Windows Media Viewer</cell>
+          </row>
+          <row>
+            <cell><c>.avi</c></cell>
+            <cell>Audio Video Interleave</cell>
+          </row>
+          <row>
+            <cell><c>.prproj</c></cell>
+            <cell>Adobe Premiere Pro Project</cell>
+          </row>
+          <row>
+            <cell><c>.bmp</c></cell>
+            <cell>Bitmap image</cell>
+          </row>
+          <row>
+            <cell><c>.tif</c> or <c>.tiff</c></cell>
+            <cell>Tagged Image File Format</cell>
+          </row>
+          <row>
+            <cell><c>.raw</c></cell>
+            <cell>Raw image (usually from a camera)</cell>
+          </row>
+          <row>
+            <cell><c>.HEIF</c></cell>
+            <cell>High Efficiency Image File</cell>
+          </row>
+          <row>
+            <cell><c>.HEIC</c></cell>
+            <cell>High Efficiency Image Container (Apple)</cell>
+          </row>
+           <row>
+            <cell><c>.aep</c></cell>
+            <cell>Adobe After Effect Project</cell>
+          </row>
+           <row>
+            <cell><c>.fcp</c></cell>
+            <cell>Apple Final Cut Project</cell>
+          </row>
+           <row>
+            <cell><c>.camproj</c></cell>
+            <cell>Camtasia Project</cell>
+          </row>
+           <row>
+            <cell><c>.m4v</c></cell>
+            <cell>iTunes Movie File</cell>
+          </row>
+        </tabular>
+      </table>
+
+  </subsection>
 </section>

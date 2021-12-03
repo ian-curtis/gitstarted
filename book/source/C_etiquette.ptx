@@ -20,5 +20,6 @@
 
   <xi:include href="S_filenames.ptx" />
   <xi:include href="S_fileextensions.ptx" />
+  <xi:include href="S_filepaths.ptx" />
 
 </chapter>

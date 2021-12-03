@@ -23,6 +23,7 @@
     <p>
     <idx><h><c>pwd</c></h></idx>
     <idx><h>present working directory</h></idx>
+    <idx><h>directory</h><h>present working</h></idx>
       Our first command will show us where we are: <c>pwd</c>, which stands for 
       <term>present working directory</term>. 
       <note xml:id="foldernotdirect">
@@ -77,6 +78,7 @@
       <idx><h>change directory</h></idx>
       <idx><h>file-path syntax</h></idx>
       <idx><h>syntax</h><h>file-path</h></idx>
+      <idx><h>directory</h><h>change</h></idx>
     <p>
       Knowing where you are is great, but as of right now, we are stuck in one place. What use is 
       <c>pwd</c> if we can't move anywhere? By default, your terminal places you in the <q>highest</q> 
@@ -173,6 +175,8 @@
     <paragraphs xml:id="touch">
       <title>Using <c>touch</c></title>
       <idx><h><c>touch</c></h></idx>
+      <idx><h>add file</h></idx>
+      <idx><h>file</h><h>add</h></idx>
       <p>
         Creating a new file is simple. The command requires three parts:
         <ol>
@@ -275,90 +279,14 @@
             The purpose of this activity is to demonstrate the importance of file extensions. When none 
             are provided, your computer either has to guess what the file's contents are or simply cannot 
             interpret the file and asks you for help. We would like to avoid computer confusion as much as 
-            possible. Common file extensions and their file types are shown in 
-            <xref ref="table-extensions"/>. 
+            possible. Common file extensions and their file types are listed in 
+            <xref ref="S_fileextensions"/>. 
           </p>
         </conclusion>
 
       </activity>
 
-      <table xml:id="table-extensions">
-        <title>Common File Extensions</title>
-        <tabular halign="center">
-          <row header="yes">
-            <cell>Extension</cell>
-            <cell>File Type</cell>
-          </row>
-          <row>
-            <cell><c>.txt</c></cell>
-            <cell>Simple text file</cell>
-          </row>
-          <row>
-            <cell><c>.pdf</c></cell>
-            <cell>Adobe PDF file</cell>
-          </row>
-          <row>
-            <cell><c>.doc</c> or <c>.docx</c></cell>
-            <cell>Microsoft Word file</cell>
-          </row>
-          <row>
-            <cell><c>.xsl</c> or <c>.xslx</c></cell>
-            <cell>Microsoft Excel file</cell>
-          </row>
-          <row>
-            <cell><c>.ppt</c> or <c>.pptx</c></cell>
-            <cell>Microsoft Powerpoint file</cell>
-          </row>
-          <row>
-            <cell><c>.jpg</c> or <c>.jpeg</c></cell>
-            <cell>JPG/JPEG image</cell>
-          </row>
-          <row>
-            <cell><c>.png</c></cell>
-            <cell>PNG image</cell>
-          </row>
-          <row>
-            <cell><c>.svg</c></cell>
-            <cell>Scalable Vector Graphics image</cell>
-          </row>
-          <row>
-            <cell><c>.gif</c></cell>
-            <cell>A looped image/video blend</cell>
-          </row>
-          <row>
-            <cell><c>.zip</c> or <c>.tar.gz</c></cell>
-            <cell>Compressed Files</cell>
-          </row>
-          <row>
-            <cell><c>.app</c></cell>
-            <cell>(Mac) An application</cell>
-          </row>
-          <row>
-            <cell><c>.exe</c></cell>
-            <cell>(Windowns) An executable file (an application)</cell>
-          </row>
-          <row>
-            <cell><c>.mp3</c></cell>
-            <cell>An mp3 audio file</cell>
-          </row>
-          <row>
-            <cell><c>.wav</c></cell>
-            <cell>A WAV audio file</cell>
-          </row>
-          <row>
-            <cell><c>.m4a</c></cell>
-            <cell>An iTunes audio file</cell>
-          </row>
-          <row>
-            <cell><c>.mp4</c></cell>
-            <cell>A video file</cell>
-          </row>
-          <row>
-            <cell><c>.mov</c></cell>
-            <cell>A movie (video) file</cell>
-          </row>
-        </tabular>
-      </table>
+      
 
       <p>
         Just remember, anytime you wish to create a file, you need <c>touch</c>, a name, and an extension.
@@ -370,7 +298,8 @@
       <title>Using <c>open</c></title>
       <idx><h><c>open</c></h></idx>
       <idx><h><c>start</c></h></idx>
-      <idx><h>open files</h></idx>
+      <idx><h>open file</h></idx>
+      <idx><h>file</h><h>open</h></idx>
       <p>
         Once a file is created, opening it is simple: just use the <c>open</c> (Mac) or <c>start</c> 
         (Windows) command. To <term>open</term> or <term>start</term>
@@ -415,7 +344,8 @@
     <paragraphs xml:id="killall">
       <title>Using <c>killall</c> (*)</title>
       <idx><h><c>killall</c></h></idx>
-      <idx><h>close files</h></idx>
+      <idx><h>close file</h></idx>
+      <idx><h>file</h><h>close</h></idx>
       <p>
         <alert>This command is only on Mac.</alert>
       </p>
@@ -466,6 +396,7 @@
       <title>Using <c>mkdir</c></title>
       <idx><h><c>mkdir</c></h></idx>
       <idx><h>make directory</h></idx>
+      <idx><h>directory</h><h>make</h></idx>
       <p>
         We've seen how to use the terminal to create new files; however, sometimes files aren't enough. 
         With the command line, we can also create new directories 
@@ -624,7 +555,8 @@
     <paragraphs xml:id="rm">
       <title>Using <c>rm</c></title>
       <idx><h>rm</h></idx>
-      <idx><h>remove files</h></idx>
+      <idx><h>remove file</h></idx>
+      <idx><h>file</h><h>remove</h></idx>
       <p>
         <term>Removing</term> a file with <c>rm</c> has the exact same syntax as using <c>touch</c> 
         (<xref text="title" ref="touch"/>) except that instead of <c>touch</c>, we use <c>rm</c>. To summarize, 
@@ -714,6 +646,7 @@
       <idx><h>backwards <c>cd</c></h></idx>
       <idx><h>parent directory</h></idx>
       <idx><h>directory</h><h>parent</h></idx>
+      <idx><h>directory</h><h>change backwards</h></idx>
 
       <p>
         Alright! We cleared the contents of our <c>testdir</c> directory. Remember, the ultimate goal of 
@@ -758,8 +691,8 @@
     <paragraphs xml:id="using-rmdir">
       <title>Using <c>rmdir</c></title>
       <idx><h><c>rmdir</c></h></idx>
-      <idx><h>remove directories</h></idx>
-      <idx><h>directories</h><h>remove</h></idx>
+      <idx><h>remove directory</h></idx>
+      <idx><h>directory</h><h>remove</h></idx>
       
       <p>
         You have the tools you need to remove files, but what about directories? If you'd like, try 
