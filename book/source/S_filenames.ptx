@@ -123,6 +123,12 @@
           </blockquote>
         And we still know what it's about!
       </p>
+      <p>
+        A quick word of caution. Take care not to over-abbreviate. It may not be necessary to abbreviate every 
+        word. For instance, I wouldn't change <q>you</q> to <q>y</q> 
+        or <q>gate</q> to <q>gt</q>. You may be confused later: does <q>gt</q> mean <q>gate</q>, <q>git</q>, 
+        <q>get</q>, <q>gut</q>, <q>agate</q>, etc., etc.?
+      </p>
     </assemblage>
 
     <p>
@@ -218,8 +224,22 @@
       Note that I got rid of the <q>and</q>. Cases are useful in that they make it easy to remove articles 
       and prepositions which in turn helps us keep file names nice and short.
     </p>
+
     <p>
-      It's worth repeating once again. File names should not contain spaces.
+      It is also important to keep your file names consistent. If I had another file about chapter 5 of 
+      this textbook which is about cluster sampling, let's say, I would want to name it something like 
+      <blockquote>
+        ch5_clstr_smplng.pdf
+      </blockquote>
+      Notice that the structure is the same as before: first I have <q>ch5</q> to represent the chapter 
+      number, then I describe the chapter with <q>clstr_smplng</q>. Like before, I use snake_case and 
+      I made sure to use the same abbreviation for <q>sampling</q> as I did before. Consistency is key 
+      for our own sanity and so we can quickly scan for the file we need.
+    </p>
+
+    <p>
+      It's worth repeating once again. File names should not contain spaces. Files about related content 
+      should have a similar naming scheme.
     </p>
     <p>
       Sorry, once more. This time, I'm going to yell. <alert>File names should not contain spaces.</alert>
@@ -245,15 +265,834 @@
 </subsection>
 
 <subsection xml:id="SS_practicenaming">
-  <title>Exploring File Naming Techniques</title>
+  <title>Exploring File and Folder Naming Techniques</title>
   
   <introduction>
     <p>
-      Wow, there were a lot of words in <xref ref="SS_namingconventions"/>. Let's make sense of them here 
+      There were a lot of words in <xref ref="SS_namingconventions"/>. Let's make sense of them here 
       with an extensive example. There will be some questions throughout the way. I encourage you to think 
       about them and make sure you have understood the naming conventions above.
     </p>
   </introduction>
+
+  <worksheet xml:id="taylorswiftfolder">
+    <title>Folder Naming</title>
+    <introduction>
+      <p>
+        Suppose you work for Taylor Swift (wouldn't that be cool!). She is super busy right now recording 
+        albums, writing songs, spending time with family and friends, and making TikToks and needs your 
+        help. She has all of her songs saved on her computer in folders which are divided up by one album 
+        per folder. However, she knows that her naming techniques for the folders and files is not the 
+        best. As such, she has asked you to help her rename her files so that she still knows what each song is, 
+        but follows proper naming conventions. Use your knowledge from above to help Taylor out.
+      </p>
+      <p>
+       We will start with her folders. Following is a list of her current folder names:
+       <aside>
+         <p>
+           These are probably not her real folder names. Actually, she might not even have her 
+           music on her own computer; the record label stores them. So please don't assume that I am 
+           critquing Taylor's file naming or her in general (I have nothing to critique anyways). 
+           I just made this example up so you can 
+           practice your file naming. 
+         </p>
+       </aside>
+
+       <ul cols="2">
+         <li>
+           <p>
+             Taylor Swift
+           </p>
+         </li>
+         <li>
+           <p>
+             Taylor Swift (Deluxe)
+           </p>
+         </li>
+         <li>
+           <p>
+             Live From Clear Channel Stripped 2008
+           </p>
+         </li>
+         <li>
+           <p>
+             Fearless
+           </p>
+         </li>
+         <li>
+           <p>
+              Fearless (Platinum Edition)
+           </p>
+         </li>
+         <li>
+           <p>
+             The Taylor Swift Holiday Collection
+           </p>
+         </li>
+         <li>
+           <p>
+             Speak Now
+           </p>
+         </li>
+         <li>
+           <p>
+             Speak Now (Deluxe Edition)
+           </p>
+         </li>
+         <li>
+           <p>
+             Speak Now World Tour Live
+           </p>
+         </li>
+         <li>
+           <p>
+             Red
+           </p>
+         </li>
+         <li>
+           <p>
+             Red (Deluxe Edition)
+           </p>
+         </li>
+         <li>
+           <p>
+             1989
+           </p>
+         </li>
+         <li>
+           <p>
+             1989 (Deluxe Edition)
+           </p>
+         </li>
+         <li>
+           <p>
+             reputation
+           </p>
+         </li>
+         <li>
+           <p>
+             Lover
+           </p>
+         </li>
+         <li>
+           <p>
+             folklore
+           </p>
+         </li>
+         <li>
+           <p>
+             folklore (deluxe edtion)
+           </p>
+         </li>
+         <li>
+           <p>
+             folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]
+           </p>
+         </li>
+         <li>
+           <p>
+             evermore
+           </p>
+         </li>
+         <li>
+           <p>
+             evermore (deluxe version)
+           </p>
+         </li>
+         <li>
+           <p>
+             Fearless (Taylor's Version)
+           </p>
+         </li>
+         <li>
+           <p>
+             Red (Taylor's Version)
+           </p>
+         </li>
+         <li>
+           <p>
+             Unreleased Music
+           </p>
+         </li>
+         <li>
+           <p>
+             Singles
+           </p>
+         </li>
+       </ul> 
+      </p>
+      <p>
+        Wow! That's a lot of albums! <fn>And they're all amazing. (Sorry, couldn't help it.)</fn>
+        Complete the following tasks to make Taylor's life a little easier for the future.
+      </p>
+      <p>
+        Please note that the answers to many of these exercises will vary depending on personal preferences. 
+        I will give answers depending on how I might approach the problem; these are not definitive at all.
+      </p>
+    </introduction>
+
+    <exercise>
+      <statement>
+        <p>
+          Before we trying fixing a problem, let's figure out what the problem is. What do you notice 
+          about these folder names? What about them is <q>incorrect</q>?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The main thing that pops out to me are the spaces. Every multi-word folder name has a space. 
+          Secondly, some of the names are very long. Third, there is not much consistency. Some names are 
+          capitalized, others aren't. There are clearly deluxe versions of albums but some say <q>deluxe</q>,
+          others say <q>deluxe version</q>, and even others say <q>deluxe edition</q>. 
+        </p>
+        <p>
+          The three here are the 
+          main issues; you may have thought of others. Great! I'm sure they are good observations. 
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="taylorswiftgroups">
+      <statement>
+        <p>
+          Ok, we've identified a problem. How can we go about deciding what to do about it? You may 
+          already have some ideas, but stick with me here. Let's not just dive in and start removing spaces 
+          and shortening folder names. Instead, let's make a plan.
+        </p>
+        <p>
+          Identify some naming patterns. Are there any album names that are similar? Can you form any groups 
+          of names?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          There are probably a lot of patterns you could have noticed. I grouped folder names into
+          <ol label="1">
+            <li>
+              <p>
+                <q>Regular</q> albums
+              </p>
+            </li>
+            <li>
+              <p>
+                Deluxe albums
+              </p>
+            </li>
+            <li>
+              <p>
+                Live albums
+              </p>
+            </li>
+            <li>
+              <p>
+                Taylor's Version albums
+              </p>
+            </li>
+            <li>
+              <p>
+                Other
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          I am going to continue with the groups in the solution to <xref ref="taylorswiftgroups"/>. 
+          Feel free to branch off with your own groups or stick with me. 
+        </p>
+        <p>
+          Now that we have groups, we can figure out how to name one of each group, then apply that 
+          naming style to all names in the group. Start with the <q>regular albums</q>, such as <q>Taylor 
+          Swift</q>. How can you change this name to stick with the conventions discussed above? 
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Since there aren't any special modifiers to these albums (such as deluxe or live), I say we just 
+          keep their name, but write them in kebab-case. Therefore, <q>Taylor Swift</q> would become 
+          <q>taylor-swift</q>.
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Apply the naming to scheme to all folders with <q>regular</q> album titles.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The following names are the modified versions:
+          <ul cols="2">
+            <li>
+              <p>
+                <c>taylor-swift</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>fearless</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>speak-now</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>red</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>1989</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>reputation</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>lover</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>folklore</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>evermore</c>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Continue with the deluxe group. Identify patterns, change one name, then apply those 
+          changes to all the names in the group. Use your best judgement, but don't stress about the 
+          <q>perfect</q> name.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          For the deluxe albums, the similarity is the word <q>deluxe</q>. I don't bother with 
+          <q>edition</q> or <q>version</q>, <q>deluxe</q> is enough to convey the necessary information.
+          I also would like to abbreviate <q>deluxe</q> to <q>dlx</q>. You could also choose to keep the 
+          full word, but since we can't ask Taylor what she would prefer, I am sticking with the shorter. 
+          <q>dlx</q> gets the point across (this is a deluxe album) with 3 less characters. Following are 
+          my changes for the deluxe group. There is one outlier: the Fearless Platinum Edition. I am 
+          going to retain the <q>platinum</q> name since that is its true name.
+
+          <ul cols="2">
+            <li>
+              <p>
+                <c>taylor-swift-dlx</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>fearless-pltnm</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>speak-now-dlx</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>red-dlx</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>1989-dlx</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>folklore-dlx</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>evermore-dlx</c>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Continue with the live group. Identify patterns, change one name, then apply those 
+          changes to all the names in the group. Use your best judgement, but don't stress about the 
+          <q>perfect</q> name.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          There are only two in this group, but there could be more in the future. Let's use <q>live</q> 
+          to differentiate these folders from the others. I am choosing to not use <q>lve</q> or <q>lv</q> because 
+          I think there are slightly ambiguous (it could mean <q>love</q>!).
+          <ul>
+            <li>
+              <p>
+                <c>clear-chnl-live</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>speak-now-live</c>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Continue with the Taylor's Version group. Identify patterns, change one name, then apply those 
+          changes to all the names in the group. Use your best judgement, but don't stress about the 
+          <q>perfect</q> name.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I am going to again use kebab-case and use <q>tv</q> to indicate that the album is a Taylor's 
+          Version. This will help cut down on name length.
+          <ul>
+            <li>
+              <p>
+                <c>fearless-tv</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>red-tv</c>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Continue with the other group. Identify patterns, change one name, then apply those 
+          changes to all the names in the group. Use your best judgement, but don't stress about the 
+          <q>perfect</q> name.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          These are mostly up to you. They have no specific pattern, but I will still apply kebab-case 
+          and shorten the names.
+          <ul>
+            <li>
+              <p>
+                <c>holiday-clctn</c> (I could even use <c>holiday</c> since there is only one holiday album)
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>folklore-dsny-dlx</c> (yes, this is a deluxe album, but to me, the Disney part of it is unique)
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>unreleased</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>singles</c>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </solution>
+    </exercise>
+
+    <conclusion>
+      <p>
+        I think that's all of them! That may have seemed like a lot of work but I hope it was worthwhile.
+        It should now be much easier for Taylor to navigate her folders and quickly know that album they 
+        contain.
+      </p>
+    </conclusion>
+
+  </worksheet>
+
+  <worksheet xml:id="taylorswiftfiles">
+    <title>File Naming</title>
+    <introduction>
+      <p>
+        If you feel like you have a good grasp of naming systems, feel free to skip with activity. 
+        If not, let's explore file naming a little further. In the last activity, we focused on folder names 
+        and since you helped her there, she is asking for your guidance with her file names as well.
+      </p>
+      <p>
+        We will focus on the folder that I renamed to be <c>speak-now-dlx</c>. A list of her current file 
+        names for these tracks follow. I should note that it is often helpful to prefix song names with 
+        their track position so that they stay in order when in a folder. We won't remove those numbers. 
+        Also, <q>.wav</q> indicates that the song is a WAV file (see <xref ref="S_fileextensions"/> for more).
+        <ul cols="2">
+          <li>
+            <p>
+              01 Mine.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              02 Sparks Fly.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              03 Back To December.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              04 Speak Now.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              05 Dear John.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              06 Mean.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              07 The Story Of Us.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              08 Never Grow Up.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              09 Enchanted.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              10 Better Than Revenge.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              11 Innocent.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              12 Haunted.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              13 Last Kiss.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              14 Long Live.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              15 Ours.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              16 If This Was A Movie.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              17 Superman.wav
+            </p>
+          </li>
+          <li>
+            <p>
+              18 Back To December (Acoustic).wav
+            </p>
+          </li>
+          <li>
+            <p>
+              19 Haunted (Acoustic Version).wav
+            </p>
+          </li>
+          <li>
+            <p>
+              20 Mine (POP Mix).wav
+            </p>
+          </li>
+        </ul>
+      </p>
+      <p>
+        Life before, complete the following tasks to make Taylor's life a little easier for the future.
+      </p>
+      <p>
+        Again note that the answers to many of these exercises will vary depending on personal preferences. 
+        I will give answers depending on how I might approach the problem; these are not definitive at all.
+      </p>
+    </introduction>
+
+    <exercise>
+      <statement>
+        <p>
+          Before we trying fixing a problem, let's figure out what the problem is. What do you notice 
+          about these file names? What about them is <q>incorrect</q>?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          The main thing that pops out to me are the spaces. Every multi-word file name has a space. 
+          Secondly, there are a few cases of non-consistency: Back To December says <q>Acoustic</q> whereas 
+          Haunted says <q>Acoustic Version</q>. 
+        </p>
+        <p>
+          The two here are the 
+          main issues; you may have thought of others. Great! I'm sure they are good observations. 
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise xml:id="taylorswiftgroups2">
+      <statement>
+        <p>
+          Ok, we've identified a problem. How can we go about deciding what to do about it? You may 
+          already have some ideas, but stick with me here. Let's not just dive in and start removing spaces 
+          and shortening file names. Instead, let's make a plan.
+        </p>
+        <p>
+          Identify some naming patterns. Are there any track names that are similar? Can you form any groups 
+          of names?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          There are probably a couple patterns you could have noticed. I grouped track names into
+          <ol label="1">
+            <li>
+              <p>
+                <q>Regular</q> album tracks
+              </p>
+            </li>
+            <li>
+              <p>
+                Acoustic tracks
+              </p>
+            </li>
+            <li>
+              <p>
+                The last track
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          I am going to continue with the groups in the solution to <xref ref="taylorswiftgroups2"/>. 
+          Feel free to branch off with your own groups or stick with me.
+        </p>
+        <p>
+          Now that we have groups, we can figure out how to name one of each group, then apply that 
+          naming style to all names in the group. Start with the <q>regular</q> tracks.
+          How can you change these names to stick with the conventions discussed above?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          There isn't much we can do here. I will write the names in snake_case which will remove the 
+          spaces and change every word to lowercase. Since we can't ask Taylor for her preferences, 
+          it is up to you whether you want to abbreviate words or not. For the most part, I do not since 
+          most track names are short already.
+
+          <ul cols="2">
+            <li>
+              <p>
+                <c>01_mine.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>02_sparks_fly.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>03_back_to_dec.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>04_speak_now.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>05_dear_john.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>06_mean.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>07_story_of_us.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>08_never_grow_up.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>09_enchanted.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>10_better_than_revenge.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>11_innocent.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>12_haunted.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>13_last_kiss.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>14_long_live.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>15_ours.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>16_if_this_was_movie.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>17_superman.wav</c>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Apply the naming to scheme to all the acoustic tracks.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I am choosing to abbreviate <q>acoustic</q> to <q>acoust</q>. Notice I used the same names 
+          as the regular tracks, but just appended <q>_acoust</q> at the end.
+          <ul>
+            <li>
+              <p>
+                <c>18_back_to_dec_acoust.wav</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>19_haunted_acoust.wav</c>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </solution>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Apply the naming to scheme to all the last track.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          I am choosing to abbreviate <q>POP Mix</q> to <q>pop_mix</q>. Notice I used the same name 
+          as the regular tracks, but just appended <q>_pop_mix</q> at the end.
+          <ul>
+            <li>
+              <p>
+                <c>20_mine_pop_mix.wav</c>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </solution>
+    </exercise>
+
+    <conclusion>
+      <p>
+        And that's it! If you would like more practice, look up the track listing for her other albums 
+        and repeat this activity. It would be a great activity in consistency; for example, for the tracks 
+        on the Taylor's Version albums, you would want to use the same naming scheme as in the folders. For 
+        me, I would say <c>02_red_tv.wav</c> for <q>Red (Taylor's Version)</q> and to any acoustic 
+        tracks, I would append <c>_acoust</c>.
+      </p>
+    </conclusion>
+
+  </worksheet>
+
 </subsection>
  
 </section>
