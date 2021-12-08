@@ -130,26 +130,6 @@
             <cell><c>.prproj</c></cell>
             <cell>Adobe Premiere Pro Project</cell>
           </row>
-          <row>
-            <cell><c>.bmp</c></cell>
-            <cell>Bitmap image</cell>
-          </row>
-          <row>
-            <cell><c>.tif</c> or <c>.tiff</c></cell>
-            <cell>Tagged Image File Format</cell>
-          </row>
-          <row>
-            <cell><c>.raw</c></cell>
-            <cell>Raw image (usually from a camera)</cell>
-          </row>
-          <row>
-            <cell><c>.HEIF</c></cell>
-            <cell>High Efficiency Image File</cell>
-          </row>
-          <row>
-            <cell><c>.HEIC</c></cell>
-            <cell>High Efficiency Image Container (Apple)</cell>
-          </row>
            <row>
             <cell><c>.aep</c></cell>
             <cell>Adobe After Effect Project</cell>
@@ -168,6 +148,319 @@
           </row>
         </tabular>
       </table>
+
+  </subsection>
+
+  <subsection xml:id="extensions-docs">
+    <title>Documents</title>
+    
+    <p>
+      There are many different file extensions that refer to documents. Many of them you will never 
+      encounter. Only the main file types are listed here.
+      <url href="https://blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/">File Stack</url>
+      has a good explanation on some of the file types here.
+    </p>
+
+    <tabular halign="center">
+          <row header="yes">
+            <cell>Extension</cell>
+            <cell>File Type</cell>
+          </row>
+          <row>
+            <cell><c>.doc</c> or <c>.docx</c></cell>
+            <cell>Microsoft Word Document</cell>
+          </row>
+          <row>
+            <cell><c>.xsl</c> or <c>.xslx</c></cell>
+            <cell>Microsoft Excel Spreadsheet</cell>
+          </row>
+          <row>
+            <cell><c>.ppt</c> or <c>.pptx</c></cell>
+            <cell>Microsoft PowerPoint Presentation</cell>
+          </row>
+          <row>
+            <cell><c>.pages</c></cell>
+            <cell>Apple Document</cell>
+          </row>
+          <row>
+            <cell><c>.key</c></cell>
+            <cell>Apple Keynote Presentation</cell>
+          </row>
+          <row>
+            <cell><c>.numbers</c></cell>
+            <cell>Apple Numbers Spreadsheet</cell>
+          </row>
+          <row>
+            <cell><c>.pdf</c></cell>
+            <cell>Adobe Portable Document Format</cell>
+          </row>
+          <row>
+            <cell><c>.rtf</c></cell>
+            <cell>Rich Text Format Document</cell>
+          </row>
+          <row>
+            <cell><c>.txt</c></cell>
+            <cell>Plain Text Document</cell>
+          </row>
+          <row>
+            <cell><c>.log</c></cell>
+            <cell>Text Log File (often records messages)</cell>
+          </row>
+           <row>
+            <cell><c>.md</c></cell>
+            <cell>MarkDown Document</cell>
+          </row>
+           <row>
+            <cell><c>.Rmd</c></cell>
+            <cell>MarkDown Document for use in R</cell>
+          </row>
+        </tabular>
+      
+
+      <p>
+        Note: technically, <c>.html</c> and <c>.xml</c> are considered document-type files. I am choosing 
+        to place them under coding-type files instead.
+      </p>
+
+  </subsection>
+
+  <subsection xml:id="extensions-audio">
+    <title>Audio</title>
+
+    <p>
+      <url href="https://www.makeuseof.com/tag/audio-file-format-right-needs/">makeuseof.com</url> has 
+      great descriptions of the most common audio file types.
+    </p>
+    
+    <tabular halign="center">
+          <row header="yes">
+            <cell>Extension</cell>
+            <cell>File Type</cell>
+          </row>
+          <row>
+            <cell><c>.mp3</c></cell>
+            <cell>MPEG Layer 3 (lossy compression)</cell>
+          </row>
+          <row>
+            <cell><c>.wav</c></cell>
+            <cell>Waveform Audio Format (uncompressed)</cell>
+          </row>
+          <row>
+            <cell><c>.aiff</c></cell>
+            <cell>Audio Interchange File Format (uncompressed)</cell>
+          </row>
+          <row>
+            <cell><c>.aac</c></cell>
+            <cell>Advanced Audio Coding (lossy compression)</cell>
+          </row>
+          <row>
+            <cell><c>.wma</c></cell>
+            <cell>Windows Media Audio (lossy compression)</cell>
+          </row>
+          <row>
+            <cell><c>.flac</c></cell>
+            <cell>Free Lossless Audio Codec (lossless compression)</cell>
+          </row>
+          <row>
+            <cell><c>.aa</c> or <c>.aax</c></cell>
+            <cell>Audible Audio File</cell>
+          </row>
+          <row>
+            <cell><c>.m4a</c></cell>
+            <cell>Audio-Only MPEG-4 (iTunes)</cell>
+          </row>
+          <row>
+            <cell><c>.midi</c></cell>
+            <cell>MIDI File</cell>
+          </row>
+        </tabular>
+      
+
+  </subsection>
+
+  <subsection xml:id="extensions-coding">
+    <title>Coding and Programming</title>
+    
+    <p>
+      There is a plethora of programming languages, software, and interfaces and each of them uses a 
+      different file extension. 
+    </p>
+
+    <tabular halign="center">
+      <row header="yes">
+        <cell>Extension</cell>
+        <cell>File Type</cell>
+      </row>
+      <row>
+        <cell><c>.R</c></cell>
+        <cell>R Script</cell>
+      </row>
+      <row>
+        <cell><c>.py</c></cell>
+        <cell>Python Script</cell>
+      </row>
+      <row>
+        <cell><c>.ipynb</c></cell>
+        <cell>Jupyter Notebook</cell>
+      </row>
+      <row>
+        <cell><c>.html</c></cell>
+        <cell>HyperText Markup Language</cell>
+      </row>
+      <row>
+        <cell><c>.css</c></cell>
+        <cell>Cascading Style Sheets</cell>
+      </row>
+      <row>
+        <cell><c>.js</c></cell>
+        <cell>Javascript</cell>
+      </row>
+      <row>
+        <cell><c>.sas</c></cell>
+        <cell>SAS Script</cell>
+      </row>
+      <row>
+        <cell><c>.xml</c></cell>
+        <cell>eXtensible Markup Language</cell>
+      </row>
+      <row>
+        <cell><c>.xslt</c></cell>
+        <cell>eXtensible Style Sheet Transformations</cell>
+      </row>
+      <row>
+        <cell><c>.ptx</c></cell>
+        <cell>PreTeXt Markup File</cell>
+      </row>
+      <row>
+        <cell><c>.tex</c></cell>
+        <cell>LaTeX Document (typically for mathematics)</cell>
+      </row>
+      <row>
+        <cell><c>.c</c></cell>
+        <cell>C and C++ File</cell>
+      </row>
+      <row>
+        <cell><c>.cpp</c></cell>
+        <cell>C++ File</cell>
+      </row>
+      <row>
+        <cell><c>.java</c></cell>
+        <cell>Java Source</cell>
+      </row>
+      <row>
+        <cell><c>.swift</c></cell>
+        <cell>Swift Code File</cell>
+      </row>
+      <row>
+        <cell><c>.vb</c></cell>
+        <cell>Visual Basic File</cell>
+      </row>
+      <row>
+        <cell><c>.vbs</c></cell>
+        <cell>Visual Basic Script</cell>
+      </row>
+    </tabular>
+
+  </subsection>
+
+  <subsection xml:id="extensions-data">
+    <title>Data</title>
+    
+    <p>
+      Many of these extensions also belong in <xref ref="extensions-docs"/> but are related enough to 
+      merit another subsection.
+    </p>
+
+    <tabular halign="center">
+      <row header="yes">
+        <cell>Extension</cell>
+        <cell>File Type</cell>
+      </row>
+      <row>
+        <cell><c>.csv</c></cell>
+        <cell>Comma Separated Values</cell>
+      </row>
+      <row>
+        <cell><c>.tsv</c> or <c>.tab</c></cell>
+        <cell>Tab Separated Values</cell>
+      </row>
+      <row>
+        <cell><c>.json</c></cell>
+        <cell>JavaScript Object Notation</cell>
+      </row>
+      <row>
+        <cell><c>.csv</c></cell>
+        <cell>Comma Separated Values</cell>
+      </row>
+      <row>
+        <cell><c>.tsv</c></cell>
+        <cell>Tab Separated Values</cell>
+      </row>
+      <row>
+        <cell><c>.rds</c></cell>
+        <cell>Single R Object</cell>
+      </row>
+      <row>
+        <cell><c>.RData</c></cell>
+        <cell>Multiple R Objects</cell>
+      </row>
+      <row>
+        <cell><c>.sas7bdat</c></cell>
+        <cell>SAS Data File</cell>
+      </row>
+    </tabular>
+
+  </subsection>
+
+  <subsection xml:id="extensions-other">
+    <title>Other File Exensions</title>
+    
+    <tabular halign="center">
+      <row header="yes">
+        <cell>Extension</cell>
+        <cell>File Type</cell>
+      </row>
+      <row>
+        <cell><c>.band</c></cell>
+        <cell>Apple GarageBand File</cell>
+      </row>
+      <row>
+        <cell><c>.logicx</c></cell>
+        <cell>Apple Logic Pro File</cell>
+      </row>
+      <row>
+        <cell><c>.exe</c></cell>
+        <cell>Windows Executable File</cell>
+      </row>
+      <row>
+        <cell><c>.zip</c></cell>
+        <cell>Compressed Files</cell>
+      </row>
+      <row>
+        <cell><c>.tar.gz</c></cell>
+        <cell>Collection of (archived) files</cell>
+      </row>
+      <row>
+        <cell><c>.app</c></cell>
+        <cell>Mac Application</cell>
+      </row>
+      <row>
+        <cell><c>.dmg</c></cell>
+        <cell>Mac Disc Image (executable file)</cell>
+      </row>
+      <row>
+        <cell><c>.pkg</c></cell>
+        <cell>Package of Software or Files</cell>
+      </row>
+      <row>
+        <cell><c>.otf</c></cell>
+        <cell>Open Type Font</cell>
+      </row>
+      <row>
+        <cell><c>.ttf</c></cell>
+        <cell>TrueType Font</cell>
+      </row>
+    </tabular>
 
   </subsection>
 </section>
