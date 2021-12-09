@@ -27,7 +27,7 @@
   \usetikzlibrary{decorations.markings} 
 </latex-image-preamble>
 
-  <rename element="note" xml:lang="en-US">Convention</rename>
+  <!-- <rename element="note" xml:lang="en-US">Convention</rename> -->
   <rename element="exercise-worksheet" xml:lang="en-US">Exercise</rename>
 
   <cross-references text="type-global" />
