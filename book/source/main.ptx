@@ -13,7 +13,7 @@
 
     <xi:include href="./frontmatter.ptx" />
 
-    <xi:include href="C_etiquette.ptx" />
+    <xi:include href="C_basics.ptx" />
     <!-- <xi:include href="./C_commandline.ptx"/> -->
     
     <xi:include href="./backmatter.ptx" />

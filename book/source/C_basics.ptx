@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<chapter xml:id="C_etiquette" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Basic Computer Etiquette</title>
+<chapter xml:id="C_basics" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Computer Basics</title>
   
   <introduction>
     <p>
@@ -21,6 +21,6 @@
   <xi:include href="S_filenames.ptx" />
   <xi:include href="S_fileextensions.ptx" />
   <xi:include href="S_filepaths.ptx" />
-  <!-- <xi:include href="S_shortcuts.ptx" /> -->
+  <xi:include href="S_shortcuts.ptx" />
 
 </chapter>

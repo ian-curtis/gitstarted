@@ -2,5 +2,152 @@
 
 <section xml:id="S_filepaths">
   <title>File Paths (*)</title>
+
+  <introduction>
+    <p>
+      Imagine that I bring you to the edge of a forest, an immense, thick, unexplored forest. When we git 
+      there, I tell you that somewhere in that forest lays a chest of pure diamonds. Then I give you a 
+      task: I need you to go find that chest for me (yes, you get a portion of the loot). 
+    </p>
+    <p>
+      Think about how you might go about this task. The forest is unexplored; we only know that the chest 
+      exists inside. Where will you look first? Where will you enter? How will you keep track of where 
+      you've been? If you find it, how will you get back? There are many issues preventing you from doing 
+      you task efficiently. Sure, you could get lucky and the chest might be only 50 feet from the edge. 
+      But maybe it's 300 feet away (or more!).
+    </p>
+    <p>
+      Think of your computer like the forest. If I ask my computer to open a file called <c>poem.pdf</c>, 
+      how will it know where to look for that file? Like you in the forest, it wouldn't know where to 
+      even start. Likewise, what if I had two files named <c>poem.pdf</c> in different folders? What if 
+      I had two files named <c>poem.pdf</c> in the same folder? How would it know which one to grab?
+      It wouldn't! It's like me telling you there are two identical chests of diamonds in the forest and 
+      I want you to bring me the one I am thinking about. But you don't know the one I am thinking about.
+    </p>
+    <p>
+      This situation necessitates file paths. Literally, they are the direct path through which the 
+      computer can find the exact file you are thinking of. You are basically telling the computer where the 
+      file is. Continuing the forest example, it's as if I told you to enter the forest, take a right at 
+      the first tree with a triangle, turn left at the lake, and walk six steps past the boulder shaped 
+      like Mickey Mouse. You'd know exactly how to get there and would always find the correct file. 
+      Even better, it's as if I showed you the path I made to put the chest in the forest and told you to 
+      just follow that path.
+    </p>
+  </introduction>
+
+  <subsection xml:id="paths-construct">
+    <title>Constructing File Paths</title>
+    <idx><h>file path</h></idx>
+    <idx><h>file path</h><h>constructing</h></idx>
+    <idx><h>difference</h><h>Mac and Windows</h></idx>
+    <p>
+      What do computer file paths look like? You might have seen one before. Here is an example of 
+      a file path on a Mac:
+      <blockquote>
+        <c>/Users/&lt;username>/Documents/poem.pdf</c>
+      </blockquote>
+      With this you can see exactly where my poem lies. First, go to a list of all the users on my computer.
+      Second, look at the files for my username, go to the documents folder, and access the file called 
+      <c>poem.pdf</c>. Easy!
+    </p>
+    <p>
+      Maybe. Here's what that would look like on a Windows computer:
+      <blockquote>
+        <c>C:\Users\&lt;username>\Documents\poem.pdf</c>
+      </blockquote>
+      That looks a little different. This one says to go to the C drive. Then look at the list of the 
+      users on the computer. Then go to the files for my username, then the documents folder, then 
+      the file <c>poem.pdf</c>. 
+    </p>
+    <p>
+      However, they both work the same. The fundamental structure is <q>start at the outmost folder and 
+      work your way in through folders until you get to the file or folder you are looking for</q>. Recall 
+      from <xref ref="S_filenames"/> that files must have an extension while folders do not.
+    </p>
+    <p>
+      The key thing to note is that Mac and Windows are designed differently. Mac uses forward slashes 
+      to indicate a folder change and Windows uses backslashes. But their structures are different as well.
+      Notice that Windows has <q>C:</q> at the beginning. This is the C drive and there are other drives as 
+      well. Other differences were introduced in <xref provisional="fm_differences"/> but the details are 
+      beyond the scope of this book (and likely beyond my understanding). A brief history on file paths 
+      is given by 
+      <url href="https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/">How-To Geek</url>
+      and a rather hard-to-read explanation can be found on 
+      <url href="https://en.wikipedia.org/wiki/Path_(computing)">Wikipedia</url>.
+    </p>
+    <p>
+      There are a few important points to remember when reading or finding a file path. The main goal from 
+      this section is that you understand how a file path is structured. Paths will come back later.
+      <ul>
+        <li>
+          <p>
+            File paths do not like spaces. Recall the lesson learned in <xref text="title" ref="namesspaces"/>. 
+            To a computer spaces indicate that you are ending the file path and starting something new. 
+            Do not name folders or files with spaces.
+          </p>
+        </li>
+        <li>
+          <p>
+            When you want to enter a new folder, use a slash (forward or backward) to indicate that
+          </p>
+        </li>
+        <li>
+          <p>
+            File paths are unique; you cannot have one file path refer to two objects. This is why 
+            your computer will never let you have two files with the same name and extension in the 
+            same folder.
+          </p>
+        </li>
+      </ul>
+    </p>
+
+  </subsection>
+
+  <subsection xml:id="paths-hints">
+    <title>Helpful Hints and Reminders</title>
+
+    <assemblage>
+      <title>File and Folder Naming</title>
+      <p>
+        Recall <xref ref="filenamecases"/> for alternative naming methods for files and folders. 
+        Please, please, please do not use spaces (and consider renaming your existing files). I know 
+        it looks weird to name things using these cases, but if you really are set on learning Git and 
+        the command line, you will want to follow this convention.
+      </p>
+    </assemblage>
+
+    <assemblage xml:id="findingpaths">
+      <title>Finding File Paths</title>
+      <p>
+        In theory, you will never need to type out the full file path. Your computer actually records 
+        this information for you to just copy.
+      </p>
+      <p>
+        On a Mac, right click on any file or folder you want the path for. Click <q>Get Info</q>. 
+        Under a label called <q>Where:</q> you can find the path. Right click on that path and hit 
+        <q>Copy as pathname</q> to copy the path in the same format as the paths above.
+      </p>
+      <p>
+        On Windows, right click on any file or folder you want the path for. Click <q>Properties</q>.
+        Under a label called <q>Location:</q> you can find the path. Highlight the text and copy it.
+      </p>
+    </assemblage>
+
+    <assemblage xml:id="pathsfish">
+      <title>Using the fish Shell</title>
+      <p>
+        <alert>Advanced users only.</alert>
+      </p>
+      <p>
+        If you changed your shell to fish as described in <xref ref="S_commlinecustom"/>, you won't 
+        even have to copy a path or remember a path. fish contains autocomplete that looks for files 
+        and folders in your current folder and recommends completions. 
+      </p>
+    </assemblage>
+    
+    
+  </subsection>
+
+
   
 </section>

@@ -29,6 +29,7 @@
       <note xml:id="foldernotdirect">
         <title>Folders Are Not Directories</title>
         <p>
+          Until now, I have been using <q>folder</q> when I probably should be using <q>directory</q>.
           From <url href="https://en.wikipedia.org/wiki/Directory_%28computing%29#Folder_metaphor">Wikipedia</url> 
           we can read that 
           <blockquote>
