@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="S_shortcuts">
+  <title>Keyboard Shortcuts (*)</title>
+
+  <introduction>
+    <p>
+      You may be able to use your computer fine without any shortcuts. But wow, do they make your life 
+      easier. This section could go in an appendix but I think it is so important to know at many shortcuts 
+      as possible to help you use your computer faster. I use shortcuts every day in my web browser, 
+      programming software, documents editing software (e.g., Microsoft Word), and just my computer in 
+      general. I have tried to break up the following shortcuts by where you might use them; however, 
+      many are fairly universal and could work in other places.
+    </p>
+    <p>
+      Note: as described in <xref provisional="fm_differences"/>, Windows uses <kbd>Control</kbd> 
+      (or <kbd>Ctrl</kbd>) as the <q>main</q> button whereas Mac uses <kbd>Command</kbd> (or <kbd>Cmd</kbd>).
+    </p>
+  </introduction>
+  
+</section>
