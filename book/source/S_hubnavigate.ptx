@@ -6,7 +6,7 @@
 
   <introduction>
     <p>
-      So what is GitHub? Well, it is a website at its basics. It is a website that allows us to share our 
+      So what is GitHub? It is a website that allows us to share our 
       files with the world and it widely used by the coding/programming community. With GitHub, any public 
       code can be viewed by anyone. Each person is able to copy the code and mess with it on their own computer, 
       all without the original being changed. But if someone wants to change the original, they can submit 
@@ -35,7 +35,7 @@
     </p>
 
     <p>
-      First, navigate to <url href="https://github.com"></url>. Any browser should work. Click on the 
+      First, navigate to GitHub at <url href="https://github.com"></url>. Any browser should work. Click on the 
       <q>Sign Up</q> in the top right corner. A welome box should pop up. Follow the instructions to create
       an account:
       <ol>
@@ -103,7 +103,7 @@
             
             While it is possible to change your username later, it is better to not fall back on that as 
             that can cause complications. As an example, my username is <q>ian-curtis</q>. I would have 
-            preferred to have it without any spaces but that was taken :(. It is short, simple, timeless, 
+            preferred to have it without any spaces but that was taken. It is short, simple, timeless, 
             and I do not feel bad sharing it with anyone. If you have a very common name, consider using 
             hyphens and underscores or rearranging your name. I could have tried <q>curtisi</q> or 
             <q>curtian</q> (which sounds like I'm an alien). 
@@ -146,14 +146,14 @@
     </p>
     <p>
       Wait a minute, I just used an unfamiliar word: repository. Essentially, a <term>repository</term> 
-      is the Git/GitHub to say <q>directory</q> or <q>folder</q>. A repository is usually one project; 
+      is the Git/GitHub way to say <q>directory</q> or <q>folder</q>. A repository is usually one project; 
       one repository contains all of the files and information for one project. For example, the files 
       for this book can all be found under my repository titled 
       <url href="https://github.com/ian-curtis/gitstarted">gitstarted</url>. This book constitutes as 
       one project and therefore all files for this book are there. Remember Jennifer Bryan from above? 
       All of the files for her book, <pubtitle>Happy Git With R</pubtitle> can be found on 
       <url href="https://github.com/jennybc/happy-git-with-r">her repository</url>. Soon, you too will 
-      have repositories! (Note: a repository is often just shortened to <term>repo</term>.)
+      have repositories! (Note: a repository is often shortened to just <term>repo</term>.)
     </p>
     <p>
       There are a few other tabs at the top of the page. The <q>Repositories</q> tab simply lists all of 
@@ -164,8 +164,153 @@
   </subsection>
 
   <subsection xml:id="hub-settings">
-    <title>Settings and Customization</title>
+    <title>Settings and Customizations</title>
+
+    <p>
+      Click on the profile icon in the top right and select <q>Settings</q>. Don't be scared of the long 
+      list of possible customizations that are available. Most are only applicable experiences GitHub users. 
+      I will introduce the settings you may be interested in right now. The headings of the following 
+      paragraphs match up with the headings of the tabs on the GitHub page. Note that some tabs have been 
+      excluded as well as some settings within some tabs. This does not mean that they are not important; 
+      it just means that I don't think they are necessary for a beginner.
+    </p>
+
+    <paragraphs>
+      <title>Profile</title>
+
+      <p>
+        Here, you can change your name, public email (if you have multiple AND if you have 
+        <url href="hub-emails">chosen to 
+        make your email public</url>), a mini bio, relevant info about your other social media and company, 
+        location, and whether or not you are searching for a job.
+      </p>
+      
+    </paragraphs>
+
+    <paragraphs>
+      <title>Account</title>
+
+      <p>
+        Here is where you can change your username. <em>I would strongly recommend against changing your 
+        username except in dire circumstances.</em> This could lead to broken links or, if someone claims 
+        your old username, links to the wrong repository. This is why I hope you took the time to really 
+        think of a good username when created your account.
+      </p>
+      <p>
+        Ok fine. If you have just created your account, have no repositories, have done pretty much 
+        nothing on GitHub other than editng settings, AND are truly unhappy with your username, change it 
+        now. NOW. Then try not to do it again. 
+      </p>
+      <p>
+        This tab will also let you delete your entire account. It is in red for a reason. I would highly 
+        recommend never deleting your account. Even if you are done with GitHub and don't plan on ever using 
+        it again, others can still benefit from your code. Obviously some exceptions could apply here but 
+        for most purposes, you probably shouldn't delete your account.
+      </p>
+      
+    </paragraphs>
+
+    <paragraphs>
+      <title>Appearance</title>
+
+      <p>
+        Here you can change how GitHub looks. Is white annoying? Switch to a dark theme. There are three 
+        of them. You can also choose to have it change automatically with your computer (assuming your 
+        computer changes automatically). You can also edit the default emoji appearance.
+      </p>
+      <p>
+        There is currently a feature in testing allowing a theme designed for colorblind users. To enable 
+        this, click on your avatar in the top right and select <q>Feature preview</q>, then <q>Colorblind 
+        Themes</q>, then <q>Enable</q>. If you have feedback to give GitHub, you can also do that.
+      </p>
+      
+    </paragraphs>
+
+    <paragraphs>
+      <title>Account security</title>
+      
+      <p>
+        Change your password here and you can enable two-factor authentication. You can also see where 
+        you are currently logged in. If an unfamiliar session is active, I would recommend changing your 
+        password and/or enabling two-factor authentication.
+      </p>
+
+    </paragraphs>
+
+    <paragraphs>
+      <title>Billing &amp; plans</title>
+      
+      <p>
+        GitHub offers different <url href="https://github.com/pricing">paid plans</url>. Each of the plans 
+        has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly 
+        fine under the free plan. I would certainly recommend upgrading once you become more familiar with Git, 
+        GitHub, and start developing more projects. However, there is no need to pay anything at this point. 
+      </p>
+      <p>
+        Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their 
+        <url href="https://education.github.com/pack">Student Developer Pack</url>. 
+        <url href="https://education.github.com/teachers">Teachers</url> and 
+        <url href="https://education.github.com/schools">Schools</url> can also find benefits (some require 
+        a payment).
+      </p>
+
+    </paragraphs>
+
+    <paragraphs xml:id="hub-emails">
+      <title>Emails</title>
+      
+      <p>
+        You can choose to have multiple emails on your GitHub account. This may be something you want to 
+        do as you can also select to have one of your emails be a backup email for security. You can 
+        also select if you would like to keep your emails private or not.
+      </p>
+
+    </paragraphs>
+
+    <paragraphs>
+      <title>Notifications</title>
+      
+      <p>
+        Pretty simple here. You can choose which notifications you would like to receive. Maybe keep the 
+        defaults for now and you can edit them later when you get an idea of what exactly GitHub 
+        sends notifications for. I still have the defualts selected and I don't get many emails at all.
+      </p>
+
+    </paragraphs>
+
+    <paragraphs>
+      <title>Repositories</title>
+
+      <p>
+        If you just created your account, this is probably empty. That's ok! It will be populated soon with 
+        a list of all your repositories and repositories you have access to. I do want to point out the 
+        first setting, <q>Repository default branch</q>. It may say <q>master</q> in the text box. If so, 
+        please change it to <q>main</q> (by typing and clicking <q>Update</q> which is the new Git/GitHub standard. 
+      </p>
+      <p>
+        For more information on the transition from <q>master</q> to <q>main</q>, please visit 
+        <url href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main">TheServerSide</url>.
+      </p>
+      
+    </paragraphs>
+
+    <paragraphs>
+      <title>Blocked Users</title>
+      
+      <p>
+        Hopefully you won't ever have to, but if you need to block a user, you can do so here.
+      </p>
+
+    </paragraphs>
     
   </subsection>
+
+  <conclusion>
+    <p>
+      Hopefully you now have an idea of how GitHub is organized and are aware of the customizations you 
+      can make. However, we have barely scratched the surface of what GitHub can do. In the next section, 
+      you will create your own repository and learn some GitHub vocabulary.
+    </p>
+  </conclusion>
 
 </section>
