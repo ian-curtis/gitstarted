@@ -96,7 +96,7 @@
                   lowercase. GitHub treats usernames in a case insensitive way, but using all 
                   lowercase is kinder to people doing downstream regular expression work with 
                   usernames, in various languages. A better strategy for word separation is to use a 
-                  hyphen - or underscore _. [Again the ideas from <xref ref="filenamespaces"/> come back.]
+                  hyphen - or underscore _. [Again the ideas from <xref text="title" ref="namesspaces"/> come back.]
                 </p>
               </li>
             </ul>

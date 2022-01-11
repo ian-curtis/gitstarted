@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="S_hubfirstrepo">
+  <title>The First Repository</title>
+
+  <introduction>
+    <p>
+      Buckle your seatbelts! Here we go into GitHub and the first repository. In this section, we will 
+      create a repository with some information about ourselves. I recommend that you 
+      don't just read the book; follow along with your own account. Practice makes improvement!
+    </p>
+  </introduction>
+
+  <subsection xml:id="hub-createrepo">
+  <title>Creating a Repository</title>
+
+  <p>
+    There are a few different ways to create a new repo (remember this abbreviation? see <xref ref="hub-profile"/>).
+    <ol>
+      <li>
+        <p>
+          In the top right of the page, next to the profile avatar we saw in <xref ref="S_hubnavigate"/>, 
+          there is a plus (+) sign. Click on that and then <q>new repository</q>. 
+        </p>
+        <p>
+          Note: GitHub differentiates bewteen a repository and a project. Don't get confused. We want 
+          repository (and you will want that for most purposes). 
+        </p>
+      </li>
+      <li>
+        <p>
+          From the <url href="https://github.com">GitHub homepage</url> there is a section on the left 
+          called <q>Repositories</q>. Next to the title is a green button that says <q>New</q>. Click on that.
+        </p>
+      </li>
+      <li>
+        <p>
+          If you navigate to the profile avatar in the top right, and click on <q>My repositories</q>, 
+          there will also be a green <q>New</q> button near the top.
+        </p>
+      </li>
+    </ol>
+
+    Each of these three methods will get you to the same page. It doesn't matter which one you click. 
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Let's begin the process of creating our first repo. Use one of the methods above get into 
+        the <q>Create a new repository</q> screen.
+      </p>
+    </statement>
+  </exercise>
+
+  <p>
+    It is not difficult to create a repo. It is difficult, however, to come up with a repo name. 
+    Repository name requirements are similar to the conventions for file and folder names 
+    (<xref ref="S_filenames"/>) in that they can have no spaces and should briefly describe what the 
+    repo is for. <em>Please take the time to think about your repo names before you create them.</em>
+    Renaming repositories is possible, but can cause complications in the future (such as broken links).
+    Again, names should be short, to the point, and descriptive. The repo name for this book is 
+    <q>gitstarted</q>, the shortened title.
+  </p>
+
+  <p>
+    For right now, I will tell you what to name your repo. In the <q>Repository name</q> box, 
+    type the name <c>aboutme</c>.
+    Adding a description is optional and is not necessary for us right now. Next is the viewability. You 
+    may choose to make your repos private (only you and authorized collaborators can view/edit) or public 
+    (everyone can view and attempt to edit, only you and authorized collabortors can approve edits). 
+    It does not matter what you select for this right now as we will be deleting this repo after we are 
+    done with it.
+  </p>
+  <p>
+  <idx><h>readme</h></idx>
+    The next step deals with certain files that can be automatically added to your repo. You have the choice 
+    for either or none of a <c>README</c> file, a <c>.gitignore</c>, and a license. A 
+    <term>README file</term> gives all the pertinent information about your repository in an easy-to-read 
+    format. It is often the first thing that people visiting your repo will read and is very important. 
+    Check this box and we will come back to the <c>README</c> file in just a minute. A <term>gitignore</term>
+    file tells Git all of the files <em>not</em> to put online. Do not check this box for now; it will be 
+    very useful later on, but is not needed now. You can also choose to put a <term>license</term> on 
+    your code which lets users know what they can and cannot do. If you would like to explore the different 
+    licenses, please visit 
+    <url href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">the GitHub documentation</url>.
+    Since we will delete this repo later, you do not have to select this option.
+  </p>
+
+  <p>
+    You now should have entered <q>aboutme</q> into the name box, selected if you wanted the repo to be 
+    public or private, and checked the <c>README</c> box. Now, click the green <q>Create repository</q> 
+    button to finalize the process.
+  </p>
+
+  </subsection>
+
+  <subsection xml:id="hub-explorerepo">
+    <title>Exploring the Code Tab</title>
+
+    <p>
+      Whew, we made it! A new repo has just been created....aaaaand a lot of new buttons and options 
+      just appeared. A lot of new unfamiliar words and tabs. Please don't give up here! I will go through 
+      all of the important aspects. Many of the pieces are not applicable to beginners and some will not 
+      be applicable until we start working with Git and GitHub together. In this section, I will only be 
+      explaining the key features and will slowly add in more as we learn more about GitHub.
+    </p>
+
+    <p>
+      Assuming you didn't click on anything, you should see a pretty empty page. In the top left, you should 
+      see your username and your repo name. This is common throughout GitHub so you always know where you 
+      are. Underneath that is a set of tabs that can be used to navigate through the repository-level settings 
+      and options. You should currently be on the <q>Code</q> tab. As may be expected, this tab displays all 
+      of the files associated with the repo; it is the <q>home page</q> for every repository. You should 
+      see that a <c>README.md</c> file shows up. Also notice that the contents of the README are displayed 
+      under the list of files. GitHub knows how important the READMEs are to explaining code that it 
+      automatically displays the contents of the file. Right now, ours is empty (except for the default title).
+    </p>
+
+    <p>
+      To summarize, this is all you should care about for now:
+      <ul>
+        <li>
+          <p>
+            The navigation at the top
+          </p>
+        </li>
+        <li>
+          <p>
+            The content of the <q>Code</q> tab
+          </p>
+        </li>
+        <li>
+          <p>
+            Noticing our README file in the list of files
+          </p>
+        </li>
+        <li>
+          <p>
+            Noticing the contents of the README file underneath the list of files
+          </p>
+        </li>
+      </ul>
+    </p>
+    
+  </subsection>
+
+  <subsection xml:id="hub-editfile">
+    <title>Editing a File</title>
+
+    <p>
+      Well, we have a README file, let's edit it! GitHub makes it rather simple to edit files. 
+      There are a two main ways to edit the README file on GitHub:
+      <ol>
+        <li>
+          <p>
+            Click on the file name <c>README.md</c> in the list of files. Click on the pencil icon on the 
+            right of the header of the README file.
+          </p>
+        </li>
+        <li>
+          <p>
+            Click on the pencil icon found along the header of the README file (under the list of files).
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Use one of the methods above to open the README file and get to its editing screen.
+        </p>
+      </statement>
+    </exercise>
+    <p>
+    As discussed in <xref ref="S_fileextensions"/>, a file ending with <c>.md</c> is a markdown file. 
+    All README files should be markdown files and are able to understand markdown syntax. Essentially, 
+    markdown allows us to communicate basic word processing functions simply by typing certain symbols. 
+    Have you ever noticed that you can't bold or italicize text in Google? 
+    <kbd>Control</kbd> (<kbd>Command</kbd>) + <kbd>B</kbd> or <kbd>I</kbd>
+    don't work there! They also won't work in markdown files, unfortunately. But that doesn't mean we can't 
+    bold or italicize text. 
+    I will not discuss everything on markdown here, so some basic functions are below. It will be in your best 
+    interest to become familiar with markdown and its more advanced features sooner rather than later.
+    </p>
+
+    <assemblage xml:id="markdown">
+      <title>Markdown Basics</title>
+      <p>
+        The most basic markdown tool is simple text. Just type like you normally would into the text field 
+        and the result will be normal, unformatted text. However....
+
+        <ul>
+          <li>
+            <p>
+              To italicize a word or phrase, put one asterisk around it: <c>*I'm italicized*</c>
+            </p>
+          </li>
+          <li>
+            <p>
+              To bold a word or phrase, put two asterisks around it: <c>**I'm bold**</c>
+            </p>
+          </li>
+          <li>
+            <p>
+              To create headings, place hashtags (pound signs, if you insist)  and a space before the text 
+              you wish to be in the heading: <c># A Title</c>. The more hashtags you add, the deeper the 
+              heading level. Thus, <c>## A Subheading</c> is a level two heading whereas <c>## Another Subheading</c> 
+              is a level three heading.
+            </p>
+          </li>
+          <li>
+            <p>
+              To create a bulleted list, start a line with an asterisk (*) and a space. For numbered lists, 
+              start a line with a number and a period (and a space). 
+            </p>
+          </li>
+          <li>
+            <p>
+              To put words into a code cell, place a backtick around the code: <c>`import requests`</c>. 
+              (The backtick is located 
+              to the left of the 1 key on American keyboards.)
+            </p>
+          </li>
+        </ul>
+
+        You can also add images, gifs, links, links with text intead of urls, tables, and 
+        multi-line code chunks. For more information, see 
+        <url href="https://www.markdownguide.org/basic-syntax/" visual="www.markdownguide.org/basic-syntax/">Basic Markdown Syntax</url>
+        and <url href="https://www.markdownguide.org/extended-syntax/" visual="www.markdownguide.org/extended-syntax/">Extended Markdown Syntax</url>.
+
+      </p>
+    </assemblage>
+
+    <exercise xml:id="try-markdwon">
+      <introduction>
+        <p>
+          Let's practice your markdown skills! Here, you will make the "aboutme" repo name true. Feel 
+          free to use the guidelines and sources above. You could also search online if you aren't sure 
+          how to do what you want to do. I have provided my (basic) example in the repo for this book. 
+          But be creative! There aren't any <q>right</q> answers here.
+        </p>
+        <p>
+          Github is pretty cool in that it will show you realtime updates of what your Markdown file will 
+          look like after you're done typing. There is a <q>Preview</q> tab right above the first line of 
+          your README file (you are currently on <q>Edit file</q>). After each task below, check the preview 
+          to verify that what you typed worked as expected.
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+          <p>
+            Currently, the title of the README is the repo name. Change the title to a more human-readable 
+            one.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In the first paragraph, type your name (or your username), how many pets you have, and your 
+            favorite hobby.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In a second paragraph, type a sentence stating who your favorite music artist is. Then, make 
+            an ordered list of your favorite songs from that artist.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Create a heading level two titled <q>Oh Look, More Things About Me</q>
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            In a third paragraph, write two sentences with two cool facts about you. These could be made up, 
+            no one will know! After those facts, create an unordered list of your favorite musical artists 
+            after the one in the second paragraph.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Go back to the previous paragraphs and bold two words and italicize two words.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Extra Credit: Add an image, a nested list of your favorite colors and why they are your favorite, 
+            a link to your favorite YouTube video, and, if you know a coding language, some code.
+          </p>
+        </statement>
+      </task>
+
+      <conclusion>
+        <p>
+          Don't leave your file yet! There's one more thing left to do.
+        </p>
+      </conclusion>
+    </exercise>
+
+    <p>
+      Right now, we have only edited the file, but we haven't told Github that we wish to keep our edits.
+      It's as if we edited a document, but never clicked save! But if you scroll down to the bottom of the 
+      page, you'll see that there is no <q>save</q> button. You should see a green <q>Commit changes</q> 
+      button. This is important. Github uses <term>commit</term> when indicating that you are about to 
+      officially upload your changes to your repo. This is your last change to change anything. When you 
+      think you are done, go ahead and commit your changes (commit directly to the main branch). Your 
+      changes should be represented. Navigate back to the Code tab to prepare for the next section.
+    </p>
+    <p>
+      Take care to notice the difference between committing and saving. Saving is easy. You can add a word, 
+      then save. Add a word, save. And so on. Think of commiting as adding a word, saving, and closing the 
+      document. Now everytime you want to add another word you have to open the entire document again, 
+      add the word, save, and close the document again. This system is put in place to help with version 
+      control. Instead of their being one versioin for each new word you add, there is one version for each 
+      commit. When coding, you save your files, but commit your changes. This will become more 
+      apparent when we work with Git and with multiple files.
+    </p>
+
+    <assemblage xml:id="ex-commit">
+      <title>An Extra Commit Example</title>
+      <p>
+        Let's consider one example to help understand the benefits of thinking in commits. Suppose I 
+        was working on a video game and I was tasked with creating different worlds a character could 
+        visit. With commits in mind, I decide to break down the task into chunks: I will build one world 
+        at a time. When I am done with one world, I will commit. When I am done with another world, I will 
+        commit a second time. And so on.
+      </p>
+      <p>
+        This is different than creating two buildings in the first world, then saving. Then creating two 
+        more buildings, then saving. Then adding some vegetation and enemies, then saving. We save much more 
+        often than we commit. But <em>we save using our computer and commit using Git/Gitub.</em> I would never 
+        save to Github or commit to my computer. Saving is light, commiting is heavy.
+      </p>
+    </assemblage>
+    
+  </subsection>
+
+  <conclusion>
+    <p>
+      You know should feel slightly more comfortable with the Code tab and editing a file on Github. The 
+      next chapter will look at branches which help with adding new features to our code.
+    </p>
+  </conclusion>
+  
+</section>

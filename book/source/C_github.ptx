@@ -4,5 +4,6 @@
   <title>GitHub</title>
   
   <xi:include href="S_hubnavigate.ptx" />
+  <xi:include href="S_hubfirstrepo.ptx" />
 
 </chapter>
