@@ -2,8 +2,40 @@
 
 <pretext xml:lang="en-US" xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  <!-- we first include a file which contains the docinfo element: -->
-  <xi:include href="./docinfo.ptx" />
+  <!-- The docinfo block is the analogue to the latex preamble -->
+  <!-- This is where you can define macros and other book-wide -->
+  <!--  settings.                                              -->
+  <docinfo xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <!-- The next three lines are likely for mature projects only: -->
+
+  <!-- <brandlogo url="" source="images/cover.png"/> -->
+  <!-- <covers front="images/front.pdf" back="images/back.pdf"/> -->
+  <!-- <document-id>unique-book-id</document-id> -->
+
+
+  <macros>
+  \newcommand{\N}{\mathbb N}
+  \newcommand{\Z}{\mathbb Z}
+  \newcommand{\Q}{\mathbb Q}
+  \newcommand{\R}{\mathbb R}
+  </macros>
+
+
+  <latex-image-preamble>
+    \usepackage{tikz, pgfplots}
+    \usetikzlibrary{positioning,matrix,arrows}
+    \usetikzlibrary{shapes,decorations,shadows,fadings,patterns}
+    \usetikzlibrary{decorations.markings} 
+  </latex-image-preamble>
+
+    <!-- <rename element="note" xml:lang="en-US">Convention</rename> -->
+    <rename element="exercise-worksheet" xml:lang="en-US">Exercise</rename>
+
+    <cross-references text="type-global" />
+
+
+  </docinfo>
 
 
   <book xml:id="git_started">
@@ -13,9 +45,19 @@
 
     <xi:include href="./frontmatter.ptx" />
 
-    <xi:include href="C_basics.ptx" />
-    <xi:include href="./C_commandline.ptx"/>
+    <part xml:id="part-intro">
+      <title>Introductory Materials</title>
+      <xi:include href="./C_basics.ptx" />
+      <xi:include href="./C_commandline.ptx"/>
+    </part>
     
+    <part xml:id="part-solo">
+      <title>Working Solo</title>
+      <xi:include href="./C_githubsolo.ptx" />
+      <xi:include href="./C_gitsolo" />
+    </part>
+    
+
     <xi:include href="./backmatter.ptx" />
 
   </book>
