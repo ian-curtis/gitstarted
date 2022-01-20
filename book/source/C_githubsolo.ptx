@@ -1,9 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<chapter xml:id="C_github" xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xml:id="C_githubsolo" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>GitHub</title>
   
   <xi:include href="S_hubnavigate.ptx" />
   <xi:include href="S_hubfirstrepo.ptx" />
+  <xi:include href="S_hubbranches.ptx" />
 
 </chapter>
