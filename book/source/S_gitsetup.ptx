@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="S_gitsetup">
+  <title>Getting Set Up with Git</title>
+  
+  <introduction>
+  <p>
+    You should have Git installed at this point. If not, see <xref ref="fm_materials"/>. This means you 
+    already have Git ready to go. But how? We created a repo on GitHub but need a way to connect that
+    repo with our personal computer.
+    That's one of the main purposes of Git: <em>to connect the files on your computer to GitHub.</em> 
+    It also performs version control and automatically records changes that have been committed. 
+  </p>
+  <p>
+    It's not always feasible to edit file on GitHub, as we did in <xref ref="S_hubfirstrepo"/> and
+    <xref ref="S_hubbranches"/>. Certain text editors (for instance, Visual Studio Code which you 
+    should also have installed) have features built in to ease coding and file editing. VSCode extensions
+    might add color to text to help you see what's going on in your code. Others provide bug fixing and 
+    error catching before the errors actually occur. In general, you will edit files on your personal 
+    computer and will want to share them with the world. <em>I would stay away from editing on GitHub unless
+    you have a small correction and/or you don't need any special editing tools.</em>
+  </p>
+  </introduction>
+
+  <subsection xml:id="SS_cloning">
+    <title>Cloning a Repository</title>
+
+    <p>
+      In order to make Git work, we need to set up a connection between your computer and your GitHub
+      repo. From here on, I might refer to your personal files as your <term>local files</term>. A file 
+      is typically considered <q>local</q> if it does not exist on GitHub. It is local because only you
+      have access to it. You will likely here other people use this term and its derivatives (such as 
+      <q>editing locally</q>). Whenever it comes up, it refers to work/files/things on your computer and 
+      not online.
+    </p>
+    <p>
+      So let's use the new vocab. We need a way to edit our GitHub repo locally but still have version
+      control and GitHub tools. Git is the right tool for the job. Performing this connection is called 
+      cloning. A <term>clone</term> of a repository is a local version of a repo that exists on GitHub.
+      Luckily for us, GitHub expects us to do this and makes is rather simple to do.
+    </p>
+    <p>
+      Somewhat unfortunately, one thing must be done before we are able to clone a repo. Interacting 
+      with your GitHub materials in this way will require authentication; in other words, your password.
+      This is necessary for safety and is a smart feature. However, Git/GitHub has deprecated the use of 
+      passwords on the command line so we must generate an Personal Access Token (PAT). The following procedure guides 
+      you through this process. I recommend creating a new PAT for each repo to ensure that if any one 
+      gets unauthorized access of one repo, they won't be able to get to your others.
+    </p>
+
+    <project xml:id="gitproc-pat">
+      <title>Generating a PAT</title>
+      
+      <task>
+        <p>
+          Click on your GitHub profile icon and navigate to Settings.
+        </p>
+      </task>
+      <task>
+        <p>
+          Scroll down and click on <q>Developer Settings</q>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Click on <q>Personal access tokens</q>. This page will give you an overview of all the tokens 
+          you have created, their expiration dates, and the things they have access to.
+        </p>
+      </task>
+      <task>
+        <p>
+          Click on <q>Generate new token</q>. Your GitHub password may be required.
+        </p>
+      </task>
+      <task>
+        <p>
+          Enter a title for your token. What is your project? This name doesn't really matter; it exists 
+          solely to help you remember why you made it. If this is your first PAT, perhaps name it 
+          <q>Git Started Work</q> or <q>About Me</q>.
+        </p>
+        <p>
+          If you choose the above, make sure you only use the token for that purpose!
+        </p>
+      </task>
+      <task>
+        <p>
+          Choose an expiration date. At what point do you plan on being done with this project? Set the 
+          date for a month after that. Don't fret too much about it; you can always create a new PAT later
+          for the same project. But I can bet that you won't want to do this process more than once for 
+          one project if you can help it.
+        </p>
+      </task>
+      <task>
+        <p>
+          Select a scope or scopes. What do you want this PAT to give you access to? This will depend on 
+          your project but less is better (for privacy in the event of hacking). Don't be super concerned as 
+          it is difficult to hack PATs. If you do not give a PAT permission to do something, that something will not be 
+          able to be done locally, even by you. 
+        </p>
+        <p>
+          For this project, you will want the <q>repo</q> scope and maybe the
+          <q>user</q> scope. Once you have the scope(s) selected, click <q>Generate token</q>.
+        </p>
+      </task>
+      <task>
+        <p>
+          You will get an email that a PAT was created. Record your PAT somewhere. You will never see
+          it again after you close or refresh the page. Don't put it somewhere easily accessible. 
+          <em>Treat PATs like passwords.</em> They are confidential and should not be shared. 
+          When Git (on the command line) asks for your password, you will enter in your PAT instead.
+        </p>
+      </task>
+    </project>
+
+    <p>
+      Now that we have a PAT, let's work on cloning a repo! You will likely need your PAT in this
+      procedure. Note that sometimes Git remembers old PATs. If Git does not ask you for a password, 
+      this doesn't mean something went wrong, it just means that you are already authenticated.
+    </p>
+
+    <project xml:id="gitproc-clone">
+      <title>Cloning from GitHub</title>
+      
+      <introduction>
+        <p>
+          This procedure assumes you have a repo on GitHub called <c>aboutme</c> and have been following 
+          along with the changes as described in <xref ref="C_githubsolo"/>. 
+        </p>
+      </introduction>
+
+      <task>
+        <p>
+          Navigate to the Code tab your repo <c>aboutme</c>. Make sure you are on the main branch.
+        </p>
+      </task>
+      <task xml:id="clone-https">
+        <p>
+          Find the green dialog box labeled <q>Code</q> (yes, the Code box inside the Code tab).
+          Notice you are able to add files manually through upload or through GitHub. You certainly 
+          coule do this but you will most likely be ignoring the version control and the wonderful experience 
+          of using Git!
+        </p>
+        <p>
+          Click on the green Code box. This box is titled <q>Clone</q> which is a good sign. 
+          A url-like string should appear (if not, be sure you have the HTTPS tab selected.) Copy this
+          string.
+        </p>
+      </task>
+      <task>
+        <p>
+          Open your terminal. Use <c>cd</c> to navigate to a folder where you want your repo to live 
+          locally. Remember that repositories are essentially folders. When you clone your repo, it will
+          look like a folder on your computer. In some cases, it might not make sense to create a folder
+          and then clone your repo as it will look like a folder that contains a folder. Note that the
+          name of the cloned repo/folder will be the name of your repository.
+        </p>
+      </task>
+      <task>
+        <p>
+          You should be at the location you want your repo to be. It is now time to activate Git. Every
+          time you use a Git command, you start with <c>git</c>, then the command. For cloning:
+        </p>
+
+          <console>
+            <input>
+              git clone &lt;copied-https-string>
+            </input>
+            <output>
+              Cloning into 'aboutme'...
+              remote: Enumerating objects: 17, done.
+              remote: Counting objects: 100% (14/14), done.
+              remote: Compressing objects: 100% (9/9), done.
+              remote: Total 17 (delta 2), reused 0 (delta 0), pack-reused 3
+              Receiving objects: 100% (17/17), 5.06 KiB | 1.01 MiB/s, done.
+              Resolving deltas: 100% (2/2), done.
+            </output>
+          </console>
+        <p>
+          where &lt;copied-https-string> is replaced with the HTTPS string you copied in <xref ref="clone-https"/>.
+          Press enter to run the command.
+        </p>
+        <p>
+          Your terminal may ask you for your GitHub username and password. This is ok: enter your username
+          and instead of typing your normal GitHub password, paste/type your PAT as found in <xref ref="gitproc-pat"/>.
+        </p>
+      </task>
+      <task>
+        <p>
+          Verify that the clone worked. In the location you chose (on your computer), you should see 
+          a new folder with the
+          name of your repository. Inside of that folder will be your files!
+        </p>
+      </task>
+      
+    </project>
+
+    <p>
+      <em>Cloning a repository does not navigate you into that repo.</em> In other words, when you clone a repo,
+      you won't see the files in the repo until you <c>cd</c> into the newly-created directory.
+      In order to use Git, you will have to navigate your terminal into the repo. In this instance,
+      you would do <c>cd aboutme</c>.
+    </p>
+    
+  </subsection>
+  
+  <subsection xml:id="SS_gitbranches">
+    <title>Branches With Git</title>
+    
+    <p>
+      Great! We've cloned a repository. Now what? You probably want to jump into editing files but wait!
+      Best practice says to create a new branch first. Sure, you are working solo (if you aren't, see
+      <xref provisional="working-solo"/>) and you can really do what ever you want. You could just edit
+      everything on the main branch and never have to worry about other branches. No one will be
+      able to screw with your files without permission. 
+    </p>
+    <p>
+      No one except you! Yes, you could make a mistake and break your program or project. You want to
+      avoid that. I would recommend <em>always</em> using branches whether you are working alone or not.
+      If you make a horrible mistake, branches help you fix mistakes without messing with your main branch.
+      Remember, if your repo is public, anyone can access it. Anyone can view the files, download the files,
+      clone your repo, or fork your repo (<xref provisional="forking"/>). You want to make sure that
+      the files on the main branch are up-to-date AND functional at all times. Branches will let you test
+      new things without breaking main.
+    </p>
+    <p>
+      We saw earlier how to work with branches on GitHub, but you can also do this right from the command
+      line. This can be done with one command and doesn't involve navigating multiple pages as we did on
+      GitHub (<xref ref="S_hubbranches"/>). 
+    </p>
+
+    <project xml:id="gitproc-branches">
+      <title>Branches With Git</title>
+      <introduction>
+        <p>
+          Later on in this chapter, you will be adding to your README file. You first will add
+          the country you were born in.
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+        <p>
+          Ensure that your terminal is navigated into your repo. You may have noticed that your
+          terminal changed! The name of your active branch is displayed by the file path.
+          Mine now has a <c>(main)</c>. This is how you remember which branch you are editing on.
+        </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+        <p>
+          Remember that each Git command begins with <c>git</c> to let your computer know you will
+          be using Git. To create a new branch, use the following:
+        </p>
+
+        <console>
+          <input>
+            git branch &lt;branch-name>
+          </input>
+        </console>
+
+        <p>
+          where <c>&lt;branch-name></c> is the non-spaced name of your new branch. Try creating a new
+          branch now, with the name of <c>country</c>. So,
+        </p>
+
+        <console>
+          <input>
+            git branch country
+          </input>
+        </console>
+
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Well shoot. Git still says we're on the main branch. We want it to tell us that we are on
+            the <c>country</c> branch. That's because we need to tell Git what we want to work on
+            that new branch. Git doesn't move you to that branch in case you want to make more than
+            one branch at one time.
+          </p>
+          <p>
+            With Git, navigating to a new branch is done with <c>checkout</c>. In general,
+          </p>
+
+          <console>
+            <input>
+              git checkout &lt;branch-name>
+            </input>
+            <output>
+              Switched to branch '&lt;branch-name>'
+            </output>
+          </console>
+
+          <p>
+            If done correctly, Git will tell you that it switched to the new branch. This should be
+            reflected in the branch name indicator. Checkout your new branch <c>country</c>:
+          </p>
+
+          <console>
+            <input>
+              git checkout country
+            </input>
+            <output>
+              Switched to branch 'country'
+            </output>
+          </console>
+
+          <p>
+            My terminal now says <c>(country)</c> instead of <c>(main)</c> so I have verification
+            that the process worked.
+          </p>
+        </statement>
+      </task>
+    </project>
+
+    <paragraphs>
+      <title>Branch/Checkout Shortcut</title>
+      <p>
+        Using a little terminal trick, we can actually create a branch and checkout that branch at
+        the same time. This uses the <c>-b</c> switch. For our example in <xref ref="gitproc-branches"/>,
+      </p>
+      <console>
+        <input>
+          git checkout -b &lt;branch-name>
+        </input>
+        <output>
+          Switched to new branch '&lt;branch-name>'
+        </output>
+      </console>
+
+      <p>
+        By adding the <c>-b</c> switch to the <c>checkout</c> command, Git creates a new branch with
+        the title given and checks out that branch. This is quite useful if you are only creating
+        one branch and want to switch right to it. If you are uncomfortable with this, then feel free
+        to continue using the method in <xref ref="gitproc-branches"/>. Each will get you to the same place.
+      </p>
+    </paragraphs>
+  </subsection>
+
+  <conclusion>
+    <p>
+      You are now ready to edit files! You determined a chunk of your project to start with
+      (adding your birth country), created a corresponding branch (<c>country</c>) and checked out
+      that branch. Until you change your branch again, all edits will take place on your current
+      branch <em>only</em>. We will explore this idea more in <xref provisional="git-confusing"/>.
+      For now, continue on to edit your README file!
+    </p>
+  </conclusion>
+</section>
