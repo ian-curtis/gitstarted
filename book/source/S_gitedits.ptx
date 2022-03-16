@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<section xml:id="S_gitedits">
+  <title>Editing Files</title>
+
+  <introduction>
+    <p>
+      Admittedly, the title of this section is a little misleading. You can't edit files with
+      Git. Git just keeps track of your files and your changes. Take this section as a chance to familiarize yourself with your text editor (VS Code is recommended and is demonstrated here).
+    </p>
+  </introduction>
+
+  <p>
+    To recap, we used the command line and Git to start the version control process for our next edits. We activated a branch called <c>country</c> which we chose intentionally because we plan on adding our country to the README file. Git will keep the <c>country</c> branch <q>active</q> until we tell it to switch to another branch. Any changes you make, files you delete, or files you create will be recorded under this <c>country</c> branch. In other words, only the <c>country</c> branch will change, not <c>main</c>. 
+  </p>
+
+  <p>
+    But lets try editing our file. This is the main goal after all. Open your README file in your preferred text editor. If you're feeling adventurous, use the terminal to do it. If you are using VS Code, read <xref ref="open-file-vscode"/> before using the terminal to open the file.
+  </p>
+
+  <assemblage xml:id="open-file-vscode">
+    <title>Opening Files With VS Code</title>
+    <p>
+      Try to open the README file with the terminal. (Remember how? See <xref ref="S_commands"/> if not.) What happened?
+    </p>
+    <p>
+      Any number of things could have happened. It might have worked and VS Code opened with your file ready to edit. Maybe it didn't work at all and no applications opened. Maybe your terminal opened up a different app. The problem with the <c>open</c> command is that it picks the default application and opens that. For me, by default, all <c>.md</c> files open in RStudio. So, I have to specifically tell my terminal that I want VS Code to open the file, not anything else.
+    </p>
+    <p>
+      Luckily, VS Code has its own command! Remember how every Git command starts with <c>git</c>? Well that same idea holds for many different commands. To open a file in VS Code, type <c>code &lt;file-name-and-extension></c> where <c>code</c> stands for VS Code. Now things should work correctly and VS Code should open your file.
+    </p>
+  </assemblage>
+
+  <p>
+    Hopefully, the contents of the file look familiar. Everything should be the same from when we edited it back in GitHub. Take a minute and add a heading called <q>My Birth Country</q> and type a sentence stating your birth country. (If you don't want that information on the internet, put any country <ellipsis/> maybe your favorite country.) Save your file.
+  </p>
+  <p>
+    I would like to point out some helpful features that VS Code has (other text editors will likely have these same features but not in the same places). In the bottom left corner, VS Code displays the name of your current active branch. This is incredibly useful in case you forget what branch you are on (especially if you are working with multiple branches) or if you want to verify that you are working on a branch and not on main (which is not a great idea). VS Code also displays (on the left side) a list of all of your files and directories that are inside your GitHub repository allowing easy access to any file you might wish to edit.
+  </p>
+  <p>
+    All files you currently have open appear as tabs at the top of your screen. You might also have noticed that when you saved your file, the name of your README changed from white to a cheddar color and an M appeared. VS Code has Git integrated inside of it (one of the many benefits). As Git keeps track of your changes, VS Code tells you which files you have <em>m</em>odified (M, yellow), <em>d</em>eleted (D, red), or created (U, untracked). If you were to undo <em>all</em> of your changes and saved the file again, the M would disappear and the color would go back to white.
+  </p>
+
+  <conclusion>
+    <p>
+      Hopefully editing the file was fairly straightforward. We now have changes that we have made and we want to get those changes back on to GitHub and on the <c>main</c> branch. Don't forget that the changes we made in this section are only local and only on the <c>country</c> branch. The next section covers how to stage, commit, and push your changes.
+    </p>
+  </conclusion>
+  
+</section>

@@ -283,12 +283,12 @@
             one branch at one time.
           </p>
           <p>
-            With Git, navigating to a new branch is done with <c>checkout</c>. In general,
+            With Git, navigating to a new branch is done with <c>switch</c>. In general,
           </p>
 
           <console>
             <input>
-              git checkout &lt;branch-name>
+              git switch &lt;branch-name>
             </input>
             <output>
               Switched to branch '&lt;branch-name>'
@@ -297,12 +297,12 @@
 
           <p>
             If done correctly, Git will tell you that it switched to the new branch. This should be
-            reflected in the branch name indicator. Checkout your new branch <c>country</c>:
+            reflected in the branch name indicator. Switch to your new branch <c>country</c>:
           </p>
 
           <console>
             <input>
-              git checkout country
+              git switch country
             </input>
             <output>
               Switched to branch 'country'
@@ -321,11 +321,11 @@
       <title>Branch/Checkout Shortcut</title>
       <p>
         Using a little terminal trick, we can actually create a branch and checkout that branch at
-        the same time. This uses the <c>-b</c> switch. For our example in <xref ref="gitproc-branches"/>,
+        the same time. This uses the <c>-c</c> switch. For our example in <xref ref="gitproc-branches"/>,
       </p>
       <console>
         <input>
-          git checkout -b &lt;branch-name>
+          git switch -c &lt;branch-name>
         </input>
         <output>
           Switched to new branch '&lt;branch-name>'
@@ -333,13 +333,26 @@
       </console>
 
       <p>
-        By adding the <c>-b</c> switch to the <c>checkout</c> command, Git creates a new branch with
+        By adding the <c>-c</c> switch to the <c>switch</c> command, Git creates a new branch with
         the title given and checks out that branch. This is quite useful if you are only creating
         one branch and want to switch right to it. If you are uncomfortable with this, then feel free
         to continue using the method in <xref ref="gitproc-branches"/>. Each will get you to the same place.
       </p>
     </paragraphs>
   </subsection>
+
+  <paragraphs>
+    <title>Note About <c>git switch</c></title>
+    <p>
+      The <c>git switch</c> command was recently introduced to help remove user confusion. Previously, 
+      the command was <c>git checkout &lt;branch-name></c>. However <c>checkout</c> has two functions:
+      to switch branches and to reset files (if a file has edits that you want to restore, you can use
+      <c>checkout</c> to restore the file to how it was before you made the changes). 
+    </p>
+    <p>
+      <c>git checkout</c> still exists and you are welcome to use it to switch branches (you would use <c>git checkout -b &lt;branch-name></c>). However, to avoid confusion, I recommend using <c>git switch</c> for changing branches and <c>git restore</c> for restoring files.
+    </p>
+  </paragraphs>
 
   <conclusion>
     <p>
