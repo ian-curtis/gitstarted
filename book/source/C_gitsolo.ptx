@@ -25,5 +25,6 @@
 
   <xi:include href="S_gitsetup.ptx" />
   <xi:include href="S_gitedits.ptx" />
-  
+  <xi:include href="S_gitfinalize.ptx" />
+  <xi:include href="S_gittroubles.ptx" />
 </chapter>

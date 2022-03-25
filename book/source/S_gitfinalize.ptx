@@ -1,0 +1,503 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="S_gitfinalize">
+  <title>Sending Changes Back To GitHub: The Three-Step Process</title>
+
+  <introduction>
+    <p>
+      This is a very important section. Each step must be completed in the proper order to avoid Git errors, headaches, and file loss. 
+    </p>
+  
+
+  <p>
+    With Git, there are three main steps to sending edits back to GitHub. That may seem like too many but in fact each step serves a different purpose and gives you a little bit of freedom with how you edit on a branch. The three steps are
+    <ol>
+      <li>
+        <p>
+          Staging your files for sending
+        </p>
+      </li>
+      <li>
+        <p>
+          Commiting your changes
+        </p>
+      </li>
+      <li>
+        <p>
+          Pushing your changes to GitHub
+        </p>
+      </li>
+    </ol>
+
+    Step 2 may seem familiar. Yep, the <term>commit</term> that happens here is the same thing as a commit we did earlier!
+  </p>
+  </introduction>
+
+  <subsection xml:id="SS_git-status">
+    <title>Wait, Which Files Did I Change Again?</title>
+
+    <p>
+      This happenes often in large projects (and even in smaller projects). You have a branch, you've been working all day editing and creating files, making sure things work. But now it's time to stage the files and you don't remember what files you've edited! You aren't even positive what the file names are. True, VS Code color codes your edited files but you might have folders and subfolders throught your repository and don't really feel like searching through everything to record what files you changed and which of them you want to send to GitHub.
+    </p>
+    <p>
+      Luckily, Git has the command for you! With one line in the terminal, you can easily see a list of files you changed, deleted, and added. Let's explore that with our small case.
+    </p>
+
+    <project xml:id="try-git-status">
+      <title>Trying <c>git status</c></title>
+      <statement>
+        <p>
+          The command you will need is simple: <c>git status</c>. The <c>git</c> is necessary to tell the computer that we will be using git and the <c>status</c> gives the the current status of all of the files in our repository. Open the termainal, verify that you are in the correct directory and on the correct branch and try the command. Did it spit out what you expected?
+        </p>
+      </statement>
+      <solution>
+        <p>
+          You might see a console output such as the one below.
+        </p>
+        <console>
+          <input>
+            git status
+          </input>
+          <output>
+            On branch country
+            Changes not staged for commit:
+              (use "git add &lt;file>..." to update what will be committed)
+              (use "git restore &lt;file>..." to discard changes in working directory)
+                    modified:   README.md
+
+            no changes added to commit (use "git add" and/or "git commit -a")
+          </output>
+        </console>
+
+        <p>
+          We get a lot more information than needed right now, but we will break this output down shortly. For now, notice that we get a statement of the branch we are on and a file name that represents a file we have modified. It is not recreated here, but the modified file name is red in the output (any new, untracked files will be green). 
+        </p>
+      </solution>
+    </project>
+    
+  </subsection>
+
+  <subsection xml:id="SS_git-add">
+    <title>Step 1: Staging Files</title>
+    <p>
+      The first step in sending files back to GitHub is to stage your files. Basically, this step is like you saying <q>I have edited some files these are the ones I would like to send to GitHub</q>. With our small example, this step is a little silly. We only edited one file, of course it's the one we want to send back.
+    </p>
+    <p>
+      The magic of staging files, however, lets you choose which files you want to push back. Maybe I'm working on three files at once, but only two are ready to go back to GitHub. Maybe I'm writing a book and I want my editor to be able to see chapters 1-4 but not chapter 5 (which I'm currently working on). At any given time, you can decide which files you want to stage.
+    </p>
+
+    <project xml:id="try-git-add">
+      <title>Trying <c>git add</c></title>
+      <introduction>
+        <p>
+          All this is great but how do I stage my files? How do I tell Git which files I want to send back?
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            The output from <c>git status</c> in <xref ref="try-git-status"/> actually gives a hint on how to proceed. If you haven't completed <xref ref="try-git-status"/>, I recommend doing so now.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            The staging command is done with <c>git add</c> and the command is followed by all the files you want to add. There are three cases with this command:
+            <dl>
+              <li>
+                <title>You want to add specific files</title>
+                <p>
+                  Type in each file name and extension individually with a space between each file.
+                </p>
+              </li>
+              <li>
+                <title>You want to add an entire folder of files</title>
+                <p>
+                  Type in the name of the folder followed by a <kbd>/</kbd> (<eg/>, <c>images/</c>).
+                </p>
+              </li>
+              <li>
+                <title>You want to add all changed / created / deleted files</title>
+                <p>
+                  Type in a single period (<kbd>.</kbd>) instead of file names.
+                </p>
+              </li>
+            </dl>
+          </p>
+          <p>
+            You can run as many or as little <c>git add</c> commands as you wish. For instance, you could do <c>git add images/ my_file.txt</c> or you could do <c>git add images/</c> and then do <c>git add my_file.txt</c> separately. It's up to you and how comfortable you feel with Git.
+          </p>
+          <p>
+            Try now to stage your README file using one of the three cases above.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Case 1 or Case 3 will work in this instance.
+          </p>
+        </hint>
+        <answer>
+          <p>
+            <c>git add README.md</c> OR <c>git add .</c>. Neither will produce any output.
+          </p>
+        </answer>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use <c>git status</c> to verify that your staging worked and that you didn't add any extra files on accident (see <xref ref="reverse-git-add"/> if you did).
+          </p>
+        </statement>
+        <answer>
+          <console>
+            <input>git status</input>
+            <output>
+            On branch country
+            Changes to be committed:
+              (use "git restore --staged &lt;file>..." to unstage)
+                    modified:   README.md
+            </output>
+          </console>
+          <p>
+            The text color has changed to green which indicates the process worked.
+          </p>
+        </answer>
+      </task>
+    </project>
+
+    
+    
+  </subsection>
+
+  <subsection xml:id="SS_git-commit">
+    <title>Step 2: Committing Files</title>
+    <p>
+      <q>Commit</q> is a great name for this step in the process. At this point, you are indeed ready to commit to what you have changed and to send your selected files to GitHub. 
+    </p>
+    <p>
+      Remember committing from <xref ref="S_hubbranches"/>? This commit is the same concept as it was before: telling Git/GitHub that your changes are done, you are sure they are done, and that you would like them to be a part of your main, active branch. This is easy on GitHub; all we had to do was hit the <q>Commit changes</q> button. With Git and the command line, there are no buttons or fancy things to interact with. We instead have to tell Git exactly what we want to do.
+    </p>
+
+    <project xml:id="try-git-commit">
+      <title>Trying <c>git commit</c></title>
+
+      <introduction>
+        <p>
+          Let's learn how to commit our files using Git. Note that you must have staged at least one file before moving on to this step. See <xref ref="try-git-add"/> if you have not done this.
+        </p>
+        <p>
+          The basic command to commit files is (conveniently) <c>git commit</c>; <c>git</c> for initiating Git and <c>commit</c> to tell Git we are going to be committing files. However, the command also requires a <term>commit message</term> (which we also did in <xref ref="S_hubbranches"/>). This is done with the <c>-m</c> switch.
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+        <p>
+          Take a minute to think about the edits you have just made. In a few words, how would you explain to future you and others what you changed? If you could summarize your changes in a sentence or less, how would you? Whatever you decide on will be your commit message. 
+        </p>
+        <p>
+          Do keep in mind the guidelines expressed in <xref ref="commitmessages"/>. They apply here, too! (And any other time you are committing.)
+        </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+        <p>
+          Type <c>git commit -m "&lt;your-commit-message>"</c> into the command line. For our working example, I might type <c>git commit -m "add birth country"</c>.
+        </p>
+        <console>
+          <input>git commit -m "add birth country"</input>
+          <output>
+          [country 137b0bc] add birth country
+           1 file changed, 4 insertions(+)
+          </output>
+        </console>
+        <p>
+          Note that the message is surrounded by quotation marks. This is required so that Git doesn't think that each word in your message is a separate command. They can be either single or double quotes as long as the two match. Also take a look at the output. This tells you the name of your branch, a unique identifier for your commit (so yours will be different than mine), your commit message, how many files were changed, and how many lines were inserted or deleted. This can be useful to verify that the commit worked as you expected.
+        </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+        <p>
+          Just for good measure, try <c>git status</c> as an extra verification step (<xref ref="try-git-status"/>). 
+        </p>
+        </statement>
+        <answer>
+          <console>
+            <input>git status</input>
+            <output>
+            On branch country
+            nothing to commit, working tree clean
+            </output>
+          </console>
+          <p>
+            This output is what is to be expected! Don't fret that it says nothing to commit. This is completely true since we just finished committing everything that we had staged. This output means that everything worked correctly.
+          </p>
+        </answer>
+      </task>
+      
+    </project>
+
+    <p>
+      It is worth mentioning a few notes about commits since they can be forgotten or confused.
+      <ol>
+        <li>
+          <p>
+            A commit is similar to saving a Word document, closing Word, and shutting down your computer. Sure, you can go back and reverse your changes or keep editing, but it would take some time to start your computer back up and open the file. Same with commits. It is possible to reverse a commit, but it can be annoying to have to do so. Git gives you multiple stages in the finalizing process to help you catch any edits you forgot to make.
+          </p>
+        </li>
+        <li>
+          <p>
+            If for whatever reason you find that you made a commit too early or did so accidentally, you can reset your current branch back to what it was before the commit, according to Git's knowledge. Details can be found in <xref ref="reverse-git-commit"/> in <xref ref="S_gittroubles"/>.
+          </p>
+        </li>
+        <li>
+          <p>
+            It is possible to have multiple commits in one push. See <xref ref="SS_git-push"/> for more details.
+          </p>
+        </li>
+      </ol>
+    </p>
+  </subsection>
+
+  <subsection xml:id="SS_git-push">
+    <title>Step 3: Pushing Files</title>
+    
+    <introduction>
+      <p>
+        Take a minute and go back to your GitHub repo for your <c>aboutme</c> files. Do the files there reflect your changes of an added country?
+      </p>
+      <p>
+        Nope, nothing should have changed. Git has, in its three-step process, built in saving graces to help us in case we make a mistake. If <c>git commit</c> send our files right to GitHub, it would be much more difficult to reverse things or correct our mistakes.
+      </p>
+      <p>
+        Enter the third step in the process: the <c>git push</c>. This step is new; we haven't seen it before. When we worked on GitHub, a commit <em>did</em> did send our changes to the files. But now that we are working locally, an extra step is needed to tell Git that we are truly finished editing <em>and</em> that we want our changes to show up on GitHub for the world to see.
+      </p>
+    </introduction>
+
+    <p>
+      In order to understand the syntax of the <c>git push</c> command, we need to talk about remotes. A <term>remote</term> is a connection between a local repo and a GitHub repo. Remotes are also dependent on the branch you are on. By default, when you clone a repo, Git creates a remote from your local main branch to the main branch of the repo on GitHub. It's a connection; when you tell Git to push changes to GitHub, it knows where to send the changes because of the remote.
+    </p>
+    <p>
+      There are two types of remotes: <term>origin</term> and <term>upstream</term>. Upstream remotes not necessary when you are working with yourself and on your own repo. We will come back to them in <xref provisional="upstream"/>. To Git, <q>origin</q> is the repo that you have cloned. Throughout this section, we have been working with a repo titled <c>aboutme</c> that is located on GitHub. This GitHub version of the repo is <q>origin</q>. When we cloned, we made a copy of <q>origin</q> onto our computer and Git established a remote connection from the local computer to GitHub. 
+    </p>
+    <p>
+      This is necessary to understand for <c>git push</c>. The command has four parts:
+      <ol>
+        <li>
+          <p>
+            <c>git</c>, telling our computer to use Git
+          </p>
+        </li>
+        <li>
+          <p>
+            <c>push</c>, telling Git that we are going to be pushing our committed files somewhere
+          </p>
+        </li>
+        <li>
+          <p>
+            The remote you want to push to. Here, we will use <c>origin</c>.
+          </p>
+        </li>
+        <li>
+          <p>
+            The branch you want to push to.
+          </p>
+        </li>
+      </ol>
+      With this information, try <xref ref="try-git-push"/> which will guide you through the process and some common errors should you forget one of the four parts.
+    </p>
+
+    <project xml:id="try-git-push">
+      <title>Trying <c>git push</c></title>
+      
+      <introduction>
+        <p>
+          This procedure will start with telling you to do the wrong things so you gain an understanding of what to expect if you type the <c>push</c> command incorrectly. The second part will show you the recommended way to push your files back to GitHub.
+        </p>
+      </introduction>
+
+      <task>
+        <introduction>
+          <p>
+            Let's start with some errors that Git can through at us.
+          </p>
+        </introduction>
+
+          <task>
+            <statement>
+              <p>
+                What might happen if you forgot to specify the remote and branch? Let's find out: type <c>git push</c> into the command line.
+              </p>
+            </statement>
+            <solution>
+              <console>
+                <input>git push</input>
+                <output>
+                fatal: The current branch country has no upstream branch.
+                To push the current branch and set the remote as upstream, use
+
+                    git push --set-upstream origin country
+                </output>
+              </console>
+              <p>
+                Well that looks a little scary. Fatal! That just means that git wansn't able to complete your request and stopped trying. The reason this failed is because the branch <c>country</c> is only on your computer, it hasn't yet made it to GitHub (which is what we are trying to do). It is possible to create a remote connection between branches but I often don't especially if I am only working on one branch at a time and if I plan on deleting a branch when I'm done with it. Should you want to create a remote, use the command Git provided.
+              </p>
+            </solution>
+          </task>
+
+          <task>
+            <statement>
+              <p>
+                What if you just forgot to specify the branch? Try <c>git push origin</c>.
+              </p>
+            </statement>
+            <solution>
+              <console>
+              <input>git push origin</input>
+                <output>
+                fatal: The current branch country has no upstream branch.
+                To push the current branch and set the remote as upstream, use
+
+                    git push --set-upstream origin country
+                </output>
+              </console>
+              <p>
+                Well, look at that, the same error. This should make sense. You are telling Git to push changes to the origin repo but <c>country</c>, the current branch, doesn't have an origin since we created the branch locally.
+              </p>
+            </solution>
+          </task>
+
+          <task>
+            <statement>
+              <p>
+                What if you remembered the branch, but not the remote? Try <c>git push country</c>
+              </p>
+            </statement>
+            <solution>
+              <console>
+              <input>git push country</input>
+                <output>
+                fatal: 'country' does not appear to be a git repository
+                fatal: Could not read from remote repository.
+
+                Please make sure you have the correct access rights
+                and the repository exists.
+                </output>
+              </console>
+              <p>
+                Remember the four parts to <c>git push</c>? Well since we forgot Step 3, the remote name, Git assumes that the word <q>country</q> is the name of the repo we want to push to. Since there is no repo named <q>country</q> on your computer nor on GitHub, it doens't know where to push and errors out.
+              </p>
+            </solution>
+          </task>
+      </task>
+
+      <task>
+        <introduction>
+        <p>
+          Now let's see how to properly push files back to GitHub. This part assumes you have already staged and committed all of the files you intend to push.
+        </p>
+        </introduction>
+
+        <task>
+          <statement>
+            <p>
+              Take a minute to think about where you are pushing to. Origin? Upstream (if applicable)? What is your current branch name?
+            </p>
+          </statement>
+          <answer>
+            <p>
+              Here, to follow with the example, we will use <c>origin</c> and the branch name <c>country</c>.
+            </p>
+          </answer>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Once you have decided, fill in the correct pieces of the <c>git push</c> formula.
+            </p>
+          </statement>
+          <solution>
+            <console>
+            <input>git push origin country</input>
+              <output>
+              Enumerating objects: 5, done.
+              Counting objects: 100% (5/5), done.
+              Delta compression using up to 4 threads
+              Compressing objects: 100% (2/2), done.
+              Writing objects: 100% (3/3), 330 bytes | 82.00 KiB/s, done.
+              Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+              remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+              remote: 
+              remote: Create a pull request for 'country' on GitHub by visiting:
+              remote:      &lt;url-to-pull-request>
+              remote: 
+              To &lt;url-to-origin-repo>
+               * [new branch]      country -> country
+              </output>
+            </console>
+            <p>
+              We get a lot of output for a successful push. Most of it is just information that can be useful in certain cases and might be worth a glance to make sure things worked as expected.
+            </p>
+          </solution>
+        </task>
+      </task>
+
+      <conclusion>
+        <p>
+          At this point, you are ready to head back to GitHub and submit a pull request!
+        </p>
+      </conclusion>
+      
+    </project>
+
+    <p>
+      As mentioned earlier, it is possible to have multiple commits per push. An example of such a situation might be typo correction. Suppose I just finished a long novel and now I'm going back to correct all of my typos. So I create a branch called <c>typos</c> and start editing my files to remove my typos. Instead of fixing all of my typos, then staging all of my files, then doing one commit and one push, I could break things up. I could fix all the typos in Chapter 1, then add the files and commit (with a message such as <q>correct typos ch1</q>). Then fix typos in Chapter 2 and add and commit. When I'm done, I do one push and Git will push all of the commits to GitHub at one time. Breaking things up like this allows for better version control. More commits leads to more stamps on the version timeline. It also can give you peace of mind. If something horrible happens and I lost all of my book's files, then I only lose the changes for the chapter I'm currenlty working on whereas if I had been editing all at once, I would have lost <em>all</em> of my changes for all of my chapters.
+    </p>
+
+    
+  </subsection>
+
+  <p>
+    This section deserves a final summary.
+
+    <project xml:id="three-step-summ">
+      <title>The Three-Step Process</title>
+      
+      <statement>
+        <p>
+          When you are finished editing your files and are ready to send things back to GitHub, follow the Three-Step Process. Don't forget to use <c>git status</c> throughout this process!
+          <ol>
+            <li>
+              <p>
+                Stage your files: <c>git add &lt;files></c> (<xref ref="try-git-add"/>)
+              </p>
+            </li>
+            <li>
+              <p>
+                Commit your staged files: <c>git commit -m "&lt;commit-message>"</c> (<xref ref="try-git-commit"/>)
+              </p>
+            </li>
+            <li>
+              <p>
+                Push your committed files: <c>git push &lt;remote> &lt;branch></c> (<xref ref="try-git-push"/>)
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </project>
+  </p>
+
+  <conclusion>
+    <p>
+      When we push to GitHub, your files are pushed to the branch you specified. If the branch had not existed before the push, then Git will create the branch, but will not merge it with the main branch. To do so, we need to go back to GitHub and create a pull request. The next section revists the process of creating a pull request and builds on the ideas gained in <xref ref="SS_pullrequest"/>.
+    </p>
+  </conclusion>
+  
+</section>

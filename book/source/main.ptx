@@ -46,7 +46,7 @@
     <xi:include href="./frontmatter.ptx" />
 
     <part xml:id="part-intro">
-      <title>Introductory Materials</title>
+      <title>Introductory Information</title>
       <xi:include href="./C_basics.ptx" />
       <xi:include href="./C_commandline.ptx"/>
     </part>
