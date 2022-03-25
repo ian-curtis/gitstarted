@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="S_gittroubles">
+<appendix xml:id="app_gittroubles">
   <title>Common Git Troubles and How To Fix Them</title>
 
   <introduction>
@@ -85,4 +85,4 @@
     </project>
     
   </subsection>
-</section>
+</appendix>

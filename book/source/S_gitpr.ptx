@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="S_gitpr">
+  <title>The Final Steps</title>
+  
+  <introduction>
+    <p>
+      We're almost done! At this point, you should have completed the three-step process as outlined in <xref ref="S_gitfinalize"/>. What could be known as the fourth step is to head back to GitHub and submit a pull request. At this point, it does seem silly to ask yourself for permission to include your own changes, but it makes more sense when contributing to someone elses repository. In order for your changes to be included into any main branch, you need to ask the repo owner/moderator(s) for permission to pull in your changes.
+    </p>
+    <p>
+      It is important to make a distinction between a <term>push</term> and a <term>pull</term>. When you push changes, you are sending your changes from place to another, such as how we pushed changes from local to origin. Submitting a pull request is equivalent to pushing your changes to the main branch, but since this often requires permission, we typically use the term <term>pull request</term>. In this case, you are asking someone else to pull in your changes to their main branch.
+    </p>
+  </introduction>
+     
+
+  <activity xml:id="git-pr">
+    <title>Creating a Pull Request</title>
+    <introduction>
+      <p>
+        A lot of this section will look familiar to the ideas expressed in <xref ref="S_hubbranches"/>. However, it is worth going over again just to make sure everything stuck.
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Navigate back to your GitHub repository.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Once there, you might see that a nice bar has popped up at the top of the page with a green button that says you can <q>Compare and pull request</q>. If you see this, great! Click on the green button and proceed to <xref ref="git-pr-open"/>. If not, read on.
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="git-pr-create">
+      <statement>
+        <p>
+          If you're repository looks like nothing changed, never fear. There are a couple of ways to get to where we need to get. Either of the following will work so pick what you like best.
+
+          <ol>
+            <li>
+              <p>
+                When in the Code tab, click on the dropdown menu that currently has <q>main</q> selected. Click on your new branch title (<q>country</q>). A new box should pop up saying that this branch is 1 commit ahead of main. On the right of that box, click <q>contribute</q> and then <q>Open pull request</q>.
+              </p>
+            </li>
+            <li>
+              <p>
+                When in the Code tab, click on the branch icon that say <q>2 branches</q> (this is different from before...previously it only said one branch). This gives a list of all the branches. Find the <q>country</q> branch and click on <q>New pull request</q>
+              </p>
+            </li>
+            <li>
+              <p>
+                Navigate to the Pull requests tab. Click on the green button near the top right that says <q>New pull request</q>. Select the branch you want to pull into main from either the <q>Compare</q> drop-down menu at the top or the example comparisons table. Click <q>Create pull request</q>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </task>
+
+    <task xml:id="git-pr-open">
+      <statement>
+        <p>
+          Regardless of the method you chose in <xref ref="git-pr-create"/> or if you had the automatic pop-up banner, you should be on the same screen. This might look familiar. Notice that your commit message you chose back in <xref ref="S_gitfinalize"/> appears here. You have the choice to add a further description. 
+        </p>
+        <p>
+          Note the drop-down menus at the top pof the page. With these, you can easily decide which branches you want to merge into and which branches you are merging from. You should only see two choices since we only have two branches but this will not always be the case (especially if you are merging from an origin to an upstream, see <xref provisional="git-with-collab"/>).
+        </p>
+        <p>
+          You can also scroll down and see all of the files that were changed and all of the changes. This is good to check that everything is as you expected. This also works to check that someone who is trying to contribute to your repo is not destroying your project.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Once everything looks good, click on <q>Create pull request</q>.
+        </p>
+      </statement>
+    </task>
+
+  </activity>
+
+  <p>
+    All that's left to do now is to merge that pull request into your main branch. (Note that if you did not own the repository that you just submitted a pull request to, you will not be able to do this step.) Click on "Merge pull reqeust" and then "Confirm merge". Unless you plan on using the branch again, click on <q>Delete branch</q> so as to not clutter your branch list. Go back to your Code tab and make sure that the README has been updated with your additions.
+  </p>
+
+  <p>
+    Unfortunately, we're not quite done. Now we have another problem: GitHub has changes that our local computer does not! We just merged the country branch into the main branch but our local computer doesn't know that. We have to tell it to pull in the changes from the origin remote.
+  </p>
+
+  <project xml:id="try-git-pull">
+    <title>Trying <c>git pull</c></title>
+    
+    <introduction>
+      <p>
+        The easiest way to bring in new changes from GitHub is to use the <c>git pull</c> command. <c>git pull</c> works exactly like <c>git push</c>. You need to tell Git which remote you are pulling from and which branch. 
+      </p>
+    </introduction>
+
+    <task>
+      <statement>
+        <p>
+          Head back to your command line. If you need to, navigate (<c>cd</c>) to your repo. You should notice that you are still on your <c>country</c> branch.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Switch back to your main branch (Remember how?)
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <c>git switch main</c>
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Just like with <c>git push</c>, decide on your remote destination and your branch destination. Type in the correct command.
+        </p>
+      </statement>
+      <answer>
+        <console>
+          <input>git pull origin main</input>
+          <output>
+          remote: Enumerating objects: 1, done.
+          remote: Counting objects: 100% (1/1), done.
+          remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+          Unpacking objects: 100% (1/1), 631 bytes | 631.00 KiB/s, done.
+          From &lt;repo-url>
+             &lt;commit-id>  main       -> origin/main
+          Updating &lt;commit-id>
+          Fast-forward
+           README.md | 4 ++++
+           1 file changed, 4 insertions(+)
+          </output>
+        </console>
+      </answer>
+    </task>
+
+    <conclusion>
+      <p>
+        Note that it is possible to pull from other branches. Suppose you were working on the <c>country</c> branch and someone else made changes to just the <c>country</c> branch (but the changes hadn't been merged into main yet). You could use <c>git pull origin country</c> while on the country branch to update your local branch with the origin changes. Beware of merge conflicts, however! If you and someone else made changes to the same line, Git won't know which ones to keep and will through you into a merge conflict. See <xref provisional="merge-conflicts"/> for more information on this.
+      </p>
+    </conclusion>
+  </project>
+
+  <p>
+    And that's that! You now have made new changes and updated GitHub and your local computer and GitHub repo are on the same page. Great!
+  </p>
+
+  <p>
+    This might seem like a lot of work for one tiny edit. And you're right. We edited four lines and it probably would have been easier to use GitHub for that edit. But it's always nice to start simple. But as it turns out, the steps discussed in this chapter are the same for each time you want to update GitHub with changes from local. The next section puts your skills to the test with an extensive activity and also provides a (hopefully) useful summary of the Git process. 
+  </p>
+</section>
