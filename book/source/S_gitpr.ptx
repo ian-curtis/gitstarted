@@ -154,10 +154,22 @@
 
     <conclusion>
       <p>
-        Note that it is possible to pull from other branches. Suppose you were working on the <c>country</c> branch and someone else made changes to just the <c>country</c> branch (but the changes hadn't been merged into main yet). You could use <c>git pull origin country</c> while on the country branch to update your local branch with the origin changes. Beware of merge conflicts, however! If you and someone else made changes to the same line, Git won't know which ones to keep and will through you into a merge conflict. See <xref provisional="merge-conflicts"/> for more information on this.
+        Note that it is possible to pull from other branches. Suppose you were working on the <c>country</c> branch and someone else made changes to just the <c>country</c> branch (but the changes hadn't been merged into main yet). You could use <c>git pull origin country</c> while on the country branch to update your local branch with the origin changes.
       </p>
     </conclusion>
   </project>
+
+  <warning>
+    <p>
+      <xref ref="try-git-pull"/> demonstrates that your local repository and GitHub only communicate with each other when you tell them to. Any changes you make on GitHub will not be reflected on your computer unless you pull. Vice versa, any changes you make on your local computer will not be reflected on GitHub unles you push. Be careful with this. If you change a file locally <em>and</em> remotely on GitHub without pulling or pushing you might create a <term>merge conflict</term>. These are best avoided. The simplest conflicts can be resolved somewhat easily but they can quickly get very complicated. See <xref provisional="merge-conflicts"/> for more information on this.
+    </p>
+    <p>
+      When working by yourself, merge conflicts are easier to avoid. Just make sure that you only edit at one place at a time (<eg/> locally or remotely) then make sure both locations are up to date before editing in another place. 
+    </p>
+    <p>
+      Small note for advanced users: as explained in <xref provisional="merge-conflicts"/>, you can edit in both locations at once <em>as long as you do not edit the same line</em>. Merge conflicts only arise when the same line(s) has been changed. So if I change lines 3 and 4 locally and 5 and 6 remotely, I can merge, pull, and push without any problems. But if I change line 7 in both locations <ellipsis/> eek!
+    </p>
+  </warning>
 
   <p>
     And that's that! You now have made new changes and updated GitHub and your local computer and GitHub repo are on the same page. Great!

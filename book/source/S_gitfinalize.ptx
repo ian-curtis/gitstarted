@@ -47,7 +47,7 @@
       <title>Trying <c>git status</c></title>
       <statement>
         <p>
-          The command you will need is simple: <c>git status</c>. The <c>git</c> is necessary to tell the computer that we will be using git and the <c>status</c> gives the the current status of all of the files in our repository. Open the termainal, verify that you are in the correct directory and on the correct branch and try the command. Did it spit out what you expected?
+          The command you will need is simple: <c>git status</c>. The <c>git</c> is necessary to tell the computer that we will be using git and the <c>status</c> gives the the current status of all of the files in our repository. We might say that it shows all of the files that Git is <term>tracking</term>. Open the termainal, verify that you are in the correct directory and on the correct branch and try the command. Did it spit out what you expected?
         </p>
       </statement>
       <solution>

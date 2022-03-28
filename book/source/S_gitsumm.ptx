@@ -1,16 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="S_gitsummproj">
-  <title>Summary and Extensive Project</title>
+<section xml:id="S_gitsolosumm">
+  <title>Summary</title>
   
-  <introduction>
+  
   <p>
     While this project is a test of your abilities, it is not a <q>traditional</q> test. I don't expect you to have memorized all of the content of the previous chapter. That will come with time. The process of cloning a repository and editing, staging, committing, and pushing files is something you will repeat over and over again as you work through projects. For right now, please go back to the previous sections if you forget how to do something! For your convenience, a summary of the Git process preceeds the extensive project. Utilize this summary for the project and for your future endeavors. There is no shame in looking something up to make sure you're doing it right, espeically with Git.
   </p>
-  </introduction>
-
-  <subsection xml:id="SS_gitsolosumm">
-    <title>Working Solo: A Summary of the Git Process</title>
 
     <p>
       What follows is an ordered list of the steps in the Git process when working alone.
@@ -71,10 +67,5 @@
       </ol>
     </p>
     
-  </subsection>
-
-  <subsection xml:id="git-big-proj">
-    <title>Working Solo: The Culminating Experience</title>
-    
-  </subsection>
+  
 </section>

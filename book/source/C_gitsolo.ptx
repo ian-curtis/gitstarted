@@ -27,5 +27,6 @@
   <xi:include href="S_gitedits.ptx" />
   <xi:include href="S_gitfinalize.ptx" />
   <xi:include href="S_gitpr.ptx" />
-  <xi:include href="S_gitsummproj.ptx" />
+  <xi:include href="S_gitsumm.ptx" />
+  <xi:include href="S_gitbigact.ptx" />
 </chapter>
