@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="S_gitbigact">
+  <title>Working Solo: The Culminating Experience</title>
+
+    <p>
+      As mentioned above, this part is a large activity designed to help you practice the skills and ideas learned in the previous sections. It also represents and example of what a typical workflow might look like. You are welcome and encouraged to refer back to the summary and the sections themselves.
+    </p>
+
+    <p>
+      The activity below is broken up into multiple parts. In order to help you remember the procedures, I will not be adding in cross references to the corresponding chapters. That being said, I will add in hints and answers where applicable. Do note that some of the steps have no <q>correct</q> answer. This will be noted in the corresponding answer. 
+    </p>
+
+
+    <activity xml:id="git-big-act">
+      <introduction>
+        <p>
+          The goal of this activity will be to create a new repository and write two poems (or paste your favorite poems, with attributions). Good luck and have fun!
+        </p>
+      </introduction>
+
+      <task xml:id="git-ba-newrepo">
+        <statement>
+          <p>
+            First, you need to create a new repository. Navigate to GitHub and create a new repository. Name it appropriately for the end goal <mdash/> you can't change it later. Make sure you initialize with a README file.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            Use one of the multiple methods to create a new repo in GitHub. Perhaps name it <c>poems</c> or <c>fav-poems</c>? This part is up to you as long as the name accurately describes the future repo contents. Check the box that says to add a README file.
+          </p>
+        </answer>
+      </task>
+
+      <task xml:id="git-ba-clone">
+        <statement>
+          <p>
+            Clone your repo on your computer. Navigate to the new repo using your terminal.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            Make sure you are not <q>inside</q> your previous repositories. Nested repositories will not work. So <c>cd</c> to the folder in which you want to place your new repo.
+          </p>
+        </hint>
+        <answer>
+          <p>
+            Copy the HTTPS link on GitHub. Use <c>git clone &lt;copied-link></c>. Use <c>cd &lt;repo-name></c> to move your terminal into that repo.
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            You will edit your README file first. Create and switch to a new branch, named appropriately.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git branch readme</c> then <c>git switch readme</c> OR <c>git switch -c readme</c>
+          </p>
+          <p>
+            You may use any branch name you like as long as it's clear what the branch is for. <q>readme</q> seems like it will work nicely.
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Open the README file. Change the default title to a better title. Add a sentence or two explaining what this repo is and why you are creating it. Add any other relevant information you think might help other people looking at your repo would need or like. Save the file.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            Perhaps a better title would be <q>My Favorite Poems</q> or <q>Two Original Poems</q>. This can vary. You might explain that this repository contains two of your favorite poems (or two poems you wrote yourself) and this it was born from a project in <pubtitle>Better Git Started</pubtitle> to help you get more familiar with GitHub and Git functions. This can also vary.
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Check if Git is tracking the README file you just edited. 
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git status</c>
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Stage your file for committing.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git add .</c> OR <c>git add README.md</c>, maybe <c>git status</c> to confirm?
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Commit your changes. Add an informative commit message.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git commit -m edit readme with repo info</c>, maybe <c>git status</c> to confirm?
+          </p>
+          <p>
+            Of course, your commit message may be different. Perhaps <q>edit readme</q> and enough for you.
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Push your changes to GitHub.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git push origin &lt;your-branch-name></c>
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Go to GitHub and open a pull request. Merge your changes into your main branch. You may delete the old branch.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <q>Compare and pull request</q>, <q>Merge</q>, <q>Confirm merge</q>. (Check the main branch on GitHub to make sure this worked.)
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Go back to your local computer. Switch back to main and pull in your changes.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git switch main</c> then <c>git pull origin main</c>
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            You will now create your poems. Create and switch to an appropriately-named branch.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git branch poems</c> then <c>git switch poems</c> OR <c>git switch -c poems</c>
+          </p>
+          <p>
+            You may use any branch name you like as long as it's clear what the branch is for. <q>poems</q> works for me.
+          </p>
+          <p>
+            Note that you could split up each poem into its own branch. Depending on the length of your poems, you may want to do that in practice but here we will edit both on one branch. That way you can practice two commits in one push!
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Create a new <c>.md</c> file called <c>poem1.md</c>.
+          </p>
+        </statement>
+        <hint>
+          <p>
+            In VS Code, you can create a new file with the paper-with-a-plus icon in the <q>Explorer</q> panel in the top left.
+          </p>
+        </hint>
+        <answer>
+          <p>
+            Use the hint or use your terminal (<c>touch poem1.md</c>).
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Open the file and use Markdown to write one original poem or paste one of your favorite poems. Make sure to add a title!
+          </p>
+          <p>
+            If you are pasting someone else's poem, use proper attribution. They may include, but is not necessarily limited to, name, collection/book from which you found the poem, date published, page numbers, etc.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Stage your new file. Verify that it is in fact staged.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git add .</c> OR <c>git add poem1.md</c>, then <c>git status</c>
+          </p>
+          <p>
+            Your text editor might also indicate that this worked. For instance, VS Code will show an <q>A</q> next to the file name.
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Commit your new file with a good commit message. Verify that it is committed. 
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git commit -m "&lt;commit-message>"</c>, <c>git status</c>
+          </p>
+          <p>
+            Your text editor might also indicate that this worked. For instance, VS Code will remove and letters and colors next to the file name. It will also show your commit message in the <q>Timeline</q> panel on the bottom left.
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Do not push yet! You will add your second poem in a second commit before you push. (So this push will have two commits at one time).
+          </p>
+          <p>
+            Create a new file titled <c>poem2.md</c>. Open it and add your second original poem or paste your second-favorite poem (with attribution, of course!). Stage this file and commit it with a good commit message.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            After editing, <c>git add .</c> or <c>git add poem2.md</c>. Then <c>git commit -m "&lt;commit-message>"</c>. <c>git status</c> might be useful here.
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Push your new files to GitHub, open a pull request, and merge your changes into <c>main</c>.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git push origin &lt;branch-name></c>, <q>Compare and pull request</q>, <q>Merge</q>, <q>Confirm merge</q>.
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Go back to local and pull in your new changes on main.
+          </p>
+        </statement>
+        <answer>
+          <p>
+            <c>git switch main</c>, then <c>git pull origin main</c>
+          </p>
+        </answer>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            For extra credit, create a new branch and write/paste a third poem. Follow the same processes as above.
+          </p>
+        </statement>
+      </task>
+
+    </activity>
+
+
+    <p>
+      And that's that! Hopefully you're starting to get the hang of this process. If you ever need to practice this again (or need a refresher on what to do), revisit this page. It might take a little bit to become fully comfortable with the process and to remember the order in which to do things. In time, you will get it!
+    </p>
+    
+  </section>

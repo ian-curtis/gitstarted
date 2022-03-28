@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="C_gitsolo" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Git</title>
+
+  <introduction>
+    <p>
+      Git is difficult to wrap your head around partly because it's new and partly because it's scary.
+      There are many things that could go wrong and that are difficult (but usually not impossible) to 
+      revert. But Git's power of version control is so important. The goal of this chapter is to help 
+      you get familiar with working with Git on the command line and how it interacts with GitHub.
+    </p>
+    <p>
+      I assume you have read <xref ref="C_commandline"/> and <xref ref="C_githubsolo"/> before tackling this chapter. The vocabulary 
+      used by GitHub is identical to Git's (this is on purpose) and if you understand the basics of how
+      Github operates, you will find some of Git to be simple. Git runs on the command line so it is also 
+      important to have some experience with a terminal and how it operates.
+    </p>
+    <p>
+      I also assume you have followed along with the GitHub activities throughout <xref ref="C_githubsolo"/>. 
+      They are super important for understanding the content and I continue where I left off in this chapter.
+      We will be updating the <c>aboutme</c> repository with Git rather than just GitHub.
+    </p>
+  </introduction>
+
+  <xi:include href="S_gitsetup.ptx" />
+  <xi:include href="S_gitedits.ptx" />
+  <xi:include href="S_gitfinalize.ptx" />
+  <xi:include href="S_gitpr.ptx" />
+  <xi:include href="S_gitsumm.ptx" />
+  <xi:include href="S_gitbigact.ptx" />
+</chapter>

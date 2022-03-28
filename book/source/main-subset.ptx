@@ -4,18 +4,14 @@
 
   <book xml:id="my-great-book">
     <!-- The book needs a title and can have a subtitle  -->
-    <title>My Great Book</title>
-    <subtitle>Subset Preview</subtitle>
+    <title>Better Git Started</title>
+    <subtitle>An Introduction to the Command Line, Git, and Github</subtitle>
 
-    <!-- edit href to desired section below -->
-    <chapter>
-      <title>Placeholder Chapter</title>
-      <xi:include href="./sec_firstch-examples.ptx"/>
-    </chapter>
+    <xi:include href="./frontmatter.ptx" />
 
-    <!-- or replace with this include to get a full chapter
-    <xi:include href="./ch_first-chapter.ptx"/>
-    -->
+    <xi:include href="C_gitsolo.ptx" />
+    
+    <xi:include href="./backmatter.ptx" />
 
   </book>
 </pretext>

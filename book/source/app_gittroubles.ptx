@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<appendix xml:id="app_gittroubles">
+  <title>Common Git Troubles and How To Fix Them</title>
+
+  <introduction>
+    <p>
+      We all make mistakes, especially with Git. You don't know how many times I have staged the wrong files or committed my changes before realizing I did something wrong. Of coursre, it's best to try and avoid these issues becasue they can cause headaches and frustration. Plus there's usually a little fear involved (did I just erase my edits?) as well as hesitation (Git only does what I tell it, so I have to make sure I do it right). But just in case something happened that you didn't expect or you made a mistake, I have your back. Below are some common mistakes and questions you might ask. 
+    </p>
+  </introduction>
+
+  <section xml:id="SS_reverseadd">
+    <title>Uh Oh, I Staged the Wrong Files!</title>
+
+    <introduction>
+      <p>
+        Once you get the hang of Git, it's easy to just fly through the three-step process. In doing so, you will inevitably stage (with <c>git add</c>) a file or folder on accident. This is relatively simple to fix. To undo this, follow the next procedure. 
+      </p>
+    </introduction>
+    
+    <project xml:id="reverse-git-add">
+      <title>Reversing <c>git add</c></title>
+      
+      <introduction>
+        <p>
+          Oh shoot. What if you add a file you didn't mean to? This is one reason why there are so many steps to sending files to GitHub. Humans make mistakes and Git gives you the chance to correct any. Should you ever add a file you didn't mean to add, revist this procedure.
+        </p>
+      </introduction>
+      <task>
+        <statement>
+          <p>
+            Identify the file name(s) and extension(s) of the file(s) you mistakenly added.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            Use <c>git restore --staged &lt;your-file-name(s)></c> to un-stage any files. Like <c>git add</c>, this command can be run many times.
+          </p>
+        </statement>
+      </task>
+      <task>
+        <statement>
+          <p>
+            It might be wise to verify with <c>git status</c> that everything looks good.
+          </p>
+        </statement>
+      </task>
+    </project>
+  </section>
+
+  <section xml:id="SS_reversecommit">
+    <title>Uh Oh, I Committed Too Early!</title>
+
+    <introduction>
+      <p>
+        We've all been there. You <c>add</c> all the files you need, double check to make sure you aren't missing anything, <c>commit</c> with a message and suddenly remember a file you should have added. Never fear, <c>git reset</c> is here!
+      </p>
+    </introduction>
+
+    <project xml:id="reverse-git-commit">
+      <title>Reversing <c>git commit</c></title>
+      
+      <task>
+        <p>
+          You will only need this command: <c>git reset --soft HEAD^1</c>. It should be safe to copy/paste this command directly into your command line and run it.
+        </p>
+      </task>
+
+      <task>
+        <p>
+          <c>git reset</c> gives no output so it is super important to check that the command worked with <c>git status</c> (<xref ref="try-git-status"/>). If everything worked, you should see output as if you had used <c>git status</c> after a <c>git add</c> step. 
+        </p>
+        <p>
+          Depending on how many commits you made, you may need to run this above command more than once. If so, make sure to use <c>git status</c> after each try!
+        </p>
+      </task>
+
+      <task>
+        <p>
+          Your previously staged files should still exist and should still be staged. From this point, use <c>git add</c> to add your missing file(s) and proceed with <c>git commit</c>.
+        </p>
+      </task>
+    </project>
+    
+  </section>
+</appendix>

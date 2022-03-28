@@ -29,9 +29,8 @@
     \usetikzlibrary{decorations.markings} 
   </latex-image-preamble>
 
-    <!-- <rename element="note" xml:lang="en-US">Convention</rename> -->
     <rename element="exercise-worksheet" xml:lang="en-US">Exercise</rename>
-
+    <rename element="project" xml:lang="en-US">Git Procedure</rename>
     <cross-references text="type-global" />
 
 
@@ -46,7 +45,7 @@
     <xi:include href="./frontmatter.ptx" />
 
     <part xml:id="part-intro">
-      <title>Introductory Materials</title>
+      <title>Introductory Information</title>
       <xi:include href="./C_basics.ptx" />
       <xi:include href="./C_commandline.ptx"/>
     </part>
@@ -54,7 +53,7 @@
     <part xml:id="part-solo">
       <title>Working Solo</title>
       <xi:include href="./C_githubsolo.ptx" />
-      <xi:include href="./C_gitsolo" />
+      <xi:include href="./C_gitsolo.ptx" />
     </part>
     
 
