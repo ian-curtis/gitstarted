@@ -9,7 +9,7 @@
     </p>
   </introduction>
 
-  <subsection xml:id="SS_reverseadd">
+  <section xml:id="SS_reverseadd">
     <title>Uh Oh, I Staged the Wrong Files!</title>
 
     <introduction>
@@ -48,9 +48,9 @@
         </statement>
       </task>
     </project>
-  </subsection>
+  </section>
 
-  <subsection xml:id="SS_reversecommit">
+  <section xml:id="SS_reversecommit">
     <title>Uh Oh, I Committed Too Early!</title>
 
     <introduction>
@@ -84,5 +84,5 @@
       </task>
     </project>
     
-  </subsection>
+  </section>
 </appendix>
