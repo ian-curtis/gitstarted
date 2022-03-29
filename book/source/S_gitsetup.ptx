@@ -344,7 +344,7 @@
   <paragraphs>
     <title>Note About <c>git switch</c></title>
     <p>
-      The <c>git switch</c> command was recently introduced to help remove user confusion. Previously, 
+      The <c>git switch</c> command was introduced to help remove user confusion. Previously, 
       the command was <c>git checkout &lt;branch-name></c>. However <c>checkout</c> has two functions:
       to switch branches and to reset files (if a file has edits that you want to restore, you can use
       <c>checkout</c> to restore the file to how it was before you made the changes). 

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<preface xml:id="materials-mac">
+  <title>Materials (Mac Users)</title>
+
+  <p>
+    As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). The necessary downloads will differ slightly depending on if you have a Mac or a <init>PC</init> and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions <em>for those who are using a Mac with macOS</em>.
+  </p>
+
+  <paragraphs>
+    <title>A Text Editor</title>
+    
+    <p>
+      In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <url href="https://www.sublimetext.com/download" visual="sublimetext.com/download">Sublime Text</url> or <url href="https://atom.io" visual="atom.io">Atom</url>.
+    </p>
+    <p>
+      If you are already familiar with those editors or if you like their appearance, use them! However, I personally prefer <url ref="https:/code.visualstudio.com/Download" visual="code.visualstudio.com/Download">Visual Studio Code</url> which can be downloaded at the previous link. Throughout this book, I will refer to <init>VS</init> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <init>VS</init> Code although as you gain experience you might think about switching to Atom or Sublime Text. I am currently considering a change to Atom myself.
+    </p>
+  </paragraphs>
+
+  <paragraphs>
+    <title>Git</title>
+  
+    <p>
+      To use Git, you need to download and install it on your computer. You already have a command line, you just need to make sure that you have Git. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). First, run a check to see if it is already installed. Don't worry about how or why these steps work, all will be explained later on.
+      <ol>
+        <li>
+          <p>
+            Press <kbd>Command</kbd> + <kbd>Space</kbd> to open Spotlight Search.
+          </p>
+        </li>
+        <li>
+          <p>
+            Start typing <c>terminal.app</c>. When the correct application opens up, click on it.
+          </p>
+        </li>
+        <li>
+          <p>
+            Your terminal will pop up. Don't be scared of it! Type <c>git --version</c> and press <kbd>Enter</kbd>.
+          </p>
+        </li>
+        <li>
+          <p>
+            If it spits out something like <c>git version 2.35.1</c> (the numbers could be different), you're good! If not, carry on.
+          </p>
+        </li>
+      </ol>
+    </p>
+
+    <p>
+      Even if you do not know what Homebrew is, it recommend using it to install Git. It can also be used to quickly (<ie/> in one line) install other pieces of software. You might find Homebrew useful in the future, even if it can be confusing to install at present:
+
+      <ol>
+        <li>
+          <p>
+            To install Homebrew, go back to your terminal that you opened when checking if Git was installed. Paste in <cd><cline>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</cline></cd> exactly and press <kbd>Enter</kbd>. Don't worry about what each part does (to be honest, I'm not entirely sure either). It is safe and trustworthy (I did it on my computer).
+          </p>
+          <p>
+            If you want to be sure you're pasting the correct command, you can visit <url href="https://brew.sh/">the Homebrew homepage</url> and navigate to the <q>Install Homebrew</q> heading.
+          </p>
+        </li>
+        <li>
+          <p>
+            Follow the instructions and prompts given until Homebrew is installed.
+          </p>
+        </li>
+        <li>
+          <p>
+            To install Git, simply type in <c>brew install git</c> at the terminal and press <kbd>Enter</kbd>.
+          </p>
+        </li>
+      </ol>
+
+      And that's it!
+    </p>
+  </paragraphs>
+  
+  <paragraphs>
+    <title>GitHub</title>
+    <p>
+      You will also need a GitHub account. Since this is an extensive topic, this is covered in <xref ref="hub-account"/> in <xref ref="S_hubnavigate"/>.
+    </p>
+  </paragraphs>
+
+</preface>
