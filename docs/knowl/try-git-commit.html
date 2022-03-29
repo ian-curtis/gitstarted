@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-03-29T15:48:05-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="project project-like"><h4 class="heading">
+<span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">6</span><span class="period">.</span><span class="space"> </span><span class="title">Trying <code class="code-inline tex2jax_ignore">git commit</code>.</span>
+</h4>
+<div class="introduction">
+<p>Let's learn how to commit our files using Git. Note that you must have staged at least one file before moving on to this step. See <a href="" class="xref" data-knowl="./knowl/try-git-add.html" title="Git Procedure 5: Trying git add">Git Procedure 5</a> if you have not done this.</p>
+<p>The basic command to commit files is (conveniently) <code class="code-inline tex2jax_ignore">git commit</code>; <code class="code-inline tex2jax_ignore">git</code> for initiating Git and <code class="code-inline tex2jax_ignore">commit</code> to tell Git we are going to be committing files. However, the command also requires a <dfn class="terminology">commit message</dfn> (which we also did in <a href="S_hubbranches.html" class="internal" title="Section 3.3: Working With Branches">Section 3.3</a>). This is done with the <code class="code-inline tex2jax_ignore">-m</code> switch.</p>
+</div>
+<article class="task exercise-like"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p>Take a minute to think about the edits you have just made. In a few words, how would you explain to future you and others what you changed? If you could summarize your changes in a sentence or less, how would you? Whatever you decide on will be your commit message.</p>
+<p>Do keep in mind the guidelines expressed in <a href="" class="xref" data-knowl="./knowl/commitmessages.html" title="Assemblage: A Note On Commit Messages">Assemblage </a>. They apply here, too! (And any other time you are committing.)</p></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p>Type <code class="code-inline tex2jax_ignore">git commit -m "&lt;your-commit-message&gt;"</code> into the command line. For our working example, I might type <code class="code-inline tex2jax_ignore">git commit -m "add birth country"</code>.</p>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git commit -m "add birth country"
+</b>[country 137b0bc] add birth country
+ 1 file changed, 4 insertions(+)
+</pre></div>
+<p>Note that the message is surrounded by quotation marks. This is required so that Git doesn't think that each word in your message is a separate command. They can be either single or double quotes as long as the two match. Also take a look at the output. This tells you the name of your branch, a unique identifier for your commit (so yours will be different than mine), your commit message, how many files were changed, and how many lines were inserted or deleted. This can be useful to verify that the commit worked as you expected.</p></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p>Just for good measure, try <code class="code-inline tex2jax_ignore">git status</code> as an extra verification step (<a href="" class="xref" data-knowl="./knowl/try-git-status.html" title="Git Procedure 4: Trying git status">Git Procedure 4</a>).</p>
+<div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-21-hidden.html" title="Answer 6.c.1"><span class="type">Answer</span><span class="period">.</span></a></div></article></article><span class="incontext"><a href="S_gitfinalize.html#try-git-commit" class="internal">in-context</a></span>
+</body>
+</html>
