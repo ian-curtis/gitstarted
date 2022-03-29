@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<preface xml:id="fm_howtouse">
+  <title>How To Use This Book</title>
+  
+  <p>
+    Congratulations on deciding to explore the command line! The ideas explained in this book are quite useful, espeically if you plan to go into a coding career, need to store code files publicly, and/or need a source of version control. This book is designed for those who have no experience with Git, GitHub, or the command line. I assume that you have never touched your terminal (or even know what one is). I don't assume you have a GitHub account or know anything about how to use Git.
+  </p>
+  <p>
+    Git is an incredibly powerful tool, but it does come with a learning curve. While there are text editors and interfaces out there that make using Git somewhat easier, I believe that it is best to learn the Git essentials the <q>harder</q> way. I hope that in doing so you will be able to better understand the steps in the Git process and that using the features in text editors will be easier. Rather than just memorizing how to use a text editor, I take a more direct approach and show you Git on the command line.
+  </p>
+  <p>
+    The book is broken up into multiple sections:
+    <ul>
+      <li>
+        <p>
+          Multiple prefaces explaining necessary materials depending on your operating system (<xref text="title" ref="fm_materials_windows"/>, <xref text="title" ref="fm_materials_mac"/>, <xref text="title" ref="fm_materials_linux"/>)
+        </p>
+      </li>
+      <li>
+        <p>
+          Introductory materials introducing general computer basics, etiquette, and recommended practices (<xref ref="C_basics"/>) and an introduction to the command line (<xref ref="C_commandline"/>)
+        </p>
+      </li>
+      <li>
+        <p>
+          A detailed introduction and get-started guide to GitHub (<xref ref="C_githubsolo"/>) and Git (<xref ref="C_gitsolo"/>) when working alone
+        </p>
+      </li>
+      <li>
+        <p>
+          A detailed introduction and get-started guide to GitHub (<xref provisional="C_githubteam"/>) and Git (<xref provisional="C_gitteam"/>) when working with collaborators (planned, in progress)
+        </p>
+      </li>
+      <li>
+        <p>
+          Helpful appendices with some bonus features and resources
+        </p>
+      </li>
+    </ul>
+  </p>
+
+  <p>
+    The best way to use this book is to first determine where you are in terms of knowledge. Do you know anything about the terminal? If so, you might consider jumping to <xref ref="C_githubsolo"/>. Do you know about GitHub, but not the terminal? Perhaps start with <xref ref="C_commandline"/> then move to <xref ref="C_gitsolo"/>. Regardless of the path you choose, I highly recommend at least scanning the sections in <xref ref="C_basics"/>. I do assume you have an idea of the topics in that chapter and hope you at least consider adopting some of the recommended practices. If you have no idea what anything is in this book, start at the beginning and just read consecutively.
+  </p>
+  <p>
+     Most sections have activities scattered throughout and some chapters even have a lengthy extensive activity at their ends. Take care to participate in these activities along the way. The book is designed to be interactive where you follow along as you read; however, it is not a traditional textbook filled with exercises, definitions, and theorems. I am not testing you on any of this as I believe that Git and GitHub are skills best learned by doing, not through an exam. Feel free to make mistakes, break things, and revist chapters you forgot or didn't understand completely. 
+  </p>
+  <p>
+    As you read, if anything starts to become too confusing or overwhelming, take a break. While a dedicated reader might be able to read this book and complete the activities in one day, it is not recommended to do so. There is quite a bit of new content here and too much at once will certainly lead to an information overload. So take your time, read carefully, and, again, don't be afraid to reread parts of the book anytime you need a refresher on things.
+  </p>
+  <p>
+    If you are prepared to dive in, visit the following prefaces to download the necessary materials, the proceed to learning and fun!
+  </p>
+
+</preface>

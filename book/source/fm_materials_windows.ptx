@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<preface xml:id="materials-windows">
+  <title>Materials (Windows Users)</title>
+
+  <p>
+    As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). The necessary downloads will differ slightly depending on it you have a Mac or a <init>PC</init> and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions <em>for those who are using Windows</em>.
+  </p>
+
+  <paragraphs>
+    <title>A Text Editor</title>
+    
+    <p>
+      In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <url href="https://www.sublimetext.com/download" visual="sublimetext.com/download">Sublime Text</url> or <url href="https://atom.io" visual="atom.io">Atom</url>.
+    </p>
+    <p>
+      If you are already familiar with those editors or if you like their appearance, use them! However, I personally prefer <url ref="https:/code.visualstudio.com/Download" visual="code.visualstudio.com/Download">Visual Studio Code</url> which can be downloaded at the previous link. Throughout this book, I will refer to <init>VS</init> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <init>VS</init> Code although as you gain experience you might think about switching to Atom or Sublime Text. I am currently considering a change to Atom myself.
+    </p>
+  </paragraphs>
+
+  <paragraphs>
+    <title>Git/Git Bash</title>
+  
+    <p>
+      To use Git, you need to download and install it on your computer. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). To run a quick check, use <kbd>Windows</kbd> + <kbd>S</kbd> and search for <q>git bash</q>. If an application pops up, great! You do not need to install anything. If not, carry on.
+    </p>
+
+    <p>
+      Windows does come with its own command prompt. (What's a command prompt? See <xref ref="S_whatiscommline"/>.) However, its syntax doesn't match other terminals and notably is different from Macs. Thus, to ensure that everyone is on the same page, we will download a piece of software called Git Bash that allows everyone to use the same commands.
+    </p>
+
+    <p>
+      To install Git Bash, follow these next steps. Yuvraj Chandra wrote <url href="https://www.makeuseof.com/install-git-git-bash-windows/" visual="makeuseof.com/install-git-git-bash-windows/">a useful Git Bash installation guide</url> that may help you if you get stuck.
+      <ol>
+        <li>
+          <p>
+             Visit the <url href="https://git-scm.com/downloads">Git website</url> and select the 
+             download for Windows.
+          </p>
+        </li>
+        <li>
+          <p>
+            Open the <c>.exe</c> file and follow the instructions to install Git Bash. Most of the default 
+            options should not be changed. However, please read the following notes before installing. 
+            <ul>
+              <li>
+                <p>
+                  Your computer may ask you if you want to allow the app to modify your computer; it is safe to say yes.
+                </p>
+              </li>
+              <li>
+                <p>
+                  When you reach the <q>Select Components</q> screen, I recommend leaving the default boxes checked as they will be useful later on.
+                </p>
+              </li>
+              <li>
+                <p>
+                  When you reach the <q>Choosing the default editor used by Git</q> screen, I recommend selecting the <q>Use Visual Studio Code...</q> option.
+                </p>
+              </li>
+              <li>
+                <p>
+                  When you reach the <q>Adjusting the name of the initial branch...</q> screen, I recommend selecting <q>Override the default branch name...</q> and type in <c>main</c> (lowercase) into the box. This will help us match the Mac version and respect <url ref="https://sfconservancy.org/news/2020/jun/23/gitbranchname/" visual="sfconservancy.org/news/2020/jun/23/gitbranchname/">Git's attempts to be more inclusive</url>. 
+                </p>
+              </li>
+            </ul>
+          </p>
+          
+        </li>
+      </ol>
+    </p>
+  </paragraphs>
+
+  <paragraphs>
+    <title>GitHub</title>
+    <p>
+      You will also need a GitHub account. Since this is an extensive topic, this is covered in <xref ref="hub-account"/> in <xref ref="S_hubnavigate"/>.
+    </p>
+  </paragraphs>
+
+</preface>

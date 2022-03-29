@@ -77,6 +77,13 @@
     
   </subsection>
 
+  <subsection xml:id="vscode-term">
+    <title>A Small Note On <init>VS</init> Code</title>
+    <p>
+      It is worth noting that if you are using <init>VS</init> Code, you do not need to navigate back and forth from a terminal window and the text editor. <init>VS</init> Code has a built-in interface to use your terminal. To access this, navigate to the <q>Terminal</q> heading in the navigation bar at the top of your screen and click on <q>New Terminal</q>. You may also use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>`</kbd> (On a Mac, you would still use <kbd>Ctrl</kbd> not <kbd>command</kbd>.)
+    </p>
+  </subsection>
+
   <subsection xml:id="SS_git-add">
     <title>Step 1: Staging Files</title>
     <p>
