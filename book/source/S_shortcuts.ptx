@@ -13,8 +13,8 @@
       many are fairly universal and could work in other places.
     </p>
     <p>
-      Note: as described in <xref provisional="fm_differences"/>, Windows uses <kbd>Control</kbd> 
-      (or <kbd>Ctrl</kbd>) as the <q>main</q> button whereas Mac uses <kbd>Command</kbd> (or <kbd>Cmd</kbd>).
+      Note: Windows uses <kbd>Control</kbd> 
+      (or <kbd>Ctrl</kbd>) as the <q>main</q> button whereas Mac usually uses <kbd>Command</kbd> (or <kbd>Cmd</kbd>).
     </p>
   </introduction>
   

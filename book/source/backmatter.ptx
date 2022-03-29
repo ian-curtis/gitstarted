@@ -9,6 +9,8 @@
   <title>Backmatter</title>
   
   <xi:include href="app_gittroubles.ptx" />
+  <xi:include href="./app_commlinecustom.ptx" />
+
 
   <!-- <appendix>
     <title>List of Symbols</title>

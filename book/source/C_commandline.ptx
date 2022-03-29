@@ -26,6 +26,5 @@
   <xi:include href="./S_whereiscommline.ptx" />
   <xi:include href="./S_commands.ptx" />
   <xi:include href="S_advcommands.ptx" />
-  <xi:include href="./S_commlinecustom.ptx" />
 
 </chapter>
