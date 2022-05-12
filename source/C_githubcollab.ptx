@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="C_githubcollab"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>GitHub Collaboration</title>
+  
+  <introduction>
+    <p>
+      Great! You seem ready to dive further into the Git/GitHub maze. While you might do many projects alone, the real world is full of teams and sub-teams collaborating on tasks. I assume that you have read (or at least understand the concepts of) <xref ref="part-solo"/> (<xref ref="C_githubsolo"/> and <xref ref="C_gitsolo"/>) since the working with others is very similar to working alone. Many of the same ideas return, such as commits, pushes, and remotes, but there are some new twists and new vocabulary to consider and special considerations to be made.
+    </p>
+  </introduction>
+
+  <xi:include href="S_collabconsider.ptx" />
+</chapter>
