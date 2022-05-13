@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-03-29T15:47:58-04:00       *-->
+<!--*       on 2022-05-13T14:05:38-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -16,9 +16,9 @@
 <body class="ignore-math">
 <section class="paragraphs"><h4 class="heading"><span class="title">File Names With Spaces.</span></h4>
 <p>If you only follow one convention in this section, this would be the one. This the most important for working with the command line. Spaces in file names increase the amount of typing you have to do and make it more difficult to understand what's going on on the command line.</p>
-<p>For instance, suppose I wanted to open the file we discussed earlier. On the command line, I would open the file like this (don't worry about the commands, just notice what it looks like): <blockquote class="blockquote"><code class="code-inline tex2jax_ignore">cd 'Chapters3_4_Overview of Sampling and Simple Random Sampling (SRS).pdf'</code></blockquote> I could also do it like this: <blockquote class="blockquote"><code class="code-inline tex2jax_ignore">cd Chapters3_4_Overview\ of\ Sampling\ and\ Simple\ Random\ Sampling\ (SRS).pdf</code></blockquote> What you should notice is that in the first example, the file is surrounded in quotes and in the second, there are a bunch of backslashes. For each file name with spaces, you have to either remember to enclose the entire name in quotes or to take the time to put a backslash before every space (see <code class="code-inline tex2jax_ignore">[provisional cross-reference: escape-characters]</code>). It may not seem like too much of a hassle, but you will get annoyed with it pretty quickly. It also can cause setbacks inside code editors when you want to import or export files with spaces.</p>
+<p>For instance, suppose I wanted to open the file we discussed earlier. On the command line, I would open the file like this (don't worry about the commands, just notice what it looks like): <blockquote class="blockquote"><code class="code-inline tex2jax_ignore">open 'Chapters3_4_Overview of Sampling and Simple Random Sampling (SRS).pdf'</code></blockquote> I could also do it like this: <blockquote class="blockquote"><code class="code-inline tex2jax_ignore">open Chapters3_4_Overview\ of\ Sampling\ and\ Simple\ Random\ Sampling\ (SRS).pdf</code></blockquote> What you should notice is that in the first example, the file is surrounded in quotes and in the second, there are a bunch of backslashes. For each file name with spaces, you have to either remember to enclose the entire name in quotes or to take the time to put a backslash before every space. It may not seem like too much of a hassle, but you will get annoyed with it pretty quickly. It also can cause setbacks inside code editors when you want to import or export files with spaces.</p>
 <p>So what do we replace the spaces with? <article class="note remark-like"><h5 class="heading">
-<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Alternative Naming Options.</span>
+<span class="type">Note</span><span class="space"> </span><span class="codenumber">1.1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Alternative Naming Options.</span>
 </h5>
 <p>Most computer programmers name their files using <dfn class="terminology">cases</dfn>. There are five main cases:</p>
 <dl class="description-list">
@@ -30,10 +30,10 @@
 <dd><p>first word is lowercase, all consequent words are capitalized; spaces are removed</p></dd>
 <dt>PascalCase</dt>
 <dd><p>every word is capitalized, spaces are removed</p></dd>
-<dt>UPPER_CASE_SNAKE_CASE</dt>
+<dt>UPPER_CASE_ SNAKE_CASE</dt>
 <dd><p>every letter is capitalized, spaces are replaced with underscores (_)</p></dd>
 </dl>
-<p class="continuation">See a <a class="external" href="https://chaseadams.io/posts/most-common-programming-case-types/" target="_blank">Most Common Programming Case Types</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-16-hidden.html" title="Footnote 16"><sup> 16 </sup></a> blog post to get more details on these cases.</p></article> Personally, I use snake_case for file names and kebab-case for folder names, just to help me keep them separate and still easy to read.</p>
+<p class="continuation">See a <a class="external" href="https://chaseadams.io/posts/most-common-programming-case-types/" target="_blank">Most Common Programming Case Types blog post</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-16-hidden.html" title="Footnote 16"><sup> 16 </sup></a> to get more details on these cases.</p></article> Personally, I use snake_case for file names and kebab-case for folder names, just to help me keep them separate and still easy to read.</p>
 <p>Using the shortened file name above, I would use the following as my file name: <blockquote class="blockquote">ch3_4_smplng_srs.pdf</blockquote> Note that I got rid of the “and”. Cases are useful in that they make it easy to remove articles and prepositions which in turn helps us keep file names nice and short.</p>
 <p>It is also important to keep your file names consistent. If I had another file about chapter 5 of this textbook which is about cluster sampling, let's say, I would want to name it something like <blockquote class="blockquote">ch5_clstr_smplng.pdf</blockquote> Notice that the structure is the same as before: first I have “ch5” to represent the chapter number, then I describe the chapter with “clstr_smplng”. Like before, I use snake_case and I made sure to use the same abbreviation for “sampling” as I did before. Consistency is key for our own sanity and so we can quickly scan for the file we need.</p>
 <p>It's worth repeating once again. File names should not contain spaces. Files about related content should have a similar naming scheme.</p>
