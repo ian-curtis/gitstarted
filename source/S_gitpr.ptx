@@ -43,7 +43,7 @@
     <task xml:id="git-pr-create">
       <statement>
         <p>
-          If you're repository looks like nothing changed, never fear. There are a couple of ways to get to where we need to get. Either of the following will work so pick what you like best.
+          If your repository looks like nothing changed, never fear. There are a couple of ways to get to where we need to get. Either of the following will work so pick what you like best.
 
           <ol>
             <li>
@@ -53,7 +53,7 @@
             </li>
             <li>
               <p>
-                When in the Code tab, click on the branch icon that say <q>2 branches</q> (this is different from before...previously it only said one branch). This gives a list of all the branches. Find the <q>country</q> branch and click on <q>New pull request</q>
+                When in the Code tab, click on the branch icon that says <q>2 branches</q> (this is different from before...previously it only said one branch). This gives a list of all the branches. Find the <q>country</q> branch and click on <q>New pull request</q>
               </p>
             </li>
             <li>
@@ -72,7 +72,7 @@
           Regardless of the method you chose in <xref ref="git-pr-create"/> or if you had the automatic pop-up banner, you should be on the same screen. This might look familiar. Notice that your commit message you chose back in <xref ref="S_gitfinalize"/> appears here. You have the choice to add a further description. 
         </p>
         <p>
-          Note the drop-down menus at the top pof the page. With these, you can easily decide which branches you want to merge into and which branches you are merging from. You should only see two choices since we only have two branches but this will not always be the case (especially if you are merging from an origin to an upstream, see <xref provisional="git-with-collab"/>).
+          Note the drop-down menus at the top of the page. With these, you can easily decide which branches you want to merge into and which branches you are merging from. You should only see two choices since we only have two branches but this will not always be the case (especially if you are merging from an origin to an upstream, see <xref provisional="git-with-collab"/>).
         </p>
         <p>
           You can also scroll down and see all of the files that were changed and all of the changes. This is good to check that everything is as you expected. This also works to check that someone who is trying to contribute to your repo is not destroying your project.

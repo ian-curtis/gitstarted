@@ -7,19 +7,10 @@
   <introduction>
     <p>
       So what is GitHub? It is a website that allows us to share our 
-      files with the world and it widely used by the coding/programming community. With GitHub, any public 
-      code can be viewed by anyone. Each person is able to copy the code and mess with it on their own computer, 
-      all without the original being changed. But if someone wants to change the original, they can submit 
-      a request asking the owners to incorporate their changes. GitHub keeps track of all of this information 
-      and can also help with version control. If you make a big mistake, you can revert back to old versions 
-      and try again. GitHub works closely with Git (hence its name) and is a nice interface for 
-      many common Git functions.
+      files with the world and it widely used by the coding/programming community. With GitHub, any public code can be viewed by anyone. Each person is able to copy the code and mess with it on their own computer, all without the original being changed. But if someone wants to change the original, they can submit a request asking the owners to incorporate their changes. GitHub keeps track of all of this information and can also help with version control. If you make a big mistake, you can revert back to old versions and try again. GitHub works closely with Git (hence its name) and is a nice interface for many common Git functions.
     </p>
     <p>
-      Before attempting to tackle Git, I think it's best to show you the ropes of GitHub. After we get set 
-      up here and get more comfortable with the GitHub jargon, we can move to Git. 
-      In this section we will create a GitHub account and get familiar with the layout of GitHub. Much of 
-      what is said in this section and chapter is directly applicable to Git (<xref provisional="C_git"/>).
+      Before attempting to tackle Git, I think it's best to show you the ropes of GitHub. After we get set up here and get more comfortable with the jargon, we can move to Git. In this section we will create a GitHub account and get familiar with the layout of GitHub. Much of what is said in this section and chapter is directly applicable to Git (<xref provisional="C_gitsolo"/>).
     </p>
   </introduction>
 
@@ -128,17 +119,29 @@
     <idx><h>github</h><h>repository</h></idx>
 
     <p>
-      You should be on the home page of GitHub. You may not see much if you just created an accout. 
+      You should be on the home page of GitHub which might look something like my homepage in <xref ref="fig-hub-home"/>. You may not see much if you just created an account. 
       Probably lots of buttons telling you to get started or take a tutorial and whatnot. Feel free to 
       click on those if you'd like, but I'd suggest following along here first. 
     </p>
+    <figure xml:id="fig-hub-home">
+      <caption>My GitHub Homepage</caption>
+      <image source="hub_home" width="90%">
+        <description>The GitHub home page</description>
+      </image>
+    </figure>
     <p>
-      Your profile page can be found by clicking on the robot-y icon in the top right and clicking on 
+      Your profile page can be found by clicking on the robot-y icon (see <xref ref="fig-hub-navbar"/>) in the top right and clicking on 
       <q>Your profile</q>. (Notice that the URL uses your username.) You probably don't see much. That's ok, 
       you haven't created anything yet! On this page (the <q>Overview</q> tab) you can see your popular 
       repositories, a graph of your contributions and a summary of your activity. Check out 
       <url href="https://github.com/ian-curtis">my profile page</url> for an example.
     </p>
+    <figure xml:id="fig-hub-navbar">
+      <caption>The GitHub Navigation Bar</caption>
+      <image source="hub_navbar" width="60%">
+        <description>The GitHub Navigation Bar</description>
+      </image>
+    </figure>
     <p>
       First, you can edit your basic profile information on the left hand side including your profile image, 
       name, bio, and location. I would recommend filling as much of that out as possible; it allows companies 
@@ -167,8 +170,8 @@
     <title>Settings and Customizations</title>
 
     <p>
-      Click on the profile icon in the top right and select <q>Settings</q>. Don't be scared of the long 
-      list of possible customizations that are available. Most are only applicable experiences GitHub users. 
+      Click on the profile icon in the top right (<xref ref="fig-hub-navbar"/>) and select <q>Settings</q>. Don't be scared of the long 
+      list of possible customizations that are available. Most are only applicable to experienced GitHub users. 
       I will introduce the settings you may be interested in right now. The headings of the following 
       paragraphs match up with the headings of the tabs on the GitHub page. Note that some tabs have been 
       excluded as well as some settings within some tabs. This does not mean that they are not important; 
@@ -179,10 +182,9 @@
       <title>Profile</title>
 
       <p>
-        Here, you can change your name, public email (if you have multiple AND if you have 
-        <url href="hub-emails">chosen to 
-        make your email public</url>), a mini bio, relevant info about your other social media and company, 
-        location, and whether or not you are searching for a job.
+        Here, you can change your name, public email (if you have multiple AND if you have chosen to 
+        make your email public), a mini bio, relevant info about your other social media and company, 
+        location, and whether or not you are searching for a job. See <xref text='title' ref="hub-emails"/> for more info.
       </p>
       
     </paragraphs>
@@ -192,20 +194,14 @@
 
       <p>
         Here is where you can change your username. <em>I would strongly recommend against changing your 
-        username except in dire circumstances.</em> This could lead to broken links or, if someone claims 
-        your old username, links to the wrong repository. This is why I hope you took the time to really 
-        think of a good username when created your account.
+        username except in dire circumstances.</em> This could lead to broken links or, if someone claims your old username, links to the wrong repository. This is why I hope you took the time to really think of a good username when created your account.
       </p>
       <p>
         Ok fine. If you have just created your account, have no repositories, have done pretty much 
-        nothing on GitHub other than editng settings, AND are truly unhappy with your username, change it 
-        now. NOW. Then try not to do it again. 
+        nothing on GitHub other than editng settings, AND are truly unhappy with your username, change it now. NOW. Then try not to do it again. 
       </p>
       <p>
-        This tab will also let you delete your entire account. It is in red for a reason. I would highly 
-        recommend never deleting your account. Even if you are done with GitHub and don't plan on ever using 
-        it again, others can still benefit from your code. Obviously some exceptions could apply here but 
-        for most purposes, you probably shouldn't delete your account.
+        This tab will also let you delete your entire account. It is in red for a reason. I would highly recommend never deleting your account. Even if you are done with GitHub and don't plan on ever using it again, others can still benefit from your code. Obviously some exceptions could apply here but for most purposes, you probably shouldn't delete your account.
       </p>
       
     </paragraphs>
@@ -219,9 +215,7 @@
         computer changes automatically). You can also edit the default emoji appearance.
       </p>
       <p>
-        There is currently a feature in testing allowing a theme designed for colorblind users. To enable 
-        this, click on your avatar in the top right and select <q>Feature preview</q>, then <q>Colorblind 
-        Themes</q>, then <q>Enable</q>. If you have feedback to give GitHub, you can also do that.
+        There is currently a feature in testing allowing a theme designed for colorblind users. To enable this, click on your avatar in the top right and select <q>Feature preview</q>, then <q>Colorblind Themes</q>, then <q>Enable</q>. If you have feedback to give GitHub, you can also do that.
       </p>
       
     </paragraphs>
@@ -230,9 +224,7 @@
       <title>Account security</title>
       
       <p>
-        Change your password here and you can enable two-factor authentication. You can also see where 
-        you are currently logged in. If an unfamiliar session is active, I would recommend changing your 
-        password and/or enabling two-factor authentication.
+        Change your password here and you can enable two-factor authentication. You can also see where you are currently logged in. If an unfamiliar session is active, I would recommend changing your password and/or enabling two-factor authentication.
       </p>
 
     </paragraphs>
@@ -241,17 +233,10 @@
       <title>Billing &amp; plans</title>
       
       <p>
-        GitHub offers different <url href="https://github.com/pricing">paid plans</url>. Each of the plans 
-        has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly 
-        fine under the free plan. I would certainly recommend upgrading once you become more familiar with Git, 
-        GitHub, and start developing more projects. However, there is no need to pay anything at this point. 
+        GitHub offers different <url href="https://github.com/pricing">paid plans</url>. Each of the plans has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly fine under the free plan. I would certainly recommend upgrading once you become more familiar with Git, GitHub, and start developing more projects. However, there is no need to pay anything at this point. 
       </p>
       <p>
-        Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their 
-        <url href="https://education.github.com/pack">Student Developer Pack</url>. 
-        <url href="https://education.github.com/teachers">Teachers</url> and 
-        <url href="https://education.github.com/schools">Schools</url> can also find benefits (some require 
-        a payment).
+        Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their <url href="https://education.github.com/pack">Student Developer Pack</url>. <url href="https://education.github.com/teachers">Teachers</url> and <url href="https://education.github.com/schools">Schools</url> can also find benefits (some require a payment).
       </p>
 
     </paragraphs>
@@ -282,10 +267,7 @@
       <title>Repositories</title>
 
       <p>
-        If you just created your account, this is probably empty. That's ok! It will be populated soon with 
-        a list of all your repositories and repositories you have access to. I do want to point out the 
-        first setting, <q>Repository default branch</q>. It may say <q>master</q> in the text box. If so, 
-        please change it to <q>main</q> (by typing and clicking <q>Update</q> which is the new Git/GitHub standard. 
+        If you just created your account, this is probably empty. That's ok! It will be populated soon with a list of all your repositories and repositories you have access to. I do want to point out the first setting, <q>Repository default branch</q>. It may say <q>master</q> in the text box. If so, please change it to <q>main</q> (by typing and clicking <q>Update</q> which is the new Git/GitHub standard. 
       </p>
       <p>
         For more information on the transition from <q>master</q> to <q>main</q>, please visit 
@@ -307,9 +289,7 @@
 
   <conclusion>
     <p>
-      Hopefully you now have an idea of how GitHub is organized and are aware of the customizations you 
-      can make. However, we have barely scratched the surface of what GitHub can do. In the next section, 
-      you will create your own repository and learn some GitHub vocabulary.
+      Hopefully you now have an idea of how GitHub is organized and are aware of the customizations you can make. However, we have barely scratched the surface of what GitHub can do. In the next section, you will create your own repository and learn some GitHub vocabulary.
     </p>
   </conclusion>
 
