@@ -44,7 +44,7 @@
             </p>
           </li>
         </ul>
-        Once you open the terminal, you should be presented with a blank screen, such as the one shown 
+        <!-- Once you open the terminal, you should be presented with a blank screen, such as the one shown 
         in <xref ref="mac-term-start"/>
         <figure xml:id="mac-term-start">
           <caption>Opening Screen for Mac Terminal</caption>
@@ -52,12 +52,12 @@
             <description></description>
             
           </image>
-        </figure>
+        </figure> -->
       </p>
       <assemblage>
         <title>Note</title>
         <p>
-          At the top of my terminal, it says <q>iancurtis<mdash/> -bash</q>. This indicates that
+          At the top of my (Mac) terminal, it says <q>&lt;my-username><mdash/> -bash</q>. This indicates that
           I am using the <c>bash</c> shell. This is no longer the default for MacOS Catalina and later 
           (as the terminal states). 
           I will be sticking with <c>bash</c> in this book to avoid differences between Windows and Mac 
@@ -68,7 +68,7 @@
           into the command line, press <kbd>Enter</kbd>, 
           enter your password to your computer, and restart the terminal. Otherwise, you are free to 
           stick with the default shell; just know that there may be slight differences between this 
-          textbook and your terminal.
+          book and your terminal.
         </p>
       </assemblage>
   </subsection>
@@ -83,30 +83,29 @@
       file system and organization are different bewteen the two, as we shall see later.
     </p>
     <p>
-      All this to say that separate instructions must be given for Windows users for certain tasks. 
+      Separate instructions must be given for Windows users for certain tasks. 
       To make life easier for you, me, and everyone else, I recommend <em>not</em> using the default 
-      Windows terminal which looks like <xref ref="windows-term-start"/>. 
+      Windows terminal. 
       <aside>
         <p>
           The default terminal for Windows is usually the Command Prompt. To access it, activate the 
           search feature of your computer by clicking the search box at the bottom of 
           your screen or by typing <kbd>Windows</kbd> + <kbd>S</kbd>. Then search for <q>command prompt</q>
-          and click on the result that comes up. You should see a screen that looks like 
-          <xref ref="windows-term-start"/>.
+          and click on the result that comes up.
         </p>
       </aside>
       
-      <figure xml:id="windows-term-start">
+      <!-- <figure xml:id="windows-term-start">
         <caption>Opening Screen for Windows Command Prompt</caption>
-        <!-- <image source="windows-term-start.png">
+        <image source="windows-term-start.png">
           <description></description>
-        </image> -->
-      </figure>
+        </image>
+      </figure> -->
     </p>
     <p>
       Instead, let's use a new terminal (Git Bash) that works well with Git (and conveniently uses the 
       <c>bash</c> shell which allows me to use the same instructions for Mac as Windows). Detailed 
-      download instructions can be found in <xref text="title" ref="materials"></xref>. I will assume 
+      download instructions can be found in <xref text="title" ref="materials-windows"></xref>. I will assume 
       that you are using Git Bash for the remainder of the book.
     </p>
     <p>
@@ -121,7 +120,11 @@
     </p>
   </subsection>
   <subsection>
-    <title>On Linux (*)</title>
+    <title>On Linux</title>
+
+    <p>
+      This will depend on the version and distribution you have installed. For this reason, I will not be able to provide instructions here. Please use the internet for help. Contributions for your specific distribution are welcome through a pull request on GitHub.
+    </p>
       
   </subsection>
 </section>

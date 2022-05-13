@@ -113,7 +113,7 @@
         </statement>
         <answer>
           <p>
-            <c>git commit -m edit readme with repo info</c>, maybe <c>git status</c> to confirm?
+            <c>git commit -m 'edit readme with repo info'</c>, maybe <c>git status</c> to confirm?
           </p>
           <p>
             Of course, your commit message may be different. Perhaps <q>edit readme</q> and enough for you.
@@ -187,7 +187,7 @@
         </statement>
         <hint>
           <p>
-            In VS Code, you can create a new file with the paper-with-a-plus icon in the <q>Explorer</q> panel in the top left.
+            In <init>VS</init> Code, you can create a new file with the paper-with-a-plus icon in the <q>Explorer</q> panel in the top left.
           </p>
         </hint>
         <answer>
@@ -219,7 +219,7 @@
             <c>git add .</c> OR <c>git add poem1.md</c>, then <c>git status</c>
           </p>
           <p>
-            Your text editor might also indicate that this worked. For instance, VS Code will show an <q>A</q> next to the file name.
+            Your text editor might also indicate that this worked. For instance, <init>VS</init> Code will show an <q>A</q> next to the file name.
           </p>
         </answer>
       </task>
@@ -235,7 +235,7 @@
             <c>git commit -m "&lt;commit-message>"</c>, <c>git status</c>
           </p>
           <p>
-            Your text editor might also indicate that this worked. For instance, VS Code will remove and letters and colors next to the file name. It will also show your commit message in the <q>Timeline</q> panel on the bottom left.
+            Your text editor might also indicate that this worked. For instance, <init>VS</init> Code will remove and letters and colors next to the file name. It will also show your commit message in the <q>Timeline</q> panel on the bottom left.
           </p>
         </answer>
       </task>
@@ -243,7 +243,7 @@
       <task>
         <statement>
           <p>
-            Do not push yet! You will add your second poem in a second commit before you push. (So this push will have two commits at one time).
+            Do not push yet! You will add your second poem in a second commit before you push. (So this push will have two commits at one time.)
           </p>
           <p>
             Create a new file titled <c>poem2.md</c>. Open it and add your second original poem or paste your second-favorite poem (with attribution, of course!). Stage this file and commit it with a good commit message.

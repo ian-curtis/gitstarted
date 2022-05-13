@@ -11,10 +11,10 @@
   </p>
   <p>
     The book is broken up into multiple sections:
-    <ul>
+    <ol label="I">
       <li>
         <p>
-          Multiple prefaces explaining necessary materials depending on your operating system (<xref text="title" ref="fm_materials_windows"/>, <xref text="title" ref="fm_materials_mac"/>, <xref text="title" ref="fm_materials_linux"/>)
+          Multiple prefaces explaining necessary materials depending on your operating system (<xref text="title" ref="materials-windows"/>, <xref text="title" ref="materials-mac"/>, <xref text="title" ref="materials-linux"/>)
         </p>
       </li>
       <li>
@@ -29,7 +29,7 @@
       </li>
       <li>
         <p>
-          A detailed introduction and get-started guide to GitHub (<xref provisional="C_githubteam"/>) and Git (<xref provisional="C_gitteam"/>) when working with collaborators (planned, in progress)
+          A detailed introduction and get-started guide to GitHub (<xref provisional="C_githubcollab"/>) and Git (<xref provisional="C_gitcollab"/>) when working with collaborators (planned, in progress)
         </p>
       </li>
       <li>
@@ -37,20 +37,20 @@
           Helpful appendices with some bonus features and resources
         </p>
       </li>
-    </ul>
+    </ol>
   </p>
 
   <p>
     The best way to use this book is to first determine where you are in terms of knowledge. Do you know anything about the terminal? If so, you might consider jumping to <xref ref="C_githubsolo"/>. Do you know about GitHub, but not the terminal? Perhaps start with <xref ref="C_commandline"/> then move to <xref ref="C_gitsolo"/>. Regardless of the path you choose, I highly recommend at least scanning the sections in <xref ref="C_basics"/>. I do assume you have an idea of the topics in that chapter and hope you at least consider adopting some of the recommended practices. If you have no idea what anything is in this book, start at the beginning and just read consecutively.
   </p>
   <p>
-     Most sections have activities scattered throughout and some chapters even have a lengthy extensive activity at their ends. Take care to participate in these activities along the way. The book is designed to be interactive where you follow along as you read; however, it is not a traditional textbook filled with exercises, definitions, and theorems. I am not testing you on any of this as I believe that Git and GitHub are skills best learned by doing, not through an exam. Feel free to make mistakes, break things, and revist chapters you forgot or didn't understand completely. 
+     Most sections have activities scattered throughout and some chapters even have a lengthy extensive activity at their ends. Take the time to participate in these activities along the way, especially if you this material is brand new to you. The book is designed to be interactive where you follow along as you read; however, it is not a traditional textbook filled with exercises, definitions, and theorems. I am not testing you on any of this as I believe that Git and GitHub are skills best learned by doing, not through an exam. Feel free to make mistakes, break things, and revist chapters you forgot or didn't understand completely. 
   </p>
   <p>
     As you read, if anything starts to become too confusing or overwhelming, take a break. While a dedicated reader might be able to read this book and complete the activities in one day, it is not recommended to do so. There is quite a bit of new content here and too much at once will certainly lead to an information overload. So take your time, read carefully, and, again, don't be afraid to reread parts of the book anytime you need a refresher on things.
   </p>
   <p>
-    If you are prepared to dive in, visit the following prefaces to download the necessary materials, the proceed to learning and fun!
+    If you are prepared to dive in, visit the following prefaces to download the necessary materials, the proceed to learning!
   </p>
 
 </preface>

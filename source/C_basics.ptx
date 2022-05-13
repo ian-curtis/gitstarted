@@ -8,7 +8,7 @@
       For those who do not have a lot of experience with computers, start here for an introduction 
       into certain computer basics. This book assumes that you are familiar with the content in this 
       chapter. Don't worry, I don't assume you know anything about the <q>command line</q> (this 
-      will be introduced in <xref ref="S_whatiscommline"/>) or Git (<xref provisional="C_git"/>). 
+      will be introduced in <xref ref="S_whatiscommline"/>). 
     </p>
     <p>
       However, for the content of this book to make sense, a few basics must be covered, such as proper 

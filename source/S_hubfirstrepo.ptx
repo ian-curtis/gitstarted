@@ -35,7 +35,7 @@
       </li>
       <li>
         <p>
-          If you navigate to the profile avatar in the top right, and click on <q>My repositories</q>, 
+          If you navigate to the profile avatar in the top right, and click on <q>Your repositories</q>, 
           there will also be a green <q>New</q> button near the top.
         </p>
       </li>
@@ -43,6 +43,22 @@
 
     Each of these three methods will get you to the same page. It doesn't matter which one you click. 
   </p>
+
+  <figure xml:id="fig-hub-new-repo">
+    <caption>Various Methods to Create a New Repo</caption>
+    <sidebyside>
+      <image source="hub_new_repo_navbar" width="90%">
+        <description>Where to click for a new repo from the navigation bar</description>
+      </image>
+      <image source="hub_new_repo_home" width="90%">
+        <description>Where to click for a new repo from the home page</description>
+      </image>
+    </sidebyside>
+
+      <image source="hub_new_repo_yourrepos" width="90%">
+        <description>Where to click for a new repo from the <q>Your repositories</q> page</description>
+      </image>
+  </figure>
 
   <exercise>
     <statement>
@@ -52,6 +68,13 @@
       </p>
     </statement>
   </exercise>
+
+  <figure xml:id="fig-hub-new-repo-screen">
+    <caption>The New Repository Screen</caption>
+    <image source="hub_new_repo_screen" width="90%">
+      <description></description>
+    </image>
+  </figure>
 
   <p>
     It is not difficult to create a repo. It is difficult, however, to come up with a repo name. 
@@ -64,26 +87,16 @@
   </p>
 
   <p>
-    For right now, I will tell you what to name your repo. In the <q>Repository name</q> box, 
-    type the name <c>aboutme</c>.
-    Adding a description is optional and is not necessary for us right now. Next is the viewability. You 
-    may choose to make your repos private (only you and authorized collaborators can view/edit) or public 
-    (everyone can view and attempt to edit, only you and authorized collabortors can approve edits). 
-    It does not matter what you select for this right now as we will be deleting this repo after we are 
-    done with it.
+    If you are thinking <q>Wait! I don't know the details of my project!</q> then you are not alone. The problem with this is that you have to decide what your repo is going to be about before you name it. I have definitely been victim to this and have made some rather stupid names that I should've made better. For right now, I will tell you what to name your repo. In the future, it might be best to start with a private repo and then change the name (if you need to) before you make it public. Otherwise, just be aware of the consequences should you change it at any other time.
+  </p>
+
+  <p>
+    In the <q>Repository name</q> box, 
+    type the name <c>aboutme</c>. Adding a description is optional and is not necessary for us right now. Next is the viewability. You may choose to make your repos private (only you and authorized collaborators can view/edit) or public (everyone can view and attempt to edit, only you and authorized collabortors can approve edits). It does not matter what you select for this right now as we will be deleting this repo after we are done with it.
   </p>
   <p>
   <idx><h>readme</h></idx>
-    The next step deals with certain files that can be automatically added to your repo. You have the choice 
-    for either or none of a <c>README</c> file, a <c>.gitignore</c>, and a license. A 
-    <term>README file</term> gives all the pertinent information about your repository in an easy-to-read 
-    format. It is often the first thing that people visiting your repo will read and is very important. 
-    Check this box and we will come back to the <c>README</c> file in just a minute. A <term>gitignore</term>
-    file tells Git all of the files <em>not</em> to put online. Do not check this box for now; it will be 
-    very useful later on, but is not needed now. You can also choose to put a <term>license</term> on 
-    your code which lets users know what they can and cannot do. If you would like to explore the different 
-    licenses, please visit 
-    <url href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">the GitHub documentation</url>.
+    The next step deals with certain files that can be automatically added to your repo. You have the choice for either or none of a <c>README</c> file, a <c>.gitignore</c>, and a license. A <term>README file</term> gives all the pertinent information about your repository in an easy-to-read format. It is often the first thing that people visiting your repo will read and is very important. Check this box and we will come back to the <c>README</c> file in just a minute. A <term>gitignore</term>file tells Git all of the files <em>not</em> to put online. Do not check this box for now; it will be very useful later on, but is not needed now. You can also choose to put a <term>license</term> on your code which lets users know what they can and cannot do. If you would like to explore the different licenses, please visit <url href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository">the GitHub documentation</url>.
     Since we will delete this repo later, you do not have to select this option.
   </p>
 
@@ -206,7 +219,7 @@
             <p>
               To create headings, place hashtags (pound signs, if you insist)  and a space before the text 
               you wish to be in the heading: <c># A Title</c>. The more hashtags you add, the deeper the 
-              heading level. Thus, <c>## A Subheading</c> is a level two heading whereas <c>## Another Subheading</c> 
+              heading level. Thus, <c>## A Subheading</c> is a level two heading whereas <c>### Another Subheading</c> 
               is a level three heading.
             </p>
           </li>
@@ -231,6 +244,9 @@
         and <url href="https://www.markdownguide.org/extended-syntax/" visual="www.markdownguide.org/extended-syntax/">Extended Markdown Syntax</url>.
 
       </p>
+      <p>
+        It is also important to note that GitHub Markdown differs slightly from other flavors of Markdown. See <url href="https://gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f" visual="gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f">a nice table from GitHub user vimtaai</url>.
+      </p>
     </assemblage>
 
     <exercise xml:id="try-markdwon">
@@ -238,7 +254,7 @@
         <p>
           Let's practice your markdown skills! Here, you will make the "aboutme" repo name true. Feel 
           free to use the guidelines and sources above. You could also search online if you aren't sure 
-          how to do what you want to do. I have provided my (basic) example in the repo for this book. 
+          how to do what you want to do. I have provided my (basic) example <url href='https://github.com/ian-curtis/gitstarted' visual='github.com/ian-curtis/gitstarted'>in the repo for this book</url> (titled <c>README_aboutme.md</c>). 
           But be creative! There aren't any <q>right</q> answers here.
         </p>
         <p>
@@ -312,39 +328,43 @@
       </conclusion>
     </exercise>
 
+    <figure xml:id="fig-hub-commit">
+      <caption>The GitHub Commit Changes Dialog</caption>
+      <image source="hub_commit" width="90%">
+        <description>Shows dialog box of commit message, description, commit branch, and commit button for a commit on GitHub</description>
+      </image>
+    </figure>
+
     <p>
       Right now, we have only edited the file, but we haven't told Github that we wish to keep our edits.
       It's as if we edited a document, but never clicked save! But if you scroll down to the bottom of the 
       page, you'll see that there is no <q>save</q> button. You should see a green <q>Commit changes</q> 
-      button. This is important. Github uses <term>commit</term> when indicating that you are about to 
+      button, as in <xref ref="fig-hub-commit"/>. This is important. Github uses <term>commit</term> when indicating that you are about to 
       officially upload your changes to your repo. This is your last change to change anything. When you 
       think you are done, go ahead and commit your changes (commit directly to the main branch). Your 
       changes should be represented. Navigate back to the Code tab to prepare for the next section.
     </p>
     <p>
-      Take care to notice the difference between committing and saving. Saving is easy. You can add a word, 
-      then save. Add a word, save. And so on. Think of commiting as adding a word, saving, and closing the 
-      document. Now everytime you want to add another word you have to open the entire document again, 
-      add the word, save, and close the document again. This system is put in place to help with version 
-      control. Instead of their being one versioin for each new word you add, there is one version for each 
-      commit. When coding, you save your files, but commit your changes. This will become more 
-      apparent when we work with Git and with multiple files.
+      Take care to notice the difference between committing and saving. Saving is easy. You can add a word, then save. Add a word, save. And so on. Think of commiting as adding a word, saving, <em>and closing the document</em>. Now everytime you want to add another word you have to open the entire document again, add the word, save, and close the document again. This system is put in place to help with version control. Instead of there being one version for each new word you add, there is one version for each commit. When coding, you save your files, but commit your changes. This will become more apparent when we work with Git and with multiple files.
+    </p>
+    <p>
+      It might be worth saying again just to make sure you've got it. Instead of there being one version for each new word you add, there is one version for each commit. Projects are typically broken up into tiny pieces. Each of these pieces would correspond to a commit. So if something goes wrong, you can revert back to a previous commit. We don't want commits to be for every word since it would take forever to find the commit you want to revert to. Conversely, we don't want commits to contain too many edits as that would require more work if we had to revert backwards.
     </p>
 
     <assemblage xml:id="ex-commit">
       <title>An Extra Commit Example</title>
       <p>
         Let's consider one example to help understand the benefits of thinking in commits. Suppose I 
-        was working on a video game and I was tasked with creating different worlds a character could 
-        visit. With commits in mind, I decide to break down the task into chunks: I will build one world 
-        at a time. When I am done with one world, I will commit. When I am done with another world, I will 
-        commit a second time. And so on.
+        was working on a small video game and I was tasked with creating different worlds a character could visit. With commits in mind, I decide to break down the task into chunks: I will build one world at a time. When I am done with one world, I will commit. When I am done with another world, I will commit a second time. And so on.
       </p>
       <p>
         This is different than creating two buildings in the first world, then saving. Then creating two 
         more buildings, then saving. Then adding some vegetation and enemies, then saving. We save much more 
         often than we commit. But <em>we save using our computer and commit using Git/Gitub.</em> I would never 
         save to Github or commit to my computer. Saving is light, commiting is heavy.
+      </p>
+      <p>
+        That being said, do make sure to save your files! You want to save your progress on your computer, but there is no need to commit after each time you save.
       </p>
     </assemblage>
     

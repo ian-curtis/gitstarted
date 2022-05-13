@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="commands">
+<section xml:id="S_commands">
   <title>Basic Commands</title>
   <introduction>
     <p>
@@ -151,7 +151,6 @@
         You may have noticed that some files/directories show up in your terminal that are not visible 
         on your Desktop. This is because most operating systems by default hide certain files that should 
         not be deleted. They still exist, they are just invisible to prevent accidental deletion. 
-        For more information on hidden files, see <xref provisional="hidden-files"/>.
       </p>
 
     </paragraphs>
@@ -266,13 +265,13 @@
               What happens?
             </p>
           </statement>
-          <hint>
+          <answer>
             <p>
               Mac users likely see the TextEdit app open. This is the default app for opening files like 
               this. Windows users will be prompted to determine which application should be used to open 
               the file.
             </p>
-          </hint>
+          </answer>
         </task>
 
         <conclusion>
@@ -548,7 +547,7 @@
     
     <introduction>
       <p>
-        Over the course of this chapter, we have added useless files and directories. We do not need our 
+        Over the course of this section, we have added useless files and directories. We do not need our 
         test files or folders anymore, so let's learn how to delete them (with the terminal, of course!)
       </p>
     </introduction>
@@ -702,7 +701,7 @@
       <p>
         You should get an error 
         stating that <c>rm</c> cannot remove directories. Fortunately, there is an aptly named command 
-        called <c>rmdir</c> which helps us <term>remove directories</term>. Using <c>mkdir</c> is exactly 
+        called <c>rmdir</c> which helps us <term>remove directories</term>. Using <c>rmdir</c> is exactly 
         like using <c>rm</c> except that you can only type names of directories.
       </p>
 
@@ -807,7 +806,7 @@
         </statement>
         <answer>
           <p>
-            <c>mkdir my_favorites</c> (could use a different case)
+            <c>mkdir my-favorites</c> (could use a different case)
           </p>
         </answer>
       </task>
@@ -893,7 +892,7 @@
         </statement>
         <answer>
           <p>
-            <c>rmdir my_favorites</c>, <c>ls</c>
+            <c>rmdir my-favorites</c>, <c>ls</c>
           </p>
         </answer>
       </task>

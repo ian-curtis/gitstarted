@@ -55,7 +55,7 @@
     </p>
 
     <p>
-      For now, don't worry about Git; we will get there in <xref provisional="C_git"/>. Just know that 
+      For now, don't worry about Git; we will get there in <xref ref="C_gitsolo"/>. Just know that 
       after reading this book, you won't have to worry about excess drafts and should never have to 
       save so many drafts again. 
     </p>
@@ -67,8 +67,7 @@
     
     <p>
       Ok, this isn't really that problematic. But I never understood why dates in file names had to be 
-      so specific. Having years makes sense, maybe months. But days? Times? In my opinion, who cares 
-      (no offense if this is how you name your files)?
+      so specific. Having years makes sense, maybe months. But days? Times? Seconds?
       Once you start getting that specific with dates and times, you run into the same issue as in 
       <xref text="title" ref="namesrevisions"/>. Dates and times just make your file names incredibly 
       long, hard to read, and hard to use in the command line. Please try to avoid dates, other than years.
@@ -108,7 +107,7 @@
         </blockquote>
       Wow! So much shorter. Do you still have an idea of what the file contains? Hopefully! <q>Ch</q> is 
       usually accepted as an abbreviation for <q>Chapter</q> so it is clear that this file is over 
-      chapters 3 and 4. The subject of these chapters is sampling and simple random sample (<q>SRS</q> is 
+      chapters 3 and 4. The subject of these chapters is sampling and simple random sampling (<q>SRS</q> is 
       a widely-used abbreviation in statistics for simple random sampling).
     </p>
 
@@ -149,17 +148,17 @@
       For instance, suppose I wanted to open the file we discussed earlier. On the command line, I would 
       open the file like this (don't worry about the commands, just notice what it looks like):
         <blockquote>
-          <c>cd 'Chapters3_4_Overview of Sampling and Simple Random Sampling (SRS).pdf'</c>
+          <c>open 'Chapters3_4_Overview of Sampling and Simple Random Sampling (SRS).pdf'</c>
         </blockquote>
       I could also do it like this:
         <blockquote>
-          <c>cd Chapters3_4_Overview\ of\ Sampling\ and\ Simple\ Random\ Sampling\ (SRS).pdf</c>
+          <c>open Chapters3_4_Overview\ of\ Sampling\ and\ Simple\ Random\ Sampling\ (SRS).pdf</c>
         </blockquote>
 
       What you should notice is that in the first example, the file is surrounded in quotes and in the 
       second, there are a bunch of backslashes. For each file name with spaces, you have to either 
       remember to enclose the entire name in quotes or to take the time to put a backslash before every 
-      space (see <xref provisional="escape-characters"/>). It may not seem like too much of a hassle, but 
+      space. It may not seem like too much of a hassle, but 
       you will get annoyed with it pretty quickly. It also can cause setbacks inside code editors when you 
       want to import or export files with spaces.
     </p>
@@ -201,7 +200,7 @@
               </li>
               <li>
               <!-- fix this title overlap -->
-                <title>UPPER_CASE_SNAKE_CASE</title>
+                <title>UPPER_CASE_ SNAKE_CASE</title>
                 <p>
                   every letter is capitalized, spaces are replaced with underscores (_)
                 </p>
@@ -209,7 +208,7 @@
             </dl>
             See a
             <url href="https://chaseadams.io/posts/most-common-programming-case-types/">Most Common 
-            Programming Case Types</url> blog post to get more details on these cases.
+            Programming Case Types blog post</url> to get more details on these cases.
           </p>
         </note>
 
@@ -269,7 +268,7 @@
   
   <introduction>
     <p>
-      There were a lot of words in <xref ref="SS_namingconventions"/>. Let's make sense of them here 
+      There were a lot of words in <xref text='title' ref="SS_namingconventions"/>. Let's make sense of them here 
       with an extensive example. There will be some questions throughout the way. I encourage you to think 
       about them and make sure you have understood the naming conventions above.
     </p>
@@ -282,13 +281,12 @@
         Suppose you work for Taylor Swift (wouldn't that be cool!). She is super busy right now recording 
         albums, writing songs, spending time with family and friends, and making TikToks and needs your 
         help. She has all of her songs saved on her computer in folders which are divided up by one album 
-        per folder. However, she knows that her naming techniques for the folders and files is not the 
-        best. As such, she has asked you to help her rename her files so that she still knows what each song is, 
+        per folder. She has asked you to help her rename her files so that she still knows what each song is, 
         but follows proper naming conventions. Use your knowledge from above to help Taylor out.
       </p>
       <p>
        We will start with her folders. Following is a list of her current folder names:
-       <aside>
+       <!-- <aside>
          <p>
            These are probably not her real folder names. Actually, she might not even have her 
            music on her own computer; the record label stores them. So please don't assume that I am 
@@ -296,7 +294,7 @@
            I just made this example up so you can 
            practice your file naming. 
          </p>
-       </aside>
+       </aside> -->
 
        <ul cols="2">
          <li>
@@ -427,7 +425,7 @@
       </p>
       <p>
         Please note that the answers to many of these exercises will vary depending on personal preferences. 
-        I will give answers depending on how I might approach the problem; these are not definitive at all.
+        I will give answers depending on how I might approach the problem; they are certainly not the only answer you could have given.
       </p>
     </introduction>
 
@@ -470,7 +468,7 @@
           <ol label="1">
             <li>
               <p>
-                <q>Regular</q> albums
+                Standard albums
               </p>
             </li>
             <li>
@@ -506,15 +504,13 @@
         </p>
         <p>
           Now that we have groups, we can figure out how to name one of each group, then apply that 
-          naming style to all names in the group. Start with the <q>regular albums</q>, such as <q>Taylor 
+          naming style to all names in the group. Start with the standard albums, such as <q>Taylor 
           Swift</q>. How can you change this name to stick with the conventions discussed above? 
         </p>
       </statement>
       <solution>
         <p>
-          Since there aren't any special modifiers to these albums (such as deluxe or live), I say we just 
-          keep their name, but write them in kebab-case. Therefore, <q>Taylor Swift</q> would become 
-          <q>taylor-swift</q>.
+          Since there aren't any special modifiers to this album (such as deluxe or live), I say we just keep its name, but write them in kebab-case. Therefore, <q>Taylor Swift</q> would become <c>taylor-swift</c>.
         </p>
       </solution>
     </exercise>
@@ -748,7 +744,7 @@
     <introduction>
       <p>
         If you feel like you have a good grasp of naming systems, feel free to skip with activity. 
-        If not, let's explore file naming a little further. In the last activity, we focused on folder names 
+        If not, let's explore file naming a little further. In <xref text='title' ref="taylorswiftfolders"/>, we focused on folder names 
         and since you helped her there, she is asking for your guidance with her file names as well.
       </p>
       <p>
@@ -860,11 +856,11 @@
         </ul>
       </p>
       <p>
-        Life before, complete the following tasks to make Taylor's life a little easier for the future.
+        Like before, complete the following tasks to make Taylor's life a little easier for the future.
       </p>
       <p>
         Again note that the answers to many of these exercises will vary depending on personal preferences. 
-        I will give answers depending on how I might approach the problem; these are not definitive at all.
+        I will give answers depending on how I might approach the problem; these are not the only correct responses.
       </p>
     </introduction>
 
