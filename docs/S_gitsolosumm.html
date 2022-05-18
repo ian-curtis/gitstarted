@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-13T14:05:35-04:00       *-->
+<!--*       on 2022-05-18T13:49:59-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -50,6 +50,7 @@
 <link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -123,11 +124,19 @@
 </ul>
 </li>
 <li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
+<li class="link">
+<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
+<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
+<li><a href="S_collabsetup.html" data-scroll="S_collabsetup" class="internal">Getting Set Up To Collaborate</a></li>
+<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
+</ul>
+</li>
 <li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
 <li class="link">
 <a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">A</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
 <li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
+<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 </ul>
 </li>
 <li class="link"><a href="S_commlinecustom.html" data-scroll="S_commlinecustom" class="internal"><span class="codenumber">B</span> <span class="title">Customizing the Terminal (*)</span></a></li>
@@ -143,19 +152,19 @@
 <p id="p-659">What follows is an ordered list of the steps in the Git process when working alone.</p>
 <ol class="decimal">
 <li id="li-187"><p id="p-660">Create a repository on GitHub. (You can also do this with Git, see <a class="external" href="https://kbroman.org/github_tutorial/pages/init.html" target="_blank">Karl Broman's guide</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-46" id="fn-46"><sup> 46 </sup></a>. I prefer starting with GitHub, however.) See <a href="S_hubfirstrepo.html#hub-createrepo" class="internal" title="Subsection 3.2.1: Creating a Repository">Subsection 3.2.1</a>.</p></li>
-<li id="li-188"><p id="p-661">Clone the repo to your local computer with <code class="code-inline tex2jax_ignore">git clone</code>. See <a href="S_gitsetup.html#SS_cloning" class="internal" title="Subsection 4.1.1: Cloning a Repository">Subsection 4.1.1</a> and <a href="" class="xref" data-knowl="./knowl/gitproc-clone.html" title="Git Procedure 2: Cloning from GitHub">Git Procedure 2</a>.</p></li>
-<li id="li-189"><p id="p-662">Create an appropriately-named branch with <code class="code-inline tex2jax_ignore">git branch</code> and <code class="code-inline tex2jax_ignore">git switch</code> or with <code class="code-inline tex2jax_ignore">git switch -c</code>. See <a href="S_gitsetup.html#SS_gitbranches" class="internal" title="Subsection 4.1.2: Branches With Git">Subsection 4.1.2</a> and <a href="" class="xref" data-knowl="./knowl/gitproc-branches.html" title="Git Procedure 3: Branches With Git">Git Procedure 3</a>.</p></li>
+<li id="li-188"><p id="p-661">Clone the repo to your local computer with <code class="code-inline tex2jax_ignore">git clone</code>. See <a href="S_gitsetup.html#SS_cloning" class="internal" title="Subsection 4.1.1: Cloning a Repository">Subsection 4.1.1</a> and <a href="" class="xref" data-knowl="./knowl/gitproc-clone.html" title="Git Procedure 4.2: Cloning from GitHub">Git Procedure 4.2</a>.</p></li>
+<li id="li-189"><p id="p-662">Create an appropriately-named branch with <code class="code-inline tex2jax_ignore">git branch</code> and <code class="code-inline tex2jax_ignore">git switch</code> or with <code class="code-inline tex2jax_ignore">git switch -c</code>. See <a href="S_gitsetup.html#SS_gitbranches" class="internal" title="Subsection 4.1.2: Branches With Git">Subsection 4.1.2</a> and <a href="" class="xref" data-knowl="./knowl/gitproc-branches.html" title="Git Procedure 4.3: Branches With Git">Git Procedure 4.3</a>.</p></li>
 <li id="li-190"><p id="p-663">Edit/create/delete files as you please. See <a href="S_gitedits.html" class="internal" title="Section 4.2: Editing Files">Section 4.2</a></p></li>
 <li id="li-191">
 <p id="p-664">Follow the three step process as described in <a href="S_gitfinalize.html" class="internal" title="Section 4.3: Sending Changes Back To GitHub: The Three-Step Process">Section 4.3</a>. Don't forget about the usefulness of <code class="code-inline tex2jax_ignore">git status</code> throughout (<a href="S_gitfinalize.html#SS_git-status" class="internal" title="Subsection 4.3.1: Wait, Which Files Did I Change Again?">Subsection 4.3.1</a>)!</p>
 <ol class="lower-alpha">
-<li id="li-192"><p id="p-665">Stage your files with <code class="code-inline tex2jax_ignore">git add</code>. See <a href="S_gitfinalize.html#SS_git-add" class="internal" title="Subsection 4.3.3: Step 1: Staging Files">Subsection 4.3.3</a> and <a href="" class="xref" data-knowl="./knowl/try-git-add.html" title="Git Procedure 5: Trying git add">Git Procedure 5</a>.</p></li>
-<li id="li-193"><p id="p-666">Commit your files with <code class="code-inline tex2jax_ignore">git commit -m</code>. See <a href="S_gitfinalize.html#SS_git-commit" class="internal" title="Subsection 4.3.4: Step 2: Committing Files">Subsection 4.3.4</a> and <a href="" class="xref" data-knowl="./knowl/try-git-commit.html" title="Git Procedure 6: Trying git commit">Git Procedure 6</a>.</p></li>
-<li id="li-194"><p id="p-667">Push your files back to GitHub (on your current branch) with <code class="code-inline tex2jax_ignore">git push origin</code>. See <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.5: Step 3: Pushing Files">Subsection 4.3.5</a> and <a href="" class="xref" data-knowl="./knowl/try-git-push.html" title="Git Procedure 7: Trying git push">Git Procedure 7</a>.</p></li>
+<li id="li-192"><p id="p-665">Stage your files with <code class="code-inline tex2jax_ignore">git add</code>. See <a href="S_gitfinalize.html#SS_git-add" class="internal" title="Subsection 4.3.3: Step 1: Staging Files">Subsection 4.3.3</a> and <a href="" class="xref" data-knowl="./knowl/try-git-add.html" title="Git Procedure 4.5: Trying git add">Git Procedure 4.5</a>.</p></li>
+<li id="li-193"><p id="p-666">Commit your files with <code class="code-inline tex2jax_ignore">git commit -m</code>. See <a href="S_gitfinalize.html#SS_git-commit" class="internal" title="Subsection 4.3.4: Step 2: Committing Files">Subsection 4.3.4</a> and <a href="" class="xref" data-knowl="./knowl/try-git-commit.html" title="Git Procedure 4.6: Trying git commit">Git Procedure 4.6</a>.</p></li>
+<li id="li-194"><p id="p-667">Push your files back to GitHub (on your current branch) with <code class="code-inline tex2jax_ignore">git push origin</code>. See <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.5: Step 3: Pushing Files">Subsection 4.3.5</a> and <a href="" class="xref" data-knowl="./knowl/try-git-push.html" title="Git Procedure 4.7: Trying git push">Git Procedure 4.7</a>.</p></li>
 </ol>
 </li>
-<li id="li-195"><p id="p-668">Create a pull request on GitHub and merge your changes into <code class="code-inline tex2jax_ignore">main</code>. See <a href="" class="xref" data-knowl="./knowl/act-git-pr.html" title="Activity 9: Creating a Pull Request">Activity 9</a>.</p></li>
-<li id="li-196"><p id="p-669">Go back to your local repo, switch to <code class="code-inline tex2jax_ignore">main</code> with <code class="code-inline tex2jax_ignore">git switch main</code> and pull in your changes with <code class="code-inline tex2jax_ignore">git pull</code>. See <a href="" class="xref" data-knowl="./knowl/try-git-pull.html" title="Git Procedure 10: Trying git pull">Git Procedure 10</a>.</p></li>
+<li id="li-195"><p id="p-668">Create a pull request on GitHub and merge your changes into <code class="code-inline tex2jax_ignore">main</code>. See <a href="" class="xref" data-knowl="./knowl/act-git-pr.html" title="Activity 4.9: Creating a Pull Request">Activity 4.9</a>.</p></li>
+<li id="li-196"><p id="p-669">Go back to your local repo, switch to <code class="code-inline tex2jax_ignore">main</code> with <code class="code-inline tex2jax_ignore">git switch main</code> and pull in your changes with <code class="code-inline tex2jax_ignore">git pull</code>. See <a href="" class="xref" data-knowl="./knowl/try-git-pull.html" title="Git Procedure 4.10: Trying git pull">Git Procedure 4.10</a>.</p></li>
 </ol></section><div class="hidden-content tex2jax_ignore" id="hk-fn-46"><div class="fn"><code class="code-inline tex2jax_ignore">kbroman.org/github_tutorial/pages/init.html</code></div></div>
 </div></main>
 </div>

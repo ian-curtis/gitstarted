@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-13T14:05:33-04:00       *-->
+<!--*       on 2022-05-18T13:49:58-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -50,6 +50,7 @@
 <link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -123,11 +124,19 @@
 </ul>
 </li>
 <li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
+<li class="link">
+<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
+<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
+<li><a href="S_collabsetup.html" data-scroll="S_collabsetup" class="internal">Getting Set Up To Collaborate</a></li>
+<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
+</ul>
+</li>
 <li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
 <li class="link">
 <a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">A</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
 <li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
+<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 </ul>
 </li>
 <li class="link"><a href="S_commlinecustom.html" data-scroll="S_commlinecustom" class="internal"><span class="codenumber">B</span> <span class="title">Customizing the Terminal (*)</span></a></li>
@@ -146,7 +155,7 @@
 <p id="p-512">So let's use the new vocab. We need a way to edit our GitHub repo locally but still have version control and GitHub tools. Git is the right tool for the job. Performing this connection is called cloning. A <dfn class="terminology">clone</dfn> of a repository is a local version of a repo that exists on GitHub. Luckily for us, GitHub expects us to do this and makes is rather simple to do.</p>
 <p id="p-513">Somewhat unfortunately, one thing must be done before we are able to clone a repo. Interacting with your GitHub materials in this way will require authentication; in other words, your password. This is necessary for safety and is a smart feature. However, Git/GitHub has deprecated the use of passwords on the command line so we must generate an Personal Access Token (<abbr class="acronym">PAT</abbr>). The following procedure guides you through this process. I recommend creating a new <abbr class="acronym">PAT</abbr> for each repo to ensure that if any one gets unauthorized access of one repo, they won't be able to get to your others.</p>
 <article class="project project-like" id="gitproc-pat"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-gitproc-pat"><h4 class="heading">
-<span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">Generating a <abbr class="acronym">PAT</abbr>.</span>
+<span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">4.1</span><span class="period">.</span><span class="space"> </span><span class="title">Generating a <abbr class="acronym">PAT</abbr>.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-gitproc-pat"><article class="project project-like"><article class="task exercise-like" id="task-39"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <p id="p-514">Click on your GitHub profile icon and navigate to Settings.</p></article><article class="task exercise-like" id="task-40"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <p id="p-515">Scroll down and click on “Developer Settings”.</p></article><article class="task exercise-like" id="task-41"><h5 class="heading"><span class="codenumber">(c)</span></h5>
@@ -160,7 +169,7 @@
 <p id="p-523">You will get an email that a <abbr class="acronym">PAT</abbr> was created. Record your <abbr class="acronym">PAT</abbr> somewhere. You will never see it again after you close or refresh the page. Don't put it somewhere easily accessible. <em class="emphasis">Treat <abbr class="acronym">PAT</abbr>s like passwords.</em> They are confidential and should not be shared. When Git (on the command line) asks for your password, you will enter in your <abbr class="acronym">PAT</abbr> instead.</p></article></article></div>
 <p id="p-524">Now that we have a <abbr class="acronym">PAT</abbr>, let's work on cloning a repo! You will likely need your <abbr class="acronym">PAT</abbr> in this procedure. Note that sometimes Git remembers old <abbr class="acronym">PAT</abbr>s. If Git does not ask you for a password, this doesn't mean something went wrong, it just means that you are already authenticated.</p>
 <article class="project project-like" id="gitproc-clone"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-gitproc-clone"><h4 class="heading">
-<span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span><span class="space"> </span><span class="title">Cloning from GitHub.</span>
+<span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Cloning from GitHub.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-gitproc-clone"><article class="project project-like"><div class="introduction" id="introduction-24"><p id="p-525">This procedure assumes you have a repo on GitHub called <code class="code-inline tex2jax_ignore">aboutme</code> and have been following along with the changes as described in <a href="C_githubsolo.html" class="internal" title="Chapter 3: GitHub Solo">Chapter 3</a>.</p></div>
 <article class="task exercise-like" id="task-47"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <p id="p-526">Navigate to the Code tab your repo <code class="code-inline tex2jax_ignore">aboutme</code>. Make sure you are on the main branch.</p></article><article class="task exercise-like" id="clone-https"><h5 class="heading"><span class="codenumber">(b)</span></h5>
@@ -177,8 +186,8 @@ remote: Total 17 (delta 2), reused 0 (delta 0), pack-reused 3
 Receiving objects: 100% (17/17), 5.06 KiB | 1.01 MiB/s, done.
 Resolving deltas: 100% (2/2), done.
 </pre></div>
-<p id="p-531">where &lt;copied-https-string&gt; is replaced with the HTTPS string you copied in <a href="" class="xref" data-knowl="./knowl/clone-https.html" title="Task 2.b">Task 2.b</a>. Press enter to run the command.</p>
-<p id="p-532">Your terminal may ask you for your GitHub username and password. This is ok: enter your username and instead of typing your normal GitHub password, paste/type your <abbr class="acronym">PAT</abbr> as found in <a href="" class="xref" data-knowl="./knowl/gitproc-pat.html" title="Git Procedure 1: Generating a PAT">Git Procedure 1</a>.</p></article><article class="task exercise-like" id="task-51"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-531">where &lt;copied-https-string&gt; is replaced with the HTTPS string you copied in <a href="" class="xref" data-knowl="./knowl/clone-https.html" title="Task 4.2.b">Task 4.2.b</a>. Press enter to run the command.</p>
+<p id="p-532">Your terminal may ask you for your GitHub username and password. This is ok: enter your username and instead of typing your normal GitHub password, paste/type your <abbr class="acronym">PAT</abbr> as found in <a href="" class="xref" data-knowl="./knowl/gitproc-pat.html" title="Git Procedure 4.1: Generating a PAT">Git Procedure 4.1</a>.</p></article><article class="task exercise-like" id="task-51"><h5 class="heading"><span class="codenumber">(e)</span></h5>
 <p id="p-533">Verify that the clone worked. In the location you chose (on your computer), you should see a new folder with the name of your repository. Inside of that folder will be your files!</p></article></article></div>
 <p id="p-534"><em class="emphasis">Cloning a repository does not navigate you into that repo.</em> In other words, when you clone a repo, you won't see the files in the repo until you <code class="code-inline tex2jax_ignore">cd</code> into the newly-created directory. In order to use Git, you will have to navigate your terminal into the repo. In this instance, you would do <code class="code-inline tex2jax_ignore">cd aboutme</code>.</p></section><section class="subsection" id="SS_gitbranches"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">4.1.2</span> <span class="title">Branches With Git</span>
@@ -187,7 +196,7 @@ Resolving deltas: 100% (2/2), done.
 <p id="p-536">No one except you! Yes, you could make a mistake and break your program or project. You want to avoid that. I would recommend <em class="emphasis">always</em> using branches whether you are working alone or not. If you make a horrible mistake, branches help you fix mistakes without messing with your main branch. Remember, if your repo is public, anyone can access it. Anyone can view the files, download the files, clone your repo, or fork your repo (<code class="code-inline tex2jax_ignore">[provisional cross-reference: forking]</code>). You want to make sure that the files on the main branch are up-to-date AND functional at all times. Branches will let you test new things without breaking main.</p>
 <p id="p-537">We saw earlier how to work with branches on GitHub, but you can also do this right from the command line. This can be done with one command and doesn't involve navigating multiple pages as we did on GitHub (<a href="S_hubbranches.html" class="internal" title="Section 3.3: Working With Branches">Section 3.3</a>).</p>
 <article class="project project-like" id="gitproc-branches"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-gitproc-branches"><h4 class="heading">
-<span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span><span class="space"> </span><span class="title">Branches With Git.</span>
+<span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">4.3</span><span class="period">.</span><span class="space"> </span><span class="title">Branches With Git.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-gitproc-branches"><article class="project project-like"><div class="introduction" id="introduction-25"><p id="p-538">Later on in this chapter, you will be adding to your README file. You first will add the country you were born in.</p></div>
 <article class="task exercise-like" id="task-52"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <p id="p-539">Ensure that your terminal is navigated into your repo. You may have noticed that your terminal changed! The name of your active branch is displayed by the file path. Mine now has a <code class="code-inline tex2jax_ignore">(main)</code>. This is how you remember which branch you are editing on.</p></article><article class="task exercise-like" id="task-53"><h5 class="heading"><span class="codenumber">(b)</span></h5>
@@ -208,11 +217,11 @@ Resolving deltas: 100% (2/2), done.
 </pre></div>
 <p id="p-545">My terminal now says <code class="code-inline tex2jax_ignore">(country)</code> instead of <code class="code-inline tex2jax_ignore">(main)</code> so I have verification that the process worked.</p></article></article></div>
 <section class="paragraphs" id="paragraphs-34"><h4 class="heading"><span class="title">Branch/Checkout Shortcut.</span></h4>
-<p id="p-546">Using a little terminal trick, we can actually create a branch and switch to that branch at the same time. This uses the <code class="code-inline tex2jax_ignore">-c</code> switch. For our example in <a href="" class="xref" data-knowl="./knowl/gitproc-branches.html" title="Git Procedure 3: Branches With Git">Git Procedure 3</a>,</p>
+<p id="p-546">Using a little terminal trick, we can actually create a branch and switch to that branch at the same time. This uses the <code class="code-inline tex2jax_ignore">-c</code> switch. For our example in <a href="" class="xref" data-knowl="./knowl/gitproc-branches.html" title="Git Procedure 4.3: Branches With Git">Git Procedure 4.3</a>,</p>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git switch -c &lt;branch-name&gt;
 </b>Switched to new branch '&lt;branch-name&gt;'
 </pre></div>
-<p id="p-547">By adding the <code class="code-inline tex2jax_ignore">-c</code> switch to the <code class="code-inline tex2jax_ignore">switch</code> command, Git creates a new branch with the title given and checks out that branch. This is quite useful if you are only creating one branch and want to switch right to it. If you are uncomfortable with this, then feel free to continue using the method in <a href="" class="xref" data-knowl="./knowl/gitproc-branches.html" title="Git Procedure 3: Branches With Git">Git Procedure 3</a>. Each will get you to the same place.</p></section></section><section class="paragraphs" id="paragraphs-35"><h3 class="heading"><span class="title">Note About <code class="code-inline tex2jax_ignore">git switch</code>.</span></h3>
+<p id="p-547">By adding the <code class="code-inline tex2jax_ignore">-c</code> switch to the <code class="code-inline tex2jax_ignore">switch</code> command, Git creates a new branch with the title given and checks out that branch. This is quite useful if you are only creating one branch and want to switch right to it. If you are uncomfortable with this, then feel free to continue using the method in <a href="" class="xref" data-knowl="./knowl/gitproc-branches.html" title="Git Procedure 4.3: Branches With Git">Git Procedure 4.3</a>. Each will get you to the same place.</p></section></section><section class="paragraphs" id="paragraphs-35"><h3 class="heading"><span class="title">Note About <code class="code-inline tex2jax_ignore">git switch</code>.</span></h3>
 <p id="p-548">The <code class="code-inline tex2jax_ignore">git switch</code> command was introduced to help remove user confusion. Previously, the command was <code class="code-inline tex2jax_ignore">git checkout &lt;branch-name&gt;</code>. However <code class="code-inline tex2jax_ignore">checkout</code> has two functions: to switch branches and to reset files (if a file has edits that you want to restore, you can use <code class="code-inline tex2jax_ignore">checkout</code> to restore the file to how it was before you made the changes).</p>
 <p id="p-549"><code class="code-inline tex2jax_ignore">git checkout</code> still exists and you are welcome to use it to switch branches (you would use <code class="code-inline tex2jax_ignore">git checkout -b &lt;branch-name&gt;</code>). However, to avoid confusion, I recommend using <code class="code-inline tex2jax_ignore">git switch</code> for changing branches and <code class="code-inline tex2jax_ignore">git restore</code> for restoring files.</p></section><section class="conclusion" id="conclusion-8"><p id="p-550">You are now ready to edit files! You determined a chunk of your project to start with (adding your birth country), created a corresponding branch (<code class="code-inline tex2jax_ignore">country</code>) and checked out that branch. Until you change your branch again, all edits will take place on your current branch <em class="emphasis">only</em>. Continue on to edit your README file!</p></section></section></div></main>
 </div>

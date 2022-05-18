@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-13T14:05:32-04:00       *-->
+<!--*       on 2022-05-18T13:49:57-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -50,6 +50,7 @@
 <link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
 <!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
 <body class="pretext-book ignore-math has-toc has-sidebar-left">
 <a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
@@ -123,11 +124,19 @@
 </ul>
 </li>
 <li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
+<li class="link">
+<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
+<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
+<li><a href="S_collabsetup.html" data-scroll="S_collabsetup" class="internal">Getting Set Up To Collaborate</a></li>
+<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
+</ul>
+</li>
 <li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
 <li class="link">
 <a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">A</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
 <li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
+<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 </ul>
 </li>
 <li class="link"><a href="S_commlinecustom.html" data-scroll="S_commlinecustom" class="internal"><span class="codenumber">B</span> <span class="title">Customizing the Terminal (*)</span></a></li>
@@ -187,7 +196,7 @@
 <p id="p-291">Enter <code class="code-inline tex2jax_ignore">touch test.txt</code> into your terminal. What happened? Did it work as you expected?</p></article><article class="task exercise-like" id="task-2"><h6 class="heading"><span class="codenumber">(b)</span></h6>
 <p id="p-292">Can you use a command we learned earlier to check if your <code class="code-inline tex2jax_ignore">touch</code> worked?</p></article></article><p id="p-293">Oh dear, nothing happened! When you press enter after a <code class="code-inline tex2jax_ignore">touch</code> command, the terminal gives you no output at all. How can we verify that a <code class="code-inline tex2jax_ignore">test.txt</code> file got created? Let's try <code class="code-inline tex2jax_ignore">ls</code>. Recall from <a href="" class="xref" data-knowl="./knowl/ls.html" title="Paragraphs: Using ls">Using ls</a> that we can use <code class="code-inline tex2jax_ignore">ls</code> to give us a list of all the items in our present working directory. (Remember that term? See <a href="" class="xref" data-knowl="./knowl/pwd.html" title="Paragraphs: Using pwd">Using pwd</a>.) Since we are currently on the Desktop and we want to see what files are on the Desktop, we can use <code class="code-inline tex2jax_ignore">ls</code> to see if our file was created. Try it now!</p>
 <article class="activity project-like" id="fileextensions"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-fileextensions"><h5 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1</span><span class="period">.</span><span class="space"> </span><span class="title">File Extensions Matter.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">File Extensions Matter.</span>
 </h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-fileextensions"><article class="activity project-like"><div class="introduction" id="introduction-13"><p id="p-294">When <code class="code-inline tex2jax_ignore">touch</code>ing a file, you <em class="emphasis">must</em> put the file extension at the end of the file name. Otherwise, your computer won't know what type of file to create!</p></div>
 <article class="task exercise-like" id="task-3"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-295">Enter <code class="code-inline tex2jax_ignore">touch text</code> at your terminal (it's safe, don't worry).</p></article><article class="task exercise-like" id="task-4"><h6 class="heading"><span class="codenumber">(b)</span></h6>
@@ -203,7 +212,7 @@
 <li id="li-130"><p id="p-303">The file name, and</p></li>
 <li id="li-131"><p id="p-304">The file extension.</p></li>
 </ol>
-<p class="continuation">Your terminal will choose the correct software to open the file based on the file extension, once again stressing the importance of <a href="" class="xref" data-knowl="./knowl/fileextensions.html" title="Activity 1: File Extensions Matter">Activity 1</a>. Changing default programs is not a part of this book, but a Google search should do the trick if you are interested.</p>
+<p class="continuation">Your terminal will choose the correct software to open the file based on the file extension, once again stressing the importance of <a href="" class="xref" data-knowl="./knowl/fileextensions.html" title="Activity 2.1: File Extensions Matter">Activity 2.1</a>. Changing default programs is not a part of this book, but a Google search should do the trick if you are interested.</p>
 <article class="exercise exercise-like" id="try-open"><h5 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Trying <code class="code-inline tex2jax_ignore">open</code>.</span>
 </h5>
@@ -228,8 +237,8 @@
 </h5>
 <article class="task exercise-like" id="task-6"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-313">Enter <code class="code-inline tex2jax_ignore">mkdir testdir</code> on your command line. What happens? Is this what you expected after learning about <code class="code-inline tex2jax_ignore">touch</code>?</p></article><article class="task exercise-like" id="task-7"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-314">Use <code class="code-inline tex2jax_ignore">ls</code> to verify that the command worked.</p></article></article><p id="p-315">You should see, with <code class="code-inline tex2jax_ignore">ls</code>, that a new directory was created. Windows users may see that their new “testdir” is a different color (and has a “/”). They both indicate that “testdir” is a directory. Mac users may not see these which thus stresses the importance of <a href="" class="xref" data-knowl="./knowl/fileextensions.html" title="Activity 1: File Extensions Matter">Activity 1</a>. When <code class="code-inline tex2jax_ignore">ls</code> is used, the file extension is printed (when there is one). Directories do not have file extensions so when interpreting <code class="code-inline tex2jax_ignore">ls</code> output, it can usually be safely assumed that any item without an extension is a directory. Note that for any OS, <a href="" class="xref" data-knowl="./knowl/filenamecases.html" title="Note 1.1.1.1: Alternative Naming Options">Note 1.1.1.1</a> applies for <code class="code-inline tex2jax_ignore">mkdir</code> as well.</p></section><article class="activity project-like" id="trycdtouch"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-trycdtouch"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2</span><span class="period">.</span><span class="space"> </span><span class="title">Putting It All Together, Part 1.</span>
+<p id="p-314">Use <code class="code-inline tex2jax_ignore">ls</code> to verify that the command worked.</p></article></article><p id="p-315">You should see, with <code class="code-inline tex2jax_ignore">ls</code>, that a new directory was created. Windows users may see that their new “testdir” is a different color (and has a “/”). They both indicate that “testdir” is a directory. Mac users may not see these which thus stresses the importance of <a href="" class="xref" data-knowl="./knowl/fileextensions.html" title="Activity 2.1: File Extensions Matter">Activity 2.1</a>. When <code class="code-inline tex2jax_ignore">ls</code> is used, the file extension is printed (when there is one). Directories do not have file extensions so when interpreting <code class="code-inline tex2jax_ignore">ls</code> output, it can usually be safely assumed that any item without an extension is a directory. Note that for any OS, <a href="" class="xref" data-knowl="./knowl/filenamecases.html" title="Note 1.1.1.1: Alternative Naming Options">Note 1.1.1.1</a> applies for <code class="code-inline tex2jax_ignore">mkdir</code> as well.</p></section><article class="activity project-like" id="trycdtouch"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-trycdtouch"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.2</span><span class="period">.</span><span class="space"> </span><span class="title">Putting It All Together, Part 1.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-trycdtouch"><article class="activity project-like"><div class="introduction" id="introduction-14"><p id="p-316">It's time to put your skills to the test! Using your terminal and the knowledge gained from this section so far, complete the following tasks. This activity assumes you have been following along with the checkpoints.</p></div>
 <article class="task exercise-like" id="task-8"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <p id="p-317">Navigate into the newly-created directory, “testdir”.</p>
@@ -303,7 +312,7 @@
 <p id="p-351">Similar to <a href="" class="xref" data-knowl="./knowl/removing-files.html" title="Warning 2.3.3.2: Removing Files is Permanent">Warning 2.3.3.2</a>, removing directories is too easy. Notice again that the terminal provides no output or verification that the process was happening. Also notice that there was again no dialog box asking if we were really sure that we wanted to remove the directory.</p>
 <p id="p-352"><em class="alert">Removing directories with the terminal is permanent.</em> There is no recycle bin for these files. There is no “undo” or “restore”. The terminal deletes and forgets. Use extreme caution when using <code class="code-inline tex2jax_ignore">rmdir</code>; only remove what you are <em class="emphasis">absolutely sure</em> you need to remove. You will not get a second chance and your computer will not ask you for verification.</p>
 <p id="p-353">Note: you can add in an extra layer of security with the <code class="code-inline tex2jax_ignore">sudo</code> command, which requires your computer's password to be entered. See <code class="code-inline tex2jax_ignore">[provisional cross-reference: using-sudo]</code> in <a href="S_advcommands.html" class="internal" title="Section 2.4: Advanced Commands (*)">Section 2.4</a>.</p></article></section><article class="activity project-like" id="try-removing"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-try-removing"><h4 class="heading">
-<span class="type">Activity</span><span class="space"> </span><span class="codenumber">3</span><span class="period">.</span><span class="space"> </span><span class="title">Putting It All Together, Part 2.</span>
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.3</span><span class="period">.</span><span class="space"> </span><span class="title">Putting It All Together, Part 2.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-try-removing"><article class="activity project-like"><div class="introduction" id="introduction-16"><p id="p-354">You now know the basics of using using the command line. In this activity, you will practice what you have learned. Be sure to use the command line for each task.</p></div>
 <article class="task exercise-like" id="task-16"><h5 class="heading"><span class="codenumber">(a)</span></h5>
 <p id="p-355">Verify that you are still on your Desktop. Remove the rest of the test files we created throughout the chapter. Check to make sure all the files have been removed.</p>
