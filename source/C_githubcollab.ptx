@@ -10,4 +10,7 @@
   </introduction>
 
   <xi:include href="S_collabconsider.ptx" />
+  <xi:include href="S_hubcollabsetup.ptx" />
+  <xi:include href="S_hubcollabedit.ptx" />
+  <!-- <xi:include href="S_hubcollabextra.ptx" /> Issues tab, can see commits, fetch upstream, about -->
 </chapter>

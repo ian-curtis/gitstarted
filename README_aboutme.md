@@ -40,7 +40,7 @@ I was born in the United States.
 * Grey
   * It might seem bland, but it's the ultimate matching color. Every other color looks good with it and I respect that.
 * Ruby Red
-  * My first car was a ruby red and there is something unqiue about a good dark red that just works.
+  * My first car was a ruby red and there is something unqiue about a good dark red.
 
 ### An Image
 
@@ -55,7 +55,7 @@ every time I watch it (and I've watched it many times).
 
 ### Some Code
 
-Here is the code for a (rather useless) Python function to compute the mean between some inputted numbers:
+Here is the code for a (rather useless) Python function to compute the mean of some inputted numbers:
 
 ```
 def take_avg(list_nums):

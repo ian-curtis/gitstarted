@@ -79,10 +79,64 @@
 
       <task>
         <p>
-          Your previously staged files should still exist and should still be staged. From this point, use <c>git add</c> to add your missing file(s) and proceed with <c>git commit</c>.
+          Your previously staged files should still exist. From this point, use <c>git add</c> to add your missing file(s) and proceed with <c>git commit</c>.
         </p>
       </task>
     </project>
     
+  </section>
+
+  <section xml:id="S_untrackfiles">
+    <title>Git Has Been Updating Files, But Now I Don't Want It To</title>
+    
+    <p>
+      This is actually pretty common. Maybe you are writing a book and your abandoned chapters were on GitHub for your editors to look at. Now that the book is published, you don't want those chapters online. Maybe you are using and API and when you were developing a project had your app's API connection keys available and not that the project is public you want to remove the file containing them.
+    </p>
+    <p>
+      When Git is keeping track of files, we say that it is <term>tracking</term> files. Untracking files is not super difficult, but does, like all Git commands, require the command line.
+    </p>
+
+    <warning>
+      <p>
+        Untracking files from Git <em>does not delete them from your local computer</em>. However, the next time you push to GitHub, they will no longer be there. Thus, the next time your collaborators pull from the repository, their copy of the file will be deleted.
+      </p>
+    </warning>
+
+    <project>
+      <title>Untracking Files from Git</title>
+      
+      <task>
+        <statement>
+          <p>
+            Identify the <em>files</em> you wish to remove from Git's tracking service
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Use <c>git rm --cached &lt;filename></c>. You may also add multiple files as done with <c>git add</c> (<xref ref="try-git-add"/>).
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Want to untrack folders? You will need the <c>-r</c> recursive option. So, <c>git rm -r --cached &lt;folder-name></c> will do the trick.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            The above options will not delete the file(s)/folder(s) from your local computer. If you would like the files deleted and untracked, use the above commands with out the <c>--cached</c> feature: <c>git rm &lt;filenames></c> and <c>git rm -r &lt;folder-names></c>.
+          </p>
+        </statement>
+      </task>
+    </project>
+
   </section>
 </appendix>
