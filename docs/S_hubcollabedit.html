@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-18T13:50:00-04:00       *-->
+<!--*       on 2022-05-18T15:15:10-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -70,11 +70,11 @@
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_collabsetup.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_githubcollab.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_collabsetup.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_githubcollab.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_hubcollabfetch.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_collabsetup.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_githubcollab.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_collabsetup.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_githubcollab.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_hubcollabfetch.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -129,6 +129,7 @@
 <li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
 <li><a href="S_collabsetup.html" data-scroll="S_collabsetup" class="internal">Getting Set Up To Collaborate</a></li>
 <li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="active">Editing</a></li>
+<li><a href="S_hubcollabfetch.html" data-scroll="S_hubcollabfetch" class="internal">Fetching Upstream</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
@@ -137,6 +138,7 @@
 <li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
 <li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
+<li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
 </ul>
 </li>
 <li class="link"><a href="S_commlinecustom.html" data-scroll="S_commlinecustom" class="internal"><span class="codenumber">B</span> <span class="title">Customizing the Terminal (*)</span></a></li>
@@ -193,7 +195,7 @@
 <p id="p-765">This time notice that there is no option to “Merge” into the main branch. This is because you do not have write access to the parent repository. At this point, wait for a moderator from the authoritative repo to approve your pull request.</p></article></article></div>
 <p id="p-766">Note that forking can drastically increase the complexity of the GitHub tree. Recall from <a href="" class="xref" data-knowl="./knowl/fig-hub-animal-merge.html" title="Figure 3.3.4.1">Figure 3.3.4.1</a> that branches make another branch on the tree which you eventually merge back into the main branch, or the trunk of the tree. Cloning made this more complex due to the copy on your computer. Forking adds another copy into the mix. <a href="" class="xref" data-knowl="./knowl/fig-collab-fork.html" title="Figure 5.3.0.2">Figure 5.3.0.2</a> provides a possible diagram of the forking process. But there are many different variations to this diagram as it is up to you how many branches/commits to make and to which branch you push.</p>
 <figure class="figure figure-like" id="fig-collab-fork"><div class="image-box" style="width: 95%; margin-left: 2.5%; margin-right: 2.5%;"><img src="external/collab_fork.svg" role="img" class="contained" alt="Arrow diagram. Main repo to fork copy. Branches and edits are made on the fork and are merged into the fork's main branch. Then all edits are merged into main repo's main branch."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.0.2<span class="period">.</span></span><span class="space"> </span>Example of GitHub Tree with a fork</figcaption></figure><p id="p-767">Now you can sit back and relax until a moderator reviews your contribution. If they make a comment or approve your pull request, you will get an email to the email address on your account. Once they approve your work, great! Congrats! Are you done? Proceed to <code class="code-inline tex2jax_ignore">[cross-reference to target(s) "S_hubcollabfetch" missing or not unique]</code> to find out!</p></section></div></main>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.0.2<span class="period">.</span></span><span class="space"> </span>Example of GitHub Tree with a fork</figcaption></figure><p id="p-767">Now you can sit back and relax until a moderator reviews your contribution. If they make a comment or approve your pull request, you will get an email to the email address on your account. Once they approve your work, great! Congrats! Are you done? Proceed to <a href="S_hubcollabfetch.html" class="internal" title="Section 5.4: Fetching Upstream">Section 5.4</a> to find out!</p></section></div></main>
 </div>
 </body>
 </html>

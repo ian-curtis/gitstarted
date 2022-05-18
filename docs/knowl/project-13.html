@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-18T15:15:25-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<article class="project project-like"><h3 class="heading">
+<span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">A.4</span><span class="period">.</span><span class="space"> </span><span class="title">Forcing an Upstream or Origin Merge.</span>
+</h3>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p>First, create a backup branch just in case things go haywire: <code class="code-inline tex2jax_ignore">git branch backup</code>. Since <code class="code-inline tex2jax_ignore">git branch</code> does not automatically switch you to that branch, you are free to carry on.</p></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p>Now, just fetch the changes. Remember that merging and fetching are separate processes. Fetching just collects the changes, attempting to merge will throw the error. Use <code class="code-inline tex2jax_ignore">git fetch &lt;remote&gt; &lt;branch-name&gt;</code>. Example: <code class="code-inline tex2jax_ignore">git fetch upstream main</code>.</p></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p>Now reset your current branch to the contents you just fetched. This is not a merge, this is a complete reset. You are reverting all of your content to match what you just fetched. This is why we created a backup in case something gets deleted that you didn't want to be.</p>
+<p>In the event that a file you created gets deleted from the reset, just navigate to the backup branch, stage just the missing file and commit just the missing file to origin. Then pull from origin.</p>
+<p>But to reset, use <code class="code-inline tex2jax_ignore">git reset --hard &lt;remote&gt;/&lt;branch-name&gt;</code>. Continuing the example from above, <code class="code-inline tex2jax_ignore">git reset --hard upstream/main</code></p></article></article><span class="incontext"><a href="S_forcemerge.html#project-13" class="internal">in-context</a></span>
+</body>
+</html>
