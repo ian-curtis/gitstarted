@@ -157,6 +157,7 @@ error: Your local changes to the following files would be overwritten by merge:
 Please commit your changes or stash them before you merge.
 Aborting
 </output>
+</console>
       </p>
       <p>
         This error occurs when you have local, uncommitted changes and a merge from origin or upstream has changes in the same exact places. Git has no idea whose changes to keep so it does nothing. There are a couple of different things you can do in this situation depending on how you feel about your changes.
@@ -200,6 +201,7 @@ Aborting
               But to reset, use <c>git reset --hard &lt;remote>/&lt;branch-name></c>. Continuing the example from above, <c>git reset --hard upstream/main</c>
             </p>
           </statement>
+        </task>
       </project>
 
     </paragraphs>
