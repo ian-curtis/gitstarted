@@ -139,4 +139,71 @@
     </project>
 
   </section>
+
+  <section xml:id="S_forcemerge">
+    <title>Git Won't Let Me Pull From Upstream or Origin!</title>
+    
+    <introduction>
+      <p>
+        Ah, so you forgot to make a branch. This error happens to me a lot when I have a lot of work on the main branch because I never made a separate branch (not smart of me, I know).
+      </p>
+      <p>
+        Or maybe not. Either way, Git says you have a problem with your code and won't let you merge from upstream. Maybe you get a message like this:
+        <console>
+          <input>git pull upstream main</input>
+          <output>
+error: Your local changes to the following files would be overwritten by merge:
+        &lt;file-name(s)>
+Please commit your changes or stash them before you merge.
+Aborting
+</output>
+</console>
+      </p>
+      <p>
+        This error occurs when you have local, uncommitted changes and a merge from origin or upstream has changes in the same exact places. Git has no idea whose changes to keep so it does nothing. There are a couple of different things you can do in this situation depending on how you feel about your changes.
+      </p>
+    </introduction>
+
+    <paragraphs>
+      <title>Your Local Changes Are Irrelevant and You Want Them Overwritten</title>
+      <p>
+        This definitely happens! Perhaps you tried a few things and they didn't work so you want to pull from upstream or origin and start over. Maybe you corrected some typos and someone else beat you to it so you want to merge their corrections in and keep working. I could go on and on. It's not difficult at all to force Git to make this happen, just make sure this is what you want to do!
+      </p>
+
+      <project>
+        <title>Forcing an Upstream or Origin Merge</title>
+        
+        <task>
+          <statement>
+            <p>
+              First, create a backup branch just in case things go haywire: <c>git branch backup</c>. Since <c>git branch</c> does not automatically switch you to that branch, you are free to carry on.
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Now, just fetch the changes. Remember that merging and fetching are separate processes. Fetching just collects the changes, attempting to merge will throw the error. Use <c>git fetch &lt;remote> &lt;branch-name></c>. Example: <c>git fetch upstream main</c>.
+            </p>
+          </statement>
+        </task>
+
+        <task>
+          <statement>
+            <p>
+              Now reset your current branch to the contents you just fetched. This is not a merge, this is a complete reset. You are reverting all of your content to match what you just fetched. This is why we created a backup in case something gets deleted that you didn't want to be.
+            </p>
+            <p>
+              In the event that a file you created gets deleted from the reset, just navigate to the backup branch, stage just the missing file and commit just the missing file to origin. Then pull from origin.
+            </p>
+            <p>
+              But to reset, use <c>git reset --hard &lt;remote>/&lt;branch-name></c>. Continuing the example from above, <c>git reset --hard upstream/main</c>
+            </p>
+          </statement>
+        </task>
+      </project>
+
+    </paragraphs>
+  </section>
 </appendix>
