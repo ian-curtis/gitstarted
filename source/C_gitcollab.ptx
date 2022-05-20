@@ -10,5 +10,6 @@
   </introduction>
 
   <xi:include href="S_gitcollabsetup.ptx" />
+  <xi:include href="S_gitcollabedit.ptx" />
   
 </chapter>
