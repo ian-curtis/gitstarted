@@ -59,6 +59,7 @@
     <part xml:id="part-collab">
       <title>Working With Others</title>
       <xi:include href="C_githubcollab.ptx" />
+      <xi:include href="C_gitcollab.ptx" />
     </part>
     
 

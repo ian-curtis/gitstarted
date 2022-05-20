@@ -103,7 +103,7 @@
       this doesn't mean something went wrong, it just means that you are already authenticated.
     </p>
 
-    <project xml:id="gitproc-clone">
+    <project xml:id="try-git-clone">
       <title>Cloning from GitHub</title>
       
       <introduction>
@@ -180,10 +180,7 @@
     </project>
 
     <p>
-      <em>Cloning a repository does not navigate you into that repo.</em> In other words, when you clone a repo,
-      you won't see the files in the repo until you <c>cd</c> into the newly-created directory.
-      In order to use Git, you will have to navigate your terminal into the repo. In this instance,
-      you would do <c>cd aboutme</c>.
+      <em>Cloning a repository does not navigate you into that repo.</em> In other words, when you clone a repo, you won't see the files in the repo until you <c>cd</c> into the newly-created directory. In order to use Git, you will have to navigate your terminal into the repo. In this instance, you would do <c>cd aboutme</c>.
     </p>
     
   </subsection>
