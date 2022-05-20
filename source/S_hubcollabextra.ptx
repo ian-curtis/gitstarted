@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="S_hubcollabextra">
+  <title>Extra Content Related to GitHub Collaboration</title>
+  
+  <introduction>
+  <p>
+    There are many features available on GitHub and we have barely scratched the surface. This book is not intended to explain the more advanced and niche aspects, but some of what GitHub offers is very useful to a wide audience and is worth a short discussion.
+  </p>
+  <p>
+    All of the following can be found on repositories regardless of whether they are private or public. However, they are fundamentally based on collaboration and therefore I have decided to put this section here rather than earlier or as an appendix. As you become more familiar with GitHub, this page may become useful to exploring some of what tools GitHub has to offer.
+  </p>
+  </introduction>
+
+  <subsection xml:id="SS_hubissues">
+    <title>The Issues Tab</title>
+    <p>
+      You've seen when making pull requests that you can add comments or descriptions to help moderators understand what you are doing. This feature is also used as a place for conversation regarding the pull request and the problems is solves or brings up.
+    </p>
+    <p>
+      But what happens if you want to talk about a problem without a pull request? What if you don't have the time or experience to edit a repository's contents but want to let moderators know of a potential bug or feature request? GitHub has something for you!
+    </p>
+    <p>
+      The issues tab is designed as a place of conversation between developers, users, and other members of the community. It runs like a forum where anyone can create a thread (including the repo's owner) and anyone can reply or supply advice. Moderators will often tag issues and with a well-designed commit message, can close an issue automatically.
+    </p>
+    <p>
+      Some issues have a label of <q>good first issue</q>. This indicates that the problem mentioned in the issue is not very difficult to fix and with a basic understand of that repo's files, a beginner could fix the issue. If you are interested in developing, I would recommend starting with good first issues.
+    </p>
+    <p>
+      Note that the Issues tab will not appear on forks, only on the authoritative repository.
+    </p>
+    <figure xml:id="fig-hub-issues-gs">
+      <caption>Example Issues page for this book</caption>
+      <image source="hub_issues_gs" width="90%">
+        <description>Issues page for this book, Git Started. No issues are present.</description>
+      </image>
+      
+    </figure>
+    <figure xml:id="fig-hub-issues-skl">
+      <caption>Example Issues page for the <url href="https://github.com/scikit-learn/scikit-learn/issues" visual="github.com/scikit-learn/scikit-learn/issues">Python module <c>scikit-learn</c></url></caption>
+      <image source="hub_issues_skl" width="90%">
+        <description>Issues page for <c>scikit-learn</c>. Lots of issues are present, with tags and many contributors.</description>
+      </image>
+    </figure>
+  </subsection>
+
+  <subsection xml:id="SS_hub-seecommits">
+    <title>Commit History</title>
+    
+    <p>
+      On the home page (Code tab) for all repositories can be found a commit history, full with contributor usernames, commit messages, and links to further information. Directly above the list of files, you can find information on the most recent commit. At the right side of this area is a clock icon with an arrow circling counterclockwise followed by a number of commits (See <xref ref="fig-hub-ncommits"/>). This is the total number of commits to that repository.
+    </p>
+
+    <figure xml:id="fig-hub-ncommits">
+      <caption>The number of commits to a repository</caption>
+      <image source="hub_ncommits" width="80%">
+        <description>Most-recent-commit bar (above list of files). Contains total number of commits for a repository.</description>
+      </image>
+    </figure>
+
+    <p>
+      Clicking on this will give you more information on how often someone updates a repository and how many people do so. You are also able to see past branch names. Clicking on a specific commit will bring to a page with the files changed and any comments that were made.
+    </p>
+    <p>
+      Not everyone will be interested in this feature, but it is useful to know it is there should you want to take advantage of it.
+    </p>
+  </subsection>
+
+  <subsection xml:id="SS_hub-about">
+    <title>The About Panel</title>
+
+    <p>
+      Most popular repositories have created and worked hard on their about panel. On any repo, this appears on the right side of the home page (Code tab) and it titled <q>About</q>. This panel may include
+      <ul>
+        <li>
+          <p>
+            A short description
+          </p>
+        </li>
+        <li>
+          <p>
+            A website
+          </p>
+        </li>
+        <li>
+          <p>
+            Topics (these are like tags)
+          </p>
+        </li>
+        <li>
+          <p>
+            A release version number
+          </p>
+        </li>
+        <li>
+          <p>
+            Any packages published in the repository
+          </p>
+        </li>
+        <li>
+          <p>
+            Any environments associated with the repository (such as GitHub Pages)
+          </p>
+        </li>
+      </ul>
+    </p>
+
+    <p>
+      Also on this side of the page is a list of contributors, and the distribution of the langauges of the files in the repo (this can be off since GitHub doesn't recognize some file extensions). It's always nice to glance at this part of the page when looking at a repository just to get a general idea of what's going on or if it's what you are looking for. (A README will also help you understand more specific ideas about the repo content.)
+    </p>
+    
+  </subsection>
+
+</section>

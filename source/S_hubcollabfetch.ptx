@@ -100,7 +100,7 @@
       <task>
         <statement>
           <p>
-            Bam. Done. But do make sure your fork now says <q>This branch is up to date with <c>ian-curtis/aboutme:main</c></q> (in general, this would be the name of whatever repo you forked from). Yours may also say, depending on when you fetched, that your branch is so many commits ahead (but none behind).
+            Bam. Done. But do make sure your fork now says <q>This branch is up to date with <c>ian-curtis/aboutme:main</c></q> (in general, this would be the name of whatever repo you forked from). Yours may also say, depending on when you fetched, that your branch is a number of commits ahead (but none behind).
           </p>
         </statement>
       </task>
