@@ -88,8 +88,15 @@
       </solution>
     </exercise>
 
+    <figure xml:id="fig-git-fork-clone">
+      <caption>Diagram of a fork, a clone, and a branch</caption>
+      <image source="git_fork_clone" width="80%">
+        <description>Arrow diagram depicting main repo copied to a fork, then a clone. Edits on a branch from the clone are merged into main branch of the fork, then merged in to main branch of authoritative repo.</description>
+      </image>
+    </figure>
+
     <p>
-      Awesome! Let's get to editing.
+      Take a look at <xref ref="fig-git-fork-clone"/> for a visualization of what the Git tree might look like at this point. Then, let's get to editing.
     </p>
 
   </subsection>
