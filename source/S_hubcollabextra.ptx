@@ -111,4 +111,22 @@
     
   </subsection>
 
+  <subsection xml:id="SS_hubcollabtree">
+    <title>The Branch Tree Diagram (Network Graph)</title>
+    
+    <p>
+      Scattered throughout the book are various tree diagrams (created by me) depicting example branch pathways. Of course, these are highly variable depending on how many branches you have, commits you make, and contributors there are.
+    </p>
+    <p>
+      Turns out, GitHub actually makes a graph of your branches for you, as you create, push, merge, and delete them. This is visible on all public repos. To get to this graph, visit the Insights tab and then the Network page from the left sidebar. And there it is! It might not look very exciting, depending on your workflow. Consider the one for this book as of May 2022 in <xref ref="fig-network-graph"/>.
+    </p>
+
+    <figure xml:id="fig-network-graph">
+      <caption>Network graph for this book (as of May 2022)</caption>
+      <image source="network_graph" width="80%">
+        <description>Branch diagram for this book. Mostly a straight line (main branch) with small projections coming off and coming back in (branches and merging).</description>
+      </image>
+    </figure>
+  </subsection>
+
 </section>
