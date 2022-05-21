@@ -13,5 +13,6 @@
   <xi:include href="S_gitcollabedit.ptx" />
   <xi:include href="S_gitcollabfinalize.ptx" />
   <xi:include href="S_gitcollabpr.ptx" />
+  <xi:include href="S_gitcollabsumm.ptx" />
   
 </chapter>
