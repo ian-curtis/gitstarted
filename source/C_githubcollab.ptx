@@ -13,5 +13,4 @@
   <xi:include href="S_hubcollabsetup.ptx" />
   <xi:include href="S_hubcollabedit.ptx" />
   <xi:include href="S_hubcollabfetch.ptx" />
-  <xi:include href="S_hubcollabextra.ptx" />
 </chapter>
