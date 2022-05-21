@@ -8,8 +8,9 @@
 <backmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="backmatter">
   <title>Backmatter</title>
   
+  <xi:include href="app_commlinecustom.ptx" />
+  <xi:include href="app_hubextra.ptx" />
   <xi:include href="app_gittroubles.ptx" />
-  <xi:include href="./app_commlinecustom.ptx" />
 
 
   <!-- <appendix>

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="S_hubcollabextra">
+<appendix xml:id="app_hubextra">
   <title>Extra Content Related to GitHub Collaboration</title>
   
   <introduction>
@@ -8,11 +8,11 @@
     There are many features available on GitHub and we have barely scratched the surface. This book is not intended to explain the more advanced and niche aspects, but some of what GitHub offers is very useful to a wide audience and is worth a short discussion.
   </p>
   <p>
-    All of the following can be found on repositories regardless of whether they are private or public. However, they are fundamentally based on collaboration and therefore I have decided to put this section here rather than earlier or as an appendix. As you become more familiar with GitHub, this page may become useful to exploring some of what tools GitHub has to offer.
+    All of the following can be found on repositories regardless of whether they are private or public. As you become more familiar with GitHub, this page may become useful to exploring some of what tools GitHub has to offer.
   </p>
   </introduction>
 
-  <subsection xml:id="SS_hubissues">
+  <section xml:id="S_hubissues">
     <title>The Issues Tab</title>
     <p>
       You've seen when making pull requests that you can add comments or descriptions to help moderators understand what you are doing. This feature is also used as a place for conversation regarding the pull request and the problems is solves or brings up.
@@ -42,9 +42,9 @@
         <description>Issues page for <c>scikit-learn</c>. Lots of issues are present, with tags and many contributors.</description>
       </image>
     </figure>
-  </subsection>
+  </section>
 
-  <subsection xml:id="SS_hub-seecommits">
+  <section xml:id="S_hub-seecommits">
     <title>Commit History</title>
     
     <p>
@@ -64,9 +64,9 @@
     <p>
       Not everyone will be interested in this feature, but it is useful to know it is there should you want to take advantage of it.
     </p>
-  </subsection>
+  </section>
 
-  <subsection xml:id="SS_hub-about">
+  <section xml:id="S_hub-about">
     <title>The About Panel</title>
 
     <p>
@@ -109,9 +109,9 @@
       Also on this side of the page is a list of contributors, and the distribution of the langauges of the files in the repo (this can be off since GitHub doesn't recognize some file extensions). It's always nice to glance at this part of the page when looking at a repository just to get a general idea of what's going on or if it's what you are looking for. (A README will also help you understand more specific ideas about the repo content.)
     </p>
     
-  </subsection>
+  </section>
 
-  <subsection xml:id="SS_hubcollabtree">
+  <section xml:id="S_hubcollabtree">
     <title>The Branch Tree Diagram (Network Graph)</title>
     
     <p>
@@ -127,6 +127,11 @@
         <description>Branch diagram for this book. Mostly a straight line (main branch) with small projections coming off and coming back in (branches and merging).</description>
       </image>
     </figure>
-  </subsection>
+  </section>
 
-</section>
+  <section xml:id="S_hub_delete_repo">
+    <title>Deleting a Repository (*)</title>
+    
+  </section>
+
+</appendix>
