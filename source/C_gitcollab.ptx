@@ -1,1 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
+
+<chapter xml:id="C_gitcollab"  xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Git Collaboration</title>
+
+  <introduction>
+    <p>
+      This chapter is closely related to <xref ref="C_gitsolo"/> and <xref ref="C_githubcollab"/> in that the concepts there carry over and are combined together here. The workflow and steps described in this chapter are most similar to the typical day-to-day work from many people around the world when it comes to Git and GitHub.
+    </p>
+  </introduction>
+
+  <xi:include href="S_gitcollabsetup.ptx" />
+  <xi:include href="S_gitcollabedit.ptx" />
+  <xi:include href="S_gitcollabfinalize.ptx" />
+  <xi:include href="S_gitcollabpr.ptx" />
+  <xi:include href="S_gitcollabsumm.ptx" />
+  <xi:include href="S_gitcollabbigact.ptx" />
+  
+</chapter>

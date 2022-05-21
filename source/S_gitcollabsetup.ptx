@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<section xml:id="S_gitcollabsetup">
+  <title>Getting Set Up: A Few Extra Steps</title>
+
+  <introduction>
+    <p>
+      Before you are able to jump right in and start editing files locally, there are some things that have to happen first. Like in <xref ref="S_hubcollabsetup"/>, we need to fork the repository you would like to edit. Although it is possible to use Git to edit on a repository that has not been forked, you will find problems when you try to push your changes since you do not have write access to the repo.
+    </p>
+    <p>
+      So, to continue on with this section, make sure you have my <c>aboutme</c> repository forked. Recall that we did this in <xref ref="SS_forking"/>. If you've done this already, you do not need to do it again. If you haven't, review the instructions in <xref ref="SS_forking"/>.
+    </p>
+    <p>
+      I would also like to repeat something I said back in <xref ref="S_gitsetup"/>:
+      <blockquote>
+        <p>
+          It's not always feasible to edit file on GitHub, as we did in <xref ref="S_hubfirstrepo"/> and <xref ref="S_hubbranches"/>. Certain text editors (for instance, Visual Studio Code which you might also have installed) have features built in to ease coding and file editing. <init>VS</init> Code extensions might add color to text to help you see what's going on in your code. Others provide bug fixing and error catching before the errors actually occur. In general, you will edit files on your personal computer and will want to share them with the world. <em>I would stay away from editing on GitHub unless you have a small correction and/or you don't need any special editing tools.</em>
+        </p>
+      </blockquote>
+    </p>
+    <p>
+      The rest of this section and chapter will look a lot like <xref ref="S_gitsetup"/> and <xref ref="C_gitsolo"/> with a few changes. With that being said, do you remember what the first step to editing locally was?
+    </p>
+  </introduction>
+
+  <subsection xml:id="SS_gitcollabclone">
+    <title>Cloning A Fork</title>
+    <p>
+      Hopefully you didn't peek ahead! The first step is to clone our repo. Remember that in order to edit files locally, we need a copy of the repository on our computer and the way to do that is to clone.
+    </p>
+    <p>
+      This again increases the complexity of the Git tree. From an authoritative repo we made a copy on GitHub, called a fork. We did this so that we could have all freedom to edit the files as we pleased without breaking any of the official files. From there, we need to clone to make a copy of the fork on our computer. Do make sure you are cloning your fork, <em>not the repo you forked</em>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          So go ahead, use your terminal clone your fork of my <c>aboutme</c> repository. Before you do so, make sure that your branch is up to date with <c>ian-curtis/aboutme:main</c>.
+        </p>
+        <p>
+          Don't remember how to do this? <xref ref="try-git-clone"/> might be useful, as may be the solution to this exercise.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          Use the green code tab <em>on your fork</em> to copy the <init>HTTPS</init> link. Then use <c>git clone &lt;https-link></c>. Make sure you have used <c>cd</c> to get to the right place first!
+        </p>
+      </solution>
+    </exercise>
+
+    <p>
+      Great! Your repo should now be cloned on to your computer. Carry on.
+    </p>
+  </subsection>
+
+  <subsection xml:id="SS_gitcollabbranch">
+    <title>Don't Forget About Branches!</title>
+    
+    <p>
+      For nearly every edit we've made in this book, we've made a corresponding branch. This is no different. I hope you understand the importance of branches, even if you are working with yourself. Since my repository is public, anyone can edit the files there. Therefore, I will approve pull requests from anyone as I will assume they are working through this book. However, the task in this chapter will be exclusive to just those who are reading this book. There is file called <c>secret.txt</c> with no instructions or anything at all. Later on, you will be adding a line to this text file.
+    </p>
+    <p>
+      For now, create a good branch name for this edit, perhaps <c>secret</c>? Remember that cloning a repo does not navigate inside of the repo so make sure you use <c>cd &lt;your-repo-name></c> before creating a branch.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Make a new branch. Switch to that branch. See <xref ref="SS_gitbranches"/> if you need a refresher.
+        </p>
+      </statement>
+      <solution>
+        <p>
+          There are a couple of choices here.
+          <ol>
+            <li>
+              <p>
+                <c>git branch &lt;name></c> then <c>git switch &lt;name></c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>git switch -c &lt;name></c>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </solution>
+    </exercise>
+
+    <figure xml:id="fig-git-fork-clone">
+      <caption>Diagram of a fork, a clone, and a branch</caption>
+      <image source="git_fork_clone" width="80%">
+        <description>Arrow diagram depicting main repo copied to a fork, then a clone. Edits on a branch from the clone are merged into main branch of the fork, then merged in to main branch of authoritative repo.</description>
+      </image>
+    </figure>
+
+    <p>
+      Take a look at <xref ref="fig-git-fork-clone"/> for a visualization of what the Git tree might look like at this point. Then, let's get to editing.
+    </p>
+
+  </subsection>
+  
+</section>
