@@ -3,10 +3,10 @@
 <section xml:id="S_whatiscommline">
   <title>What is the Command Line? (*)</title>
   <idx><h>command line</h></idx>
-  <idx><h>command prompt</h></idx>
-  <idx><h>command-line interface</h></idx>
-  <idx><h>terminal</h></idx>
-  <idx><h>shell</h></idx>
+  <idx><h>command prompt</h><see>command line</see></idx>
+  <idx><h>command-line interface</h><see>command line</see></idx>
+  <idx><h>terminal</h><see>command line</see></idx>
+  <idx><h>shells</h></idx>
   
     <p>
       The first step to tackling the command line is to not be scared. Sure, it looks daunting and if you 
@@ -21,7 +21,7 @@
 
       You may also hear about shells. A <term>shell</term> helps make the command line more interactive 
       and user friendly. Some shells add colors,  informative information, and/or predictive text. We will 
-      return to shells and command line customization in <xref provisional="commline customize"/>. For 
+      return to shells and command line customization in <xref ref="app_commlinecustom"/>. For 
       now, do not worry about the details behind shells. A knowledge of them is not necessary to use Git, 
       but they can help make things a little easier.
     </p>

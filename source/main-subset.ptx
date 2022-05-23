@@ -9,7 +9,7 @@
 
     <xi:include href="./frontmatter.ptx" />
 
-    <xi:include href="C_gitsolo.ptx" />
+    <xi:include href="C_basics.ptx" />
     
     <xi:include href="./backmatter.ptx" />
 

@@ -2,7 +2,8 @@
 
 <section xml:id="whereiscommline">
   <title>Where is the Command Line?</title>
-  
+  <idx><h>command line</h></idx>
+  <idx><h>command line</h><h>location</h></idx>
   <introduction>
     <p>
       If you have a computer, you have a terminal. You may not have ever used it or known it was there,
@@ -12,6 +13,7 @@
   
   <subsection xml:id="SS_commline-mac">
     <title>On a Mac</title>
+    <idx><h>command line</h><h>mac</h></idx>
       <p>
         Luckily, the terminal is easy to find on a Mac: it's called <c>terminal.app</c> and can be 
         found in numerous ways.
@@ -75,6 +77,7 @@
 
   <subsection xml:id="S_commline-windows">
     <title>On Windows</title>
+    <idx><h>command line</h><h>windows</h></idx>
     <p>
       For Windows users, the situation is a slightly more complicated. The underlying makeup of the 
       operating systems on Windows is differet than the basis for MacOS and other Unix-like systems 
@@ -121,9 +124,9 @@
   </subsection>
   <subsection>
     <title>On Linux</title>
-
+    <idx><h>command line</h><h>linux</h></idx>
     <p>
-      This will depend on the version and distribution you have installed. For this reason, I will not be able to provide instructions here. Please use the internet for help. Contributions for your specific distribution are welcome through a pull request on GitHub.
+      This will depend on the version and distribution you have installed. For this reason, I will not be able to provide instructions here. Please use the internet for help. Contributions for your specific distribution are welcome through a pull request or issue on GitHub.
     </p>
       
   </subsection>
