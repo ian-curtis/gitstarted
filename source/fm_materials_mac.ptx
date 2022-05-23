@@ -53,10 +53,10 @@
       <ol>
         <li>
           <p>
-            To install Homebrew, go back to your terminal that you opened when checking if Git was installed. Paste in <cd><cline>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</cline></cd> exactly and press <kbd>Enter</kbd>. Don't worry about what each part does (to be honest, I'm not entirely sure either). It is safe and trustworthy (I did it on my computer).
+            To install Homebrew, go back to your terminal that you opened when checking if Git was installed. Paste in <cd><cline>/bin/bash -c "$(curl -fsSL</cline><cline>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</cline></cd> as one line (not two) and press <kbd>Enter</kbd>. Don't worry about what each part does (to be honest, I'm not entirely sure either). It is safe and trustworthy (I did it on my computer).
           </p>
           <p>
-            If you want to be sure you're pasting the correct command, you can visit <url href="https://brew.sh/">the Homebrew homepage</url> and navigate to the <q>Install Homebrew</q> heading.
+            If you want to be sure you're pasting the correct command, you can visit <url href="https://brew.sh/" visual='brew.sh'>the Homebrew homepage</url> and navigate to the <q>Install Homebrew</q> heading.
           </p>
         </li>
         <li>
@@ -78,7 +78,7 @@
   <paragraphs>
     <title>GitHub</title>
     <p>
-      You will also need a GitHub account. Since this is an extensive topic, this is covered in <xref text='title' ref="hub-account"/> in <xref ref="S_hubnavigate"/>.
+      You will also need a GitHub account. Since this is an extensive topic, this is covered in <xref ref="hub-account"/> in <xref ref="S_hubnavigate"/>.
     </p>
   </paragraphs>
 

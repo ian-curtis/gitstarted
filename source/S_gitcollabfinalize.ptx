@@ -72,7 +72,7 @@
 
   <conclusion>
     <p>
-      Believe it or not, <xref ref="three-step-summ"/> was written in generic terms, so it applies here as well! Keep it handy, or perhaps keep <xref ref="S_gitsolosumm"/> and <xref ref="S_gitcollabsumm"/> in mind as you proceed in your Git career. Now let's go create a pull request from that push we just made.
+      Believe it or not, <xref ref="three-step-summ"/> was written in generic terms, so it applies here as well! Keep it handy, or perhaps keep <xref ref="S_gitsumm"/> and <xref ref="S_gitcollabsumm"/> in mind as you proceed in your Git career. Now let's go create a pull request from that push we just made.
     </p>
   </conclusion>
   

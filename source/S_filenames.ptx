@@ -207,7 +207,7 @@
               </li>
             </dl>
             See a
-            <url href="https://chaseadams.io/posts/most-common-programming-case-types/">Most Common 
+            <url href="https://chaseadams.io/posts/most-common-programming-case-types/" visual='chaseadams.io/posts/most-common-programming-case-types/'>Most Common 
             Programming Case Types blog post</url> to get more details on these cases.
           </p>
         </note>
@@ -274,7 +274,7 @@
     </p>
   </introduction>
 
-  <worksheet xml:id="taylorswiftfolder">
+  <worksheet xml:id="taylorswiftfolders">
     <title>Folder Naming</title>
     <introduction>
       <p>

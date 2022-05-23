@@ -11,7 +11,7 @@
   </p>
   <p>
     The book is broken up into multiple sections:
-    <ol label="I">
+    <ol>
       <li>
         <p>
           Multiple prefaces explaining necessary materials depending on your operating system (<xref text="title" ref="materials-windows"/>, <xref text="title" ref="materials-mac"/>, <xref text="title" ref="materials-linux"/>)
@@ -29,7 +29,7 @@
       </li>
       <li>
         <p>
-          A detailed introduction and get-started guide to GitHub (<xref provisional="C_githubcollab"/>) and Git (<xref provisional="C_gitcollab"/>) when working with collaborators (planned, in progress)
+          A detailed introduction and get-started guide to GitHub (<xref ref="C_githubcollab"/>) and Git (<xref ref="C_gitcollab"/>) when working with collaborators
         </p>
       </li>
       <li>

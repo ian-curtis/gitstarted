@@ -26,7 +26,7 @@
     </p>
 
     <p>
-      First, navigate to GitHub at <url href="https://github.com"></url>. Any browser should work. Click on the 
+      First, navigate to GitHub at <url href="https://github.com" visual='github.com'></url>. Any browser should work. Click on the 
       <q>Sign Up</q> in the top right corner. A welome box should pop up. Follow the instructions to create
       an account:
       <ol>
@@ -43,7 +43,7 @@
         <li>
           <p>
             Choose a username. Attention! Choose your username carefully. 
-            <url href="https://happygitwithr.com/github-acct.html#username-advice">Jennifer Bryan</url> 
+            <url href="https://happygitwithr.com/github-acct.html#username-advice" visual='happygitwithr.com/github-acct.html#username-advice'>Jennifer Bryan</url> 
             has some great tips for choosing a username. A few are reproduced here:
             
             <ul>
@@ -105,7 +105,7 @@
 
     <p>
       Once you finish setting up the account (email verification may be required), navigate back to the 
-      home page (<url href="https://github.com"></url>) and carry on.
+      home page (<url href="https://github.com" visual='github.com'>github.com</url>) and carry on.
     </p>
     
   </subsection>
@@ -134,7 +134,7 @@
       <q>Your profile</q>. (Notice that the URL uses your username.) You probably don't see much. That's ok, 
       you haven't created anything yet! On this page (the <q>Overview</q> tab) you can see your popular 
       repositories, a graph of your contributions and a summary of your activity. Check out 
-      <url href="https://github.com/ian-curtis">my profile page</url> for an example.
+      <url href="https://github.com/ian-curtis" visual='github.com/ian-curtis'>my profile page</url> for an example.
     </p>
     <figure xml:id="fig-hub-navbar">
       <caption>The GitHub Navigation Bar</caption>
@@ -152,10 +152,10 @@
       is the Git/GitHub way to say <q>directory</q> or <q>folder</q>. A repository is usually one project; 
       one repository contains all of the files and information for one project. For example, the files 
       for this book can all be found under my repository titled 
-      <url href="https://github.com/ian-curtis/gitstarted">gitstarted</url>. This book constitutes as 
+      <url href="https://github.com/ian-curtis/gitstarted" visual='github.com/ian-curtis/gitstarted'>gitstarted</url>. This book constitutes as 
       one project and therefore all files for this book are there. Remember Jennifer Bryan from above? 
       All of the files for her book, <pubtitle>Happy Git With R</pubtitle> can be found on 
-      <url href="https://github.com/jennybc/happy-git-with-r">her repository</url>. Soon, you too will 
+      <url href="https://github.com/jennybc/happy-git-with-r" visual='github.com/jennybc/happy-git-with-'>her repository</url>. Soon, you too will 
       have repositories! (Note: a repository is often shortened to just <term>repo</term>.)
     </p>
     <p>
@@ -233,10 +233,10 @@
       <title>Billing &amp; plans</title>
       
       <p>
-        GitHub offers different <url href="https://github.com/pricing">paid plans</url>. Each of the plans has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly fine under the free plan. I would certainly recommend upgrading once you become more familiar with Git, GitHub, and start developing more projects. However, there is no need to pay anything at this point. 
+        GitHub offers different <url href="https://github.com/pricing" visual='github.com/pricing'>paid plans</url>. Each of the plans has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly fine under the free plan. I would certainly recommend upgrading once you become more familiar with Git, GitHub, and start developing more projects. However, there is no need to pay anything at this point. 
       </p>
       <p>
-        Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their <url href="https://education.github.com/pack">Student Developer Pack</url>. <url href="https://education.github.com/teachers">Teachers</url> and <url href="https://education.github.com/schools">Schools</url> can also find benefits (some require a payment).
+        Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their <url href="https://education.github.com/pack" visual='education.github.com/pack'>Student Developer Pack</url>. <url href="https://education.github.com/teachers" visual='education.github.com/teachers'>Teachers</url> and <url href="https://education.github.com/schools" visual='education.github.com/schools'>Schools</url> can also find benefits (some require a payment).
       </p>
 
     </paragraphs>
@@ -271,7 +271,7 @@
       </p>
       <p>
         For more information on the transition from <q>master</q> to <q>main</q>, please visit 
-        <url href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main">TheServerSide</url>.
+        <url href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main" visual='theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main'>TheServerSide</url>.
       </p>
       
     </paragraphs>

@@ -89,7 +89,7 @@
             Notice that GitHub will fetch and merge the upstream changes in one step (even though it is technically two steps). Great!
           </p>
           <p>
-            It also emphasizes <xref ref="want-fetch-often"/> through a somewhat passive-aggressive reminder: <q>Keep your fork up-to-date with the upstream repository</q>.
+            It also emphasizes <xref ref="warn-fetch-often"/> through a somewhat passive-aggressive reminder: <q>Keep your fork up-to-date with the upstream repository</q>.
           </p>
           <p>
             To make the magic happen, click on <q>Fetch and merge</q>.
@@ -110,7 +110,7 @@
 
   <conclusion>
     <p>
-      And there you go! Now you are ready to keep on editing or to go about your day. If you are interested in some other GitHub features related to collaborating, continue to <xref ref="S_hubcollabextra"/>. Otherwise, go to <xref ref="C_gitcollab"/> to see how to use Git commands and local edits to collaborate.
+      And there you go! Now you are ready to keep on editing or to go about your day. If you are interested in some other GitHub features related to collaborating, continue to <xref ref="app_hubextra"/>. Otherwise, go to <xref ref="C_gitcollab"/> to see how to use Git commands and local edits to collaborate.
     </p>
   </conclusion>
 

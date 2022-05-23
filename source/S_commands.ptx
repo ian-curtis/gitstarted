@@ -30,7 +30,7 @@
         <title>Folders Are Not Directories</title>
         <p>
           Until now, I have been using <q>folder</q> when I probably should be using <q>directory</q>.
-          From <url href="https://en.wikipedia.org/wiki/Directory_%28computing%29#Folder_metaphor">Wikipedia</url> 
+          From <url href="https://en.wikipedia.org/wiki/Directory_%28computing%29#Folder_metaphor" visual='en.wikipedia.org/wiki/Directory_%28computing%29#Folder_metaphor'>Wikipedia</url> 
           we can read that 
           <blockquote>
             If one is referring to a container of documents, the term folder is more appropriate.
@@ -44,7 +44,7 @@
           interchangeably. I use <q>directory</q> when speaking about functions on the command line and 
           <q>folder</q> when speaking in informal settings. If you are interested, you can read more about 
           the history of the terms 
-          <url href="https://www.quora.com/What-is-the-difference-between-a-folder-and-a-directory">at 
+          <url href="https://www.quora.com/What-is-the-difference-between-a-folder-and-a-directory" visual='quora.com/What-is-the-difference-between-a-folder-and-a-directory'>at 
           this Quora question</url>.
         </p>
       </note>

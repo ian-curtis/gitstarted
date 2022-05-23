@@ -76,7 +76,7 @@
       </p>
 
       <p>
-        Installing is very easy, too. If you used Homebrew to install Git (<xref text='title' ref="install-git-mac"/> in <xref text='title' ref="fm_materials_mac"/>) or other things, then installation is even easier. Simply type <c>brew install fish</c> into your terminal, then change your shell to <c>fish</c> with <c>chsh -s /user/local/bin/fish</c>. After restarting your terminal, everything will be ready for use! (<c>fish</c> is installable on Linux and Windows Subsystem for Linux)
+        Installing is very easy, too. If you used Homebrew to install Git (<xref text='title' ref="install-git-mac"/> in <xref text='title' ref="materials-mac"/>) or other things, then installation is even easier. Simply type <c>brew install fish</c> into your terminal, then change your shell to <c>fish</c> with <c>chsh -s /user/local/bin/fish</c>. After restarting your terminal, everything will be ready for use! (<c>fish</c> is installable on Linux and Windows Subsystem for Linux)
       </p>
 
       <p>

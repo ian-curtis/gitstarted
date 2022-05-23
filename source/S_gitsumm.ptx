@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="S_gitsolosumm">
+<section xml:id="S_gitsumm">
   <title>Summary</title>
   
   
@@ -19,7 +19,7 @@
         </li>
         <li>
           <p>
-            Clone the repo to your local computer with <c>git clone</c>. See <xref ref="SS_cloning"/> and <xref ref="gitproc-clone"/>.
+            Clone the repo to your local computer with <c>git clone</c>. See <xref ref="SS_cloning"/> and <xref ref="try-git-clone"/>.
           </p>
         </li>
         <li>

@@ -34,7 +34,7 @@
       <ol>
         <li>
           <p>
-             Visit the <url href="https://git-scm.com/downloads">Git website</url> and select the 
+             Visit the <url href="https://git-scm.com/downloads" visual='git-scm.com/downloads'>Git website</url> and select the 
              download for Windows.
           </p>
         </li>
@@ -74,7 +74,7 @@
   <paragraphs>
     <title>GitHub</title>
     <p>
-      You will also need a GitHub account. Since this is an extensive topic, this is covered in <xref text='title' ref="hub-account"/> in <xref ref="S_hubnavigate"/>.
+      You will also need a GitHub account. Since this is an extensive topic, this is covered in <xref ref="hub-account"/> in <xref ref="S_hubnavigate"/>.
     </p>
   </paragraphs>
 

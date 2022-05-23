@@ -59,8 +59,8 @@
     <p>
       The key thing to note is that Mac and Windows are designed differently. Mac uses forward slashes 
       to indicate a folder change and Windows uses backslashes (in Git Bash, Windows users can use forward slashes<ellipsis/>one reason for sticking with Git Bash!). But their structures are different as well.
-      Notice that Windows has <q>C:</q> at the beginning. This is the C drive and there are other drives. Other differences are beyond the scope of this book (and likely beyond my understanding). A brief history on file paths is given by <url href="https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/">How-To Geek</url>
-      and a rather hard-to-read explanation can be found on <url href="https://en.wikipedia.org/wiki/Path_(computing)">Wikipedia</url>.
+      Notice that Windows has <q>C:</q> at the beginning. This is the C drive and there are other drives. Other differences are beyond the scope of this book (and likely beyond my understanding). A brief history on file paths is given by <url href="https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/" visual='howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/'>How-To Geek</url>
+      and a rather hard-to-read explanation can be found on <url href="https://en.wikipedia.org/wiki/Path_(computing)" visual='en.wikipedia.org/wiki/Path_(computing)'>Wikipedia</url>.
     </p>
     <p>
       There are a few important points to remember when reading or finding a file path. The main goal from 
