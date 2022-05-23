@@ -111,6 +111,15 @@
       </p>
       
     </subsection>
+
+    <subsection xml:id="SS_github_desktop">
+      <title>GitHub Desktop</title>
+
+      <p>
+        GitHub does offer a <url href="https://desktop.github.com/" visual='desktop.github.com/'>desktop interface</url> to help you with Git features and managing collaboration. If you would rather do these things with an app (as opposed to switching from your text editor to a website) it might be worth downloading GitHug Desktop. The website itself is pretty basic, but <url href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop" visual='docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop'>the GitHub documentation</url> has a good start-up guide and more.
+      </p>
+      
+    </subsection>
     
   </section>
   
