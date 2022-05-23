@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-21T15:48:34-04:00       *-->
+<!--*       on 2022-05-23T13:28:46-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -11,7 +11,7 @@
 <html lang="en-US">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Deleting a Repository (*)</title>
+<title>Deleting a Repository</title>
 <meta name="Keywords" content="Authored in PreTeXt">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:type" content="book">
@@ -143,14 +143,21 @@
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
-<li class="link"><a href="S_commlinecustom.html" data-scroll="S_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal (*)</span></a></li>
 <li class="link">
-<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra Content Related to GitHub Collaboration</span></a><ul>
+<a href="S_commlinecustom.html" data-scroll="S_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
+<li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
+<li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
+<li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
+<li><a href="S_custterm_all.html" data-scroll="S_custterm_all" class="internal">For All</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a><ul>
 <li><a href="S_hubissues.html" data-scroll="S_hubissues" class="internal">The Issues Tab</a></li>
 <li><a href="S_hub-seecommits.html" data-scroll="S_hub-seecommits" class="internal">Commit History</a></li>
 <li><a href="S_hub-about.html" data-scroll="S_hub-about" class="internal">The About Panel</a></li>
 <li><a href="S_hubcollabtree.html" data-scroll="S_hubcollabtree" class="internal">The Branch Tree Diagram (Network Graph)</a></li>
-<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="active">Deleting a Repository (*)</a></li>
+<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="active">Deleting a Repository</a></li>
 </ul>
 </li>
 <li class="link">
@@ -159,6 +166,7 @@
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
 <li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 <li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
 </ul>
 </li>
 <li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
@@ -166,8 +174,18 @@
 </ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="S_hub_delete_repo"><h2 class="heading hide-type">
-<span class="type">Section</span> <span class="codenumber">B.5</span> <span class="title">Deleting a Repository (*)</span>
-</h2></section></div></main>
+<span class="type">Section</span> <span class="codenumber">B.5</span> <span class="title">Deleting a Repository</span>
+</h2>
+<p id="p-944">So you really to delete a repository? Think long and hard about this one. Are you sure? Are you really sure? Deleting repos are <em class="emphasis">irreversible</em> and can have lasting effects. For instance, all forks will be broken, but not deleted. If you delete a private repo, all forks will also be deleted. Any website that contains a link to your repo will no longer work and people might wonder where it went. And so on.</p>
+<p id="p-945">But here you are, so clearly you have decided to delete one. To delete a repository, you have to enter the danger zone.</p>
+<article class="activity project-like" id="hub-delete-repo"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-hub-delete-repo"><h2 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">B.1</span><span class="period">.</span><span class="space"> </span><span class="title">Deleting a Repository.</span>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-hub-delete-repo"><article class="activity project-like"><article class="task exercise-like" id="task-140"><h3 class="heading"><span class="codenumber">(a)</span></h3>
+<p id="p-946">Navigate to the repo you want to delete.</p></article><article class="task exercise-like" id="task-141"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<p id="p-947">Click on the Setting tab. This should be the settings for the repo itself, not the general settings for your profile.</p></article><article class="task exercise-like" id="task-142"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<p id="p-948">Scroll all the way down to the Danger Zone.</p></article><article class="task exercise-like" id="task-143"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<p id="p-949">Click on “Delete this repository”</p></article><article class="task exercise-like" id="task-144"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<p id="p-950">Read the dialog box that pops up. Once you have decided to delete the repo, type in what GitHub prompts you to type in and hit confirm.</p></article></article></div></section></div></main>
 </div>
 </body>
 </html>

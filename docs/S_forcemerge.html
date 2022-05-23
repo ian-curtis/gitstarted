@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-21T15:48:34-04:00       *-->
+<!--*       on 2022-05-23T13:28:46-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -70,11 +70,11 @@
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_untrackfiles.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="app_gittroubles.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="index-1.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_untrackfiles.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="app_gittroubles.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_hub_revert_commit.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_untrackfiles.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="app_gittroubles.html" title="Up">Up</a><a class="next-button button toolbar-item" href="index-1.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_untrackfiles.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="app_gittroubles.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_hub_revert_commit.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -143,14 +143,21 @@
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
-<li class="link"><a href="S_commlinecustom.html" data-scroll="S_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal (*)</span></a></li>
 <li class="link">
-<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra Content Related to GitHub Collaboration</span></a><ul>
+<a href="S_commlinecustom.html" data-scroll="S_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
+<li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
+<li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
+<li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
+<li><a href="S_custterm_all.html" data-scroll="S_custterm_all" class="internal">For All</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a><ul>
 <li><a href="S_hubissues.html" data-scroll="S_hubissues" class="internal">The Issues Tab</a></li>
 <li><a href="S_hub-seecommits.html" data-scroll="S_hub-seecommits" class="internal">Commit History</a></li>
 <li><a href="S_hub-about.html" data-scroll="S_hub-about" class="internal">The About Panel</a></li>
 <li><a href="S_hubcollabtree.html" data-scroll="S_hubcollabtree" class="internal">The Branch Tree Diagram (Network Graph)</a></li>
-<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="internal">Deleting a Repository (*)</a></li>
+<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="internal">Deleting a Repository</a></li>
 </ul>
 </li>
 <li class="link">
@@ -159,6 +166,7 @@
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
 <li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 <li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="active">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
 </ul>
 </li>
 <li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
@@ -168,23 +176,23 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="S_forcemerge"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.4</span> <span class="title">Git Won't Let Me Pull From Upstream or Origin!</span>
 </h2>
-<section class="introduction" id="introduction-55"><p id="p-905">Ah, so you forgot to make a branch. This error happens to me a lot when I have a lot of work on the main branch because I never made a separate branch (not smart of me, I know).</p>
-<p id="p-906">Or maybe not. Either way, Git says you have a problem with your code and won't let you merge from upstream. Maybe you get a message like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull upstream main
+<section class="introduction" id="introduction-58"><p id="p-969">Ah, so you forgot to make a branch. This error happens to me a lot when I have a lot of work on the main branch because I never made a separate branch (not smart of me, I know).</p>
+<p id="p-970">Or maybe not. Either way, Git says you have a problem with your code and won't let you merge from upstream. Maybe you get a message like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull upstream main
 </b>error: Your local changes to the following files would be overwritten by merge:
         &lt;file-name(s)&gt;
 Please commit your changes or stash them before you merge.
 Aborting
 </pre></div></p>
-<p id="p-907">This error occurs when you have local, uncommitted changes and a merge from origin or upstream has changes in the same exact places. Git has no idea whose changes to keep so it does nothing. There are a couple of different things you can do in this situation depending on how you feel about your changes.</p></section><section class="paragraphs" id="paragraphs-36"><h2 class="heading"><span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten.</span></h2>
-<p id="p-908">This definitely happens! Perhaps you tried a few things and they didn't work so you want to pull from upstream or origin and start over. Maybe you corrected some typos and someone else beat you to it so you want to merge their corrections in and keep working. I could go on and on. It's not difficult at all to force Git to make this happen, just make sure this is what you want to do!</p>
+<p id="p-971">This error occurs when you have local, uncommitted changes and a merge from origin or upstream has changes in the same exact places. Git has no idea whose changes to keep so it does nothing. There are a couple of different things you can do in this situation depending on how you feel about your changes.</p></section><section class="paragraphs" id="paragraphs-36"><h2 class="heading"><span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten.</span></h2>
+<p id="p-972">This definitely happens! Perhaps you tried a few things and they didn't work so you want to pull from upstream or origin and start over. Maybe you corrected some typos and someone else beat you to it so you want to merge their corrections in and keep working. I could go on and on. It's not difficult at all to force Git to make this happen, just make sure this is what you want to do!</p>
 <article class="project project-like" id="project-15"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-project-15"><h3 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">C.4</span><span class="period">.</span><span class="space"> </span><span class="title">Forcing an Upstream or Origin Merge.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-project-15"><article class="project project-like"><article class="task exercise-like" id="task-132"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<p id="p-909">First, create a backup branch just in case things go haywire: <code class="code-inline tex2jax_ignore">git branch backup</code>. Since <code class="code-inline tex2jax_ignore">git branch</code> does not automatically switch you to that branch, you are free to carry on.</p></article><article class="task exercise-like" id="task-133"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<p id="p-910">Now, just fetch the changes. Remember that merging and fetching are separate processes. Fetching just collects the changes, attempting to merge will throw the error. Use <code class="code-inline tex2jax_ignore">git fetch &lt;remote&gt; &lt;branch-name&gt;</code>. Example: <code class="code-inline tex2jax_ignore">git fetch upstream main</code>.</p></article><article class="task exercise-like" id="task-134"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<p id="p-911">Now reset your current branch to the contents you just fetched. This is not a merge, this is a complete reset. You are reverting all of your content to match what you just fetched. This is why we created a backup in case something gets deleted that you didn't want to be.</p>
-<p id="p-912">In the event that a file you created gets deleted from the reset, just navigate to the backup branch, stage just the missing file and commit just the missing file to origin. Then pull from origin.</p>
-<p id="p-913">But to reset, use <code class="code-inline tex2jax_ignore">git reset --hard &lt;remote&gt;/&lt;branch-name&gt;</code>. Continuing the example from above, <code class="code-inline tex2jax_ignore">git reset --hard upstream/main</code></p></article></article></div></section></section></div></main>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-project-15"><article class="project project-like"><article class="task exercise-like" id="task-155"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p id="p-973">First, create a backup branch just in case things go haywire: <code class="code-inline tex2jax_ignore">git branch backup</code>. Since <code class="code-inline tex2jax_ignore">git branch</code> does not automatically switch you to that branch, you are free to carry on.</p></article><article class="task exercise-like" id="task-156"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-974">Now, just fetch the changes. Remember that merging and fetching are separate processes. Fetching just collects the changes, attempting to merge will throw the error. Use <code class="code-inline tex2jax_ignore">git fetch &lt;remote&gt; &lt;branch-name&gt;</code>. Example: <code class="code-inline tex2jax_ignore">git fetch upstream main</code>.</p></article><article class="task exercise-like" id="task-157"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-975">Now reset your current branch to the contents you just fetched. This is not a merge, this is a complete reset. You are reverting all of your content to match what you just fetched. This is why we created a backup in case something gets deleted that you didn't want to be.</p>
+<p id="p-976">In the event that a file you created gets deleted from the reset, just navigate to the backup branch, stage just the missing file and commit just the missing file to origin. Then pull from origin.</p>
+<p id="p-977">But to reset, use <code class="code-inline tex2jax_ignore">git reset --hard &lt;remote&gt;/&lt;branch-name&gt;</code>. Continuing the example from above, <code class="code-inline tex2jax_ignore">git reset --hard upstream/main</code></p></article></article></div></section></section></div></main>
 </div>
 </body>
 </html>
