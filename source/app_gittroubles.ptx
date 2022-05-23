@@ -206,4 +206,17 @@ Aborting
 
     </paragraphs>
   </section>
+
+  <section xml:id="S_hub_revert_commit">
+    <title>Reverting To a Previous Commit</title>
+    
+    <p>
+      I have never had to do this (yet) so I don't have direct experience here. However, <url href="https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6">user gunjanpatel on GitHub</url> has created a nice guide. It appears that <c>git reset HEAD^ --hard</c> and then <c>git push origin -f</c> will work. The <c>-f</c> switch forces the push and ignores errors.
+    </p>
+    <p>
+      Some of the guide above refers to what is known as a <term>commit hash</term>, a unique string that identifies each commit on GitHub. These are actually so unique that we only need the first few characters of the string to identify the commit. You can find the hash by using <xref ref="S_hub-seecommits"/>. The string is the random numbers/letters found on the right side of each commit.
+    </p>
+
+  </section>
+  
 </appendix>
