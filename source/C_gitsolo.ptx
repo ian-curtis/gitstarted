@@ -2,7 +2,8 @@
 
 <chapter xml:id="C_gitsolo" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Git Solo</title>
-
+  <idx><h>version control</h></idx>
+  <idx><h>git</h></idx>
   <introduction>
     <p>
       Git is difficult to wrap your head around partly because it's new and partly because it's scary.

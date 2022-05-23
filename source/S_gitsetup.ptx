@@ -2,7 +2,8 @@
 
 <section xml:id="S_gitsetup">
   <title>Getting Set Up with Git</title>
-  
+  <idx><h>git</h></idx>
+  <idx><h>git</h><h>setup</h></idx>
   <introduction>
   <p>
     You should have Git installed at this point. If not, see <xref text='title' ref="materials-windows"/>, <xref text='title' ref="materials-mac"/>, or <xref text='title' ref="materials-linux"/>. This means you already have Git ready to go. But how? We created a repo on GitHub but need a way to connect that repo with our personal computer. That's a great feature of Git: <em>to connect the files on your computer to GitHub.</em> It also performs version control and automatically records changes that have been committed. 
@@ -16,8 +17,9 @@
     <title>Cloning a Repository</title>
     <idx><h>clone</h></idx>
     <idx><h>repository</h><h>cloning</h></idx>
-    <idx><h>local files</h></idx>
+    <idx><h>local</h></idx>
     <idx><h>editing locally</h></idx>
+    <idx><h>git</h><h>clone</h></idx>
     <p>
       In order to make Git work, we need to set up a connection between your computer and your GitHub repo. From here on, I might refer to your personal files as your <term>local files</term>. A file is typically considered <q>local</q> if it does not exist on GitHub (or anywhere else on the internet). It is local because only you have access to it. You will likely here other people use this term and its derivatives (such as <q>editing locally</q>). Whenever it comes up, it refers to work/files/things on your computer and not online.
     </p>
@@ -35,7 +37,7 @@
 
     <project xml:id="gitproc-pat">
       <title>Generating a <acro>PAT</acro></title>
-      
+      <idx><h>github</h><h><acro>PAT</acro></h></idx>
       <task>
         <p>
           Click on your GitHub profile icon and navigate to Settings.
@@ -105,7 +107,7 @@
 
     <project xml:id="try-git-clone">
       <title>Cloning from GitHub</title>
-      
+      <idx><h>git</h><h>clone</h></idx>
       <introduction>
         <p>
           This procedure assumes you have a repo on GitHub called <c>aboutme</c> and have been following 
@@ -187,7 +189,8 @@
   
   <subsection xml:id="SS_gitbranches">
     <title>Branches With Git</title>
-    
+    <idx><h>git</h><h>branches</h></idx>
+    <idx><h>branches</h></idx>
     <p>
       Great! We've cloned a repository. Now what? You probably want to jump into editing files but wait!
       Best practice says to create a new branch first. Sure, you are working solo (if you aren't, see
@@ -212,6 +215,9 @@
 
     <project xml:id="gitproc-branches">
       <title>Branches With Git</title>
+      <idx><h>git</h><h>branches</h></idx>
+      <idx><h>git</h><h>switch</h></idx>
+      <idx><h>git</h><h>checkout</h></idx>
       <introduction>
         <p>
           Later on in this chapter, you will be adding to your README file. You first will add

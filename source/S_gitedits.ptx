@@ -1,7 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
 <section xml:id="S_gitedits">
   <title>Editing Files</title>
-
+  <idx><h>git</h><h>edit</h></idx>
+  <idx><h>edit files</h></idx>
+  <idx><h>files</h><h>edit</h></idx>
   <introduction>
     <p>
       Admittedly, the title of this section is a little misleading. You can't edit files with
@@ -19,6 +21,8 @@
 
   <assemblage xml:id="open-file-vscode">
     <title>Opening Files With <init>VS</init> Code</title>
+    <idx><h>open</h><h><init>VS</init> Code</h></idx>
+    <idx><h>command line</h><h><c>code</c></h></idx>
     <p>
       Try to open the README file with the terminal. (Remember how? See <xref ref="S_commands"/> if not.) What happened?
     </p>

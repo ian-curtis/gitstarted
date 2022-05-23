@@ -2,7 +2,8 @@
 
 <section xml:id="S_hubfirstrepo">
   <title>The First Repository and File</title>
-
+  <idx><h>github</h><h>repository</h></idx>
+  <idx><h>repository</h></idx>
   <introduction>
     <p>
       Buckle your seatbelts! Here we go into GitHub and the first repository. In this section, we will 
@@ -13,7 +14,7 @@
 
   <subsection xml:id="hub-createrepo">
   <title>Creating a Repository</title>
-
+  <idx><h>github</h><h>create repository</h></idx>
   <p>
     There are a few different ways to create a new repo (remember this abbreviation? see <xref ref="hub-profile"/>).
     <ol>
@@ -110,7 +111,7 @@
 
   <subsection xml:id="hub-explorerepo">
     <title>Exploring the Code Tab</title>
-
+    <idx><h>github</h><h>code tab</h></idx>
     <p>
       Whew, we made it! A new repo has just been created....aaaaand a lot of new buttons and options 
       just appeared. A lot of new unfamiliar words and tabs. Please don't give up here! I will go through 
@@ -160,7 +161,7 @@
 
   <subsection xml:id="hub-editfile">
     <title>Editing a File</title>
-
+    <idx><h>github</h><h>edit files</h></idx>
     <p>
       Well, we have a README file, let's edit it! GitHub makes it rather simple to edit files. 
       There are a two main ways to edit the README file on GitHub:
@@ -200,9 +201,10 @@
 
     <assemblage xml:id="markdown">
       <title>Markdown Basics</title>
+      <idx><h>markdown</h></idx>
       <p>
         The most basic markdown tool is simple text. Just type like you normally would into the text field 
-        and the result will be normal, unformatted text. However....
+        and the result will be normal, unformatted text. However<ellipsis/>
 
         <ul>
           <li>
@@ -250,6 +252,7 @@
     </assemblage>
 
     <exercise xml:id="try-markdown">
+    <idx><h>markdown</h></idx>
       <introduction>
         <p>
           Let's practice your markdown skills! Here, you will make the "aboutme" repo name true. Feel 
@@ -336,6 +339,9 @@
     </figure>
 
     <p>
+    <idx><h>commit</h></idx>
+    <idx><h>commit changes</h><see>commit</see></idx>
+    <idx><h>github</h><h>commit</h></idx>
       Right now, we have only edited the file, but we haven't told Github that we wish to keep our edits.
       It's as if we edited a document, but never clicked save! But if you scroll down to the bottom of the 
       page, you'll see that there is no <q>save</q> button. You should see a green <q>Commit changes</q> 
@@ -353,6 +359,8 @@
 
     <assemblage xml:id="ex-commit">
       <title>An Extra Commit Example</title>
+      <idx><h>github</h><h>commit</h></idx>
+      <idx><h>commit</h></idx>
       <p>
         Let's consider one example to help understand the benefits of thinking in commits. Suppose I 
         was working on a small video game and I was tasked with creating different worlds a character could visit. With commits in mind, I decide to break down the task into chunks: I will build one world at a time. When I am done with one world, I will commit. When I am done with another world, I will commit a second time. And so on.
