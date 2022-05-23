@@ -1,6 +1,117 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <appendix xml:id="S_commlinecustom">
-  <title>Customizing the Terminal (*)</title>
+  <title>Customizing the Terminal</title>
+
+  <introduction>
+    <p>
+      As I learn about new customization techniques, this page will be updated. Note that I do have a Mac, so the feature I use and like will be here. If you are a Linux user and have something to share, submit a pull request or start an issue and I will look into it.
+    </p>
+  </introduction>
+
+  <section xml:id="S_custterm_mac">
+    <title>For Mac Users</title>
+
+    <introduction>
+    <p>
+      Sorry, Windows users, this is only for MacOS users. If you are a Mac user, you will likely appreciate and benefit from these customizations.
+    </p>
+    </introduction>
+
+    <subsection xml:id="SS_iterm">
+    <title>A New Terminal: iTerm2</title>
+    
+    
+    <p>
+      Instead of using the built-in terminal that comes with your computer, consider downloading <url href="https://iterm2.com/index.html" visual='iterm2.com/index.html'>a new terminal, iTerm2</url>. The default Mac terminal does great but if you are having trouble seeing what's going on and want more colors or wish you didn't have to type so much, then iTerm2 is for you.
+    </p>
+
+    <p>
+      This new terminal is free and has <url href="https://iterm2.com/features.html" visual='iterm2.com/features.html'>many nice features</url> such as
+      <ol>
+        <li>
+          <p>
+            split panes/tabs
+          </p>
+        </li>
+        <li>
+          <p>
+            search
+          </p>
+        </li>
+        <li>
+          <p>
+            fun colors
+          </p>
+        </li>
+        <li>
+          <p>
+            autocomplete
+          </p>
+        </li>
+        <li>
+          <p>
+            copy mode
+          </p>
+        </li>
+        <li>
+          <p>
+            paste history
+          </p>
+        </li>
+      </ol>
+      and many more. I personally don't see any disadvantage to this terminal. Plus, it works with all the popular shells. To download, visit the link above and simply download it. Once it's installed, it works immediately.
+    </p>
+    </subsection>
+
+    <subsection xml:id="SS_fish">
+      <title>A New Shell: <c>fish</c></title>
+
+      <p>
+        Many computers rely on <c>bash</c> to do most of their work. Mac computers now use <c>zsh</c> as their default shell. Shells have their own unique aspects and differences and frankly, it doesn't really matter which shell you use unless you have a good technical reason to change. Shells are pretty advanced and I honestly don't have much information to provide other than what a simple Google search can do.
+      </p>
+
+      <p>
+        That being said, I do recommend the shell <url href='https://fishshell.com/' visual='fishshell.com/'><c>fish</c></url>. This shell brings more nice colors, better autocomplete than iTerm2 (it will recommend as you type!) and, in my opinion, organizes the information on your terminal quite nicely.
+      </p>
+
+      <p>
+        Installing is very easy, too. If you used Homebrew to install Git (<xref text='title' ref="install-git-mac"/> in <xref text='title' ref="fm_materials_mac"/>) or other things, then installation is even easier. Simply type <c>brew install fish</c> into your terminal, then change your shell to <c>fish</c> with <c>chsh -s /user/local/bin/fish</c>. After restarting your terminal, everything will be ready for use! (<c>fish</c> is installable on Linux and Windows Subsystem for Linux)
+      </p>
+
+      <p>
+        If you don't like <c>fish</c>, you can switch back to <c>bash</c> or <c>zsh</c> with <c>chsh -s /bin/bash</c> or <c>chsh -s /bin/zsh</c>.
+      </p>
+      
+    </subsection>
+    
+  </section>
+
+  <section xml:id="S_custterm_windows">
+    <title>For Windows Users (*)</title>
+    
+  </section>
+
+  <section xml:id="S_custterm_linux">
+    <title>For Linux Users (*)</title>
+    
+  </section>
+
+  <section xml:id="S_custterm_all">
+    <title>For All</title>
+
+    <subsection xml:id="SS_gitkraken">
+      <title>A New Git Interface</title>
+
+      <p>
+        Now that you know Git basics and terminology, you might like interfaces that reduce your terminal usage. <url href='https://www.gitkraken.com/' visual='gitkraken.com/'>GitKraken</url> is one of those choices. Although I haven't used it, it does look nice. It is free with a paid option and is available on Windows, Mac, and Linux.
+      </p>
+      <p>
+        From a simple browse of the website there appears to be a good brach/contribution graph and clear tabs with specific functions. Perhaps worth trying out!
+      </p>
+      
+    </subsection>
+    
+  </section>
   
 </appendix>
