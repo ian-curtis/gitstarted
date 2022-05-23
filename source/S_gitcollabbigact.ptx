@@ -2,5 +2,252 @@
 
 <section xml:id="S_gitcollabbigact">
   <title>Working Together: The Culminating Experience (*)</title>
+
+  <p>
+    As in <xref ref="S_gitbigact"/>, this part is a large activity designed to help you practice the skills and ideas learned in the previous sections. It also represents and example of what a typical workflow might look like. You are welcome and encouraged to refer back to the summary and the sections themselves.
+  </p>
+  <p>
+    As before, the activity below is broken up into multiple parts. In order to help you remember the procedures, I will not be adding in cross references to the corresponding chapters. That being said, I will add in hints and answers where applicable. Do note that some of the steps have no “correct” answer. This will be noted in the corresponding answer.
+  </p>
+
+  <activity xml:id="bigact-gitcollab">
+  
+    <introduction>
+      <p>
+        This activity will involve you contributing to the repository for this book. This will help me get an estimate of how many people are reading the book (since I can see the number of forks). You will be typing a short paragraph of your desired superpower.
+      </p>
+    </introduction>
+    
+    <task>
+      <statement>
+        <p>
+          Navigate to the <url href='https://github.com/ian-curtis/gitstarted' visual='github.com/ian-curtis/gitstarted'>GitHub repository for this book</url>, <c>ian-curtis/gitstarted</c>.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Fork the repository.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Click on the <q>Fork</q> button in the top right. (You can keep the same name.)
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Make sure your branch is up to date with <c>ian-curtis/gitstarted:main</c>.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Clone your fork on to your computer. Navigate to the repo using your terminal.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Copy the <init>HTTPS</init> link <em>to your fork</em> on GitHub. Use <c>git clone &lt;copied-link></c>. Use <c>cd &lt;repo-name></c> to move your terminal into that repo.
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Create a new, appropriately-named branch. Switch to that branch.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          This could vary. Perhaps <c>superpower</c>, <c>power</c>, or <c>add-superpower</c>?
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          There is a file called <c>superpower.md</c> inside of the <c>book-activities</c> folder. Use your terminal to open that file (if using <init>VS</init> Code, use the terminal; if not, try to use your terminal).
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <c>cd book-activities</c> first, then <c>code superpower.md</c> to open just the markdown file (not the entire repository) (if using <init>VS</init> Code); if using a different editor, use Google to find a good terminal command (or do it manually)
+        </p>
+        <p>
+          OR <c>cd ..</c> to go backwards a folder, then <c>code gitstarted</c> to open the entire repository, then open the markdown file using work (to use Git functions again, you may have to <c>cd gitstarted</c> again)
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Edit the markdown file with your contribution. Instructions are in the file are pasted below:
+          <blockquote>
+            Here is the file for the culminating experience of <xref ref="C_gitcollab"/> from <pubtitle>Git Started</pubtitle>. Below, type your GitHub username as a level two heading and then type a short paragraph of the superpower you wish you had and why. This could be anything!! See my example.
+          </blockquote>
+        </p>
+        <p>
+          Make sure to save the file when you are done.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Make sure Git is tracking your file.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <c>git status</c>
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Stage your file.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <c>git add .</c> or <c>git add book-activities/</c> or <c>git add book-activities/superpower.md</c>
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Check to make sure your file got staged correctly.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <c>git status</c>
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Commit your file with a good commit message.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <c>git commit -m '&lt;your-message>'</c>
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Push your changes back to your fork on GitHub
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <c>git push origin superpower</c>
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Go back to GitHub and merge your changes into your fork's main branch, then into the upstream main branch.
+        </p>
+        <p>
+          OR Go back to GitHub and open a pull request to merge your changes directly into the upstream branch.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          Create a pull reqeust from <c>superpower</c> to your fork's <c>main</c> then from your fork's <c>main</c> to upstream <c>main</c>.
+        </p>
+        <p>
+          OR Create a pull request from <c>superpower</c> directly to the upstream <c>main</c>.
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Wait for me to accept your pull request and merge your changes into the main branch.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          In the meantime, switch back to main and set an upstream branch for your clone.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          <c>git switch main</c>, <c>git remote add upstream https://github.com/ian-curtis/gitstarted.git</c>
+        </p>
+        <p>
+          It is important to switch back to main or you will set an upstream remote for just your branch which is sometimes useful, but not here.
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          Once I have accepted your changes, make sure your fork and your clone both have those changes.
+        </p>
+      </statement>
+      <answer>
+        <p>
+          (on main branch) <c>git pull upstream main</c>, <c>git push origin main</c>
+        </p>
+      </answer>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          For extra credit, create a new branch and do some typo correction on this book. If you do more than one chapter/section, try to do multiple commits. Submit a pull request explaining your changes and I might merge it!
+        </p>
+        <p>
+          Or, learn <url href="https://pretextbook.org" visual="pretextbook.org">PreTeXt, the markup language this book is written in</url> and suggest some edits or new content.
+        </p>
+      </statement>
+    </task>
+
+    <task>
+      <statement>
+        <p>
+          For as long as you wish to stay up-to-date on the code for this book, pull from upstream often.
+        </p>
+      </statement>
+
+  </activity>
+
+  <conclusion>
+    <p>
+      And that's that! Hopefully you're getting the hang of this process with all of this repetition. If you ever need to practice this again (or need a refresher on what to do), revisit this page. It might take a little bit to become fully comfortable with the process and to remember the order in which to do things. In time, you will get it! Good luck in the rest of your Git/GitHub journey!
+    </p>
+  </conclusion>
   
 </section>
