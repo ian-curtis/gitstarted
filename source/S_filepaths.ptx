@@ -109,9 +109,9 @@
 
     <assemblage xml:id="pathsfish">
       <title>Using the fish Shell</title>
-      <idx><h>fish</h></idx>
+      <idx><h>fish (shell)</h></idx>
       <idx><h>file paths</h><h>fish</h></idx>
-      <idx><h>shells</h><h>fish</h></idx>
+      <idx><h>shell</h><h>fish</h></idx>
       <p>
         <alert>Advanced users only.</alert>
       </p>
