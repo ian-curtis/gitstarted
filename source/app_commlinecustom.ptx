@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<appendix xml:id="S_commlinecustom">
+<appendix xml:id="app_commlinecustom">
   <title>Customizing the Terminal</title>
-
+  <idx><h>command line</h><h>customize</h></idx>
   <introduction>
     <p>
       As I learn about new customization techniques, this page will be updated. Note that I do have a Mac, so the feature I use and like will be here. If you are a Linux user and have something to share, submit a pull request or start an issue and I will look into it.
@@ -20,7 +20,7 @@
 
     <subsection xml:id="SS_iterm">
     <title>A New Terminal: iTerm2</title>
-    
+    <idx><h>iTerm2</h></idx>
     
     <p>
       Instead of using the built-in terminal that comes with your computer, consider downloading <url href="https://iterm2.com/index.html" visual='iterm2.com/index.html'>a new terminal, iTerm2</url>. The default Mac terminal does great but if you are having trouble seeing what's going on and want more colors or wish you didn't have to type so much, then iTerm2 is for you.
@@ -66,7 +66,8 @@
 
     <subsection xml:id="SS_fish">
       <title>A New Shell: <c>fish</c></title>
-
+      <idx><h>shell</h><h>fish</h></idx>
+      <idx><h>fish (shell)</h></idx>
       <p>
         Many computers rely on <c>bash</c> to do most of their work. Mac computers now use <c>zsh</c> as their default shell. Shells have their own unique aspects and differences and frankly, it doesn't really matter which shell you use unless you have a good technical reason to change. Shells are pretty advanced and I honestly don't have much information to provide other than what a simple Google search can do.
       </p>
@@ -76,7 +77,7 @@
       </p>
 
       <p>
-        Installing is very easy, too. If you used Homebrew to install Git (<xref text='title' ref="install-git-mac"/> in <xref text='title' ref="fm_materials_mac"/>) or other things, then installation is even easier. Simply type <c>brew install fish</c> into your terminal, then change your shell to <c>fish</c> with <c>chsh -s /user/local/bin/fish</c>. After restarting your terminal, everything will be ready for use! (<c>fish</c> is installable on Linux and Windows Subsystem for Linux)
+        Installing is very easy, too. If you used Homebrew to install Git (<xref text='title' ref="install-git-mac"/> in <xref text='title' ref="materials-mac"/>) or other things, then installation is even easier. Simply type <c>brew install fish</c> into your terminal, then change your shell to <c>fish</c> with <c>chsh -s /user/local/bin/fish</c>. After restarting your terminal, everything will be ready for use! (<c>fish</c> is installable on Linux and Windows Subsystem for Linux)
       </p>
 
       <p>
@@ -102,7 +103,8 @@
 
     <subsection xml:id="SS_gitkraken">
       <title>A New Git Interface</title>
-
+      <idx><h>gitkraken</h></idx>
+      <idx><h>git</h><h>gitkraken</h></idx>
       <p>
         Now that you know Git basics and terminology, you might like interfaces that reduce your terminal usage. <url href='https://www.gitkraken.com/' visual='gitkraken.com/'>GitKraken</url> is one of those choices. Although I haven't used it, it does look nice. It is free with a paid option and is available on Windows, Mac, and Linux.
       </p>
@@ -114,7 +116,8 @@
 
     <subsection xml:id="SS_github_desktop">
       <title>GitHub Desktop</title>
-
+      <idx><h>github</h><h>desktop</h></idx>
+      <idx><h>github desktop</h></idx>
       <p>
         GitHub does offer a <url href="https://desktop.github.com/" visual='desktop.github.com/'>desktop interface</url> to help you with Git features and managing collaboration. If you would rather do these things with an app (as opposed to switching from your text editor to a website) it might be worth downloading GitHug Desktop. The website itself is pretty basic, but <url href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop" visual='docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop'>the GitHub documentation</url> has a good start-up guide and more.
       </p>

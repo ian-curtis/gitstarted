@@ -3,21 +3,21 @@
 <section xml:id="S_hubnavigate">
   <title>Navigating GitHub</title>
   <idx><h>github</h><h>navigate</h></idx>
-
+  <idx><h>github</h></idx>
   <introduction>
     <p>
       So what is GitHub? It is a website that allows us to share our 
       files with the world and it widely used by the coding/programming community. With GitHub, any public code can be viewed by anyone. Each person is able to copy the code and mess with it on their own computer, all without the original being changed. But if someone wants to change the original, they can submit a request asking the owners to incorporate their changes. GitHub keeps track of all of this information and can also help with version control. If you make a big mistake, you can revert back to old versions and try again. GitHub works closely with Git (hence its name) and is a nice interface for many common Git functions.
     </p>
     <p>
-      Before attempting to tackle Git, I think it's best to show you the ropes of GitHub. After we get set up here and get more comfortable with the jargon, we can move to Git. In this section we will create a GitHub account and get familiar with the layout of GitHub. Much of what is said in this section and chapter is directly applicable to Git (<xref provisional="C_gitsolo"/>).
+      Before attempting to tackle Git, I think it's best to show you the ropes of GitHub. After we get set up here and get more comfortable with the jargon, we can move to Git. In this section we will create a GitHub account and get familiar with the layout of GitHub. Much of what is said in this section and chapter is directly applicable to Git (<xref ref="C_gitsolo"/>).
     </p>
   </introduction>
 
   <subsection xml:id="hub-account">
     <title>Creating A GitHub Account</title>
     <idx><h>github</h><h>create account</h></idx>
-    <idx><h>create github account</h></idx>
+    <idx><h>account</h><see>github</see></idx>
 
     <p>
       Creating a GitHub account is easy and free. Just be careful along the way; there are a few things 
@@ -26,7 +26,7 @@
     </p>
 
     <p>
-      First, navigate to GitHub at <url href="https://github.com"></url>. Any browser should work. Click on the 
+      First, navigate to GitHub at <url href="https://github.com" visual='github.com'></url>. Any browser should work. Click on the 
       <q>Sign Up</q> in the top right corner. A welome box should pop up. Follow the instructions to create
       an account:
       <ol>
@@ -43,13 +43,13 @@
         <li>
           <p>
             Choose a username. Attention! Choose your username carefully. 
-            <url href="https://happygitwithr.com/github-acct.html#username-advice">Jennifer Bryan</url> 
+            <url href="https://happygitwithr.com/github-acct.html#username-advice" visual='happygitwithr.com/github-acct.html#username-advice'>Jennifer Bryan</url> 
             has some great tips for choosing a username. A few are reproduced here:
             
             <ul>
               <li>
                 <p>
-                  Incorporate your actual name! People like to know who they’re dealing with. Also 
+                  Incorporate your actual name! People like to know who they're dealing with. Also 
                   makes your username easier for people to guess or remember.
                 </p>
               </li>
@@ -77,7 +77,7 @@
               </li>
               <li>
                 <p>
-                  Make it timeless. Don’t highlight your current university, employer, or place of 
+                  Make it timeless. Don't highlight your current university, employer, or place of 
                   residence, e.g. JennyFromTheBlock.
                 </p>
               </li>
@@ -105,7 +105,7 @@
 
     <p>
       Once you finish setting up the account (email verification may be required), navigate back to the 
-      home page (<url href="https://github.com"></url>) and carry on.
+      home page (<url href="https://github.com" visual='github.com'>github.com</url>) and carry on.
     </p>
     
   </subsection>
@@ -113,7 +113,7 @@
   <subsection xml:id="hub-profile">
     <title>The Profile Page</title>
     <idx><h>github</h><h>profile</h></idx>
-    <idx><h>repo</h></idx>
+    <idx><h>repo</h><see>repository</see></idx>
     <idx><h>repository</h></idx>
     <idx><h>github</h><h>repo</h></idx>
     <idx><h>github</h><h>repository</h></idx>
@@ -134,7 +134,7 @@
       <q>Your profile</q>. (Notice that the URL uses your username.) You probably don't see much. That's ok, 
       you haven't created anything yet! On this page (the <q>Overview</q> tab) you can see your popular 
       repositories, a graph of your contributions and a summary of your activity. Check out 
-      <url href="https://github.com/ian-curtis">my profile page</url> for an example.
+      <url href="https://github.com/ian-curtis" visual='github.com/ian-curtis'>my profile page</url> for an example.
     </p>
     <figure xml:id="fig-hub-navbar">
       <caption>The GitHub Navigation Bar</caption>
@@ -152,10 +152,10 @@
       is the Git/GitHub way to say <q>directory</q> or <q>folder</q>. A repository is usually one project; 
       one repository contains all of the files and information for one project. For example, the files 
       for this book can all be found under my repository titled 
-      <url href="https://github.com/ian-curtis/gitstarted">gitstarted</url>. This book constitutes as 
+      <url href="https://github.com/ian-curtis/gitstarted" visual='github.com/ian-curtis/gitstarted'>gitstarted</url>. This book constitutes as 
       one project and therefore all files for this book are there. Remember Jennifer Bryan from above? 
       All of the files for her book, <pubtitle>Happy Git With R</pubtitle> can be found on 
-      <url href="https://github.com/jennybc/happy-git-with-r">her repository</url>. Soon, you too will 
+      <url href="https://github.com/jennybc/happy-git-with-r" visual='github.com/jennybc/happy-git-with-'>her repository</url>. Soon, you too will 
       have repositories! (Note: a repository is often shortened to just <term>repo</term>.)
     </p>
     <p>
@@ -168,7 +168,8 @@
 
   <subsection xml:id="hub-settings">
     <title>Settings and Customizations</title>
-
+    <idx><h>github</h><h>settings</h></idx>
+    <idx><h>github</h><h>customize</h></idx>
     <p>
       Click on the profile icon in the top right (<xref ref="fig-hub-navbar"/>) and select <q>Settings</q>. Don't be scared of the long 
       list of possible customizations that are available. Most are only applicable to experienced GitHub users. 
@@ -180,7 +181,7 @@
 
     <paragraphs>
       <title>Profile</title>
-
+      <idx><h>github</h><h>profile</h></idx>
       <p>
         Here, you can change your name, public email (if you have multiple AND if you have chosen to 
         make your email public), a mini bio, relevant info about your other social media and company, 
@@ -191,7 +192,7 @@
 
     <paragraphs>
       <title>Account</title>
-
+      <idx><h>github</h><h>account</h></idx>
       <p>
         Here is where you can change your username. <em>I would strongly recommend against changing your 
         username except in dire circumstances.</em> This could lead to broken links or, if someone claims your old username, links to the wrong repository. This is why I hope you took the time to really think of a good username when created your account.
@@ -208,7 +209,7 @@
 
     <paragraphs>
       <title>Appearance</title>
-
+      <idx><h>github</h><h>appearance</h></idx>
       <p>
         Here you can change how GitHub looks. Is white annoying? Switch to a dark theme. There are three 
         of them. You can also choose to have it change automatically with your computer (assuming your 
@@ -222,7 +223,7 @@
 
     <paragraphs>
       <title>Account security</title>
-      
+      <idx><h>github</h><h>security</h></idx>
       <p>
         Change your password here and you can enable two-factor authentication. You can also see where you are currently logged in. If an unfamiliar session is active, I would recommend changing your password and/or enabling two-factor authentication.
       </p>
@@ -231,19 +232,19 @@
 
     <paragraphs>
       <title>Billing &amp; plans</title>
-      
+      <idx><h>github</h><h>billing</h></idx>
       <p>
-        GitHub offers different <url href="https://github.com/pricing">paid plans</url>. Each of the plans has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly fine under the free plan. I would certainly recommend upgrading once you become more familiar with Git, GitHub, and start developing more projects. However, there is no need to pay anything at this point. 
+        GitHub offers different <url href="https://github.com/pricing" visual='github.com/pricing'>paid plans</url>. Each of the plans has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly fine under the free plan. I would certainly recommend upgrading once you become more familiar with Git, GitHub, and start developing more projects. However, there is no need to pay anything at this point. 
       </p>
       <p>
-        Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their <url href="https://education.github.com/pack">Student Developer Pack</url>. <url href="https://education.github.com/teachers">Teachers</url> and <url href="https://education.github.com/schools">Schools</url> can also find benefits (some require a payment).
+        Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their <url href="https://education.github.com/pack" visual='education.github.com/pack'>Student Developer Pack</url>. <url href="https://education.github.com/teachers" visual='education.github.com/teachers'>Teachers</url> and <url href="https://education.github.com/schools" visual='education.github.com/schools'>Schools</url> can also find benefits (some require a payment).
       </p>
 
     </paragraphs>
 
     <paragraphs xml:id="hub-emails">
       <title>Emails</title>
-      
+      <idx><h>github</h><h>emails</h></idx>
       <p>
         You can choose to have multiple emails on your GitHub account. This may be something you want to 
         do as you can also select to have one of your emails be a backup email for security. You can 
@@ -254,7 +255,7 @@
 
     <paragraphs>
       <title>Notifications</title>
-      
+      <idx><h>github</h><h>notifications</h></idx>
       <p>
         Pretty simple here. You can choose which notifications you would like to receive. Maybe keep the 
         defaults for now and you can edit them later when you get an idea of what exactly GitHub 
@@ -265,20 +266,21 @@
 
     <paragraphs>
       <title>Repositories</title>
-
+      <idx><h>github</h><h>repository</h></idx>
+      <idx><h>repository</h></idx>
       <p>
         If you just created your account, this is probably empty. That's ok! It will be populated soon with a list of all your repositories and repositories you have access to. I do want to point out the first setting, <q>Repository default branch</q>. It may say <q>master</q> in the text box. If so, please change it to <q>main</q> (by typing and clicking <q>Update</q> which is the new Git/GitHub standard. 
       </p>
       <p>
         For more information on the transition from <q>master</q> to <q>main</q>, please visit 
-        <url href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main">TheServerSide</url>.
+        <url href="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main" visual='theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main'>TheServerSide</url>.
       </p>
       
     </paragraphs>
 
     <paragraphs>
       <title>Blocked Users</title>
-      
+      <idx><h>github</h><h>blocked</h></idx>
       <p>
         Hopefully you won't ever have to, but if you need to block a user, you can do so here.
       </p>

@@ -6,7 +6,8 @@
 
   <subsection xml:id="SS_fetch">
     <title>First, Fetching</title>
-    
+    <idx><h>fetch</h></idx>
+    <idx><h>github</h><h>fetch</h></idx>
     
   <p>
     To answer the question in <xref ref="S_hubcollabedit"/>, we are not quite done. See, even though your fork and the parent repository are connected, updates in one are not automatically reflected in the other. So if you just contributed to a repository and the pull request was accepted, you should be fine. But if someone else's pull request also got approved, your fork will not have those changes. You have to tell GitHub to grab those changes and update your fork.
@@ -19,7 +20,8 @@
 
   <subsection xml:id="SS_upstream">
   <title>Second, Upstream</title>
-  
+  <idx><h>upstream</h></idx>
+  <idx><h>remote</h><h>upstream</h></idx>
   
   <p>
     Another important concept is that of <term>upstream</term>. Remember from <xref ref="SS_git-push"/> when we talked about remotes? Back there, I mentioned that there were two types of remotes: origin and upstream and that we would talk about upstream later. Well, now it's later! This idea will become important again when we use Git to collaborate (see if you can figure out why).
@@ -33,7 +35,8 @@
 
   <subsection xml:id="SS_fetchupstream">
     <title>Third, Fetching Upstream</title>
-    
+    <idx><h>fetch upstream</h></idx>
+    <idx><h>github</h><h>fetch</h></idx>
     <p>
       So in order to have changes from the parent repository reflected in your own fork, you have to <term>fetch upstream</term>. GitHub makes this easy! Remember that dialog box from <xref ref="collab-pr"/>? Back then, we used the <q>Contribute</q> button to start a pull request. Here, we will use the option right next to it: <q>Fetch upstream</q>.
     </p>
@@ -43,6 +46,7 @@
 
     <assemblage xml:id="ahead-behind">
       <title>Ahead vs. Behind</title>
+      <idx><h>commit</h><h>ahead and behind</h></idx>
       <p>
         GitHub uses <term>ahead</term> and <term>behind</term> to tell you how your fork currently sits compared to the repo you forked from. Any commit that you have made to your fork that has not been merged into the parent repo ticks up the number of commits ahead you are. Any commit that has been made to the parent repo that is not reflected in your fork ticks up the number of commits behind you are.
       </p>
@@ -89,7 +93,7 @@
             Notice that GitHub will fetch and merge the upstream changes in one step (even though it is technically two steps). Great!
           </p>
           <p>
-            It also emphasizes <xref ref="want-fetch-often"/> through a somewhat passive-aggressive reminder: <q>Keep your fork up-to-date with the upstream repository</q>.
+            It also emphasizes <xref ref="warn-fetch-often"/> through a somewhat passive-aggressive reminder: <q>Keep your fork up-to-date with the upstream repository</q>.
           </p>
           <p>
             To make the magic happen, click on <q>Fetch and merge</q>.
@@ -110,7 +114,7 @@
 
   <conclusion>
     <p>
-      And there you go! Now you are ready to keep on editing or to go about your day. If you are interested in some other GitHub features related to collaborating, continue to <xref ref="S_hubcollabextra"/>. Otherwise, go to <xref ref="C_gitcollab"/> to see how to use Git commands and local edits to collaborate.
+      And there you go! Now you are ready to keep on editing or to go about your day. If you are interested in some other GitHub features related to collaborating, continue to <xref ref="app_hubextra"/>. Otherwise, go to <xref ref="C_gitcollab"/> to see how to use Git commands and local edits to collaborate.
     </p>
   </conclusion>
 

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 
-<section xml:id="S_gitsolosumm">
+<section xml:id="S_gitsumm">
   <title>Summary</title>
-  
+  <idx><h>summary</h><h>git solo</h></idx>
   
   <p>
     While the project in <xref ref="S_gitbigact"/> is a test of your abilities, it is not a <q>traditional</q> test. I don't expect you to have memorized all of the content of the previous chapter. That will come with time. The process of cloning a repository and editing, staging, committing, and pushing files is something you will repeat over and over again as you work through projects. For right now, please go back to the previous sections if you forget how to do something! For your convenience, a summary of the Git process is provided here. Utilize this summary for the project and for your future endeavors. There is no shame in looking something up to make sure you're doing it right, espeically with Git.
@@ -19,7 +19,7 @@
         </li>
         <li>
           <p>
-            Clone the repo to your local computer with <c>git clone</c>. See <xref ref="SS_cloning"/> and <xref ref="gitproc-clone"/>.
+            Clone the repo to your local computer with <c>git clone</c>. See <xref ref="SS_cloning"/> and <xref ref="try-git-clone"/>.
           </p>
         </li>
         <li>

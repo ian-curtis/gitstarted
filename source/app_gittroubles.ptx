@@ -2,7 +2,7 @@
 
 <appendix xml:id="app_gittroubles">
   <title>Common Git Troubles and How To Fix Them</title>
-
+  <idx><h>git</h><h>troubles</h></idx>
   <introduction>
     <p>
       We all make mistakes, especially with Git. You don't know how many times I have staged the wrong files or committed my changes before realizing I did something wrong. Of coursre, it's best to try and avoid these issues becasue they can cause headaches and frustration. Plus there's usually a little fear involved (did I just erase my edits?) as well as hesitation (Git only does what I tell it, so I have to make sure I do it right). But just in case something happened that you didn't expect or you made a mistake, I have your back. Below are some common mistakes and questions you might ask. 
@@ -11,7 +11,8 @@
 
   <section xml:id="SS_reverseadd">
     <title>Uh Oh, I Staged the Wrong Files!</title>
-
+    <idx><h>git</h><h>add</h></idx>
+    <idx><h>staging</h></idx>
     <introduction>
       <p>
         Once you get the hang of Git, it's easy to just fly through the three-step process. In doing so, you will inevitably stage (with <c>git add</c>) a file or folder on accident. This is relatively simple to fix. To undo this, follow the next procedure. 
@@ -52,7 +53,8 @@
 
   <section xml:id="SS_reversecommit">
     <title>Uh Oh, I Committed Too Early!</title>
-
+    <idx><h>git</h><h>commit</h></idx>
+    <idx><h>commit files</h></idx>
     <introduction>
       <p>
         We've all been there. You <c>add</c> all the files you need, double check to make sure you aren't missing anything, <c>commit</c> with a message and suddenly remember a file you should have added. Never fear, <c>git reset</c> is here!
@@ -88,7 +90,8 @@
 
   <section xml:id="S_untrackfiles">
     <title>Git Has Been Updating Files, But Now I Don't Want It To</title>
-    
+    <idx><h>tracking</h></idx>
+    <idx><h>git</h><h>tracking</h></idx>
     <p>
       This is actually pretty common. Maybe you are writing a book and your abandoned chapters were on GitHub for your editors to look at. Now that the book is published, you don't want those chapters online. Maybe you are using and API and when you were developing a project had your app's API connection keys available and not that the project is public you want to remove the file containing them.
     </p>
@@ -142,7 +145,11 @@
 
   <section xml:id="S_forcemerge">
     <title>Git Won't Let Me Pull From Upstream or Origin!</title>
-    
+    <idx><h>git</h><h>pull</h></idx>
+    <idx><h>remote</h><h>upstream</h></idx>
+    <idx><h>remote</h><h>origin</h></idx>
+    <idx><h>upstream</h></idx>
+    <idx><h>origin</h></idx>
     <introduction>
       <p>
         Ah, so you forgot to make a branch. This error happens to me a lot when I have a lot of work on the main branch because I never made a separate branch (not smart of me, I know).
@@ -209,14 +216,84 @@ Aborting
 
   <section xml:id="S_hub_revert_commit">
     <title>Reverting To a Previous Commit</title>
-    
+    <idx><h>commit</h><h>revert</h></idx>
+    <idx><h>revert commit</h></idx>
+    <idx><h>git</h><h>commit</h></idx>
+    <idx><h>commit hash</h></idx>
+    <idx><h>commit</h><h>hash</h></idx>
     <p>
-      I have never had to do this (yet) so I don't have direct experience here. However, <url href="https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6">user gunjanpatel on GitHub</url> has created a nice guide. It appears that <c>git reset HEAD^ --hard</c> and then <c>git push origin -f</c> will work. The <c>-f</c> switch forces the push and ignores errors.
+      I have never had to do this (yet) so I don't have direct experience here. However, <url href="https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6" visual='gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6'>user gunjanpatel on GitHub</url> has created a nice guide. It appears that <c>git reset HEAD^ --hard</c> and then <c>git push origin -f</c> will work. The <c>-f</c> switch forces the push and ignores errors.
     </p>
     <p>
       Some of the guide above refers to what is known as a <term>commit hash</term>, a unique string that identifies each commit on GitHub. These are actually so unique that we only need the first few characters of the string to identify the commit. You can find the hash by using <xref ref="S_hub-seecommits"/>. The string is the random numbers/letters found on the right side of each commit.
     </p>
 
+  </section>
+
+  <section xml:id="S_mergeconflict">
+    <title>Merge Conflicts</title>
+
+    <p>
+      Hopefully you never have to deal with these. Sometimes, they are pretty simple to fix. Other times, it can cause some headaches. To avoid merge conflicts, pull from upstream often (<xref ref="warn-pull-often"/>). Merge conflicts are caused when more than one person edits the same line of a file. It is possible for two people to edit the same file, but on different lines, and not cause a conflict.
+    </p>
+    <p>
+      I have never caused or had to deal with a serious merge conflict. <url href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github" visual='docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github'>The GitHub documentation</url> has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also <url href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line" visual='docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line'>resolve merge conflicts on the command line</url>.
+    </p>
+    <p>
+      I have accidentally caused a merge conflict with myself and with working on the same repository from two different computers and two different accounts. Oops! This is an easy fix because I made the conflict with myself so I know which version is the correct one. If this happens to you, Git might send you to an unfamiliar screen when you try to push or pull. You'll know you have this case if your terminal asks you to type in a reason why the merge must happen or how the conflict is resolved. This typically happens when you try to merge from an upstream main into a local main that has active changes (so create branches!).
+    </p>
+
+    <project>
+      <title>Merging from main to main (remote contains changes not on local)</title>
+      
+      <introduction>
+        <p>
+          This is for when you are sent into a command line editing tool or a default text editor asking you to provide a reason why the merge is necessary.
+        </p>
+      </introduction>
+
+      <task>
+        <statement>
+          <p>
+            Type <c>i</c>
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Type a merge message. This can be something as simple as <q>I have to merge to move on</q> or <q>I know what I want, let me do it</q> (yes, I have actually put that as message<ellipsis/>is this good? Who knows?).
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Press <kbd>esc</kbd>.
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Type <c>:wq</c> (this stands for write and quit)
+          </p>
+        </statement>
+      </task>
+
+      <task>
+        <statement>
+          <p>
+            Press <kbd>Enter</kbd> and you should be ok to move forward.
+          </p>
+        </statement>
+      </task>
+      
+    </project>
+    
   </section>
   
 </appendix>

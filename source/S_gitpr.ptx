@@ -2,7 +2,9 @@
 
 <section xml:id="S_gitpr">
   <title>The Final Steps</title>
-  
+  <idx><h>pull request</h></idx>
+  <idx><h>push</h></idx>
+  <idx><h>pull</h></idx>
   <introduction>
     <p>
       We're almost done! At this point, you should have completed the three-step process as outlined in <xref ref="S_gitfinalize"/>. What could be known as the fourth step is to head back to GitHub and submit a pull request. At this point, it does seem silly to ask yourself for permission to include your own changes, but it makes more sense when contributing to someone elses repository. In order for your changes to be included into any main branch, you need to ask the repo owner/moderator(s) for permission to pull in your changes.
@@ -15,6 +17,7 @@
 
   <activity xml:id="act-git-pr">
     <title>Creating a Pull Request</title>
+    <idx><h>pull request</h></idx>
     <introduction>
       <p>
         A lot of this section will look familiar to the ideas expressed in <xref ref="S_hubbranches"/>. However, it is worth going over again just to make sure everything stuck.
@@ -72,7 +75,7 @@
           Regardless of the method you chose in <xref ref="git-pr-create"/> or if you had the automatic pop-up banner, you should be on the same screen. This might look familiar. Notice that your commit message you chose back in <xref ref="S_gitfinalize"/> appears here. You have the choice to add a further description. 
         </p>
         <p>
-          Note the drop-down menus at the top of the page. With these, you can easily decide which branches you want to merge into and which branches you are merging from. You should only see two choices since we only have two branches but this will not always be the case (especially if you are merging from an origin to an upstream, see <xref provisional="git-with-collab"/>).
+          Note the drop-down menus at the top of the page. With these, you can easily decide which branches you want to merge into and which branches you are merging from. You should only see two choices since we only have two branches but this will not always be the case (especially if you are merging from an origin to an upstream, see <xref ref="S_gitcollabpr"/>).
         </p>
         <p>
           You can also scroll down and see all of the files that were changed and all of the changes. This is good to check that everything is as you expected. This also works to check that someone who is trying to contribute to your repo is not destroying your project.
@@ -163,14 +166,15 @@
   </project>
 
   <warning>
+  <idx><h>merge conflict</h></idx>
     <p>
-      <xref ref="try-git-pull"/> demonstrates that your local repository and GitHub only communicate with each other when you tell them to. Any changes you make on GitHub will not be reflected on your computer unless you pull. Vice versa, any changes you make on your local computer will not be reflected on GitHub unles you push. Be careful with this. If you change a file locally <em>and</em> remotely on GitHub without pulling or pushing you might create a <term>merge conflict</term>. These are best avoided. The simplest conflicts can be resolved somewhat easily but they can quickly get very complicated. See <xref provisional="merge-conflicts"/> for more information on this.
+      <xref ref="try-git-pull"/> demonstrates that your local repository and GitHub only communicate with each other when you tell them to. Any changes you make on GitHub will not be reflected on your computer unless you pull. Vice versa, any changes you make on your local computer will not be reflected on GitHub unles you push. Be careful with this. If you change a file locally <em>and</em> remotely on GitHub without pulling or pushing you might create a <term>merge conflict</term>. These are best avoided. The simplest conflicts can be resolved somewhat easily but they can quickly get very complicated. See <xref ref="S_mergeconflict"/> for more information on this.
     </p>
     <p>
       When working by yourself, merge conflicts are easier to avoid. Just make sure that you only edit at one place at a time (<eg/> locally or remotely) then make sure both locations are up to date before editing in another place. 
     </p>
     <p>
-      Small note for advanced users: as explained in <xref provisional="merge-conflicts"/>, you can edit in both locations at once <em>as long as you do not edit the same line</em>. Merge conflicts only arise when the same line(s) has been changed. So if I change lines 3 and 4 locally and 5 and 6 remotely, I can merge, pull, and push without any problems. But if I change line 7 in both locations <ellipsis/> eek!
+      Small note for advanced users: as explained in <xref ref="S_mergeconflict"/>, you can edit in both locations at once <em>as long as you do not edit the same line</em>. Merge conflicts only arise when the same line(s) has been changed. So if I change lines 3 and 4 locally and 5 and 6 remotely, I can merge, pull, and push without any problems. But if I change line 7 in both locations <ellipsis/> eek!
     </p>
   </warning>
 

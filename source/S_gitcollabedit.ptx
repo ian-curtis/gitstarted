@@ -2,6 +2,8 @@
 
 <section xml:id="S_gitcollabedit">
   <title>Collaboration Editing With Git</title>
+  <idx><h>edit files</h></idx>
+  <idx><h>git</h><h>edit</h></idx>
   <p>
     As before, the title is a little misleading. Git does offer editing features, but, once again, it does keep track of your edits and commits for version control.
   </p>

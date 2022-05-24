@@ -2,7 +2,8 @@
 
 <section xml:id="S_hubbranches">
   <title>Working With Branches</title>
-  
+  <idx><h>branches</h></idx>
+  <idx><h>github</h><h>branches</h></idx>
   <introduction>
     <p>
       Suppose you were writing a three-stanza poem for a contest. The final product must be handwritten on fancy letterhead, in high-quality black pen. As multiple drafts go by, you finalize the first and the third stanza. You're so confident in them that you write them on the letterhead in pen. But you're stuck on the second stanza.
@@ -23,7 +24,8 @@
 
   <subsection xml:id="SS_thinkbranch">
   <title>Thinking About Branches</title>
-  
+  <idx><h>main branch</h></idx>
+  <idx><h>branches</h></idx>
   <p>
     Github organizes your edits and changes in a tree-like format. The official, published version of your files always lies on the <term>main branch</term>. You could think of the main branch as the trunk of a tree. When we created our README file back in <xref ref="S_hubfirstrepo"/>, we started on the main branch, edited a file, and commited right back to the main branch. It was as if we wrote something new in pen on our official letterhead. See <xref ref="fig-commit-main-poem"/> as a visualization of this type of commit. 
   </p>
@@ -47,6 +49,13 @@
     </image>
   </figure>
   <p>
+  <idx><h>commit</h></idx>
+  <idx><h>merge</h></idx>
+  <idx><h>pull request</h></idx>
+  <idx><h>request</h><see>pull request</see></idx>
+  <idx><h>github</h><h>commit</h></idx>
+  <idx><h>github</h><h>merge</h></idx>
+  <idx><h>github</h><h>pull request</h></idx>
     Notice how in <xref ref="fig-branch-poem"/> that the main branch does not move forward when branches are created, it stops once a branch is made. When you first create a new branch, all you have is a copy of the main branch. However, when you edit your new branch, the changes do not appear into the main branch. Branches are like testing grounds. Try some new things, see if you like them, see if they work, then make it official. <q>Making it official</q> with Git and Github is called <term>committing</term> (as we have seen). Two new terms that go with commits<fn>Notice how <q>commit</q> is both a noun and a verb.</fn> are <term>merge</term> and <term>pull request</term>. Oftentimes, you will hear people say that they just merged their changes into main. This means they committed their changes to the main branch and updated the official version. 
   </p>
   <figure xml:id="fig-merge-poem">
@@ -65,7 +74,8 @@
 
   <subsection xml:id="SS_makebranch">
     <title>Creating a Branch</title>
-    
+    <idx><h>github</h><h>branches</h></idx>
+    <idx><h>branches</h><h>create</h></idx>
     <p>
       Creating a branch is not difficult. To do so, first make sure you are on the <q>Code</q> tab 
       of your repository titled <c>aboutme</c>. Below the list of tabs, you should have a row of 
@@ -125,6 +135,7 @@
 
     <assemblage xml:id="branchnotes">
       <title>A Few Notes on Branches</title>
+      <idx><h>branches</h></idx>
       <p>
         <ul>
           <li>
@@ -159,7 +170,7 @@
 
   <subsection xml:id="SS_workingbranch">
     <title>Working On a Branch</title>
-    
+    <idx><h>branches</h><h>edit</h></idx>
     <p>
       We named the new branch <c>animal</c> to describe the changes we plan to make: add our favorite
       animal. Editing a file on a branch is no different than editing a file on <c>main</c>. However, we 
@@ -194,6 +205,9 @@
     </figure>
 
     <p>
+    <idx><h>commit message</h></idx>
+    <idx><h>message</h><see>commit message</see></idx>
+    <idx><h>github</h><h>commit message</h></idx>
       After you have made some changes, scroll down to the <q>Commit changes</q> section. Now is the time to introduce commit messages. A <term>commit message</term> is a short, but informative (notice a recurring pattern?) note of what your changes do. You may be tempted to skip this when working with yourself. Please try to write the best commit messages <em>at all times</em>. When you look back at your repo in the future, it will be helpful for you to remember what you did. Commit messages also help others who may look at your project know what you did in each commit. You may see my various branch names and commit messages at <url href="https://github.com/ian-curtis/gitstarted/commits/main" visual="github.com/ian-curtis/gitstarted/commits/main">the commit list for this book on GitHub</url>.
     </p>
     <p>
@@ -202,6 +216,7 @@
 
     <assemblage xml:id="commitmessages">
       <title>A Note On Commit Messages</title>
+      <idx><h>commit message</h></idx>
       <p>
         It is up to you how to format your message. Some people write in complete sentences while others 
         use incomplete sentences with capital letters. Some people use past tense, others present tense, 
@@ -234,6 +249,9 @@
   <subsection xml:id="SS_pullrequest">
     <title>Creating a Pull Request (with Yourself)</title>
     <idx><h>pull request</h></idx>
+    <idx><h>github</h><h>pull request</h></idx>
+    <idx><h>merge</h></idx>
+    <idx><h>github</h><h>merge</h></idx>
     <p>
       Alright, so you've edited a file on a branch AND you are happy with your changes. Everything looks good and works well on the branch so you are ready to incorporate your changes into the official version of your project. This is called creating a <term>pull request</term>. It may sound odd to call it a pull request when it seems like you are actually pushing your changes toward the main branch.However, with pull requests, you are requesting that someone else pull your changes into the main branch.
     </p>
@@ -257,7 +275,7 @@
       GitHub tells us which branch we are trying to send to main at the top. <c>animal</c> should be on 
       the right and is pointing towards <c>main</c>. Next to this, you should see a check mark and an 
       <q>Able to merge</q> message. This is good; later on we will explore what to do if branches 
-      cannot be automatically merged. See <xref provisional="merge-conflicts"/>.
+      cannot be automatically merged. See <xref ref="S_mergeconflict"/>.
     </p>
     <p>
       Your cursor should have automatically navigated to a dialog box. This has defaulted to our latest 
@@ -282,7 +300,7 @@
       changes will not be lost because you just incorporated them into main. You now have two identical 
       copies of the same files and can get rid of the extraneous copy, your old branch. If it makes you feel 
       better, GitHub keeps track of commits and merges. If you ever want to revert back to an old version, 
-      you can in <xref provisional="reverting-changes"/>. Go back to the <q>Code</q> tab and verify that your 
+      you can in <xref ref="S_hub_revert_commit"/>. Go back to the <q>Code</q> tab and verify that your 
       favorite animal appears in main.
     </p>
 

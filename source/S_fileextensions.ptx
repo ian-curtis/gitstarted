@@ -3,7 +3,6 @@
 <section xml:id="S_fileextensions">
   <title>File Extensions</title>
   <idx><h>file extensions</h></idx>
-  <idx><h>file</h><h>extensions</h></idx>
   <introduction>
     <p>
       There are many different types of files. At the very basics, we have images, videos, documents, and 
@@ -23,13 +22,13 @@
 
   <subsection xml:id="extensions-images">
     <title>Images</title>
-
+    <idx><h>file extensions</h><h>images</h></idx>
     <p>
       Why would we need more than on extension for an image? A photo is a photo, right? Wrong.
       Each of the file extensions have unique aspects and features. For instance, the Apple <c>.heic</c>
       file often takes up less storage space. However, not all programs can open them. 
-      The <url href="https://guides.lib.umich.edu/c.php?g=282942&amp;p=1885348">University of Michigan</url> 
-      and <url href="https://kinsta.com/blog/image-file-types/">Kinsta</url>
+      The <url href="https://guides.lib.umich.edu/c.php?g=282942&amp;p=1885348" visual='guides.lib.umich.edu/c.php?g=282942&amp;p=1885348'>University of Michigan</url> 
+      and <url href="https://kinsta.com/blog/image-file-types/" visual='kinsta.com/blog/image-file-types/'>Kinsta</url>
       have great guides on the differences between some image file extensions. The table here just lists 
       the extensions and what they are, not the details on their use.
     </p>
@@ -96,9 +95,9 @@
 
   <subsection xml:id="extensions-videos">
     <title>Videos</title>
-
+    <idx><h>file extensions</h><h>videos</h></idx>
     <p>
-      <url href="https://www.adobe.com/creativecloud/video/discover/best-video-format.html">Adobe</url> 
+      <url href="https://www.adobe.com/creativecloud/video/discover/best-video-format.html" visual='adobe.com/creativecloud/video/discover/best-video-format.html'>Adobe</url> 
       has a great guide on the differences between some video file extensions. The table here just lists 
       the extensions and what they are, not the details on their use.
     </p>
@@ -153,11 +152,11 @@
 
   <subsection xml:id="extensions-docs">
     <title>Documents</title>
-    
+    <idx><h>file extensions</h><h>documents</h></idx>
     <p>
       There are many different file extensions that refer to documents. Many of them you will never 
       encounter. Only the main file types are listed here.
-      <url href="https://blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/">File Stack</url>
+      <url href="https://blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/" visual='blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/'>File Stack</url>
       has a good explanation on some of the file types here.
     </p>
 
@@ -226,9 +225,9 @@
 
   <subsection xml:id="extensions-audio">
     <title>Audio</title>
-
+    <idx><h>file extensions</h><h>audio</h></idx>
     <p>
-      <url href="https://www.makeuseof.com/tag/audio-file-format-right-needs/">makeuseof.com</url> has 
+      <url href="https://www.makeuseof.com/tag/audio-file-format-right-needs/" visual='makeuseof.com/tag/audio-file-format-right-needs/'>makeuseof.com</url> has 
       great descriptions of the most common audio file types.
     </p>
     
@@ -280,7 +279,7 @@
 
   <subsection xml:id="extensions-coding">
     <title>Coding and Programming</title>
-    
+    <idx><h>file extensions</h><h>coding</h></idx>
     <p>
       There is a plethora of programming languages, software, and interfaces and each of them uses a 
       different file extension. 
@@ -365,7 +364,7 @@
 
   <subsection xml:id="extensions-data">
     <title>Data</title>
-    
+    <idx><h>file extensions</h><h>data</h></idx>
     <p>
       Many of these extensions also belong in <xref ref="extensions-docs"/> but are related enough to 
       merit another subsection.
@@ -414,7 +413,7 @@
 
   <subsection xml:id="extensions-other">
     <title>Other File Exensions</title>
-    
+    <idx><h>file extensions</h><h>other</h></idx>
     <tabular halign="center">
       <row header="yes">
         <cell>Extension</cell>

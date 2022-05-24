@@ -2,7 +2,7 @@
 
 <section xml:id="S_gitcollabsetup">
   <title>Getting Set Up: A Few Extra Steps</title>
-
+  <idx><h>fork</h></idx>
   <introduction>
     <p>
       Before you are able to jump right in and start editing files locally, there are some things that have to happen first. Like in <xref ref="S_hubcollabsetup"/>, we need to fork the repository you would like to edit. Although it is possible to use Git to edit on a repository that has not been forked, you will find problems when you try to push your changes since you do not have write access to the repo.
@@ -25,6 +25,8 @@
 
   <subsection xml:id="SS_gitcollabclone">
     <title>Cloning A Fork</title>
+    <idx><h>clone</h></idx>
+    <idx><h>git</h><h>clone</h></idx>
     <p>
       Hopefully you didn't peek ahead! The first step is to clone our repo. Remember that in order to edit files locally, we need a copy of the repository on our computer and the way to do that is to clone.
     </p>
@@ -55,7 +57,8 @@
 
   <subsection xml:id="SS_gitcollabbranch">
     <title>Don't Forget About Branches!</title>
-    
+    <idx><h>branches</h></idx>
+    <idx><h>git</h><h>branches</h></idx>
     <p>
       For nearly every edit we've made in this book, we've made a corresponding branch. This is no different. I hope you understand the importance of branches, even if you are working with yourself. Since my repository is public, anyone can edit the files there. Therefore, I will approve pull requests from anyone as I will assume they are working through this book. However, the task in this chapter will be exclusive to just those who are reading this book. There is file called <c>secret.txt</c> with no instructions or anything at all. Later on, you will be adding a line to this text file.
     </p>

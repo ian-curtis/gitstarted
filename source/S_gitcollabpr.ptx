@@ -9,7 +9,12 @@
 
   <subsection xml:id="SS_gitcollabpr">
     <title>Opening a Pull Request</title>
-    
+    <idx><h>pull request</h></idx>
+    <idx><h>github</h><h>pull request</h></idx>
+    <idx><h>merge</h></idx>
+    <idx><h>github</h><h>merge</h></idx>
+    <idx><h>head repository</h></idx>
+    <idx><h>base repository</h></idx>
     <p>
       Use <xref ref="act-git-pr"/> to go back to GitHub and start opening a pull request. When you arrive at the pull request creation screen (titled <q>Comparing changes</q>), you generally have two choices, as mentioned above. The following list describes the branches and repos you should have selected at the top of the screen, under the page heading.
       <ol>
@@ -39,14 +44,21 @@
 
   <subsection xml:id="SS_gitcollabpull">
     <title>Pulling/Fetching Upstream</title>
-
+    <idx><h>fetch upstream</h></idx>
+    <idx><h>upstream</h></idx>
+    <idx><h>remote</h><h>upstream</h></idx>
+    <idx><h>pull</h></idx>
+    <idx><h>git</h><h>pull</h></idx>
     <p>
       Recall from <xref ref="S_hubcollabfetch"/> that you can update your fork with the latest upstream changes through the <q>Fetch upstream</q> button. That works great for updating the fork, but it doesn't update your local clone. There are two main ways in which you can update both your fork and for clone with new changes to upstream.
     </p>
 
     <project xml:id="try-git-pull-origin">
       <title>Updating Origin and Local, Method 1</title>
-      
+      <idx><h>git</h><h>pull</h></idx>
+      <idx><h>pull</h></idx>
+      <idx><h>origin</h></idx>
+      <idx><h>remote</h><h>origin</h></idx>
       <introduction>
         <p>
           This method will first fetch upstream on GitHub, then pull in changes from origin.
@@ -88,7 +100,14 @@
 
     <project xml:id="try-git-pull-upstream">
       <title>Updating Origin and Local, Method 2</title>
-      
+      <idx><h>git</h><h>add remote</h></idx>
+      <idx><h>remote</h><h>origin</h></idx>
+      <idx><h>remote</h><h>upstream</h></idx>
+      <idx><h>upstream</h></idx>
+      <idx><h>pull</h></idx>
+      <idx><h>push</h></idx>
+      <idx><h>git</h><h>pull</h></idx>
+      <idx><h>git</h><h>push</h></idx>
       <introduction>
         <p>
           This method will first set up a remote to upstream, pull in changes from upstream, then push changes to origin.
