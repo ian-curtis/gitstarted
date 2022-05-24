@@ -2,7 +2,8 @@
 
 <section xml:id="S_hubcollabsetup">
   <title>Getting Set Up To Collaborate</title>
-
+  <idx><h>write access</h></idx>
+  <idx><h>github</h><h>collaborate</h></idx>
   <introduction>
   <p>
     The first step to collaborating is to recognize that you usually do not have the permissions to edit others' repositories directly. We might say that you do not have <term>write access</term> to those repositories. You won't be able to edit files on GitHub like we did in <xref ref="C_githubsolo"/>. So how do you contribute to someone else's repository?
@@ -11,7 +12,8 @@
 
   <subsection xml:id="SS_forking">
     <title>Forking</title>
-
+    <idx><h>forking</h></idx>
+    <idx><h>github</h><h>forking</h></idx>
     <p>
       Recall from <xref ref="C_gitsolo"/> that in order to edit files on our computer, we had to clone the respository from GitHub. Essentially, this was a copy of your repository on your computer. In order to edit someone else's files, we need to create a copy of their repository <em>on GitHub</em>. Then, we edit our copied files and submit a pull request asking the moderator to incorporate our changes.
     </p>

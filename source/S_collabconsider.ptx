@@ -2,7 +2,8 @@
 
 <section xml:id="S_collabconsider">
   <title>Before Beginning, Consider This</title>
-
+  <idx><h>github</h><h>collaborate</h></idx>
+  <idx><h>merge conflict</h></idx>
   <p>
     One of the great features of GitHub is the promotion of collaboration and multiple people working on the same project, adding new things, and improving others. If your repo is public, anyone can contribute to it. But as the repo owner, you have certain authorities. No one will be able to change things officially without your permission. The main branch will only be changed if you (or other moderators) approve it. This emphasizes the importance of branches (so you can test others' work) and forks (explored in <xref ref="S_hubcollabsetup"/>). 
   </p>

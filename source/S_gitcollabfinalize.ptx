@@ -2,7 +2,8 @@
 
 <section xml:id="S_gitcollabfinalize">
   <title>Revisiting the Three Step Process</title>
-
+  <idx><h>three step process</h></idx>
+  <idx><h>git</h><h>three step process</h></idx>
   <introduction>
     <p>
       Just as in <xref ref="S_gitfinalize"/>, this is a very important section. Take care to do everything in the correct order and with the correct keywords.
@@ -34,6 +35,8 @@
 
   <subsection xml:id="SS_gitcollabadd">
     <title>Staging Files</title>
+    <idx><h>staging</h></idx>
+    <idx><h>git</h><h>stage</h></idx>
     <p>
       This step will not be any different from before. Use <xref ref="try-git-add"/> to stage your edited <c>secret.txt</c> file.
     </p>
@@ -44,6 +47,8 @@
 
   <subsection xml:id="SS_gitcollabcommit">
     <title>Committing Files</title>
+    <idx><h>commit files</h></idx>
+    <idx><h>git</h><h>commit</h></idx>
     <p>
       This step will also not be any different from before. Just remember that you should try to design your commit messages to be short and descriptive. If the repo you are contributing to has a preference for how commit messages are written, you should try to follow that as best you can. Otherwise, don't be offended when your commit message is changed.
     </p>
@@ -54,6 +59,8 @@
 
   <subsection xml:id="SS_gitcollabpush">
     <title>Pushing Files</title>
+    <idx><h>push files</h></idx>
+    <idx><h>git</h><h>push</h></idx>
     
     <p>
       Alright, here is where some small changes come up. In <xref ref="S_gitfinalize"/>, we pushed to the origin repository. But from <xref ref="S_hubcollabsetup"/> and <xref ref="S_hubcollabfetch"/>, when you fork, you introduce another remote: upstream. And now that we have a clone, we also have a local repo.

@@ -88,7 +88,7 @@
   <subsection xml:id="SS_git-add">
     <title>Step 1: Staging Files</title>
     <idx><h>git</h><h>add</h></idx>
-    <idx><h>stage files</h></idx>
+    <idx><h>staging</h></idx>
     <idx><h>files</h><h>staging</h></idx>
     <p>
       The first step in sending files back to GitHub is to stage your files. Basically, this step is like you saying <q>I have edited some files these are the ones I would like to send to GitHub</q>. With our small example, this step is a little silly. We only edited one file, of course it's the one we want to send back.

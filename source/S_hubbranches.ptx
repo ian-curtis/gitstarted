@@ -275,7 +275,7 @@
       GitHub tells us which branch we are trying to send to main at the top. <c>animal</c> should be on 
       the right and is pointing towards <c>main</c>. Next to this, you should see a check mark and an 
       <q>Able to merge</q> message. This is good; later on we will explore what to do if branches 
-      cannot be automatically merged. See <xref provisional="merge-conflicts"/>.
+      cannot be automatically merged. See <xref ref="S_mergeconflict"/>.
     </p>
     <p>
       Your cursor should have automatically navigated to a dialog box. This has defaulted to our latest 
@@ -300,7 +300,7 @@
       changes will not be lost because you just incorporated them into main. You now have two identical 
       copies of the same files and can get rid of the extraneous copy, your old branch. If it makes you feel 
       better, GitHub keeps track of commits and merges. If you ever want to revert back to an old version, 
-      you can in <xref provisional="reverting-changes"/>. Go back to the <q>Code</q> tab and verify that your 
+      you can in <xref ref="S_hub_revert_commit"/>. Go back to the <q>Code</q> tab and verify that your 
       favorite animal appears in main.
     </p>
 

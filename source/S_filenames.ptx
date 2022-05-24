@@ -137,7 +137,7 @@
           <title>Alternative Naming Options</title>
           <idx><h>cases</h></idx>
           <idx><h>file names</h></idx>
-          <idx><h>naming</h><see>file names</see><see>folder names</see></idx>
+          <idx><h>naming</h><see>file names</see><seealso>folder names</seealso></idx>
           <p>
             Most computer programmers name their files using <term>cases</term>. 
             There are five main cases: 
