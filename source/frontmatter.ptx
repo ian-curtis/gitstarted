@@ -14,23 +14,18 @@
   </titlepage>
 
   <colophon>
-    <!-- <website>
-      <name><c>my-website.org</c></name>
-      <address>http://my.website.org</address>
-    </website> -->
+    
 
     <copyright>
-      <!-- In addition to specifying the copyright holder, you should  -->
-      <!-- include a license, such as the cc-by-sa license shown below -->
-      <!-- so people reading your book know how they can use it.       -->
-      <year>2021</year>
+      
+      <year>2022</year>
       <holder>Ian Curtis</holder>
-      <!-- <minilicense><image source="../images/by-sa.png" /></minilicense> -->
+      <minilicense><image source="cc_by_sa" /></minilicense>
       <shortlicense>
-        <!-- <image source="../images/by-sa.png" width="15%"/>  -->
+        <image source="cc_by_sa" width="20%"/> 
         This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. 
         To view a copy of this license, visit 
-        <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual='creativecommons.org/licenses/by-sa/4.0/'>the Creative Commons website</url>
+        <url href="http://creativecommons.org/licenses/by-sa/4.0/" visual='creativecommons.org/licenses/by-sa/4.0/'>the Creative Commons website</url>.
       </shortlicense>
 
     </copyright>
@@ -39,18 +34,23 @@
 
   <!-- <dedication>
     <p>
-      To anyone who has no idea what Git is.
+      To my family, who didn't even know I was writing a book and who was very surprised when I said I finished a book.
     </p>
-  </dedication>
+  </dedication> -->
 
   <acknowledgement>
     <p>
-      I would like to thank...
+      Thank you to the Grand Valley State University (<init>GVSU</init>) Libraries, specifically the Scholarly Communications section, for their support while writing this book. This book would not have been written had it not been for Matt Ruen of <init>GVSU</init> who provided useful feedback on accessibility, general <init>OER</init> guidance, organization, and who arranged for a university grant to hire me as a student employee to assist with <init>OER</init> creation and mangement at <init>GVSU</init>.
+    </p>
+    <!-- <p>
+      I am also indebted to __ and __ for their feedback on the clarity, concision, and effectiveness of the book. The book has benefitted because of them.
+    </p> -->
+    <p>
+      Kudos also go to David Farmer, Rob Beezer, Oscar Levin, and the many others who work to maintain and update <pretext/> and its functions. <pretext/> is a great, free resource for authors.
     </p>
 
-  </acknowledgement> -->
+  </acknowledgement>
 
-  <!-- Prefaces here -->
   <xi:include href="fm_howtouse.ptx" />
   <xi:include href="fm_materials_windows.ptx" />
   <xi:include href="fm_materials_mac.ptx" />

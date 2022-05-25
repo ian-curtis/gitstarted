@@ -12,7 +12,7 @@
 
   <subsection xml:id="SS_forking">
     <title>Forking</title>
-    <idx><h>forking</h></idx>
+    <idx><h>fork</h></idx>
     <idx><h>github</h><h>forking</h></idx>
     <p>
       Recall from <xref ref="C_gitsolo"/> that in order to edit files on our computer, we had to clone the respository from GitHub. Essentially, this was a copy of your repository on your computer. In order to edit someone else's files, we need to create a copy of their repository <em>on GitHub</em>. Then, we edit our copied files and submit a pull request asking the moderator to incorporate our changes.
