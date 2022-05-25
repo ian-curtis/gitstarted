@@ -1,18 +1,543 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <section xml:id="S_shortcuts">
-  <title>Keyboard Shortcuts (*)</title>
+  <title>Keyboard Shortcuts</title>
   <idx><h>shortcuts</h></idx>
   <idx><h>keyboard shortcuts</h></idx>
 
   <introduction>
     <p>
-      You may be able to use your computer fine without any shortcuts. But wow, do they make your life easier. This section could go in an appendix but I think it is so important to know at many shortcuts as possible to help you use your computer faster. I use shortcuts every day in my web browser, programming software, documents editing software (e.g., Microsoft Word), and just my computer in general. I have tried to break up the following shortcuts by where you might use them; however, many are fairly universal and could work in other places.
+      You may be able to use your computer fine without any shortcuts. But wow, do they make your life easier. This section could go in an appendix but I think it is so important to know at many shortcuts as possible to help you use your computer faster. I use shortcuts every day in my web browser, programming software, documents editing software (e.g., Microsoft Word), and just my computer in general. I have tried to break up the following shortcuts by the keys needed. <kbd>Ctrl</kbd> + <kbd>F</kbd> work well on this page.
     </p>
     <p>
       Note: Windows uses <kbd>Control</kbd> 
-      (or <kbd>Ctrl</kbd>) as the <q>main</q> button whereas Mac usually uses <kbd>Command</kbd> (or <kbd>Cmd</kbd>).
+      (or <kbd>Ctrl</kbd>) as the <q>main</q> button whereas Mac usually uses <kbd>Command</kbd> (or <kbd>Cmd</kbd>). I regularly use a Mac and Google Chrome so many of these might be more accurate and detailed for Chrome and Mac users.
     </p>
   </introduction>
+
+  <subsection xml:id="SS_shortcut_ctrl">
+    <title>Starting with <kbd>Control</kbd> or <kbd>Command</kbd></title>
+    
+    <p>
+      This part lists many common shortcuts starting with just <kbd>Control</kbd> or <kbd>Command</kbd>.
+    </p>
+
+    <tabular halign='center'>
+
+      <col width='20%'/>
+      <col width='30%'/>
+      <col width='50%'/>
+      <row bottom='minor' header='yes'>
+        <cell right='minor'><kbd>Ctrl</kbd> or <kbd>Cmd</kbd> + <ellipsis/></cell>
+        <cell right='minor'>Function</cell>
+        <cell><p>Notes</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>A</cell>
+        <cell right='minor'><p>Select all</p></cell>
+        <cell><p>Works on webpages, text documents, code files, and more</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>B</cell>
+        <cell right='minor'><p>Bold text</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>C</cell>
+        <cell right='minor'><p>Copy highlighted content</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>D</cell>
+        <cell right='minor'><p>Make a bookmark (on a webpage)</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>F</cell>
+        <cell right='minor'><p>Find text</p></cell>
+        <cell><p>Opens a dialog box to search for text</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>G</cell>
+        <cell right='minor'><p>Find next result (when searching)</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>H</cell>
+        <cell right='minor'><p>Show browsing history OR Hide windows</p></cell>
+        <cell><p>Windows will show history, Mac will hide app windows</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>I</cell>
+        <cell right='minor'><p>Italicize text</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>K</cell>
+        <cell right='minor'><p>Insert link</p></cell>
+        <cell><p>Documents, emails, and more</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>L</cell>
+        <cell right='minor'><p>Jump to address bar</p></cell>
+        <cell><p>Works in Google Chrome, not necessarily in other browsers</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>M</cell>
+        <cell right='minor'><p>Minimize windows</p></cell>
+        <cell><p>Only on Mac</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>N</cell>
+        <cell right='minor'><p>Open new window</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>O</cell>
+        <cell right='minor'><p>Open file</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>P</cell>
+        <cell right='minor'><p>Print</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Q</cell>
+        <cell right='minor'><p>Quit an app</p></cell>
+        <cell><p>Mac only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>R</cell>
+        <cell right='minor'><p>Refresh a page</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>S</cell>
+        <cell right='minor'><p>Save</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>T</cell>
+        <cell right='minor'><p>Open a new tab</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>U</cell>
+        <cell right='minor'><p>Underline text</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>V</cell>
+        <cell right='minor'><p>Paste copied or cut content</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>W</cell>
+        <cell right='minor'><p>Close a tab</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>X</cell>
+        <cell right='minor'><p>Cut content (and copy it)</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Y</cell>
+        <cell right='minor'><p>Show history</p></cell>
+        <cell><p>Mac only, on Google Chrome not necessarily other browsers</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Z</cell>
+        <cell right='minor'><p>Undo</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Any number</cell>
+        <cell right='minor'><p>Switch that corresponding number's tab</p></cell>
+        <cell><p>Works in Google Chrome, not necessarily in other browswers</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'><kbd>`</kbd></cell>
+        <cell right='minor'><p>Switch between windows of the same app</p></cell>
+        <cell><p>Mac only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'><kbd>-</kbd></cell>
+        <cell right='minor'><p>Zoom out</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'><kbd>+</kbd></cell>
+        <cell right='minor'><p>Zoom in</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Tab</cell>
+        <cell right='minor'><p>Navigate windows of different apps (Mac), Switch Chrome tabs (Windows)</p></cell>
+        <cell><p>Note that <kbd>Control</kbd> + <kbd>Tab</kbd> (not <kbd>Command</kbd>) switches Chrome tabs on Mac</p></cell>
+      </row>
+
+      <row>
+        <cell right='minor'>?</cell>
+        <cell right='minor'><p>Comments out line/selection</p></cell>
+        <cell><p><init>VS</init> Code only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Space</cell>
+        <cell right='minor'><p>Open Spotlight Search</p></cell>
+        <cell><p>Mac only</p></cell>
+      </row>
+
+    </tabular>
+
+  </subsection>
+
+  <subsection xml:id="SS_shortcut_ctrlshift">
+    <title>Starting with <kbd>Control</kbd> or <kbd>Command</kbd> + <kbd>Shift</kbd></title>
+    
+    <p>
+      This part lists many common shortcuts starting with <kbd>Control</kbd> + <kbd>Shift</kbd> or <kbd>Command</kbd> + <kbd>Shift</kbd>.
+    </p>
+
+    <tabular halign='center'>
+      <col width='20%'/>
+      <col width='30%'/>
+      <col width='50%'/>
+      <row bottom='minor' header='yes'>
+        <cell right='minor'><kbd>Ctrl</kbd> or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <ellipsis/></cell>
+        <cell right='minor'>Function</cell>
+        <cell><p>Notes</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>A</cell>
+        <cell right='minor'><p>Search tabs</p></cell>
+        <cell><p>On Google Chrome</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>B</cell>
+        <cell right='minor'><p>Show/hide bookmark bar</p></cell>
+        <cell><p>On Google Chrome</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>D</cell>
+        <cell right='minor'><p>Bookmark all tabs</p></cell>
+        <cell><p>On Google Chrome</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>G</cell>
+        <cell right='minor'><p>Find previous result (when searching)</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>H</cell>
+        <cell right='minor'><p>Find and replace (Microsoft Word)</p></cell>
+        <cell><p>This will also go to the Google homepage in Chrome (only on Mac)</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>I</cell>
+        <cell right='minor'><p>Email link (Mac), open page source (Windows)</p></cell>
+        <cell><p>On Google Chrome</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>J</cell>
+        <cell right='minor'><p>Show Chrome downloads</p></cell>
+        <cell><p>Mac only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>M</cell>
+        <cell right='minor'><p>Open Chrome profile</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>N</cell>
+        <cell right='minor'><p>Open new incognito window</p></cell>
+        <cell><p>On Google Chrome</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>O</cell>
+        <cell right='minor'><p>Show Chrome bookmarks</p></cell>
+        <cell><p>Windows only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>P</cell>
+        <cell right='minor'><p>Open print dialog</p></cell>
+        <cell><p>Windows only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Q</cell>
+        <cell right='minor'><p>Log out current user</p></cell>
+        <cell><p>Mac only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>R</cell>
+        <cell right='minor'><p>Refresh page</p></cell>
+        <cell><p>On Google Chrome</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>S</cell>
+        <cell right='minor'><p>Save As</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>T</cell>
+        <cell right='minor'><p>Reopen closed tabs</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>U</cell>
+        <cell right='minor'><p>Undo</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>W</cell>
+        <cell right='minor'><p>Close entire window</p></cell>
+        <cell><p>On Google Chrome</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Z</cell>
+        <cell right='minor'><p>Redo</p></cell>
+        <cell><p>Opposite of an undo</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Z</cell>
+        <cell right='minor'><p>Redo</p></cell>
+        <cell><p>Opposite of an undo</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>3</cell>
+        <cell right='minor'><p>Take a screenshot of the entire screen</p></cell>
+        <cell><p>Mac only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>4</cell>
+        <cell right='minor'><p>Take a screenshot of selection (shows crosshairs)</p></cell>
+        <cell><p>Mac only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>5</cell>
+        <cell right='minor'><p>Open screenshot dialog</p></cell>
+        <cell><p>Mac only</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Tab</cell>
+        <cell right='minor'><p>Navigate windows backwards of different apps (Mac), Switch Chrome tabs backwards (Windows)</p></cell>
+        <cell><p>Note that <kbd>Control</kbd> + <kbd>Shift</kbd> + <kbd>Tab</kbd> (not <kbd>Command</kbd> + <kbd>Shift</kbd>) switches Chrome tabs backwards on Mac</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>?</cell>
+        <cell right='minor'><p>Open help search box</p></cell>
+        <cell><p>Mac only</p></cell>
+      </row>
+      
+    </tabular>
+  </subsection>
+
+  <subsection xml:id="SS_shortcut_windows">
+    <title>Starting with the Windows Key</title>
+    
+    <p>
+      This part lists many common shortcuts starting with the Windows key. Naturally, Mac users will not find this section very useful.
+    </p>
+
+    <tabular halign='center'>
+      <col width='20%'/>
+      <col width='30%'/>
+      <col width='50%'/>
+      <row header='yes' bottom='minor'>
+        <cell right='minor'>Windows Key + <ellipsis/></cell>
+        <cell right='minor'>Function</cell>
+        <cell><p>Notes</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>A</cell>
+        <cell right='minor'><p>Open notification panel</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>C</cell>
+        <cell right='minor'><p>Open Cortana</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>D</cell>
+        <cell right='minor'><p>Show desktop</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>E</cell>
+        <cell right='minor'><p>Open file explorer</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>A</cell>
+        <cell right='minor'><p>Open notification panel</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>I</cell>
+        <cell right='minor'><p>Open Settings</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>L</cell>
+        <cell right='minor'><p>Lock computer</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>M</cell>
+        <cell right='minor'><p>Minimize window</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>P</cell>
+        <cell right='minor'><p>Open screen projection panel</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Q</cell>
+        <cell right='minor'><p>Open computer search</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>R</cell>
+        <cell right='minor'><p>Open Run dialog</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>S</cell>
+        <cell right='minor'><p>Open computer search</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>V</cell>
+        <cell right='minor'><p>Open clipboard history</p></cell>
+        <cell><p>If turned on</p></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>W</cell>
+        <cell right='minor'><p>Open whiteboard or fullscreen snip dialog</p></cell>
+        <cell></cell>
+      </row>
+
+      <row bottom='minor'>
+        <cell right='minor'>Shift + S</cell>
+        <cell right='minor'><p>Open Snip dialog</p></cell>
+        <cell></cell>
+      </row>
+    </tabular>
+  </subsection>
+
+  <subsection xml:id="SS_shortcut_vscode">
+    <title><init>VS</init> Code Shortcuts</title>
+    
+    <p>
+      This part lists many useful shortcuts with work in <init>VS</init> Code. Most should work in both Windows and Mac, but any differences are noted.
+    </p>
+
+    <tabular halign='center'>
+      <col width='10%'/>
+      <col width='10%'/>
+      <col width='30%'/>
+      <col width='50%'/>
+      <row header='yes' bottom='minor'>
+        <cell right='minor'>Base Key(s)</cell>
+        <cell right='minor'>Variable Key</cell>
+        <cell><p>Function</p></cell>
+        <cell><p>Notes</p></cell>
+      </row>
+    </tabular>
+
+  </subsection>
+
+  <subsection xml:id="SS_shortcut_other">
+    <title>Other Shortcuts</title>
+    
+    <p>
+      This part lists any other common or useful shortcuts.
+    </p>
+    
+    <tabular halign='center'>
+      <col width='10%'/>
+      <col width='10%'/>
+      <col width='30%'/>
+      <col width='50%'/>
+      <row header='yes' bottom='minor'>
+        <cell right='minor'>Base Key(s)</cell>
+        <cell right='minor'>Variable Key</cell>
+        <cell><p>Function</p></cell>
+        <cell><p>Notes</p></cell>
+      </row>
+    </tabular>
+
+    </subsection>
   
 </section>
