@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-25T13:54:44-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Folder Naming</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Better Git Started">
+<meta property="book:author" content="Ian Curtis">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left standalone worksheet letter">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, Git, and GitHub</span></a></h1>
+<p class="byline">Ian Curtis</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_filenames.html#SS_practicenaming" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="S_filenames.html#SS_practicenaming" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_filenames.html#taylorswiftfiles" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_filenames.html#SS_practicenaming" title="Previous">Prev</a><a class="up-button button toolbar-item" href="S_filenames.html#SS_practicenaming" title="Up">Up</a><a class="next-button button toolbar-item" href="S_filenames.html#taylorswiftfiles" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
+<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows Users)</a></li>
+<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac Users)</a></li>
+<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux Users)</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
+<li class="link">
+<a href="C_basics.html" data-scroll="C_basics" class="internal"><span class="codenumber">1</span> <span class="title">Computer Basics</span></a><ul>
+<li><a href="S_filenames.html" data-scroll="S_filenames" class="internal">File and Folder Names</a></li>
+<li><a href="S_fileextensions.html" data-scroll="S_fileextensions" class="internal">File Extensions</a></li>
+<li><a href="S_filepaths.html" data-scroll="S_filepaths" class="internal">File Paths</a></li>
+<li><a href="S_shortcuts.html" data-scroll="S_shortcuts" class="internal">Keyboard Shortcuts</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_commandline.html" data-scroll="C_commandline" class="internal"><span class="codenumber">2</span> <span class="title">The Command Line</span></a><ul>
+<li><a href="S_whatiscommline.html" data-scroll="S_whatiscommline" class="internal">What is the Command Line? (*)</a></li>
+<li><a href="whereiscommline.html" data-scroll="whereiscommline" class="internal">Where is the Command Line?</a></li>
+<li><a href="S_commands.html" data-scroll="S_commands" class="internal">Basic Commands</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-solo.html" data-scroll="part-solo" class="internal"><span class="codenumber">II</span> <span class="title">Working Solo</span></a></li>
+<li class="link">
+<a href="C_githubsolo.html" data-scroll="C_githubsolo" class="internal"><span class="codenumber">3</span> <span class="title">GitHub Solo</span></a><ul>
+<li><a href="S_hubnavigate.html" data-scroll="S_hubnavigate" class="internal">Navigating GitHub</a></li>
+<li><a href="S_hubfirstrepo.html" data-scroll="S_hubfirstrepo" class="internal">The First Repository and File</a></li>
+<li><a href="S_hubbranches.html" data-scroll="S_hubbranches" class="internal">Working With Branches</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitsolo.html" data-scroll="C_gitsolo" class="internal"><span class="codenumber">4</span> <span class="title">Git Solo</span></a><ul>
+<li><a href="S_gitsetup.html" data-scroll="S_gitsetup" class="internal">Getting Set Up with Git</a></li>
+<li><a href="S_gitedits.html" data-scroll="S_gitedits" class="internal">Editing Files</a></li>
+<li><a href="S_gitfinalize.html" data-scroll="S_gitfinalize" class="internal">Sending Changes Back To GitHub: The Three-Step Process</a></li>
+<li><a href="S_gitpr.html" data-scroll="S_gitpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitsumm.html" data-scroll="S_gitsumm" class="internal">Summary</a></li>
+<li><a href="S_gitbigact.html" data-scroll="S_gitbigact" class="internal">Working Solo: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
+<li class="link">
+<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
+<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
+<li><a href="S_hubcollabsetup.html" data-scroll="S_hubcollabsetup" class="internal">Getting Set Up To Collaborate</a></li>
+<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
+<li><a href="S_hubcollabfetch.html" data-scroll="S_hubcollabfetch" class="internal">Fetching Upstream</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitcollab.html" data-scroll="C_gitcollab" class="internal"><span class="codenumber">6</span> <span class="title">Git Collaboration</span></a><ul>
+<li><a href="S_gitcollabsetup.html" data-scroll="S_gitcollabsetup" class="internal">Getting Set Up: A Few Extra Steps</a></li>
+<li><a href="S_gitcollabedit.html" data-scroll="S_gitcollabedit" class="internal">Collaboration Editing With Git</a></li>
+<li><a href="S_gitcollabfinalize.html" data-scroll="S_gitcollabfinalize" class="internal">Revisiting the Three Step Process</a></li>
+<li><a href="S_gitcollabpr.html" data-scroll="S_gitcollabpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitcollabsumm.html" data-scroll="S_gitcollabsumm" class="internal">Summary</a></li>
+<li><a href="S_gitcollabbigact.html" data-scroll="S_gitcollabbigact" class="internal">Working Together: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="app_commlinecustom.html" data-scroll="app_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
+<li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
+<li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
+<li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
+<li><a href="S_custterm_all.html" data-scroll="S_custterm_all" class="internal">For All</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a><ul>
+<li><a href="S_hubissues.html" data-scroll="S_hubissues" class="internal">The Issues Tab</a></li>
+<li><a href="S_hub-seecommits.html" data-scroll="S_hub-seecommits" class="internal">Commit History</a></li>
+<li><a href="S_hub-about.html" data-scroll="S_hub-about" class="internal">The About Panel</a></li>
+<li><a href="S_hubcollabtree.html" data-scroll="S_hubcollabtree" class="internal">The Branch Tree Diagram (Network Graph)</a></li>
+<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="internal">Deleting a Repository</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">C</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
+<li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
+<li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
+<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
+<li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
+<li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
+</ul>
+</li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="worksheet" id="taylorswiftfolders"><h4 class="heading hide-type">
+<span class="type">Worksheet</span> <span class="codenumber"></span> <span class="title">Folder Naming</span><div class="print-links">
+<a href="taylorswiftfolders-a4.html" class="a4">A4</a><a href="taylorswiftfolders-letter.html" class="us">US</a>
+</div>
+</h4>
+<section class="introduction" id="introduction-4"><p id="p-81">Suppose you work for Taylor Swift (wouldn't that be cool!). She is super busy right now recording albums, writing songs, spending time with family and friends, and making TikToks and needs your help. She has all of her songs saved on her computer in folders which are divided up by one album per folder. She has asked you to help her rename her files so that she still knows what each song is, but follows proper naming conventions. Use your knowledge from above to help Taylor out.</p>
+<p id="p-82">We will start with her folders. Following is a list of her current folder names: </p>
+<ul class="disc cols2">
+<li id="li-24"><p id="p-83">Taylor Swift</p></li>
+<li id="li-25"><p id="p-84">Taylor Swift (Deluxe)</p></li>
+<li id="li-26"><p id="p-85">Live From Clear Channel Stripped 2008</p></li>
+<li id="li-27"><p id="p-86">Fearless</p></li>
+<li id="li-28"><p id="p-87">Fearless (Platinum Edition)</p></li>
+<li id="li-29"><p id="p-88">The Taylor Swift Holiday Collection</p></li>
+<li id="li-30"><p id="p-89">Speak Now</p></li>
+<li id="li-31"><p id="p-90">Speak Now (Deluxe Edition)</p></li>
+<li id="li-32"><p id="p-91">Speak Now World Tour Live</p></li>
+<li id="li-33"><p id="p-92">Red</p></li>
+<li id="li-34"><p id="p-93">Red (Deluxe Edition)</p></li>
+<li id="li-35"><p id="p-94">1989</p></li>
+<li id="li-36"><p id="p-95">1989 (Deluxe Edition)</p></li>
+<li id="li-37"><p id="p-96">reputation</p></li>
+<li id="li-38"><p id="p-97">Lover</p></li>
+<li id="li-39"><p id="p-98">folklore</p></li>
+<li id="li-40"><p id="p-99">folklore (deluxe edtion)</p></li>
+<li id="li-41"><p id="p-100">folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]</p></li>
+<li id="li-42"><p id="p-101">evermore</p></li>
+<li id="li-43"><p id="p-102">evermore (deluxe version)</p></li>
+<li id="li-44"><p id="p-103">Fearless (Taylor's Version)</p></li>
+<li id="li-45"><p id="p-104">Red (Taylor's Version)</p></li>
+<li id="li-46"><p id="p-105">Unreleased Music</p></li>
+<li id="li-47"><p id="p-106">Singles</p></li>
+</ul>
+<p id="p-107">Wow! That's a lot of albums! <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 17 </sup></a> Complete the following tasks to make Taylor's life a little easier for the future.</p>
+<p id="p-108">Please note that the answers to many of these exercises will vary depending on personal preferences. I will give answers depending on how I might approach the problem; they are certainly not the only answer you could have given.</p></section><article class="exercise exercise-like" id="exercise-1"><h5 class="heading"><span class="codenumber">1<span class="period">.</span></span></h5>
+<p id="p-109">Before we trying fixing a problem, let's figure out what the problem is. What do you notice about these folder names? What about them is “incorrect”?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
+<p id="p-110">The main thing that pops out to me are the spaces. Every multi-word folder name has a space. Secondly, some of the names are very long. Third, there is not much consistency. Some names are capitalized, others aren't. There are clearly deluxe versions of albums but some say “deluxe”, others say “deluxe version”, and even others say “deluxe edition”.</p>
+<p id="p-111">The three here are the main issues; you may have thought of others. Great! I'm sure they are good observations.</p>
+</div></div>
+</div></article><article class="exercise exercise-like" id="taylorswiftgroups"><h5 class="heading"><span class="codenumber">2<span class="period">.</span></span></h5>
+<p id="p-112">Ok, we've identified a problem. How can we go about deciding what to do about it? You may already have some ideas, but stick with me here. Let's not just dive in and start removing spaces and shortening folder names. Instead, let's make a plan.</p>
+<p id="p-113">Identify some naming patterns. Are there any album names that are similar? Can you form any groups of names?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
+<p id="p-114">There are probably a lot of patterns you could have noticed. I grouped folder names into</p>
+<ol class="decimal">
+<li id="li-48"><p id="p-115">Standard albums</p></li>
+<li id="li-49"><p id="p-116">Deluxe albums</p></li>
+<li id="li-50"><p id="p-117">Live albums</p></li>
+<li id="li-51"><p id="p-118">Taylor's Version albums</p></li>
+<li id="li-52"><p id="p-119">Other</p></li>
+</ol>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-3"><h5 class="heading"><span class="codenumber">3<span class="period">.</span></span></h5>
+<p id="p-120">I am going to continue with the groups in the solution to <a href="" class="xref" data-knowl="./knowl/taylorswiftgroups.html" title="Worksheet Exercise 2">Worksheet Exercise 2</a>. Feel free to branch off with your own groups or stick with me.</p>
+<p id="p-121">Now that we have groups, we can figure out how to name one of each group, then apply that naming style to all names in the group. Start with the standard albums, such as “Taylor Swift”. How can you change this name to stick with the conventions discussed above?</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-122">Since there aren't any special modifiers to this album (such as deluxe or live), I say we just keep its name, but write them in kebab-case. Therefore, “Taylor Swift” would become <code class="code-inline tex2jax_ignore">taylor-swift</code>.</p></div></div>
+</div></article><article class="exercise exercise-like" id="exercise-4"><h5 class="heading"><span class="codenumber">4<span class="period">.</span></span></h5>
+<p id="p-123">Apply the naming to scheme to all folders with “regular” album titles.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
+<p id="p-124">The following names are the modified versions:</p>
+<ul class="disc cols2">
+<li id="li-53"><p id="p-125"><code class="code-inline tex2jax_ignore">taylor-swift</code></p></li>
+<li id="li-54"><p id="p-126"><code class="code-inline tex2jax_ignore">fearless</code></p></li>
+<li id="li-55"><p id="p-127"><code class="code-inline tex2jax_ignore">speak-now</code></p></li>
+<li id="li-56"><p id="p-128"><code class="code-inline tex2jax_ignore">red</code></p></li>
+<li id="li-57"><p id="p-129"><code class="code-inline tex2jax_ignore">1989</code></p></li>
+<li id="li-58"><p id="p-130"><code class="code-inline tex2jax_ignore">reputation</code></p></li>
+<li id="li-59"><p id="p-131"><code class="code-inline tex2jax_ignore">lover</code></p></li>
+<li id="li-60"><p id="p-132"><code class="code-inline tex2jax_ignore">folklore</code></p></li>
+<li id="li-61"><p id="p-133"><code class="code-inline tex2jax_ignore">evermore</code></p></li>
+</ul>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-5"><h5 class="heading"><span class="codenumber">5<span class="period">.</span></span></h5>
+<p id="p-134">Continue with the deluxe group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
+<p id="p-135">For the deluxe albums, the similarity is the word “deluxe”. I don't bother with “edition” or “version”, “deluxe” is enough to convey the necessary information. I also would like to abbreviate “deluxe” to “dlx”. You could also choose to keep the full word, but since we can't ask Taylor what she would prefer, I am sticking with the shorter. “dlx” gets the point across (this is a deluxe album) with 3 less characters. Following are my changes for the deluxe group. There is one outlier: the Fearless Platinum Edition. I am going to retain the “platinum” name since that is its true name.</p>
+<ul class="disc cols2">
+<li id="li-62"><p id="p-136"><code class="code-inline tex2jax_ignore">taylor-swift-dlx</code></p></li>
+<li id="li-63"><p id="p-137"><code class="code-inline tex2jax_ignore">fearless-pltnm</code></p></li>
+<li id="li-64"><p id="p-138"><code class="code-inline tex2jax_ignore">speak-now-dlx</code></p></li>
+<li id="li-65"><p id="p-139"><code class="code-inline tex2jax_ignore">red-dlx</code></p></li>
+<li id="li-66"><p id="p-140"><code class="code-inline tex2jax_ignore">1989-dlx</code></p></li>
+<li id="li-67"><p id="p-141"><code class="code-inline tex2jax_ignore">folklore-dlx</code></p></li>
+<li id="li-68"><p id="p-142"><code class="code-inline tex2jax_ignore">evermore-dlx</code></p></li>
+</ul>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-6"><h5 class="heading"><span class="codenumber">6<span class="period">.</span></span></h5>
+<p id="p-143">Continue with the live group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
+<p id="p-144">There are only two in this group, but there could be more in the future. Let's use “live” to differentiate these folders from the others. I am choosing to not use “lve” or “lv” because I think there are slightly ambiguous (it could mean “love”!).</p>
+<ul class="disc">
+<li id="li-69"><p id="p-145"><code class="code-inline tex2jax_ignore">clear-chnl-live</code></p></li>
+<li id="li-70"><p id="p-146"><code class="code-inline tex2jax_ignore">speak-now-live</code></p></li>
+</ul>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-7"><h5 class="heading"><span class="codenumber">7<span class="period">.</span></span></h5>
+<p id="p-147">Continue with the Taylor's Version group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
+<p id="p-148">I am going to again use kebab-case and use “tv” to indicate that the album is a Taylor's Version. This will help cut down on name length.</p>
+<ul class="disc">
+<li id="li-71"><p id="p-149"><code class="code-inline tex2jax_ignore">fearless-tv</code></p></li>
+<li id="li-72"><p id="p-150"><code class="code-inline tex2jax_ignore">red-tv</code></p></li>
+</ul>
+</div></div>
+</div></article><article class="exercise exercise-like" id="exercise-8"><h5 class="heading"><span class="codenumber">8<span class="period">.</span></span></h5>
+<p id="p-151">Continue with the other group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
+<div class="solutions">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
+<p id="p-152">These are mostly up to you. They have no specific pattern, but I will still apply kebab-case and shorten the names.</p>
+<ul class="disc">
+<li id="li-73"><p id="p-153"><code class="code-inline tex2jax_ignore">holiday-clctn</code> (I could even use <code class="code-inline tex2jax_ignore">holiday</code> since there is only one holiday album)</p></li>
+<li id="li-74"><p id="p-154"><code class="code-inline tex2jax_ignore">folklore-dsny-dlx</code> (yes, this is a deluxe album, but to me, the Disney part of it is unique)</p></li>
+<li id="li-75"><p id="p-155"><code class="code-inline tex2jax_ignore">unreleased</code></p></li>
+<li id="li-76"><p id="p-156"><code class="code-inline tex2jax_ignore">singles</code></p></li>
+</ul>
+</div></div>
+</div></article><section class="conclusion" id="conclusion-1"><p id="p-157">I think that's all of them! That may have seemed like a lot of work but I hope it was worthwhile. It should now be much easier for Taylor to navigate her folders and quickly know that album they contain.</p></section></section></div></main>
+</div>
+</body>
+</html>

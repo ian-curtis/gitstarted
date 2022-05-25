@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-23T13:29:02-04:00       *-->
+<!--*       on 2022-05-25T13:55:15-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,15 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<p>As more people collaborate on a project at the same time, the complexity of the branch and fork system increases. With this, it is important to consider potential conflicts. Especially with larger projects, you could have multiple working on the same area at the same time. If two people decide to change the same part of the project at the same time, who's edits win? Who gets the privilege of having their changes incorporated into <code class="code-inline tex2jax_ignore">main</code>? Sadly, GitHub and Git cannot figure that out by themselves and create a merge conflict, leaving you, the repo moderator, to settle the dispute.</p>
-<span class="incontext"><a href="S_collabconsider.html#p-722" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>This is necessary to understand for <code class="code-inline tex2jax_ignore">git push</code>. The command has four parts:</p>
+<ol class="decimal">
+<li><p><code class="code-inline tex2jax_ignore">git</code>, telling our computer to use Git</p></li>
+<li><p><code class="code-inline tex2jax_ignore">push</code>, telling Git that we are going to be pushing our committed files somewhere</p></li>
+<li><p>The remote you want to push to. Here, we will use <code class="code-inline tex2jax_ignore">origin</code>.</p></li>
+<li><p>The branch you want to push to.</p></li>
+</ol>
+<p class="continuation">With this information, try <a href="" class="xref" data-knowl="./knowl/try-git-push.html" title="Git Procedure 4.7: Trying git push">Git Procedure 4.7</a> which will guide you through the process and some common errors should you forget one of the four parts.</p>
+<span class="incontext"><a href="S_gitfinalize.html#p-722" class="internal">in-context</a></span>
 </body>
 </html>

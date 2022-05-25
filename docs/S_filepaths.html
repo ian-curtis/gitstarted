@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-23T13:28:39-04:00       *-->
+<!--*       on 2022-05-25T13:54:47-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -82,6 +82,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
 <li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows Users)</a></li>
 <li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac Users)</a></li>
@@ -94,7 +95,7 @@
 <li><a href="S_filenames.html" data-scroll="S_filenames" class="internal">File and Folder Names</a></li>
 <li><a href="S_fileextensions.html" data-scroll="S_fileextensions" class="internal">File Extensions</a></li>
 <li><a href="S_filepaths.html" data-scroll="S_filepaths" class="active">File Paths</a></li>
-<li><a href="S_shortcuts.html" data-scroll="S_shortcuts" class="internal">Keyboard Shortcuts (*)</a></li>
+<li><a href="S_shortcuts.html" data-scroll="S_shortcuts" class="internal">Keyboard Shortcuts</a></li>
 </ul>
 </li>
 <li class="link">
@@ -102,7 +103,6 @@
 <li><a href="S_whatiscommline.html" data-scroll="S_whatiscommline" class="internal">What is the Command Line? (*)</a></li>
 <li><a href="whereiscommline.html" data-scroll="whereiscommline" class="internal">Where is the Command Line?</a></li>
 <li><a href="S_commands.html" data-scroll="S_commands" class="internal">Basic Commands</a></li>
-<li><a href="S_advcommands.html" data-scroll="S_advcommands" class="internal">Advanced Commands (*)</a></li>
 </ul>
 </li>
 <li class="link part"><a href="part-solo.html" data-scroll="part-solo" class="internal"><span class="codenumber">II</span> <span class="title">Working Solo</span></a></li>
@@ -119,7 +119,7 @@
 <li><a href="S_gitedits.html" data-scroll="S_gitedits" class="internal">Editing Files</a></li>
 <li><a href="S_gitfinalize.html" data-scroll="S_gitfinalize" class="internal">Sending Changes Back To GitHub: The Three-Step Process</a></li>
 <li><a href="S_gitpr.html" data-scroll="S_gitpr" class="internal">The Final Steps</a></li>
-<li><a href="S_gitsolosumm.html" data-scroll="S_gitsolosumm" class="internal">Summary</a></li>
+<li><a href="S_gitsumm.html" data-scroll="S_gitsumm" class="internal">Summary</a></li>
 <li><a href="S_gitbigact.html" data-scroll="S_gitbigact" class="internal">Working Solo: The Culminating Experience</a></li>
 </ul>
 </li>
@@ -139,12 +139,12 @@
 <li><a href="S_gitcollabfinalize.html" data-scroll="S_gitcollabfinalize" class="internal">Revisiting the Three Step Process</a></li>
 <li><a href="S_gitcollabpr.html" data-scroll="S_gitcollabpr" class="internal">The Final Steps</a></li>
 <li><a href="S_gitcollabsumm.html" data-scroll="S_gitcollabsumm" class="internal">Summary</a></li>
-<li><a href="S_gitcollabbigact.html" data-scroll="S_gitcollabbigact" class="internal">Working Together: The Culminating Experience (*)</a></li>
+<li><a href="S_gitcollabbigact.html" data-scroll="S_gitcollabbigact" class="internal">Working Together: The Culminating Experience</a></li>
 </ul>
 </li>
 <li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
 <li class="link">
-<a href="S_commlinecustom.html" data-scroll="S_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
+<a href="app_commlinecustom.html" data-scroll="app_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
 <li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
 <li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
 <li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
@@ -167,6 +167,7 @@
 <li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 <li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
 <li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
+<li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
 </ul>
 </li>
 <li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
@@ -177,35 +178,35 @@
 <section class="section" id="S_filepaths"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.3</span> <span class="title">File Paths</span>
 </h2>
-<section class="introduction" id="introduction-7"><p id="p-226">Imagine that I bring you to the edge of a forest, an immense, thick, unexplored forest. When we get there, I tell you that somewhere in that forest lays a chest of pure diamonds, put there 1000 years ago. Then I give you a task: I need you to go find that chest for me (yes, you get a portion of the loot).</p>
-<p id="p-227">Think about how you might go about this task. The forest is unexplored; we only know that the chest exists inside. Where will you look first? Where will you enter? How will you keep track of where you've been? If you find it, how will you get back? There are many issues preventing you from doing you task efficiently. Sure, you could get lucky and the chest might be only 50 feet from the edge. But maybe it's 3000 feet away (or more!).</p>
-<p id="p-228">Think of your computer like the forest. If I ask my computer to open a file called <code class="code-inline tex2jax_ignore">poem.pdf</code>, how will it know where to look for that file? Like you in the forest, it wouldn't even know where to start. Likewise, what if I had two files named <code class="code-inline tex2jax_ignore">poem.pdf</code> in different folders? What if I had two files named <code class="code-inline tex2jax_ignore">poem.pdf</code> in the same folder? How would it know which one to grab? It wouldn't! It's like me telling you there are two identical chests of diamonds in the forest and I want you to bring me the one I am thinking about. But you don't know the one I am thinking about.</p>
-<p id="p-229">This situation necessitates file paths. Literally, they are the direct path through which the computer can find the exact file you are thinking of. You are basically telling the computer where the file is. Continuing the forest example, it's as if I told you to enter the forest, take a right at the first tree with a triangle, turn left at the lake, and walk six steps past the boulder shaped like Mickey Mouse. You'd know exactly how to get there and would always find the correct file.</p></section><section class="subsection" id="paths-construct"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-7"><p id="p-228">Imagine that I bring you to the edge of a forest, an immense, thick, unexplored forest. When we get there, I tell you that somewhere in that forest lays a chest of pure diamonds, put there 1000 years ago. Then I give you a task: I need you to go find that chest for me (yes, you get a portion of the loot).</p>
+<p id="p-229">Think about how you might go about this task. The forest is unexplored; we only know that the chest exists inside. Where will you look first? Where will you enter? How will you keep track of where you've been? If you find it, how will you get back? There are many issues preventing you from doing you task efficiently. Sure, you could get lucky and the chest might be only 50 feet from the edge. But maybe it's 3000 feet away (or more!).</p>
+<p id="p-230">Think of your computer like the forest. If I ask my computer to open a file called <code class="code-inline tex2jax_ignore">poem.pdf</code>, how will it know where to look for that file? Like you in the forest, it wouldn't even know where to start. Likewise, what if I had two files named <code class="code-inline tex2jax_ignore">poem.pdf</code> in different folders? What if I had two files named <code class="code-inline tex2jax_ignore">poem.pdf</code> in the same folder? How would it know which one to grab?It wouldn't! It's like me telling you there are two identical chests of diamonds in the forest and I want you to bring me the one I am thinking about. But you don't know the one I am thinking about.</p>
+<p id="p-231">This situation necessitates file paths. Literally, they are the direct path through which the computer can find the exact file you are thinking of. You are basically telling the computer where the file is. Continuing the forest example, it's as if I told you to enter the forest, take a right at the first tree with a triangle, turn left at the lake, and walk six steps past the boulder shaped like Mickey Mouse. You'd know exactly how to get there and would always find the correct file.</p></section><section class="subsection" id="paths-construct"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.3.1</span> <span class="title">Constructing File Paths</span>
 </h3>
-<p id="p-230">What do computer file paths look like? You might have seen one before. Here is an example of a file path on a Mac: <blockquote class="blockquote" id="blockquote-9"><code class="code-inline tex2jax_ignore">/Users/&lt;username&gt;/Documents/poem.pdf</code></blockquote> With this you can see exactly where my poem lies. First, go to a list of all the users on my computer. Second, look at the files for my username, go to the documents folder, and access the file called <code class="code-inline tex2jax_ignore">poem.pdf</code>. Easy!</p>
-<p id="p-231">Maybe. Here's what that would look like on a Windows computer: <blockquote class="blockquote" id="blockquote-10"><code class="code-inline tex2jax_ignore">C:\Users\&lt;username&gt;\Documents\poem.pdf</code></blockquote> That looks a little different. This one says to go to the C drive. Then look at the list of the users on the computer. Then go to the files for my username, then the documents folder, then the file <code class="code-inline tex2jax_ignore">poem.pdf</code>.</p>
-<p id="p-232">However, they both work the same. The fundamental structure is “start at the outmost folder and work your way in through folders until you get to the file or folder you are looking for”. Recall from <a href="S_filenames.html" class="internal" title="Section 1.1: File and Folder Names">Section 1.1</a> that files must have an extension while folders do not.</p>
-<p id="p-233">The key thing to note is that Mac and Windows are designed differently. Mac uses forward slashes to indicate a folder change and Windows uses backslashes (in Git Bash, Windows users can use forward slashes…one reason for sticking with Git Bash!). But their structures are different as well. Notice that Windows has “C:” at the beginning. This is the C drive and there are other drives. Other differences are beyond the scope of this book (and likely beyond my understanding). A brief history on file paths is given by <a class="external" href="https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/" target="_blank">How-To Geek</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-23" id="fn-23"><sup> 23 </sup></a> and a rather hard-to-read explanation can be found on <a class="external" href="https://en.wikipedia.org/wiki/Path_(computing)" target="_blank">Wikipedia</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-24" id="fn-24"><sup> 24 </sup></a>.</p>
-<p id="p-234">There are a few important points to remember when reading or finding a file path. The main goal from this section is that you understand how a file path is structured. Paths will come back later.</p>
+<p id="p-232">What do computer file paths look like? You might have seen one before. Here is an example of a file path on a Mac: <blockquote class="blockquote" id="blockquote-9"><code class="code-inline tex2jax_ignore">/Users/&lt;username&gt;/Documents/poem.pdf</code></blockquote>With this you can see exactly where my poem lies. First, go to a list of all the users on my computer.Second, look at the files for my username, go to the documents folder, and access the file called <code class="code-inline tex2jax_ignore">poem.pdf</code>. Easy!</p>
+<p id="p-233">Maybe. Here's what that would look like on a Windows computer: <blockquote class="blockquote" id="blockquote-10"><code class="code-inline tex2jax_ignore">C:\Users\&lt;username&gt;\Documents\poem.pdf</code></blockquote> That looks a little different. This one says to go to the C drive. Then look at the list of the users on the computer. Then go to the files for my username, then the documents folder, then the file <code class="code-inline tex2jax_ignore">poem.pdf</code>.</p>
+<p id="p-234">However, they both work the same. The fundamental structure is “start at the outmost folder and work your way in through folders until you get to the file or folder you are looking for”. Recall from <a href="S_filenames.html" class="internal" title="Section 1.1: File and Folder Names">Section 1.1</a> that files must have an extension while folders do not.</p>
+<p id="p-235">The key thing to note is that Mac and Windows are designed differently. Mac uses forward slashes to indicate a folder change and Windows uses backslashes (in Git Bash, Windows users can use forward slashes…one reason for sticking with Git Bash!). But their structures are different as well. Notice that Windows has “C:” at the beginning. This is the C drive and there are other drives. Other differences are beyond the scope of this book (and likely beyond my understanding). A brief history on file paths is given by <a class="external" href="https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/" target="_blank">How-To Geek</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-23" id="fn-23"><sup> 23 </sup></a> and a rather hard-to-read explanation can be found on <a class="external" href="https://en.wikipedia.org/wiki/Path_(computing)" target="_blank">Wikipedia</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-24" id="fn-24"><sup> 24 </sup></a>.</p>
+<p id="p-236">There are a few important points to remember when reading or finding a file path. The main goal from this section is that you understand how a file path is structured. Paths will come back later.</p>
 <ul class="disc">
-<li id="li-120"><p id="p-235">File paths do not like spaces. Recall the lesson learned in <a href="" class="xref" data-knowl="./knowl/namesspaces.html" title="Paragraphs: File Names With Spaces">File Names With Spaces</a>. To a computer spaces indicate that you are ending the file path and starting something new. Do not name folders or files with spaces.</p></li>
-<li id="li-121"><p id="p-236">When you want to enter a new folder, use a slash (forward or backward) to indicate that you are going further in the document tree.</p></li>
+<li id="li-120"><p id="p-237">File paths do not like spaces. Recall the lesson learned in <a href="" class="xref" data-knowl="./knowl/namesspaces.html" title="Paragraphs: File Names With Spaces">File Names With Spaces</a>. To a computer spaces indicate that you are ending the file path and starting something new. Do not name folders or files with spaces.</p></li>
+<li id="li-121"><p id="p-238">When you want to enter a new folder, use a slash (forward or backward) to indicate that you are going further in the document tree.</p></li>
 <li id="li-122">
-<p id="p-237">File paths are unique; you cannot have one file path refer to two objects. This is why your computer will never let you have two files with the same name and extension in the same folder.</p>
-<p id="p-238">You can however have files with the same name in different folders. Since the file path is different, there are no issues with duplicate files.</p>
+<p id="p-239">File paths are unique; you cannot have one file path refer to two objects. This is why your computer will never let you have two files with the same name and extension in the same folder.</p>
+<p id="p-240">You can however have files with the same name in different folders. Since the file path is different, there are no issues with duplicate files.</p>
 </li>
 </ul></section><section class="subsection" id="paths-hints"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">Helpful Hints and Reminders</span>
 </h3>
 <article class="assemblage assemblage-like" id="assemblage-2"><h4 class="heading"><span class="title">File and Folder Naming.</span></h4>
-<p id="p-239">Recall <a href="" class="xref" data-knowl="./knowl/filenamecases.html" title="Note 1.1.1.1: Alternative Naming Options">Note 1.1.1.1</a> for alternative naming methods for files and folders. Please, please, please do not use spaces (and consider renaming your existing files that you plan to use with the terminal). I know it looks weird to name things using these cases, but if you really are set on learning Git and the command line, you will want to follow this convention.</p></article><article class="assemblage assemblage-like" id="findingpaths"><h4 class="heading"><span class="title">Finding File Paths.</span></h4>
-<p id="p-240">In theory, you will never need to type out the full file path. Your computer actually records this information for you to just copy.</p>
-<p id="p-241">On a Mac, right click on any file or folder you want the path for. Click “Get Info”. Under a label called “Where:” you can find the path. Right click on that path and hit “Copy as pathname” to copy the path in the same format as the paths above.</p>
-<p id="p-242">On Windows, right click on any file or folder you want the path for. Click “Properties”. Under a label called “Location:” you can find the path. Highlight the text and copy it.</p></article><article class="assemblage assemblage-like" id="pathsfish"><h4 class="heading"><span class="title">Using the fish Shell.</span></h4>
-<p id="p-243"><em class="alert">Advanced users only.</em></p>
-<p id="p-244">If you changed your shell to fish as described in <a href="S_commlinecustom.html" class="internal" title="Appendix A: Customizing the Terminal">Appendix A</a>, you won't even have to copy a path or remember a path. fish contains autocomplete that looks for files and folders in your current folder and recommends completions.</p></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-23"><div class="fn"><code class="code-inline tex2jax_ignore">https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-24"><div class="fn"><code class="code-inline tex2jax_ignore">https://en.wikipedia.org/wiki/Path_(computing)</code></div></div>
+<p id="p-241">Recall <a href="" class="xref" data-knowl="./knowl/filenamecases.html" title="Note 1.1.1.1: Alternative Naming Options">Note 1.1.1.1</a> for alternative naming methods for files and folders. Please, please, please do not use spaces (and consider renaming your existing files that you plan to use with the terminal). I know it looks weird to name things using these cases, but if you really are set on learning Git and the command line, you will want to follow this convention.</p></article><article class="assemblage assemblage-like" id="findingpaths"><h4 class="heading"><span class="title">Finding File Paths.</span></h4>
+<p id="p-242">In theory, you will never need to type out the full file path. Your computer actually records this information for you to just copy.</p>
+<p id="p-243">On a Mac, right click on any file or folder you want the path for. Click “Get Info”. Under a label called “Where:” you can find the path. Right click on that path and hit “Copy as pathname” to copy the path in the same format as the paths above.</p>
+<p id="p-244">On Windows, right click on any file or folder you want the path for. Click “Properties”. Under a label called “Location:” you can find the path. Highlight the text and copy it.</p></article><article class="assemblage assemblage-like" id="pathsfish"><h4 class="heading"><span class="title">Using the fish Shell.</span></h4>
+<p id="p-245"><em class="alert">Advanced users only.</em></p>
+<p id="p-246">If you changed your shell to fish as described in <a href="app_commlinecustom.html" class="internal" title="Appendix A: Customizing the Terminal">Appendix A</a>, you won't even have to copy a path or remember a path. fish contains autocomplete that looks for files and folders in your current folder and recommends completions.</p></article></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-23"><div class="fn"><code class="code-inline tex2jax_ignore">howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-24"><div class="fn"><code class="code-inline tex2jax_ignore">en.wikipedia.org/wiki/Path_(computing)</code></div></div>
 </div></main>
 </div>
 </body>
