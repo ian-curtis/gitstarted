@@ -143,7 +143,7 @@
       So you really to delete a repository? Think long and hard about this one. Are you sure? Are you really sure? Deleting repos are <em>irreversible</em> and can have lasting effects. For instance, all forks will be broken, but not deleted. If you delete a private repo, all forks will also be deleted. Any website that contains a link to your repo will no longer work and people might wonder where it went. And so on.
     </p>
     <p>
-      But here you are, so clearly you have decided to delete one. To delete a repository, you have to enter the danger zone.
+      But here you are, so clearly you have decided to delete one. To delete a repository, you have to enter the danger zone (<pubtitle>Top Gun</pubtitle> anyone?).
     </p>
 
     <activity xml:id="hub-delete-repo">

@@ -116,7 +116,7 @@
         <alert>Advanced users only.</alert>
       </p>
       <p>
-        If you changed your shell to fish as described in <xref ref="S_commlinecustom"/>, you won't 
+        If you changed your shell to fish as described in <xref ref="app_commlinecustom"/>, you won't 
         even have to copy a path or remember a path. fish contains autocomplete that looks for files 
         and folders in your current folder and recommends completions. 
       </p>

@@ -181,7 +181,7 @@
       
     </project>
 
-    <warning>
+    <warning xml:id="warn-pull-often">
       <title>Use <c>git pull</c> Frequently</title>
       
       <p>
