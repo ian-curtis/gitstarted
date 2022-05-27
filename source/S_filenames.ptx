@@ -692,8 +692,8 @@
   </activity>
 
   <p>
-    If you feel like you have a good grasp of naming systems, feel free to skip with activity. 
-    If not, let's explore file naming a little further. In <xref ref="taylorswiftfolders"/>, we focused on folder names and since you helped her there, she is asking for your guidance with her file names as well.
+    If you feel like you have a good grasp of naming systems, feel free to skip <xref ref="taylorswiftfiles"/>. 
+    If not, let's explore file naming a little further. In <xref ref="taylorswiftfolders"/>, we focused on Taylor's folder names and since you helped her there, she is asking for your guidance with her file names as well.
   </p>
 
   <activity xml:id="taylorswiftfiles">

@@ -128,7 +128,7 @@
 
     <figure xml:id="fig-hub-animal-initial">
       <caption>Diagram mapping branches after creating the animal branch</caption>
-      <image source="hub_animal_initial" width="90%">
+      <image source="hub_animal_initial" width="70%">
         <description>Arrow diagram. Main branch to animal branch.</description>
       </image>
     </figure>
