@@ -573,6 +573,13 @@
       </row>
 
       <row bottom='minor'>
+        <cell right='minor'><kbd>Alt</kbd> +</cell>
+        <cell right='minor'>Z</cell>
+        <cell right='minor'><p>Force line breaks</p></cell>
+        <cell>Works for lines that go off screen. Makes these lines default to start back at the beginning, while keeping the content on the same line.</cell>
+      </row>
+
+      <row bottom='minor'>
         <cell right='minor'><kbd>Shift</kbd> +</cell>
         <cell right='minor'>Left/Right arrows</cell>
         <cell right='minor'><p>Select one character at a time to the left/right</p></cell>
