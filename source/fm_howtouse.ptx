@@ -53,4 +53,30 @@
     If you are prepared to dive in, visit the following prefaces to download the necessary materials, then proceed to learning!
   </p>
 
+  <paragraphs xml:id="fm_issues">
+    <title>Known Issues</title>
+    
+    <p>
+      There are certain parts of the book that could be better. I list some below.
+
+      <ul>
+        <li>
+          <p>
+            Some figures, particularly the branch diagrams, are blurry from file conversion. Additionally, they have a <q>miro</q> watermark in the bottom corner.
+          </p>
+        </li>
+        <li>
+          <p>
+            Images could probably use better alt text
+          </p>
+        </li>
+        <li>
+          <p>
+            Certain parts of the appendices need more content for Windows and Linux users
+          </p>
+        </li>
+      </ul>
+    </p>
+  </paragraphs>
+
 </preface>
