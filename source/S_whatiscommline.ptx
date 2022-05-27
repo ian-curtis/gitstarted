@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 
 <section xml:id="S_whatiscommline">
-  <title>What is the Command Line? (*)</title>
+  <title>What is the Command Line?</title>
   <idx><h>command line</h></idx>
   <idx><h>command prompt</h><see>command line</see></idx>
   <idx><h>command-line interface</h><see>command line</see></idx>

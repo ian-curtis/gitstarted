@@ -231,13 +231,13 @@
   
   <introduction>
     <p>
-      There were a lot of words in <xref text='title' ref="SS_namingconventions"/>. Let's make sense of them here 
+      There were a lot of words in <xref ref="SS_namingconventions"/>. Let's make sense of them here 
       with an extensive example. There will be some questions throughout the way. I encourage you to think 
       about them and make sure you have understood the naming conventions above.
     </p>
   </introduction>
 
-  <worksheet xml:id="taylorswiftfolders">
+  <activity xml:id="taylorswiftfolders">
     <title>Folder Naming</title>
     <idx><h>folder names</h></idx>
     <introduction>
@@ -246,15 +246,7 @@
       </p>
       <p>
        We will start with her folders. Following is a list of her current folder names:
-       <!-- <aside>
-         <p>
-           These are probably not her real folder names. Actually, she might not even have her 
-           music on her own computer; the record label stores them. So please don't assume that I am 
-           critquing Taylor's file naming or her in general (I have nothing to critique anyways). 
-           I just made this example up so you can 
-           practice your file naming. 
-         </p>
-       </aside> -->
+       
 
        <ul cols="2">
          <li>
@@ -389,7 +381,7 @@
       </p>
     </introduction>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           Before we trying fixing a problem, let's figure out what the problem is. What do you notice 
@@ -408,9 +400,9 @@
           main issues; you may have thought of others. Great! I'm sure they are good observations. 
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise xml:id="taylorswiftgroups">
+    <task xml:id="taylorswiftgroups">
       <statement>
         <p>
           Ok, we've identified a problem. How can we go about deciding what to do about it? You may 
@@ -454,9 +446,9 @@
           </ol>
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           I am going to continue with the groups in the solution to <xref ref="taylorswiftgroups"/>. 
@@ -473,9 +465,9 @@
           Since there aren't any special modifiers to this album (such as deluxe or live), I say we just keep its name, but write them in kebab-case. Therefore, <q>Taylor Swift</q> would become <c>taylor-swift</c>.
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           Apply the naming to scheme to all folders with <q>regular</q> album titles.
@@ -533,9 +525,9 @@
           </ul>
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           Continue with the deluxe group. Identify patterns, change one name, then apply those 
@@ -592,9 +584,9 @@
           </ul>
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           Continue with the live group. Identify patterns, change one name, then apply those 
@@ -621,9 +613,9 @@
           </ul>
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           Continue with the Taylor's Version group. Identify patterns, change one name, then apply those 
@@ -649,9 +641,9 @@
           </ul>
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           Continue with the other group. Identify patterns, change one name, then apply those 
@@ -687,7 +679,7 @@
           </ul>
         </p>
       </solution>
-    </exercise>
+    </task>
 
     <conclusion>
       <p>
@@ -697,17 +689,18 @@
       </p>
     </conclusion>
 
-  </worksheet>
+  </activity>
 
-  <worksheet xml:id="taylorswiftfiles">
+  <p>
+    If you feel like you have a good grasp of naming systems, feel free to skip with activity. 
+    If not, let's explore file naming a little further. In <xref ref="taylorswiftfolders"/>, we focused on folder names and since you helped her there, she is asking for your guidance with her file names as well.
+  </p>
+
+  <activity xml:id="taylorswiftfiles">
     <title>File Naming</title>
     <idx><h>file names</h></idx>
     <introduction>
-      <p>
-        If you feel like you have a good grasp of naming systems, feel free to skip with activity. 
-        If not, let's explore file naming a little further. In <xref text='title' ref="taylorswiftfolders"/>, we focused on folder names 
-        and since you helped her there, she is asking for your guidance with her file names as well.
-      </p>
+      
       <p>
         We will focus on the folder that I renamed to be <c>speak-now-dlx</c>. A list of her current file 
         names for these tracks follow. I should note that it is often helpful to prefix song names with 
@@ -825,7 +818,7 @@
       </p>
     </introduction>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           Before we trying fixing a problem, let's figure out what the problem is. What do you notice 
@@ -843,9 +836,9 @@
           main issues; you may have thought of others. Great! I'm sure they are good observations. 
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise xml:id="taylorswiftgroups2">
+    <task xml:id="taylorswiftgroups2">
       <statement>
         <p>
           Ok, we've identified a problem. How can we go about deciding what to do about it? You may 
@@ -879,9 +872,9 @@
           </ol>
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           I am going to continue with the groups in the solution to <xref ref="taylorswiftgroups2"/>. 
@@ -989,9 +982,9 @@
           </ul>
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           Apply the naming to scheme to all the acoustic tracks.
@@ -1015,9 +1008,9 @@
           </ul>
         </p>
       </solution>
-    </exercise>
+    </task>
 
-    <exercise>
+    <task>
       <statement>
         <p>
           Apply the naming to scheme to all the last track.
@@ -1036,7 +1029,7 @@
           </ul>
         </p>
       </solution>
-    </exercise>
+    </task>
 
     <conclusion>
       <p>
@@ -1048,7 +1041,7 @@
       </p>
     </conclusion>
 
-  </worksheet>
+  </activity>
 
 </subsection>
  
