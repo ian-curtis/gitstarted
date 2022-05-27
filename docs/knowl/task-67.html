@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-25T13:55:16-04:00       *-->
+<!--*       on 2022-05-27T17:17:14-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,10 +14,18 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<article class="task exercise-like"><h6 class="heading">
-<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.7.b.ii</span><span class="period">.</span>
-</h6>
-<p>Once you have decided, fill in the correct pieces of the <code class="code-inline tex2jax_ignore">git push</code> formula.</p>
-<div class="solutions"><a href="" class="solution-knowl original" data-knowl="./knowl/solution-22-hidden.html" title="Solution 4.7.b.ii.1"><span class="type">Solution</span><span class="period">.</span></a></div></article><span class="incontext"><a href="S_gitfinalize.html#task-67" class="internal">in-context</a></span>
+<article class="task exercise-like"><h5 class="heading">
+<span class="type">Task</span><span class="space"> </span><span class="codenumber">4.3.c</span><span class="period">.</span>
+</h5>
+<p>Well shoot. Git still says we're on the main branch. We want it to tell us that we are on the <code class="code-inline tex2jax_ignore">country</code> branch. That's because we need to tell Git what we want to work on that new branch. Git doesn't move you to that branch in case you want to make more than one branch at one time.</p>
+<p>With Git, navigating to a new branch is done with <code class="code-inline tex2jax_ignore">switch</code>. In general,</p>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git switch &lt;branch-name&gt;
+</b>Switched to branch '&lt;branch-name&gt;'
+</pre></div>
+<p>If done correctly, Git will tell you that it switched to the new branch. This should be reflected in the branch name indicator. Switch to your new branch <code class="code-inline tex2jax_ignore">country</code>:</p>
+<div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git switch country
+</b>Switched to branch 'country'
+</pre></div>
+<p>My terminal now says <code class="code-inline tex2jax_ignore">(country)</code> instead of <code class="code-inline tex2jax_ignore">(main)</code> so I have verification that the process worked.</p></article><span class="incontext"><a href="S_gitsetup.html#task-67" class="internal">in-context</a></span>
 </body>
 </html>
