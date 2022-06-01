@@ -12,12 +12,20 @@
       <publication>publication/publication.ptx</publication>
       <output-dir>output/html</output-dir>
     </target>
-    <target name="latex">
+    <target name="latex-print">
       <format>latex</format>
       <source>source/main.ptx</source>
-      <publication>publication/publication.ptx</publication>
-      <output-dir>output/latex</output-dir>
-      <!-- <stringparam key="latex.geometry" value="top=1in, bottom=1in, outer=1.2in, inner=1.8in"/> -->
+      <publication>publication/publication_ppdf.ptx</publication>
+      <output-dir>output/latex-print</output-dir>
+      <stringparam key="latex.geometry" value="top=1in, bottom=1in, outer=1.2in, inner=1.8in"/>
+      <xsl>xsl/custom-latex.xsl</xsl>
+    </target>
+    <target name="latex-elec">
+      <format>latex</format>
+      <source>source/main.ptx</source>
+      <publication>publication/publication_epdf.ptx</publication>
+      <output-dir>output/latex-elec</output-dir>
+      <stringparam key="latex.geometry" value="top=1.2in, bottom=1.2in, outer=1.2in, inner=1.2in"/>
       <xsl>xsl/custom-latex.xsl</xsl>
     </target>
     <target name="pdf">

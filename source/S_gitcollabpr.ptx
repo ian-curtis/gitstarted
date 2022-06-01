@@ -154,7 +154,7 @@
           <task>
             <statement>
               <p>
-                Head back to your terminal and use <c>git remote add upstream &lt;https-link-you-just-copied></c>. There will be no output.
+                Head back to your terminal and use <c>git remote add upstream &lt;https-link></c>. There will be no output.
               </p>
             </statement>
           </task>

@@ -65,7 +65,7 @@
     <statement>
       <p>
         Let's begin the process of creating our first repo. Use one of the methods above get into 
-        the <q>Create a new repository</q> screen.
+        the <q>Create a new repository</q> screen (<xref ref="fig-hub-new-repo-screen"/>).
       </p>
     </statement>
   </exercise>
@@ -97,7 +97,8 @@
   </p>
   <p>
   <idx><h>readme</h></idx>
-    The next step deals with certain files that can be automatically added to your repo. You have the choice for either or none of a <c>README</c> file, a <c>.gitignore</c>, and a license. A <term>README file</term> gives all the pertinent information about your repository in an easy-to-read format. It is often the first thing that people visiting your repo will read and is very important. Check this box and we will come back to the <c>README</c> file in just a minute. A <term>gitignore</term>file tells Git all of the files <em>not</em> to put online. Do not check this box for now; it will be very useful later on, but is not needed now. You can also choose to put a <term>license</term> on your code which lets users know what they can and cannot do. If you would like to explore the different licenses, please visit <url href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" visual='docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository'>the GitHub documentation</url>.
+  <idx><h>license</h></idx>
+    The next step deals with certain files that can be automatically added to your repo. You have the choice for either or none of a <c>README</c> file, a <c>.gitignore</c>, and a license. A <term>README file</term> gives all the pertinent information about your repository in an easy-to-read format. It is often the first thing that people visiting your repo will read and is very important. Check this box and we will come back to the <c>README</c> file in just a minute. A <term>gitignore</term> file tells Git all of the files <em>not</em> to put online. Do not check this box for now; it will be very useful later on, but is not needed now. You can also choose to put a <term>license</term> on your code which lets users know what they can and cannot do. If you would like to explore the different licenses, please visit <url href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" visual='docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository'>the GitHub documentation</url>.
     Since we will delete this repo later, you do not have to select this option.
   </p>
 

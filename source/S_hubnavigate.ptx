@@ -138,7 +138,7 @@
     </p>
     <figure xml:id="fig-hub-navbar">
       <caption>The GitHub Navigation Bar</caption>
-      <image source="hub_navbar" width="40%">
+      <image source="hub_navbar" width="30%">
         <description>The GitHub Navigation Bar</description>
       </image>
     </figure>

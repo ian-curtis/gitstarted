@@ -43,6 +43,10 @@ along with PreTeXt.  If not, see <http://www.gnu.org/licenses/>.
   <xsl:text>\AtBeginEnvironment{activity}{\vskip\baselineskip}&#xa;</xsl:text>
   <xsl:text>\AtBeginEnvironment{assemblage}{\vskip\baselineskip}&#xa;</xsl:text>
   <xsl:text>\AfterEndEnvironment{assemblage}{\vskip\baselineskip}&#xa;</xsl:text>
+  <xsl:text>\AtBeginEnvironment{project}{\vskip\baselineskip}&#xa;</xsl:text>
+  <xsl:text>\AfterEndEnvironment{project}{\vskip\baselineskip}&#xa;</xsl:text>
+  <xsl:text>\AtBeginEnvironment{note}{\vskip\baselineskip}&#xa;</xsl:text>
+  <xsl:text>\AfterEndEnvironment{note}{\vskip\baselineskip}&#xa;</xsl:text>
   <xsl:text>\AtBeginEnvironment{inlineexercise}{\vskip\baselineskip}&#xa;</xsl:text>
   <xsl:text>\AfterEndEnvironment{inlineexercise}{\vskip\baselineskip}&#xa;</xsl:text>
   <xsl:text>\setlength{\parskip}{0.27\baselineskip}&#xa;</xsl:text>

@@ -18,7 +18,7 @@
     <notation-list/>
   </appendix> -->
 
-  <solutions xml:id="app_answers" project='answer solution' divisional='answer solution'>
+  <solutions xml:id="app_answers" project='hint answer solution' inline='hint answer solution'>
     <title>Answers to All Activities and Exercises</title>
     
     
