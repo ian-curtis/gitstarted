@@ -36,9 +36,10 @@
     <footnotes level="0"/>
   </numbering>
 
-  <!-- <common>
-    
-  </common> -->
+  <common>
+    <exercise-project answer="no" solution='no'/>
+    <exercise-inline answer="no" solution='no'/>
+  </common>
 
     <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->
     <!-- for printing; set @sides="two" if the printing woudl be two- -->
@@ -46,8 +47,7 @@
     <!-- links the html version of asymptote graphics.                -->
   <latex print="yes" sides="two">
     <asymptote links="no"/>
-    <exercise-project answer="no" solution='no'/>
-    <exercise-inline answer="no" solution='no'/>
+    
   </latex>
   
   <html>

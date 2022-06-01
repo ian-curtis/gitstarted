@@ -30,7 +30,7 @@
       <row bottom='minor' header='yes'>
         <cell right='minor'><kbd>Ctrl</kbd> or <kbd>Cmd</kbd> + <ellipsis/></cell>
         <cell right='minor'>Function</cell>
-        <cell><p>Notes</p></cell>
+        <cell>Notes</cell>
       </row>
 
       <row bottom='minor'>
@@ -207,7 +207,7 @@
         <cell><p>Note that <kbd>Control</kbd> + <kbd>Tab</kbd> (not <kbd>Command</kbd>) switches Chrome tabs on Mac</p></cell>
       </row>
 
-      <row bottom='minor'>
+      <row>
         <cell right='minor'>Space</cell>
         <cell right='minor'><p>Open Spotlight Search</p></cell>
         <cell><p>Mac only</p></cell>
@@ -231,7 +231,7 @@
       <row bottom='minor' header='yes'>
         <cell right='minor'><kbd>Ctrl</kbd> or <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <ellipsis/></cell>
         <cell right='minor'>Function</cell>
-        <cell><p>Notes</p></cell>
+        <cell>Notes</cell>
       </row>
 
       <row bottom='minor'>
@@ -395,7 +395,7 @@
       <row header='yes' bottom='minor'>
         <cell right='minor'>Windows Key + <ellipsis/></cell>
         <cell right='minor'>Function</cell>
-        <cell><p>Notes</p></cell>
+        <cell>Notes</cell>
       </row>
 
       <row bottom='minor'>
@@ -500,13 +500,13 @@
     <tabular halign='center'>
       <col width='10%'/>
       <col width='10%'/>
-      <col width='30%'/>
-      <col width='50%'/>
+      <col width='40%'/>
+      <col width='40%'/>
       <row header='yes' bottom='minor'>
         <cell right='minor'>Base Key(s)</cell>
         <cell right='minor'>Variable Key</cell>
-        <cell right='minor'><p>Function</p></cell>
-        <cell><p>Notes</p></cell>
+        <cell right='minor'>Function</cell>
+        <cell>Notes</cell>
       </row>
 
       <row bottom='minor'>
@@ -576,7 +576,7 @@
         <cell right='minor'><kbd>Alt</kbd> +</cell>
         <cell right='minor'>Z</cell>
         <cell right='minor'><p>Force line breaks</p></cell>
-        <cell>Works for lines that go off screen. Makes these lines default to start back at the beginning, while keeping the content on the same line.</cell>
+        <cell><p>Works for lines that go off screen. Makes these lines default to start back at the beginning, while keeping the content on the same line.</p></cell>
       </row>
 
       <row bottom='minor'>
@@ -632,15 +632,15 @@
       <row header='yes' bottom='minor'>
         <cell right='minor'>Base Key(s)</cell>
         <cell right='minor'>Variable Key</cell>
-        <cell><p>Function</p></cell>
-        <cell><p>Notes</p></cell>
+        <cell>Function</cell>
+        <cell>Notes</cell>
       </row>
 
       <row>
         <cell right='minor'><kbd>Cmd</kbd> + <kbd>Ctrl</kbd> +</cell>
         <cell right='minor'>Space</cell>
         <cell right='minor'><p>Open emoji window</p></cell>
-        <cell>Only on Mac</cell>
+        <cell><p>Only on Mac</p></cell>
       </row>
     </tabular>
 

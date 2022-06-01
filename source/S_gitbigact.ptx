@@ -251,7 +251,7 @@
         </statement>
         <answer>
           <p>
-            After editing, <c>git add .</c> or <c>git add poem2.md</c>. Then <c>git commit -m "&lt;commit-message>"</c>. <c>git status</c> might be useful here.
+            After editing, <c>git add .</c> or <c>git add poem2.md</c>. Then <c>git commit -m "&lt;message>"</c>. <c>git status</c> might be useful here.
           </p>
         </answer>
       </task>

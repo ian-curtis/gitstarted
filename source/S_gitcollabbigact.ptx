@@ -125,7 +125,23 @@
       </statement>
       <answer>
         <p>
-          <c>git add .</c> or <c>git add book-activities/</c> or <c>git add book-activities/superpower.md</c>
+          <ul>
+            <li>
+              <p>
+                <c>git add .</c> or
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>git add book-activities/</c> or
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>git add book-activities/superpower.md</c>
+              </p>
+            </li>
+          </ul>
         </p>
       </answer>
     </task>
@@ -204,7 +220,10 @@
       </statement>
       <answer>
         <p>
-          <c>git switch main</c>, <c>git remote add upstream https://github.com/ian-curtis/gitstarted.git</c>
+          <c>git switch main</c>, then
+        </p>
+        <p>
+          <c>git remote add upstream https://github.com/ian-curtis/gitstarted.git</c>
         </p>
         <p>
           It is important to switch back to main or you will set an upstream remote for just your branch which is sometimes useful, but not here.
