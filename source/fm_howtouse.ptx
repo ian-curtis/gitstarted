@@ -10,7 +10,7 @@
     Git is an incredibly powerful tool, but it does come with a learning curve. While there are text editors and interfaces out there that make using Git somewhat easier, I believe that it is best to learn the Git essentials the <q>harder</q> way. I hope that in doing so you will be able to better understand the steps in the Git process and that using the features in text editors will be easier. Rather than just memorizing how to use a text editor or the commands to enter, I take a more direct approach and show you Git on the command line to help you understand the process. Once you have that down, you can apply the same skills to a variety of different interfaces as you explore new software and resources.
   </p>
   <p>
-    The book is broken up into multiple sections:
+    The book is broken up into a few pieces:
     <ol>
       <li>
         <p>
@@ -44,7 +44,10 @@
     The best way to use this book is to first determine where you are in terms of knowledge. Do you know anything about the terminal? If so, you might consider jumping to <xref ref="C_githubsolo"/>. Do you know about GitHub, but not the terminal? Perhaps start with <xref ref="C_commandline"/> then move to <xref ref="C_gitsolo"/>. Regardless of the path you choose, I highly recommend at least scanning the sections in <xref ref="C_basics"/>. I do assume you have an idea of the topics in that chapter and hope you at least consider adopting some of the recommended practices. If you have no idea what anything is in this book, start at the beginning and just read consecutively.
   </p>
   <p>
-     Most sections have activities scattered throughout and some chapters even have a lengthy extensive activity at their ends. Take the time to participate in these activities along the way, especially if you this material is brand new to you. The book is designed to be interactive where you follow along as you read; however, it is not a traditional textbook filled with exercises, definitions, and theorems. I am not testing you on any of this as I believe that Git and GitHub are skills best learned by doing, not through an exam. Feel free to make mistakes, break things, and revist chapters you forgot or didn't understand completely. Answers to activities and exercises can be found in <xref ref="app_answers"/>.
+    That being said, be aware that skipping chapters or sections may cause a disconnect between the book activities and your participation. Most sections have activities scattered throughout and some chapters even have a lengthy extensive activity at their ends and these activites build off of one another. Even if you want to skip chapters, it might be worth it to take the time to participate in these activities along the way. If you are unfamiliar with the content, be sure to follow along with the activities.
+  </p>
+  <p>
+    The book is designed to be interactive where you follow along as you read; however, it is not a traditional textbook filled with exercises, definitions, and theorems. I am not testing you on any of this as I believe that Git and GitHub are skills best learned by doing, not through an exam. Feel free to make mistakes, break things, and revist chapters you forgot or didn't understand completely. Answers to activities and exercises can be found in <xref ref="app_answers"/>.
   </p>
   <p>
     As you read, if anything starts to become too confusing or overwhelming, take a break. While a dedicated reader might be able to read this book and complete the activities in one day, it is not recommended to do so. There is quite a bit of new content here and too much at once will certainly lead to an information overload. So take your time, read carefully, and, again, don't be afraid to reread parts of the book anytime you need a refresher on things. If you think that something deserves more attention and more explanation, feel free to open an issue on GitHub (don't know how? see <xref ref="S_hubissues"/>) and let me know.

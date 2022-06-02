@@ -47,11 +47,11 @@
 
   <figure xml:id="fig-hub-new-repo">
     <caption>Various Methods to Create a New Repo</caption>
-    <sidebyside>
-      <image source="hub_new_repo_navbar" width="90%">
+    <sidebyside widths="45% 45%">
+      <image source="hub_new_repo_navbar">
         <description>Where to click for a new repo from the navigation bar</description>
       </image>
-      <image source="hub_new_repo_home" width="90%">
+      <image source="hub_new_repo_home">
         <description>Where to click for a new repo from the home page</description>
       </image>
     </sidebyside>
@@ -93,11 +93,12 @@
 
   <p>
     In the <q>Repository name</q> box, 
-    type the name <c>aboutme</c>. Adding a description is optional and is not necessary for us right now. Next is the viewability. You may choose to make your repos private (only you and authorized collaborators can view/edit) or public (everyone can view and attempt to edit, only you and authorized collabortors can approve edits). It does not matter what you select for this right now as we will be deleting this repo after we are done with it.
+    type the name <c>aboutme</c>. Adding a description is optional and is not necessary for us right now. Next is the viewability. You may choose to make your repos private (only you and authorized collaborators can view/edit) or public (everyone can view and attempt to edit, only you and authorized collabortors can approve edits). It does not matter what you select for this; do whatever your heart desires.
   </p>
   <p>
   <idx><h>readme</h></idx>
   <idx><h>license</h></idx>
+  <idx><h>gitignore</h></idx>
     The next step deals with certain files that can be automatically added to your repo. You have the choice for either or none of a <c>README</c> file, a <c>.gitignore</c>, and a license. A <term>README file</term> gives all the pertinent information about your repository in an easy-to-read format. It is often the first thing that people visiting your repo will read and is very important. Check this box and we will come back to the <c>README</c> file in just a minute. A <term>gitignore</term> file tells Git all of the files <em>not</em> to put online. Do not check this box for now; it will be very useful later on, but is not needed now. You can also choose to put a <term>license</term> on your code which lets users know what they can and cannot do. If you would like to explore the different licenses, please visit <url href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" visual='docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository'>the GitHub documentation</url>.
     Since we will delete this repo later, you do not have to select this option.
   </p>
@@ -121,15 +122,15 @@
       explaining the key features and will slowly add in more as we learn more about GitHub.
     </p>
 
+    <figure xml:id="fig-hub-repo-tabs">
+      <caption>The main new repository contents</caption>
+      <image source="hub_repo_tabs" width="80%">
+        <description>The top of the newly-created repository screen. Username, repo name, and various tabs (Code, Issues, Pull requests, <etc/>)</description>
+      </image>
+    </figure>
+
     <p>
-      Assuming you didn't click on anything, you should see a pretty empty page. In the top left, you should 
-      see your username and your repo name. This is common throughout GitHub so you always know where you 
-      are. Underneath that is a set of tabs that can be used to navigate through the repository-level settings 
-      and options. You should currently be on the <q>Code</q> tab. As may be expected, this tab displays all 
-      of the files associated with the repo; it is the <q>home page</q> for every repository. You should 
-      see that a <c>README.md</c> file shows up. Also notice that the contents of the README are displayed 
-      under the list of files. GitHub knows how important the READMEs are to explaining code that it 
-      automatically displays the contents of the file. Right now, ours is empty (except for the default title).
+      Assuming you didn't click on anything, you should see a pretty empty page. In the top left, you should see your username and your repo name. This is common throughout GitHub so you always know where you are. Underneath that is a set of tabs that can be used to navigate through the repository-level settings and options (see <xref ref="fig-hub-repo-tabs"/>). You should currently be on the <q>Code</q> tab. As may be expected, this tab displays all of the files associated with the repo; it is the <q>home page</q> for every repository. You should see that a <c>README.md</c> file shows up. Also notice that the contents of the README are displayed under the list of files. GitHub knows how important the READMEs are to explaining code that it automatically displays the contents of the file. Right now, ours is empty (except for the default title).
     </p>
 
     <p>
@@ -180,6 +181,17 @@
         </li>
       </ol>
     </p>
+
+    <figure xml:id="fig-hub-edit-readme">
+      <caption>Two ways to edit a README file</caption>
+      <image source="hub_edit_readme_code" width="90%">
+        <description>Pencil icon on the README file found on the Code tab under the list of files.</description>
+      </image>
+
+      <image source="hub_edit_readme_file" width="90%">
+        <description>Pencil icon on the README file found after clicking on the README file in the list of files.</description>
+      </image>
+    </figure>
 
     <exercise>
       <statement>
@@ -258,7 +270,7 @@
         <p>
           Let's practice your markdown skills! Here, you will make the "aboutme" repo name true. Feel 
           free to use the guidelines and sources above. You could also search online if you aren't sure 
-          how to do what you want to do. I have provided my (basic) example <url href='https://github.com/ian-curtis/gitstarted' visual='github.com/ian-curtis/gitstarted'>in the repo for this book</url> (titled <c>README_aboutme.md</c>). 
+          how to do what you want to do. I have provided my (basic) example <url href='https://github.com/ian-curtis/gitstarted' visual='github.com/ian-curtis/gitstarted'>in the repo for this book</url> (titled <c>README_aboutme.md</c> in the <c>book-activities</c> folder). 
           But be creative! There aren't any <q>right</q> answers here.
         </p>
         <p>
@@ -352,7 +364,7 @@
       changes should be represented. Navigate back to the Code tab to prepare for the next section.
     </p>
     <p>
-      Take care to notice the difference between committing and saving. Saving is easy. You can add a word, then save. Add a word, save. And so on. Think of commiting as adding a word, saving, <em>and closing the document</em>. Now everytime you want to add another word you have to open the entire document again, add the word, save, and close the document again. This system is put in place to help with version control. Instead of there being one version for each new word you add, there is one version for each commit. When coding, you save your files, but commit your changes. This will become more apparent when we work with Git and with multiple files.
+      Take care to notice the difference between committing and saving. Saving is easy. You can add a word, then save. Add a word, save. And so on. Think of commiting as adding a word, saving, <em>and closing the document</em>. Now everytime you want to add another word you have to open the entire document again, add the word, save, and close the document again. This system is put in place to help with version control. Instead of there being one version for each new word you add, there is one version for each commit. Each commit represents a stamp on the version control timeline. When coding, you save your files, but commit your changes. This will become more apparent when we work with Git and with multiple files.
     </p>
     <p>
       It might be worth saying again just to make sure you've got it. Instead of there being one version for each new word you add, there is one version for each commit. Projects are typically broken up into tiny pieces. Each of these pieces would correspond to a commit. So if something goes wrong, you can revert back to a previous commit. We don't want commits to be for every word since it would take forever to find the commit you want to revert to. Conversely, we don't want commits to contain too many edits as that would require more work if we had to revert backwards.
@@ -367,10 +379,7 @@
         was working on a small video game and I was tasked with creating different worlds a character could visit. With commits in mind, I decide to break down the task into chunks: I will build one world at a time. When I am done with one world, I will commit. When I am done with another world, I will commit a second time. And so on.
       </p>
       <p>
-        This is different than creating two buildings in the first world, then saving. Then creating two 
-        more buildings, then saving. Then adding some vegetation and enemies, then saving. We save much more 
-        often than we commit. But <em>we save using our computer and commit using Git/Gitub.</em> I would never 
-        save to Github or commit to my computer. Saving is light, commiting is heavy.
+        This is different than creating a window in a building in the first world, then saving. Then creating two more windows and a door, then saving. Then adding some a tree and some flowers, then saving. We save much more often than we commit. But <em>we save using our computer and commit using Git/Gitub.</em> I would never save to Github or commit to my computer. Saving is light, commiting is heavy.
       </p>
       <p>
         That being said, do make sure to save your files! You want to save your progress on your computer, but there is no need to commit after each time you save.

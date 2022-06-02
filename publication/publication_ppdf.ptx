@@ -39,6 +39,7 @@
   <common>
     <exercise-project answer="no" solution='no'/>
     <exercise-inline answer="no" solution='no'/>
+    <!-- <tableofcontents level="3"/> -->
   </common>
 
     <!-- LaTeX specific options: set @print="yes" to get pdf set up   -->

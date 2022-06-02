@@ -7,7 +7,7 @@
   <idx><h>pull</h></idx>
   <introduction>
     <p>
-      We're almost done! At this point, you should have completed the three-step process as outlined in <xref ref="S_gitfinalize"/>. What could be known as the fourth step is to head back to GitHub and submit a pull request. At this point, it does seem silly to ask yourself for permission to include your own changes, but it makes more sense when contributing to someone elses repository. In order for your changes to be included into any main branch, you need to ask the repo owner/moderator(s) for permission to pull in your changes.
+      We're almost done! At this point, you should have completed the three-step process as outlined in <xref ref="S_gitfinalize"/>. What could be known as the fourth step is to head back to GitHub and submit a pull request. Again, it does seem silly to ask yourself for permission to include your own changes, but it makes more sense when contributing to someone elses repository. In order for your changes to be included into any main branch, you need to ask the repo owner/moderator(s) for permission to pull in your changes.
     </p>
     <p>
       It is important to make a distinction between a <term>push</term> and a <term>pull</term>. When you push changes, you are sending your changes from place to another, such as how we pushed changes from local to origin. Submitting a pull request is equivalent to pushing your changes to the main branch, but since this often requires permission, we typically use the term <term>pull request</term>. In this case, you are asking someone else to pull in your changes to their main branch.
@@ -100,12 +100,15 @@
   </activity>
 
   <p>
-    Unfortunately, we're not quite done. Now we have another problem: GitHub has changes that our local computer does not! We just merged the country branch into the main branch but our local computer doesn't know that. We have to tell it to pull in the changes from the origin remote.
+  <idx><h>pull</h></idx>
+  <idx><h>git</h><h>pull</h></idx>
+    Unfortunately, we're not quite done. Now we have another problem: GitHub has changes that our local computer does not! We just merged the country branch into the main branch but our local computer doesn't know that. We have to tell it to <term>pull</term> in the changes from the origin remote.
   </p>
 
   <project xml:id="try-git-pull">
     <title>Trying <c>git pull</c></title>
-    
+    <idx><h>pull</h></idx>
+    <idx><h>git</h><h>pull</h></idx>
     <introduction>
       <p>
         The easiest way to bring in new changes from GitHub is to use the <c>git pull</c> command. <c>git pull</c> works exactly like <c>git push</c>. You need to tell Git which remote you are pulling from and which branch. 
@@ -136,7 +139,7 @@
     <task>
       <statement>
         <p>
-          Just like with <c>git push</c>, decide on your remote destination and your branch destination. Type in the correct command.
+          Just like with <c>git push</c>, decide on your remote and your branch. These will be the remote and branch from which you are pulling. Type in the correct command.
         </p>
       </statement>
       <answer>

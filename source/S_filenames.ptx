@@ -12,10 +12,10 @@
     Sorry, that probably wasn't very clear. Specifically, I want you to see if there are <em>spaces</em> in your file and folder names. My guess is probably! Mine certainly had spaces before I learned more about computers and got involved in Git and the command line.
   </p>
   <p>
-    Take another look at some files/folders. What is your <q>capitalization scheme</q>? Is there a pattern? Do you name your files by what they contain? Do you have dates in your files? Do you have a group of files with something like <q>File First Draft</q>, <q>File Second Draft</q>, <q>File, revisions from colleague</q>, etc.? All of these can be problematic for computers and even more so for humans interacting with computers. But enough talk <ellipsis/> why are these common file naming methods so frowned upon?
+    Take another look at some files/folders. What is your <q>capitalization scheme</q>? Is there a pattern? Do you name your files by what they contain? Do you have dates in your files? Do you have a group of files with something like <q>File First Draft</q>, <q>File Second Draft</q>, <q>File, revisions from colleague</q>, etc.? All of these can be problematic for computers and even more so for humans interacting with computers.
   </p>
   <p>
-    The following chunks go through my opinions on file naming conventions. But that's what they are: opinions, suggestions. Following them will make your life easier later on. But by all means, go ahead and ignore me and decide for yourself later if you want to make a change. I probably won't pop up in your home and check your file names. Try not to get 
+    The following chunks go through my opinions on file naming conventions. But that's what they are: opinions. Suggestions. Following them will make your life easier later on. But by all means, go ahead and ignore me and decide for yourself later if you want to make a change. I probably won't pop up in your home and check your file names. Try not to get 
     too lost with these; an extensive example will be provided at the end of the section.
   </p>
   </introduction>
@@ -27,7 +27,7 @@
     <idx><h>file names</h><h>with revisions</h></idx>
     <idx><h>version control</h></idx>
     <p>
-      I'm willing to bet that most of us have been there: You write one draft, get feedback, save a second draft as a new file, get feedback again, and finally make a new file with a final draft. Then, you decide to make modifications to that final draft which is saved as a new file, etc., etc.This is great until you realize that now you have way too many files for a single document. How do you know which one is real final draft? What if you open the wrong one and start editing? Now you have to edit all of the files to make them match. 
+      You might be familiar with this situation: You write one draft, get feedback, save a second draft as a new file, get feedback again, and finally make a new file with a final draft. Then, you decide to make modifications to that final draft which is saved as a new file, etc., etc.This is great until you realize that now you have way too many files for a single document. How do you know which one is real final draft? What if you open the wrong one and start editing? Now you have to edit all of the files to make them match. 
     </p>
     <p>
       Sure, a computer can handle that many files and doesn't really care how many drafts or revisions you have. But more files take up more storage space and increases the chances of confusing you! How on earth can we solve this problem? It's not like there's a magic software that can keep track of all of our changes in a single file.
@@ -46,7 +46,7 @@
     <title>File Names With Dates</title>
     <idx><h>file names</h><h>with dates</h></idx>
     <p>
-      Ok, this isn't really that problematic. But I never understood why dates in file names had to be so specific. Having years makes sense, maybe months. But days? Times? Seconds? Once you start getting that specific with dates and times, you run into the same issue as in <xref text="title" ref="namesrevisions"/>. Dates and times just make your file names incredibly long, hard to read, and hard to use in the command line. Please try to avoid dates, other than years.
+      Ok, this isn't entirely problematic. But I never understood why dates in file names had to be so specific. Having years makes sense, maybe months. But days? Times? Seconds? Once you start getting that specific with dates and times, you run into the same issue as in <xref text="title" ref="namesrevisions"/>. Dates and times just make your file names incredibly long, hard to read, and hard to use in the command line. Please try to avoid dates, other than years, perhaps.
     </p>
 
   </paragraphs>
@@ -56,11 +56,11 @@
     <idx><h>file names</h><h>descriptive</h></idx>
     <idx><h>file names</h><h>shortening tricks</h></idx>
     <p>
-      File names should be descriptive! Furthermore, they should describe <em>what the file actually contains/is about</em> and not some random name. Probably most of your files are descriptive? That's great! But what's the catch? File names should also be short. Short, sweet, too the point, and also descriptive. 
+      File names should be descriptive! Furthermore, they should describe <em>what the file actually contains/is about</em> and not some random name. Probably most of your files are descriptive? That's great! But what's the catch? File names should also be short. Short, sweet, to the point, and also descriptive. 
     </p>
     <p>
       That's pretty tricky, you might say. Sure, I respond, but you can take advantage of abbreviations and 
-      word shortening tricks. For instance, suppose I had a file names like so:
+      word-shortening tricks. For instance, suppose I had a file name like this:
         <blockquote>
           Chapters3_4_Overview of Sampling and Simple Random Sampling (SRS).pdf
         </blockquote>
@@ -128,7 +128,7 @@
           <c>open Chapters3_4_Overview\ of\ Sampling\ and\ Simple\ Random\ Sampling\ (SRS).pdf</c>
         </blockquote>
 
-      What you should notice is that in the first example, the file is surrounded in quotes and in the second, there are a bunch of backslashes. For each file name with spaces, you have to either remember to enclose the entire name in quotes or to take the time to put a backslash before every space. It may not seem like too much of a hassle, but you will get annoyed with it pretty quickly. It also can cause setbacks inside code editors when you want to import or export files with spaces.
+      First, notice how long these titles are. That's a lot to type! What you should really notice is that in the first example, the file is surrounded in quotes and in the second, there are a bunch of backslashes. For each file name with spaces, you have to either remember to enclose the entire name in quotes or to take the time to put a backslash before every space. It may not seem like too much of a hassle, but you will get annoyed with it pretty quickly. It also can cause setbacks inside code editors when you want to import or export files with spaces.
     </p>
     <p>
       So what do we replace the spaces with?
@@ -167,7 +167,6 @@
                 </p>
               </li>
               <li>
-              <!-- fix this title overlap -->
                 <title>UPPER_CASE_ SNAKE_CASE</title>
                 <p>
                   every letter is capitalized, spaces are replaced with underscores (_)
@@ -181,7 +180,7 @@
         </note>
 
         Personally, I use snake_case for file names and kebab-case for folder names, just to help me 
-        keep them separate and still easy to read. 
+        keep them separate and still easy to read. I also tend to name my files and folders with lowercase letters if I can.
     </p>
     <p>
       Using the shortened file name above, I would use the following as my file name:
@@ -218,10 +217,10 @@
     <idx><h>folder names</h></idx>
     <idx><h>directory names</h><see>folder names</see></idx>
     <p>
-      Folder names should also follow all of the conventions above. This is a lot harder to get used to. I still feel like I'm breaking the Human Code of Folder Names everytime I ignore spaces and capital letters. We're taught in school to start every sentence with a capital letter and put spaces between words. For whatever reason, I'm fine with file names, but folder names just don't feel right.
+      Folder names should also follow all of the conventions above. This is a lot harder to get used to. I still feel like I'm breaking the Human Code of Folder Names everytime I ignore spaces and capital letters. For whatever reason, I'm fine with file names, but folder names just don't feel right.
     </p>
     <p>
-      But too bad for me! I name my folders according to the conventions anyways. And you should too.(As I mentioned earlier, I use snake_case for files and kebab-case for folders. I highly recommend you do as well; they are the two most popular cases.)
+      But too bad for me! I name my folders according to the conventions anyways. And you should too. (As I mentioned earlier, I use snake_case for files and kebab-case for folders. You might consider doing so as well; they are the two most popular cases.)
     </p>
   </paragraphs>
 </subsection>
@@ -232,8 +231,7 @@
   <introduction>
     <p>
       There were a lot of words in <xref ref="SS_namingconventions"/>. Let's make sense of them here 
-      with an extensive example. There will be some questions throughout the way. I encourage you to think 
-      about them and make sure you have understood the naming conventions above.
+      with an extensive example. There will be some questions throughout the way. I encourage you to think about them and make sure you have understood the naming conventions above.
     </p>
   </introduction>
 
@@ -242,12 +240,10 @@
     <idx><h>folder names</h></idx>
     <introduction>
       <p>
-        Suppose you work for Taylor Swift (wouldn't that be cool!). She is super busy right now recording albums, writing songs, spending time with family and friends, and making TikToks and needs your help. She has all of her songs saved on her computer in folders which are divided up by one album per folder. She has asked you to help her rename her files so that she still knows what each song is, but follows proper naming conventions. Use your knowledge from above to help Taylor out.
+        Suppose you work for Taylor Swift (wouldn't that be cool!). She is super busy right now recording albums, writing songs, spending time with family and friends, and making TikToks and needs your help. She has all of her songs saved on her computer in folders which are divided up by one album per folder. She has asked you to help her rename her folders so that she still knows what each folder is, but follows proper naming conventions. Use your knowledge from above to help Taylor out.
       </p>
       <p>
-       We will start with her folders. Following is a list of her current folder names:
-       
-
+       Following is a list of her current folder names:
        <ul cols="2">
          <li>
            <p>
@@ -578,6 +574,11 @@
             </li>
             <li>
               <p>
+                <c>folklore-dsny-dlx</c>
+              </p>
+            </li>
+            <li>
+              <p>
                 <c>evermore-dlx</c>
               </p>
             </li>
@@ -663,11 +664,6 @@
             </li>
             <li>
               <p>
-                <c>folklore-dsny-dlx</c> (yes, this is a deluxe album, but to me, the Disney part of it is unique)
-              </p>
-            </li>
-            <li>
-              <p>
                 <c>unreleased</c>
               </p>
             </li>
@@ -705,7 +701,7 @@
         We will focus on the folder that I renamed to be <c>speak-now-dlx</c>. A list of her current file 
         names for these tracks follow. I should note that it is often helpful to prefix song names with 
         their track position so that they stay in order when in a folder. We won't remove those numbers. 
-        Also, <q>.wav</q> indicates that the song is a WAV file (see <xref ref="S_fileextensions"/> for more).
+        Also, <q>.wav</q> indicates that the song is a WAV file (see <xref ref="S_fileextensions"/> for more). We should not remove these either as this could result in file loss or corruption.
         <ul cols="2">
           <li>
             <p>

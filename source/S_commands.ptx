@@ -88,7 +88,7 @@
     <p>
       Knowing where you are is great, but as of right now, we are stuck in one place. What use is 
       <c>pwd</c> if we can't move anywhere? By default, your terminal places you in the <q>highest</q> 
-      level possible; from there we can only move <q>in</q>. Essentially, you are moving from one 
+      level possible for the active user; from there we can only move <q>in</q>. Essentially, you are moving from one 
       directory <em>into</em> another. The <c>cd</c>, or <term>change directory</term> command can do 
       this for us. <c>cd</c> requires another piece of information: the directory you wish to navigate to, 
       which must be typed using file-path syntax. 
@@ -348,6 +348,11 @@
               manually.
             </p>
           </statement>
+          <answer>
+            <p>
+              <c>open test.txt</c> or <c>start text.txt</c>
+            </p>
+          </answer>
       </exercise>
     </paragraphs>
 
@@ -658,7 +663,7 @@
 
       <p>
         Alright! We cleared the contents of our <c>testdir</c> directory. Remember, the ultimate goal of 
-        this part is to delete <em>all</em> of the new files we created in this section. But now 
+        this part is to delete <em>all</em> of the new files and folders we created in this section. But now 
         we're stuck. The terminal is still in the <c>testdir</c> directory (which now contains no files). 
         In order to delete our other files we have to <term>change directories backwards</term>. Luckily, 
         we can still use <c>cd</c>, but instead of supplying a folder to move into, we give <c>..</c> 

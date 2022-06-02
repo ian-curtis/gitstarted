@@ -93,7 +93,7 @@
     <idx><h>tracking</h></idx>
     <idx><h>git</h><h>tracking</h></idx>
     <p>
-      This is actually pretty common. Maybe you are writing a book and your abandoned chapters were on GitHub for your editors to look at. Now that the book is published, you don't want those chapters online. Maybe you are using and API and when you were developing a project had your app's API connection keys available and not that the project is public you want to remove the file containing them.
+      This is actually pretty common. Maybe you are writing a book and your abandoned chapters were on GitHub for your editors to look at. Now that the book is published, you don't want those chapters online. Maybe you are using an API and when you were developing a project had your app's API connection keys available and not that the project is public you want to remove the file containing them.
     </p>
     <p>
       When Git is keeping track of files, we say that it is <term>tracking</term> files. Untracking files is not super difficult, but does, like all Git commands, require the command line.
@@ -212,6 +212,18 @@ Aborting
       </project>
 
     </paragraphs>
+
+    <paragraphs>
+      <title>Your Local Changes are Good and You Want to Keep Them</title>
+      
+      <p>
+        Sometimes your changes are valid and you want them to be kept, but you still want to pull in changes. One option is to force a merge conflict and deal with it in your editor, choosing which version to keep. If this is what you want to do, just <c>add</c> the troublesome files, <c>commit</c> them, then <c>pull</c>. Again, this will force a merge conflict but you can fix things from there.
+      </p>
+
+      <p>
+        Alternatively, you can keep your changes by using <c>git stash</c>. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use <c>git stash pop</c>. I have no experience with this command as I have only been in a situation where I need to force a pull with <c>-f</c>. You might find <url href="https://opensource.com/article/21/4/git-stash" visual="opensource.com/article/21/4/git-stash">opensource.com</url> useful.
+      </p>
+    </paragraphs>
   </section>
 
   <section xml:id="S_hub_revert_commit">
@@ -237,7 +249,7 @@ Aborting
       Hopefully you never have to deal with these. Sometimes, they are pretty simple to fix. Other times, it can cause some headaches. To avoid merge conflicts, pull from upstream often (<xref ref="warn-fetch-often"/> and <xref ref="warn-pull-often"/>). Merge conflicts are caused when more than one person edits the same line of a file. It is possible for two people to edit the same file, but on different lines, and not cause a conflict.
     </p>
     <p>
-      I have never caused or had to deal with a serious merge conflict. <url href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github" visual='docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github'>The GitHub documentation</url> has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also <url href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line" visual='docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line'>resolve merge conflicts on the command line</url>.
+      I have never caused or had to deal with a serious merge conflict. <url href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github" visual='docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github'>The GitHub documentation</url> has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also <url href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line" visual='docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line'>resolve merge conflicts on the command line</url> or in your text editor.
     </p>
     <p>
       I have accidentally caused a merge conflict with myself and with working on the same repository from two different computers and two different accounts. Oops! This is an easy fix because I made the conflict with myself so I know which version is the correct one. If this happens to you, Git might send you to an unfamiliar screen when you try to push or pull. You'll know you have this case if your terminal asks you to type in a reason why the merge must happen or how the conflict is resolved. This typically happens when you try to merge from an upstream main into a local main that has active changes (so create branches!).

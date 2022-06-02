@@ -5,7 +5,7 @@
   <idx><h>edit files</h></idx>
   <idx><h>git</h><h>edit</h></idx>
   <p>
-    As before, the title is a little misleading. Git does offer editing features, but, once again, it does keep track of your edits and commits for version control.
+    As before, the title is a little misleading. Git does not offer editing features, but, once again, it does keep track of your edits and commits for version control.
   </p>
   <p>
     This section will be very short. All you need to do is open <c>secret.txt</c> and type one line of whatever you want (G-rated of course). Literally could be anything. Just something random. Maybe the following will inspire you:

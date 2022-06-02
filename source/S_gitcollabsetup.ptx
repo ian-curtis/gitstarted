@@ -99,7 +99,7 @@
     </figure>
 
     <p>
-      Take a look at <xref ref="fig-git-fork-clone"/> for a visualization of what the Git tree might look like at this point. Then, let's get to editing.
+      Take a look at <xref ref="fig-git-fork-clone"/> for a visualization of what the Git tree might look like at the end of the editing process. This is the end goal. Then, let's get to editing.
     </p>
 
   </subsection>
