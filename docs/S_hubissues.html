@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-02T13:56:18-04:00       *-->
+<!--*       on 2022-06-02T14:32:47-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -84,9 +84,9 @@
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
-<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows Users)</a></li>
-<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac Users)</a></li>
-<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux Users)</a></li>
+<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows)</a></li>
+<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac)</a></li>
+<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux)</a></li>
 </ul>
 </li>
 <li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
@@ -165,6 +165,7 @@
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
 <li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 <li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Won't Push/Pull My Changes! (Divergent Branches)</a></li>
 <li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
 <li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
 </ul>
@@ -178,14 +179,14 @@
 <section class="section" id="S_hubissues"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">B.1</span> <span class="title">The Issues Tab</span>
 </h2>
-<p id="p-937">You've seen when making pull requests that you can add comments or descriptions to help moderators understand what you are doing. This feature is also used as a place for conversation regarding the pull request and the problems is solves or brings up.</p>
-<p id="p-938">But what happens if you want to talk about a problem without a pull request? What if you don't have the time or experience to edit a repository's contents but want to let moderators know of a potential bug or feature request? GitHub has something for you!</p>
-<p id="p-939">The issues tab is designed as a place of conversation between developers, users, and other members of the community. It runs like a forum where anyone can create a thread (including the repo's owner) and anyone can reply or supply advice. Moderators will often tag issues and with a well-designed commit message, can close an issue automatically.</p>
-<p id="p-940">Some issues have a label of “good first issue”. This indicates that the problem mentioned in the issue is not very difficult to fix and with a basic understand of that repo's files, a beginner could fix the issue. If you are interested in developing, I would recommend starting with good first issues.</p>
-<p id="p-941">Note that the Issues tab will not appear on forks, only on the authoritative repository.</p>
+<p id="p-949">You've seen when making pull requests that you can add comments or descriptions to help moderators understand what you are doing. This feature is also used as a place for conversation regarding the pull request and the problems is solves or brings up.</p>
+<p id="p-950">But what happens if you want to talk about a problem without a pull request? What if you don't have the time or experience to edit a repository's contents but want to let moderators know of a potential bug or feature request? GitHub has something for you!</p>
+<p id="p-951">The issues tab is designed as a place of conversation between developers, users, and other members of the community. It runs like a forum where anyone can create a thread (including the repo's owner) and anyone can reply or supply advice. Moderators will often tag issues and with a well-designed commit message, can close an issue automatically.</p>
+<p id="p-952">Some issues have a label of “good first issue”. This indicates that the problem mentioned in the issue is not very difficult to fix and with a basic understand of that repo's files, a beginner could fix the issue. If you are interested in developing, I would recommend starting with good first issues.</p>
+<p id="p-953">Note that the Issues tab will not appear on forks, only on the authoritative repository.</p>
 <figure class="figure figure-like" id="fig-hub-issues-gs"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_issues_gs.svg" role="img" class="contained" alt="Issues page for this book, Git Started. No issues are present."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">B.1.0.1<span class="period">.</span></span><span class="space"> </span>Example Issues page for this book</figcaption></figure><figure class="figure figure-like" id="fig-hub-issues-skl"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_issues_skl.svg" role="img" class="contained" alt="Issues page for scikit-learn. Lots of issues are present, with tags and many contributors."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">B.1.0.2<span class="period">.</span></span><span class="space"> </span>Example Issues page for the <a class="external" href="https://github.com/scikit-learn/scikit-learn/issues" target="_blank">Python module <code class="code-inline tex2jax_ignore">scikit-learn</code></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-57" id="fn-57"><sup> 57 </sup></a></figcaption></figure></section><div class="hidden-content tex2jax_ignore" id="hk-fn-57"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/scikit-learn/scikit-learn/issues</code></div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">B.1.0.2<span class="period">.</span></span><span class="space"> </span>Example Issues page for the <a class="external" href="https://github.com/scikit-learn/scikit-learn/issues" target="_blank">Python module <code class="code-inline tex2jax_ignore">scikit-learn</code></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-59" id="fn-59"><sup> 59 </sup></a></figcaption></figure></section><div class="hidden-content tex2jax_ignore" id="hk-fn-59"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/scikit-learn/scikit-learn/issues</code></div></div>
 </div></main>
 </div>
 </body>

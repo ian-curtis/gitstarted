@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-02T13:56:08-04:00       *-->
+<!--*       on 2022-06-02T14:32:36-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -84,9 +84,9 @@
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="active">How To Use This Book</a></li>
-<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows Users)</a></li>
-<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac Users)</a></li>
-<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux Users)</a></li>
+<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows)</a></li>
+<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac)</a></li>
+<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux)</a></li>
 </ul>
 </li>
 <li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
@@ -165,6 +165,7 @@
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
 <li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 <li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Won't Push/Pull My Changes! (Divergent Branches)</a></li>
 <li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
 <li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
 </ul>
@@ -179,25 +180,26 @@
 </h2>
 <p id="p-5">Congratulations on deciding to explore the command line! The ideas explained in this book are quite useful, espeically if you plan to go into a coding career, need to store code files publicly, and/or need some version control. This book is designed for those who have no experience with Git, GitHub, or the command line. I assume that you have never touched your terminal (or even know what one is). I don't assume you have a GitHub account or know anything about how to use Git.</p>
 <p id="p-6">Git is an incredibly powerful tool, but it does come with a learning curve. While there are text editors and interfaces out there that make using Git somewhat easier, I believe that it is best to learn the Git essentials the “harder” way. I hope that in doing so you will be able to better understand the steps in the Git process and that using the features in text editors will be easier. Rather than just memorizing how to use a text editor or the commands to enter, I take a more direct approach and show you Git on the command line to help you understand the process. Once you have that down, you can apply the same skills to a variety of different interfaces as you explore new software and resources.</p>
-<p id="p-7">The book is broken up into multiple sections:</p>
+<p id="p-7">The book is broken up into a few pieces:</p>
 <ol class="decimal">
-<li id="li-1"><p id="p-8">Multiple prefaces explaining necessary materials depending on your operating system (<a href="materials-windows.html" class="internal" title="Preface: Materials (Windows Users)">Materials (Windows Users)</a>, <a href="materials-mac.html" class="internal" title="Preface: Materials (Mac Users)">Materials (Mac Users)</a>, <a href="materials-linux.html" class="internal" title="Preface: Materials (Linux Users)">Materials (Linux Users)</a>)</p></li>
+<li id="li-1"><p id="p-8">Multiple prefaces explaining necessary materials depending on your operating system (<a href="materials-windows.html" class="internal" title="Preface: Materials (Windows)">Materials (Windows)</a>, <a href="materials-mac.html" class="internal" title="Preface: Materials (Mac)">Materials (Mac)</a>, <a href="materials-linux.html" class="internal" title="Preface: Materials (Linux)">Materials (Linux)</a>)</p></li>
 <li id="li-2"><p id="p-9">Introductory materials introducing general computer basics, etiquette, and recommended practices (<a href="C_basics.html" class="internal" title="Chapter 1: Computer Basics">Chapter 1</a>) and an introduction to the command line (<a href="C_commandline.html" class="internal" title="Chapter 2: The Command Line">Chapter 2</a>)</p></li>
 <li id="li-3"><p id="p-10">A detailed introduction and get-started guide to GitHub (<a href="C_githubsolo.html" class="internal" title="Chapter 3: GitHub Solo">Chapter 3</a>) and Git (<a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a>) when working alone</p></li>
 <li id="li-4"><p id="p-11">A detailed introduction and get-started guide to GitHub (<a href="C_githubcollab.html" class="internal" title="Chapter 5: GitHub Collaboration">Chapter 5</a>) and Git (<a href="C_gitcollab.html" class="internal" title="Chapter 6: Git Collaboration">Chapter 6</a>) when working with collaborators</p></li>
 <li id="li-5"><p id="p-12">Appendices with some bonus features, resources, and troubleshooting</p></li>
 </ol>
 <p id="p-13">The best way to use this book is to first determine where you are in terms of knowledge. Do you know anything about the terminal? If so, you might consider jumping to <a href="C_githubsolo.html" class="internal" title="Chapter 3: GitHub Solo">Chapter 3</a>. Do you know about GitHub, but not the terminal? Perhaps start with <a href="C_commandline.html" class="internal" title="Chapter 2: The Command Line">Chapter 2</a> then move to <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a>. Regardless of the path you choose, I highly recommend at least scanning the sections in <a href="C_basics.html" class="internal" title="Chapter 1: Computer Basics">Chapter 1</a>. I do assume you have an idea of the topics in that chapter and hope you at least consider adopting some of the recommended practices. If you have no idea what anything is in this book, start at the beginning and just read consecutively.</p>
-<p id="p-14">Most sections have activities scattered throughout and some chapters even have a lengthy extensive activity at their ends. Take the time to participate in these activities along the way, especially if you this material is brand new to you. The book is designed to be interactive where you follow along as you read; however, it is not a traditional textbook filled with exercises, definitions, and theorems. I am not testing you on any of this as I believe that Git and GitHub are skills best learned by doing, not through an exam. Feel free to make mistakes, break things, and revist chapters you forgot or didn't understand completely. Answers to activities and exercises can be found in <a href="app_answers.html" class="internal" title="Appendix D: Answers to All Activities and Exercises">Appendix D</a>.</p>
-<p id="p-15">As you read, if anything starts to become too confusing or overwhelming, take a break. While a dedicated reader might be able to read this book and complete the activities in one day, it is not recommended to do so. There is quite a bit of new content here and too much at once will certainly lead to an information overload. So take your time, read carefully, and, again, don't be afraid to reread parts of the book anytime you need a refresher on things. If you think that something deserves more attention and more explanation, feel free to open an issue on GitHub (don't know how? see <a href="S_hubissues.html" class="internal" title="Section B.1: The Issues Tab">Section B.1</a>) and let me know.</p>
-<p id="p-16">If you are prepared to dive in, visit the following prefaces to download the necessary materials, then proceed to learning!</p>
+<p id="p-14">That being said, be aware that skipping chapters or sections may cause a disconnect between the book activities and your participation. Most sections have activities scattered throughout and some chapters even have a lengthy extensive activity at their ends and these activites build off of one another. Even if you want to skip chapters, it might be worth it to take the time to participate in these activities along the way. If you are unfamiliar with the content, be sure to follow along with the activities.</p>
+<p id="p-15">The book is designed to be interactive where you follow along as you read; however, it is not a traditional textbook filled with exercises, definitions, and theorems. I am not testing you on any of this as I believe that Git and GitHub are skills best learned by doing, not through an exam. Feel free to make mistakes, break things, and revist chapters you forgot or didn't understand completely. Answers to activities and exercises can be found in <a href="app_answers.html" class="internal" title="Appendix D: Answers to All Activities and Exercises">Appendix D</a>.</p>
+<p id="p-16">As you read, if anything starts to become too confusing or overwhelming, take a break. While a dedicated reader might be able to read this book and complete the activities in one day, it is not recommended to do so. There is quite a bit of new content here and too much at once will certainly lead to an information overload. So take your time, read carefully, and, again, don't be afraid to reread parts of the book anytime you need a refresher on things. If you think that something deserves more attention and more explanation, feel free to open an issue on GitHub (don't know how? see <a href="S_hubissues.html" class="internal" title="Section B.1: The Issues Tab">Section B.1</a>) and let me know.</p>
+<p id="p-17">If you are prepared to dive in, visit the following prefaces to download the necessary materials, then proceed to learning!</p>
 <section class="paragraphs" id="fm_issues"><h1 class="heading"><span class="title">Known Issues.</span></h1>
-<p id="p-17">There are certain parts of the book that could be better. I list some below.</p>
+<p id="p-18">There are certain parts of the book that could be better. I list some below.</p>
 <ul class="disc">
-<li id="li-6"><p id="p-18">Some figures, particularly the branch diagrams, are blurry from file conversion.</p></li>
-<li id="li-7"><p id="p-19">Images could probably use better alt text</p></li>
-<li id="li-8"><p id="p-20">Certain parts of the appendices need more content for Windows and Linux users</p></li>
-<li id="li-9"><p id="p-21">As I am not a professional index creator, some entries may need to be moved around, some may need to be added, and/or other edits</p></li>
+<li id="li-6"><p id="p-19">Some figures, particularly the branch diagrams, are blurry from file conversion.</p></li>
+<li id="li-7"><p id="p-20">Images could probably use better alt text</p></li>
+<li id="li-8"><p id="p-21">Certain parts of the appendices need more content for Windows and Linux users</p></li>
+<li id="li-9"><p id="p-22">As I am not a professional index creator, some entries may need to be moved around, some may need to be added, and/or other edits</p></li>
 </ul></section></section></div></main>
 </div>
 </body>

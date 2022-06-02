@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-02T13:56:18-04:00       *-->
+<!--*       on 2022-06-02T14:32:47-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -84,9 +84,9 @@
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
-<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows Users)</a></li>
-<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac Users)</a></li>
-<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux Users)</a></li>
+<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows)</a></li>
+<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac)</a></li>
+<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux)</a></li>
 </ul>
 </li>
 <li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
@@ -165,6 +165,7 @@
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
 <li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 <li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Won't Push/Pull My Changes! (Divergent Branches)</a></li>
 <li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
 <li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
 </ul>
@@ -181,13 +182,20 @@
 <section class="subsection" id="SS_gitkraken"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">A.4.1</span> <span class="title">A New Git Interface</span>
 </h3>
-<p id="p-932">Now that you know Git basics and terminology, you might like interfaces that reduce your terminal usage. <a class="external" href="https://www.gitkraken.com/" target="_blank">GitKraken</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-54" id="fn-54"><sup> 54 </sup></a> is one of those choices. Although I haven't used it, it does look nice. It is free with a paid option and is available on Windows, Mac, and Linux.</p>
-<p id="p-933">From a simple browse of the website there appears to be a good brach/contribution graph and clear tabs with specific functions. Perhaps worth trying out!</p></section><section class="subsection" id="SS_github_desktop"><h3 class="heading hide-type">
+<p id="p-940">Now that you know Git basics and terminology, you might like interfaces that reduce your terminal usage. <a class="external" href="https://www.gitkraken.com/" target="_blank">GitKraken</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-55" id="fn-55"><sup> 55 </sup></a> is one of those choices. Although I haven't used it, it does look nice. It is free with a paid option and is available on Windows, Mac, and Linux.</p>
+<p id="p-941">From a simple browse of the website there appears to be a good brach/contribution graph and clear tabs with specific functions. Perhaps worth trying out!</p></section><section class="subsection" id="SS_github_desktop"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">A.4.2</span> <span class="title">GitHub Desktop</span>
 </h3>
-<p id="p-934">GitHub does offer a <a class="external" href="https://desktop.github.com/" target="_blank">desktop interface</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-55" id="fn-55"><sup> 55 </sup></a> to help you with Git features and managing collaboration. If you would rather do these things with an app (as opposed to switching from your text editor to a website) it might be worth downloading GitHug Desktop. The website itself is pretty basic, but <a class="external" href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop" target="_blank">the GitHub documentation</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-56" id="fn-56"><sup> 56 </sup></a> has a good start-up guide and more.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-54"><div class="fn"><code class="code-inline tex2jax_ignore">gitkraken.com/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-55"><div class="fn"><code class="code-inline tex2jax_ignore">desktop.github.com/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-56"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop</code></div></div>
+<p id="p-942">GitHub does offer a <a class="external" href="https://desktop.github.com/" target="_blank">desktop interface</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-56" id="fn-56"><sup> 56 </sup></a> to help you with Git features and managing collaboration. If you would rather do these things with an app (as opposed to switching from your text editor to a website) it might be worth downloading GitHug Desktop. The website itself is pretty basic, but <a class="external" href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop" target="_blank">the GitHub documentation</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-57" id="fn-57"><sup> 57 </sup></a> has a good start-up guide and more.</p></section><section class="subsection" id="SS_fish_all"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">A.4.3</span> <span class="title">A New Shell: <code class="code-inline tex2jax_ignore">fish</code></span>
+</h3>
+<p id="p-943">Many computers rely on <code class="code-inline tex2jax_ignore">bash</code> to do most of their work. Mac computers now use <code class="code-inline tex2jax_ignore">zsh</code> as their default shell. Shells have their own unique aspects and differences and frankly, it doesn't really matter which shell you use unless you have a good technical reason to change. Shells are pretty advanced and I honestly don't have much information to provide other than what a simple Google search can do.</p>
+<p id="p-944">That being said, I do recommend the shell <a class="external" href="https://fishshell.com/" target="_blank"><code class="code-inline tex2jax_ignore">fish</code></a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-58" id="fn-58"><sup> 58 </sup></a>. This shell brings nice colors, autocomplete and, in my opinion, organizes the information on your terminal quite nicely.</p>
+<p id="p-945">Installing is very easy, too. If you have used Homebrew to install anything, then installation is even easy. Simply type <code class="code-inline tex2jax_ignore">brew install fish</code> into your terminal, then change your shell to <code class="code-inline tex2jax_ignore">fish</code> (a Google search will likely be necessary unless you are a Mac user, see <a href="S_custterm_mac.html#SS_fish" class="internal" title="Subsection A.1.2: A New Shell: fish">Subsection A.1.2</a>). After restarting your terminal, everything will be ready for use! (<code class="code-inline tex2jax_ignore">fish</code> is installable on Linux and Windows Subsystem for Linux)</p>
+<p id="p-946">If you don't like <code class="code-inline tex2jax_ignore">fish</code>, you can switch back to <code class="code-inline tex2jax_ignore">bash</code> or <code class="code-inline tex2jax_ignore">zsh</code>.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-55"><div class="fn"><code class="code-inline tex2jax_ignore">gitkraken.com/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-56"><div class="fn"><code class="code-inline tex2jax_ignore">desktop.github.com/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-57"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-58"><div class="fn"><code class="code-inline tex2jax_ignore">fishshell.com/</code></div></div>
 </div></main>
 </div>
 </body>

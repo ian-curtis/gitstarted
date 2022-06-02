@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-02T13:51:46-04:00       *-->
+<!--*       on 2022-06-02T14:33:18-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -14,8 +14,28 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<p>I have never caused or had to deal with a serious merge conflict. <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github" target="_blank">The GitHub documentation</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-62-hidden.html" title="Footnote 62"><sup> 62 </sup></a> has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line" target="_blank">resolve merge conflicts on the command line</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-63-hidden.html" title="Footnote 63"><sup> 63 </sup></a> or in your text editor.</p>
-<span class="incontext"><a href="S_mergeconflict.html#p-1006" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<p>You might get another error like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull origin main
+</b>remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), 659 bytes | 659.00 KiB/s, done.
+From &lt;repo-you-are-pushing-to&gt;
+   2417195..8b492ee  main       -&gt; origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+</pre></div> which is quite overwhelming.</p>
+<span class="incontext"><a href="S_diverge_branch.html#p-1006" class="internal">in-context</a></span>
 </body>
 </html>
