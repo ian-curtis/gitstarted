@@ -5,16 +5,10 @@
   
   <introduction>
     <p>
-      For those who do not have a lot of experience with computers, start here for an introduction 
-      into certain computer basics. This book assumes that you are familiar with the content in this 
-      chapter. Don't worry, I don't assume you know anything about the <q>command line</q> (this 
-      will be introduced in <xref ref="S_whatiscommline"/>). 
+      For those who do not have a lot of experience with computers, start here for an introduction into certain computer basics. This book assumes that you are familiar with the content in this chapter so take some time to browse it. Don't worry, I don't assume you know anything about the <q>command line</q> (this will be introduced in <xref ref="S_whatiscommline"/>). 
     </p>
     <p>
-      However, for the content of this book to make sense, a few basics must be covered, such as proper 
-      file naming and a knowledge of common file extensions. Taking the time to read this chapter 
-      <em>will</em> pay off in the long run and will make using the command line and Git simpler 
-      (and we love simplicity, espeically with computers!).
+      However, for the content of this book to make sense, a few basics must be covered, such as proper file naming and a knowledge of common file extensions. Taking the time to read this chapter <em>will</em> pay off in the long run and will make using the command line and Git simpler (and we love simplicity, espeically with computers!).
     </p>
   </introduction>
 

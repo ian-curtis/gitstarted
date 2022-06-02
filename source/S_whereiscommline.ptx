@@ -46,31 +46,11 @@
             </p>
           </li>
         </ul>
-        <!-- Once you open the terminal, you should be presented with a blank screen, such as the one shown 
-        in <xref ref="mac-term-start"/>
-        <figure xml:id="mac-term-start">
-          <caption>Opening Screen for Mac Terminal</caption>
-          <image source="mac-term-start.png">
-            <description></description>
-            
-          </image>
-        </figure> -->
       </p>
       <assemblage>
-        <title>Note</title>
+        <title>Shells</title>
         <p>
-          At the top of my (Mac) terminal, it says <q>&lt;my-username><mdash/> -bash</q>. This indicates that
-          I am using the <c>bash</c> shell. This is no longer the default for MacOS Catalina and later 
-          (as the terminal states). 
-          I will be sticking with <c>bash</c> in this book to avoid differences between Windows and Mac 
-          instructions. 
-          If yours states something else (such as <c>zsh</c> or <c>fish</c>) and you would like to 
-          use <c>bash</c> to follow along, paste <c>chsh -s /bin/bash</c>
-          <fn>This command stands for <q>CHange the SHell to the shell called bash in the bin folder</q></fn> 
-          into the command line, press <kbd>Enter</kbd>, 
-          enter your password to your computer, and restart the terminal. Otherwise, you are free to 
-          stick with the default shell; just know that there may be slight differences between this 
-          book and your terminal.
+          At the top of my (Mac) terminal, it says <q>&lt;my-username><mdash/> -bash</q>. This indicates that I am using the <c>bash</c> shell. This is no longer the default for MacOS Catalina and later (as the terminal states). I will be sticking with <c>bash</c> in this book to avoid major differences between Windows and Mac instructions. If your terminal states something other than <c>bash</c> (such as <c>zsh</c> or <c>fish</c>) and you would like to use <c>bash</c> to follow along, paste <c>chsh -s /bin/bash</c><fn>This command stands for <q>CHange the SHell to the shell called bash in the bin folder</q></fn> into the command line, press <kbd>Enter</kbd>, enter your password to your computer, and restart the terminal. Otherwise, you are free to stick with the default shell; just know that there may be slight differences between this book and your terminal.
         </p>
       </assemblage>
   </subsection>
@@ -83,7 +63,7 @@
       operating systems on Windows is differet than the basis for MacOS and other Unix-like systems 
       (such as Linux). This means that certain applications for Windows do not have a MacOS 
       compliment (and likewise some Mac applications do not have Windows versions). In addition, the 
-      file system and organization are different bewteen the two, as we shall see later.
+      file system and organization are different bewteen the two.
     </p>
     <p>
       Separate instructions must be given for Windows users for certain tasks. 
@@ -97,29 +77,9 @@
           and click on the result that comes up.
         </p>
       </aside>
-      
-      <!-- <figure xml:id="windows-term-start">
-        <caption>Opening Screen for Windows Command Prompt</caption>
-        <image source="windows-term-start.png">
-          <description></description>
-        </image>
-      </figure> -->
     </p>
     <p>
-      Instead, let's use a new terminal (Git Bash) that works well with Git (and conveniently uses the 
-      <c>bash</c> shell which allows me to use the same instructions for Mac as Windows). Detailed 
-      download instructions can be found in <xref text="title" ref="materials-windows"></xref>. I will assume 
-      that you are using Git Bash for the remainder of the book.
-    </p>
-    <p>
-      Once you open Git Bash for the first time, you should see something like the screen in 
-      <xref ref="windows-bash-start"/>.
-      <figure xml:id="windows-bash-start">
-        <caption>Opening Screen for Git Bash (Windows)</caption>
-        <!-- <image source="windows-bash-start.png">
-          <description></description>
-        </image> -->
-      </figure>
+      Instead, let's use a new terminal (Git Bash) that works with Git and conveniently uses the <c>bash</c> shell which allows me to use the same instructions for Mac as Windows. Detailed download instructions can be found in <xref text="title" ref="materials-windows"></xref>. I will assume that you are using Git Bash for the remainder of the book.
     </p>
   </subsection>
   <subsection>

@@ -16,6 +16,12 @@
   <p>
     The act of grabbing changes from the parent repository is called <term>fetching</term>, aptly named since that is exactly what you are doing: fetching changes. Technically this is distinct from a related <term>merge</term>. First, you fetch the changes, then you merge the changes into your fork.
   </p>
+  <p>
+    You might remember using <c>git pull</c> to fetch in changes. As we will see later, this essentially is the same thing. Pulling fetches and merges at the same time.
+  </p>
+  <p>
+    Before continuing, you must wait until I accept your pull request from <xref ref="S_hubcollabedit"/>.
+  </p>
   </subsection>
 
   <subsection xml:id="SS_upstream">
@@ -58,7 +64,7 @@
     <warning xml:id="warn-fetch-often">
       <title>Fetch Upstream Often</title>
       <p>
-        In my opinion, you want to keep the least amount of commits behind. If you are working on someone else's work, you want to stay up to date. If some big change happens, you should make sure you have that change on your fork. Why? Well, you don't want to overwrite anything someone else just did. You also don't want to work on adding a new feature that is already incorporated. Maybe the new change helps you do your work better/faster. You also want to avoid potential merge conflicts because someone else is change the same files you are.
+        In my opinion, you want to keep the least amount of commits behind. If you are working on someone else's work, you want to stay up to date. If some big change happens, you should make sure you have that change on your fork. Why? Well, you don't want to overwrite anything someone else just did. You also don't want to work on adding a new feature that is already incorporated. Maybe the new change helps you do your work better/faster. You also want to avoid potential merge conflicts because someone else changed the same files you are working on.
       </p>
       <p>
         Therefore, it is usually recommended practice to fetch upstream as often as you can. At the very least, daily, especially if the project is popular and updated frequently. It is possible that there is no new upstream content to fetch but hey, at least you checked!
@@ -73,6 +79,9 @@
     </p>
 
     <activity xml:id="act-fetch-upstream">
+      <title>Fetching Upstream</title>
+      
+      
       <introduction>
         <p>
           Enough talk, let's fetch that upstream!

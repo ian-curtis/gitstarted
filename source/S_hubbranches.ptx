@@ -9,12 +9,10 @@
       Suppose you were writing a three-stanza poem for a contest. The final product must be handwritten on fancy letterhead, in high-quality black pen. As multiple drafts go by, you finalize the first and the third stanza. You're so confident in them that you write them on the letterhead in pen. But you're stuck on the second stanza.
     </p>
     <p>
-      After some introspection and brainstorming, you finally come up with two potential second stanzas. But you can't decide between the two! You decide that the best way to figure out which one you like is to write each one in the poem and see if it flows with the rest. But you can't just write one in the official poem (in pen!). What if the one you choose isn't what you like? Then you have to rewrite the entire poem.
+      After some introspection and brainstorming, you finally come up with two potential second stanzas. But you can't decide between the two! You decide that the best way to figure out which one you like is to write each one in the poem and see if it flows with the rest. You can't just write one in the official poem (in pen!). What if the one you choose isn't what you like? Then you have to rewrite the entire poem.
     </p>
     <p>
-      Instead, you decide to get out two pieces of scratch paper and write them poem in pencil and with 
-      a respective second stanza. That way you can hold them side-by-side and compare their flow. This 
-      method makes it easier for you to decide which of the two candidates you prefer. Once you have done so, you write the final stanza in pen on the letterhead and recycle the scratch paper with your drafts.
+      Instead, you decide to get out two pieces of scratch paper and write the poem in pencil and with a respective second stanza. That way you can hold them side-by-side and compare their flow. This method makes it easier for you to decide which of the two candidates you prefer. Once you have done so, you write the final stanza in pen on the letterhead and recycle the scratch paper with your drafts.
     </p>
     <p>
       Believe it or not, this potentially unrealistic example is a great demonstration of what Git and 
@@ -36,15 +34,15 @@
     </image>
   </figure>
   <p>
-    <em>This type of editing is usually discouraged.</em> We will explore the idea a little later when we cover merge conflicts, it is best practice to create a new branch, made some edits there, then submit a pull request to merge your changes into the main branch.
+    <em>This type of editing is usually discouraged.</em> It is best practice to create a new branch, made some edits there, then submit a pull request to merge your changes into the main branch.
   </p>
 
   <p>
-    Whoa. I said a lot of stuff there. Lots of new words and things you don't know how to do. Please don't freak out on me! I'll guide you through it in this section. When you get a new project, you want to try and break it up into pieces. Each piece will have its own branch on the Github tree. For instance, the two poems that you wrote on scratch paper above were two branches off of the official poem. They each had the same first and third stanzas; only their second stanzas differed. See <xref ref="fig-branch-poem"/> for a visualization of branches in this instance.
+    Whoa. I said a lot of stuff there. Lots of new words and things you don't know how to do. Don't worry, I'll guide you through it in this section. When you get a new project, you want to try and break it up into pieces. Each piece will have its own branch on the Github tree. For instance, the two poems that you wrote on scratch paper above were two branches off of the official poem. They each had the same first and third stanzas; only their second stanzas differed. See <xref ref="fig-branch-poem"/> for a visualization of branches in this instance.
   </p>
   <figure xml:id="fig-branch-poem">
     <caption>Diagram of two branches off of main</caption>
-    <image source="branch_poem" width="90%">
+    <image source="branch_poem" width="100%">
       <description>Arrow diagram. Main branch splits into two branches, Poem 1 and Poem 2.</description>
     </image>
   </figure>
@@ -56,7 +54,7 @@
   <idx><h>github</h><h>commit</h></idx>
   <idx><h>github</h><h>merge</h></idx>
   <idx><h>github</h><h>pull request</h></idx>
-    Notice how in <xref ref="fig-branch-poem"/> that the main branch does not move forward when branches are created, it stops once a branch is made. When you first create a new branch, all you have is a copy of the main branch. However, when you edit your new branch, the changes do not appear into the main branch. Branches are like testing grounds. Try some new things, see if you like them, see if they work, then make it official. <q>Making it official</q> with Git and Github is called <term>committing</term> (as we have seen). Two new terms that go with commits<fn>Notice how <q>commit</q> is both a noun and a verb.</fn> are <term>merge</term> and <term>pull request</term>. Oftentimes, you will hear people say that they just merged their changes into main. This means they committed their changes to the main branch and updated the official version. 
+    Notice how in <xref ref="fig-branch-poem"/> that the main branch does not move forward when branches are created, it stops once a branch is made. When you first create a new branch, all you have is a copy of the main branch. However, when you edit your new branch, the changes do not appear into the main branch. Branches are like testing grounds. Try some new things, see if you like them, see if they work, then make it official. <q>Making it official</q> with Git and Github is called <term>committing</term> (as we have seen). Two new terms that go with commits<fn>Notice how <q>commit</q> is both a noun and a verb.</fn> are <term>merge</term> and <term>pull request</term>. Oftentimes, you will hear people say that they just merged their changes into main. This means they committed their changes to the main branch and updated the official version. With the poem example, there are two possible merges you could make into main, as diagrammed in <xref ref="fig-merge-poem"/>.
   </p>
   <figure xml:id="fig-merge-poem">
     <caption>Diagram showing two possible merges into main</caption>
@@ -86,8 +84,7 @@
       <ol>
         <li>
           <p>
-            Click on the word <q>main</q>. This will open a drop-down menu with all of your current branches.
-            You probably only have one branch: the main branches.
+            Click on the word <q>main</q>. This will open a drop-down menu with all of your current branches (<xref ref="fig-hub-new-branch"/>). You probably only have one branch: the main branch.
           </p>
         </li>
         <li>
@@ -123,7 +120,7 @@
       know what branch you are looking at. Also notice how it says we have <q>2 branches</q>. We do: main 
       and animal. Right underneath those items, you may also notice GitHub has placed a box stating that 
       <q>This branch is up to date with main.</q>. This is what we should expect. This statement indicates 
-      that the <c>main</c> branch and the <c>animal</c> branch are identical.
+      that the <c>main</c> branch and the <c>animal</c> branch are identical (see <xref ref="fig-hub-animal-initial"/>).
     </p>
 
     <figure xml:id="fig-hub-animal-initial">
@@ -181,7 +178,7 @@
        
     </p>
     <p>
-      Hopefully you are able to see the power in this. In a more serious project, commiting too early could have much bigger ramifications. Suppose I am coding a new character for a video game and the character has to use vulgar language. In a simple workflow, I would create a branch called <c>vulgar</c> or <c>new_npc</c> with a sub-branch of <c>language</c>. Then, I would incorporate my code on my branches.Once that was done, I would run my code to test that it worked. Then I would submit a pull request, requesting my boss to pull in my new changes into the official version of the game. They would likely take a look at my code and try it themselves before accepting the changes. But let's say I forgot to add in the censorship beep over the language. If I had just merged right into main, my mistake may have been missed and I could get in serious trouble. But since I worked on a branch, my forgetfulness can be caught before the changes get incorporated and there won't be any flustering to quickly revert changes or fix the error.
+      Hopefully you are able to see the power in this. In a more serious project, commiting too early could have much bigger ramifications. Suppose I am coding a new character for a video game and the character has to use vulgar language. In a simple workflow, I would create a branch called <c>vulgar</c> or <c>new_npc</c> with a sub-branch of <c>language</c>. Then, I would incorporate my code on my branches. Once that was done, I would run my code to test that it worked. Then I would submit a pull request, requesting my boss to pull in my new changes into the official version of the game. They would likely take a look at my code and try it themselves before accepting the changes. But let's say I forgot to add in the censorship beep over the language. If I had just merged right into main, my mistake may have been missed and I could get in serious trouble. But since I worked on a branch, my forgetfulness can be caught before the changes get incorporated and there won't be any flustering to quickly revert changes or fix the error.
     </p>
     <exercise xml:id="editbranch">
       <title>Editing a File On a Branch</title>
@@ -199,7 +196,7 @@
 
     <figure xml:id="fig-hub-animal-edit">
       <caption>Diagram showing branches after add a favorite animal</caption>
-      <image source="hub_animal_edit" width="90%">
+      <image source="hub_animal_edit" width="100%">
         <description>Arrow diagram. Main branch to animal branch. Animal branch points to new edits.</description>
       </image>
     </figure>
@@ -211,7 +208,7 @@
       After you have made some changes, scroll down to the <q>Commit changes</q> section. Now is the time to introduce commit messages. A <term>commit message</term> is a short, but informative (notice a recurring pattern?) note of what your changes do. You may be tempted to skip this when working with yourself. Please try to write the best commit messages <em>at all times</em>. When you look back at your repo in the future, it will be helpful for you to remember what you did. Commit messages also help others who may look at your project know what you did in each commit. You may see my various branch names and commit messages at <url href="https://github.com/ian-curtis/gitstarted/commits/main" visual="github.com/ian-curtis/gitstarted/commits/main">the commit list for this book on GitHub</url>.
     </p>
     <p>
-      Let's create a commit message for our changes on the <c>animal</c> branch. In the <q>Commit changes</q> block, there is a text box that is autofilled with <q>Update README.md</q>. This is the default and for some instances may be enough. But I have the tendency to write more detailed messages for my commit and I recommend you do so as well. Instead, type <q>add favorite animal</q>. There is no need to add the file name as this message will be tied to the file.
+      Let's create a commit message for our changes on the <c>animal</c> branch. In the <q>Commit changes</q> block, there is a text box that is autofilled with <q>Update README.md</q>. This is the default and for some instances may be enough. But I have the tendency to write slightly more detailed messages for my commit and I recommend you do so as well. Instead, type <q>add favorite animal</q>. There is no need to add the file name as this message will only be tied to the file(s) you have edited. (Later on, we will see that specific commit messages are only associated with the files you have staged and committed but that's a topic for <xref ref="C_gitsolo"/>.)
     </p>
 
     <assemblage xml:id="commitmessages">
@@ -220,7 +217,7 @@
       <p>
         It is up to you how to format your message. Some people write in complete sentences while others 
         use incomplete sentences with capital letters. Some people use past tense, others present tense, 
-        and even other use present participles (add<em>ing</em>). I choose to use present tense with 
+        and even others use present participles (add<em>ing</em>). I choose to use present tense with 
         incomplete sentences and lowercase letters. But that's my preference. You should find what you 
         like and stick with it.
       </p>
@@ -230,10 +227,10 @@
     </assemblage>
 
     <p>
-      It is not necessary to fill out the description text box (feel free to do so if you would like!). Ensure the <q>Commit directly to the <c>animal</c> branch.</q> is selected, then click <q>Commit changes</q>.Your file should be updated! Just remember, <em>you have only updated the copy of the file on the <c>animal</c> branch, not main</em>.
+      It is not necessary to fill out the description text box (feel free to do so if you would like!). Ensure the <q>Commit directly to the <c>animal</c> branch.</q> is selected, then click <q>Commit changes</q>.Your file should be updated! Just remember, <em>you have only updated the copy of the file on the <c>animal</c> branch, not <c>main</c></em>.
     </p>
     <p>
-      Navigate back to the code tab to continue. Make sure you are still on the <c>animal</c> branches. 
+      Navigate back to the code tab to continue. Make sure you are still on the <c>animal</c> branch. 
       You can verify this by looking at the drop-down menu text or by checking the contents of your 
       README file (if your favorite animal is there, you are on the <c>animal</c> branch).
     </p>
@@ -253,12 +250,13 @@
     <idx><h>merge</h></idx>
     <idx><h>github</h><h>merge</h></idx>
     <p>
-      Alright, so you've edited a file on a branch AND you are happy with your changes. Everything looks good and works well on the branch so you are ready to incorporate your changes into the official version of your project. This is called creating a <term>pull request</term>. It may sound odd to call it a pull request when it seems like you are actually pushing your changes toward the main branch.However, with pull requests, you are requesting that someone else pull your changes into the main branch.
+      Alright, so you've edited a file on a branch AND you are happy with your changes. Everything looks good and works well on the branch so you are ready to incorporate your changes into the official version of your project. This is called creating a <term>pull request</term>. It may sound odd to call it a pull request when it seems like you are actually <em>pushing</em> your changes toward the main branch. However, often with pull requests when collaborating, you don't have permission to access the main branch of another repo, so you have to request that someone <em>pull</em> your changes into the main branch.
     </p>
     <p>
-      I admit, it is silly to have to work with pull requests when working solo. Why would I need to ask myself permission to pull in my own changes? But pull requests are essential when working with multiple collaborators and I recommend using them in your own individual work for practice and good habits.
+      I admit, it is silly to have to work with pull requests when working solo. Why would I need to ask myself permission to pull in my own changes? But pull requests are essential when working with multiple collaborators and I recommend using branches and pull requests in your own individual work for practice and good habits.
     </p>
     <p>
+    <idx><h>commit</h><h>ahead and behind</h></idx>
       Pull requests are only necessary when using branches (recall how when we edited the README file directly from the main branch we had no pull requests). We are currently in a situation that would require a pull request. How do we create one? First notice (on your GitHub repository for the <c>animal</c> branch) how a new message has appeared. This probably says
       <blockquote>
         This branch is 1 commit ahead of main.
@@ -274,18 +272,14 @@
       There is a lot on this page but most of it will be dealt with later. For right now, notice that 
       GitHub tells us which branch we are trying to send to main at the top. <c>animal</c> should be on 
       the right and is pointing towards <c>main</c>. Next to this, you should see a check mark and an 
-      <q>Able to merge</q> message. This is good; later on we will explore what to do if branches 
-      cannot be automatically merged. See <xref ref="S_mergeconflict"/>.
+      <q>Able to merge</q> message. This is good; see <xref ref="S_mergeconflict"/> if your branches cannot be automatically merged.
     </p>
     <p>
       Your cursor should have automatically navigated to a dialog box. This has defaulted to our latest 
-      commit message. You should make sure that you put an informative message on what your pull request 
-      as a whole accomplishes. Remember, it is possible to have multiple commits before opening a pull 
-      request so you could have adjusted a few things. For us, <q>add favorite animal</q> is sufficient 
-      and we can open the pull request. Click on the green <q>Create pull request</q> button.
+      commit message. You should make sure that you have put an informative message on what your pull request accomplishes as a whole. Remember, it is possible to have multiple commits before opening a pull request so you could have adjusted a few things. For us, <q>add favorite animal</q> is sufficient and we can open the pull request. Click on the green <q>Create pull request</q> button.
     </p>
     <p>
-      Man, another new screen. This time notice how we have changed tabs. We are now in the <q>Pull requests</q> area, which should make sense. The pull requests page is for more than just accpeting pull requests. If someone else has contributed to your repo and has opened a pull request, you can start a conversation here. Suppose you have a question about someone's changes or think they should improve their additionbefore you approve it. You can say that here. 
+      Nice, another new screen. This time notice how we have changed tabs. We are now in the <q>Pull requests</q> area, which should make sense. The pull requests page is for more than just accpeting pull requests. If someone else has contributed to your repo and has opened a pull request, you can start a conversation here. Suppose you have a question about someone's changes or think they should improve their addition before you approve it. You can say that here. 
     </p>
     <p>
       But we have no problems with ourselves. Our pull request has been created and is waiting for permission to be 
@@ -295,13 +289,7 @@
       the message if necessary. Since we have no changes to make, click on <q>Confirm merge</q>.
     </p>
     <p>
-      Hopefully you were given the <q>Pull request successfully merged and closed</q> message. From here, 
-      click on <q>Delete branch</q>. You should have no fear about deleting the branch at this point. Your 
-      changes will not be lost because you just incorporated them into main. You now have two identical 
-      copies of the same files and can get rid of the extraneous copy, your old branch. If it makes you feel 
-      better, GitHub keeps track of commits and merges. If you ever want to revert back to an old version, 
-      you can in <xref ref="S_hub_revert_commit"/>. Go back to the <q>Code</q> tab and verify that your 
-      favorite animal appears in main.
+      Hopefully you were given the <q>Pull request successfully merged and closed</q> message. From here, click on <q>Delete branch</q>. You should have no fear about deleting the branch at this point. Your changes will not be lost because you just incorporated them into <c>main</c>. You now have two identical copies of the same files and can get rid of the extraneous copy: your old branch. If it makes you feel better, GitHub keeps track of commits and merges. If you ever want to revert back to an old version, you can in <xref ref="S_hub_revert_commit"/>. For now, go back to the <q>Code</q> tab and verify that your favorite animal appears in the README in the main branch.
     </p>
 
     <figure xml:id="fig-hub-animal-merge">

@@ -6,6 +6,9 @@
   <idx><h>git</h><h>three step process</h></idx>
   <introduction>
     <p>
+      Ok, great! We have some edits, but how do we let other people see them? Remember that we have been editing locally so nothing new has shown up on GitHub. The goal here is to share the work with the world, so we need a way to send the changes back to GitHub. Luckily, by cloning our repo, we set up a connection between our local repo and our GitHub repo.
+    </p>
+    <p>
       This is a very important section. Each step must be completed in the proper order to avoid Git errors, headaches, and file loss. 
     </p>
   
@@ -30,7 +33,7 @@
       </li>
     </ol>
 
-    Step 2 may seem familiar. Yep, the <term>commit</term> that happens here is the same thing as a commit we did earlier!
+    Step 2 may seem familiar. Yep, the <term>commit</term> that happens here is the same as a commit we did earlier!
   </p>
   </introduction>
 
@@ -48,7 +51,7 @@
       <title>Trying <c>git status</c></title>
       <statement>
         <p>
-          The command you will need is simple: <c>git status</c>. The <c>git</c> is necessary to tell the computer that we will be using git and the <c>status</c> gives the the current status of all of the files in our repository. We might say that it shows all of the files that Git is <term>tracking</term>. Open the termainal, verify that you are in the correct directory and on the correct branch and try the command. Did it spit out what you expected?
+          The command you will need is simple: <c>git status</c>. The <c>git</c> is necessary to tell the computer that we will be using git and the <c>status</c> gives the the current status of all of the files in our repository. We might say that it shows all of the files that Git is <term>tracking</term>. Open the terminal, verify that you are in the correct directory and on the correct branch and try the command. Did it spit out what you expected?
         </p>
       </statement>
       <solution>
@@ -76,13 +79,14 @@
       </solution>
     </project>
     
-  </subsection>
+  
 
-  <subsection xml:id="vscode-term">
+  <paragraphs xml:id="vscode-term">
     <title>A Small Note On <init>VS</init> Code</title>
     <p>
       It is worth noting that if you are using <init>VS</init> Code, you do not need to navigate back and forth from a terminal window and the text editor. <init>VS</init> Code has a built-in interface to use your terminal. To access this, navigate to the <q>Terminal</q> heading in the navigation bar at the top of your screen and click on <q>New Terminal</q>. You may also use the keyboard shortcut <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>`</kbd> (On a Mac, you would still use <kbd>Ctrl</kbd> not <kbd>command</kbd>.)
     </p>
+    </paragraphs>
   </subsection>
 
   <subsection xml:id="SS_git-add">
@@ -91,7 +95,7 @@
     <idx><h>staging</h></idx>
     <idx><h>files</h><h>staging</h></idx>
     <p>
-      The first step in sending files back to GitHub is to stage your files. Basically, this step is like you saying <q>I have edited some files these are the ones I would like to send to GitHub</q>. With our small example, this step is a little silly. We only edited one file, of course it's the one we want to send back.
+      The first step in sending files back to GitHub is to stage your files. Basically, this step is like you saying <q>I have edited some files and these are the ones I would like to send to GitHub</q>. With our small example, this step is a little silly. We only edited one file, of course it's the one we want to send back.
     </p>
     <p>
       The magic of staging files, however, lets you choose which files you want to push back. Maybe I'm working on three files at once, but only two are ready to go back to GitHub. Maybe I'm writing a book and I want my editor to be able to see chapters 1-4 but not chapter 5 (which I'm currently working on). At any given time, you can decide which files you want to stage.
@@ -230,7 +234,10 @@
           </output>
         </console>
         <p>
-          Note that the message is surrounded by quotation marks. This is required so that Git doesn't think that each word in your message is a separate command. They can be either single or double quotes as long as the two match. Also take a look at the output. This tells you the name of your branch, a unique identifier for your commit (so yours will be different than mine), your commit message, how many files were changed, and how many lines were inserted or deleted. This can be useful to verify that the commit worked as you expected.
+          Note that the message is surrounded by quotation marks. This is required so that Git doesn't think that each word in your message is a separate command. They can be either single or double quotes as long as the two match. 
+        </p>
+        <p>
+          Also take a look at the output. This tells you the name of your branch, a unique identifier for your commit (so yours will be different than mine), your commit message, how many files were changed, and how many lines were inserted or deleted. This can be useful to verify that the commit worked as you expected.
         </p>
         </statement>
       </task>
@@ -307,7 +314,7 @@
       There are two types of remotes: <term>origin</term> and <term>upstream</term>. Upstream remotes are not typically necessary when you are working with yourself and on your own repo. We will come back to them in <xref ref="SS_upstream"/>. To Git, <q>origin</q> is the repo that you have cloned. Throughout this section, we have been working with a repo titled <c>aboutme</c> that is located on GitHub. This GitHub version of the repo is <q>origin</q>. When we cloned, we made a copy of <q>origin</q> onto our computer and Git established a remote connection from the local computer to GitHub. 
     </p>
     <p>
-      This is necessary to understand for <c>git push</c>. The command has four parts:
+      This is necessary to understand <c>git push</c>. The command has four parts:
       <ol>
         <li>
           <p>
@@ -345,7 +352,7 @@
       <task>
         <introduction>
           <p>
-            Let's start with some errors that Git can through at us.
+            Let's start with some errors that Git can throw at us.
           </p>
         </introduction>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <preface xml:id="materials-windows">
-  <title>Materials (Windows Users)</title>
+  <title>Materials (Windows)</title>
 
   <p>
     As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on it you have a Mac or a <init>PC</init> and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions <em>for those who are using Windows</em>. If you are running Windows Subsystem for Linux, instructions might be slightly different; however, start here and jump to a quick Google search if something goes wrong.
@@ -60,7 +60,7 @@
               </li>
               <li>
                 <p>
-                  When you reach the <q>Adjusting the name of the initial branch...</q> screen, I recommend selecting <q>Override the default branch name...</q> and type in <c>main</c> (lowercase) into the box. This will help us match the Mac version and respect <url ref="https://sfconservancy.org/news/2020/jun/23/gitbranchname/" visual="sfconservancy.org/news/2020/jun/23/gitbranchname/">Git's attempts to be more inclusive</url>. 
+                  When you reach the <q>Adjusting the name of the initial branch...</q> screen, I recommend selecting <q>Override the default branch name...</q> and type in <c>main</c> (lowercase) into the box. This will help us match the Mac version and respect <url ref="https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main" visual="theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main">Git's attempts to be more inclusive</url>. 
                 </p>
               </li>
             </ul>

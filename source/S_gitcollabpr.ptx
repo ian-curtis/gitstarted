@@ -21,7 +21,7 @@
         <li>
           <title>Merge from your new branch to your fork, then to the authoritative</title>
           <p>
-            Your base repository should be <c>&lt;your-username>/&lt;your-fork></c>, base should be <c>main</c>, and compare should be <c>&lt;your-branc-name</c>. Do note that once you select your fork for the base repository, the page will reload and the base and head repository options will disappear.
+            Your base repository should be <c>&lt;your-username>/&lt;your-fork></c>, base should be <c>main</c>, and compare should be <c>&lt;your-branch-name</c>. Do note that once you select your fork for the base repository, the page will reload and the base and head repository options will disappear.
           </p>
           <p>
             Then, click Create pull request and merge in to main. You may now open another pull request with options base repository of <c>&lt;authoritative-username>/&lt;authoritative-repo></c>, base should be <c>main</c>, head repository should be <c>&lt;your-username>&lt;your-fork></c> and compare should be <c>main</c>.
@@ -171,7 +171,7 @@
         <task>
           <statement>
             <p>
-              Ok, that was the hardest part. Once again, this only has to be done once. After that, every time you want to pull from upstream and update local and origin, you just need two commands: <c>git pull upstream main</c> and <c>git push origin main</c>.
+              Ok, that was the hardest part. Once again, that only has to be done once. After that, every time you want to pull from upstream and update local and origin, you just need two commands: <c>git pull upstream main</c> and <c>git push origin main</c>.
             </p>
             <p>
               <c>git pull</c> will fetch and merge upstream changes from its main branch and <c>git push</c> will take all of your files and push them to origin, updating them there.

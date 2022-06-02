@@ -290,6 +290,12 @@
         </statement>
       </task>
 
+      <conclusion>
+        <p>
+          If you'd like, use <xref ref="S_hub_delete_repo"/> to delete your repository. I won't be using it again in this book and this might be good practice to see what deleting a repo looks like. On the contrary, it might be nice to keep the repository to show other people that you are active on GitHub and are open to learning how things work. You can always write this fact in a statement on your README.
+        </p>
+      </conclusion>
+
     </activity>
 
 

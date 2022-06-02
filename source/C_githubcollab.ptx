@@ -5,7 +5,7 @@
   
   <introduction>
     <p>
-      Great! You seem ready to dive further into the Git/GitHub maze. While you might do many projects alone, the real world is full of teams and sub-teams collaborating on tasks. I assume that you have read (or at least understand the concepts of) <xref ref="part-solo"/> (<xref ref="C_githubsolo"/> and <xref ref="C_gitsolo"/>) since the working with others is very similar to working alone. Many of the same ideas return, such as commits, pushes, and remotes, but there are some new twists and new vocabulary to consider and special considerations to be made.
+      Great! You seem ready to dive further into the Git/GitHub maze. While you might do many projects alone, the real world is full of teams and sub-teams collaborating on tasks. I assume that you have read (or at least understand the concepts of) <xref ref="part-solo"/> (<xref ref="C_githubsolo"/> and <xref ref="C_gitsolo"/>) since working with others is very similar to working alone. Many of the same ideas return, such as commits, pushes, and remotes, but there are some new twists and new vocabulary to consider and special considerations to be made.
     </p>
   </introduction>
 

@@ -26,7 +26,7 @@
     </p>
 
     <p>
-      First, navigate to GitHub at <url href="https://github.com" visual='github.com'></url>. Any browser should work. Click on the 
+      First, navigate to <url href="https://github.com" visual='github.com'>GitHub</url>. Any browser should work. Click on the 
       <q>Sign Up</q> in the top right corner. A welome box should pop up. Follow the instructions to create
       an account:
       <ol>
@@ -90,6 +90,11 @@
                   hyphen - or underscore _. [Again the ideas from <xref text="title" ref="namesspaces"/> come back.]
                 </p>
               </li>
+              <li>
+                <p>
+                  I would like to add one note to her list: avoid gaming usernames. GitHub is a serious professional community and something like <q>Xx_sp1cyMU3TARD_xX</q> would not be appropriate.
+                </p>
+              </li>
             </ul>
             
             While it is possible to change your username later, it is better to not fall back on that as 
@@ -121,7 +126,7 @@
     <p>
       You should be on the home page of GitHub which might look something like my homepage in <xref ref="fig-hub-home"/>. You may not see much if you just created an account. 
       Probably lots of buttons telling you to get started or take a tutorial and whatnot. Feel free to 
-      click on those if you'd like, but I'd suggest following along here first. 
+      click on those if you'd like, but I'd suggest following along here first and revisiting those later if you need more explanation. 
     </p>
     <figure xml:id="fig-hub-home">
       <caption>My GitHub Homepage</caption>
@@ -161,7 +166,7 @@
     <p>
       There are a few other tabs at the top of the page. The <q>Repositories</q> tab simply lists all of 
       your repos. (You can also find this page from the drop-down menu by your profile image in the top 
-      right.) The other three are not important for basic use (even I haven't used them yet).
+      right.) The other three are not important for basic use (I haven't even used them yet).
     </p>
     
   </subsection>
@@ -212,7 +217,7 @@
       <idx><h>github</h><h>appearance</h></idx>
       <p>
         Here you can change how GitHub looks. Is white annoying? Switch to a dark theme. There are three 
-        of them. You can also choose to have it change automatically with your computer (assuming your 
+        of them. You can choose to have it change automatically with your computer (assuming your 
         computer changes automatically). You can also edit the default emoji appearance.
       </p>
       <p>
@@ -234,7 +239,7 @@
       <title>Billing &amp; plans</title>
       <idx><h>github</h><h>billing</h></idx>
       <p>
-        GitHub offers different <url href="https://github.com/pricing" visual='github.com/pricing'>paid plans</url>. Each of the plans has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly fine under the free plan. I would certainly recommend upgrading once you become more familiar with Git, GitHub, and start developing more projects. However, there is no need to pay anything at this point. 
+        GitHub offers different <url href="https://github.com/pricing" visual='github.com/pricing'>paid plans</url>. Each of the plans has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly fine under the free plan and many people do not upgrade. Once you become more familiar with Git, GitHub, and start developing more projects, you might like an upgrade. However, there is no need to pay anything at this point. 
       </p>
       <p>
         Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their <url href="https://education.github.com/pack" visual='education.github.com/pack'>Student Developer Pack</url>. <url href="https://education.github.com/teachers" visual='education.github.com/teachers'>Teachers</url> and <url href="https://education.github.com/schools" visual='education.github.com/schools'>Schools</url> can also find benefits (some require a payment).
