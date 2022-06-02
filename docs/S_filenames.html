@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-05-27T17:16:41-04:00       *-->
+<!--*       on 2022-06-02T13:56:10-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -95,7 +95,6 @@
 <li><a href="S_filenames.html" data-scroll="S_filenames" class="active">File and Folder Names</a></li>
 <li><a href="S_fileextensions.html" data-scroll="S_fileextensions" class="internal">File Extensions</a></li>
 <li><a href="S_filepaths.html" data-scroll="S_filepaths" class="internal">File Paths</a></li>
-<li><a href="S_shortcuts.html" data-scroll="S_shortcuts" class="internal">Keyboard Shortcuts</a></li>
 </ul>
 </li>
 <li class="link">
@@ -179,270 +178,269 @@
 <section class="section" id="S_filenames"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">File and Folder Names</span>
 </h2>
-<section class="introduction" id="introduction-2"><p id="p-50">Take a minute and look at some of the files and folders on your computer. What do the names look like?</p>
-<p id="p-51">Sorry, that probably wasn't very clear. Specifically, I want you to see if there are <em class="emphasis">spaces</em> in your file and folder names. My guess is probably! Mine certainly had spaces before I learned more about computers and got involved in Git and the command line.</p>
-<p id="p-52">Take another look at some files/folders. What is your “capitalization scheme”? Is there a pattern? Do you name your files by what they contain? Do you have dates in your files? Do you have a group of files with something like “File First Draft”, “File Second Draft”, “File, revisions from colleague”, etc.? All of these can be problematic for computers and even more so for humans interacting with computers. But enough talk … why are these common file naming methods so frowned upon?</p>
-<p id="p-53">The following chunks go through my opinions on file naming conventions. But that's what they are: opinions, suggestions. Following them will make your life easier later on. But by all means, go ahead and ignore me and decide for yourself later if you want to make a change. I probably won't pop up in your home and check your file names. Try not to get too lost with these; an extensive example will be provided at the end of the section.</p></section><section class="subsection" id="SS_namingconventions"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-2"><p id="p-57">Take a minute and look at some of the files and folders on your computer. What do the names look like?</p>
+<p id="p-58">Sorry, that probably wasn't very clear. Specifically, I want you to see if there are <em class="emphasis">spaces</em> in your file and folder names. My guess is probably! Mine certainly had spaces before I learned more about computers and got involved in Git and the command line.</p>
+<p id="p-59">Take another look at some files/folders. What is your “capitalization scheme”? Is there a pattern? Do you name your files by what they contain? Do you have dates in your files? Do you have a group of files with something like “File First Draft”, “File Second Draft”, “File, revisions from colleague”, etc.? All of these can be problematic for computers and even more so for humans interacting with computers. But enough talk … why are these common file naming methods so frowned upon?</p>
+<p id="p-60">The following chunks go through my opinions on file naming conventions. But that's what they are: opinions, suggestions. Following them will make your life easier later on. But by all means, go ahead and ignore me and decide for yourself later if you want to make a change. I probably won't pop up in your home and check your file names. Try not to get too lost with these; an extensive example will be provided at the end of the section.</p></section><section class="subsection" id="SS_namingconventions"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">Naming Conventions</span>
 </h3>
 <section class="paragraphs" id="namesrevisions"><h4 class="heading"><span class="title">File Names With Revisions.</span></h4>
-<p id="p-54">I'm willing to bet that most of us have been there: You write one draft, get feedback, save a second draft as a new file, get feedback again, and finally make a new file with a final draft. Then, you decide to make modifications to that final draft which is saved as a new file, etc., etc.This is great until you realize that now you have way too many files for a single document. How do you know which one is real final draft? What if you open the wrong one and start editing? Now you have to edit all of the files to make them match.</p>
-<p id="p-55">Sure, a computer can handle that many files and doesn't really care how many drafts or revisions you have. But more files take up more storage space and increases the chances of confusing you! How on earth can we solve this problem? It's not like there's a magic software that can keep track of all of our changes in a single file.</p>
-<p id="p-56">Ah, but there is! This magic software is called Git. Git specializes in <dfn class="terminology">version control</dfn> which means that you do not have to worry about twelve drafts. Git keeps track of your revision history for you. If you are familiar with Google Docs, Git is very similar. Docs saves your changes and makes it easy to revert back to an old version if you change your mind on anything.</p>
-<p id="p-57">For now, don't worry about Git; we will get there in <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a>. Just know that after reading this book, you won't have to worry about excess drafts and should never have to save so many drafts again.</p></section><section class="paragraphs" id="namesdates"><h4 class="heading"><span class="title">File Names With Dates.</span></h4>
-<p id="p-58">Ok, this isn't really that problematic. But I never understood why dates in file names had to be so specific. Having years makes sense, maybe months. But days? Times? Seconds? Once you start getting that specific with dates and times, you run into the same issue as in <a href="" class="xref" data-knowl="./knowl/namesrevisions.html" title="Paragraphs: File Names With Revisions">File Names With Revisions</a>. Dates and times just make your file names incredibly long, hard to read, and hard to use in the command line. Please try to avoid dates, other than years.</p></section><section class="paragraphs" id="namesdescriptive"><h4 class="heading"><span class="title">Descriptive File Names.</span></h4>
-<p id="p-59">File names should be descriptive! Furthermore, they should describe <em class="emphasis">what the file actually contains/is about</em> and not some random name. Probably most of your files are descriptive? That's great! But what's the catch? File names should also be short. Short, sweet, too the point, and also descriptive.</p>
-<p id="p-60">That's pretty tricky, you might say. Sure, I respond, but you can take advantage of abbreviations and word shortening tricks. For instance, suppose I had a file names like so: <blockquote class="blockquote" id="blockquote-1">Chapters3_4_Overview of Sampling and Simple Random Sampling (SRS).pdf</blockquote> This is clearly descriptive. We know exactly what this PDF is about: it refers to chapters 3 and 4 of a textbook which is about sampling in general and digs into simple random sampling. But wow, it's really long. On my computer, it shows up as <blockquote class="blockquote" id="blockquote-2">Chapters3_4_Overview of…SRS).pdf</blockquote> Now do you know what this file contains? I don't. Yes, it's on chapters 3 and 4 but we are left hanging as to what the chapters are an overview of! Moreover, what does the random “SRS” mean at the end?</p>
-<p id="p-61">If it were me, I would rather name this file (based on the conventions discussed so far) <blockquote class="blockquote" id="blockquote-3">Ch3_4_Sampling and SRS.pdf</blockquote> Wow! So much shorter. Do you still have an idea of what the file contains? Hopefully! “Ch” is usually accepted as an abbreviation for “Chapter” so it is clear that this file is over chapters 3 and 4. The subject of these chapters is sampling and simple random sampling (“SRS” is a widely-used abbreviation in statistics for simple random sampling).</p>
+<p id="p-61">I'm willing to bet that most of us have been there: You write one draft, get feedback, save a second draft as a new file, get feedback again, and finally make a new file with a final draft. Then, you decide to make modifications to that final draft which is saved as a new file, etc., etc.This is great until you realize that now you have way too many files for a single document. How do you know which one is real final draft? What if you open the wrong one and start editing? Now you have to edit all of the files to make them match.</p>
+<p id="p-62">Sure, a computer can handle that many files and doesn't really care how many drafts or revisions you have. But more files take up more storage space and increases the chances of confusing you! How on earth can we solve this problem? It's not like there's a magic software that can keep track of all of our changes in a single file.</p>
+<p id="p-63">Ah, but there is! This magic software is called Git. Git specializes in <dfn class="terminology">version control</dfn> which means that you do not have to worry about twelve drafts. Git keeps track of your revision history for you. If you are familiar with Google Docs, Git is very similar. Docs saves your changes and makes it easy to revert back to an old version if you change your mind on anything.</p>
+<p id="p-64">For now, don't worry about Git; we will get there in <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a>. Just know that after reading this book, you won't have to worry about excess drafts and should never have to save so many drafts again.</p></section><section class="paragraphs" id="namesdates"><h4 class="heading"><span class="title">File Names With Dates.</span></h4>
+<p id="p-65">Ok, this isn't really that problematic. But I never understood why dates in file names had to be so specific. Having years makes sense, maybe months. But days? Times? Seconds? Once you start getting that specific with dates and times, you run into the same issue as in <a href="" class="xref" data-knowl="./knowl/namesrevisions.html" title="Paragraphs: File Names With Revisions">File Names With Revisions</a>. Dates and times just make your file names incredibly long, hard to read, and hard to use in the command line. Please try to avoid dates, other than years.</p></section><section class="paragraphs" id="namesdescriptive"><h4 class="heading"><span class="title">Descriptive File Names.</span></h4>
+<p id="p-66">File names should be descriptive! Furthermore, they should describe <em class="emphasis">what the file actually contains/is about</em> and not some random name. Probably most of your files are descriptive? That's great! But what's the catch? File names should also be short. Short, sweet, too the point, and also descriptive.</p>
+<p id="p-67">That's pretty tricky, you might say. Sure, I respond, but you can take advantage of abbreviations and word shortening tricks. For instance, suppose I had a file names like so: <blockquote class="blockquote" id="blockquote-1">Chapters3_4_Overview of Sampling and Simple Random Sampling (SRS).pdf</blockquote> This is clearly descriptive. We know exactly what this PDF is about: it refers to chapters 3 and 4 of a textbook which is about sampling in general and digs into simple random sampling. But wow, it's really long. On my computer, it shows up as <blockquote class="blockquote" id="blockquote-2">Chapters3_4_Overview of…SRS).pdf</blockquote> Now do you know what this file contains? I don't. Yes, it's on chapters 3 and 4 but we are left hanging as to what the chapters are an overview of! Moreover, what does the random “SRS” mean at the end?</p>
+<p id="p-68">If it were me, I would rather name this file (based on the conventions discussed so far) <blockquote class="blockquote" id="blockquote-3">Ch3_4_Sampling and SRS.pdf</blockquote> Wow! So much shorter. Do you still have an idea of what the file contains? Hopefully! “Ch” is usually accepted as an abbreviation for “Chapter” so it is clear that this file is over chapters 3 and 4. The subject of these chapters is sampling and simple random sampling (“SRS” is a widely-used abbreviation in statistics for simple random sampling).</p>
 <article class="assemblage assemblage-like" id="assemblage-1"><h5 class="heading"><span class="title">File Naming Trick.</span></h5>
-<p id="p-62">An easy way to shorten file names is to remove the vowels from words. The human brain is incredible in that it can determine what a word should be based on a small amount of context. Assuming the file above was in a folder pertaining to statistics, I could shorten it even more: <blockquote class="blockquote" id="blockquote-4">Ch3_4_Smplng and SRS.pdf</blockquote> And we still know what it's about!</p>
-<p id="p-63">A quick word of caution. Take care not to over-abbreviate. It may not be necessary to abbreviate every word. For instance, I wouldn't change “you” to “y” or “gate” to “gt”. You may be confused later: does “gt” mean “gate”, “git”, “get”, “gut”, “agate”, etc., etc.?</p></article><p id="p-64">Summary: keep your file names short and to the point. Describe what the file is (I wouldn't name the file above “bananas.pdf”!).</p></section><section class="paragraphs" id="namesspaces"><h4 class="heading"><span class="title">File Names With Spaces.</span></h4>
-<p id="p-65">If you only follow one convention in this section, this would be the one. This the most important for working with the command line. Spaces in file names increase the amount of typing you have to do and make it more difficult to understand what's going on on the command line.</p>
-<p id="p-66">For instance, suppose I wanted to open the file we discussed earlier. On the command line, I would open the file like this (don't worry about the commands, just notice what it looks like): <blockquote class="blockquote" id="blockquote-5"><code class="code-inline tex2jax_ignore">open 'Chapters3_4_Overview of Sampling and Simple Random Sampling (SRS).pdf'</code></blockquote> I could also do it like this: <blockquote class="blockquote" id="blockquote-6"><code class="code-inline tex2jax_ignore">open Chapters3_4_Overview\ of\ Sampling\ and\ Simple\ Random\ Sampling\ (SRS).pdf</code></blockquote> What you should notice is that in the first example, the file is surrounded in quotes and in the second, there are a bunch of backslashes. For each file name with spaces, you have to either remember to enclose the entire name in quotes or to take the time to put a backslash before every space. It may not seem like too much of a hassle, but you will get annoyed with it pretty quickly. It also can cause setbacks inside code editors when you want to import or export files with spaces.</p>
-<p id="p-67">So what do we replace the spaces with? <article class="note remark-like" id="filenamecases"><h5 class="heading">
+<p id="p-69">An easy way to shorten file names is to remove the vowels from words. The human brain is incredible in that it can determine what a word should be based on a small amount of context. Assuming the file above was in a folder pertaining to statistics, I could shorten it even more: <blockquote class="blockquote" id="blockquote-4">Ch3_4_Smplng and SRS.pdf</blockquote> And we still know what it's about!</p>
+<p id="p-70">A quick word of caution. Take care not to over-abbreviate. It may not be necessary to abbreviate every word. For instance, I wouldn't change “you” to “y” or “gate” to “gt”. You may be confused later: does “gt” mean “gate”, “git”, “get”, “gut”, “agate”, etc., etc.?</p></article><p id="p-71">Summary: keep your file names short and to the point. Describe what the file is (I wouldn't name the file above “bananas.pdf”!).</p></section><section class="paragraphs" id="namesspaces"><h4 class="heading"><span class="title">File Names With Spaces.</span></h4>
+<p id="p-72">If you only follow one convention in this section, this would be the one. This the most important for working with the command line. Spaces in file names increase the amount of typing you have to do and make it more difficult to understand what's going on on the command line.</p>
+<p id="p-73">For instance, suppose I wanted to open the file we discussed earlier. On the command line, I would open the file like this (don't worry about the commands, just notice what it looks like): <blockquote class="blockquote" id="blockquote-5"><code class="code-inline tex2jax_ignore">open 'Chapters3_4_Overview of Sampling and Simple Random Sampling (SRS).pdf'</code></blockquote> I could also do it like this: <blockquote class="blockquote" id="blockquote-6"><code class="code-inline tex2jax_ignore">open Chapters3_4_Overview\ of\ Sampling\ and\ Simple\ Random\ Sampling\ (SRS).pdf</code></blockquote> What you should notice is that in the first example, the file is surrounded in quotes and in the second, there are a bunch of backslashes. For each file name with spaces, you have to either remember to enclose the entire name in quotes or to take the time to put a backslash before every space. It may not seem like too much of a hassle, but you will get annoyed with it pretty quickly. It also can cause setbacks inside code editors when you want to import or export files with spaces.</p>
+<p id="p-74">So what do we replace the spaces with? <article class="note remark-like" id="filenamecases"><h5 class="heading">
 <span class="type">Note</span><span class="space"> </span><span class="codenumber">1.1.1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Alternative Naming Options.</span>
 </h5>
-<p id="p-68">Most computer programmers name their files using <dfn class="terminology">cases</dfn>. There are five main cases:</p>
+<p id="p-75">Most computer programmers name their files using <dfn class="terminology">cases</dfn>. There are five main cases:</p>
 <dl class="description-list">
-<dt id="li-19">snake_case</dt>
-<dd><p id="p-69">no capital letters, spaces are replaced with underscores (_)</p></dd>
-<dt id="li-20">kebab-case</dt>
-<dd><p id="p-70">no capital letters, spaces are replaced with hyphens (-)</p></dd>
-<dt id="li-21">camelCase</dt>
-<dd><p id="p-71">first word is lowercase, all consequent words are capitalized; spaces are removed</p></dd>
-<dt id="li-22">PascalCase</dt>
-<dd><p id="p-72">every word is capitalized, spaces are removed</p></dd>
-<dt id="li-23">UPPER_CASE_ SNAKE_CASE</dt>
-<dd><p id="p-73">every letter is capitalized, spaces are replaced with underscores (_)</p></dd>
+<dt id="li-23">snake_case</dt>
+<dd><p id="p-76">no capital letters, spaces are replaced with underscores (_)</p></dd>
+<dt id="li-24">kebab-case</dt>
+<dd><p id="p-77">no capital letters, spaces are replaced with hyphens (-)</p></dd>
+<dt id="li-25">camelCase</dt>
+<dd><p id="p-78">first word is lowercase, all consequent words are capitalized; spaces are removed</p></dd>
+<dt id="li-26">PascalCase</dt>
+<dd><p id="p-79">every word is capitalized, spaces are removed</p></dd>
+<dt id="li-27">UPPER_CASE_ SNAKE_CASE</dt>
+<dd><p id="p-80">every letter is capitalized, spaces are replaced with underscores (_)</p></dd>
 </dl>
-<p class="continuation">See a <a class="external" href="https://chaseadams.io/posts/most-common-programming-case-types/" target="_blank">Most Common Programming Case Types blog post</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-16" id="fn-16"><sup> 16 </sup></a> to get more details on these cases.</p></article> Personally, I use snake_case for file names and kebab-case for folder names, just to help me keep them separate and still easy to read.</p>
-<p id="p-74">Using the shortened file name above, I would use the following as my file name: <blockquote class="blockquote" id="blockquote-7">ch3_4_smplng_srs.pdf</blockquote> Note that I got rid of the “and”. Cases are useful in that they make it easy to remove articles and prepositions which in turn helps us keep file names nice and short.</p>
-<p id="p-75">It is also important to keep your file names consistent. If I had another file about chapter 5 of this textbook which is about cluster sampling, let's say, I would want to name it something like <blockquote class="blockquote" id="blockquote-8">ch5_clstr_smplng.pdf</blockquote> Notice that the structure is the same as before: first I have “ch5” to represent the chapter number, then I describe the chapter with “clstr_smplng”. Like before, I use snake_case and I made sure to use the same abbreviation for “sampling” as I did before. Consistency is key for our own sanity and so we can quickly scan for the file we need.</p>
-<p id="p-76">It's worth repeating once again. File names should not contain spaces. Files about related content should have a similar naming scheme.</p>
-<p id="p-77">Sorry, once more. This time, I'm going to yell. <em class="alert">File names should not contain spaces.</em></p></section><section class="paragraphs" id="paragraphs-14"><h4 class="heading"><span class="title">A Quick Note on Folder Names.</span></h4>
-<p id="p-78">Folder names should also follow all of the conventions above. This is a lot harder to get used to. I still feel like I'm breaking the Human Code of Folder Names everytime I ignore spaces and capital letters. We're taught in school to start every sentence with a capital letter and put spaces between words. For whatever reason, I'm fine with file names, but folder names just don't feel right.</p>
-<p id="p-79">But too bad for me! I name my folders according to the conventions anyways. And you should too.(As I mentioned earlier, I use snake_case for files and kebab-case for folders. I highly recommend you do as well; they are the two most popular cases.)</p></section></section><section class="subsection" id="SS_practicenaming"><h3 class="heading hide-type">
+<p class="continuation">See a <a class="external" href="https://chaseadams.io/posts/most-common-programming-case-types/" target="_blank">Most Common Programming Case Types blog post</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 17 </sup></a> to get more details on these cases.</p></article> Personally, I use snake_case for file names and kebab-case for folder names, just to help me keep them separate and still easy to read.</p>
+<p id="p-81">Using the shortened file name above, I would use the following as my file name: <blockquote class="blockquote" id="blockquote-7">ch3_4_smplng_srs.pdf</blockquote> Note that I got rid of the “and”. Cases are useful in that they make it easy to remove articles and prepositions which in turn helps us keep file names nice and short.</p>
+<p id="p-82">It is also important to keep your file names consistent. If I had another file about chapter 5 of this textbook which is about cluster sampling, let's say, I would want to name it something like <blockquote class="blockquote" id="blockquote-8">ch5_clstr_smplng.pdf</blockquote> Notice that the structure is the same as before: first I have “ch5” to represent the chapter number, then I describe the chapter with “clstr_smplng”. Like before, I use snake_case and I made sure to use the same abbreviation for “sampling” as I did before. Consistency is key for our own sanity and so we can quickly scan for the file we need.</p>
+<p id="p-83">It's worth repeating once again. File names should not contain spaces. Files about related content should have a similar naming scheme.</p>
+<p id="p-84">Sorry, once more. This time, I'm going to yell. <em class="alert">File names should not contain spaces.</em></p></section><section class="paragraphs" id="paragraphs-15"><h4 class="heading"><span class="title">A Quick Note on Folder Names.</span></h4>
+<p id="p-85">Folder names should also follow all of the conventions above. This is a lot harder to get used to. I still feel like I'm breaking the Human Code of Folder Names everytime I ignore spaces and capital letters. We're taught in school to start every sentence with a capital letter and put spaces between words. For whatever reason, I'm fine with file names, but folder names just don't feel right.</p>
+<p id="p-86">But too bad for me! I name my folders according to the conventions anyways. And you should too.(As I mentioned earlier, I use snake_case for files and kebab-case for folders. I highly recommend you do as well; they are the two most popular cases.)</p></section></section><section class="subsection" id="SS_practicenaming"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Exploring File and Folder Naming Techniques</span>
 </h3>
-<section class="introduction" id="introduction-3"><p id="p-80">There were a lot of words in <a href="S_filenames.html#SS_namingconventions" class="internal" title="Subsection 1.1.1: Naming Conventions">Subsection 1.1.1</a>. Let's make sense of them here with an extensive example. There will be some questions throughout the way. I encourage you to think about them and make sure you have understood the naming conventions above.</p></section><article class="activity project-like" id="taylorswiftfolders"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-taylorswiftfolders"><h4 class="heading">
+<section class="introduction" id="introduction-3"><p id="p-87">There were a lot of words in <a href="S_filenames.html#SS_namingconventions" class="internal" title="Subsection 1.1.1: Naming Conventions">Subsection 1.1.1</a>. Let's make sense of them here with an extensive example. There will be some questions throughout the way. I encourage you to think about them and make sure you have understood the naming conventions above.</p></section><article class="activity project-like" id="taylorswiftfolders"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-taylorswiftfolders"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.1</span><span class="period">.</span><span class="space"> </span><span class="title">Folder Naming.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-taylorswiftfolders"><article class="activity project-like"><div class="introduction" id="introduction-4">
-<p id="p-81">Suppose you work for Taylor Swift (wouldn't that be cool!). She is super busy right now recording albums, writing songs, spending time with family and friends, and making TikToks and needs your help. She has all of her songs saved on her computer in folders which are divided up by one album per folder. She has asked you to help her rename her files so that she still knows what each song is, but follows proper naming conventions. Use your knowledge from above to help Taylor out.</p>
-<p id="p-82">We will start with her folders. Following is a list of her current folder names:</p>
+<p id="p-88">Suppose you work for Taylor Swift (wouldn't that be cool!). She is super busy right now recording albums, writing songs, spending time with family and friends, and making TikToks and needs your help. She has all of her songs saved on her computer in folders which are divided up by one album per folder. She has asked you to help her rename her files so that she still knows what each song is, but follows proper naming conventions. Use your knowledge from above to help Taylor out.</p>
+<p id="p-89">We will start with her folders. Following is a list of her current folder names:</p>
 <ul class="disc cols2">
-<li id="li-24"><p id="p-83">Taylor Swift</p></li>
-<li id="li-25"><p id="p-84">Taylor Swift (Deluxe)</p></li>
-<li id="li-26"><p id="p-85">Live From Clear Channel Stripped 2008</p></li>
-<li id="li-27"><p id="p-86">Fearless</p></li>
-<li id="li-28"><p id="p-87">Fearless (Platinum Edition)</p></li>
-<li id="li-29"><p id="p-88">The Taylor Swift Holiday Collection</p></li>
-<li id="li-30"><p id="p-89">Speak Now</p></li>
-<li id="li-31"><p id="p-90">Speak Now (Deluxe Edition)</p></li>
-<li id="li-32"><p id="p-91">Speak Now World Tour Live</p></li>
-<li id="li-33"><p id="p-92">Red</p></li>
-<li id="li-34"><p id="p-93">Red (Deluxe Edition)</p></li>
-<li id="li-35"><p id="p-94">1989</p></li>
-<li id="li-36"><p id="p-95">1989 (Deluxe Edition)</p></li>
-<li id="li-37"><p id="p-96">reputation</p></li>
-<li id="li-38"><p id="p-97">Lover</p></li>
-<li id="li-39"><p id="p-98">folklore</p></li>
-<li id="li-40"><p id="p-99">folklore (deluxe edtion)</p></li>
-<li id="li-41"><p id="p-100">folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]</p></li>
-<li id="li-42"><p id="p-101">evermore</p></li>
-<li id="li-43"><p id="p-102">evermore (deluxe version)</p></li>
-<li id="li-44"><p id="p-103">Fearless (Taylor's Version)</p></li>
-<li id="li-45"><p id="p-104">Red (Taylor's Version)</p></li>
-<li id="li-46"><p id="p-105">Unreleased Music</p></li>
-<li id="li-47"><p id="p-106">Singles</p></li>
+<li id="li-28"><p id="p-90">Taylor Swift</p></li>
+<li id="li-29"><p id="p-91">Taylor Swift (Deluxe)</p></li>
+<li id="li-30"><p id="p-92">Live From Clear Channel Stripped 2008</p></li>
+<li id="li-31"><p id="p-93">Fearless</p></li>
+<li id="li-32"><p id="p-94">Fearless (Platinum Edition)</p></li>
+<li id="li-33"><p id="p-95">The Taylor Swift Holiday Collection</p></li>
+<li id="li-34"><p id="p-96">Speak Now</p></li>
+<li id="li-35"><p id="p-97">Speak Now (Deluxe Edition)</p></li>
+<li id="li-36"><p id="p-98">Speak Now World Tour Live</p></li>
+<li id="li-37"><p id="p-99">Red</p></li>
+<li id="li-38"><p id="p-100">Red (Deluxe Edition)</p></li>
+<li id="li-39"><p id="p-101">1989</p></li>
+<li id="li-40"><p id="p-102">1989 (Deluxe Edition)</p></li>
+<li id="li-41"><p id="p-103">reputation</p></li>
+<li id="li-42"><p id="p-104">Lover</p></li>
+<li id="li-43"><p id="p-105">folklore</p></li>
+<li id="li-44"><p id="p-106">folklore (deluxe edtion)</p></li>
+<li id="li-45"><p id="p-107">folklore: the long pond studio sessions (from the Disney+ special) [deluxe edition]</p></li>
+<li id="li-46"><p id="p-108">evermore</p></li>
+<li id="li-47"><p id="p-109">evermore (deluxe version)</p></li>
+<li id="li-48"><p id="p-110">Fearless (Taylor's Version)</p></li>
+<li id="li-49"><p id="p-111">Red (Taylor's Version)</p></li>
+<li id="li-50"><p id="p-112">Unreleased Music</p></li>
+<li id="li-51"><p id="p-113">Singles</p></li>
 </ul>
-<p id="p-107">Wow! That's a lot of albums! <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 17 </sup></a> Complete the following tasks to make Taylor's life a little easier for the future.</p>
-<p id="p-108">Please note that the answers to many of these exercises will vary depending on personal preferences. I will give answers depending on how I might approach the problem; they are certainly not the only answer you could have given.</p>
+<p id="p-114">Wow! That's a lot of albums! Complete the following tasks to make Taylor's life a little easier for the future.</p>
+<p id="p-115">Please note that the answers to many of these exercises will vary depending on personal preferences. I will give answers depending on how I might approach the problem; they are certainly not the only answer you could have given.</p>
 </div>
 <article class="task exercise-like" id="task-1"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-109">Before we trying fixing a problem, let's figure out what the problem is. What do you notice about these folder names? What about them is “incorrect”?</p>
+<p id="p-116">Before we trying fixing a problem, let's figure out what the problem is. What do you notice about these folder names? What about them is “incorrect”?</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-1" id="solution-1"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-1"><div class="solution solution-like">
-<p id="p-110">The main thing that pops out to me are the spaces. Every multi-word folder name has a space. Secondly, some of the names are very long. Third, there is not much consistency. Some names are capitalized, others aren't. There are clearly deluxe versions of albums but some say “deluxe”, others say “deluxe version”, and even others say “deluxe edition”.</p>
-<p id="p-111">The three here are the main issues; you may have thought of others. Great! I'm sure they are good observations.</p>
+<p id="p-117">The main thing that pops out to me are the spaces. Every multi-word folder name has a space. Secondly, some of the names are very long. Third, there is not much consistency. Some names are capitalized, others aren't. There are clearly deluxe versions of albums but some say “deluxe”, others say “deluxe version”, and even others say “deluxe edition”.</p>
+<p id="p-118">The three here are the main issues; you may have thought of others. Great! I'm sure they are good observations.</p>
 </div></div>
 </div></article><article class="task exercise-like" id="taylorswiftgroups"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-112">Ok, we've identified a problem. How can we go about deciding what to do about it? You may already have some ideas, but stick with me here. Let's not just dive in and start removing spaces and shortening folder names. Instead, let's make a plan.</p>
-<p id="p-113">Identify some naming patterns. Are there any album names that are similar? Can you form any groups of names?</p>
+<p id="p-119">Ok, we've identified a problem. How can we go about deciding what to do about it? You may already have some ideas, but stick with me here. Let's not just dive in and start removing spaces and shortening folder names. Instead, let's make a plan.</p>
+<p id="p-120">Identify some naming patterns. Are there any album names that are similar? Can you form any groups of names?</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-2" id="solution-2"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-2"><div class="solution solution-like">
-<p id="p-114">There are probably a lot of patterns you could have noticed. I grouped folder names into</p>
+<p id="p-121">There are probably a lot of patterns you could have noticed. I grouped folder names into</p>
 <ol class="decimal">
-<li id="li-48"><p id="p-115">Standard albums</p></li>
-<li id="li-49"><p id="p-116">Deluxe albums</p></li>
-<li id="li-50"><p id="p-117">Live albums</p></li>
-<li id="li-51"><p id="p-118">Taylor's Version albums</p></li>
-<li id="li-52"><p id="p-119">Other</p></li>
+<li id="li-52"><p id="p-122">Standard albums</p></li>
+<li id="li-53"><p id="p-123">Deluxe albums</p></li>
+<li id="li-54"><p id="p-124">Live albums</p></li>
+<li id="li-55"><p id="p-125">Taylor's Version albums</p></li>
+<li id="li-56"><p id="p-126">Other</p></li>
 </ol>
 </div></div>
 </div></article><article class="task exercise-like" id="task-3"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-120">I am going to continue with the groups in the solution to <a href="" class="xref" data-knowl="./knowl/taylorswiftgroups.html" title="Task 1.1.b">Task 1.1.b</a>. Feel free to branch off with your own groups or stick with me.</p>
-<p id="p-121">Now that we have groups, we can figure out how to name one of each group, then apply that naming style to all names in the group. Start with the standard albums, such as “Taylor Swift”. How can you change this name to stick with the conventions discussed above?</p>
+<p id="p-127">I am going to continue with the groups in the solution to <a href="" class="xref" data-knowl="./knowl/taylorswiftgroups.html" title="Task 1.1.b">Task 1.1.b</a>. Feel free to branch off with your own groups or stick with me.</p>
+<p id="p-128">Now that we have groups, we can figure out how to name one of each group, then apply that naming style to all names in the group. Start with the standard albums, such as “Taylor Swift”. How can you change this name to stick with the conventions discussed above?</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-122">Since there aren't any special modifiers to this album (such as deluxe or live), I say we just keep its name, but write them in kebab-case. Therefore, “Taylor Swift” would become <code class="code-inline tex2jax_ignore">taylor-swift</code>.</p></div></div>
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-3" id="solution-3"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-3"><div class="solution solution-like"><p id="p-129">Since there aren't any special modifiers to this album (such as deluxe or live), I say we just keep its name, but write them in kebab-case. Therefore, “Taylor Swift” would become <code class="code-inline tex2jax_ignore">taylor-swift</code>.</p></div></div>
 </div></article><article class="task exercise-like" id="task-4"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-123">Apply the naming to scheme to all folders with “regular” album titles.</p>
+<p id="p-130">Apply the naming to scheme to all folders with “regular” album titles.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-4" id="solution-4"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-4"><div class="solution solution-like">
-<p id="p-124">The following names are the modified versions:</p>
+<p id="p-131">The following names are the modified versions:</p>
 <ul class="disc cols2">
-<li id="li-53"><p id="p-125"><code class="code-inline tex2jax_ignore">taylor-swift</code></p></li>
-<li id="li-54"><p id="p-126"><code class="code-inline tex2jax_ignore">fearless</code></p></li>
-<li id="li-55"><p id="p-127"><code class="code-inline tex2jax_ignore">speak-now</code></p></li>
-<li id="li-56"><p id="p-128"><code class="code-inline tex2jax_ignore">red</code></p></li>
-<li id="li-57"><p id="p-129"><code class="code-inline tex2jax_ignore">1989</code></p></li>
-<li id="li-58"><p id="p-130"><code class="code-inline tex2jax_ignore">reputation</code></p></li>
-<li id="li-59"><p id="p-131"><code class="code-inline tex2jax_ignore">lover</code></p></li>
-<li id="li-60"><p id="p-132"><code class="code-inline tex2jax_ignore">folklore</code></p></li>
-<li id="li-61"><p id="p-133"><code class="code-inline tex2jax_ignore">evermore</code></p></li>
+<li id="li-57"><p id="p-132"><code class="code-inline tex2jax_ignore">taylor-swift</code></p></li>
+<li id="li-58"><p id="p-133"><code class="code-inline tex2jax_ignore">fearless</code></p></li>
+<li id="li-59"><p id="p-134"><code class="code-inline tex2jax_ignore">speak-now</code></p></li>
+<li id="li-60"><p id="p-135"><code class="code-inline tex2jax_ignore">red</code></p></li>
+<li id="li-61"><p id="p-136"><code class="code-inline tex2jax_ignore">1989</code></p></li>
+<li id="li-62"><p id="p-137"><code class="code-inline tex2jax_ignore">reputation</code></p></li>
+<li id="li-63"><p id="p-138"><code class="code-inline tex2jax_ignore">lover</code></p></li>
+<li id="li-64"><p id="p-139"><code class="code-inline tex2jax_ignore">folklore</code></p></li>
+<li id="li-65"><p id="p-140"><code class="code-inline tex2jax_ignore">evermore</code></p></li>
 </ul>
 </div></div>
 </div></article><article class="task exercise-like" id="task-5"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-134">Continue with the deluxe group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
+<p id="p-141">Continue with the deluxe group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-5" id="solution-5"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-5"><div class="solution solution-like">
-<p id="p-135">For the deluxe albums, the similarity is the word “deluxe”. I don't bother with “edition” or “version”, “deluxe” is enough to convey the necessary information. I also would like to abbreviate “deluxe” to “dlx”. You could also choose to keep the full word, but since we can't ask Taylor what she would prefer, I am sticking with the shorter. “dlx” gets the point across (this is a deluxe album) with 3 less characters. Following are my changes for the deluxe group. There is one outlier: the Fearless Platinum Edition. I am going to retain the “platinum” name since that is its true name.</p>
+<p id="p-142">For the deluxe albums, the similarity is the word “deluxe”. I don't bother with “edition” or “version”, “deluxe” is enough to convey the necessary information. I also would like to abbreviate “deluxe” to “dlx”. You could also choose to keep the full word, but since we can't ask Taylor what she would prefer, I am sticking with the shorter. “dlx” gets the point across (this is a deluxe album) with 3 less characters. Following are my changes for the deluxe group. There is one outlier: the Fearless Platinum Edition. I am going to retain the “platinum” name since that is its true name.</p>
 <ul class="disc cols2">
-<li id="li-62"><p id="p-136"><code class="code-inline tex2jax_ignore">taylor-swift-dlx</code></p></li>
-<li id="li-63"><p id="p-137"><code class="code-inline tex2jax_ignore">fearless-pltnm</code></p></li>
-<li id="li-64"><p id="p-138"><code class="code-inline tex2jax_ignore">speak-now-dlx</code></p></li>
-<li id="li-65"><p id="p-139"><code class="code-inline tex2jax_ignore">red-dlx</code></p></li>
-<li id="li-66"><p id="p-140"><code class="code-inline tex2jax_ignore">1989-dlx</code></p></li>
-<li id="li-67"><p id="p-141"><code class="code-inline tex2jax_ignore">folklore-dlx</code></p></li>
-<li id="li-68"><p id="p-142"><code class="code-inline tex2jax_ignore">evermore-dlx</code></p></li>
+<li id="li-66"><p id="p-143"><code class="code-inline tex2jax_ignore">taylor-swift-dlx</code></p></li>
+<li id="li-67"><p id="p-144"><code class="code-inline tex2jax_ignore">fearless-pltnm</code></p></li>
+<li id="li-68"><p id="p-145"><code class="code-inline tex2jax_ignore">speak-now-dlx</code></p></li>
+<li id="li-69"><p id="p-146"><code class="code-inline tex2jax_ignore">red-dlx</code></p></li>
+<li id="li-70"><p id="p-147"><code class="code-inline tex2jax_ignore">1989-dlx</code></p></li>
+<li id="li-71"><p id="p-148"><code class="code-inline tex2jax_ignore">folklore-dlx</code></p></li>
+<li id="li-72"><p id="p-149"><code class="code-inline tex2jax_ignore">evermore-dlx</code></p></li>
 </ul>
 </div></div>
 </div></article><article class="task exercise-like" id="task-6"><h5 class="heading"><span class="codenumber">(f)</span></h5>
-<p id="p-143">Continue with the live group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
+<p id="p-150">Continue with the live group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-6" id="solution-6"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-6"><div class="solution solution-like">
-<p id="p-144">There are only two in this group, but there could be more in the future. Let's use “live” to differentiate these folders from the others. I am choosing to not use “lve” or “lv” because I think there are slightly ambiguous (it could mean “love”!).</p>
+<p id="p-151">There are only two in this group, but there could be more in the future. Let's use “live” to differentiate these folders from the others. I am choosing to not use “lve” or “lv” because I think there are slightly ambiguous (it could mean “love”!).</p>
 <ul class="disc">
-<li id="li-69"><p id="p-145"><code class="code-inline tex2jax_ignore">clear-chnl-live</code></p></li>
-<li id="li-70"><p id="p-146"><code class="code-inline tex2jax_ignore">speak-now-live</code></p></li>
+<li id="li-73"><p id="p-152"><code class="code-inline tex2jax_ignore">clear-chnl-live</code></p></li>
+<li id="li-74"><p id="p-153"><code class="code-inline tex2jax_ignore">speak-now-live</code></p></li>
 </ul>
 </div></div>
 </div></article><article class="task exercise-like" id="task-7"><h5 class="heading"><span class="codenumber">(g)</span></h5>
-<p id="p-147">Continue with the Taylor's Version group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
+<p id="p-154">Continue with the Taylor's Version group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-7" id="solution-7"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-7"><div class="solution solution-like">
-<p id="p-148">I am going to again use kebab-case and use “tv” to indicate that the album is a Taylor's Version. This will help cut down on name length.</p>
+<p id="p-155">I am going to again use kebab-case and use “tv” to indicate that the album is a Taylor's Version. This will help cut down on name length.</p>
 <ul class="disc">
-<li id="li-71"><p id="p-149"><code class="code-inline tex2jax_ignore">fearless-tv</code></p></li>
-<li id="li-72"><p id="p-150"><code class="code-inline tex2jax_ignore">red-tv</code></p></li>
+<li id="li-75"><p id="p-156"><code class="code-inline tex2jax_ignore">fearless-tv</code></p></li>
+<li id="li-76"><p id="p-157"><code class="code-inline tex2jax_ignore">red-tv</code></p></li>
 </ul>
 </div></div>
 </div></article><article class="task exercise-like" id="task-8"><h5 class="heading"><span class="codenumber">(h)</span></h5>
-<p id="p-151">Continue with the other group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
+<p id="p-158">Continue with the other group. Identify patterns, change one name, then apply those changes to all the names in the group. Use your best judgement, but don't stress about the “perfect” name.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-8" id="solution-8"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-8"><div class="solution solution-like">
-<p id="p-152">These are mostly up to you. They have no specific pattern, but I will still apply kebab-case and shorten the names.</p>
+<p id="p-159">These are mostly up to you. They have no specific pattern, but I will still apply kebab-case and shorten the names.</p>
 <ul class="disc">
-<li id="li-73"><p id="p-153"><code class="code-inline tex2jax_ignore">holiday-clctn</code> (I could even use <code class="code-inline tex2jax_ignore">holiday</code> since there is only one holiday album)</p></li>
-<li id="li-74"><p id="p-154"><code class="code-inline tex2jax_ignore">folklore-dsny-dlx</code> (yes, this is a deluxe album, but to me, the Disney part of it is unique)</p></li>
-<li id="li-75"><p id="p-155"><code class="code-inline tex2jax_ignore">unreleased</code></p></li>
-<li id="li-76"><p id="p-156"><code class="code-inline tex2jax_ignore">singles</code></p></li>
+<li id="li-77"><p id="p-160"><code class="code-inline tex2jax_ignore">holiday-clctn</code> (I could even use <code class="code-inline tex2jax_ignore">holiday</code> since there is only one holiday album)</p></li>
+<li id="li-78"><p id="p-161"><code class="code-inline tex2jax_ignore">folklore-dsny-dlx</code> (yes, this is a deluxe album, but to me, the Disney part of it is unique)</p></li>
+<li id="li-79"><p id="p-162"><code class="code-inline tex2jax_ignore">unreleased</code></p></li>
+<li id="li-80"><p id="p-163"><code class="code-inline tex2jax_ignore">singles</code></p></li>
 </ul>
 </div></div>
-</div></article><div class="conclusion" id="conclusion-1"><p id="p-157">I think that's all of them! That may have seemed like a lot of work but I hope it was worthwhile. It should now be much easier for Taylor to navigate her folders and quickly know that album they contain.</p></div></article></div>
-<p id="p-158">If you feel like you have a good grasp of naming systems, feel free to skip <a href="" class="xref" data-knowl="./knowl/taylorswiftfiles.html" title="Activity 1.2: File Naming">Activity 1.2</a>. If not, let's explore file naming a little further. In <a href="" class="xref" data-knowl="./knowl/taylorswiftfolders.html" title="Activity 1.1: Folder Naming">Activity 1.1</a>, we focused on Taylor's folder names and since you helped her there, she is asking for your guidance with her file names as well.</p>
+</div></article><div class="conclusion" id="conclusion-1"><p id="p-164">I think that's all of them! That may have seemed like a lot of work but I hope it was worthwhile. It should now be much easier for Taylor to navigate her folders and quickly know that album they contain.</p></div></article></div>
+<p id="p-165">If you feel like you have a good grasp of naming systems, feel free to skip <a href="" class="xref" data-knowl="./knowl/taylorswiftfiles.html" title="Activity 1.2: File Naming">Activity 1.2</a>. If not, let's explore file naming a little further. In <a href="" class="xref" data-knowl="./knowl/taylorswiftfolders.html" title="Activity 1.1: Folder Naming">Activity 1.1</a>, we focused on Taylor's folder names and since you helped her there, she is asking for your guidance with her file names as well.</p>
 <article class="activity project-like" id="taylorswiftfiles"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-taylorswiftfiles"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.2</span><span class="period">.</span><span class="space"> </span><span class="title">File Naming.</span>
 </h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-taylorswiftfiles"><article class="activity project-like"><div class="introduction" id="introduction-5">
-<p id="p-159">We will focus on the folder that I renamed to be <code class="code-inline tex2jax_ignore">speak-now-dlx</code>. A list of her current file names for these tracks follow. I should note that it is often helpful to prefix song names with their track position so that they stay in order when in a folder. We won't remove those numbers. Also, “.wav” indicates that the song is a WAV file (see <a href="S_fileextensions.html" class="internal" title="Section 1.2: File Extensions">Section 1.2</a> for more).</p>
+<p id="p-166">We will focus on the folder that I renamed to be <code class="code-inline tex2jax_ignore">speak-now-dlx</code>. A list of her current file names for these tracks follow. I should note that it is often helpful to prefix song names with their track position so that they stay in order when in a folder. We won't remove those numbers. Also, “.wav” indicates that the song is a WAV file (see <a href="S_fileextensions.html" class="internal" title="Section 1.2: File Extensions">Section 1.2</a> for more).</p>
 <ul class="disc cols2">
-<li id="li-77"><p id="p-160">01 Mine.wav</p></li>
-<li id="li-78"><p id="p-161">02 Sparks Fly.wav</p></li>
-<li id="li-79"><p id="p-162">03 Back To December.wav</p></li>
-<li id="li-80"><p id="p-163">04 Speak Now.wav</p></li>
-<li id="li-81"><p id="p-164">05 Dear John.wav</p></li>
-<li id="li-82"><p id="p-165">06 Mean.wav</p></li>
-<li id="li-83"><p id="p-166">07 The Story Of Us.wav</p></li>
-<li id="li-84"><p id="p-167">08 Never Grow Up.wav</p></li>
-<li id="li-85"><p id="p-168">09 Enchanted.wav</p></li>
-<li id="li-86"><p id="p-169">10 Better Than Revenge.wav</p></li>
-<li id="li-87"><p id="p-170">11 Innocent.wav</p></li>
-<li id="li-88"><p id="p-171">12 Haunted.wav</p></li>
-<li id="li-89"><p id="p-172">13 Last Kiss.wav</p></li>
-<li id="li-90"><p id="p-173">14 Long Live.wav</p></li>
-<li id="li-91"><p id="p-174">15 Ours.wav</p></li>
-<li id="li-92"><p id="p-175">16 If This Was A Movie.wav</p></li>
-<li id="li-93"><p id="p-176">17 Superman.wav</p></li>
-<li id="li-94"><p id="p-177">18 Back To December (Acoustic).wav</p></li>
-<li id="li-95"><p id="p-178">19 Haunted (Acoustic Version).wav</p></li>
-<li id="li-96"><p id="p-179">20 Mine (POP Mix).wav</p></li>
+<li id="li-81"><p id="p-167">01 Mine.wav</p></li>
+<li id="li-82"><p id="p-168">02 Sparks Fly.wav</p></li>
+<li id="li-83"><p id="p-169">03 Back To December.wav</p></li>
+<li id="li-84"><p id="p-170">04 Speak Now.wav</p></li>
+<li id="li-85"><p id="p-171">05 Dear John.wav</p></li>
+<li id="li-86"><p id="p-172">06 Mean.wav</p></li>
+<li id="li-87"><p id="p-173">07 The Story Of Us.wav</p></li>
+<li id="li-88"><p id="p-174">08 Never Grow Up.wav</p></li>
+<li id="li-89"><p id="p-175">09 Enchanted.wav</p></li>
+<li id="li-90"><p id="p-176">10 Better Than Revenge.wav</p></li>
+<li id="li-91"><p id="p-177">11 Innocent.wav</p></li>
+<li id="li-92"><p id="p-178">12 Haunted.wav</p></li>
+<li id="li-93"><p id="p-179">13 Last Kiss.wav</p></li>
+<li id="li-94"><p id="p-180">14 Long Live.wav</p></li>
+<li id="li-95"><p id="p-181">15 Ours.wav</p></li>
+<li id="li-96"><p id="p-182">16 If This Was A Movie.wav</p></li>
+<li id="li-97"><p id="p-183">17 Superman.wav</p></li>
+<li id="li-98"><p id="p-184">18 Back To December (Acoustic).wav</p></li>
+<li id="li-99"><p id="p-185">19 Haunted (Acoustic Version).wav</p></li>
+<li id="li-100"><p id="p-186">20 Mine (POP Mix).wav</p></li>
 </ul>
-<p id="p-180">Like before, complete the following tasks to make Taylor's life a little easier for the future.</p>
-<p id="p-181">Again note that the answers to many of these exercises will vary depending on personal preferences. I will give answers depending on how I might approach the problem; these are not the only correct responses.</p>
+<p id="p-187">Like before, complete the following tasks to make Taylor's life a little easier for the future.</p>
+<p id="p-188">Again note that the answers to many of these exercises will vary depending on personal preferences. I will give answers depending on how I might approach the problem; these are not the only correct responses.</p>
 </div>
 <article class="task exercise-like" id="task-9"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-182">Before we trying fixing a problem, let's figure out what the problem is. What do you notice about these file names? What about them is “incorrect”?</p>
+<p id="p-189">Before we trying fixing a problem, let's figure out what the problem is. What do you notice about these file names? What about them is “incorrect”?</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-9" id="solution-9"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-9"><div class="solution solution-like">
-<p id="p-183">The main thing that pops out to me are the spaces. Every multi-word file name has a space. Secondly, there are a few cases of non-consistency: Back To December says “Acoustic” whereas Haunted says “Acoustic Version”.</p>
-<p id="p-184">The two here are the main issues; you may have thought of others. Great! I'm sure they are good observations.</p>
+<p id="p-190">The main thing that pops out to me are the spaces. Every multi-word file name has a space. Secondly, there are a few cases of non-consistency: Back To December says “Acoustic” whereas Haunted says “Acoustic Version”.</p>
+<p id="p-191">The two here are the main issues; you may have thought of others. Great! I'm sure they are good observations.</p>
 </div></div>
 </div></article><article class="task exercise-like" id="taylorswiftgroups2"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-185">Ok, we've identified a problem. How can we go about deciding what to do about it? You may already have some ideas, but stick with me here. Let's not just dive in and start removing spaces and shortening file names. Instead, let's make a plan.</p>
-<p id="p-186">Identify some naming patterns. Are there any track names that are similar? Can you form any groups of names?</p>
+<p id="p-192">Ok, we've identified a problem. How can we go about deciding what to do about it? You may already have some ideas, but stick with me here. Let's not just dive in and start removing spaces and shortening file names. Instead, let's make a plan.</p>
+<p id="p-193">Identify some naming patterns. Are there any track names that are similar? Can you form any groups of names?</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-10" id="solution-10"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-10"><div class="solution solution-like">
-<p id="p-187">There are probably a couple patterns you could have noticed. I grouped track names into</p>
+<p id="p-194">There are probably a couple patterns you could have noticed. I grouped track names into</p>
 <ol class="decimal">
-<li id="li-97"><p id="p-188">“Regular” album tracks</p></li>
-<li id="li-98"><p id="p-189">Acoustic tracks</p></li>
-<li id="li-99"><p id="p-190">The last track</p></li>
+<li id="li-101"><p id="p-195">“Regular” album tracks</p></li>
+<li id="li-102"><p id="p-196">Acoustic tracks</p></li>
+<li id="li-103"><p id="p-197">The last track</p></li>
 </ol>
 </div></div>
 </div></article><article class="task exercise-like" id="task-11"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-191">I am going to continue with the groups in the solution to <a href="" class="xref" data-knowl="./knowl/taylorswiftgroups2.html" title="Task 1.2.b">Task 1.2.b</a>. Feel free to branch off with your own groups or stick with me.</p>
-<p id="p-192">Now that we have groups, we can figure out how to name one of each group, then apply that naming style to all names in the group. Start with the “regular” tracks. How can you change these names to stick with the conventions discussed above?</p>
+<p id="p-198">I am going to continue with the groups in the solution to <a href="" class="xref" data-knowl="./knowl/taylorswiftgroups2.html" title="Task 1.2.b">Task 1.2.b</a>. Feel free to branch off with your own groups or stick with me.</p>
+<p id="p-199">Now that we have groups, we can figure out how to name one of each group, then apply that naming style to all names in the group. Start with the “regular” tracks. How can you change these names to stick with the conventions discussed above?</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-11" id="solution-11"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-11"><div class="solution solution-like">
-<p id="p-193">There isn't much we can do here. I will write the names in snake_case which will remove the spaces and change every word to lowercase. Since we can't ask Taylor for her preferences, it is up to you whether you want to abbreviate words or not. For the most part, I do not since most track names are short already.</p>
+<p id="p-200">There isn't much we can do here. I will write the names in snake_case which will remove the spaces and change every word to lowercase. Since we can't ask Taylor for her preferences, it is up to you whether you want to abbreviate words or not. For the most part, I do not since most track names are short already.</p>
 <ul class="disc cols2">
-<li id="li-100"><p id="p-194"><code class="code-inline tex2jax_ignore">01_mine.wav</code></p></li>
-<li id="li-101"><p id="p-195"><code class="code-inline tex2jax_ignore">02_sparks_fly.wav</code></p></li>
-<li id="li-102"><p id="p-196"><code class="code-inline tex2jax_ignore">03_back_to_dec.wav</code></p></li>
-<li id="li-103"><p id="p-197"><code class="code-inline tex2jax_ignore">04_speak_now.wav</code></p></li>
-<li id="li-104"><p id="p-198"><code class="code-inline tex2jax_ignore">05_dear_john.wav</code></p></li>
-<li id="li-105"><p id="p-199"><code class="code-inline tex2jax_ignore">06_mean.wav</code></p></li>
-<li id="li-106"><p id="p-200"><code class="code-inline tex2jax_ignore">07_story_of_us.wav</code></p></li>
-<li id="li-107"><p id="p-201"><code class="code-inline tex2jax_ignore">08_never_grow_up.wav</code></p></li>
-<li id="li-108"><p id="p-202"><code class="code-inline tex2jax_ignore">09_enchanted.wav</code></p></li>
-<li id="li-109"><p id="p-203"><code class="code-inline tex2jax_ignore">10_better_than_revenge.wav</code></p></li>
-<li id="li-110"><p id="p-204"><code class="code-inline tex2jax_ignore">11_innocent.wav</code></p></li>
-<li id="li-111"><p id="p-205"><code class="code-inline tex2jax_ignore">12_haunted.wav</code></p></li>
-<li id="li-112"><p id="p-206"><code class="code-inline tex2jax_ignore">13_last_kiss.wav</code></p></li>
-<li id="li-113"><p id="p-207"><code class="code-inline tex2jax_ignore">14_long_live.wav</code></p></li>
-<li id="li-114"><p id="p-208"><code class="code-inline tex2jax_ignore">15_ours.wav</code></p></li>
-<li id="li-115"><p id="p-209"><code class="code-inline tex2jax_ignore">16_if_this_was_movie.wav</code></p></li>
-<li id="li-116"><p id="p-210"><code class="code-inline tex2jax_ignore">17_superman.wav</code></p></li>
+<li id="li-104"><p id="p-201"><code class="code-inline tex2jax_ignore">01_mine.wav</code></p></li>
+<li id="li-105"><p id="p-202"><code class="code-inline tex2jax_ignore">02_sparks_fly.wav</code></p></li>
+<li id="li-106"><p id="p-203"><code class="code-inline tex2jax_ignore">03_back_to_dec.wav</code></p></li>
+<li id="li-107"><p id="p-204"><code class="code-inline tex2jax_ignore">04_speak_now.wav</code></p></li>
+<li id="li-108"><p id="p-205"><code class="code-inline tex2jax_ignore">05_dear_john.wav</code></p></li>
+<li id="li-109"><p id="p-206"><code class="code-inline tex2jax_ignore">06_mean.wav</code></p></li>
+<li id="li-110"><p id="p-207"><code class="code-inline tex2jax_ignore">07_story_of_us.wav</code></p></li>
+<li id="li-111"><p id="p-208"><code class="code-inline tex2jax_ignore">08_never_grow_up.wav</code></p></li>
+<li id="li-112"><p id="p-209"><code class="code-inline tex2jax_ignore">09_enchanted.wav</code></p></li>
+<li id="li-113"><p id="p-210"><code class="code-inline tex2jax_ignore">10_better_than_revenge.wav</code></p></li>
+<li id="li-114"><p id="p-211"><code class="code-inline tex2jax_ignore">11_innocent.wav</code></p></li>
+<li id="li-115"><p id="p-212"><code class="code-inline tex2jax_ignore">12_haunted.wav</code></p></li>
+<li id="li-116"><p id="p-213"><code class="code-inline tex2jax_ignore">13_last_kiss.wav</code></p></li>
+<li id="li-117"><p id="p-214"><code class="code-inline tex2jax_ignore">14_long_live.wav</code></p></li>
+<li id="li-118"><p id="p-215"><code class="code-inline tex2jax_ignore">15_ours.wav</code></p></li>
+<li id="li-119"><p id="p-216"><code class="code-inline tex2jax_ignore">16_if_this_was_movie.wav</code></p></li>
+<li id="li-120"><p id="p-217"><code class="code-inline tex2jax_ignore">17_superman.wav</code></p></li>
 </ul>
 </div></div>
 </div></article><article class="task exercise-like" id="task-12"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<p id="p-211">Apply the naming to scheme to all the acoustic tracks.</p>
+<p id="p-218">Apply the naming to scheme to all the acoustic tracks.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-12" id="solution-12"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-12"><div class="solution solution-like">
-<p id="p-212">I am choosing to abbreviate “acoustic” to “acoust”. Notice I used the same names as the regular tracks, but just appended “_acoust” at the end.</p>
+<p id="p-219">I am choosing to abbreviate “acoustic” to “acoust”. Notice I used the same names as the regular tracks, but just appended “_acoust” at the end.</p>
 <ul class="disc">
-<li id="li-117"><p id="p-213"><code class="code-inline tex2jax_ignore">18_back_to_dec_acoust.wav</code></p></li>
-<li id="li-118"><p id="p-214"><code class="code-inline tex2jax_ignore">19_haunted_acoust.wav</code></p></li>
+<li id="li-121"><p id="p-220"><code class="code-inline tex2jax_ignore">18_back_to_dec_acoust.wav</code></p></li>
+<li id="li-122"><p id="p-221"><code class="code-inline tex2jax_ignore">19_haunted_acoust.wav</code></p></li>
 </ul>
 </div></div>
 </div></article><article class="task exercise-like" id="task-13"><h5 class="heading"><span class="codenumber">(e)</span></h5>
-<p id="p-215">Apply the naming to scheme to all the last track.</p>
+<p id="p-222">Apply the naming to scheme to all the last track.</p>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-13" id="solution-13"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-13"><div class="solution solution-like">
-<p id="p-216">I am choosing to abbreviate “POP Mix” to “pop_mix”. Notice I used the same name as the regular tracks, but just appended “_pop_mix” at the end.</p>
-<ul class="disc"><li id="li-119"><p id="p-217"><code class="code-inline tex2jax_ignore">20_mine_pop_mix.wav</code></p></li></ul>
+<p id="p-223">I am choosing to abbreviate “POP Mix” to “pop_mix”. Notice I used the same name as the regular tracks, but just appended “_pop_mix” at the end.</p>
+<ul class="disc"><li id="li-123"><p id="p-224"><code class="code-inline tex2jax_ignore">20_mine_pop_mix.wav</code></p></li></ul>
 </div></div>
-</div></article><div class="conclusion" id="conclusion-2"><p id="p-218">And that's it! If you would like more practice, look up the track listing for her other albums and repeat this activity. It would be a great activity in consistency; for example, for the tracks on the Taylor's Version albums, you would want to use the same naming scheme as in the folders. For me, I would say <code class="code-inline tex2jax_ignore">02_red_tv.wav</code> for “Red (Taylor's Version)” and to any acoustic tracks, I would append <code class="code-inline tex2jax_ignore">_acoust</code>.</p></div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn"><code class="code-inline tex2jax_ignore">chaseadams.io/posts/most-common-programming-case-types/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn">And they're all amazing. (Sorry, couldn't help it.)</div></div>
+</div></article><div class="conclusion" id="conclusion-2"><p id="p-225">And that's it! If you would like more practice, look up the track listing for her other albums and repeat this activity. It would be a great activity in consistency; for example, for the tracks on the Taylor's Version albums, you would want to use the same naming scheme as in the folders. For me, I would say <code class="code-inline tex2jax_ignore">02_red_tv.wav</code> for “Red (Taylor's Version)” and to any acoustic tracks, I would append <code class="code-inline tex2jax_ignore">_acoust</code>.</p></div></article></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn"><code class="code-inline tex2jax_ignore">chaseadams.io/posts/most-common-programming-case-types/</code></div></div>
 </div></main>
 </div>
 </body>
