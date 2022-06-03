@@ -1,13 +1,27 @@
 .vscode
 
 # unpublished builds
-output
+output/html
 
 # assets generated from source
 generated-assets
+external/
+generated/
 
 # error logs
 .error_schema.log
 error_schema.log
 .error_syntax.log
 error_syntax.log
+
+# latex stuff
+*.aux
+*.dep
+*.idx
+*.ilg
+*.ind
+*.listing
+*.log
+*.out
+*.synctex.gz
+*.toc
