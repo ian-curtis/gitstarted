@@ -227,10 +227,10 @@ Aborting
   </section>
 
   <section xml:id="S_diverge_branch">
-    <title>Git Won't Push/Pull My Changes! (Divergent Branches)</title>
+    <title>Git Says I Have Divergent Branches!</title>
     
     <p>
-      I recently experiences this issue for the first time and had to do some searching to figure out how to fix it. I relied on <url href="https://salferrarello.com/git-warning-pulling-without-specifying-how-to-reconcile-divergent-branches-is-discouraged/" visual='salferrarello.com/git-warning-pulling-without-specifying-how-to-reconcile-divergent-branches-is-discouraged/'>Sal Ferrarello</url> and <url href="https://stackoverflow.com/questions/29673869/what-is-git-fast-forwarding" visual='https://stackoverflow.com/questions/29673869/what-is-git-fast-forwarding'>StackOverflow</url> to create this guide and you might find these resources more helpful than mine.
+      I recently experiences this issue for the first time and had to do some searching to figure out how to fix it. I relied on <url href="https://stackoverflow.com/questions/62653114" visual='https://stackoverflow.com/questions/62653114'>Davide Casiraghi's question on StackOverflow</url> and <url href="https://stackoverflow.com/questions/29673869/" visual='https://stackoverflow.com/questions/29673869/'>adrianvlupu's question also on StackOverflow</url> to create this guide and you might find these resources more helpful than mine.
     </p>
     <p>
       This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn't want to create them, so it refuses to push or pull until you fix something. This is not the same error as in <xref ref="S_forcemerge"/>, although it is closely related. You might get something like this:

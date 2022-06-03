@@ -115,7 +115,7 @@
     <title>Exploring the Code Tab</title>
     <idx><h>github</h><h>code tab</h></idx>
     <p>
-      Whew, we made it! A new repo has just been created....aaaaand a lot of new buttons and options 
+      Whew, we made it! A new repo has just been created<ellipsis/>aaaaand a lot of new buttons and options 
       just appeared. A lot of new unfamiliar words and tabs. Please don't give up here! I will go through 
       all of the important aspects. Many of the pieces are not applicable to beginners and some will not 
       be applicable until we start working with Git and GitHub together. In this section, I will only be 

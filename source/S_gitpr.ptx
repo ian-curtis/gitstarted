@@ -56,7 +56,7 @@
             </li>
             <li>
               <p>
-                When in the Code tab, click on the branch icon that says <q>2 branches</q> (this is different from before...previously it only said one branch). This gives a list of all the branches. Find the <q>country</q> branch and click on <q>New pull request</q>
+                When in the Code tab, click on the branch icon that says <q>2 branches</q> (this is different from before<ellipsis/>previously it only said one branch). This gives a list of all the branches. Find the <q>country</q> branch and click on <q>New pull request</q>
               </p>
             </li>
             <li>
