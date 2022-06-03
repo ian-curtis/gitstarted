@@ -492,8 +492,8 @@
           <p>
             Since we just created this directory, <c>ls</c> should not show any files; no output should 
             be provided. <c>pwd</c> can be used to find the file path which should look like 
-            <c>/Users/&lt;your-username>/Desktop/testdir</c> or 
-            <c>/c/Users/&lt;your-username>/Desktop/testdir</c>
+            <cd>/Users/&lt;your-username>/Desktop/testdir</cd> or 
+            <cd>/c/Users/&lt;your-username>/Desktop/testdir</cd>
           </p>
         </solution>
       </task>
