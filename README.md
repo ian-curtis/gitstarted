@@ -8,7 +8,7 @@ No experience is necessary to read this book; everything is taught in order and 
 
 This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit [the Creative Commons website](http://creativecommons.org/licenses/by-sa/4.0/).
 
-![CC-BY-SA logo](assets/cc_by_sa.png)
+![CC-BY-SA logo](assets/cc_by_sa.svg)
 
 ## Compilation and Build Instructions
 
