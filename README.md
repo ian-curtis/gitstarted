@@ -1,4 +1,4 @@
-# Better Git Started: An Introduction to the Command Line, Git, and GitHub
+# Better Git Started: An Introduction to the Command Line, GitHub, and Git
 
 *Better Git Started* is a work designed for users who have little to no experience with using or interacting with a terminal or with Git/GitHub. The book first introduces readers to basic computer ettiquette and basics such as file name guidelines and other recommended practices. Then, the command line is introduced and basic commands are taught. Following that is a discussion of GitHub and Git for those working alone and then for those working in a team.
 

@@ -40,7 +40,7 @@
   <book xml:id="git_started">
 
     <title>Better Git Started</title>
-    <subtitle>An Introduction to the Command Line, Git, and GitHub</subtitle>
+    <subtitle>An Introduction to the Command Line, GitHub, and Git</subtitle>
 
     <xi:include href="./frontmatter.ptx" />
 
