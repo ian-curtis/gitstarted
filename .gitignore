@@ -7,6 +7,7 @@ output/html
 generated-assets
 external/
 generated/
+output/subset
 
 # error logs
 .error_schema.log
