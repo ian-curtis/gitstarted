@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-06-02T14:32:42-04:00       *-->
+<!--*       on 2022-06-08T14:48:53-04:00       *-->
 <!--*   A recent stable commit (2020-08-09):   *-->
 <!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
@@ -63,7 +63,7 @@
 \)</span></div>
 <header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
 <a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, Git, and GitHub</span></a></h1>
+<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, GitHub, and Git</span></a></h1>
 <p class="byline">Ian Curtis</p>
 </div>
 </div></div>
@@ -165,7 +165,7 @@
 <li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
 <li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
 <li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
-<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Won't Push/Pull My Changes! (Divergent Branches)</a></li>
+<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Says I Have Divergent Branches!</a></li>
 <li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
 <li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
 </ul>
@@ -228,7 +228,7 @@
 <p id="p-494">Let's create a commit message for our changes on the <code class="code-inline tex2jax_ignore">animal</code> branch. In the “Commit changes” block, there is a text box that is autofilled with “Update README.md”. This is the default and for some instances may be enough. But I have the tendency to write slightly more detailed messages for my commit and I recommend you do so as well. Instead, type “add favorite animal”. There is no need to add the file name as this message will only be tied to the file(s) you have edited. (Later on, we will see that specific commit messages are only associated with the files you have staged and committed but that's a topic for <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a>.)</p>
 <article class="assemblage assemblage-like" id="commitmessages"><h4 class="heading"><span class="title">A Note On Commit Messages.</span></h4>
 <p id="p-495">It is up to you how to format your message. Some people write in complete sentences while others use incomplete sentences with capital letters. Some people use past tense, others present tense, and even others use present participles (add<em class="emphasis">ing</em>). I choose to use present tense with incomplete sentences and lowercase letters. But that's my preference. You should find what you like and stick with it.</p>
-<p id="p-496">...Except when you're editing someone else's files. In this case, pay attention to how someone else words their commit messages and imitate them. This will make life easier for the owner of the files and for anyone else who looks at the files in the future. You may even find that your commit message is changed by the owner of a repository to match their guidelines.</p></article><p id="p-497">It is not necessary to fill out the description text box (feel free to do so if you would like!). Ensure the “Commit directly to the <code class="code-inline tex2jax_ignore">animal</code> branch.” is selected, then click “Commit changes”.Your file should be updated! Just remember, <em class="emphasis">you have only updated the copy of the file on the <code class="code-inline tex2jax_ignore">animal</code> branch, not <code class="code-inline tex2jax_ignore">main</code></em>.</p>
+<p id="p-496">…Except when you're editing someone else's files. In this case, pay attention to how someone else words their commit messages and imitate them. This will make life easier for the owner of the files and for anyone else who looks at the files in the future. You may even find that your commit message is changed by the owner of a repository to match their guidelines.</p></article><p id="p-497">It is not necessary to fill out the description text box (feel free to do so if you would like!). Ensure the “Commit directly to the <code class="code-inline tex2jax_ignore">animal</code> branch.” is selected, then click “Commit changes”.Your file should be updated! Just remember, <em class="emphasis">you have only updated the copy of the file on the <code class="code-inline tex2jax_ignore">animal</code> branch, not <code class="code-inline tex2jax_ignore">main</code></em>.</p>
 <p id="p-498">Navigate back to the code tab to continue. Make sure you are still on the <code class="code-inline tex2jax_ignore">animal</code> branch. You can verify this by looking at the drop-down menu text or by checking the contents of your README file (if your favorite animal is there, you are on the <code class="code-inline tex2jax_ignore">animal</code> branch).</p>
 <figure class="figure figure-like" id="fig-hub-animal-commit"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_animal_commit.svg" role="img" class="contained" alt="Arrow diagram. Main branch to animal branch. Animal branch points to new edits. New edits points back to animal."></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.3.3<span class="period">.</span></span><span class="space"> </span>Diagram showing our commit from <code class="code-inline tex2jax_ignore">animal</code> to <code class="code-inline tex2jax_ignore">animal</code></figcaption></figure></section><section class="subsection" id="SS_pullrequest"><h3 class="heading hide-type">
