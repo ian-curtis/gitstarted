@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2022-06-03T16:30:58-04:00       *%
+%*       on 2022-06-09T15:52:21-04:00       *%
 %*   A recent stable commit (2020-08-09):   *%
 %* 98f21740783f166a773df4dc83cab5293ab63a4a *%
 %*                                          *%
@@ -776,7 +776,7 @@ breakable, parbox=false,
 {\titlepagefont\centering
 \vspace*{0.28\textheight}
 {\Huge Better Git Started}\\[2\baselineskip]
-{\LARGE An Introduction to the Command Line, Git, and GitHub}\\
+{\LARGE An Introduction to the Command Line, GitHub, and Git}\\
 }
 \clearpage
 %% end:   half-title
@@ -793,19 +793,19 @@ breakable, parbox=false,
 %% Target for xref to top-level element is ToC
 \addtocontents{toc}{\protect\label{x:book:git_started}\protect\hypertarget{x:book:git_started}{}}
 {\Huge Better Git Started}\\[\baselineskip]
-{\LARGE An Introduction to the Command Line, Git, and GitHub}\\[3\baselineskip]
+{\LARGE An Introduction to the Command Line, GitHub, and Git}\\[3\baselineskip]
 {\Large Ian Curtis}\\[3\baselineskip]
-{\Large June 3, 2022}\\}
+{\Large June 9, 2022}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
 \thispagestyle{empty}
-\label{g:colophon:idm2024179304}{}\hypertarget{g:colophon:idm2024179304}{}\vspace*{\stretch{2}}
+\label{g:colophon:idp474267224}{}\hypertarget{g:colophon:idp474267224}{}\vspace*{\stretch{2}}
 \noindent\textcopyright{}2022\quad{}Ian Curtis\\[0.5\baselineskip]
 \begin{image}{0.4}{0.2}{0.4}%
 \includegraphics[width=\linewidth]{external/cc_by_sa.pdf}
 \end{image}%
- This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/4.0/}{the Creative Commons website}\footnote{\nolinkurl{creativecommons.org/licenses/by-sa/4.0/}\label{g:fn:idm2024176104}}.\par\medskip
+ This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License. To view a copy of this license, visit \href{http://creativecommons.org/licenses/by-sa/4.0/}{the Creative Commons website}\footnote{\nolinkurl{creativecommons.org/licenses/by-sa/4.0/}\label{g:fn:idp474268376}}.\par\medskip
 \vspace*{\stretch{1}}
 \null\clearpage
 %% end:   copyright-page
@@ -815,14 +815,14 @@ breakable, parbox=false,
 \typeout{Acknowledgements  Acknowledgements}
 \typeout{************************************************}
 %
-\begin{acknowledgement}{Acknowledgements}{}{Acknowledgements}{}{}{g:acknowledgement:idm2024177256}
+\begin{acknowledgement}{Acknowledgements}{}{Acknowledgements}{}{}{g:acknowledgement:idp474267736}
 Thank you to the Grand Valley State University (\initialism{GVSU}) Libraries, specifically the Scholarly Communications section, for their support while writing this book. This book would not have been written had it not been for Matt Ruen of \initialism{GVSU} who provided useful feedback on accessibility, general \initialism{OER} guidance, organization, and who arranged for a university grant to hire me as a student employee to assist with \initialism{OER} creation and mangement at \initialism{GVSU}.%
 \par
 I am also indebted to Alicia Huber and Jackie Rander for their feedback on the clarity, concision, and effectiveness of the book. The book has benefitted because of them.%
 \par
 Kudos also go to David Farmer, Rob Beezer, Oscar Levin, and the many others who work to maintain and update PreTeXt and its functions. PreTeXt is a great, free resource for authors.%
 \par
-All branch diagrams found in this book were created by the author using \href{https://miro.com/}{the online creator, Miro}\footnote{\nolinkurl{miro.com/}\label{g:fn:idm2024175208}}.%
+All branch diagrams found in this book were created by the author using \href{https://miro.com/}{the online creator, Miro}\footnote{\nolinkurl{miro.com/}\label{g:fn:idp474275928}}.%
 \end{acknowledgement}
 %
 %% begin: table of contents
@@ -879,31 +879,31 @@ There are certain parts of the book that could be better. I list some below.%
 %
 \begin{preface}{Materials (Windows)}{}{Materials (Windows)}{}{}{x:preface:materials-windows}
 As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on it you have a Mac or a \initialism{PC} and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions \emph{for those who are using Windows}. If you are running Windows Subsystem for Linux, instructions might be slightly different; however, start here and jump to a quick Google search if something goes wrong.%
-\begin{paragraphs}{A Text Editor.}{g:paragraphs:idm2024147432}%
-In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as \href{https://www.sublimetext.com/download}{Sublime Text}\footnote{\nolinkurl{sublimetext.com/download}\label{g:fn:idm2024153704}} or \href{https://atom.io}{Atom}\footnote{\nolinkurl{atom.io}\label{g:fn:idm2024148840}}.%
+\begin{paragraphs}{A Text Editor.}{g:paragraphs:idp474294232}%
+In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as \href{https://www.sublimetext.com/download}{Sublime Text}\footnote{\nolinkurl{sublimetext.com/download}\label{g:fn:idp474294360}} or \href{https://atom.io}{Atom}\footnote{\nolinkurl{atom.io}\label{g:fn:idp474293080}}.%
 \par
-If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer \href{}{Visual Studio Code}\footnote{\nolinkurl{code.visualstudio.com/Download}\label{g:fn:idm2024153960}} which can be downloaded at the previous link. Throughout this book, I will refer to \initialism{VS} Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with \initialism{VS} Code although as you gain experience you might think about switching to Atom or Sublime Text. I am currently considering a change to Atom myself.%
+If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer \href{}{Visual Studio Code}\footnote{\nolinkurl{code.visualstudio.com/Download}\label{g:fn:idp474294488}} which can be downloaded at the previous link. Throughout this book, I will refer to \initialism{VS} Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with \initialism{VS} Code although as you gain experience you might think about switching to Atom or Sublime Text. I am currently considering a change to Atom myself.%
 \end{paragraphs}%
-\begin{paragraphs}{Git\slash{}Git Bash.}{g:paragraphs:idm2024148072}%
+\begin{paragraphs}{Git\slash{}Git Bash.}{g:paragraphs:idp474291928}%
 To use Git, you need to download and install it on your computer. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). To run a quick check, use \kbd{Windows} + \kbd{S} and search for ``git bash''. If an application pops up, great! You do not need to install anything. If not, carry on.%
 \par
 Windows does come with its own command prompt. (What's a command prompt? See \hyperref[x:section:S_whatiscommline]{Section~{\xreffont\ref{x:section:S_whatiscommline}}, p.\,\pageref{x:section:S_whatiscommline}}.) However, its syntax doesn't match other terminals and notably is different from Macs. Thus, to ensure that everyone is on the same page, we will download a piece of software called Git Bash that allows everyone to use the same commands.%
 \par
-To install Git Bash, follow these next steps. Yuvraj Chandra wrote \href{https://www.makeuseof.com/install-git-git-bash-windows/}{a useful Git Bash installation guide}\footnote{\nolinkurl{makeuseof.com/install-git-git-bash-windows/}\label{g:fn:idm2024151784}} that may help you if you get stuck.%
+To install Git Bash, follow these next steps. Yuvraj Chandra wrote \href{https://www.makeuseof.com/install-git-git-bash-windows/}{a useful Git Bash installation guide}\footnote{\nolinkurl{makeuseof.com/install-git-git-bash-windows/}\label{g:fn:idp474296792}} that may help you if you get stuck.%
 \begin{enumerate}
-\item{}Visit the \href{https://git-scm.com/downloads}{Git website}\footnote{\nolinkurl{git-scm.com/downloads}\label{g:fn:idm2024144232}} and select the download for Windows.%
+\item{}Visit the \href{https://git-scm.com/downloads}{Git website}\footnote{\nolinkurl{git-scm.com/downloads}\label{g:fn:idp474298712}} and select the download for Windows.%
 \item{}Open the \mono{.exe} file and follow the instructions to install Git Bash. Most of the default options should not be changed. However, please read the following notes before installing.%
 \begin{itemize}[label=\textbullet]
 \item{}Your computer may ask you if you want to allow the app to modify your computer; it is safe to say yes.%
 \item{}When you reach the ``Select Components'' screen, I recommend leaving the default boxes checked as they will be useful later on.%
 \item{}When you reach the ``Choosing the default editor used by Git'' screen, I recommend selecting the ``Use Visual Studio Code...'' option (if you have decided to use \initialism{VS} Code).%
-\item{}When you reach the ``Adjusting the name of the initial branch...'' screen, I recommend selecting ``Override the default branch name...'' and type in \mono{main} (lowercase) into the box. This will help us match the Mac version and respect \href{}{Git's attempts to be more inclusive}\footnote{\nolinkurl{theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main}\label{g:fn:idm2024134760}}.%
+\item{}When you reach the ``Adjusting the name of the initial branch...'' screen, I recommend selecting ``Override the default branch name...'' and type in \mono{main} (lowercase) into the box. This will help us match the Mac version and respect \href{}{Git's attempts to be more inclusive}\footnote{\nolinkurl{theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main}\label{g:fn:idp474307544}}.%
 \end{itemize}
 %
 \end{enumerate}
 %
 \end{paragraphs}%
-\begin{paragraphs}{GitHub.}{g:paragraphs:idm2024136168}%
+\begin{paragraphs}{GitHub.}{g:paragraphs:idp474305368}%
 You will also need a GitHub account. Since this is an extensive topic, this is covered in \hyperref[x:subsection:hub-account]{Subsection~{\xreffont\ref{x:subsection:hub-account}}, p.\,\pageref{x:subsection:hub-account}}.%
 \end{paragraphs}%
 \end{preface}
@@ -915,10 +915,10 @@ You will also need a GitHub account. Since this is an extensive topic, this is c
 %
 \begin{preface}{Materials (Mac)}{}{Materials (Mac)}{}{}{x:preface:materials-mac}
 As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on if you have a Mac or a \initialism{PC} and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions \emph{for those who are using a Mac with macOS}.%
-\begin{paragraphs}{A Text Editor.}{g:paragraphs:idm2024137576}%
-In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as \href{https://www.sublimetext.com/download}{Sublime Text}\footnote{\nolinkurl{sublimetext.com/download}\label{g:fn:idm2024131560}} or \href{https://atom.io}{Atom}\footnote{\nolinkurl{atom.io}\label{g:fn:idm2024137192}}.%
+\begin{paragraphs}{A Text Editor.}{g:paragraphs:idp474305240}%
+In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as \href{https://www.sublimetext.com/download}{Sublime Text}\footnote{\nolinkurl{sublimetext.com/download}\label{g:fn:idp474308440}} or \href{https://atom.io}{Atom}\footnote{\nolinkurl{atom.io}\label{g:fn:idp474309208}}.%
 \par
-If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer \href{}{Visual Studio Code}\footnote{\nolinkurl{code.visualstudio.com/Download}\label{g:fn:idm2024132712}} which can be downloaded at the previous link. Throughout this book, I will refer to \initialism{VS} Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with \initialism{VS} Code although as you gain experience you might think about switching to Atom or Sublime Text. I am currently considering a change to Atom myself.%
+If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer \href{}{Visual Studio Code}\footnote{\nolinkurl{code.visualstudio.com/Download}\label{g:fn:idp474303576}} which can be downloaded at the previous link. Throughout this book, I will refer to \initialism{VS} Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with \initialism{VS} Code although as you gain experience you might think about switching to Atom or Sublime Text. I am currently considering a change to Atom myself.%
 \end{paragraphs}%
 \begin{paragraphs}{Git.}{x:paragraphs:install-git-mac}%
 To use Git, you need to download and install it on your computer. You already have a command line, you just need to make sure that you have Git. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). First, run a check to see if it is already installed. Don't worry about how or why these steps work, all will be explained later on.%
@@ -939,13 +939,13 @@ https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 \end{codedisplay}
 as one line (not two) and press \kbd{Enter}. Don't worry about what each part does (to be honest, I'm not entirely sure either). It is safe and trustworthy (I did it on my computer).%
 \par
-If you want to be sure you're pasting the correct command, you can visit \href{https://brew.sh/}{the Homebrew homepage}\footnote{\nolinkurl{brew.sh}\label{g:fn:idm2024115688}} and navigate to the ``Install Homebrew'' heading.%
+If you want to be sure you're pasting the correct command, you can visit \href{https://brew.sh/}{the Homebrew homepage}\footnote{\nolinkurl{brew.sh}\label{g:fn:idp474321368}} and navigate to the ``Install Homebrew'' heading.%
 \item{}Follow the instructions and prompts given until Homebrew is installed.%
 \item{}To install Git, simply type in \mono{brew install git} at the terminal and press \kbd{Enter}.%
 \end{enumerate}
 And that's it!%
 \end{paragraphs}%
-\begin{paragraphs}{GitHub.}{g:paragraphs:idm2024118376}%
+\begin{paragraphs}{GitHub.}{g:paragraphs:idp474319704}%
 You will also need a GitHub account. Since this is an extensive topic, this is covered in \hyperref[x:subsection:hub-account]{Subsection~{\xreffont\ref{x:subsection:hub-account}}, p.\,\pageref{x:subsection:hub-account}}.%
 \end{paragraphs}%
 \end{preface}
@@ -959,15 +959,15 @@ You will also need a GitHub account. Since this is an extensive topic, this is c
 As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on it you have a Mac or a \initialism{PC} and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions \emph{for those who are using Linux}.%
 \par
 Please note that I have no experience with using Linux. These instructions will likely be superficial and without detail. I simply provide you with links; I am currently not able to provide information on how to install software correctly.%
-\begin{paragraphs}{A Text Editor.}{g:paragraphs:idm2024119912}%
-In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as \href{https://www.sublimetext.com/download}{Sublime Text}\footnote{\nolinkurl{sublimetext.com/download}\label{g:fn:idm2024114664}} or \href{https://atom.io}{Atom}\footnote{\nolinkurl{atom.io}\label{g:fn:idm2024113768}}. Both have Linux downloads.%
+\begin{paragraphs}{A Text Editor.}{g:paragraphs:idp474322520}%
+In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as \href{https://www.sublimetext.com/download}{Sublime Text}\footnote{\nolinkurl{sublimetext.com/download}\label{g:fn:idp474330968}} or \href{https://atom.io}{Atom}\footnote{\nolinkurl{atom.io}\label{g:fn:idp474331096}}. Both have Linux downloads.%
 \par
-If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer \href{}{Visual Studio Code}\footnote{\nolinkurl{code.visualstudio.com/Download}\label{g:fn:idm2024109160}} which can be downloaded at the previous link (there is a Linux download). Throughout this book, I will refer to \initialism{VS} Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with \initialism{VS} Code although as you gain experience you might think about switching to Atom or Sublime Text. I am currently considering a change to Atom myself.%
+If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer \href{}{Visual Studio Code}\footnote{\nolinkurl{code.visualstudio.com/Download}\label{g:fn:idp474330072}} which can be downloaded at the previous link (there is a Linux download). Throughout this book, I will refer to \initialism{VS} Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with \initialism{VS} Code although as you gain experience you might think about switching to Atom or Sublime Text. I am currently considering a change to Atom myself.%
 \end{paragraphs}%
-\begin{paragraphs}{Git.}{g:paragraphs:idm2024108520}%
-To use Git, you need to download and install it on your computer. You already have a command line, you just need to make sure that you have Git. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). You can install Git for Linux from the many options \href{https://git-scm.com/download/linux}{at the GitHub download page}\footnote{\nolinkurl{git-scm.com/download/linux}\label{g:fn:idm2024110312}}.%
+\begin{paragraphs}{Git.}{g:paragraphs:idp474327512}%
+To use Git, you need to download and install it on your computer. You already have a command line, you just need to make sure that you have Git. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). You can install Git for Linux from the many options \href{https://git-scm.com/download/linux}{at the GitHub download page}\footnote{\nolinkurl{git-scm.com/download/linux}\label{g:fn:idp474329560}}.%
 \end{paragraphs}%
-\begin{paragraphs}{GitHub.}{g:paragraphs:idm2024108648}%
+\begin{paragraphs}{GitHub.}{g:paragraphs:idp474329688}%
 You will also need a GitHub account. Since this is an extensive topic, this is covered in \hyperref[x:subsection:hub-account]{Subsection~{\xreffont\ref{x:subsection:hub-account}}, p.\,\pageref{x:subsection:hub-account}}.%
 \end{paragraphs}%
 \end{preface}
@@ -1046,7 +1046,7 @@ Chapters3\textunderscore{}4\textunderscore{}Overview of\textellipsis{}SRS).pdf\e
 If it were me, I would rather name this file (based on the conventions discussed so far) \begin{quote}%
 Ch3\textunderscore{}4\textunderscore{}Sampling and SRS.pdf\end{quote}
  Wow! So much shorter. Do you still have an idea of what the file contains? Hopefully! ``Ch'' is usually accepted as an abbreviation for ``Chapter'' so it is clear that this file is over chapters 3 and 4. The subject of these chapters is sampling and simple random sampling (``SRS'' is a widely-used abbreviation in statistics for simple random sampling).%
-\begin{assemblage}{File Naming Trick.}{g:assemblage:idm2024086760}%
+\begin{assemblage}{File Naming Trick.}{g:assemblage:idp474352472}%
 An easy way to shorten file names is to remove the vowels from words. The human brain is incredible in that it can determine what a word should be based on a small amount of context. Assuming the file above was in a folder pertaining to statistics, I could shorten it even more: \begin{quote}%
 Ch3\textunderscore{}4\textunderscore{}Smplng and SRS.pdf\end{quote}
  And we still know what it's about!%
@@ -1068,25 +1068,25 @@ For instance, suppose I wanted to open the file we discussed earlier. On the com
 So what do we replace the spaces with? \begin{note}{Alternative Naming Options.}{x:note:filenamecases}%
 \index{cases}\index{file names}\index{naming|see{file names}|seealso{folder names}}Most computer programmers name their files using \terminology{cases}. There are five main cases:%
 \begin{descriptionlist}
-\begin{dlimedium}{snake\textunderscore{}case}{g:li:idm2024074856}%
+\begin{dlimedium}{snake\textunderscore{}case}{g:li:idp474364120}%
 no capital letters, spaces are replaced with underscores (\textunderscore{})%
 \end{dlimedium}%
-\begin{dlimedium}{kebab-case}{g:li:idm2024074216}%
+\begin{dlimedium}{kebab-case}{g:li:idp474366424}%
 no capital letters, spaces are replaced with hyphens (-)%
 \end{dlimedium}%
-\begin{dlimedium}{camelCase}{g:li:idm2024073320}%
+\begin{dlimedium}{camelCase}{g:li:idp474368600}%
 first word is lowercase, all consequent words are capitalized; spaces are removed%
 \end{dlimedium}%
-\begin{dlimedium}{PascalCase}{g:li:idm2024072680}%
+\begin{dlimedium}{PascalCase}{g:li:idp474369240}%
 every word is capitalized, spaces are removed%
 \end{dlimedium}%
-\begin{dlimedium}{UPPER\textunderscore{}CASE\textunderscore{} SNAKE\textunderscore{}CASE}{g:li:idm2024065640}%
+\begin{dlimedium}{UPPER\textunderscore{}CASE\textunderscore{} SNAKE\textunderscore{}CASE}{g:li:idp474371672}%
 every letter is capitalized, spaces are replaced with underscores (\textunderscore{})%
 \end{dlimedium}%
 \end{descriptionlist}
 See a \href{https://chaseadams.io/posts/most-common-programming-case-types/}{Most Common Programming Case Types blog post}\footnotemark{} to get more details on these cases.%
 \end{note}
-\footnotetext[17]{\nolinkurl{chaseadams.io/posts/most-common-programming-case-types/}\label{g:fn:idm2024064872}}%
+\footnotetext[17]{\nolinkurl{chaseadams.io/posts/most-common-programming-case-types/}\label{g:fn:idp474368984}}%
  Personally, I use snake\textunderscore{}case for file names and kebab-case for folder names, just to help me keep them separate and still easy to read. I also tend to name my files and folders with lowercase letters if I can.%
 \par
 Using the shortened file name above, I would use the following as my file name: \begin{quote}%
@@ -1101,7 +1101,7 @@ It's worth repeating once again. File names should not contain spaces. Files abo
 \par
 Sorry, once more. This time, I'm going to yell. \alert{File names should not contain spaces.}%
 \end{paragraphs}%
-\begin{paragraphs}{A Quick Note on Folder Names.}{g:paragraphs:idm2024065768}%
+\begin{paragraphs}{A Quick Note on Folder Names.}{g:paragraphs:idp474376920}%
 \index{folder names}%
 \index{directory names|see{folder names}}%
 Folder names should also follow all of the conventions above. This is a lot harder to get used to. I still feel like I'm breaking the Human Code of Folder Names everytime I ignore spaces and capital letters. For whatever reason, I'm fine with file names, but folder names just don't feel right.%
@@ -1242,7 +1242,7 @@ Hint: \kbd{Control} + \kbd{F} or \kbd{Command} + \kbd{F} work well on this page.
 %
 \begin{subsectionptx}{Images}{}{Images}{}{}{x:subsection:extensions-images}
 \index{file extensions!images}%
-Why would we need more than on extension for an image? A photo is a photo, right? Wrong. Each of the file extensions have unique aspects and features. For instance, the Apple \mono{.heic} file often takes up less storage space. However, not all programs can open them. The \href{https://guides.lib.umich.edu/c.php?g=282942\&p=1885348}{University of Michigan}\footnote{\nolinkurl{guides.lib.umich.edu/c.php?g=282942\&p=1885348}\label{g:fn:idm2023744440}} and \href{https://kinsta.com/blog/image-file-types/}{Kinsta}\footnote{\nolinkurl{kinsta.com/blog/image-file-types/}\label{g:fn:idm2023740344}} have great guides on the differences between some image file extensions. The table here just lists the extensions and what they are, not the details on their use.%
+Why would we need more than on extension for an image? A photo is a photo, right? Wrong. Each of the file extensions have unique aspects and features. For instance, the Apple \mono{.heic} file often takes up less storage space. However, not all programs can open them. The \href{https://guides.lib.umich.edu/c.php?g=282942\&p=1885348}{University of Michigan}\footnote{\nolinkurl{guides.lib.umich.edu/c.php?g=282942\&p=1885348}\label{g:fn:idp474642648}} and \href{https://kinsta.com/blog/image-file-types/}{Kinsta}\footnote{\nolinkurl{kinsta.com/blog/image-file-types/}\label{g:fn:idp474643928}} have great guides on the differences between some image file extensions. The table here just lists the extensions and what they are, not the details on their use.%
 \begin{tableptx}{\textbf{Image File Extensions}}{x:table:tbl-image-extensions}{}%
 \centering%
 {\tabularfont%
@@ -1272,7 +1272,7 @@ Why would we need more than on extension for an image? A photo is a photo, right
 %
 \begin{subsectionptx}{Videos}{}{Videos}{}{}{x:subsection:extensions-videos}
 \index{file extensions!videos}%
-\href{https://www.adobe.com/creativecloud/video/discover/best-video-format.html}{Adobe}\footnote{\nolinkurl{adobe.com/creativecloud/video/discover/best-video-format.html}\label{g:fn:idm2023722040}} has a great guide on the differences between some video file extensions. The table here just lists the extensions and what they are, not the details on their use.%
+\href{https://www.adobe.com/creativecloud/video/discover/best-video-format.html}{Adobe}\footnote{\nolinkurl{adobe.com/creativecloud/video/discover/best-video-format.html}\label{g:fn:idp474656216}} has a great guide on the differences between some video file extensions. The table here just lists the extensions and what they are, not the details on their use.%
 \begin{tableptx}{\textbf{Video File Extensions}}{x:table:tbl-video-extensions}{}%
 \centering%
 {\tabularfont%
@@ -1299,7 +1299,7 @@ Why would we need more than on extension for an image? A photo is a photo, right
 %
 \begin{subsectionptx}{Documents}{}{Documents}{}{}{x:subsection:extensions-docs}
 \index{file extensions!documents}%
-There are many different file extensions that refer to documents. Many of them you will never encounter. Only the main file types are listed here. \href{https://blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/}{File Stack}\footnote{\nolinkurl{blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/}\label{g:fn:idm2023719992}} has a good explanation on some of the file types here.%
+There are many different file extensions that refer to documents. Many of them you will never encounter. Only the main file types are listed here. \href{https://blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/}{File Stack}\footnote{\nolinkurl{blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/}\label{g:fn:idp474666584}} has a good explanation on some of the file types here.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{cc}
@@ -1329,7 +1329,7 @@ Note: technically, \mono{.html} and \mono{.xml} are considered document-type fil
 %
 \begin{subsectionptx}{Audio}{}{Audio}{}{}{x:subsection:extensions-audio}
 \index{file extensions!audio}%
-\href{https://www.makeuseof.com/tag/audio-file-format-right-needs/}{makeuseof.com}\footnote{\nolinkurl{makeuseof.com/tag/audio-file-format-right-needs/}\label{g:fn:idm2023697848}} has great descriptions of the most common audio file types.%
+\href{https://www.makeuseof.com/tag/audio-file-format-right-needs/}{makeuseof.com}\footnote{\nolinkurl{makeuseof.com/tag/audio-file-format-right-needs/}\label{g:fn:idp474682200}} has great descriptions of the most common audio file types.%
 \begin{center}%
 {\tabularfont%
 \begin{tabular}{cc}
@@ -1471,7 +1471,7 @@ Maybe. Here's what that would look like on a Windows computer: \begin{quote}%
 \par
 However, they both work the same. The fundamental structure is ``start at the outmost folder and work your way in through folders until you get to the file or folder you are looking for''. Recall from \hyperref[x:section:S_filenames]{Section~{\xreffont\ref{x:section:S_filenames}}, p.\,\pageref{x:section:S_filenames}} that files must have an extension while folders do not. This is an easy way to differentiate between folders and files.%
 \par
-The key thing to note is that Mac and Windows are designed differently. Mac uses forward slashes to indicate a folder change and Windows uses backslashes (in Git Bash, Windows users can use forward slashes\textellipsis{}one reason for sticking with Git Bash!). But their structures are different as well. Notice that Windows has ``C:'' at the beginning. This is the C drive and there are other drives. Other differences are beyond the scope of this book. A brief history on file paths is given by \href{https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/}{How-To Geek}\footnote{\nolinkurl{howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/}\label{g:fn:idm2023642424}} and a rather hard-to-read explanation can be found on \href{https://en.wikipedia.org/wiki/Path_(computing)}{Wikipedia}\footnote{\nolinkurl{en.wikipedia.org/wiki/Path_(computing)}\label{g:fn:idm2023643704}}.%
+The key thing to note is that Mac and Windows are designed differently. Mac uses forward slashes to indicate a folder change and Windows uses backslashes (in Git Bash, Windows users can use forward slashes\textellipsis{}one reason for sticking with Git Bash!). But their structures are different as well. Notice that Windows has ``C:'' at the beginning. This is the C drive and there are other drives. Other differences are beyond the scope of this book. A brief history on file paths is given by \href{https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/}{How-To Geek}\footnote{\nolinkurl{howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/}\label{g:fn:idp474744152}} and a rather hard-to-read explanation can be found on \href{https://en.wikipedia.org/wiki/Path_(computing)}{Wikipedia}\footnote{\nolinkurl{en.wikipedia.org/wiki/Path_(computing)}\label{g:fn:idp474738392}}.%
 \par
 There are a few important points to remember when reading or finding a file path. The main goal from this section is that you understand how a file path is structured. Paths will come back later.%
 \begin{itemize}[label=\textbullet]
@@ -1491,7 +1491,7 @@ You can however have files with the same name in different folders. Since the fi
 %
 \begin{subsectionptx}{Helpful Hints and Reminders}{}{Helpful Hints and Reminders}{}{}{x:subsection:paths-hints}
 \index{file paths}%
-\begin{paragraphs}{File and Folder Naming.}{g:paragraphs:idm2023643576}%
+\begin{paragraphs}{File and Folder Naming.}{g:paragraphs:idp474743768}%
 Recall \hyperref[x:note:filenamecases]{Note~{\xreffont\ref{x:note:filenamecases}}, p.\,\pageref{x:note:filenamecases}} for alternative naming methods for files and folders. Please, please, please do not use spaces (and consider renaming your existing files that you plan to use with the terminal). I know it looks weird to name things using these cases, but if you really are set on learning Git and the command line, you will want to follow this convention.%
 \end{paragraphs}%
 \begin{paragraphs}{Finding File Paths.}{x:paragraphs:findingpaths}%
@@ -1578,10 +1578,10 @@ Luckily, the terminal is easy to find on a Mac: it's called \mono{terminal.app} 
 Once in the Launchpad, find the Terminal. You can either search for it in the search bar at the tope of the screen or scroll through your apps until you find it. (Note: it might be in the Other folder).%
 \end{itemize}
 %
-\begin{assemblage}{Shells.}{g:assemblage:idm2023606840}%
+\begin{assemblage}{Shells.}{g:assemblage:idp474770776}%
 At the top of my (Mac) terminal, it says ``\textless{}my-username\textgreater{}\textemdash{} -bash''. This indicates that I am using the \mono{bash} shell. This is no longer the default for MacOS Catalina and later (as the terminal states). I will be sticking with \mono{bash} in this book to avoid major differences between Windows and Mac instructions. If your terminal states something other than \mono{bash} (such as \mono{zsh} or \mono{fish}) and you would like to use \mono{bash} to follow along, paste \mono{chsh -s /bin/bash}\footnotemark{} into the command line, press \kbd{Enter}, enter your password to your computer, and restart the terminal. Otherwise, you are free to stick with the default shell; just know that there may be slight differences between this book and your terminal.%
 \end{assemblage}
-\footnotetext[25]{This command stands for ``CHange the SHell to the shell called bash in the bin folder''\label{g:fn:idm2023610424}}%
+\footnotetext[25]{This command stands for ``CHange the SHell to the shell called bash in the bin folder''\label{g:fn:idp474774232}}%
 \end{subsectionptx}
 %
 %
@@ -1593,7 +1593,7 @@ At the top of my (Mac) terminal, it says ``\textless{}my-username\textgreater{}\
 \index{command line!windows}%
 For Windows users, the situation is a slightly more complicated. The underlying makeup of the operating systems on Windows is differet than the basis for MacOS and other Unix-like systems (such as Linux). This means that certain applications for Windows do not have a MacOS compliment (and likewise some Mac applications do not have Windows versions). In addition, the file system and organization are different bewteen the two.%
 \par
-Separate instructions must be given for Windows users for certain tasks. To make life easier for you, me, and everyone else, I recommend \emph{not} using the default Windows terminal. \begin{aside}{}{g:aside:idm2023603640}%
+Separate instructions must be given for Windows users for certain tasks. To make life easier for you, me, and everyone else, I recommend \emph{not} using the default Windows terminal. \begin{aside}{}{g:aside:idp474781912}%
 The default terminal for Windows is usually the Command Prompt. To access it, activate the search feature of your computer by clicking the search box at the bottom of your screen or by typing \kbd{Windows} + \kbd{S}. Then search for ``command prompt'' and click on the result that comes up.%
 \end{aside}
 %
@@ -1606,7 +1606,7 @@ Instead, let's use a new terminal (Git Bash) that works with Git and convenientl
 \typeout{Subsection 2.2.3 On Linux}
 \typeout{************************************************}
 %
-\begin{subsectionptx}{On Linux}{}{On Linux}{}{}{g:subsection:idm2023601848}
+\begin{subsectionptx}{On Linux}{}{On Linux}{}{}{g:subsection:idp474781016}
 \index{command line!linux}%
 This will depend on the version and distribution you have installed. For this reason, I will not be able to provide instructions here. Please use the internet for help. Contributions for your specific distribution are welcome through a pull request or issue on GitHub.%
 \end{subsectionptx}
@@ -1642,13 +1642,13 @@ Our first command will show us where we are: \mono{pwd}, which stands for \termi
 If one is referring to a container of documents, the term folder is more appropriate. The term directory refers to the way a structured list of document files and folders are stored on the computer.\end{quote}
  That's a little confusing! The difference here is mostly technical. Essentially, a \terminology{directory} is a ``file system object'' whereas a \terminology{folder} is just a user-friendly way to represent directories. For our purposes (and for most purposes), the two terms can be used interchangeably. I use ``directory'' when speaking about functions on the command line and ``folder'' when speaking in informal settings. If you are interested, you can read more about the history of the terms \href{https://www.quora.com/What-is-the-difference-between-a-folder-and-a-directory}{at this Quora question}\footnotemark{}.%
 \end{note}
-\footnotetext[26]{\nolinkurl{en.wikipedia.org/wiki/Directory_\%28computing\%29\#Folder_metaphor}\label{g:fn:idm2023582392}}%
-\footnotetext[27]{\nolinkurl{quora.com/What-is-the-difference-between-a-folder-and-a-directory}\label{g:fn:idm2023583288}}%
+\footnotetext[26]{\nolinkurl{en.wikipedia.org/wiki/Directory_\%28computing\%29\#Folder_metaphor}\label{g:fn:idp474798296}}%
+\footnotetext[27]{\nolinkurl{quora.com/What-is-the-difference-between-a-folder-and-a-directory}\label{g:fn:idp474794712}}%
 %
 \begin{inlineexercise}{Trying \mono{pwd}.}{x:exercise:try-pwd}%
 Enter \mono{pwd} at your terminal. What does it tell you?%
 \end{inlineexercise}%
-\begin{assemblage}{}{g:assemblage:idm2023583160}%
+\begin{assemblage}{}{g:assemblage:idp474801240}%
 Anytime I talk about ``enter something at your terminal'', type in the desired command and press \kbd{Enter}.%
 \end{assemblage}
 \mono{pwd} prints one thing: the file path to the folder that is ``active'' at your terminal. When you first open your terminal, Mac users might see something like \mono{/Users/<your-username>} and Windows (Git Bash) users \mono{/c/Users/<your-username>}. If you ever get lost in your terminal, type in \mono{pwd} for some reassurance.%
@@ -1669,7 +1669,7 @@ Note the forward slashes; the slashes separate folder names whereas periods sepa
 \begin{inlineexercise}{Trying \mono{cd}.}{x:exercise:try-cd}%
 Enter \mono{cd Desktop/} into your terminal. Did anything change?%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idm2023572536}{}\hypertarget{g:hint:idm2023572536}{}\quad{}Try running \mono{pwd} after \mono{cd}. Do you notice anything different here?%
+\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idp474817240}{}\hypertarget{g:hint:idp474817240}{}\quad{}Try running \mono{pwd} after \mono{cd}. Do you notice anything different here?%
 \end{inlineexercise}%
 If everything went correctly, you should now be ``in'' your Desktop directory (folder, if you insist). You may have even noticed that your terminal changed. On any operating system, you should see that the word ``Desktop'' appeared before your cursor. This is a nice check to make sure that \mono{cd} worked and that you are where you want to be.%
 \end{paragraphs}%
@@ -1783,7 +1783,7 @@ It's time to put your skills to the test! Using your terminal and the knowledge 
 \item{}Determine if there are any files inside of this directory. What is the file path to ``testdir''?%
 \item{}Create a new text file with a name of ``My Greeting''. Be sure to use proper naming techniques and correct terminal syntax.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idm2023416360}{}\hypertarget{g:hint:idm2023416360}{}\quad{}You can use \mono{ls} to verify that everything worked.%
+\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idp474994952}{}\hypertarget{g:hint:idp474994952}{}\quad{}You can use \mono{ls} to verify that everything worked.%
 \item{}Open your text file and type a greeting into the first line. Save the file. Remember to only use the command line to open the file!%
 \item{}Close your text file. Mac users should use the command line whereas Windows users will have to close it manually.%
 \end{enumerate}
@@ -1837,7 +1837,7 @@ Alright! We cleared the contents of our \mono{testdir} directory. Remember, the 
 \begin{inlineexercise}{Trying \mono{cd} Backwards.}{x:exercise:try-cd-backwards}%
 Try it! Move backwards into the parent directory of \mono{testdir}.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idm2023368872}{}\hypertarget{g:hint:idm2023368872}{}\quad{}If successful, \mono{pwd} should indicate that you are in the Desktop.%
+\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idp475038472}{}\hypertarget{g:hint:idp475038472}{}\quad{}If successful, \mono{pwd} should indicate that you are in the Desktop.%
 \end{inlineexercise}%
 \end{paragraphs}%
 \begin{paragraphs}{Using \mono{rmdir}.}{x:paragraphs:using-rmdir}%
@@ -1918,11 +1918,11 @@ Before attempting to tackle Git, I think it's best to show you the ropes of GitH
 \index{account|see{github}}%
 Creating a GitHub account is easy and free. Just be careful along the way; there are a few things to take into consideration. If you already have a GitHub account, skip to \hyperref[x:subsection:hub-profile]{Subsection~{\xreffont\ref{x:subsection:hub-profile}}, p.\,\pageref{x:subsection:hub-profile}}. If you don't, keep reading.%
 \par
-First, navigate to \href{https://github.com}{GitHub}\footnote{\nolinkurl{github.com}\label{g:fn:idm2023324200}}. Any browser should work. Click on the ``Sign Up'' in the top right corner. A welome box should pop up. Follow the instructions to create an account:%
+First, navigate to \href{https://github.com}{GitHub}\footnote{\nolinkurl{github.com}\label{g:fn:idp475089544}}. Any browser should work. Click on the ``Sign Up'' in the top right corner. A welome box should pop up. Follow the instructions to create an account:%
 \begin{enumerate}
 \item{}Enter your email%
 \item{}Create a password%
-\item{}Choose a username. Attention! Choose your username carefully. \href{https://happygitwithr.com/github-acct.html\#username-advice}{Jennifer Bryan}\footnote{\nolinkurl{happygitwithr.com/github-acct.html\#username-advice}\label{g:fn:idm2023326120}} has some great tips for choosing a username. A few are reproduced here:%
+\item{}Choose a username. Attention! Choose your username carefully. \href{https://happygitwithr.com/github-acct.html\#username-advice}{Jennifer Bryan}\footnote{\nolinkurl{happygitwithr.com/github-acct.html\#username-advice}\label{g:fn:idp475083656}} has some great tips for choosing a username. A few are reproduced here:%
 \begin{itemize}[label=\textbullet]
 \item{}Incorporate your actual name! People like to know who they're dealing with. Also makes your username easier for people to guess or remember.%
 \item{}Reuse your username from other contexts, e.g., Twitter or Slack. But, of course, someone with no GitHub activity will probably be squatting on that.%
@@ -1937,7 +1937,7 @@ While it is possible to change your username later, it is better to not fall bac
 \end{enumerate}
 %
 \par
-Once you finish setting up the account (email verification may be required), navigate back to the home page (\href{https://github.com}{github.com}\footnote{\nolinkurl{github.com}\label{g:fn:idm2023315496}}) and carry on.%
+Once you finish setting up the account (email verification may be required), navigate back to the home page (\href{https://github.com}{github.com}\footnote{\nolinkurl{github.com}\label{g:fn:idp475098504}}) and carry on.%
 \end{subsectionptx}
 %
 %
@@ -1958,7 +1958,7 @@ You should be on the home page of GitHub which might look something like my home
 \end{image}%
 \tcblower
 \end{figureptx}%
-Your profile page can be found by clicking on the robot-y icon (see \hyperref[x:figure:fig-hub-navbar]{Figure~{\xreffont\ref{x:figure:fig-hub-navbar}}, p.\,\pageref{x:figure:fig-hub-navbar}}) in the top right and clicking on ``Your profile''. (Notice that the URL uses your username.) You probably don't see much. That's ok, you haven't created anything yet! On this page (the ``Overview'' tab) you can see your popular repositories, a graph of your contributions and a summary of your activity. Check out \href{https://github.com/ian-curtis}{my profile page}\footnote{\nolinkurl{github.com/ian-curtis}\label{g:fn:idm2023309480}} for an example.%
+Your profile page can be found by clicking on the robot-y icon (see \hyperref[x:figure:fig-hub-navbar]{Figure~{\xreffont\ref{x:figure:fig-hub-navbar}}, p.\,\pageref{x:figure:fig-hub-navbar}}) in the top right and clicking on ``Your profile''. (Notice that the URL uses your username.) You probably don't see much. That's ok, you haven't created anything yet! On this page (the ``Overview'' tab) you can see your popular repositories, a graph of your contributions and a summary of your activity. Check out \href{https://github.com/ian-curtis}{my profile page}\footnote{\nolinkurl{github.com/ian-curtis}\label{g:fn:idp475100808}} for an example.%
 \begin{figureptx}{The GitHub Navigation Bar}{x:figure:fig-hub-navbar}{}%
 \begin{image}{0.35}{0.3}{0.35}%
 \includegraphics[width=\linewidth]{external/hub_navbar.pdf}
@@ -1967,7 +1967,7 @@ Your profile page can be found by clicking on the robot-y icon (see \hyperref[x:
 \end{figureptx}%
 First, you can edit your basic profile information on the left hand side including your profile image, name, bio, and location. I would recommend filling as much of that out as possible; it allows companies and other people to find you and confirm that you are who you are.%
 \par
-Wait a minute, I just used an unfamiliar word: repository. Essentially, a \terminology{repository} is the Git\slash{}GitHub way to say ``directory'' or ``folder''. A repository is usually one project; one repository contains all of the files and information for one project. For example, the files for this book can all be found under my repository titled \href{https://github.com/ian-curtis/gitstarted}{gitstarted}\footnote{\nolinkurl{github.com/ian-curtis/gitstarted}\label{g:fn:idm2023298600}}. This book constitutes as one project and therefore all files for this book are there. Remember Jennifer Bryan from above? All of the files for her book, \pubtitle{Happy Git With R} can be found on \href{https://github.com/jennybc/happy-git-with-r}{her repository}\footnote{\nolinkurl{github.com/jennybc/happy-git-with-r}\label{g:fn:idm2023295400}}. Soon, you too will have repositories! (Note: a repository is often shortened to just \terminology{repo}.)%
+Wait a minute, I just used an unfamiliar word: repository. Essentially, a \terminology{repository} is the Git\slash{}GitHub way to say ``directory'' or ``folder''. A repository is usually one project; one repository contains all of the files and information for one project. For example, the files for this book can all be found under my repository titled \href{https://github.com/ian-curtis/gitstarted}{gitstarted}\footnote{\nolinkurl{github.com/ian-curtis/gitstarted}\label{g:fn:idp475111816}}. This book constitutes as one project and therefore all files for this book are there. Remember Jennifer Bryan from above? All of the files for her book, \pubtitle{Happy Git With R} can be found on \href{https://github.com/jennybc/happy-git-with-r}{her repository}\footnote{\nolinkurl{github.com/jennybc/happy-git-with-r}\label{g:fn:idp475112072}}. Soon, you too will have repositories! (Note: a repository is often shortened to just \terminology{repo}.)%
 \par
 There are a few other tabs at the top of the page. The ``Repositories'' tab simply lists all of your repos. (You can also find this page from the drop-down menu by your profile image in the top right.) The other three are not important for basic use (I haven't even used them yet).%
 \end{subsectionptx}
@@ -1981,11 +1981,11 @@ There are a few other tabs at the top of the page. The ``Repositories'' tab simp
 \index{github!settings}%
 \index{github!customize}%
 Click on the profile icon in the top right (\hyperref[x:figure:fig-hub-navbar]{Figure~{\xreffont\ref{x:figure:fig-hub-navbar}}, p.\,\pageref{x:figure:fig-hub-navbar}}) and select ``Settings''. Don't be scared of the long list of possible customizations that are available. Most are only applicable to experienced GitHub users. I will introduce the settings you may be interested in right now. The headings of the following paragraphs match up with the headings of the tabs on the GitHub page. Note that some tabs have been excluded as well as some settings within some tabs. This does not mean that they are not important; it just means that I don't think they are necessary for a beginner.%
-\begin{paragraphs}{Profile.}{g:paragraphs:idm2023297448}%
+\begin{paragraphs}{Profile.}{g:paragraphs:idp475107336}%
 \index{github!profile}%
 Here, you can change your name, public email (if you have multiple AND if you have chosen to make your email public), a mini bio, relevant info about your other social media and company, location, and whether or not you are searching for a job. See \hyperlink{x:paragraphs:hub-emails}{Emails, p.\,\pageref{x:paragraphs:hub-emails}} for more info.%
 \end{paragraphs}%
-\begin{paragraphs}{Account.}{g:paragraphs:idm2023292840}%
+\begin{paragraphs}{Account.}{g:paragraphs:idp475115656}%
 \index{github!account}%
 Here is where you can change your username. \emph{I would strongly recommend against changing your username except in dire circumstances.} This could lead to broken links or, if someone claims your old username, links to the wrong repository. This is why I hope you took the time to really think of a good username when created your account.%
 \par
@@ -1993,38 +1993,38 @@ Ok fine. If you have just created your account, have no repositories, have done 
 \par
 This tab will also let you delete your entire account. It is in red for a reason. I would highly recommend never deleting your account. Even if you are done with GitHub and don't plan on ever using it again, others can still benefit from your code. Obviously some exceptions could apply here but for most purposes, you probably shouldn't delete your account.%
 \end{paragraphs}%
-\begin{paragraphs}{Appearance.}{g:paragraphs:idm2023294248}%
+\begin{paragraphs}{Appearance.}{g:paragraphs:idp475120776}%
 \index{github!appearance}%
 Here you can change how GitHub looks. Is white annoying? Switch to a dark theme. There are three of them. You can choose to have it change automatically with your computer (assuming your computer changes automatically). You can also edit the default emoji appearance.%
 \par
 There is currently a feature in testing allowing a theme designed for colorblind users. To enable this, click on your avatar in the top right and select ``Feature preview'', then ``Colorblind Themes'', then ``Enable''. If you have feedback to give GitHub, you can also do that.%
 \end{paragraphs}%
-\begin{paragraphs}{Account security.}{g:paragraphs:idm2023291048}%
+\begin{paragraphs}{Account security.}{g:paragraphs:idp475120136}%
 \index{github!security}%
 Change your password here and you can enable two-factor authentication. You can also see where you are currently logged in. If an unfamiliar session is active, I would recommend changing your password and\slash{}or enabling two-factor authentication.%
 \end{paragraphs}%
-\begin{paragraphs}{Billing \& plans.}{g:paragraphs:idm2023287720}%
+\begin{paragraphs}{Billing \& plans.}{g:paragraphs:idp475120264}%
 \index{github!billing}%
-GitHub offers different \href{https://github.com/pricing}{paid plans}\footnote{\nolinkurl{github.com/pricing}\label{g:fn:idm2023286824}}. Each of the plans has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly fine under the free plan and many people do not upgrade. Once you become more familiar with Git, GitHub, and start developing more projects, you might like an upgrade. However, there is no need to pay anything at this point.%
+GitHub offers different \href{https://github.com/pricing}{paid plans}\footnote{\nolinkurl{github.com/pricing}\label{g:fn:idp475124488}}. Each of the plans has its own benefits (e.g., more storage, more collaborators) but the GitHub essentials work perfectly fine under the free plan and many people do not upgrade. Once you become more familiar with Git, GitHub, and start developing more projects, you might like an upgrade. However, there is no need to pay anything at this point.%
 \par
-Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their \href{https://education.github.com/pack}{Student Developer Pack}\footnote{\nolinkurl{education.github.com/pack}\label{g:fn:idm2023281192}}. \href{https://education.github.com/teachers}{Teachers}\footnote{\nolinkurl{education.github.com/teachers}\label{g:fn:idm2023283624}} and \href{https://education.github.com/schools}{Schools}\footnote{\nolinkurl{education.github.com/schools}\label{g:fn:idm2023280552}} can also find benefits (some require a payment).%
+Bonus! Students get free GitHub Pro and access to a multitude of extra deals with their \href{https://education.github.com/pack}{Student Developer Pack}\footnote{\nolinkurl{education.github.com/pack}\label{g:fn:idp475131016}}. \href{https://education.github.com/teachers}{Teachers}\footnote{\nolinkurl{education.github.com/teachers}\label{g:fn:idp475126920}} and \href{https://education.github.com/schools}{Schools}\footnote{\nolinkurl{education.github.com/schools}\label{g:fn:idp475126280}} can also find benefits (some require a payment).%
 \end{paragraphs}%
 \begin{paragraphs}{Emails.}{x:paragraphs:hub-emails}%
 \index{github!emails}%
 You can choose to have multiple emails on your GitHub account. This may be something you want to do as you can also select to have one of your emails be a backup email for security. You can also select if you would like to keep your emails private or not.%
 \end{paragraphs}%
-\begin{paragraphs}{Notifications.}{g:paragraphs:idm2023282344}%
+\begin{paragraphs}{Notifications.}{g:paragraphs:idp475124232}%
 \index{github!notifications}%
 Pretty simple here. You can choose which notifications you would like to receive. Maybe keep the defaults for now and you can edit them later when you get an idea of what exactly GitHub sends notifications for. I still have the defualts selected and I don't get many emails at all.%
 \end{paragraphs}%
-\begin{paragraphs}{Repositories.}{g:paragraphs:idm2023285288}%
+\begin{paragraphs}{Repositories.}{g:paragraphs:idp475127048}%
 \index{github!repository}%
 \index{repository}%
 If you just created your account, this is probably empty. That's ok! It will be populated soon with a list of all your repositories and repositories you have access to. I do want to point out the first setting, ``Repository default branch''. It may say ``master'' in the text box. If so, please change it to ``main'' (by typing and clicking ``Update'' which is the new Git\slash{}GitHub standard.%
 \par
-For more information on the transition from ``master'' to ``main'', please visit \href{https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main}{TheServerSide}\footnote{\nolinkurl{theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main}\label{g:fn:idm2023276840}}.%
+For more information on the transition from ``master'' to ``main'', please visit \href{https://www.theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main}{TheServerSide}\footnote{\nolinkurl{theserverside.com/feature/Why-GitHub-renamed-its-master-branch-to-main}\label{g:fn:idp475133704}}.%
 \end{paragraphs}%
-\begin{paragraphs}{Blocked Users.}{g:paragraphs:idm2023276328}%
+\begin{paragraphs}{Blocked Users.}{g:paragraphs:idp475139336}%
 \index{github!blocked}%
 Hopefully you won't ever have to, but if you need to block a user, you can do so here.%
 \end{paragraphs}%
@@ -2058,7 +2058,7 @@ There are a few different ways to create a new repo (remember this abbreviation?
 \item{}In the top right of the page, next to the profile avatar we saw in \hyperref[x:section:S_hubnavigate]{Section~{\xreffont\ref{x:section:S_hubnavigate}}, p.\,\pageref{x:section:S_hubnavigate}}, there is a plus (+) sign. Click on that and then ``new repository''.%
 \par
 Note: GitHub differentiates bewteen a repository and a project. Don't get confused. We want repository (and you will want that for most purposes).%
-\item{}From the \href{https://github.com}{GitHub homepage}\footnote{\nolinkurl{github.com}\label{g:fn:idm2023264552}} there is a section on the left called ``Repositories''. Next to the title is a green button that says ``New''. Click on that.%
+\item{}From the \href{https://github.com}{GitHub homepage}\footnote{\nolinkurl{github.com}\label{g:fn:idp475142664}} there is a section on the left called ``Repositories''. Next to the title is a green button that says ``New''. Click on that.%
 \item{}If you navigate to the profile avatar in the top right, and click on ``Your repositories'', there will also be a green ``New'' button near the top.%
 \end{enumerate}
 Each of these three methods will get you to the same page. It doesn't matter which one you click.%
@@ -2076,7 +2076,7 @@ Each of these three methods will get you to the same page. It doesn't matter whi
 \end{image}%
 \tcblower
 \end{figureptx}%
-\begin{inlineexercise}{}{g:exercise:idm2023260712}%
+\begin{inlineexercise}{}{g:exercise:idp475148296}%
 Let's begin the process of creating our first repo. Use one of the methods above get into the ``Create a new repository'' screen (\hyperref[x:figure:fig-hub-new-repo-screen]{Figure~{\xreffont\ref{x:figure:fig-hub-new-repo-screen}}, p.\,\pageref{x:figure:fig-hub-new-repo-screen}}).%
 \end{inlineexercise}%
 \begin{figureptx}{The New Repository Screen}{x:figure:fig-hub-new-repo-screen}{}%
@@ -2091,7 +2091,7 @@ If you are thinking ``Wait! I don't know the details of my project!'' then you a
 \par
 In the ``Repository name'' box, type the name \mono{aboutme}. Adding a description is optional and is not necessary for us right now. Next is the viewability. You may choose to make your repos private (only you and authorized collaborators can view\slash{}edit) or public (everyone can view and attempt to edit, only you and authorized collabortors can approve edits). It does not matter what you select for this; do whatever your heart desires.%
 \par
-\index{readme}\index{license}\index{gitignore} The next step deals with certain files that can be automatically added to your repo. You have the choice for either or none of a \mono{README} file, a \mono{.gitignore}, and a license. A \terminology{README file} gives all the pertinent information about your repository in an easy-to-read format. It is often the first thing that people visiting your repo will read and is very important. Check this box and we will come back to the \mono{README} file in just a minute. A \terminology{gitignore} file tells Git all of the files \emph{not} to put online. Do not check this box for now; it will be very useful later on, but is not needed now. You can also choose to put a \terminology{license} on your code which lets users know what they can and cannot do. If you would like to explore the different licenses, please visit \href{https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository}{the GitHub documentation}\footnote{\nolinkurl{docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository}\label{g:fn:idm2023253544}}. Since we will delete this repo later, you do not have to select this option.%
+\index{readme}\index{license}\index{gitignore} The next step deals with certain files that can be automatically added to your repo. You have the choice for either or none of a \mono{README} file, a \mono{.gitignore}, and a license. A \terminology{README file} gives all the pertinent information about your repository in an easy-to-read format. It is often the first thing that people visiting your repo will read and is very important. Check this box and we will come back to the \mono{README} file in just a minute. A \terminology{gitignore} file tells Git all of the files \emph{not} to put online. Do not check this box for now; it will be very useful later on, but is not needed now. You can also choose to put a \terminology{license} on your code which lets users know what they can and cannot do. If you would like to explore the different licenses, please visit \href{https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository}{the GitHub documentation}\footnote{\nolinkurl{docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository}\label{g:fn:idp475160840}}. Since we will delete this repo later, you do not have to select this option.%
 \par
 You now should have entered ``aboutme'' into the name box, selected if you wanted the repo to be public or private, and checked the \mono{README} box. Now, click the green ``Create repository'' button to finalize the process.%
 \end{subsectionptx}
@@ -2144,7 +2144,7 @@ Well, we have a README file, let's edit it! GitHub makes it rather simple to edi
 \end{image}%
 \tcblower
 \end{figureptx}%
-\begin{inlineexercise}{}{g:exercise:idm2023229736}%
+\begin{inlineexercise}{}{g:exercise:idp475173512}%
 Use one of the methods above to open the README file and get to its editing screen.%
 \end{inlineexercise}%
 As discussed in \hyperref[x:section:S_fileextensions]{Section~{\xreffont\ref{x:section:S_fileextensions}}, p.\,\pageref{x:section:S_fileextensions}}, a file ending with \mono{.md} is a markdown file. All README files should be markdown files and are able to understand markdown syntax. Essentially, markdown allows us to communicate basic word processing functions simply by typing certain symbols. Have you ever noticed that you can't bold or italicize text in Google? \kbd{Control} (\kbd{Command}) + \kbd{B} or \kbd{I} don't work there! They also won't work in markdown files, unfortunately. But that doesn't mean we can't bold or italicize text. I will not discuss everything on markdown here, so some basic functions are below. It will be in your best interest to become familiar with markdown and its more advanced features sooner rather than later.%
@@ -2161,9 +2161,9 @@ You can also add images, gifs, links, links with text intead of urls, tables, an
 \par
 It is also important to note that GitHub Markdown differs slightly from other flavors of Markdown. See \href{https://gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f}{a nice table from GitHub user vimtaai}\footnotemark{}.%
 \end{assemblage}
-\footnotetext[41]{\nolinkurl{www.markdownguide.org/basic-syntax/}\label{g:fn:idm2023222568}}%
-\footnotetext[42]{\nolinkurl{www.markdownguide.org/extended-syntax/}\label{g:fn:idm2023227944}}%
-\footnotetext[43]{\nolinkurl{gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f}\label{g:fn:idm2023222312}}%
+\footnotetext[41]{\nolinkurl{www.markdownguide.org/basic-syntax/}\label{g:fn:idp475185032}}%
+\footnotetext[42]{\nolinkurl{www.markdownguide.org/extended-syntax/}\label{g:fn:idp475186824}}%
+\footnotetext[43]{\nolinkurl{gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f}\label{g:fn:idp475187592}}%
 \begin{inlineexercise}{}{x:exercise:try-markdown}%
 \index{markdown}%
 Let's practice your markdown skills! Here, you will make the "aboutme" repo name true. Feel free to use the guidelines and sources above. You could also search online if you aren't sure how to do what you want to do. I have provided my (basic) example \href{https://github.com/ian-curtis/gitstarted}{in the repo for this book}\footnotemark{} (titled \mono{README\_aboutme.md} in the \mono{book-activities} folder). But be creative! There aren't any ``right'' answers here.%
@@ -2180,7 +2180,7 @@ Github is pretty cool in that it will show you realtime updates of what your Mar
 \end{enumerate}
 Don't leave your file yet! There's one more thing left to do.%
 \end{inlineexercise}%
-\footnotetext[44]{\nolinkurl{github.com/ian-curtis/gitstarted}\label{g:fn:idm2023213352}}%
+\footnotetext[44]{\nolinkurl{github.com/ian-curtis/gitstarted}\label{g:fn:idp475195784}}%
 \begin{figureptx}{The GitHub Commit Changes Dialog}{x:figure:fig-hub-commit}{}%
 \begin{image}{0.05}{0.9}{0.05}%
 \includegraphics[width=\linewidth]{external/hub_commit.pdf}
@@ -2247,7 +2247,7 @@ Whoa. I said a lot of stuff there. Lots of new words and things you don't know h
 \end{image}%
 \tcblower
 \end{figureptx}%
-\index{commit}\index{merge}\index{pull request}\index{request|see{pull request}}\index{github!commit}\index{github!merge}\index{github!pull request} Notice how in \hyperref[x:figure:fig-branch-poem]{Figure~{\xreffont\ref{x:figure:fig-branch-poem}}, p.\,\pageref{x:figure:fig-branch-poem}} that the main branch does not move forward when branches are created, it stops once a branch is made. When you first create a new branch, all you have is a copy of the main branch. However, when you edit your new branch, the changes do not appear into the main branch. Branches are like testing grounds. Try some new things, see if you like them, see if they work, then make it official. ``Making it official'' with Git and Github is called \terminology{committing} (as we have seen). Two new terms that go with commits\footnote{Notice how ``commit'' is both a noun and a verb.\label{g:fn:idm2023185448}} are \terminology{merge} and \terminology{pull request}. Oftentimes, you will hear people say that they just merged their changes into main. This means they committed their changes to the main branch and updated the official version. With the poem example, there are two possible merges you could make into main, as diagrammed in \hyperref[x:figure:fig-merge-poem]{Figure~{\xreffont\ref{x:figure:fig-merge-poem}}, p.\,\pageref{x:figure:fig-merge-poem}}.%
+\index{commit}\index{merge}\index{pull request}\index{request|see{pull request}}\index{github!commit}\index{github!merge}\index{github!pull request} Notice how in \hyperref[x:figure:fig-branch-poem]{Figure~{\xreffont\ref{x:figure:fig-branch-poem}}, p.\,\pageref{x:figure:fig-branch-poem}} that the main branch does not move forward when branches are created, it stops once a branch is made. When you first create a new branch, all you have is a copy of the main branch. However, when you edit your new branch, the changes do not appear into the main branch. Branches are like testing grounds. Try some new things, see if you like them, see if they work, then make it official. ``Making it official'' with Git and Github is called \terminology{committing} (as we have seen). Two new terms that go with commits\footnote{Notice how ``commit'' is both a noun and a verb.\label{g:fn:idp475223816}} are \terminology{merge} and \terminology{pull request}. Oftentimes, you will hear people say that they just merged their changes into main. This means they committed their changes to the main branch and updated the official version. With the poem example, there are two possible merges you could make into main, as diagrammed in \hyperref[x:figure:fig-merge-poem]{Figure~{\xreffont\ref{x:figure:fig-merge-poem}}, p.\,\pageref{x:figure:fig-merge-poem}}.%
 \begin{figureptx}{Diagram showing two possible merges into main}{x:figure:fig-merge-poem}{}%
 \begin{image}{0.05}{0.9}{0.05}%
 \includegraphics[width=\linewidth]{external/merge_poem1.pdf}
@@ -2268,7 +2268,7 @@ You will also often hear about pull requests. Recall how GitHub allows anyone to
 \begin{subsectionptx}{Creating a Branch}{}{Creating a Branch}{}{}{x:subsection:SS_makebranch}
 \index{github!branches}%
 \index{branches!create}%
-Creating a branch is not difficult. To do so, first make sure you are on the ``Code'' tab of your repository titled \mono{aboutme}. Below the list of tabs, you should have a row of items. The first is a button with a branch-like icon with the word ``main''. Next to that, there is the same branch-like icon with ``1 branch'' and then a tag-like icon with ``0 tags'' (\hyperref[x:figure:fig-hub-new-branch]{Figure~{\xreffont\ref{x:figure:fig-hub-new-branch}}, p.\,\pageref{x:figure:fig-hub-new-branch}}). \footnote{Your numbers may be different if you played around with GitHub before this step.\label{g:fn:idm2023443624}} Now,%
+Creating a branch is not difficult. To do so, first make sure you are on the ``Code'' tab of your repository titled \mono{aboutme}. Below the list of tabs, you should have a row of items. The first is a button with a branch-like icon with the word ``main''. Next to that, there is the same branch-like icon with ``1 branch'' and then a tag-like icon with ``0 tags'' (\hyperref[x:figure:fig-hub-new-branch]{Figure~{\xreffont\ref{x:figure:fig-hub-new-branch}}, p.\,\pageref{x:figure:fig-hub-new-branch}}). \footnote{Your numbers may be different if you played around with GitHub before this step.\label{g:fn:idp475262568}} Now,%
 \begin{enumerate}
 \item{}Click on the word ``main''. This will open a drop-down menu with all of your current branches (\hyperref[x:figure:fig-hub-new-branch]{Figure~{\xreffont\ref{x:figure:fig-hub-new-branch}}, p.\,\pageref{x:figure:fig-hub-new-branch}}). You probably only have one branch: the main branch.%
 \item{}We will be adding a part to our README file: our favorite animal. Type \mono{animal} in to the textbox that appears. Your cursor should navigate their automatically.%
@@ -2326,7 +2326,7 @@ The current state of the branch is shown in \hyperref[x:figure:fig-hub-animal-ed
 \end{image}%
 \tcblower
 \end{figureptx}%
-\index{commit message}\index{message|see{commit message}}\index{github!commit message} After you have made some changes, scroll down to the ``Commit changes'' section. Now is the time to introduce commit messages. A \terminology{commit message} is a short, but informative (notice a recurring pattern?) note of what your changes do. You may be tempted to skip this when working with yourself. Please try to write the best commit messages \emph{at all times}. When you look back at your repo in the future, it will be helpful for you to remember what you did. Commit messages also help others who may look at your project know what you did in each commit. You may see my various branch names and commit messages at \href{https://github.com/ian-curtis/gitstarted/commits/main}{the commit list for this book on GitHub}\footnote{\nolinkurl{github.com/ian-curtis/gitstarted/commits/main}\label{g:fn:idm2023119496}}.%
+\index{commit message}\index{message|see{commit message}}\index{github!commit message} After you have made some changes, scroll down to the ``Commit changes'' section. Now is the time to introduce commit messages. A \terminology{commit message} is a short, but informative (notice a recurring pattern?) note of what your changes do. You may be tempted to skip this when working with yourself. Please try to write the best commit messages \emph{at all times}. When you look back at your repo in the future, it will be helpful for you to remember what you did. Commit messages also help others who may look at your project know what you did in each commit. You may see my various branch names and commit messages at \href{https://github.com/ian-curtis/gitstarted/commits/main}{the commit list for this book on GitHub}\footnote{\nolinkurl{github.com/ian-curtis/gitstarted/commits/main}\label{g:fn:idp475290216}}.%
 \par
 Let's create a commit message for our changes on the \mono{animal} branch. In the ``Commit changes'' block, there is a text box that is autofilled with ``Update README.md''. This is the default and for some instances may be enough. But I have the tendency to write slightly more detailed messages for my commit and I recommend you do so as well. Instead, type ``add favorite animal''. There is no need to add the file name as this message will only be tied to the file(s) you have edited. (Later on, we will see that specific commit messages are only associated with the files you have staged and committed but that's a topic for \hyperref[x:chapter:C_gitsolo]{Chapter~{\xreffont\ref{x:chapter:C_gitsolo}}, p.\,\pageref{x:chapter:C_gitsolo}}.)%
 \begin{assemblage}{A Note On Commit Messages.}{x:assemblage:commitmessages}%
@@ -2534,7 +2534,7 @@ Switched to branch 'country'
 My terminal now says \mono{(country)} instead of \mono{(main)} so I have verification that the process worked.%
 \end{enumerate}
 \end{project}%
-\begin{paragraphs}{Branch\slash{}Checkout Shortcut.}{g:paragraphs:idm2023033864}%
+\begin{paragraphs}{Branch\slash{}Checkout Shortcut.}{g:paragraphs:idp475374440}%
 Using a little terminal trick, we can actually create a branch and switch to that branch at the same time. This uses the \mono{-c} switch. For our example in \hyperref[x:project:gitproc-branches]{Git Procedure~{\xreffont\ref{x:project:gitproc-branches}}, p.\,\pageref{x:project:gitproc-branches}},%
 \begin{console}{0}{1}{0}
 (*\consoleinput{git switch -c <branch-name>}*)
@@ -2543,7 +2543,7 @@ Switched to new branch '<branch-name>'
 By adding the \mono{-c} switch to the \mono{switch} command, Git creates a new branch with the title given and checks out that branch. This is quite useful if you are only creating one branch and want to switch right to it. If you are uncomfortable with this, then feel free to continue using the method in \hyperref[x:project:gitproc-branches]{Git Procedure~{\xreffont\ref{x:project:gitproc-branches}}, p.\,\pageref{x:project:gitproc-branches}}. Each will get you to the same place.%
 \end{paragraphs}%
 \end{subsectionptx}
-\begin{paragraphs}{Note About \mono{git switch}.}{g:paragraphs:idm2023024776}%
+\begin{paragraphs}{Note About \mono{git switch}.}{g:paragraphs:idp475383272}%
 The \mono{git switch} command was introduced to help remove user confusion. Previously, the command was \mono{git checkout <branch-name>}. However \mono{checkout} has two functions: to switch branches and to reset files (if a file has edits that you want to restore, you can use \mono{checkout} to restore the file to how it was before you made the changes).%
 \par
 \mono{git checkout} still exists and you are welcome to use it to switch branches (you would use \mono{git checkout -b <branch-name>}). However, to avoid confusion, I recommend using \mono{git switch} for changing branches and \mono{git restore} for restoring files.%
@@ -2643,13 +2643,13 @@ All this is great but how do I stage my files? How do I tell Git which files I w
 \item{}The output from \mono{git status} in \hyperref[x:project:try-git-status]{Git Procedure~{\xreffont\ref{x:project:try-git-status}}, p.\,\pageref{x:project:try-git-status}} actually gives a hint on how to proceed. If you haven't completed \hyperref[x:project:try-git-status]{Git Procedure~{\xreffont\ref{x:project:try-git-status}}, p.\,\pageref{x:project:try-git-status}}, I recommend doing so now.%
 \item{}The staging command is done with \mono{git add} and the command is followed by all the files you want to add. There are three cases with this command:%
 \begin{descriptionlist}
-\begin{dlimedium}{You want to add specific files}{g:li:idm2022981128}%
+\begin{dlimedium}{You want to add specific files}{g:li:idp475433320}%
 Type in each file name and extension individually with a space between each file.%
 \end{dlimedium}%
-\begin{dlimedium}{You want to add an entire folder of files}{g:li:idm2022983048}%
+\begin{dlimedium}{You want to add an entire folder of files}{g:li:idp475432168}%
 Type in the name of the folder followed by a \kbd{/} (e.g.\@, \mono{images/}).%
 \end{dlimedium}%
-\begin{dlimedium}{You want to add all changed \slash{} created \slash{} deleted files}{g:li:idm2022978440}%
+\begin{dlimedium}{You want to add all changed \slash{} created \slash{} deleted files}{g:li:idp475432680}%
 Type in a single period (\kbd{.}) instead of file names.%
 \end{dlimedium}%
 \end{descriptionlist}
@@ -2659,7 +2659,7 @@ You can run as many or as little \mono{git add} commands as you wish. For instan
 \par
 Try now to stage your README file using one of the three cases above.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idm2022974472}{}\hypertarget{g:hint:idm2022974472}{}\quad{}Case 1 or Case 3 will work in this instance.%
+\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idp475441000}{}\hypertarget{g:hint:idp475441000}{}\quad{}Case 1 or Case 3 will work in this instance.%
 \item{}Use \mono{git status} to verify that your staging worked and that you didn't add any extra files on accident (see \hyperref[x:project:reverse-git-add]{Git Procedure~{\xreffont\ref{x:project:reverse-git-add}}, p.\,\pageref{x:project:reverse-git-add}} if you did).%
 \end{enumerate}
 \end{project}%
@@ -2822,7 +2822,7 @@ The easiest way to bring in new changes from GitHub is to use the \mono{git pull
 \end{enumerate}
 Note that it is possible to pull from other branches. Suppose you were working on the \mono{country} branch and someone else made changes to just the \mono{country} branch (but the changes hadn't been merged into main yet). You could use \mono{git pull origin country} while on the country branch to update your local branch with the origin changes.%
 \end{project}%
-\begin{warning}{}{g:warning:idm2023152648}%
+\begin{warning}{}{g:warning:idp475627368}%
 \index{merge conflict}%
 \hyperref[x:project:try-git-pull]{Git Procedure~{\xreffont\ref{x:project:try-git-pull}}, p.\,\pageref{x:project:try-git-pull}} demonstrates that your local repository and GitHub only communicate with each other when you tell them to. Any changes you make on GitHub will not be reflected on your computer unless you pull. Vice versa, any changes you make on your local computer will not be reflected on GitHub unles you push. Be careful with this. If you change a file locally \emph{and} remotely on GitHub without pulling or pushing you might create a \terminology{merge conflict}. These are best avoided. The simplest conflicts can be resolved somewhat easily but they can quickly get very complicated. See \hyperref[x:section:S_mergeconflict]{Section~{\xreffont\ref{x:section:S_mergeconflict}}, p.\,\pageref{x:section:S_mergeconflict}} for more information on this.%
 \par
@@ -2846,7 +2846,7 @@ While the project in \hyperref[x:section:S_gitbigact]{Section~{\xreffont\ref{x:s
 \par
 What follows is an ordered list of the steps in the Git process when working alone.%
 \begin{enumerate}
-\item{}Create a repository on GitHub. (You can also do this with Git, see \href{https://kbroman.org/github_tutorial/pages/init.html}{Karl Broman's guide}\footnote{\nolinkurl{kbroman.org/github_tutorial/pages/init.html}\label{g:fn:idm2022844328}}. I prefer starting with GitHub, however.) See \hyperref[x:subsection:hub-createrepo]{Subsection~{\xreffont\ref{x:subsection:hub-createrepo}}, p.\,\pageref{x:subsection:hub-createrepo}}.%
+\item{}Create a repository on GitHub. (You can also do this with Git, see \href{https://kbroman.org/github_tutorial/pages/init.html}{Karl Broman's guide}\footnote{\nolinkurl{kbroman.org/github_tutorial/pages/init.html}\label{g:fn:idp475633768}}. I prefer starting with GitHub, however.) See \hyperref[x:subsection:hub-createrepo]{Subsection~{\xreffont\ref{x:subsection:hub-createrepo}}, p.\,\pageref{x:subsection:hub-createrepo}}.%
 \item{}Clone the repo to your local computer with \mono{git clone}. See \hyperref[x:subsection:SS_cloning]{Subsection~{\xreffont\ref{x:subsection:SS_cloning}}, p.\,\pageref{x:subsection:SS_cloning}} and \hyperref[x:project:try-git-clone]{Git Procedure~{\xreffont\ref{x:project:try-git-clone}}, p.\,\pageref{x:project:try-git-clone}}.%
 \item{}Create an appropriately-named branch with \mono{git branch} and \mono{git switch} or with \mono{git switch -c}. See \hyperref[x:subsection:SS_gitbranches]{Subsection~{\xreffont\ref{x:subsection:SS_gitbranches}}, p.\,\pageref{x:subsection:SS_gitbranches}} and \hyperref[x:project:gitproc-branches]{Git Procedure~{\xreffont\ref{x:project:gitproc-branches}}, p.\,\pageref{x:project:gitproc-branches}}.%
 \item{}Edit\slash{}create\slash{}delete files as you please. See \hyperref[x:section:S_gitedits]{Section~{\xreffont\ref{x:section:S_gitedits}}, p.\,\pageref{x:section:S_gitedits}}%
@@ -2879,7 +2879,7 @@ The goal of this activity will be to create a new repository and write two poems
 \item\label{x:task:git-ba-newrepo}First, you need to create a new repository. Navigate to GitHub and create a new repository. Name it appropriately for the end goal \textemdash{} you can't change it later. Make sure you initialize with a README file.%
 \item\label{x:task:git-ba-clone}Clone your repo on your computer. Navigate to the new repo using your terminal.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idm2022828072}{}\hypertarget{g:hint:idm2022828072}{}\quad{}Make sure you are not ``inside'' your previous repositories. Nested repositories will not work. So \mono{cd} to the folder in which you want to place your new repo.%
+\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idp475661800}{}\hypertarget{g:hint:idp475661800}{}\quad{}Make sure you are not ``inside'' your previous repositories. Nested repositories will not work. So \mono{cd} to the folder in which you want to place your new repo.%
 \item{}You will edit your README file first. Create and switch to a new branch, named appropriately.%
 \item{}Open the README file. Change the default title to a better title. Add a sentence or two explaining what this repo is and why you are creating it. Add any other relevant information you think might help other people looking at your repo would need or like. Save the file.%
 \item{}Check if Git is tracking the README file you just edited.%
@@ -2891,7 +2891,7 @@ The goal of this activity will be to create a new repository and write two poems
 \item{}You will now create your poems. Create and switch to an appropriately-named branch.%
 \item{}Create a new \mono{.md} file called \mono{poem1.md}.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idm2022805800}{}\hypertarget{g:hint:idm2022805800}{}\quad{}In \initialism{VS} Code, you can create a new file with the paper-with-a-plus icon in the ``Explorer'' panel in the top left.%
+\noindent\textbf{\blocktitlefont Hint}.\label{g:hint:idp475671144}{}\hypertarget{g:hint:idp475671144}{}\quad{}In \initialism{VS} Code, you can create a new file with the paper-with-a-plus icon in the ``Explorer'' panel in the top left.%
 \item{}Open the file and use Markdown to write one original poem or paste one of your favorite poems. Make sure to add a title!%
 \par
 If you are pasting someone else's poem, use proper attribution. They may include, but is not necessarily limited to, name, collection\slash{}book from which you found the poem, date published, page numbers, etc.%
@@ -2989,7 +2989,7 @@ Click on the Create Fork button.%
 \item{}After a few seconds, your own fork will appear! Take a look at the top left corner where the name of the repo is displayed. You should notice that your personal username and repo name are there. But underneath that, in smaller font, GitHub tells you the username and repo name from which you forked. This is useful for reminding yourself that you are working on a copy of a repository, not the authoritative one.%
 \end{enumerate}
 \end{activity}%
-\footnotetext[49]{\nolinkurl{github.com/ian-curtis/aboutme}\label{g:fn:idm2022765480}}%
+\footnotetext[49]{\nolinkurl{github.com/ian-curtis/aboutme}\label{g:fn:idp475718120}}%
 Congrats! You've just forked a repository! If you plan on collaborating with others forking will become something you get very used to.%
 \par
 Remember that you just created a copy of my repository. You can make all the changes you want on your copy without asking for permisson from me. But as soon as you try to update my repo, you will have to submit a pull request. A fork is where you edit some things, try some things, and break some things before making a final product of whatever it is you were working on. Then send the changes over to the main repo!%
@@ -3199,7 +3199,7 @@ The rest of this section and chapter will look a lot like \hyperref[x:section:S_
 Hopefully you didn't peek ahead! The first step is to clone our repo. Remember that in order to edit files locally, we need a copy of the repository on our computer and the way to do that is to clone.%
 \par
 This again increases the complexity of the Git tree. From an authoritative repo we made a copy on GitHub, called a fork. We did this so that we could have all freedom to edit the files as we pleased without breaking any of the official files. From there, we need to clone to make a copy of the fork on our computer. Do make sure you are cloning your fork, \emph{not the repo you forked}.%
-\begin{inlineexercise}{}{g:exercise:idm2022687400}%
+\begin{inlineexercise}{}{g:exercise:idp475794152}%
 So go ahead, use your terminal clone your fork of my \mono{aboutme} repository. Before you do so, make sure that your branch is up to date with \mono{ian-curtis/aboutme:main}.%
 \par
 Don't remember how to do this? \hyperref[x:project:try-git-clone]{Git Procedure~{\xreffont\ref{x:project:try-git-clone}}, p.\,\pageref{x:project:try-git-clone}} might be useful, as may be the solution to this exercise.%
@@ -3218,7 +3218,7 @@ Great! Your repo should now be cloned on to your computer. Carry on.%
 For nearly every edit we've made in this book, we've made a corresponding branch. This is no different. I hope you understand the importance of branches, even if you are working with yourself. Since my repository is public, anyone can edit the files there. Therefore, I will approve pull requests from anyone as I will assume they are working through this book. However, the task in this chapter will be exclusive to just those who are reading this book. There is file called \mono{secret.txt} with no instructions or anything at all. Later on, you will be adding a line to this text file.%
 \par
 For now, create a good branch name for this edit, perhaps \mono{secret}? Remember that cloning a repo does not navigate inside of the repo so make sure you use \mono{cd <your-repo-name>} before creating a branch.%
-\begin{inlineexercise}{}{g:exercise:idm2022679592}%
+\begin{inlineexercise}{}{g:exercise:idp475805544}%
 Make a new branch. Switch to that branch. See \hyperref[x:subsection:SS_gitbranches]{Subsection~{\xreffont\ref{x:subsection:SS_gitbranches}}, p.\,\pageref{x:subsection:SS_gitbranches}} if you need a refresher.%
 \end{inlineexercise}%
 \begin{figureptx}{Diagram of a fork, a clone, and a branch}{x:figure:fig-git-fork-clone}{}%
@@ -3496,8 +3496,8 @@ Or, learn \href{https://pretextbook.org}{PreTeXt, the markup language this book 
 \item{}For as long as you wish to stay up-to-date on the code for this book, pull from upstream often.%
 \end{enumerate}
 \end{activity}%
-\footnotetext[50]{\nolinkurl{github.com/ian-curtis/gitstarted}\label{g:fn:idm2022403512}}%
-\footnotetext[51]{\nolinkurl{pretextbook.org}\label{g:fn:idm2022376888}}%
+\footnotetext[50]{\nolinkurl{github.com/ian-curtis/gitstarted}\label{g:fn:idp475928808}}%
+\footnotetext[51]{\nolinkurl{pretextbook.org}\label{g:fn:idp475964136}}%
 \begin{conclusion}{}%
 And that's that! Hopefully you're getting the hang of this process with all of this repetition. If you ever need to practice this again (or need a refresher on what to do), revisit this page. It might take a little bit to become fully comfortable with the process and to remember the order in which to do things. In time, you will get it! Good luck in the rest of your Git\slash{}GitHub journey!%
 \end{conclusion}%
@@ -3538,9 +3538,9 @@ Sorry, Windows users, this is only for MacOS users. If you are a Mac user, you w
 %
 \begin{subsectionptx}{A New Terminal: iTerm2}{}{A New Terminal: iTerm2}{}{}{x:subsection:SS_iterm}
 \index{iTerm2}%
-Instead of using the built-in terminal that comes with your computer, consider downloading \href{https://iterm2.com/index.html}{a new terminal, iTerm2}\footnote{\nolinkurl{iterm2.com/index.html}\label{g:fn:idm2022361528}}. The default Mac terminal does great but if you are having trouble seeing what's going on and want more colors or wish you didn't have to type so much, then iTerm2 is for you.%
+Instead of using the built-in terminal that comes with your computer, consider downloading \href{https://iterm2.com/index.html}{a new terminal, iTerm2}\footnote{\nolinkurl{iterm2.com/index.html}\label{g:fn:idp475972328}}. The default Mac terminal does great but if you are having trouble seeing what's going on and want more colors or wish you didn't have to type so much, then iTerm2 is for you.%
 \par
-This new terminal is free and has \href{https://iterm2.com/features.html}{many nice features}\footnote{\nolinkurl{iterm2.com/features.html}\label{g:fn:idm2022366648}} such as%
+This new terminal is free and has \href{https://iterm2.com/features.html}{many nice features}\footnote{\nolinkurl{iterm2.com/features.html}\label{g:fn:idp475975272}} such as%
 \begin{enumerate}
 \item{}split panes\slash{}tabs%
 \item{}search%
@@ -3562,7 +3562,7 @@ and many more. I personally don't see any disadvantage to this terminal. Plus, i
 \index{fish (shell)}%
 Many computers rely on \mono{bash} to do most of their work. Mac computers now use \mono{zsh} as their default shell. Shells have their own unique aspects and differences and frankly, it doesn't really matter which shell you use unless you have a good technical reason to change. Shells are pretty advanced and I honestly don't have much information to provide other than what a simple Google search can do.%
 \par
-That being said, I do recommend the shell \href{https://fishshell.com/}{\mono{fish}}\footnote{\nolinkurl{fishshell.com/}\label{g:fn:idm2022358712}}. This shell brings more nice colors, better autocomplete than iTerm2 (it will recommend as you type!) and, in my opinion, organizes the information on your terminal quite nicely.%
+That being said, I do recommend the shell \href{https://fishshell.com/}{\mono{fish}}\footnote{\nolinkurl{fishshell.com/}\label{g:fn:idp475986408}}. This shell brings more nice colors, better autocomplete than iTerm2 (it will recommend as you type!) and, in my opinion, organizes the information on your terminal quite nicely.%
 \par
 Installing is very easy, too. If you used Homebrew to install Git (\hyperlink{x:paragraphs:install-git-mac}{Git, p.\,\pageref{x:paragraphs:install-git-mac}} in \hyperref[x:preface:materials-mac]{Materials (Mac), p.\,\pageref{x:preface:materials-mac}}) or other things, then installation is even easier. Simply type \mono{brew install fish} into your terminal, then change your shell to \mono{fish} with \mono{chsh -s /user/local/bin/fish}. After restarting your terminal, everything will be ready for use! (\mono{fish} is installable on Linux and Windows Subsystem for Linux)%
 \par
@@ -3603,7 +3603,7 @@ If you don't like \mono{fish}, you can switch back to \mono{bash} or \mono{zsh} 
 \begin{subsectionptx}{A New Git Interface}{}{A New Git Interface}{}{}{x:subsection:SS_gitkraken}
 \index{gitkraken}%
 \index{git!gitkraken}%
-Now that you know Git basics and terminology, you might like interfaces that reduce your terminal usage. \href{https://www.gitkraken.com/}{GitKraken}\footnote{\nolinkurl{gitkraken.com/}\label{g:fn:idm2022341048}} is one of those choices. Although I haven't used it, it does look nice. It is free with a paid option and is available on Windows, Mac, and Linux.%
+Now that you know Git basics and terminology, you might like interfaces that reduce your terminal usage. \href{https://www.gitkraken.com/}{GitKraken}\footnote{\nolinkurl{gitkraken.com/}\label{g:fn:idp475992808}} is one of those choices. Although I haven't used it, it does look nice. It is free with a paid option and is available on Windows, Mac, and Linux.%
 \par
 From a simple browse of the website there appears to be a good brach\slash{}contribution graph and clear tabs with specific functions. Perhaps worth trying out!%
 \end{subsectionptx}
@@ -3616,7 +3616,7 @@ From a simple browse of the website there appears to be a good brach\slash{}cont
 \begin{subsectionptx}{GitHub Desktop}{}{GitHub Desktop}{}{}{x:subsection:SS_github_desktop}
 \index{github!desktop}%
 \index{github desktop}%
-GitHub does offer a \href{https://desktop.github.com/}{desktop interface}\footnote{\nolinkurl{desktop.github.com/}\label{g:fn:idm2022341560}} to help you with Git features and managing collaboration. If you would rather do these things with an app (as opposed to switching from your text editor to a website) it might be worth downloading GitHug Desktop. The website itself is pretty basic, but \href{https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop}{the GitHub documentation}\footnote{\nolinkurl{docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop}\label{g:fn:idm2022339640}} has a good start-up guide and more.%
+GitHub does offer a \href{https://desktop.github.com/}{desktop interface}\footnote{\nolinkurl{desktop.github.com/}\label{g:fn:idp475991144}} to help you with Git features and managing collaboration. If you would rather do these things with an app (as opposed to switching from your text editor to a website) it might be worth downloading GitHug Desktop. The website itself is pretty basic, but \href{https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop}{the GitHub documentation}\footnote{\nolinkurl{docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop}\label{g:fn:idp476006632}} has a good start-up guide and more.%
 \end{subsectionptx}
 %
 %
@@ -3629,7 +3629,7 @@ GitHub does offer a \href{https://desktop.github.com/}{desktop interface}\footno
 \index{fish (shell)}%
 Many computers rely on \mono{bash} to do most of their work. Mac computers now use \mono{zsh} as their default shell. Shells have their own unique aspects and differences and frankly, it doesn't really matter which shell you use unless you have a good technical reason to change. Shells are pretty advanced and I honestly don't have much information to provide other than what a simple Google search can do.%
 \par
-That being said, I do recommend the shell \href{https://fishshell.com/}{\mono{fish}}\footnote{\nolinkurl{fishshell.com/}\label{g:fn:idm2022328376}}. This shell brings nice colors, autocomplete and, in my opinion, organizes the information on your terminal quite nicely.%
+That being said, I do recommend the shell \href{https://fishshell.com/}{\mono{fish}}\footnote{\nolinkurl{fishshell.com/}\label{g:fn:idp476005352}}. This shell brings nice colors, autocomplete and, in my opinion, organizes the information on your terminal quite nicely.%
 \par
 Installing is very easy, too. If you have used Homebrew to install anything, then installation is even easy. Simply type \mono{brew install fish} into your terminal, then change your shell to \mono{fish} (a Google search will likely be necessary unless you are a Mac user, see \hyperref[x:subsection:SS_fish]{Subsection~{\xreffont\ref{x:subsection:SS_fish}}, p.\,\pageref{x:subsection:SS_fish}}). After restarting your terminal, everything will be ready for use! (\mono{fish} is installable on Linux and Windows Subsystem for Linux)%
 \par
@@ -3680,7 +3680,7 @@ Note that the Issues tab will not appear on forks, only on the authoritative rep
 \end{image}%
 \tcblower
 \end{figureptx}%
-\footnotetext[59]{\nolinkurl{github.com/scikit-learn/scikit-learn/issues}\label{g:fn:idm2022324024}}%
+\footnotetext[59]{\nolinkurl{github.com/scikit-learn/scikit-learn/issues}\label{g:fn:idp476007784}}%
 \end{sectionptx}
 %
 %
@@ -3833,10 +3833,10 @@ Depending on how many commits you made, you may need to run this above command m
 This is actually pretty common. Maybe you are writing a book and your abandoned chapters were on GitHub for your editors to look at. Now that the book is published, you don't want those chapters online. Maybe you are using an API and when you were developing a project had your app's API connection keys available and not that the project is public you want to remove the file containing them.%
 \par
 When Git is keeping track of files, we say that it is \terminology{tracking} files. Untracking files is not super difficult, but does, like all Git commands, require the command line.%
-\begin{warning}{}{g:warning:idm2022277944}%
+\begin{warning}{}{g:warning:idp476056168}%
 Untracking files from Git \emph{does not delete them from your local computer}. However, the next time you push to GitHub, they will no longer be there. Thus, the next time your collaborators pull from the repository, their copy of the file will be deleted.%
 \end{warning}
-\begin{project}{Untracking Files from Git.}{g:project:idm2022276408}%
+\begin{project}{Untracking Files from Git.}{g:project:idp476057832}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item{}Identify the \emph{files} you wish to remove from Git's tracking service%
 \item{}Use \mono{git rm --cached <filename>}. You may also add multiple files as done with \mono{git add} (\hyperref[x:project:try-git-add]{Git Procedure~{\xreffont\ref{x:project:try-git-add}}, p.\,\pageref{x:project:try-git-add}}).%
@@ -3871,9 +3871,9 @@ Aborting
 \par
 This error occurs when you have local, uncommitted changes and a merge from origin or upstream has changes in the same exact places. Git has no idea whose changes to keep so it does nothing. There are a couple of different things you can do in this situation depending on how you feel about your changes.%
 \end{introduction}%
-\begin{paragraphs}{Your Local Changes Are Irrelevant and You Want Them Overwritten.}{g:paragraphs:idm2022268600}%
+\begin{paragraphs}{Your Local Changes Are Irrelevant and You Want Them Overwritten.}{g:paragraphs:idp476070248}%
 This definitely happens! Perhaps you tried a few things and they didn't work so you want to pull from upstream or origin and start over. Maybe you corrected some typos and someone else beat you to it so you want to merge their corrections in and keep working. I could go on and on. It's not difficult at all to force Git to make this happen, just make sure this is what you want to do!%
-\begin{project}{Forcing an Upstream or Origin Merge.}{g:project:idm2022268984}%
+\begin{project}{Forcing an Upstream or Origin Merge.}{g:project:idp476071912}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item{}First, create a backup branch just in case things go haywire: \mono{git branch backup}. Since \mono{git branch} does not automatically switch you to that branch, you are free to carry on.%
 \item{}Now, just fetch the changes. Remember that merging and fetching are separate processes. Fetching just collects the changes, attempting to merge will throw the error. Use \mono{git fetch <remote> <branch-name>}. Example: \mono{git fetch upstream main}.%
@@ -3885,10 +3885,10 @@ But to reset, use \mono{git reset --hard <remote>/<branch-name>}. Continuing the
 \end{enumerate}
 \end{project}%
 \end{paragraphs}%
-\begin{paragraphs}{Your Local Changes are Good and You Want to Keep Them.}{g:paragraphs:idm2022261688}%
+\begin{paragraphs}{Your Local Changes are Good and You Want to Keep Them.}{g:paragraphs:idp476076136}%
 Sometimes your changes are valid and you want them to be kept, but you still want to pull in changes. One option is to force a merge conflict and deal with it in your editor, choosing which version to keep. If this is what you want to do, just \mono{add} the troublesome files, \mono{commit} them, then \mono{pull}. Again, this will force a merge conflict but you can fix things from there.%
 \par
-Alternatively, you can keep your changes by using \mono{git stash}. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use \mono{git stash pop}. I have no experience with this command as I have only been in a situation where I need to force a pull with \mono{-f}. You might find \href{https://opensource.com/article/21/4/git-stash}{opensource.com}\footnote{\nolinkurl{opensource.com/article/21/4/git-stash}\label{g:fn:idm2022257976}} useful.%
+Alternatively, you can keep your changes by using \mono{git stash}. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use \mono{git stash pop}. I have no experience with this command as I have only been in a situation where I need to force a pull with \mono{-f}. You might find \href{https://opensource.com/article/21/4/git-stash}{opensource.com}\footnote{\nolinkurl{opensource.com/article/21/4/git-stash}\label{g:fn:idp476081768}} useful.%
 \end{paragraphs}%
 \end{sectionptx}
 %
@@ -3898,7 +3898,7 @@ Alternatively, you can keep your changes by using \mono{git stash}. Stashing wil
 \typeout{************************************************}
 %
 \begin{sectionptx}{Git Says I Have Divergent Branches!}{}{Git Says I Have Divergent Branches!}{}{}{x:section:S_diverge_branch}
-I recently experiences this issue for the first time and had to do some searching to figure out how to fix it. I relied on \href{https://stackoverflow.com/questions/62653114}{Davide Casiraghi's question on StackOverflow}\footnote{\nolinkurl{https://stackoverflow.com/questions/62653114}\label{g:fn:idm2022251960}} and \href{https://stackoverflow.com/questions/29673869/}{adrianvlupu's question also on StackOverflow}\footnote{\nolinkurl{https://stackoverflow.com/questions/29673869/}\label{g:fn:idm2022249272}} to create this guide and you might find these resources more helpful than mine.%
+I recently experiences this issue for the first time and had to do some searching to figure out how to fix it. I relied on \href{https://stackoverflow.com/questions/62653114}{Davide Casiraghi's question on StackOverflow}\footnote{\nolinkurl{https://stackoverflow.com/questions/62653114}\label{g:fn:idp476086248}} and \href{https://stackoverflow.com/questions/29673869/}{adrianvlupu's question also on StackOverflow}\footnote{\nolinkurl{https://stackoverflow.com/questions/29673869/}\label{g:fn:idp476088424}} to create this guide and you might find these resources more helpful than mine.%
 \par
 This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn't want to create them, so it refuses to push or pull until you fix something. This is not the same error as in \hyperref[x:section:S_forcemerge]{Section~{\xreffont\ref{x:section:S_forcemerge}}, p.\,\pageref{x:section:S_forcemerge}}, although it is closely related. You might get something like this: \begin{console}{0}{1}{0}
 (*\consoleinput{git push}*)
@@ -3962,7 +3962,7 @@ If you ever want to change the default behavior back to what it was, use \mono{g
 \index{git!commit}%
 \index{commit hash}%
 \index{commit!hash}%
-I have never had to do this (yet) so I don't have direct experience here. However, \href{https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6}{user gunjanpatel on GitHub}\footnote{\nolinkurl{gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6}\label{g:fn:idm2022238776}} has created a nice guide. It appears that \mono{git reset HEAD\textasciicircum{} --hard} and then \mono{git push origin -f} will work. The \mono{-f} switch forces the push and ignores errors.%
+I have never had to do this (yet) so I don't have direct experience here. However, \href{https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6}{user gunjanpatel on GitHub}\footnote{\nolinkurl{gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6}\label{g:fn:idp476094440}} has created a nice guide. It appears that \mono{git reset HEAD\textasciicircum{} --hard} and then \mono{git push origin -f} will work. The \mono{-f} switch forces the push and ignores errors.%
 \par
 Some of the guide above refers to what is known as a \terminology{commit hash}, a unique string that identifies each commit on GitHub. These are actually so unique that we only need the first few characters of the string to identify the commit. You can find the hash by using \hyperref[x:section:S_hub-seecommits]{Section~{\xreffont\ref{x:section:S_hub-seecommits}}, p.\,\pageref{x:section:S_hub-seecommits}}. The string is the random numbers\slash{}letters found on the right side of each commit.%
 \end{sectionptx}
@@ -3975,10 +3975,10 @@ Some of the guide above refers to what is known as a \terminology{commit hash}, 
 \begin{sectionptx}{Merge Conflicts}{}{Merge Conflicts}{}{}{x:section:S_mergeconflict}
 Hopefully you never have to deal with these. Sometimes, they are pretty simple to fix. Other times, it can cause some headaches. To avoid merge conflicts, pull from upstream often (\hyperref[x:warning:warn-fetch-often]{Warning~{\xreffont\ref{x:warning:warn-fetch-often}}, p.\,\pageref{x:warning:warn-fetch-often}} and \hyperref[x:warning:warn-pull-often]{Warning~{\xreffont\ref{x:warning:warn-pull-often}}, p.\,\pageref{x:warning:warn-pull-often}}). Merge conflicts are caused when more than one person edits the same line of a file. It is possible for two people to edit the same file, but on different lines, and not cause a conflict.%
 \par
-I have never caused or had to deal with a serious merge conflict. \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github}{The GitHub documentation}\footnote{\nolinkurl{docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github}\label{g:fn:idm2022230456}} has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line}{resolve merge conflicts on the command line}\footnote{\nolinkurl{docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line}\label{g:fn:idm2022234936}} or in your text editor.%
+I have never caused or had to deal with a serious merge conflict. \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github}{The GitHub documentation}\footnote{\nolinkurl{docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github}\label{g:fn:idp476098152}} has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also \href{https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line}{resolve merge conflicts on the command line}\footnote{\nolinkurl{docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line}\label{g:fn:idp476099176}} or in your text editor.%
 \par
 I have accidentally caused a merge conflict with myself and with working on the same repository from two different computers and two different accounts. Oops! This is an easy fix because I made the conflict with myself so I know which version is the correct one. If this happens to you, Git might send you to an unfamiliar screen when you try to push or pull. You'll know you have this case if your terminal asks you to type in a reason why the merge must happen or how the conflict is resolved. This typically happens when you try to merge from an upstream main into a local main that has active changes (so create branches!).%
-\begin{project}{Merging from main to main (remote contains changes not on local).}{g:project:idm2022236472}%
+\begin{project}{Merging from main to main (remote contains changes not on local).}{g:project:idp476103272}%
 This is for when you are sent into a command line editing tool or a default text editor asking you to provide a reason why the merge is necessary.%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item{}Type \mono{i}%
@@ -4005,11 +4005,11 @@ This is for when you are sent into a command line editing tool or a default text
 \begin{activitysolution}{1.1}{Folder Naming.}{x:activity:taylorswiftfolders}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(a)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2024041832-back}{}\quad{}The main thing that pops out to me are the spaces. Every multi-word folder name has a space. Secondly, some of the names are very long. Third, there is not much consistency. Some names are capitalized, others aren't. There are clearly deluxe versions of albums but some say ``deluxe'', others say ``deluxe version'', and even others say ``deluxe edition''.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474395736-back}{}\quad{}The main thing that pops out to me are the spaces. Every multi-word folder name has a space. Secondly, some of the names are very long. Third, there is not much consistency. Some names are capitalized, others aren't. There are clearly deluxe versions of albums but some say ``deluxe'', others say ``deluxe version'', and even others say ``deluxe edition''.%
 \par
 The three here are the main issues; you may have thought of others. Great! I'm sure they are good observations.%
 \item[(b)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2024046056-back}{}\quad{}There are probably a lot of patterns you could have noticed. I grouped folder names into%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474407640-back}{}\quad{}There are probably a lot of patterns you could have noticed. I grouped folder names into%
 \begin{enumerate}[label=\arabic*]
 \item{}Standard albums%
 \item{}Deluxe albums%
@@ -4019,9 +4019,9 @@ The three here are the main issues; you may have thought of others. Great! I'm s
 \end{enumerate}
 %
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2024032744-back}{}\quad{}Since there aren't any special modifiers to this album (such as deluxe or live), I say we just keep its name, but write them in kebab-case. Therefore, ``Taylor Swift'' would become \mono{taylor-swift}.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474408792-back}{}\quad{}Since there aren't any special modifiers to this album (such as deluxe or live), I say we just keep its name, but write them in kebab-case. Therefore, ``Taylor Swift'' would become \mono{taylor-swift}.%
 \item[(d)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2024037736-back}{}\quad{}The following names are the modified versions:%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474410712-back}{}\quad{}The following names are the modified versions:%
 \begin{multicols}{2}
 \begin{itemize}[label=\textbullet]
 \item{}\mono{taylor-swift}%
@@ -4037,7 +4037,7 @@ The three here are the main issues; you may have thought of others. Great! I'm s
 \end{multicols}
 %
 \item[(e)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2024015720-back}{}\quad{}For the deluxe albums, the similarity is the word ``deluxe''. I don't bother with ``edition'' or ``version'', ``deluxe'' is enough to convey the necessary information. I also would like to abbreviate ``deluxe'' to ``dlx''. You could also choose to keep the full word, but since we can't ask Taylor what she would prefer, I am sticking with the shorter. ``dlx'' gets the point across (this is a deluxe album) with 3 less characters. Following are my changes for the deluxe group. There is one outlier: the Fearless Platinum Edition. I am going to retain the ``platinum'' name since that is its true name.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474420568-back}{}\quad{}For the deluxe albums, the similarity is the word ``deluxe''. I don't bother with ``edition'' or ``version'', ``deluxe'' is enough to convey the necessary information. I also would like to abbreviate ``deluxe'' to ``dlx''. You could also choose to keep the full word, but since we can't ask Taylor what she would prefer, I am sticking with the shorter. ``dlx'' gets the point across (this is a deluxe album) with 3 less characters. Following are my changes for the deluxe group. There is one outlier: the Fearless Platinum Edition. I am going to retain the ``platinum'' name since that is its true name.%
 \begin{multicols}{2}
 \begin{itemize}[label=\textbullet]
 \item{}\mono{taylor-swift-dlx}%
@@ -4052,21 +4052,21 @@ The three here are the main issues; you may have thought of others. Great! I'm s
 \end{multicols}
 %
 \item[(f)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2024008168-back}{}\quad{}There are only two in this group, but there could be more in the future. Let's use ``live'' to differentiate these folders from the others. I am choosing to not use ``lve'' or ``lv'' because I think there are slightly ambiguous (it could mean ``love''!).%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474432472-back}{}\quad{}There are only two in this group, but there could be more in the future. Let's use ``live'' to differentiate these folders from the others. I am choosing to not use ``lve'' or ``lv'' because I think there are slightly ambiguous (it could mean ``love''!).%
 \begin{itemize}[label=\textbullet]
 \item{}\mono{clear-chnl-live}%
 \item{}\mono{speak-now-live}%
 \end{itemize}
 %
 \item[(g)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2024002024-back}{}\quad{}I am going to again use kebab-case and use ``tv'' to indicate that the album is a Taylor's Version. This will help cut down on name length.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474175704-back}{}\quad{}I am going to again use kebab-case and use ``tv'' to indicate that the album is a Taylor's Version. This will help cut down on name length.%
 \begin{itemize}[label=\textbullet]
 \item{}\mono{fearless-tv}%
 \item{}\mono{red-tv}%
 \end{itemize}
 %
 \item[(h)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023999464-back}{}\quad{}These are mostly up to you. They have no specific pattern, but I will still apply kebab-case and shorten the names.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474178776-back}{}\quad{}These are mostly up to you. They have no specific pattern, but I will still apply kebab-case and shorten the names.%
 \begin{itemize}[label=\textbullet]
 \item{}\mono{holiday-clctn} (I could even use \mono{holiday} since there is only one holiday album)%
 \item{}\mono{unreleased}%
@@ -4078,11 +4078,11 @@ The three here are the main issues; you may have thought of others. Great! I'm s
 \begin{activitysolution}{1.2}{File Naming.}{x:activity:taylorswiftfiles}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(a)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023780536-back}{}\quad{}The main thing that pops out to me are the spaces. Every multi-word file name has a space. Secondly, there are a few cases of non-consistency: Back To December says ``Acoustic'' whereas Haunted says ``Acoustic Version''.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474605016-back}{}\quad{}The main thing that pops out to me are the spaces. Every multi-word file name has a space. Secondly, there are a few cases of non-consistency: Back To December says ``Acoustic'' whereas Haunted says ``Acoustic Version''.%
 \par
 The two here are the main issues; you may have thought of others. Great! I'm sure they are good observations.%
 \item[(b)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023784632-back}{}\quad{}There are probably a couple patterns you could have noticed. I grouped track names into%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474604120-back}{}\quad{}There are probably a couple patterns you could have noticed. I grouped track names into%
 \begin{enumerate}[label=\arabic*]
 \item{}``Regular'' album tracks%
 \item{}Acoustic tracks%
@@ -4090,7 +4090,7 @@ The two here are the main issues; you may have thought of others. Great! I'm sur
 \end{enumerate}
 %
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023775672-back}{}\quad{}There isn't much we can do here. I will write the names in snake\textunderscore{}case which will remove the spaces and change every word to lowercase. Since we can't ask Taylor for her preferences, it is up to you whether you want to abbreviate words or not. For the most part, I do not since most track names are short already.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474609368-back}{}\quad{}There isn't much we can do here. I will write the names in snake\textunderscore{}case which will remove the spaces and change every word to lowercase. Since we can't ask Taylor for her preferences, it is up to you whether you want to abbreviate words or not. For the most part, I do not since most track names are short already.%
 \begin{multicols}{2}
 \begin{itemize}[label=\textbullet]
 \item{}\mono{01\_mine.wav}%
@@ -4114,14 +4114,14 @@ The two here are the main issues; you may have thought of others. Great! I'm sur
 \end{multicols}
 %
 \item[(d)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023755192-back}{}\quad{}I am choosing to abbreviate ``acoustic'' to ``acoust''. Notice I used the same names as the regular tracks, but just appended ``\textunderscore{}acoust'' at the end.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474626264-back}{}\quad{}I am choosing to abbreviate ``acoustic'' to ``acoust''. Notice I used the same names as the regular tracks, but just appended ``\textunderscore{}acoust'' at the end.%
 \begin{itemize}[label=\textbullet]
 \item{}\mono{18\_back\_to\_dec\_acoust.wav}%
 \item{}\mono{19\_haunted\_acoust.wav}%
 \end{itemize}
 %
 \item[(e)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023761208-back}{}\quad{}I am choosing to abbreviate ``POP Mix'' to ``pop\textunderscore{}mix''. Notice I used the same name as the regular tracks, but just appended ``\textunderscore{}pop\textunderscore{}mix'' at the end.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474627800-back}{}\quad{}I am choosing to abbreviate ``POP Mix'' to ``pop\textunderscore{}mix''. Notice I used the same name as the regular tracks, but just appended ``\textunderscore{}pop\textunderscore{}mix'' at the end.%
 \begin{itemize}[label=\textbullet]
 \item{}\mono{20\_mine\_pop\_mix.wav}%
 \end{itemize}
@@ -4134,32 +4134,32 @@ The two here are the main issues; you may have thought of others. Great! I'm sur
 2.3.1\space\textperiodcentered\space{}Navigating Your Computer With the Command Line}
 \begin{inlinesolution}{2.3.1.3}{Trying \mono{cd}.}{x:exercise:try-cd}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idm2023572536-back}{}\quad{}Try running \mono{pwd} after \mono{cd}. Do you notice anything different here?%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idp474817240-back}{}\quad{}Try running \mono{pwd} after \mono{cd}. Do you notice anything different here?%
 \end{inlinesolution}%
 \par\medskip
 \noindent\textbf{\Large{}2.3.2\space\textperiodcentered\space{}Adding Files and Directories}
 \begin{activitysolution}{2.1}{File Extensions Matter.}{x:activity:fileextensions}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023542968-back}{}\quad{}Mac users likely see the TextEdit app open. This is the default app for opening files like this. Windows users will be prompted to determine which application should be used to open the file.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp474843480-back}{}\quad{}Mac users likely see the TextEdit app open. This is the default app for opening files like this. Windows users will be prompted to determine which application should be used to open the file.%
 \end{enumerate}
 \end{activitysolution}%
 \begin{inlinesolution}{2.3.2.2}{Trying \mono{open}.}{x:exercise:try-open}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023794488-back}{}\quad{}\mono{open test.txt} or \mono{start text.txt}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp474971144-back}{}\quad{}\mono{open test.txt} or \mono{start text.txt}%
 \end{inlinesolution}%
 \begin{inlinesolution}{2.3.2.3}{Trying \mono{killall}.}{x:exercise:try-killall}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023429544-back}{}\quad{}Your computer should have opened up TextEdit (the default text editor for Mac). To close this application, you should enter \mono{killall TextEdit} at the command line.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474981384-back}{}\quad{}Your computer should have opened up TextEdit (the default text editor for Mac). To close this application, you should enter \mono{killall TextEdit} at the command line.%
 \end{inlinesolution}%
 \begin{activitysolution}{2.2}{Putting It All Together, Part 1.}{x:activity:trycdtouch}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(a)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023418024-back}{}\quad{}\mono{cd testdir} should do the trick!%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp474997896-back}{}\quad{}\mono{cd testdir} should do the trick!%
 \item[(b)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023412904-back}{}\quad{}Use \mono{ls} and \mono{pwd} here.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp474992904-back}{}\quad{}Use \mono{ls} and \mono{pwd} here.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023417128-back}{}\quad{}Since we just created this directory, \mono{ls} should not show any files; no output should be provided. \mono{pwd} can be used to find the file path which should look like%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp474998024-back}{}\quad{}Since we just created this directory, \mono{ls} should not show any files; no output should be provided. \mono{pwd} can be used to find the file path which should look like%
 \begin{codedisplay}
 /Users/<your-username>/Desktop/testdir
 \end{codedisplay}
@@ -4169,15 +4169,15 @@ or%
 \end{codedisplay}
 %
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idm2023416360-back}{}\quad{}You can use \mono{ls} to verify that everything worked.%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idp474994952-back}{}\quad{}You can use \mono{ls} to verify that everything worked.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023413800-back}{}\quad{}\mono{touch my\_greeting.txt} OR \mono{touch myGreeting.txt} OR \mono{touch my-greeting.txt} OR \mono{MyGreeting.txt} OR \mono{MY\_GREETING.txt}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp474992776-back}{}\quad{}\mono{touch my\_greeting.txt} OR \mono{touch myGreeting.txt} OR \mono{touch my-greeting.txt} OR \mono{MyGreeting.txt} OR \mono{MY\_GREETING.txt}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023415080-back}{}\quad{}Whenever we create a new file (of any type), we use \mono{touch}. Recall that \mono{touch} requires three pieces: the command, the file name, and the file extension. The command is \mono{touch}, the file name is \mono{my\_greeting} (recommended, although there are other possible names), and the file extension is \mono{.txt}. Put these together, and we get \mono{touch my\_greeting.txt}.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp475000968-back}{}\quad{}Whenever we create a new file (of any type), we use \mono{touch}. Recall that \mono{touch} requires three pieces: the command, the file name, and the file extension. The command is \mono{touch}, the file name is \mono{my\_greeting} (recommended, although there are other possible names), and the file extension is \mono{.txt}. Put these together, and we get \mono{touch my\_greeting.txt}.%
 \item[(d)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023408680-back}{}\quad{}\mono{open my\_greeting.txt} OR \mono{open <file-name>.txt}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475004296-back}{}\quad{}\mono{open my\_greeting.txt} OR \mono{open <file-name>.txt}%
 \item[(e)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023403304-back}{}\quad{}This is a \mono{.txt} file: \mono{killall TextEdit}.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475004936-back}{}\quad{}This is a \mono{.txt} file: \mono{killall TextEdit}.%
 \end{enumerate}
 \end{activitysolution}%
 \par\medskip
@@ -4185,45 +4185,45 @@ or%
 \begin{inlinesolution}{2.3.3.1}{Trying \mono{rm}.}{x:exercise:try-rm}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(b)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023387304-back}{}\quad{}\mono{rm my\_greeting.txt}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475016968-back}{}\quad{}\mono{rm my\_greeting.txt}%
 \end{enumerate}
 \end{inlinesolution}%
 \begin{inlinesolution}{2.3.3.3}{Trying \mono{cd} Backwards.}{x:exercise:try-cd-backwards}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idm2023368872-back}{}\quad{}If successful, \mono{pwd} should indicate that you are in the Desktop.%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idp475038472-back}{}\quad{}If successful, \mono{pwd} should indicate that you are in the Desktop.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023369640-back}{}\quad{}\mono{cd ..}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475034120-back}{}\quad{}\mono{cd ..}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2023368616-back}{}\quad{}As mentioned, \mono{cd ..} will move you backwards. If you run \mono{pwd}, you should see that you have returned to the Desktop; \mono{ls} should give you all of the files we were working with before.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp475037448-back}{}\quad{}As mentioned, \mono{cd ..} will move you backwards. If you run \mono{pwd}, you should see that you have returned to the Desktop; \mono{ls} should give you all of the files we were working with before.%
 \end{inlinesolution}%
 \begin{inlinesolution}{2.3.3.4}{Trying \mono{rmdir}.}{x:exercise:try-rmdir}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023360424-back}{}\quad{}\mono{rmdir testdir}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475048456-back}{}\quad{}\mono{rmdir testdir}%
 \end{inlinesolution}%
 \begin{activitysolution}{2.3}{Putting It All Together, Part 2.}{x:activity:try-removing}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(a)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023355944-back}{}\quad{}Use \mono{pwd} to check if still on Desktop, \mono{rm <file-name>} to remove files, and \mono{ls} to check if the files are gone.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475053064-back}{}\quad{}Use \mono{pwd} to check if still on Desktop, \mono{rm <file-name>} to remove files, and \mono{ls} to check if the files are gone.%
 \item[(b)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023358120-back}{}\quad{}\mono{cd ..}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475053448-back}{}\quad{}\mono{cd ..}%
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023354664-back}{}\quad{}\mono{cd Documents} OR \mono{mkdir Documents}, then \mono{cd Documents}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475052168-back}{}\quad{}\mono{cd Documents} OR \mono{mkdir Documents}, then \mono{cd Documents}%
 \item[(d)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023345192-back}{}\quad{}\mono{mkdir my-favorites} (could use a different case)%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475062280-back}{}\quad{}\mono{mkdir my-favorites} (could use a different case)%
 \item[(e)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023344808-back}{}\quad{}\mono{cd my\_favorites}, \mono{pwd}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475058184-back}{}\quad{}\mono{cd my\_favorites}, \mono{pwd}%
 \item[(f)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023347752-back}{}\quad{}\mono{touch food.txt}, \mono{touch hobbies.docx}, \mono{touch smells.xslx}; \mono{ls}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475063432-back}{}\quad{}\mono{touch food.txt}, \mono{touch hobbies.docx}, \mono{touch smells.xslx}; \mono{ls}%
 \item[(g)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023351848-back}{}\quad{}Mac: \mono{open food.txt}, \mono{killall TextEdit}; \mono{open hobbies.docx}, \mono{killall \textquotesingle{}Microsoft Word\textquotesingle{}}, \mono{open smells.xslx}, \mono{killall \textquotesingle{}Microsoft Excel\textquotesingle{}}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475068552-back}{}\quad{}Mac: \mono{open food.txt}, \mono{killall TextEdit}; \mono{open hobbies.docx}, \mono{killall \textquotesingle{}Microsoft Word\textquotesingle{}}, \mono{open smells.xslx}, \mono{killall \textquotesingle{}Microsoft Excel\textquotesingle{}}%
 \par
 Windows: \mono{start food.txt}, \mono{start hobbies.docx}, \mono{start smells.xslx}%
 \item[(h)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023340200-back}{}\quad{}\mono{rm food.txt}, \mono{rm hobbies.docx}, \mono{rm smells.xslx}; \mono{ls}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475070600-back}{}\quad{}\mono{rm food.txt}, \mono{rm hobbies.docx}, \mono{rm smells.xslx}; \mono{ls}%
 \item[(i)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023338920-back}{}\quad{}\mono{cd ..}, \mono{pwd}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475070216-back}{}\quad{}\mono{cd ..}, \mono{pwd}%
 \item[(j)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023333672-back}{}\quad{}\mono{rmdir my-favorites}, \mono{ls}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475078280-back}{}\quad{}\mono{rmdir my-favorites}, \mono{ls}%
 \end{enumerate}
 \end{activitysolution}%
 \par\medskip
@@ -4233,7 +4233,7 @@ Windows: \mono{start food.txt}, \mono{start hobbies.docx}, \mono{start smells.xs
 4.3.1\space\textperiodcentered\space{}Wait, Which Files Did I Change Again?}
 \begin{projectsolution}{4.4}{Trying \mono{git status}.}{x:project:try-git-status}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2022992008-back}{}\quad{}You might see a console output such as the one below.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp475414632-back}{}\quad{}You might see a console output such as the one below.%
 \begin{console}{0}{1}{0}
 (*\consoleinput{git status}*)
 On branch country
@@ -4251,11 +4251,11 @@ We get a lot more information than needed right now, but we will break this outp
 \begin{projectsolution}{4.5}{Trying \mono{git add}.}{x:project:try-git-add}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(b)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idm2022974472-back}{}\quad{}Case 1 or Case 3 will work in this instance.%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idp475441000-back}{}\quad{}Case 1 or Case 3 will work in this instance.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022967816-back}{}\quad{}\mono{git add README.md} OR \mono{git add .}. Neither will produce any output.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475438184-back}{}\quad{}\mono{git add README.md} OR \mono{git add .}. Neither will produce any output.%
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022974728-back}{}\quad{}\begin{console}{0}{1}{0}
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475437160-back}{}\quad{}\begin{console}{0}{1}{0}
 (*\consoleinput{git status}*)
 On branch country
 Changes to be committed:
@@ -4270,7 +4270,7 @@ The text color has changed to green which indicates the process worked.%
 \begin{projectsolution}{4.6}{Trying \mono{git commit}.}{x:project:try-git-commit}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022953224-back}{}\quad{}\begin{console}{0}{1}{0}
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475455464-back}{}\quad{}\begin{console}{0}{1}{0}
 (*\consoleinput{git status}*)
 On branch country
 nothing to commit, working tree clean
@@ -4284,7 +4284,7 @@ This output is what is to be expected! Don't fret that it says nothing to commit
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(a)]\begin{enumerate}[font=\bfseries,label=(\roman*),ref=\theenumi.\roman*]
 \item[(i)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2022928136-back}{}\quad{}\begin{console}{0}{1}{0}
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp475476712-back}{}\quad{}\begin{console}{0}{1}{0}
 (*\consoleinput{git push}*)
 fatal: The current branch country has no upstream branch.
 To push the current branch and set the remote as upstream, use
@@ -4293,7 +4293,7 @@ To push the current branch and set the remote as upstream, use
 \end{console}
 Well that looks a little scary. Fatal! That just means that git wansn't able to complete your request and stopped trying. The reason this failed is because the branch \mono{country} is only on your computer, it hasn't yet made it to GitHub (which is what we are trying to do). It is possible to create a remote connection between branches but I often don't especially if I am only working on one branch at a time and if I plan on deleting a branch when I'm done with it. Should you want to create a remote, use the command Git provided.%
 \item[(ii)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2022931208-back}{}\quad{}\begin{console}{0}{1}{0}
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp475478120-back}{}\quad{}\begin{console}{0}{1}{0}
 (*\consoleinput{git push origin}*)
 fatal: The current branch country has no upstream branch.
 To push the current branch and set the remote as upstream, use
@@ -4302,7 +4302,7 @@ To push the current branch and set the remote as upstream, use
 \end{console}
 Well, look at that, the same error. This should make sense. You are telling Git to push changes to the origin repo but \mono{country}, the current branch, doesn't have an origin since we created the branch locally.%
 \item[(iii)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2022929160-back}{}\quad{}\begin{console}{0}{1}{0}
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp475486696-back}{}\quad{}\begin{console}{0}{1}{0}
 (*\consoleinput{git push country}*)
 fatal: 'country' does not appear to be a git repository
 fatal: Could not read from remote repository.
@@ -4314,9 +4314,9 @@ Remember the four parts to \mono{git push}? Well since we forgot Step 3, the rem
 \end{enumerate}
 \item[(b)]\begin{enumerate}[font=\bfseries,label=(\roman*),ref=\theenumi.\roman*]
 \item[(i)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022923400-back}{}\quad{}Here, to follow with the example, we will use \mono{origin} and the branch name \mono{country}.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475489256-back}{}\quad{}Here, to follow with the example, we will use \mono{origin} and the branch name \mono{country}.%
 \item[(ii)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2022919944-back}{}\quad{}\begin{console}{0}{1}{0}
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp475489768-back}{}\quad{}\begin{console}{0}{1}{0}
 (*\consoleinput{git push origin country}*)
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
@@ -4341,9 +4341,9 @@ We get a lot of output for a successful push. Most of it is just information tha
 \begin{projectsolution}{4.10}{Trying \mono{git pull}.}{x:project:try-git-pull}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(b)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023147784-back}{}\quad{}\mono{git switch main}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475616104-back}{}\quad{}\mono{git switch main}%
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2023154184-back}{}\quad{}\begin{console}{0}{1}{0}
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475619560-back}{}\quad{}\begin{console}{0}{1}{0}
 (*\consoleinput{git pull origin main}*)
 remote: Enumerating objects: 1, done.
 remote: Counting objects: 100% (1/1), done.
@@ -4363,55 +4363,55 @@ Fast-forward
 \begin{activitysolution}{4.11}{}{x:activity:git-big-act}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(a)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022832040-back}{}\quad{}Use one of the multiple methods to create a new repo in GitHub. Perhaps name it \mono{poems} or \mono{fav-poems}? This part is up to you as long as the name accurately describes the future repo contents. Check the box that says to add a README file.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475649640-back}{}\quad{}Use one of the multiple methods to create a new repo in GitHub. Perhaps name it \mono{poems} or \mono{fav-poems}? This part is up to you as long as the name accurately describes the future repo contents. Check the box that says to add a README file.%
 \item[(b)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idm2022828072-back}{}\quad{}Make sure you are not ``inside'' your previous repositories. Nested repositories will not work. So \mono{cd} to the folder in which you want to place your new repo.%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idp475661800-back}{}\quad{}Make sure you are not ``inside'' your previous repositories. Nested repositories will not work. So \mono{cd} to the folder in which you want to place your new repo.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022834344-back}{}\quad{}Copy the HTTPS link on GitHub. Use \mono{git clone <copied-link>}. Use \mono{cd <repo-name>} to move your terminal into that repo.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475658088-back}{}\quad{}Copy the HTTPS link on GitHub. Use \mono{git clone <copied-link>}. Use \mono{cd <repo-name>} to move your terminal into that repo.%
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022824232-back}{}\quad{}\mono{git branch readme} then \mono{git switch readme} OR \mono{git switch -c readme}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475659880-back}{}\quad{}\mono{git branch readme} then \mono{git switch readme} OR \mono{git switch -c readme}%
 \par
 You may use any branch name you like as long as it's clear what the branch is for. ``readme'' seems like it will work nicely.%
 \item[(d)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022826920-back}{}\quad{}Perhaps a better title would be ``My Favorite Poems'' or ``Two Original Poems''. This can vary. You might explain that this repository contains two of your favorite poems (or two poems you wrote yourself) and this it was born from a project in \pubtitle{Better Git Started} to help you get more familiar with GitHub and Git functions. This can also vary.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475660904-back}{}\quad{}Perhaps a better title would be ``My Favorite Poems'' or ``Two Original Poems''. This can vary. You might explain that this repository contains two of your favorite poems (or two poems you wrote yourself) and this it was born from a project in \pubtitle{Better Git Started} to help you get more familiar with GitHub and Git functions. This can also vary.%
 \item[(e)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022821672-back}{}\quad{}\mono{git status}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475665768-back}{}\quad{}\mono{git status}%
 \item[(f)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022827560-back}{}\quad{}\mono{git add .} OR \mono{git add README.md}, maybe \mono{git status} to confirm?%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475665896-back}{}\quad{}\mono{git add .} OR \mono{git add README.md}, maybe \mono{git status} to confirm?%
 \item[(g)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022814120-back}{}\quad{}\mono{git commit -m \textquotesingle{}edit readme with repo info\textquotesingle{}}, maybe \mono{git status} to confirm?%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475663080-back}{}\quad{}\mono{git commit -m \textquotesingle{}edit readme with repo info\textquotesingle{}}, maybe \mono{git status} to confirm?%
 \par
 Of course, your commit message may be different. Perhaps ``edit readme'' and enough for you.%
 \item[(h)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022815528-back}{}\quad{}\mono{git push origin <your-branch-name>}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475665512-back}{}\quad{}\mono{git push origin <your-branch-name>}%
 \item[(i)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022815016-back}{}\quad{}``Compare and pull request'', ``Merge'', ``Confirm merge''. (Check the main branch on GitHub to make sure this worked.)%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475670760-back}{}\quad{}``Compare and pull request'', ``Merge'', ``Confirm merge''. (Check the main branch on GitHub to make sure this worked.)%
 \item[(j)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022812456-back}{}\quad{}\mono{git switch main} then \mono{git pull origin main}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475675880-back}{}\quad{}\mono{git switch main} then \mono{git pull origin main}%
 \item[(k)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022808104-back}{}\quad{}\mono{git branch poems} then \mono{git switch poems} OR \mono{git switch -c poems}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475677800-back}{}\quad{}\mono{git branch poems} then \mono{git switch poems} OR \mono{git switch -c poems}%
 \par
 You may use any branch name you like as long as it's clear what the branch is for. ``poems'' works for me.%
 \par
 Note that you could split up each poem into its own branch. Depending on the length of your poems, you may want to do that in practice but here we will edit both on one branch. That way you can practice two commits in one push!%
 \item[(l)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idm2022805800-back}{}\quad{}In \initialism{VS} Code, you can create a new file with the paper-with-a-plus icon in the ``Explorer'' panel in the top left.%
+\noindent\textbf{\blocktitlefont Hint}.\hypertarget{g:hint:idp475671144-back}{}\quad{}In \initialism{VS} Code, you can create a new file with the paper-with-a-plus icon in the ``Explorer'' panel in the top left.%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022804136-back}{}\quad{}Use the hint or use your terminal (\mono{touch poem1.md}).%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475678696-back}{}\quad{}Use the hint or use your terminal (\mono{touch poem1.md}).%
 \item[(n)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022803752-back}{}\quad{}\mono{git add .} OR \mono{git add poem1.md}, then \mono{git status}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475685736-back}{}\quad{}\mono{git add .} OR \mono{git add poem1.md}, then \mono{git status}%
 \par
 Your text editor might also indicate that this worked. For instance, \initialism{VS} Code will show an ``A'' next to the file name.%
 \item[(o)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022799528-back}{}\quad{}\mono{git commit -m \textquotedbl{}<commit-message>\textquotedbl{}}, \mono{git status}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475683176-back}{}\quad{}\mono{git commit -m \textquotedbl{}<commit-message>\textquotedbl{}}, \mono{git status}%
 \par
 Your text editor might also indicate that this worked. For instance, \initialism{VS} Code will remove and letters and colors next to the file name. It will also show your commit message in the ``Timeline'' panel on the bottom left.%
 \item[(p)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022794920-back}{}\quad{}After editing, \mono{git add .} or \mono{git add poem2.md}. Then \mono{git commit -m \textquotedbl{}<message>\textquotedbl{}}. \mono{git status} might be useful here.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475679464-back}{}\quad{}After editing, \mono{git add .} or \mono{git add poem2.md}. Then \mono{git commit -m \textquotedbl{}<message>\textquotedbl{}}. \mono{git status} might be useful here.%
 \item[(q)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022794408-back}{}\quad{}\mono{git push origin <branch-name>}, ``Compare and pull request'', ``Merge'', ``Confirm merge''.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475692392-back}{}\quad{}\mono{git push origin <branch-name>}, ``Compare and pull request'', ``Merge'', ``Confirm merge''.%
 \item[(r)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022790184-back}{}\quad{}\mono{git switch main}, then \mono{git pull origin main}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475694696-back}{}\quad{}\mono{git switch main}, then \mono{git pull origin main}%
 \end{enumerate}
 \end{activitysolution}%
 \par\medskip
@@ -4419,15 +4419,15 @@ Your text editor might also indicate that this worked. For instance, \initialism
 6\space\textperiodcentered\space{}Git Collaboration\\
 6.1\space\textperiodcentered\space{}Getting Set Up: A Few Extra Steps\\
 6.1.1\space\textperiodcentered\space{}Cloning A Fork}
-\begin{inlinesolution}{6.1.1.1}{}{g:exercise:idm2022687400}%
+\begin{inlinesolution}{6.1.1.1}{}{g:exercise:idp475794152}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2022683432-back}{}\quad{}Use the green code tab \emph{on your fork} to copy the \initialism{HTTPS} link. Then use \mono{git clone <https-link>}. Make sure you have used \mono{cd} to get to the right place first!%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp475797992-back}{}\quad{}Use the green code tab \emph{on your fork} to copy the \initialism{HTTPS} link. Then use \mono{git clone <https-link>}. Make sure you have used \mono{cd} to get to the right place first!%
 \end{inlinesolution}%
 \par\medskip
 \noindent\textbf{\Large{}6.1.2\space\textperiodcentered\space{}Don't Forget About Branches!}
-\begin{inlinesolution}{6.1.2.1}{}{g:exercise:idm2022679592}%
+\begin{inlinesolution}{6.1.2.1}{}{g:exercise:idp475805544}%
 \par\smallskip%
-\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idm2022679464-back}{}\quad{}There are a couple of choices here.%
+\noindent\textbf{\blocktitlefont Solution}.\hypertarget{g:solution:idp475806056-back}{}\quad{}There are a couple of choices here.%
 \begin{enumerate}
 \item{}\mono{git branch <name>} then \mono{git switch <name>}%
 \item{}\mono{git switch -c <name>}%
@@ -4440,7 +4440,7 @@ Your text editor might also indicate that this worked. For instance, \initialism
 \begin{projectsolution}{6.1}{Updating Origin and Local, Method 1.}{x:project:try-git-pull-origin}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(c)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022618536-back}{}\quad{}\mono{git pull origin main} (if you are pulling from origin, just \mono{git pull} can work, too)%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475859816-back}{}\quad{}\mono{git pull origin main} (if you are pulling from origin, just \mono{git pull} can work, too)%
 \end{enumerate}
 \end{projectsolution}%
 \par\medskip
@@ -4448,19 +4448,19 @@ Your text editor might also indicate that this worked. For instance, \initialism
 \begin{activitysolution}{6.3}{}{x:activity:bigact-gitcollab}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]
 \item[(b)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022404024-back}{}\quad{}Click on the ``Fork'' button in the top right. (You can keep the same name.)%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475930088-back}{}\quad{}Click on the ``Fork'' button in the top right. (You can keep the same name.)%
 \item[(d)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022409144-back}{}\quad{}Copy the \initialism{HTTPS} link \emph{to your fork} on GitHub. Use \mono{git clone <copied-link>}. Use \mono{cd <repo-name>} to move your terminal into that repo.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475935848-back}{}\quad{}Copy the \initialism{HTTPS} link \emph{to your fork} on GitHub. Use \mono{git clone <copied-link>}. Use \mono{cd <repo-name>} to move your terminal into that repo.%
 \item[(e)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022400952-back}{}\quad{}This could vary. Perhaps \mono{superpower}, \mono{power}, or \mono{add-superpower}?%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475934440-back}{}\quad{}This could vary. Perhaps \mono{superpower}, \mono{power}, or \mono{add-superpower}?%
 \item[(f)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022400440-back}{}\quad{}\mono{cd book-activities} first, then \mono{code superpower.md} to open just the markdown file (not the entire repository) (if using \initialism{VS} Code); if using a different editor, use Google to find a good terminal command (or do it manually)%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475939816-back}{}\quad{}\mono{cd book-activities} first, then \mono{code superpower.md} to open just the markdown file (not the entire repository) (if using \initialism{VS} Code); if using a different editor, use Google to find a good terminal command (or do it manually)%
 \par
 OR \mono{cd ..} to go backwards a folder, then \mono{code gitstarted} to open the entire repository, then open the markdown file using work (to use Git functions again, you may have to \mono{cd gitstarted} again)%
 \item[(h)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022390712-back}{}\quad{}\mono{git status}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475948392-back}{}\quad{}\mono{git status}%
 \item[(i)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022389048-back}{}\quad{}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475947624-back}{}\quad{}%
 \begin{itemize}[label=\textbullet]
 \item{}\mono{git add .} or%
 \item{}\mono{git add book-activities/} or%
@@ -4468,23 +4468,23 @@ OR \mono{cd ..} to go backwards a folder, then \mono{code gitstarted} to open th
 \end{itemize}
 %
 \item[(j)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022382008-back}{}\quad{}\mono{git status}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475954024-back}{}\quad{}\mono{git status}%
 \item[(k)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022379832-back}{}\quad{}\mono{git commit -m \textquotesingle{}<your-message>\textquotesingle{}}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475956072-back}{}\quad{}\mono{git commit -m \textquotesingle{}<your-message>\textquotesingle{}}%
 \item[(l)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022384312-back}{}\quad{}\mono{git push origin superpower}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475956712-back}{}\quad{}\mono{git push origin superpower}%
 \item[(m)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022377528-back}{}\quad{}Create a pull reqeust from \mono{superpower} to your fork's \mono{main} then from your fork's \mono{main} to upstream \mono{main}.%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475952616-back}{}\quad{}Create a pull reqeust from \mono{superpower} to your fork's \mono{main} then from your fork's \mono{main} to upstream \mono{main}.%
 \par
 OR Create a pull request from \mono{superpower} directly to the upstream \mono{main}.%
 \item[(o)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022372536-back}{}\quad{}\mono{git switch main}, then%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475962472-back}{}\quad{}\mono{git switch main}, then%
 \par
 \mono{git remote add upstream https://github.com/ian-curtis/gitstarted.git}%
 \par
 It is important to switch back to main or you will set an upstream remote for just your branch which is sometimes useful, but not here.%
 \item[(p)]\par\smallskip%
-\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idm2022370104-back}{}\quad{}(on main branch) \mono{git pull upstream main}, \mono{git push origin main}%
+\noindent\textbf{\blocktitlefont Answer}.\hypertarget{g:answer:idp475960168-back}{}\quad{}(on main branch) \mono{git pull upstream main}, \mono{git push origin main}%
 \end{enumerate}
 \end{activitysolution}%
 \end{solutions-chapter}
@@ -4501,7 +4501,7 @@ It is important to switch back to main or you will set an upstream remote for ju
 \cleardoublepage
 \pagestyle{empty}
 \vspace*{\stretch{1}}
-\begin{backcolophon}{g:colophon:idm2022228152}%
+\begin{backcolophon}{g:colophon:idp476110440}%
 This book was authored in PreTeXt.%
 \end{backcolophon}%
 \vspace*{\stretch{2}}
