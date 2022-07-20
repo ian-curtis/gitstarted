@@ -161,7 +161,6 @@
       </p>
 
     </paragraphs>
-<!-- tk add note about not skipping directories with cd -->
   </subsection>
 
 
@@ -644,10 +643,6 @@
           files. There is no <q>undo</q> or <q>restore</q>. The terminal deletes and forgets. Use extreme 
           caution when using <c>rm</c>; only remove what you are <em>absolutely sure</em> you need to remove. 
           You will not get a second chance and your computer will not ask you if you for verification.
-        </p>
-        <p>
-          Note: you can add in an extra layer of security with the <c>sudo</c> command, which requires your 
-          computer's password to be entered.
         </p>
       </warning>
 
