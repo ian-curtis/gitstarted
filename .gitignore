@@ -2,12 +2,13 @@
 
 # unpublished builds
 output/html
+output/html-subset
+output/latex-subset
 
 # assets generated from source
 generated-assets
 external/
 generated/
-output/subset
 
 # error logs
 .error_schema.log

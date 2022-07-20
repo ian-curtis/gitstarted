@@ -36,12 +36,20 @@
     </target>
     <!-- To quickly build the html of a subset of your project, edit main-subset.ptx
         and run `pretext build subset` (or `view` with watch option) -->
-    <target name="subset">
+    <target name="html-subset">
       <format>html</format>
       <source>source/main-subset.ptx</source>
       <publication>publication/publication.ptx</publication>
-      <output-dir>output/subset</output-dir>
+      <output-dir>output/html-subset</output-dir>
       <stringparam key="debug.skip-knowls" value="yes"/>
+    </target>
+    <target name="latex-subset">
+      <format>latex</format>
+      <source>source/main-subset.ptx</source>
+      <publication>publication/publication_epdf.ptx</publication>
+      <output-dir>output/latex-subset</output-dir>
+      <stringparam key="latex.geometry" value="top=1.2in, bottom=1.2in, outer=1.2in, inner=1.2in"/>
+      <xsl>xsl/custom-latex.xsl</xsl>
     </target>
   </targets>
   <executables>
