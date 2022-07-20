@@ -30,6 +30,23 @@ pip install pretextbook
 
 To build the HTML, type `pretext build html` and then `pretext view html` on the command line. For PDF builds, use either `pretext build latex-elec` or `pretext build latex-print` and use your LaTeX installation to compile a PDF.
 
+## Abbreviated Publisher's Note
+
+*Better Git Started: An Introduction to the Command Line, GitHub, and Git* was written by Ian Curtis, a senior at Grand Valley State University and Editorial Assistant for the GVSU Libraries. This text was developed as part of the [Accelerating Open Educational Resources Initiative at Grand Valley State University](https://www.gvsu.edu/library/sc/AcceleratingOER), with support from the University Libraries and the President's Innovation Fund.
+
+ Suggested Attribution: *Better Git Started: An Introduction to the Command Line, GitHub, and Git*, by Ian Curtis, published by the Grand Valley State University Libraries, 2022.
+
+### Accessibility Statement
+
+The Grand Valley State University Libraries strive to ensure our tools, devices, services, and environments are available to and usable by as many people as possible.
+
+The web version of *Better Git Started* incorporates the following features to support accessibility:
+
+* All content can be navigated by use of a keyboard
+* Links, headings, and tables have been designed to work with screen readers
+* Code in PreTeXt is rendered with separate blocks so they can be understood by using screen readers and/or other assistive devices.
+
+
 ## Questions?
 
 With any questions, comments, concerns, feature requests, and more, be sure to open an issue. If you are feeling up to it, do some editing and submit a pull request, especially if you wish to add content to the sections on Linux.

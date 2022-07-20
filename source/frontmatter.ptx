@@ -54,6 +54,7 @@
 
   </acknowledgement>
 
+  <xi:include href="fm_pubnote.ptx" />
   <xi:include href="fm_howtouse.ptx" />
   <xi:include href="fm_materials_windows.ptx" />
   <xi:include href="fm_materials_mac.ptx" />
