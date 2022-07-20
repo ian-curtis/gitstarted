@@ -413,7 +413,7 @@
       <solution>
         <p>
           There are probably a lot of patterns you could have noticed. I grouped folder names into
-          <ol label="1">
+          <ol marker="1">
             <li>
               <p>
                 Standard albums
@@ -849,7 +849,7 @@
       <solution>
         <p>
           There are probably a couple patterns you could have noticed. I grouped track names into
-          <ol label="1">
+          <ol marker="1">
             <li>
               <p>
                 <q>Regular</q> album tracks
