@@ -38,58 +38,82 @@
     <idx><h>command line</h><h>cp</h></idx>
 
     <p>
-      The <c>mv</c> command has many uses, all revolving around moving and renaming files. There are a few use cases as described below. For each case, the shell of a command and its explanation, an example command, and a description of the goal are provided. This content is inspired by <url href="https://sites.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/cmds/aixcmds3/mv.htm" visual='sites.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/cmds/aixcmds3/mv.htm'>the University of Alberta</url>.
-      <table xml:id="tbl-mv">
-        <title>Use Cases for the <c>mv</c> Command</title>
-        <tabular>
-          <col width='30%'/>
-          <col width='20%'/>
-          <col width='20%'/>
-          <col width='30%'/>
-          <row bottom='medium' header='yes'>
-            <cell right='minor'>Goal</cell>
-            <cell right='minor'>Shell Command</cell>
-            <cell right='minor'>Example Command</cell>
-            <cell>Example Explanation</cell>
-          </row>
-          <row bottom='minor'>
-            <cell right='minor'><p>You already have a file and you want to <em>rename</em> it</p></cell>
-            <cell right='minor'><p><cd>mv &lt;existing-file-name> &lt;new-file-name></cd></p></cell>
-            <cell right='minor'><cd>mv birds.txt cats.txt</cd></cell>
-            <cell><p>Takes prexisting file <c>birds.txt</c> and <em>renames</em> it to <c>cats.txt</c></p></cell>
-          </row>
-          <row bottom='minor'>
-            <cell right='minor'><p>You already have a file and you want to <em>move</em> it AND <em>rename</em> the file</p></cell>
-            <cell right='minor'><p><cd>mv &lt;existing-file-name> &lt;destination-folder-name>/&lt;new-file-name></cd></p></cell>
-            <cell right='minor'><cd>mv birds.txt animals/cats.txt</cd></cell>
-            <cell><p>Takes prexisting file <c>birds.txt</c>, <em>renames</em> it to <c>cats.txt</c> and <em>moves</em> it to the <c>animals/</c> folder. (Also removes the original <c>birds.txt</c>)</p></cell>
-          </row>
-          <row bottom='minor'>
-            <cell right='minor'><p>You already have a file and you want to <em>move</em> it AND keep the same file name</p></cell>
-            <cell right='minor'><p><cd>mv &lt;existing-file-name> &lt;destination-folder-name></cd></p></cell>
-            <cell right='minor'><cd>mv birds.txt animals/</cd></cell>
-            <cell><p>Takes prexisting file <c>birds.txt</c> and <em>moves</em> it to the <c>animals/</c> folder.</p></cell>
-          </row>
-          <row bottom='minor'>
-            <cell right='minor'><p>You already have a folder and you want to <em>rename</em> it OR you want to <em>move</em> files and folders in an existing folder to a different folder</p></cell>
-            <cell right='minor'><p><cd>mv &lt;folder-to-move> &lt;destination-folder-name></cd></p></cell>
-            <cell right='minor'><cd>mv drums/ instruments/</cd></cell>
-            <cell><p>Takes prexisting folder <c>drums/</c> and <em>moves</em> it into the folder <c>instruments/</c>. If <c>instruments/</c> didn't exists, <c>drums/</c> would have been <em>renamed</em> to <c>instruments/</c></p></cell>
-          </row>
-          <row bottom='minor'>
-            <cell right='minor'><p>You already have <em>multiple</em> files and you want to <em>move</em> them to another folder</p></cell>
-            <cell right='minor'><p><cd>mv &lt;existing-file-name1> &lt;existing-file-name2> ... &lt;destination-folder-name></cd></p></cell>
-            <cell right='minor'><cd>mv dogs.txt cats.txt animals/mammals/</cd></cell>
-            <cell><p>Takes prexisting files <c>dogs.txt</c> and <c>cats.txt</c> and <em>moves</em> them to the <c>animals/mammals/</c> folder.</p></cell>
-          </row>
-          <row>
-            <cell right='minor'><p>You already have a file and you want to <em>copy</em> it to another folder</p></cell>
-            <cell right='minor'><p><cd>cp &lt;existing-file-name> &lt;destination-folder-name></cd></p></cell>
-            <cell right='minor'><cd>cp dogs.txt animals/mammals/</cd></cell>
-            <cell><p>(Notice the different command, <c>cp</c>) Takes prexisting file <c>dogs.txt</c> and <em>copies</em> it to the <c>animals/mammals/</c> folder. Keeps the original <c>dogs.txt</c>.</p></cell>
-          </row>
-        </tabular>
-      </table>
+      The <c>mv</c> command has many uses, all revolving around moving and renaming files. There are a few use cases as described below. The title of each case is the situation you may find yourself in followed by a shell of the command, an example command, and a more detailed description of the command. This content is inspired by <url href="https://sites.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/cmds/aixcmds3/mv.htm" visual='sites.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/cmds/aixcmds3/mv.htm'>the University of Alberta</url>.
+      <dl width='narrow'>
+        <li>
+          <title>You already have a file and you want to <em>rename</em> it</title>
+          <p>
+            <cd>mv &lt;existing-file-name> &lt;new-file-name></cd>
+          </p>
+          <p>
+            <c>mv birds.txt cats.txt</c>
+          </p>
+          <p>
+            Takes prexisting file <c>birds.txt</c> and <em>renames</em> it to <c>cats.txt</c>
+          </p>
+        </li>
+        <li>
+          <title> You already have a file and you want to <em>move</em> it AND <em>rename</em> the file</title>
+          <p>
+            <cd><cline>mv &lt;existing-file-name></cline><cline>&#9;&lt;destination-folder-name>/&lt;new-file-name></cline></cd>
+          </p>
+          <p>
+            <c>mv birds.txt animals/cats.txt</c>
+          </p>
+          <p>
+            Takes prexisting file <c>birds.txt</c>, <em>renames</em> it to <c>cats.txt</c> and <em>moves</em> it to the <c>animals/</c> folder. (Also removes the original <c>birds.txt</c>)
+          </p>
+        </li>
+        <li>
+          <title>You already have a file and you want to <em>move</em> it AND keep the same file name</title>
+          <p>
+            <cd>mv &lt;existing-file-name> &lt;destination-folder-name></cd>
+          </p>
+          <p>
+            <c>mv birds.txt animals/</c>
+          </p>
+          <p>
+            Takes prexisting file <c>birds.txt</c> and <em>moves</em> it to the <c>animals/</c> folder.
+          </p>
+        </li>
+        <li>
+          <title>You already have a folder and you want to <em>rename</em> it OR you want to <em>move</em> files and folders in an existing folder to a different folder</title>
+          <p>
+            <cd>mv &lt;folder-to-move> &lt;destination-folder-name></cd>
+          </p>
+          <p>
+            <c>mv drums/ instruments/</c>
+          </p>
+          <p>
+            Takes prexisting folder <c>drums/</c> and <em>moves</em> it into the folder <c>instruments/</c>. If <c>instruments/</c> didn't exists, <c>drums/</c> would have been <em>renamed</em> to <c>instruments/</c>
+          </p>
+        </li>
+        <li>
+          <title>You already have <em>multiple</em> files and you want to <em>move</em> them to another folder</title>
+          <p>
+            <cd><cline>mv &lt;existing-file-name1> &lt;existing-file-name2> ...</cline><cline>&#9;&lt;destination-folder-name></cline></cd>
+          </p>
+          <p>
+            <c>mv dogs.txt cats.txt animals/mammals/</c>
+          </p>
+          <p>
+            Takes prexisting files <c>dogs.txt</c> and <c>cats.txt</c> and <em>moves</em> them to the <c>animals/mammals/</c> folder.
+          </p>
+        </li>
+        <li>
+          <title>You already have a file and you want to <em>copy</em> it to another folder</title>
+          <p>
+            <cd>cp &lt;existing-file-name> &lt;destination-folder-name></cd>
+          </p>
+          <p>
+            <c>cp dogs.txt animals/mammals/</c>
+          </p>
+          <p>
+            (Notice the different command, <c>cp</c>) Takes prexisting file <c>dogs.txt</c> and <em>copies</em> it to the <c>animals/mammals/</c> folder. Keeps the original <c>dogs.txt</c>.
+          </p>
+        </li>
+      </dl>
+
     </p>
 
     <p>
