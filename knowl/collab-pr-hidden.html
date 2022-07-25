@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-25T10:08:16-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="activity project-like"><div class="introduction">
+<p>This activity assumes you have been following along throughout the section. <a href="" class="xref" data-knowl="./knowl/edit-aboutyou.html" title="Activity 5.2: Collaboration Editing: Start With Yourself">Activity 5.2</a> must be completed before this activity. Just like in <a href="S_hubbranches.html#SS_pullrequest" class="internal" title="Subsection 3.3.4: Creating a Pull Request (with Yourself)">Subsection 3.3.4</a>, we will use the “Contribute” option on the Code tab of a repo (see <a href="" class="xref" data-knowl="./knowl/fig-hubcollab-contrib.html" title="Figure 5.3.0.1">Figure 5.3.0.1</a>) even though there are other ways to open a pull request.</p>
+<figure class="figure figure-like"><div class="image-box" style="width: 95%; margin-left: 2.5%; margin-right: 2.5%;"><img src="external/hubcollab_contrib.svg" role="img" class="contained" alt="Image of top part of home page of a fork. This is the Code tab with main branch selected. At least one commit must be made to have the contribute dialog appear."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.3.0.1<span class="period">.</span></span><span class="space"> </span>The Contribute dialog box on GitHub.</figcaption></figure>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p>Make sure you are on your fork's home page (the Code tab). Click on the Contribute drop down menu and then the green Open pull request button. This will bring you to a new page containing familiar elements.</p></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p>This task is all about noticing. Take a minute to identify each of the following elements on the page. These will help you in the future to recognize that you are opening a pull request for someone else's repository and can be a reassurance that you are in the right place.</p>
+<ol class="decimal">
+<li><p>The title of the repository has changed. You are no longer on your fork, but on the forked-from repo. As such, the Watch, Fork, and Star data have changed to describe that authoritative repo.</p></li>
+<li>
+<p>There is a dialog box indicating which branches are being merged. There are more boxes than before. There should be four, allowing you to specify which repo and branch to want to merge from and which repo and branch you want to merge to. Usually GitHub gets it right, but not always, so check to make sure these are what you want.</p>
+<p>The <dfn class="terminology">base repository</dfn> is the repo you are merging to (here, the authoritative repo), the <dfn class="terminology">head repository</dfn> is the repo you are merging from (here, your fork). The base branch is the specific branch you are merging to (often <code class="code-inline tex2jax_ignore">main</code>) and the compare branch is the branch from your fork you are merging from (often <code class="code-inline tex2jax_ignore">main</code> for me personally).</p>
+</li>
+<li><p>After these boxes is, hopefully, a green checkmark and an “Able to merge” message. This is what you want. You might also get a red message about conflicts or other messages. In this case, you might have a merge conflict and will need to do some extra work. See <a href="S_mergeconflict.html" class="internal" title="Section C.7: Merge Conflicts">Section C.7</a>.</p></li>
+<li><p>There is a summary of all the commits made on the branch (with their commit messages)</p></li>
+<li><p>There is info on all of your specific changes in each file</p></li>
+</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p>Once you have found all of the above, go ahead and click on the “Create pull request” button. If your pull request has more than one commit, you will have to enter a title for the request. This is where a description might be helpful. Choose a title that describes what you are doing. If you would like to supply more information, ask a question, or give clarification, type as much as you want into the “Leave a comment” text box. Then click “Create pull request”.</p></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p>This time notice that there is no option to “Merge” into the main branch. This is because you do not have write access to the parent repository. At this point, wait for a moderator from the authoritative repo to approve your pull request.</p></article></article></body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-25T10:08:05-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Working With Branches</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Better Git Started">
+<meta property="book:author" content="Ian Curtis">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, GitHub, and Git</span></a></h1>
+<p class="byline">Ian Curtis</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_hubfirstrepo.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_githubsolo.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="C_gitsolo.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_hubfirstrepo.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_githubsolo.html" title="Up">Up</a><a class="next-button button toolbar-item" href="C_gitsolo.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
+<li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
+<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows)</a></li>
+<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac)</a></li>
+<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux)</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
+<li class="link">
+<a href="C_basics.html" data-scroll="C_basics" class="internal"><span class="codenumber">1</span> <span class="title">Computer Basics</span></a><ul>
+<li><a href="S_filenames.html" data-scroll="S_filenames" class="internal">File and Folder Names</a></li>
+<li><a href="S_fileextensions.html" data-scroll="S_fileextensions" class="internal">File Extensions</a></li>
+<li><a href="S_filepaths.html" data-scroll="S_filepaths" class="internal">File Paths</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_commandline.html" data-scroll="C_commandline" class="internal"><span class="codenumber">2</span> <span class="title">The Command Line</span></a><ul>
+<li><a href="S_whatiscommline.html" data-scroll="S_whatiscommline" class="internal">What is the Command Line?</a></li>
+<li><a href="whereiscommline.html" data-scroll="whereiscommline" class="internal">Where is the Command Line?</a></li>
+<li><a href="S_commands.html" data-scroll="S_commands" class="internal">Basic Commands</a></li>
+<li><a href="S_advcommands.html" data-scroll="S_advcommands" class="internal">Advanced Commands</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-solo.html" data-scroll="part-solo" class="internal"><span class="codenumber">II</span> <span class="title">Working Solo</span></a></li>
+<li class="link">
+<a href="C_githubsolo.html" data-scroll="C_githubsolo" class="internal"><span class="codenumber">3</span> <span class="title">GitHub Solo</span></a><ul>
+<li><a href="S_hubnavigate.html" data-scroll="S_hubnavigate" class="internal">Navigating GitHub</a></li>
+<li><a href="S_hubfirstrepo.html" data-scroll="S_hubfirstrepo" class="internal">The First Repository and File</a></li>
+<li><a href="S_hubbranches.html" data-scroll="S_hubbranches" class="active">Working With Branches</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitsolo.html" data-scroll="C_gitsolo" class="internal"><span class="codenumber">4</span> <span class="title">Git Solo</span></a><ul>
+<li><a href="S_gitsetup.html" data-scroll="S_gitsetup" class="internal">Getting Set Up with Git</a></li>
+<li><a href="S_gitedits.html" data-scroll="S_gitedits" class="internal">Editing Files</a></li>
+<li><a href="S_gitfinalize.html" data-scroll="S_gitfinalize" class="internal">Sending Changes Back To GitHub: The Three-Step Process</a></li>
+<li><a href="S_gitpr.html" data-scroll="S_gitpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitsumm.html" data-scroll="S_gitsumm" class="internal">Summary</a></li>
+<li><a href="S_gitbigact.html" data-scroll="S_gitbigact" class="internal">Working Solo: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
+<li class="link">
+<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
+<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
+<li><a href="S_hubcollabsetup.html" data-scroll="S_hubcollabsetup" class="internal">Getting Set Up To Collaborate</a></li>
+<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
+<li><a href="S_hubcollabfetch.html" data-scroll="S_hubcollabfetch" class="internal">Fetching Upstream</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitcollab.html" data-scroll="C_gitcollab" class="internal"><span class="codenumber">6</span> <span class="title">Git Collaboration</span></a><ul>
+<li><a href="S_gitcollabsetup.html" data-scroll="S_gitcollabsetup" class="internal">Getting Set Up: A Few Extra Steps</a></li>
+<li><a href="S_gitcollabedit.html" data-scroll="S_gitcollabedit" class="internal">Collaboration Editing With Git</a></li>
+<li><a href="S_gitcollabfinalize.html" data-scroll="S_gitcollabfinalize" class="internal">Revisiting the Three Step Process</a></li>
+<li><a href="S_gitcollabpr.html" data-scroll="S_gitcollabpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitcollabsumm.html" data-scroll="S_gitcollabsumm" class="internal">Summary</a></li>
+<li><a href="S_gitcollabbigact.html" data-scroll="S_gitcollabbigact" class="internal">Working Together: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="app_commlinecustom.html" data-scroll="app_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
+<li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
+<li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
+<li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
+<li><a href="S_custterm_all.html" data-scroll="S_custterm_all" class="internal">For All</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a><ul>
+<li><a href="S_hubissues.html" data-scroll="S_hubissues" class="internal">The Issues Tab</a></li>
+<li><a href="S_hub-seecommits.html" data-scroll="S_hub-seecommits" class="internal">Commit History</a></li>
+<li><a href="S_hub-about.html" data-scroll="S_hub-about" class="internal">The About Panel</a></li>
+<li><a href="S_hubcollabtree.html" data-scroll="S_hubcollabtree" class="internal">The Branch Tree Diagram (Network Graph)</a></li>
+<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="internal">Deleting a Repository</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">C</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
+<li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
+<li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
+<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
+<li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Says I Have Divergent Branches!</a></li>
+<li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
+<li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
+</ul>
+</li>
+<li class="link"><a href="app_answers.html" data-scroll="app_answers" class="internal"><span class="codenumber">D</span> <span class="title">Answers to All Activities and Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="S_hubbranches"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.3</span> <span class="title">Working With Branches</span>
+</h2>
+<section class="introduction" id="introduction-20"><p id="p-504">Suppose you were writing a three-stanza poem for a contest. The final product must be handwritten on fancy letterhead, in high-quality black pen. As multiple drafts go by, you finalize the first and the third stanza. You're so confident in them that you write them on the letterhead in pen. But you're stuck on the second stanza.</p>
+<p id="p-505">After some introspection and brainstorming, you finally come up with two potential second stanzas. But you can't decide between the two! You decide that the best way to figure out which one you like is to write each one in the poem and see if it flows with the rest. You can't just write one in the official poem (in pen!). What if the one you choose isn't what you like? Then you have to rewrite the entire poem.</p>
+<p id="p-506">Instead, you decide to get out two pieces of scratch paper and write the poem in pencil and with a respective second stanza. That way you can hold them side-by-side and compare their flow. This method makes it easier for you to decide which of the two candidates you prefer. Once you have done so, you write the final stanza in pen on the letterhead and recycle the scratch paper with your drafts.</p>
+<p id="p-507">Believe it or not, this potentially unrealistic example is a great demonstration of what Git and Github call <dfn class="terminology">branches</dfn>. Branches will be used extensively in the coming sections and chapters and are quite important to smoothing out your workflow.</p></section><section class="subsection" id="SS_thinkbranch"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.1</span> <span class="title">Thinking About Branches</span>
+</h3>
+<p id="p-508">Github organizes your edits and changes in a tree-like format. The official, published version of your files always lies on the <dfn class="terminology">main branch</dfn>. You could think of the main branch as the trunk of a tree. When we created our README file back in <a href="S_hubfirstrepo.html" class="internal" title="Section 3.2: The First Repository and File">Section 3.2</a>, we started on the main branch, edited a file, and commited right back to the main branch. It was as if we wrote something new in pen on our official letterhead. See <a href="" class="xref" data-knowl="./knowl/fig-commit-main-poem.html" title="Figure 3.3.1.1">Figure 3.3.1.1</a> as a visualization of this type of commit.</p>
+<figure class="figure figure-like" id="fig-commit-main-poem"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/commit_main_poem.svg" role="img" class="contained" alt="Arrow diagram. Main branch to README right back to main branch through commit"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.1.1<span class="period">.</span></span><span class="space"> </span>Diagram of a commit from <code class="code-inline tex2jax_ignore">main</code> to <code class="code-inline tex2jax_ignore">main</code></figcaption></figure><p id="p-509"><em class="emphasis">This type of editing is usually discouraged.</em> It is best practice to create a new branch, made some edits there, then submit a pull request to merge your changes into the main branch.</p>
+<p id="p-510">Whoa. I said a lot of stuff there. Lots of new words and things you don't know how to do. Don't worry, I'll guide you through it in this section. When you get a new project, you want to try and break it up into pieces. Each piece will have its own branch on the Github tree. For instance, the two poems that you wrote on scratch paper above were two branches off of the official poem. They each had the same first and third stanzas; only their second stanzas differed. See <a href="" class="xref" data-knowl="./knowl/fig-branch-poem.html" title="Figure 3.3.1.2">Figure 3.3.1.2</a> for a visualization of branches in this instance.</p>
+<figure class="figure figure-like" id="fig-branch-poem"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/branch_poem.svg" role="img" class="contained" alt="Arrow diagram. Main branch splits into two branches, Poem 1 and Poem 2."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.1.2<span class="period">.</span></span><span class="space"> </span>Diagram of two branches off of main</figcaption></figure><p id="p-511"> Notice how in <a href="" class="xref" data-knowl="./knowl/fig-branch-poem.html" title="Figure 3.3.1.2">Figure 3.3.1.2</a> that the main branch does not move forward when branches are created, it stops once a branch is made. When you first create a new branch, all you have is a copy of the main branch. However, when you edit your new branch, the changes do not appear into the main branch. Branches are like testing grounds. Try some new things, see if you like them, see if they work, then make it official. “Making it official” with Git and Github is called <dfn class="terminology">committing</dfn> (as we have seen). Two new terms that go with commits<a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-50" id="fn-50"><sup> 50 </sup></a> are <dfn class="terminology">merge</dfn> and <dfn class="terminology">pull request</dfn>. Oftentimes, you will hear people say that they just merged their changes into main. This means they committed their changes to the main branch and updated the official version. With the poem example, there are two possible merges you could make into main, as diagrammed in <a href="" class="xref" data-knowl="./knowl/fig-merge-poem.html" title="Figure 3.3.1.3">Figure 3.3.1.3</a>.</p>
+<figure class="figure figure-like" id="fig-merge-poem"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/merge_poem1.svg" role="img" class="contained" alt="Arrow Diagram. Main branch splits into two branches, Poem 1 and Poem 2. Poem 1 branch goes back into main."></div>
+<div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/merge_poem2.svg" role="img" class="contained" alt="Arrow Diagram. Main branch splits into two branches, Poem 1 and Poem 2. Poem 2 branch goes back into main."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.1.3<span class="period">.</span></span><span class="space"> </span>Diagram showing two possible merges into main</figcaption></figure><p id="p-512">You will also often hear about pull requests. Recall how GitHub allows anyone to edit anyone else's code, but in order to change the official version, they have to ask for permission. The asking for permission is sending a pull request. You are asking the creator of the main branch their permission to pull in your changes. Don't worry too much about this now; we will cover it when we get to multi-person collaboration. You will see the term come up in this chapter however which is why I chose to introduce it here.</p></section><section class="subsection" id="SS_makebranch"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.2</span> <span class="title">Creating a Branch</span>
+</h3>
+<p id="p-513">Creating a branch is not difficult. To do so, first make sure you are on the “Code” tab of your repository titled <code class="code-inline tex2jax_ignore">aboutme</code>. Below the list of tabs, you should have a row of items. The first is a button with a branch-like icon with the word “main”. Next to that, there is the same branch-like icon with “1 branch” and then a tag-like icon with “0 tags” (<a href="" class="xref" data-knowl="./knowl/fig-hub-new-branch.html" title="Figure 3.3.2.1">Figure 3.3.2.1</a>). <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-51" id="fn-51"><sup> 51 </sup></a> Now,</p>
+<ol class="decimal">
+<li id="li-175"><p id="p-514">Click on the word “main”. This will open a drop-down menu with all of your current branches (<a href="" class="xref" data-knowl="./knowl/fig-hub-new-branch.html" title="Figure 3.3.2.1">Figure 3.3.2.1</a>). You probably only have one branch: the main branch.</p></li>
+<li id="li-176"><p id="p-515">We will be adding a part to our README file: our favorite animal. Type <code class="code-inline tex2jax_ignore">animal</code> in to the textbox that appears. Your cursor should navigate their automatically.</p></li>
+<li id="li-177"><p id="p-516">Since we don't have a branch named <code class="code-inline tex2jax_ignore">animal</code>, GitHub asks us if we want to create a new branch with that name. That is indeed what we want to do. Click on “Create branch: animal from 'main'”</p></li>
+</ol>
+<figure class="figure figure-like" id="fig-hub-new-branch"><div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;">
+<div class="sbspanel top" style="width:50%;"><img src="external/hub_new_branch.svg" role="img" class="contained"></div>
+<div class="sbspanel top" style="width:50%;"><img src="external/hub_new_branch_animal.svg" role="img" class="contained"></div>
+</div></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.2.1<span class="period">.</span></span><span class="space"> </span>Reference for creating a new branch on GitHub</figcaption></figure><p id="p-517">Once you have created the new branch <code class="code-inline tex2jax_ignore">animal</code>, your screen will have changed slightly. The branch-like icon with the word “main” has changed to say “animal”. This is how you will know what branch you are looking at. Also notice how it says we have “2 branches”. We do: main and animal. Right underneath those items, you may also notice GitHub has placed a box stating that “This branch is up to date with main.”. This is what we should expect. This statement indicates that the <code class="code-inline tex2jax_ignore">main</code> branch and the <code class="code-inline tex2jax_ignore">animal</code> branch are identical (see <a href="" class="xref" data-knowl="./knowl/fig-hub-animal-initial.html" title="Figure 3.3.2.2">Figure 3.3.2.2</a>).</p>
+<figure class="figure figure-like" id="fig-hub-animal-initial"><div class="image-box" style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="external/hub_animal_initial.svg" role="img" class="contained" alt="Arrow diagram. Main branch to animal branch."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.2.2<span class="period">.</span></span><span class="space"> </span>Diagram mapping branches after creating the animal branch</figcaption></figure><article class="assemblage assemblage-like" id="branchnotes"><h4 class="heading"><span class="title">A Few Notes on Branches.</span></h4>
+<ul id="p-518" class="disc">
+<li id="li-178"><p id="p-519">Take caution when naming branches. You should follow the same guidelines the were discussed with file and folder names in <a href="S_filenames.html" class="internal" title="Section 1.1: File and Folder Names">Section 1.1</a>.</p></li>
+<li id="li-179"><p id="p-520">Branch names should be extremely descriptive in the shortest way possible. It is wise to break up your project into distinct chunks and assign one branch for each chunk.</p></li>
+<li id="li-180"><p id="p-521">It is very easy to get lost within branches. You can create sub-branches off of normal branches. You can delete branches or ignore them. I advise only creating the branches you need at the current moment. If sub-branches (i.e., sub-tasks) are something you are interested in working with, I would recommend keeping a picture of the relationship between branches.</p></li>
+<li id="li-181"><p id="p-522">Once you are done with a branch, delete it. Otherwise, it will clog up your branch list. You can always create it again.</p></li>
+</ul></article></section><section class="subsection" id="SS_workingbranch"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.3</span> <span class="title">Working On a Branch</span>
+</h3>
+<p id="p-523">We named the new branch <code class="code-inline tex2jax_ignore">animal</code> to describe the changes we plan to make: add our favorite animal. Editing a file on a branch is no different than editing a file on <code class="code-inline tex2jax_ignore">main</code>. However, we now have a safeguard. We can edit and commit as much as we want to the <code class="code-inline tex2jax_ignore">animal</code> branch and never make any changes to <code class="code-inline tex2jax_ignore">main</code>. Returning to the analogy at the beginning of the section, we no longer have to write in pen on fancy paper unless we are sure we want to change something.</p>
+<p id="p-524">Hopefully you are able to see the power in this. In a more serious project, commiting too early could have much bigger ramifications. Suppose I am coding a new character for a video game and the character has to use vulgar language. In a simple workflow, I would create a branch called <code class="code-inline tex2jax_ignore">vulgar</code> or <code class="code-inline tex2jax_ignore">new_npc</code> with a sub-branch of <code class="code-inline tex2jax_ignore">language</code>. Then, I would incorporate my code on my branches. Once that was done, I would run my code to test that it worked. Then I would submit a pull request, requesting my boss to pull in my new changes into the official version of the game. They would likely take a look at my code and try it themselves before accepting the changes. But let's say I forgot to add in the censorship beep over the language. If I had just merged right into main, my mistake may have been missed and I could get in serious trouble. But since I worked on a branch, my forgetfulness can be caught before the changes get incorporated and there won't be any flustering to quickly revert changes or fix the error.</p>
+<article class="exercise exercise-like" id="editbranch"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Editing a File On a Branch.</span>
+</h4>
+<p id="p-525">Exploring the ideas in <a href="S_hubfirstrepo.html#hub-editfile" class="internal" title="Subsection 3.2.3: Editing a File">Editing a File</a>, add a level two heading to your README called “My Favorite Animal”. Underneath that, type your favorite animal. Do not commit yet.</p>
+<p id="p-526">The current state of the branch is shown in <a href="" class="xref" data-knowl="./knowl/fig-hub-animal-edit.html" title="Figure 3.3.3.2">Figure 3.3.3.2</a>.</p></article><figure class="figure figure-like" id="fig-hub-animal-edit"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/hub_animal_edit.svg" role="img" class="contained" alt="Arrow diagram. Main branch to animal branch. Animal branch points to new edits."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.3.2<span class="period">.</span></span><span class="space"> </span>Diagram showing branches after add a favorite animal</figcaption></figure><p id="p-527"> After you have made some changes, scroll down to the “Commit changes” section. Now is the time to introduce commit messages. A <dfn class="terminology">commit message</dfn> is a short, but informative (notice a recurring pattern?) note of what your changes do. You may be tempted to skip this when working with yourself. Please try to write the best commit messages <em class="emphasis">at all times</em>. When you look back at your repo in the future, it will be helpful for you to remember what you did. Commit messages also help others who may look at your project know what you did in each commit. You may see my various branch names and commit messages at <a class="external" href="https://github.com/ian-curtis/gitstarted/commits/main" target="_blank">the commit list for this book on GitHub</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-52" id="fn-52"><sup> 52 </sup></a>.</p>
+<p id="p-528">Let's create a commit message for our changes on the <code class="code-inline tex2jax_ignore">animal</code> branch. In the “Commit changes” block, there is a text box that is autofilled with “Update README.md”. This is the default and for some instances may be enough. But I have the tendency to write slightly more detailed messages for my commit and I recommend you do so as well. Instead, type “add favorite animal”. There is no need to add the file name as this message will only be tied to the file(s) you have edited. (Later on, we will see that specific commit messages are only associated with the files you have staged and committed but that's a topic for <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a>.)</p>
+<article class="assemblage assemblage-like" id="commitmessages"><h4 class="heading"><span class="title">A Note On Commit Messages.</span></h4>
+<p id="p-529">It is up to you how to format your message. Some people write in complete sentences while others use incomplete sentences with capital letters. Some people use past tense, others present tense, and even others use present participles (add<em class="emphasis">ing</em>). I choose to use present tense with incomplete sentences and lowercase letters. But that's my preference. You should find what you like and stick with it.</p>
+<p id="p-530">…Except when you're editing someone else's files. In this case, pay attention to how someone else words their commit messages and imitate them. This will make life easier for the owner of the files and for anyone else who looks at the files in the future. You may even find that your commit message is changed by the owner of a repository to match their guidelines.</p></article><p id="p-531">It is not necessary to fill out the description text box (feel free to do so if you would like!). Ensure the “Commit directly to the <code class="code-inline tex2jax_ignore">animal</code> branch.” is selected, then click “Commit changes”.Your file should be updated! Just remember, <em class="emphasis">you have only updated the copy of the file on the <code class="code-inline tex2jax_ignore">animal</code> branch, not <code class="code-inline tex2jax_ignore">main</code></em>.</p>
+<p id="p-532">Navigate back to the code tab to continue. Make sure you are still on the <code class="code-inline tex2jax_ignore">animal</code> branch. You can verify this by looking at the drop-down menu text or by checking the contents of your README file (if your favorite animal is there, you are on the <code class="code-inline tex2jax_ignore">animal</code> branch).</p>
+<figure class="figure figure-like" id="fig-hub-animal-commit"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_animal_commit.svg" role="img" class="contained" alt="Arrow diagram. Main branch to animal branch. Animal branch points to new edits. New edits points back to animal."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.3.3<span class="period">.</span></span><span class="space"> </span>Diagram showing our commit from <code class="code-inline tex2jax_ignore">animal</code> to <code class="code-inline tex2jax_ignore">animal</code></figcaption></figure></section><section class="subsection" id="SS_pullrequest"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.3.4</span> <span class="title">Creating a Pull Request (with Yourself)</span>
+</h3>
+<p id="p-533">Alright, so you've edited a file on a branch AND you are happy with your changes. Everything looks good and works well on the branch so you are ready to incorporate your changes into the official version of your project. This is called creating a <dfn class="terminology">pull request</dfn>. It may sound odd to call it a pull request when it seems like you are actually <em class="emphasis">pushing</em> your changes toward the main branch. However, often with pull requests when collaborating, you don't have permission to access the main branch of another repo, so you have to request that someone <em class="emphasis">pull</em> your changes into the main branch.</p>
+<p id="p-534">I admit, it is silly to have to work with pull requests when working solo. Why would I need to ask myself permission to pull in my own changes? But pull requests are essential when working with multiple collaborators and I recommend using branches and pull requests in your own individual work for practice and good habits.</p>
+<p id="p-535"> Pull requests are only necessary when using branches (recall how when we edited the README file directly from the main branch we had no pull requests). We are currently in a situation that would require a pull request. How do we create one? First notice (on your GitHub repository for the <code class="code-inline tex2jax_ignore">animal</code> branch) how a new message has appeared. This probably says <blockquote class="blockquote" id="blockquote-13">This branch is 1 commit ahead of main.</blockquote> This is GitHub's way of telling you that the branch you are currenlty on has changes that are not reflected on the main branch. Specifically, we have committed one time and the changes from that single commit do not appear on main. We could go and edit the README file some more and commit those changes. In that case, we would be 2 commits ahead of main.</p>
+<p id="p-536">The dialog box that contains this message also has another feature: a “Contribute” option. If you click on this option, a box pops up telling us again that we are 1 commit ahead of main. In green is a button inviting us to “Open pull request”. Click on this.</p>
+<p id="p-537">There is a lot on this page but most of it will be dealt with later. For right now, notice that GitHub tells us which branch we are trying to send to main at the top. <code class="code-inline tex2jax_ignore">animal</code> should be on the right and is pointing towards <code class="code-inline tex2jax_ignore">main</code>. Next to this, you should see a check mark and an “Able to merge” message. This is good; see <a href="S_mergeconflict.html" class="internal" title="Section C.7: Merge Conflicts">Section C.7</a> if your branches cannot be automatically merged.</p>
+<p id="p-538">Your cursor should have automatically navigated to a dialog box. This has defaulted to our latest commit message. You should make sure that you have put an informative message on what your pull request accomplishes as a whole. Remember, it is possible to have multiple commits before opening a pull request so you could have adjusted a few things. For us, “add favorite animal” is sufficient and we can open the pull request. Click on the green “Create pull request” button.</p>
+<p id="p-539">Nice, another new screen. This time notice how we have changed tabs. We are now in the “Pull requests” area, which should make sense. The pull requests page is for more than just accpeting pull requests. If someone else has contributed to your repo and has opened a pull request, you can start a conversation here. Suppose you have a question about someone's changes or think they should improve their addition before you approve it. You can say that here.</p>
+<p id="p-540">But we have no problems with ourselves. Our pull request has been created and is waiting for permission to be pulled into main. In some instances, you will have to wait for a repo owner to accept your pull request. However, you are the repo owner and can <dfn class="terminology">merge</dfn> the changes yourself. You can do this on the current screen. Find the green “Merge pull request” button. GitHub will give you the chance to edit the message if necessary. Since we have no changes to make, click on “Confirm merge”.</p>
+<p id="p-541">Hopefully you were given the “Pull request successfully merged and closed” message. From here, click on “Delete branch”. You should have no fear about deleting the branch at this point. Your changes will not be lost because you just incorporated them into <code class="code-inline tex2jax_ignore">main</code>. You now have two identical copies of the same files and can get rid of the extraneous copy: your old branch. If it makes you feel better, GitHub keeps track of commits and merges. If you ever want to revert back to an old version, you can in <a href="S_hub_revert_commit.html" class="internal" title="Section C.6: Reverting To a Previous Commit">Section C.6</a>. For now, go back to the “Code” tab and verify that your favorite animal appears in the README in the main branch.</p>
+<figure class="figure figure-like" id="fig-hub-animal-merge"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_animal_merge.svg" role="img" class="contained" alt="Arrow diagram. Main branch to animal branch. Animal branch points to new edits. New edits points back to main."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.3.4.1<span class="period">.</span></span><span class="space"> </span>Diagram showing a pull request from <code class="code-inline tex2jax_ignore">animal</code> to <code class="code-inline tex2jax_ignore">main</code></figcaption></figure><article class="exercise exercise-like" id="solo-branch-pr"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.3.4.2</span><span class="period">.</span><span class="space"> </span><span class="title">Branches and Pull Requests.</span>
+</h4>
+<div class="introduction" id="introduction-21"><p id="p-542">It is time to put together what you learned in this section and make some edits of your own. Don't be afraid to look back at what we did earlier for reassurance. Start this exercise on the “Code” tab of your <code class="code-inline tex2jax_ignore">aboutme</code> repo. The goal of this exercise is to add another section to the README file.</p></div>
+<article class="task exercise-like" id="task-46"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-543">Think about something about you that you have not put in the README yet. Perhaps your favorite food, quote, or historical character. Once you have chosen what you want to add, create a branch with an appropriate name.</p></article><article class="task exercise-like" id="task-47"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-544">Edit your README file. You should have at the very least a new level two heading indicating what you are adding and a piece of text with your addition.</p></article><article class="task exercise-like" id="task-48"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-545">Add an approporiate commit message and commit your changes to your new branch.</p></article><article class="task exercise-like" id="task-49"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-546">Open a pull request to merge your changes into the main branch.</p></article><article class="task exercise-like" id="task-50"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-547">Merge your new pull request into main and delete your old branch.</p></article><article class="task exercise-like" id="task-51"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-548">Verify that your change did in fact get merged into main.</p></article></article></section><section class="conclusion" id="conclusion-7"><p id="p-549">Congratulations! Hopefully you have a better understanding of how branches and pull requests work in GitHub (and their potential).</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-50"><div class="fn">Notice how “commit” is both a noun and a verb.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-51"><div class="fn">Your numbers may be different if you played around with GitHub before this step.</div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-52"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/ian-curtis/gitstarted/commits/main</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

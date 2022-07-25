@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-25T10:08:05-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>The First Repository and File</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Better Git Started">
+<meta property="book:author" content="Ian Curtis">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, GitHub, and Git</span></a></h1>
+<p class="byline">Ian Curtis</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_hubnavigate.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_githubsolo.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_hubbranches.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_hubnavigate.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_githubsolo.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_hubbranches.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
+<li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
+<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows)</a></li>
+<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac)</a></li>
+<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux)</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
+<li class="link">
+<a href="C_basics.html" data-scroll="C_basics" class="internal"><span class="codenumber">1</span> <span class="title">Computer Basics</span></a><ul>
+<li><a href="S_filenames.html" data-scroll="S_filenames" class="internal">File and Folder Names</a></li>
+<li><a href="S_fileextensions.html" data-scroll="S_fileextensions" class="internal">File Extensions</a></li>
+<li><a href="S_filepaths.html" data-scroll="S_filepaths" class="internal">File Paths</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_commandline.html" data-scroll="C_commandline" class="internal"><span class="codenumber">2</span> <span class="title">The Command Line</span></a><ul>
+<li><a href="S_whatiscommline.html" data-scroll="S_whatiscommline" class="internal">What is the Command Line?</a></li>
+<li><a href="whereiscommline.html" data-scroll="whereiscommline" class="internal">Where is the Command Line?</a></li>
+<li><a href="S_commands.html" data-scroll="S_commands" class="internal">Basic Commands</a></li>
+<li><a href="S_advcommands.html" data-scroll="S_advcommands" class="internal">Advanced Commands</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-solo.html" data-scroll="part-solo" class="internal"><span class="codenumber">II</span> <span class="title">Working Solo</span></a></li>
+<li class="link">
+<a href="C_githubsolo.html" data-scroll="C_githubsolo" class="internal"><span class="codenumber">3</span> <span class="title">GitHub Solo</span></a><ul>
+<li><a href="S_hubnavigate.html" data-scroll="S_hubnavigate" class="internal">Navigating GitHub</a></li>
+<li><a href="S_hubfirstrepo.html" data-scroll="S_hubfirstrepo" class="active">The First Repository and File</a></li>
+<li><a href="S_hubbranches.html" data-scroll="S_hubbranches" class="internal">Working With Branches</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitsolo.html" data-scroll="C_gitsolo" class="internal"><span class="codenumber">4</span> <span class="title">Git Solo</span></a><ul>
+<li><a href="S_gitsetup.html" data-scroll="S_gitsetup" class="internal">Getting Set Up with Git</a></li>
+<li><a href="S_gitedits.html" data-scroll="S_gitedits" class="internal">Editing Files</a></li>
+<li><a href="S_gitfinalize.html" data-scroll="S_gitfinalize" class="internal">Sending Changes Back To GitHub: The Three-Step Process</a></li>
+<li><a href="S_gitpr.html" data-scroll="S_gitpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitsumm.html" data-scroll="S_gitsumm" class="internal">Summary</a></li>
+<li><a href="S_gitbigact.html" data-scroll="S_gitbigact" class="internal">Working Solo: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
+<li class="link">
+<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
+<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
+<li><a href="S_hubcollabsetup.html" data-scroll="S_hubcollabsetup" class="internal">Getting Set Up To Collaborate</a></li>
+<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
+<li><a href="S_hubcollabfetch.html" data-scroll="S_hubcollabfetch" class="internal">Fetching Upstream</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitcollab.html" data-scroll="C_gitcollab" class="internal"><span class="codenumber">6</span> <span class="title">Git Collaboration</span></a><ul>
+<li><a href="S_gitcollabsetup.html" data-scroll="S_gitcollabsetup" class="internal">Getting Set Up: A Few Extra Steps</a></li>
+<li><a href="S_gitcollabedit.html" data-scroll="S_gitcollabedit" class="internal">Collaboration Editing With Git</a></li>
+<li><a href="S_gitcollabfinalize.html" data-scroll="S_gitcollabfinalize" class="internal">Revisiting the Three Step Process</a></li>
+<li><a href="S_gitcollabpr.html" data-scroll="S_gitcollabpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitcollabsumm.html" data-scroll="S_gitcollabsumm" class="internal">Summary</a></li>
+<li><a href="S_gitcollabbigact.html" data-scroll="S_gitcollabbigact" class="internal">Working Together: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="app_commlinecustom.html" data-scroll="app_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
+<li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
+<li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
+<li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
+<li><a href="S_custterm_all.html" data-scroll="S_custterm_all" class="internal">For All</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a><ul>
+<li><a href="S_hubissues.html" data-scroll="S_hubissues" class="internal">The Issues Tab</a></li>
+<li><a href="S_hub-seecommits.html" data-scroll="S_hub-seecommits" class="internal">Commit History</a></li>
+<li><a href="S_hub-about.html" data-scroll="S_hub-about" class="internal">The About Panel</a></li>
+<li><a href="S_hubcollabtree.html" data-scroll="S_hubcollabtree" class="internal">The Branch Tree Diagram (Network Graph)</a></li>
+<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="internal">Deleting a Repository</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">C</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
+<li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
+<li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
+<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
+<li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Says I Have Divergent Branches!</a></li>
+<li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
+<li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
+</ul>
+</li>
+<li class="link"><a href="app_answers.html" data-scroll="app_answers" class="internal"><span class="codenumber">D</span> <span class="title">Answers to All Activities and Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="S_hubfirstrepo"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">The First Repository and File</span>
+</h2>
+<section class="introduction" id="introduction-18"><p id="p-456">Buckle your seatbelts! Here we go into GitHub and the first repository. In this section, we will create a repository with some information about ourselves. I recommend that you don't just read the book; follow along with your own account. Practice makes improvement!</p></section><section class="subsection" id="hub-createrepo"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.1</span> <span class="title">Creating a Repository</span>
+</h3>
+<p id="p-457">There are a few different ways to create a new repo (remember this abbreviation? see <a href="S_hubnavigate.html#hub-profile" class="internal" title="Subsection 3.1.2: The Profile Page">Subsection 3.1.2</a>).</p>
+<ol class="decimal">
+<li id="li-161">
+<p id="p-458">In the top right of the page, next to the profile avatar we saw in <a href="S_hubnavigate.html" class="internal" title="Section 3.1: Navigating GitHub">Section 3.1</a>, there is a plus (+) sign. Click on that and then “new repository”.</p>
+<p id="p-459">Note: GitHub differentiates bewteen a repository and a project. Don't get confused. We want repository (and you will want that for most purposes).</p>
+</li>
+<li id="li-162"><p id="p-460">From the <a class="external" href="https://github.com" target="_blank">GitHub homepage</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-44" id="fn-44"><sup> 44 </sup></a> there is a section on the left called “Repositories”. Next to the title is a green button that says “New”. Click on that.</p></li>
+<li id="li-163"><p id="p-461">If you navigate to the profile avatar in the top right, and click on “Your repositories”, there will also be a green “New” button near the top.</p></li>
+</ol>
+<p class="continuation">Each of these three methods will get you to the same page. It doesn't matter which one you click.</p>
+<figure class="figure figure-like" id="fig-hub-new-repo"><div class="sidebyside"><div class="sbsrow" style="margin-left:2.5%;margin-right:2.5%;">
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/hub_new_repo_navbar.svg" role="img" class="contained" alt="Where to click for a new repo from the navigation bar"></div>
+<div class="sbspanel top" style="width:47.3684210526316%;"><img src="external/hub_new_repo_home.svg" role="img" class="contained" alt="Where to click for a new repo from the home page"></div>
+</div></div>
+<div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_new_repo_yourrepos.svg" role="img" class="contained" alt="Where to click for a new repo from the “Your repositories” page"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.1.1<span class="period">.</span></span><span class="space"> </span>Various Methods to Create a New Repo</figcaption></figure><article class="exercise exercise-like" id="exercise-11"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.1.2</span><span class="period">.</span>
+</h4>
+<p id="p-462">Let's begin the process of creating our first repo. Use one of the methods above get into the “Create a new repository” screen (<a href="" class="xref" data-knowl="./knowl/fig-hub-new-repo-screen.html" title="Figure 3.2.1.3">Figure 3.2.1.3</a>).</p></article><figure class="figure figure-like" id="fig-hub-new-repo-screen"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_new_repo_screen.svg" role="img" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.1.3<span class="period">.</span></span><span class="space"> </span>The New Repository Screen</figcaption></figure><p id="p-463">It is not difficult to create a repo. It is difficult, however, to come up with a repo name. Repository name requirements are similar to the conventions for file and folder names (<a href="S_filenames.html" class="internal" title="Section 1.1: File and Folder Names">Section 1.1</a>) in that they can have no spaces and should briefly describe what the repo is for. <em class="emphasis">Please take the time to think about your repo names before you create them.</em> Renaming repositories is possible, but can cause complications in the future (such as broken links). Again, names should be short, to the point, and descriptive. The repo name for this book is “gitstarted”, the shortened title.</p>
+<p id="p-464">If you are thinking “Wait! I don't know the details of my project!” then you are not alone. The problem with this is that you have to decide what your repo is going to be about before you name it. I have definitely been victim to this and have made some rather stupid names that I should've made better. For right now, I will tell you what to name your repo. In the future, it might be best to start with a private repo and then change the name (if you need to) before you make it public. Otherwise, just be aware of the consequences should you change it at any other time.</p>
+<p id="p-465">In the “Repository name” box, type the name <code class="code-inline tex2jax_ignore">aboutme</code>. Adding a description is optional and is not necessary for us right now. Next is the viewability. You may choose to make your repos private (only you and authorized collaborators can view/edit) or public (everyone can view and attempt to edit, only you and authorized collabortors can approve edits). It does not matter what you select for this; do whatever your heart desires.</p>
+<p id="p-466"> The next step deals with certain files that can be automatically added to your repo. You have the choice for either or none of a <code class="code-inline tex2jax_ignore">README</code> file, a <code class="code-inline tex2jax_ignore">.gitignore</code>, and a license. A <dfn class="terminology">README file</dfn> gives all the pertinent information about your repository in an easy-to-read format. It is often the first thing that people visiting your repo will read and is very important. Check this box and we will come back to the <code class="code-inline tex2jax_ignore">README</code> file in just a minute. A <dfn class="terminology">gitignore</dfn> file tells Git all of the files <em class="emphasis">not</em> to put online. Do not check this box for now; it will be very useful later on, but is not needed now. You can also choose to put a <dfn class="terminology">license</dfn> on your code which lets users know what they can and cannot do. If you would like to explore the different licenses, please visit <a class="external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository" target="_blank">the GitHub documentation</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-45" id="fn-45"><sup> 45 </sup></a>. Since we will delete this repo later, you do not have to select this option.</p>
+<p id="p-467">You now should have entered “aboutme” into the name box, selected if you wanted the repo to be public or private, and checked the <code class="code-inline tex2jax_ignore">README</code> box. Now, click the green “Create repository” button to finalize the process.</p></section><section class="subsection" id="hub-explorerepo"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.2</span> <span class="title">Exploring the Code Tab</span>
+</h3>
+<p id="p-468">Whew, we made it! A new repo has just been created…aaaaand a lot of new buttons and options just appeared. A lot of new unfamiliar words and tabs. Please don't give up here! I will go through all of the important aspects. Many of the pieces are not applicable to beginners and some will not be applicable until we start working with Git and GitHub together. In this section, I will only be explaining the key features and will slowly add in more as we learn more about GitHub.</p>
+<figure class="figure figure-like" id="fig-hub-repo-tabs"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/hub_repo_tabs.svg" role="img" class="contained" alt="The top of the newly-created repository screen. Username, repo name, and various tabs (Code, Issues, Pull requests, etc.)"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.2.1<span class="period">.</span></span><span class="space"> </span>The main new repository contents</figcaption></figure><p id="p-469">Assuming you didn't click on anything, you should see a pretty empty page. In the top left, you should see your username and your repo name. This is common throughout GitHub so you always know where you are. Underneath that is a set of tabs that can be used to navigate through the repository-level settings and options (see <a href="" class="xref" data-knowl="./knowl/fig-hub-repo-tabs.html" title="Figure 3.2.2.1">Figure 3.2.2.1</a>). You should currently be on the “Code” tab. As may be expected, this tab displays all of the files associated with the repo; it is the “home page” for every repository. You should see that a <code class="code-inline tex2jax_ignore">README.md</code> file shows up. Also notice that the contents of the README are displayed under the list of files. GitHub knows how important the READMEs are to explaining code that it automatically displays the contents of the file. Right now, ours is empty (except for the default title).</p>
+<p id="p-470">To summarize, this is all you should care about for now:</p>
+<ul class="disc">
+<li id="li-164"><p id="p-471">The navigation at the top</p></li>
+<li id="li-165"><p id="p-472">The content of the “Code” tab</p></li>
+<li id="li-166"><p id="p-473">Noticing our README file in the list of files</p></li>
+<li id="li-167"><p id="p-474">Noticing the contents of the README file underneath the list of files</p></li>
+</ul></section><section class="subsection" id="hub-editfile"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">3.2.3</span> <span class="title">Editing a File</span>
+</h3>
+<p id="p-475">Well, we have a README file, let's edit it! GitHub makes it rather simple to edit files. There are a two main ways to edit the README file on GitHub:</p>
+<ol class="decimal">
+<li id="li-168"><p id="p-476">Click on the file name <code class="code-inline tex2jax_ignore">README.md</code> in the list of files. Click on the pencil icon on the right of the header of the README file.</p></li>
+<li id="li-169"><p id="p-477">Click on the pencil icon found along the header of the README file (under the list of files).</p></li>
+</ol>
+<figure class="figure figure-like" id="fig-hub-edit-readme"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_edit_readme_code.svg" role="img" class="contained" alt="Pencil icon on the README file found on the Code tab under the list of files."></div>
+<div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_edit_readme_file.svg" role="img" class="contained" alt="Pencil icon on the README file found after clicking on the README file in the list of files."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.3.1<span class="period">.</span></span><span class="space"> </span>Two ways to edit a README file</figcaption></figure><article class="exercise exercise-like" id="exercise-12"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.3.2</span><span class="period">.</span>
+</h4>
+<p id="p-478">Use one of the methods above to open the README file and get to its editing screen.</p></article><p id="p-479">As discussed in <a href="S_fileextensions.html" class="internal" title="Section 1.2: File Extensions">Section 1.2</a>, a file ending with <code class="code-inline tex2jax_ignore">.md</code> is a markdown file. All README files should be markdown files and are able to understand markdown syntax. Essentially, markdown allows us to communicate basic word processing functions simply by typing certain symbols. Have you ever noticed that you can't bold or italicize text in Google? <kbd class="kbdkey">Control</kbd> (<kbd class="kbdkey">Command</kbd>) + <kbd class="kbdkey">B</kbd> or <kbd class="kbdkey">I</kbd> don't work there! They also won't work in markdown files, unfortunately. But that doesn't mean we can't bold or italicize text. I will not discuss everything on markdown here, so some basic functions are below. It will be in your best interest to become familiar with markdown and its more advanced features sooner rather than later.</p>
+<article class="assemblage assemblage-like" id="markdown"><h4 class="heading"><span class="title">Markdown Basics.</span></h4>
+<p id="p-480">The most basic markdown tool is simple text. Just type like you normally would into the text field and the result will be normal, unformatted text. However…</p>
+<ul class="disc">
+<li id="li-170"><p id="p-481">To italicize a word or phrase, put one asterisk around it: <code class="code-inline tex2jax_ignore">*I'm italicized*</code></p></li>
+<li id="li-171"><p id="p-482">To bold a word or phrase, put two asterisks around it: <code class="code-inline tex2jax_ignore">**I'm bold**</code></p></li>
+<li id="li-172"><p id="p-483">To create headings, place hashtags (pound signs, if you insist)  and a space before the text you wish to be in the heading: <code class="code-inline tex2jax_ignore"># A Title</code>. The more hashtags you add, the deeper the heading level. Thus, <code class="code-inline tex2jax_ignore">## A Subheading</code> is a level two heading whereas <code class="code-inline tex2jax_ignore">### Another Subheading</code> is a level three heading.</p></li>
+<li id="li-173"><p id="p-484">To create a bulleted list, start a line with an asterisk (*) and a space. For numbered lists, start a line with a number and a period (and a space).</p></li>
+<li id="li-174"><p id="p-485">To put words into a code cell, place a backtick around the code: <code class="code-inline tex2jax_ignore">`import requests`</code>. (The backtick is located to the left of the 1 key on American keyboards.)</p></li>
+</ul>
+<p class="continuation">You can also add images, gifs, links, links with text intead of urls, tables, and multi-line code chunks. For more information, see <a class="external" href="https://www.markdownguide.org/basic-syntax/" target="_blank">Basic Markdown Syntax</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-46" id="fn-46"><sup> 46 </sup></a> and <a class="external" href="https://www.markdownguide.org/extended-syntax/" target="_blank">Extended Markdown Syntax</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-47" id="fn-47"><sup> 47 </sup></a>.</p>
+<p id="p-486">It is also important to note that GitHub Markdown differs slightly from other flavors of Markdown. See <a class="external" href="https://gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f" target="_blank">a nice table from GitHub user vimtaai</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-48" id="fn-48"><sup> 48 </sup></a>.</p></article><article class="exercise exercise-like" id="try-markdown"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.3.3</span><span class="period">.</span>
+</h4>
+<div class="introduction" id="introduction-19">
+<p id="p-487">Let's practice your markdown skills! Here, you will make the "aboutme" repo name true. Feel free to use the guidelines and sources above. You could also search online if you aren't sure how to do what you want to do. I have provided my (basic) example <a class="external" href="https://github.com/ian-curtis/gitstarted" target="_blank">in the repo for this book</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-49" id="fn-49"><sup> 49 </sup></a> (titled <code class="code-inline tex2jax_ignore">README_aboutme.md</code> in the <code class="code-inline tex2jax_ignore">book-activities</code> folder). But be creative! There aren't any “right” answers here.</p>
+<p id="p-488">Github is pretty cool in that it will show you realtime updates of what your Markdown file will look like after you're done typing. There is a “Preview” tab right above the first line of your README file (you are currently on “Edit file”). After each task below, check the preview to verify that what you typed worked as expected.</p>
+</div>
+<article class="task exercise-like" id="task-39"><h5 class="heading"><span class="codenumber">(a)</span></h5>
+<p id="p-489">Currently, the title of the README is the repo name. Change the title to a more human-readable one.</p></article><article class="task exercise-like" id="task-40"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-490">In the first paragraph, type your name (or your username), how many pets you have, and your favorite hobby.</p></article><article class="task exercise-like" id="task-41"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-491">In a second paragraph, type a sentence stating who your favorite music artist is. Then, make an ordered list of your favorite songs from that artist.</p></article><article class="task exercise-like" id="task-42"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<p id="p-492">Create a heading level two titled “Oh Look, More Things About Me”</p></article><article class="task exercise-like" id="task-43"><h5 class="heading"><span class="codenumber">(e)</span></h5>
+<p id="p-493">In a third paragraph, write two sentences with two cool facts about you. These could be made up, no one will know! After those facts, create an unordered list of your favorite musical artists after the one in the second paragraph.</p></article><article class="task exercise-like" id="task-44"><h5 class="heading"><span class="codenumber">(f)</span></h5>
+<p id="p-494">Go back to the previous paragraphs and bold two words and italicize two words.</p></article><article class="task exercise-like" id="task-45"><h5 class="heading"><span class="codenumber">(g)</span></h5>
+<p id="p-495">Extra Credit: Add an image, a nested list of your favorite colors and why they are your favorite, a link to your favorite YouTube video, and, if you know a coding language, some code.</p></article><div class="conclusion" id="conclusion-5"><p id="p-496">Don't leave your file yet! There's one more thing left to do.</p></div></article><figure class="figure figure-like" id="fig-hub-commit"><div class="image-box" style="width: 90%; margin-left: 5%; margin-right: 5%;"><img src="external/hub_commit.svg" role="img" class="contained" alt="Shows dialog box of commit message, description, commit branch, and commit button for a commit on GitHub"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">3.2.3.4<span class="period">.</span></span><span class="space"> </span>The GitHub Commit Changes Dialog</figcaption></figure><p id="p-497"> Right now, we have only edited the file, but we haven't told Github that we wish to keep our edits. It's as if we edited a document, but never clicked save! But if you scroll down to the bottom of the page, you'll see that there is no “save” button. You should see a green “Commit changes” button, as in <a href="" class="xref" data-knowl="./knowl/fig-hub-commit.html" title="Figure 3.2.3.4">Figure 3.2.3.4</a>. This is important. Github uses <dfn class="terminology">commit</dfn> when indicating that you are about to officially upload your changes to your repo. This is your last change to change anything. When you think you are done, go ahead and commit your changes (commit directly to the main branch). Your changes should be represented. Navigate back to the Code tab to prepare for the next section.</p>
+<p id="p-498">Take care to notice the difference between committing and saving. Saving is easy. You can add a word, then save. Add a word, save. And so on. Think of commiting as adding a word, saving, <em class="emphasis">and closing the document</em>. Now everytime you want to add another word you have to open the entire document again, add the word, save, and close the document again. This system is put in place to help with version control. Instead of there being one version for each new word you add, there is one version for each commit. Each commit represents a stamp on the version control timeline. When coding, you save your files, but commit your changes. This will become more apparent when we work with Git and with multiple files.</p>
+<p id="p-499">It might be worth saying again just to make sure you've got it. Instead of there being one version for each new word you add, there is one version for each commit. Projects are typically broken up into tiny pieces. Each of these pieces would correspond to a commit. So if something goes wrong, you can revert back to a previous commit. We don't want commits to be for every word since it would take forever to find the commit you want to revert to. Conversely, we don't want commits to contain too many edits as that would require more work if we had to revert backwards.</p>
+<article class="assemblage assemblage-like" id="ex-commit"><h4 class="heading"><span class="title">An Extra Commit Example.</span></h4>
+<p id="p-500">Let's consider one example to help understand the benefits of thinking in commits. Suppose I was working on a small video game and I was tasked with creating different worlds a character could visit. With commits in mind, I decide to break down the task into chunks: I will build one world at a time. When I am done with one world, I will commit. When I am done with another world, I will commit a second time. And so on.</p>
+<p id="p-501">This is different than creating a window in a building in the first world, then saving. Then creating two more windows and a door, then saving. Then adding some a tree and some flowers, then saving. We save much more often than we commit. But <em class="emphasis">we save using our computer and commit using Git/Gitub.</em> I would never save to Github or commit to my computer. Saving is light, commiting is heavy.</p>
+<p id="p-502">That being said, do make sure to save your files! You want to save your progress on your computer, but there is no need to commit after each time you save.</p></article></section><section class="conclusion" id="conclusion-6"><p id="p-503">You know should feel slightly more comfortable with the Code tab and editing a file on Github. The next chapter will look at branches which help with adding new features to our code.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-44"><div class="fn"><code class="code-inline tex2jax_ignore">github.com</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-45"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-46"><div class="fn"><code class="code-inline tex2jax_ignore">www.markdownguide.org/basic-syntax/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-47"><div class="fn"><code class="code-inline tex2jax_ignore">www.markdownguide.org/extended-syntax/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-48"><div class="fn"><code class="code-inline tex2jax_ignore">gist.github.com/vimtaai/99f8c89e7d3d02a362117284684baa0f</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-49"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/ian-curtis/gitstarted</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

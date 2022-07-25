@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-25T10:08:04-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>File Extensions</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Better Git Started">
+<meta property="book:author" content="Ian Curtis">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, GitHub, and Git</span></a></h1>
+<p class="byline">Ian Curtis</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_filenames.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_basics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="S_filepaths.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_filenames.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_basics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="S_filepaths.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
+<li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
+<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows)</a></li>
+<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac)</a></li>
+<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux)</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
+<li class="link">
+<a href="C_basics.html" data-scroll="C_basics" class="internal"><span class="codenumber">1</span> <span class="title">Computer Basics</span></a><ul>
+<li><a href="S_filenames.html" data-scroll="S_filenames" class="internal">File and Folder Names</a></li>
+<li><a href="S_fileextensions.html" data-scroll="S_fileextensions" class="active">File Extensions</a></li>
+<li><a href="S_filepaths.html" data-scroll="S_filepaths" class="internal">File Paths</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_commandline.html" data-scroll="C_commandline" class="internal"><span class="codenumber">2</span> <span class="title">The Command Line</span></a><ul>
+<li><a href="S_whatiscommline.html" data-scroll="S_whatiscommline" class="internal">What is the Command Line?</a></li>
+<li><a href="whereiscommline.html" data-scroll="whereiscommline" class="internal">Where is the Command Line?</a></li>
+<li><a href="S_commands.html" data-scroll="S_commands" class="internal">Basic Commands</a></li>
+<li><a href="S_advcommands.html" data-scroll="S_advcommands" class="internal">Advanced Commands</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-solo.html" data-scroll="part-solo" class="internal"><span class="codenumber">II</span> <span class="title">Working Solo</span></a></li>
+<li class="link">
+<a href="C_githubsolo.html" data-scroll="C_githubsolo" class="internal"><span class="codenumber">3</span> <span class="title">GitHub Solo</span></a><ul>
+<li><a href="S_hubnavigate.html" data-scroll="S_hubnavigate" class="internal">Navigating GitHub</a></li>
+<li><a href="S_hubfirstrepo.html" data-scroll="S_hubfirstrepo" class="internal">The First Repository and File</a></li>
+<li><a href="S_hubbranches.html" data-scroll="S_hubbranches" class="internal">Working With Branches</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitsolo.html" data-scroll="C_gitsolo" class="internal"><span class="codenumber">4</span> <span class="title">Git Solo</span></a><ul>
+<li><a href="S_gitsetup.html" data-scroll="S_gitsetup" class="internal">Getting Set Up with Git</a></li>
+<li><a href="S_gitedits.html" data-scroll="S_gitedits" class="internal">Editing Files</a></li>
+<li><a href="S_gitfinalize.html" data-scroll="S_gitfinalize" class="internal">Sending Changes Back To GitHub: The Three-Step Process</a></li>
+<li><a href="S_gitpr.html" data-scroll="S_gitpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitsumm.html" data-scroll="S_gitsumm" class="internal">Summary</a></li>
+<li><a href="S_gitbigact.html" data-scroll="S_gitbigact" class="internal">Working Solo: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
+<li class="link">
+<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
+<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
+<li><a href="S_hubcollabsetup.html" data-scroll="S_hubcollabsetup" class="internal">Getting Set Up To Collaborate</a></li>
+<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
+<li><a href="S_hubcollabfetch.html" data-scroll="S_hubcollabfetch" class="internal">Fetching Upstream</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitcollab.html" data-scroll="C_gitcollab" class="internal"><span class="codenumber">6</span> <span class="title">Git Collaboration</span></a><ul>
+<li><a href="S_gitcollabsetup.html" data-scroll="S_gitcollabsetup" class="internal">Getting Set Up: A Few Extra Steps</a></li>
+<li><a href="S_gitcollabedit.html" data-scroll="S_gitcollabedit" class="internal">Collaboration Editing With Git</a></li>
+<li><a href="S_gitcollabfinalize.html" data-scroll="S_gitcollabfinalize" class="internal">Revisiting the Three Step Process</a></li>
+<li><a href="S_gitcollabpr.html" data-scroll="S_gitcollabpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitcollabsumm.html" data-scroll="S_gitcollabsumm" class="internal">Summary</a></li>
+<li><a href="S_gitcollabbigact.html" data-scroll="S_gitcollabbigact" class="internal">Working Together: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="app_commlinecustom.html" data-scroll="app_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
+<li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
+<li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
+<li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
+<li><a href="S_custterm_all.html" data-scroll="S_custterm_all" class="internal">For All</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a><ul>
+<li><a href="S_hubissues.html" data-scroll="S_hubissues" class="internal">The Issues Tab</a></li>
+<li><a href="S_hub-seecommits.html" data-scroll="S_hub-seecommits" class="internal">Commit History</a></li>
+<li><a href="S_hub-about.html" data-scroll="S_hub-about" class="internal">The About Panel</a></li>
+<li><a href="S_hubcollabtree.html" data-scroll="S_hubcollabtree" class="internal">The Branch Tree Diagram (Network Graph)</a></li>
+<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="internal">Deleting a Repository</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">C</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
+<li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
+<li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
+<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
+<li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Says I Have Divergent Branches!</a></li>
+<li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
+<li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
+</ul>
+</li>
+<li class="link"><a href="app_answers.html" data-scroll="app_answers" class="internal"><span class="codenumber">D</span> <span class="title">Answers to All Activities and Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="S_fileextensions"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">File Extensions</span>
+</h2>
+<section class="introduction" id="introduction-6"><p id="p-236">There are many different types of files. At the very basics, we have images, videos, documents, and songs, but there are so many more. Even within each of those categories, there are numerous types. You may be familiar with a PDF and a Word Document. Both of those could be classified as “documents”, but are interacted with very differently. Whether you are an advanced computer programmer or someone who uses a computer for every-day purposes, an understanding of file extensions is essential. <dfn class="terminology">File extensions</dfn> help us understand what type of file we are working with and give us an idea of how we can interact with that file. The following chunks give common (and some not so common) extensions for various categories. Refer back to this section often, espeically if you find yourself forgetting what a file is.</p>
+<p id="p-237">Hint: <kbd class="kbdkey">Control</kbd> + <kbd class="kbdkey">F</kbd> or <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">F</kbd> work well on this page.</p></section><section class="subsection" id="extensions-images"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Images</span>
+</h3>
+<p id="p-238">Why would we need more than on extension for an image? A photo is a photo, right? Wrong. Each of the file extensions have unique aspects and features. For instance, the Apple <code class="code-inline tex2jax_ignore">.heic</code> file often takes up less storage space. However, not all programs can open them. The <a class="external" href="https://guides.lib.umich.edu/c.php?g=282942&amp;p=1885348" target="_blank">University of Michigan</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 21 </sup></a> and <a class="external" href="https://kinsta.com/blog/image-file-types/" target="_blank">Kinsta</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-22" id="fn-22"><sup> 22 </sup></a> have great guides on the differences between some image file extensions. The table here just lists the extensions and what they are, not the details on their use.</p>
+<figure class="table table-like" id="tbl-image-extensions"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.1.1<span class="period">.</span></span><span class="space"> </span>Image File Extensions</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">File Type</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">.jpg</code> or <code class="code-inline tex2jax_ignore">.jpeg</code>
+</td>
+<td class="c m b0 r0 l0 t0 lines">Joint Photographic Experts Groups image</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.png</code></td>
+<td class="c m b0 r0 l0 t0 lines">Portable Network Graphics image</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.svg</code></td>
+<td class="c m b0 r0 l0 t0 lines">Scalable Vector Graphics image</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.gif</code></td>
+<td class="c m b0 r0 l0 t0 lines">A looped image/video blend</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.eps</code></td>
+<td class="c m b0 r0 l0 t0 lines">Encapsulated PostScript (vector) image</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.bmp</code></td>
+<td class="c m b0 r0 l0 t0 lines">Bitmap image</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">.tif</code> or <code class="code-inline tex2jax_ignore">.tiff</code>
+</td>
+<td class="c m b0 r0 l0 t0 lines">Tagged Image File Format</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.raw</code></td>
+<td class="c m b0 r0 l0 t0 lines">Raw image (usually from a camera)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.HEIF</code></td>
+<td class="c m b0 r0 l0 t0 lines">High Efficiency Image File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.HEIC</code></td>
+<td class="c m b0 r0 l0 t0 lines">High Efficiency Image Container (Apple)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.psd</code></td>
+<td class="c m b0 r0 l0 t0 lines">Adobe Photoshop</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.ai</code></td>
+<td class="c m b0 r0 l0 t0 lines">Adobe Illustrator</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="extensions-videos"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Videos</span>
+</h3>
+<p id="p-239"><a class="external" href="https://www.adobe.com/creativecloud/video/discover/best-video-format.html" target="_blank">Adobe</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-23" id="fn-23"><sup> 23 </sup></a> has a great guide on the differences between some video file extensions. The table here just lists the extensions and what they are, not the details on their use.</p>
+<figure class="table table-like" id="tbl-video-extensions"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.2.1<span class="period">.</span></span><span class="space"> </span>Video File Extensions</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">File Type</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.mp4</code></td>
+<td class="c m b0 r0 l0 t0 lines">MPEG-4</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.mov</code></td>
+<td class="c m b0 r0 l0 t0 lines">QuickTime Movie</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.wmv</code></td>
+<td class="c m b0 r0 l0 t0 lines">Windows Media Viewer</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.avi</code></td>
+<td class="c m b0 r0 l0 t0 lines">Audio Video Interleave</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.prproj</code></td>
+<td class="c m b0 r0 l0 t0 lines">Adobe Premiere Pro Project</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.aep</code></td>
+<td class="c m b0 r0 l0 t0 lines">Adobe After Effect Project</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.fcp</code></td>
+<td class="c m b0 r0 l0 t0 lines">Apple Final Cut Project</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.camproj</code></td>
+<td class="c m b0 r0 l0 t0 lines">Camtasia Project</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.m4v</code></td>
+<td class="c m b0 r0 l0 t0 lines">iTunes Movie File</td>
+</tr>
+</table></div></figure></section><section class="subsection" id="extensions-docs"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">Documents</span>
+</h3>
+<p id="p-240">There are many different file extensions that refer to documents. Many of them you will never encounter. Only the main file types are listed here. <a class="external" href="https://blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/" target="_blank">File Stack</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-24" id="fn-24"><sup> 24 </sup></a> has a good explanation on some of the file types here.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">File Type</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">.doc</code> or <code class="code-inline tex2jax_ignore">.docx</code>
+</td>
+<td class="c m b0 r0 l0 t0 lines">Microsoft Word Document</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">.xsl</code> or <code class="code-inline tex2jax_ignore">.xslx</code>
+</td>
+<td class="c m b0 r0 l0 t0 lines">Microsoft Excel Spreadsheet</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">.ppt</code> or <code class="code-inline tex2jax_ignore">.pptx</code>
+</td>
+<td class="c m b0 r0 l0 t0 lines">Microsoft PowerPoint Presentation</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.pages</code></td>
+<td class="c m b0 r0 l0 t0 lines">Apple Document</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.key</code></td>
+<td class="c m b0 r0 l0 t0 lines">Apple Keynote Presentation</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.numbers</code></td>
+<td class="c m b0 r0 l0 t0 lines">Apple Numbers Spreadsheet</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.pdf</code></td>
+<td class="c m b0 r0 l0 t0 lines">Adobe Portable Document Format</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.rtf</code></td>
+<td class="c m b0 r0 l0 t0 lines">Rich Text Format Document</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.txt</code></td>
+<td class="c m b0 r0 l0 t0 lines">Plain Text Document</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.log</code></td>
+<td class="c m b0 r0 l0 t0 lines">Text Log File (often records messages)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.md</code></td>
+<td class="c m b0 r0 l0 t0 lines">MarkDown Document</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.Rmd</code></td>
+<td class="c m b0 r0 l0 t0 lines">MarkDown Document for use in R</td>
+</tr>
+</table></div>
+<p id="p-241">Note: technically, <code class="code-inline tex2jax_ignore">.html</code> and <code class="code-inline tex2jax_ignore">.xml</code> are considered document-type files. I am choosing to place them under coding-type files instead.</p></section><section class="subsection" id="extensions-audio"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">Audio</span>
+</h3>
+<p id="p-242"><a class="external" href="https://www.makeuseof.com/tag/audio-file-format-right-needs/" target="_blank">makeuseof.com</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-25" id="fn-25"><sup> 25 </sup></a> has great descriptions of the most common audio file types.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">File Type</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.mp3</code></td>
+<td class="c m b0 r0 l0 t0 lines">MPEG Layer 3 (lossy compression)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.wav</code></td>
+<td class="c m b0 r0 l0 t0 lines">Waveform Audio Format (uncompressed)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.aiff</code></td>
+<td class="c m b0 r0 l0 t0 lines">Audio Interchange File Format (uncompressed)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.aac</code></td>
+<td class="c m b0 r0 l0 t0 lines">Advanced Audio Coding (lossy compression)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.wma</code></td>
+<td class="c m b0 r0 l0 t0 lines">Windows Media Audio (lossy compression)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.flac</code></td>
+<td class="c m b0 r0 l0 t0 lines">Free Lossless Audio Codec (lossless compression)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">.aa</code> or <code class="code-inline tex2jax_ignore">.aax</code>
+</td>
+<td class="c m b0 r0 l0 t0 lines">Audible Audio File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.m4a</code></td>
+<td class="c m b0 r0 l0 t0 lines">Audio-Only MPEG-4 (iTunes)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.midi</code></td>
+<td class="c m b0 r0 l0 t0 lines">MIDI File</td>
+</tr>
+</table></div></section><section class="subsection" id="extensions-coding"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.5</span> <span class="title">Coding and Programming</span>
+</h3>
+<p id="p-243">There is a plethora of programming languages, software, and interfaces and each of them uses a different file extension.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">File Type</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.R</code></td>
+<td class="c m b0 r0 l0 t0 lines">R Script</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.py</code></td>
+<td class="c m b0 r0 l0 t0 lines">Python Script</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.ipynb</code></td>
+<td class="c m b0 r0 l0 t0 lines">Jupyter Notebook</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.html</code></td>
+<td class="c m b0 r0 l0 t0 lines">HyperText Markup Language</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.css</code></td>
+<td class="c m b0 r0 l0 t0 lines">Cascading Style Sheets</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.js</code></td>
+<td class="c m b0 r0 l0 t0 lines">Javascript</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.sas</code></td>
+<td class="c m b0 r0 l0 t0 lines">SAS Script</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.xml</code></td>
+<td class="c m b0 r0 l0 t0 lines">eXtensible Markup Language</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.xslt</code></td>
+<td class="c m b0 r0 l0 t0 lines">eXtensible Style Sheet Transformations</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.ptx</code></td>
+<td class="c m b0 r0 l0 t0 lines">PreTeXt Markup File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.tex</code></td>
+<td class="c m b0 r0 l0 t0 lines">LaTeX Document (typically for mathematics)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.c</code></td>
+<td class="c m b0 r0 l0 t0 lines">C and C++ File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.cpp</code></td>
+<td class="c m b0 r0 l0 t0 lines">C++ File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.java</code></td>
+<td class="c m b0 r0 l0 t0 lines">Java Source</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.swift</code></td>
+<td class="c m b0 r0 l0 t0 lines">Swift Code File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.vb</code></td>
+<td class="c m b0 r0 l0 t0 lines">Visual Basic File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.vbs</code></td>
+<td class="c m b0 r0 l0 t0 lines">Visual Basic Script</td>
+</tr>
+</table></div></section><section class="subsection" id="extensions-data"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.6</span> <span class="title">Data</span>
+</h3>
+<p id="p-244">Many of these extensions also belong in <a href="S_fileextensions.html#extensions-docs" class="internal" title="Subsection 1.2.3: Documents">Subsection 1.2.3</a> but are related enough to merit another subsection.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">File Type</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.csv</code></td>
+<td class="c m b0 r0 l0 t0 lines">Comma Separated Values</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines">
+<code class="code-inline tex2jax_ignore">.tsv</code> or <code class="code-inline tex2jax_ignore">.tab</code>
+</td>
+<td class="c m b0 r0 l0 t0 lines">Tab Separated Values</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.json</code></td>
+<td class="c m b0 r0 l0 t0 lines">JavaScript Object Notation</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.csv</code></td>
+<td class="c m b0 r0 l0 t0 lines">Comma Separated Values</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.tsv</code></td>
+<td class="c m b0 r0 l0 t0 lines">Tab Separated Values</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.rds</code></td>
+<td class="c m b0 r0 l0 t0 lines">Single R Object</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.RData</code></td>
+<td class="c m b0 r0 l0 t0 lines">Multiple R Objects</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.sas7bdat</code></td>
+<td class="c m b0 r0 l0 t0 lines">SAS Data File</td>
+</tr>
+</table></div></section><section class="subsection" id="extensions-other"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.2.7</span> <span class="title">Other File Exensions</span>
+</h3>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
+<th scope="col" class="c m b0 r0 l0 t0 lines">File Type</th>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.band</code></td>
+<td class="c m b0 r0 l0 t0 lines">Apple GarageBand File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.logicx</code></td>
+<td class="c m b0 r0 l0 t0 lines">Apple Logic Pro File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.exe</code></td>
+<td class="c m b0 r0 l0 t0 lines">Windows Executable File</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.zip</code></td>
+<td class="c m b0 r0 l0 t0 lines">Compressed Files</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.tar.gz</code></td>
+<td class="c m b0 r0 l0 t0 lines">Collection of (archived) files</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.app</code></td>
+<td class="c m b0 r0 l0 t0 lines">Mac Application</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.dmg</code></td>
+<td class="c m b0 r0 l0 t0 lines">Mac Disc Image (executable file)</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.pkg</code></td>
+<td class="c m b0 r0 l0 t0 lines">Package of Software or Files</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.otf</code></td>
+<td class="c m b0 r0 l0 t0 lines">Open Type Font</td>
+</tr>
+<tr>
+<td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.ttf</code></td>
+<td class="c m b0 r0 l0 t0 lines">TrueType Font</td>
+</tr>
+</table></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn"><code class="code-inline tex2jax_ignore">guides.lib.umich.edu/c.php?g=282942&amp;p=1885348</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn"><code class="code-inline tex2jax_ignore">kinsta.com/blog/image-file-types/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-23"><div class="fn"><code class="code-inline tex2jax_ignore">adobe.com/creativecloud/video/discover/best-video-format.html</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-24"><div class="fn"><code class="code-inline tex2jax_ignore">blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-25"><div class="fn"><code class="code-inline tex2jax_ignore">makeuseof.com/tag/audio-file-format-right-needs/</code></div></div>
+</div></main>
+</div>
+</body>
+</html>

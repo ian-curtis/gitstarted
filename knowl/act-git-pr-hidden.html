@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-25T10:08:15-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math"><article class="activity project-like"><div class="introduction">
+<p>A lot of this section will look familiar to the ideas expressed in <a href="S_hubbranches.html" class="internal" title="Section 3.3: Working With Branches">Section 3.3</a>. However, it is worth going over again just to make sure everything stuck.</p>
+<p>Note that it is possible to create a pull request using the terminal. However, I prefer to do so on GitHub. The interface is nicer and human-friendly which allows me to be sure that I am doing the right thing and to verify once more that I edited the correct files.</p>
+</div>
+<article class="task exercise-like"><h4 class="heading"><span class="codenumber">(a)</span></h4>
+<p>Navigate back to your GitHub repository.</p></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p>Once there, you might see that a nice bar has popped up at the top of the page with a green button that says you can “Compare and pull request”. If you see this, great! Click on the green button and proceed to <a href="" class="xref" data-knowl="./knowl/git-pr-open.html" title="Task 4.9.d">Task 4.9.d</a>. If not, read on.</p></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p>If your repository looks like nothing changed, never fear. There are a couple of ways to get to where we need to get. Either of the following will work so pick what you like best.</p>
+<ol class="decimal">
+<li><p>When in the Code tab, click on the dropdown menu that currently has “main” selected. Click on your new branch title (“country”). A new box should pop up saying that this branch is 1 commit ahead of main. On the right of that box, click “contribute” and then “Open pull request”.</p></li>
+<li><p>When in the Code tab, click on the branch icon that says “2 branches” (this is different from before…previously it only said one branch). This gives a list of all the branches. Find the “country” branch and click on “New pull request”</p></li>
+<li><p>Navigate to the Pull requests tab. Click on the green button near the top right that says “New pull request”. Select the branch you want to pull into main from either the “Compare” drop-down menu at the top or the example comparisons table. Click “Create pull request”.</p></li>
+</ol></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<p>Regardless of the method you chose in <a href="" class="xref" data-knowl="./knowl/git-pr-create.html" title="Task 4.9.c">Task 4.9.c</a> or if you had the automatic pop-up banner, you should be on the same screen. This might look familiar. Notice that your commit message you chose back in <a href="S_gitfinalize.html" class="internal" title="Section 4.3: Sending Changes Back To GitHub: The Three-Step Process">Section 4.3</a> appears here. You have the choice to add a further description.</p>
+<p>Note the drop-down menus at the top of the page. With these, you can easily decide which branches you want to merge into and which branches you are merging from. You should only see two choices since we only have two branches but this will not always be the case (especially if you are merging from an origin to an upstream, see <a href="S_gitcollabpr.html" class="internal" title="Section 6.4: The Final Steps">Section 6.4</a>).</p>
+<p>You can also scroll down and see all of the files that were changed and all of the changes. This is good to check that everything is as you expected. This also works to check that someone who is trying to contribute to your repo is not destroying your project.</p></article><article class="task exercise-like"><h4 class="heading"><span class="codenumber">(e)</span></h4>
+<p>Once everything looks good, click on “Create pull request”.</p></article><div class="conclusion"><p>All that's left to do now is to merge that pull request into your main branch. (Note that if you did not own the repository that you just submitted a pull request to, you will not be able to do this step.) Click on "Merge pull reqeust" and then "Confirm merge". Unless you plan on using the branch again, click on “Delete branch” so as to not clutter your branch list. Go back to your Code tab and make sure that the README has been updated with your additions.</p></div></article></body>
+</html>

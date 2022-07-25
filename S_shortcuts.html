@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-05-27T17:16:43-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Keyboard Shortcuts</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Better Git Started">
+<meta property="book:author" content="Ian Curtis">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link href="developer.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, Git, and GitHub</span></a></h1>
+<p class="byline">Ian Curtis</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_filepaths.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_basics.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="C_commandline.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_filepaths.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_basics.html" title="Up">Up</a><a class="next-button button toolbar-item" href="C_commandline.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
+<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows Users)</a></li>
+<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac Users)</a></li>
+<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux Users)</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
+<li class="link">
+<a href="C_basics.html" data-scroll="C_basics" class="internal"><span class="codenumber">1</span> <span class="title">Computer Basics</span></a><ul>
+<li><a href="S_filenames.html" data-scroll="S_filenames" class="internal">File and Folder Names</a></li>
+<li><a href="S_fileextensions.html" data-scroll="S_fileextensions" class="internal">File Extensions</a></li>
+<li><a href="S_filepaths.html" data-scroll="S_filepaths" class="internal">File Paths</a></li>
+<li><a href="S_shortcuts.html" data-scroll="S_shortcuts" class="active">Keyboard Shortcuts</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_commandline.html" data-scroll="C_commandline" class="internal"><span class="codenumber">2</span> <span class="title">The Command Line</span></a><ul>
+<li><a href="S_whatiscommline.html" data-scroll="S_whatiscommline" class="internal">What is the Command Line?</a></li>
+<li><a href="whereiscommline.html" data-scroll="whereiscommline" class="internal">Where is the Command Line?</a></li>
+<li><a href="S_commands.html" data-scroll="S_commands" class="internal">Basic Commands</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-solo.html" data-scroll="part-solo" class="internal"><span class="codenumber">II</span> <span class="title">Working Solo</span></a></li>
+<li class="link">
+<a href="C_githubsolo.html" data-scroll="C_githubsolo" class="internal"><span class="codenumber">3</span> <span class="title">GitHub Solo</span></a><ul>
+<li><a href="S_hubnavigate.html" data-scroll="S_hubnavigate" class="internal">Navigating GitHub</a></li>
+<li><a href="S_hubfirstrepo.html" data-scroll="S_hubfirstrepo" class="internal">The First Repository and File</a></li>
+<li><a href="S_hubbranches.html" data-scroll="S_hubbranches" class="internal">Working With Branches</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitsolo.html" data-scroll="C_gitsolo" class="internal"><span class="codenumber">4</span> <span class="title">Git Solo</span></a><ul>
+<li><a href="S_gitsetup.html" data-scroll="S_gitsetup" class="internal">Getting Set Up with Git</a></li>
+<li><a href="S_gitedits.html" data-scroll="S_gitedits" class="internal">Editing Files</a></li>
+<li><a href="S_gitfinalize.html" data-scroll="S_gitfinalize" class="internal">Sending Changes Back To GitHub: The Three-Step Process</a></li>
+<li><a href="S_gitpr.html" data-scroll="S_gitpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitsumm.html" data-scroll="S_gitsumm" class="internal">Summary</a></li>
+<li><a href="S_gitbigact.html" data-scroll="S_gitbigact" class="internal">Working Solo: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
+<li class="link">
+<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
+<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
+<li><a href="S_hubcollabsetup.html" data-scroll="S_hubcollabsetup" class="internal">Getting Set Up To Collaborate</a></li>
+<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
+<li><a href="S_hubcollabfetch.html" data-scroll="S_hubcollabfetch" class="internal">Fetching Upstream</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitcollab.html" data-scroll="C_gitcollab" class="internal"><span class="codenumber">6</span> <span class="title">Git Collaboration</span></a><ul>
+<li><a href="S_gitcollabsetup.html" data-scroll="S_gitcollabsetup" class="internal">Getting Set Up: A Few Extra Steps</a></li>
+<li><a href="S_gitcollabedit.html" data-scroll="S_gitcollabedit" class="internal">Collaboration Editing With Git</a></li>
+<li><a href="S_gitcollabfinalize.html" data-scroll="S_gitcollabfinalize" class="internal">Revisiting the Three Step Process</a></li>
+<li><a href="S_gitcollabpr.html" data-scroll="S_gitcollabpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitcollabsumm.html" data-scroll="S_gitcollabsumm" class="internal">Summary</a></li>
+<li><a href="S_gitcollabbigact.html" data-scroll="S_gitcollabbigact" class="internal">Working Together: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="app_commlinecustom.html" data-scroll="app_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
+<li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
+<li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
+<li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
+<li><a href="S_custterm_all.html" data-scroll="S_custterm_all" class="internal">For All</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a><ul>
+<li><a href="S_hubissues.html" data-scroll="S_hubissues" class="internal">The Issues Tab</a></li>
+<li><a href="S_hub-seecommits.html" data-scroll="S_hub-seecommits" class="internal">Commit History</a></li>
+<li><a href="S_hub-about.html" data-scroll="S_hub-about" class="internal">The About Panel</a></li>
+<li><a href="S_hubcollabtree.html" data-scroll="S_hubcollabtree" class="internal">The Branch Tree Diagram (Network Graph)</a></li>
+<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="internal">Deleting a Repository</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">C</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
+<li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
+<li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
+<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
+<li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
+<li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
+</ul>
+</li>
+<li class="link"><a href="app_answers.html" data-scroll="app_answers" class="internal"><span class="codenumber">D</span> <span class="title">Answers to All Activities and Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section class="section" id="S_shortcuts"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">Keyboard Shortcuts</span>
+</h2>
+<section class="introduction" id="introduction-8"><p id="p-247">You may be able to use your computer fine without any shortcuts. But wow, do they make your life easier. This section could go in an appendix but I think it is so important to know at many shortcuts as possible to help you use your computer faster. I use shortcuts every day in my web browser, programming software, documents editing software (e.g., Microsoft Word), and just my computer in general. I have tried to break up the following shortcuts by the keys needed. <kbd class="kbdkey">Ctrl</kbd> + <kbd class="kbdkey">F</kbd> works well on this page.</p>
+<p id="p-248">Note: Windows uses <kbd class="kbdkey">Control</kbd> (or <kbd class="kbdkey">Ctrl</kbd>) as the “main” button whereas Mac usually uses <kbd class="kbdkey">Command</kbd> (or <kbd class="kbdkey">Cmd</kbd>). I regularly use a Mac and Google Chrome so many of these might be more accurate and detailed for Chrome and Mac users.</p></section><section class="subsection" id="SS_shortcut_ctrl"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.1</span> <span class="title">Starting with <kbd class="kbdkey">Control</kbd> or <kbd class="kbdkey">Command</kbd></span>
+</h3>
+<p id="p-249">This part lists many common shortcuts starting with just <kbd class="kbdkey">Control</kbd> or <kbd class="kbdkey">Command</kbd>.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> or <kbd class="kbdkey">Cmd</kbd> + …</th>
+<th scope="col" class="c m b1 r1 l0 t0 lines">Function</th>
+<th scope="col" class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-250">Notes</p></th>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-251">Select all</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-252">Works on webpages, text documents, code files, and more</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-253">Bold text</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-254">Copy highlighted content</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-255">Make a bookmark (on a webpage)</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">F</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-256">Find text</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-257">Opens a dialog box to search for text</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-258">Find next result (when searching)</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">H</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-259">Show browsing history OR Hide windows</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-260">Windows will show history, Mac will hide app windows</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">I</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-261">Italicize text</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">K</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-262">Insert link</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-263">Documents, emails, and more</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-264">Jump to address bar</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-265">Works in Google Chrome, not necessarily in other browsers</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">M</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-266">Minimize windows</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-267">Only on Mac</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">N</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-268">Open new window</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">O</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-269">Open file</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-270">Print</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Q</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-271">Quit an app</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-272">Mac only</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">R</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-273">Refresh a page</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">S</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-274">Save</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-275">Open a new tab</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">U</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-276">Underline text</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">V</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-277">Paste copied or cut content</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-278">Close a tab</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">X</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-279">Cut content (and copy it)</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Y</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-280">Show history</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-281">Mac only, on Google Chrome not necessarily other browsers</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Z</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-282">Undo</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Any number</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-283">Switch that corresponding number's tab</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-284">Works in Google Chrome, not necessarily in other browswers</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><kbd class="kbdkey">`</kbd></td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-285">Switch between windows of the same app</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-286">Mac only</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><kbd class="kbdkey">-</kbd></td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-287">Zoom out</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines"><kbd class="kbdkey">+</kbd></td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-288">Zoom in</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Tab</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-289">Navigate windows of different apps (Mac), Switch Chrome tabs (Windows)</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-290">Note that <kbd class="kbdkey">Control</kbd> + <kbd class="kbdkey">Tab</kbd> (not <kbd class="kbdkey">Command</kbd>) switches Chrome tabs on Mac</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Space</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-291">Open Spotlight Search</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-292">Mac only</p></td>
+</tr>
+</table></div></section><section class="subsection" id="SS_shortcut_ctrlshift"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.2</span> <span class="title">Starting with <kbd class="kbdkey">Control</kbd> or <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">Shift</kbd></span>
+</h3>
+<p id="p-293">This part lists many common shortcuts starting with <kbd class="kbdkey">Control</kbd> + <kbd class="kbdkey">Shift</kbd> or <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">Shift</kbd>.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> or <kbd class="kbdkey">Cmd</kbd> + <kbd class="kbdkey">Shift</kbd> + …</th>
+<th scope="col" class="c m b1 r1 l0 t0 lines">Function</th>
+<th scope="col" class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-294">Notes</p></th>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-295">Search tabs</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-296">On Google Chrome</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">B</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-297">Show/hide bookmark bar</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-298">On Google Chrome</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-299">Bookmark all tabs</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-300">On Google Chrome</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">G</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-301">Find previous result (when searching)</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">H</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-302">Find and replace (Microsoft Word)</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-303">This will also go to the Google homepage in Chrome (only on Mac)</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">I</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-304">Email link (Mac), open page source (Windows)</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-305">On Google Chrome</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">J</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-306">Show Chrome downloads</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-307">Mac only</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">M</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-308">Open Chrome profile</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">N</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-309">Open new incognito window</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-310">On Google Chrome</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">O</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-311">Show Chrome bookmarks</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-312">Windows only</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-313">Open print dialog</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-314">Windows only</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Q</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-315">Log out current user</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-316">Mac only</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">R</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-317">Refresh page</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-318">On Google Chrome</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">S</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-319">Save As</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">T</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-320">Reopen closed tabs</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">U</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-321">Undo</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-322">Close entire window</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-323">On Google Chrome</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Z</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-324">Redo</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-325">Opposite of an undo</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Z</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-326">Redo</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-327">Opposite of an undo</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">3</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-328">Take a screenshot of the entire screen</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-329">Mac only</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">4</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-330">Take a screenshot of selection (shows crosshairs)</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-331">Mac only</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">5</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-332">Open screenshot dialog</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-333">Mac only</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Tab</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-334">Navigate windows backwards of different apps (Mac), Switch Chrome tabs backwards (Windows)</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-335">Note that <kbd class="kbdkey">Control</kbd> + <kbd class="kbdkey">Shift</kbd> + <kbd class="kbdkey">Tab</kbd> (not <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">Shift</kbd>) switches Chrome tabs backwards on Mac</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">?</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-336">Open help search box</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-337">Mac only</p></td>
+</tr>
+</table></div></section><section class="subsection" id="SS_shortcut_windows"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.3</span> <span class="title">Starting with the Windows Key</span>
+</h3>
+<p id="p-338">This part lists many common shortcuts starting with the Windows key. Naturally, Mac users will not find this section very useful.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l0 t0 lines">Windows Key + …</th>
+<th scope="col" class="c m b1 r1 l0 t0 lines">Function</th>
+<th scope="col" class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-339">Notes</p></th>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-340">Open notification panel</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">C</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-341">Open Cortana</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">D</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-342">Show desktop</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">E</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-343">Open file explorer</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">A</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-344">Open notification panel</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">I</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-345">Open Settings</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">L</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-346">Lock computer</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">M</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-347">Minimize window</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">P</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-348">Open screen projection panel</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">Q</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-349">Open computer search</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">R</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-350">Open Run dialog</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">S</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-351">Open computer search</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">V</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-352">Open clipboard history</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-353">If turned on</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">W</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-354">Open whiteboard or fullscreen snip dialog</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">Shift + S</td>
+<td class="c m b0 r1 l0 t0" style="max-width:180px;"><p id="p-355">Open Snip dialog</p></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></section><section class="subsection" id="SS_shortcut_vscode"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.4</span> <span class="title"><abbr class="initialism">VS</abbr> Code Shortcuts</span>
+</h3>
+<p id="p-356">This part lists many useful shortcuts with work in <abbr class="initialism">VS</abbr> Code. Most should work in both Windows and Mac, but any differences are noted.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l0 t0 lines">Base Key(s)</th>
+<th scope="col" class="c m b1 r1 l0 t0 lines">Variable Key</th>
+<th scope="col" class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-357">Function</p></th>
+<th scope="col" class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-358">Notes</p></th>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Alt</kbd> +</td>
+<td class="c m b1 r1 l0 t0 lines">Click</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-359">Create multiple cursors (each click is one cursor)</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-360">Useful for changing multiple occurances at once</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Alt</kbd> + <kbd class="kbdkey">Shift</kbd>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Click and Drag</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-361">Create a vertical line of cursors</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> +</td>
+<td class="c m b1 r1 l0 t0 lines"><kbd class="kbdkey">`</kbd></td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-362">Open the terminal window</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-363">Macs should also use <kbd class="kbdkey">Ctrl</kbd></p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> or <kbd class="kbdkey">Cmd</kbd> +</td>
+<td class="c m b1 r1 l0 t0 lines">Arrows</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-364">Move cursor to extreme edge</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-365">For instance, the up arrow will take you to the very top of the file and the left arrow will take you to the very left of the line</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> or <kbd class="kbdkey">Cmd</kbd> + <kbd class="kbdkey">Alt</kbd>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Left/Right arrows</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-366">Navigate between open files</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> or <kbd class="kbdkey">Cmd</kbd> + <kbd class="kbdkey">Alt</kbd>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Up/Down arrows</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-367">Create new cursor above/below the current cursor</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> or <kbd class="kbdkey">Cmd</kbd> + <kbd class="kbdkey">Shift</kbd>
+</td>
+<td class="c m b1 r1 l0 t0 lines">Left/Right arrows</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-368">Select content to extreme edge</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-369">For instance, the up arrow will select everything up to the very top of the file and the left arrow will select everything over to the very left of the line</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Alt</kbd> +</td>
+<td class="c m b1 r1 l0 t0 lines">Left/Right arrows</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-370">Move cursor to beginning/end of each work</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Alt</kbd> +</td>
+<td class="c m b1 r1 l0 t0 lines">Up/Down arrows</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-371">Move current line up/down</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Alt</kbd> +</td>
+<td class="c m b1 r1 l0 t0 lines">Z</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-372">Force line breaks</p></td>
+<td class="c m b1 r0 l0 t0 lines">Works for lines that go off screen. Makes these lines default to start back at the beginning, while keeping the content on the same line.</td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Shift</kbd> +</td>
+<td class="c m b1 r1 l0 t0 lines">Left/Right arrows</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-373">Select one character at a time to the left/right</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Shift</kbd> +</td>
+<td class="c m b1 r1 l0 t0 lines">Up/Down arrows</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-374">Select one row at a time up/down</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-375">Selects based on current position of cursor</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> or <kbd class="kbdkey">Cmd</kbd> +</td>
+<td class="c m b1 r1 l0 t0 lines">Arrows</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-376">Move cursor to extreme edge</p></td>
+<td class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-377">For instance, the up arrow will take you to the very top of the file and the left arrow will take you to the very left of the line</p></td>
+</tr>
+<tr>
+<td class="c m b1 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> or <kbd class="kbdkey">Cmd</kbd> + <kbd class="kbdkey">Shift</kbd>
+</td>
+<td class="c m b1 r1 l0 t0 lines">X</td>
+<td class="c m b1 r1 l0 t0" style="max-width:180px;"><p id="p-378">Open Extensions window</p></td>
+<td class="c m b1 r0 l0 t0 lines"></td>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">
+<kbd class="kbdkey">Ctrl</kbd> or <kbd class="kbdkey">Cmd</kbd> +</td>
+<td class="c m b0 r1 l0 t0 lines">/</td>
+<td class="c m b0 r1 l0 t0" style="max-width:180px;"><p id="p-379">Insert a comment or make current selection a comment</p></td>
+<td class="c m b0 r0 l0 t0 lines"></td>
+</tr>
+</table></div></section><section class="subsection" id="SS_shortcut_other"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.4.5</span> <span class="title">Other Shortcuts</span>
+</h3>
+<p id="p-380">This part lists any other common or useful shortcuts.</p>
+<div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="c m b1 r1 l0 t0 lines">Base Key(s)</th>
+<th scope="col" class="c m b1 r1 l0 t0 lines">Variable Key</th>
+<th scope="col" class="c m b1 r0 l0 t0" style="max-width:180px;"><p id="p-381">Function</p></th>
+<th scope="col" class="c m b1 r0 l0 t0" style="max-width:300px;"><p id="p-382">Notes</p></th>
+</tr>
+<tr>
+<td class="c m b0 r1 l0 t0 lines">
+<kbd class="kbdkey">Cmd</kbd> + <kbd class="kbdkey">Ctrl</kbd> +</td>
+<td class="c m b0 r1 l0 t0 lines">Space</td>
+<td class="c m b0 r1 l0 t0" style="max-width:180px;"><p id="p-383">Open emoji window</p></td>
+<td class="c m b0 r0 l0 t0 lines">Only on Mac</td>
+</tr>
+</table></div></section></section></div></main>
+</div>
+</body>
+</html>

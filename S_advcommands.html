@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-25T10:08:05-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Advanced Commands</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta property="book:title" content="Better Git Started">
+<meta property="book:author" content="Ian Curtis">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
+    processHtmlClass: "process-math",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body class="pretext-book ignore-math has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, GitHub, and Git</span></a></h1>
+<p class="byline">Ian Curtis</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_commands.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_commandline.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="part-solo.html" title="Next">Next</a></span>
+</div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_commands.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_commandline.html" title="Up">Up</a><a class="next-button button toolbar-item" href="part-solo.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
+<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
+<li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
+<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows)</a></li>
+<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac)</a></li>
+<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux)</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
+<li class="link">
+<a href="C_basics.html" data-scroll="C_basics" class="internal"><span class="codenumber">1</span> <span class="title">Computer Basics</span></a><ul>
+<li><a href="S_filenames.html" data-scroll="S_filenames" class="internal">File and Folder Names</a></li>
+<li><a href="S_fileextensions.html" data-scroll="S_fileextensions" class="internal">File Extensions</a></li>
+<li><a href="S_filepaths.html" data-scroll="S_filepaths" class="internal">File Paths</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_commandline.html" data-scroll="C_commandline" class="internal"><span class="codenumber">2</span> <span class="title">The Command Line</span></a><ul>
+<li><a href="S_whatiscommline.html" data-scroll="S_whatiscommline" class="internal">What is the Command Line?</a></li>
+<li><a href="whereiscommline.html" data-scroll="whereiscommline" class="internal">Where is the Command Line?</a></li>
+<li><a href="S_commands.html" data-scroll="S_commands" class="internal">Basic Commands</a></li>
+<li><a href="S_advcommands.html" data-scroll="S_advcommands" class="active">Advanced Commands</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-solo.html" data-scroll="part-solo" class="internal"><span class="codenumber">II</span> <span class="title">Working Solo</span></a></li>
+<li class="link">
+<a href="C_githubsolo.html" data-scroll="C_githubsolo" class="internal"><span class="codenumber">3</span> <span class="title">GitHub Solo</span></a><ul>
+<li><a href="S_hubnavigate.html" data-scroll="S_hubnavigate" class="internal">Navigating GitHub</a></li>
+<li><a href="S_hubfirstrepo.html" data-scroll="S_hubfirstrepo" class="internal">The First Repository and File</a></li>
+<li><a href="S_hubbranches.html" data-scroll="S_hubbranches" class="internal">Working With Branches</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitsolo.html" data-scroll="C_gitsolo" class="internal"><span class="codenumber">4</span> <span class="title">Git Solo</span></a><ul>
+<li><a href="S_gitsetup.html" data-scroll="S_gitsetup" class="internal">Getting Set Up with Git</a></li>
+<li><a href="S_gitedits.html" data-scroll="S_gitedits" class="internal">Editing Files</a></li>
+<li><a href="S_gitfinalize.html" data-scroll="S_gitfinalize" class="internal">Sending Changes Back To GitHub: The Three-Step Process</a></li>
+<li><a href="S_gitpr.html" data-scroll="S_gitpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitsumm.html" data-scroll="S_gitsumm" class="internal">Summary</a></li>
+<li><a href="S_gitbigact.html" data-scroll="S_gitbigact" class="internal">Working Solo: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
+<li class="link">
+<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
+<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
+<li><a href="S_hubcollabsetup.html" data-scroll="S_hubcollabsetup" class="internal">Getting Set Up To Collaborate</a></li>
+<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
+<li><a href="S_hubcollabfetch.html" data-scroll="S_hubcollabfetch" class="internal">Fetching Upstream</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_gitcollab.html" data-scroll="C_gitcollab" class="internal"><span class="codenumber">6</span> <span class="title">Git Collaboration</span></a><ul>
+<li><a href="S_gitcollabsetup.html" data-scroll="S_gitcollabsetup" class="internal">Getting Set Up: A Few Extra Steps</a></li>
+<li><a href="S_gitcollabedit.html" data-scroll="S_gitcollabedit" class="internal">Collaboration Editing With Git</a></li>
+<li><a href="S_gitcollabfinalize.html" data-scroll="S_gitcollabfinalize" class="internal">Revisiting the Three Step Process</a></li>
+<li><a href="S_gitcollabpr.html" data-scroll="S_gitcollabpr" class="internal">The Final Steps</a></li>
+<li><a href="S_gitcollabsumm.html" data-scroll="S_gitcollabsumm" class="internal">Summary</a></li>
+<li><a href="S_gitcollabbigact.html" data-scroll="S_gitcollabbigact" class="internal">Working Together: The Culminating Experience</a></li>
+</ul>
+</li>
+<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
+<li class="link">
+<a href="app_commlinecustom.html" data-scroll="app_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
+<li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
+<li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
+<li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
+<li><a href="S_custterm_all.html" data-scroll="S_custterm_all" class="internal">For All</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a><ul>
+<li><a href="S_hubissues.html" data-scroll="S_hubissues" class="internal">The Issues Tab</a></li>
+<li><a href="S_hub-seecommits.html" data-scroll="S_hub-seecommits" class="internal">Commit History</a></li>
+<li><a href="S_hub-about.html" data-scroll="S_hub-about" class="internal">The About Panel</a></li>
+<li><a href="S_hubcollabtree.html" data-scroll="S_hubcollabtree" class="internal">The Branch Tree Diagram (Network Graph)</a></li>
+<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="internal">Deleting a Repository</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">C</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
+<li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
+<li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
+<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
+<li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
+<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Says I Have Divergent Branches!</a></li>
+<li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
+<li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="internal">Merge Conflicts</a></li>
+</ul>
+</li>
+<li class="link"><a href="app_answers.html" data-scroll="app_answers" class="internal"><span class="codenumber">D</span> <span class="title">Answers to All Activities and Exercises</span></a></li>
+<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
+<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content">
+<section class="section" id="S_advcommands"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">2.4</span> <span class="title">Advanced Commands</span>
+</h2>
+<section class="introduction" id="introduction-16"><p id="p-393">If you seek a more advanced glance into the potential of the command line, you have come to the right place. Each of the following commands are not necessary to proceed through this book but may ease your workflow in the future. As you get comfortable with the terminal, consider adopting some of these commands.</p></section><section class="paragraphs" id="sudo"><h3 class="heading"><span class="title">Using <code class="code-inline tex2jax_ignore">sudo</code>.</span></h3>
+<p id="p-394">According to <a class="external" href="https://kb.iu.edu/d/amyi" target="_blank">University Information Technology Services</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-31" id="fn-31"><sup> 31 </sup></a>, <blockquote class="blockquote" id="blockquote-12">The sudo command allows you to run programs with the security privileges of another user (by default, as the superuser). It prompts you for your personal password and confirms your request to execute a command by checking a file, called sudoers, which the system administrator configures. Using the sudoers file, system administrators can give certain users or groups access to some or all commands without those users having to know the root password. It also logs all commands and arguments so there is a record of who used it for what, and when.</blockquote></p>
+<p id="p-395">This is a little too much for what is necessary here but has good information. Essentially, <code class="code-inline tex2jax_ignore">sudo</code> exists to allow you to run commands as an admin who, in some cases, might have more permissions to run certain commands. The benefit of <code class="code-inline tex2jax_ignore">sudo</code> is that your password is required.</p>
+<p id="p-396">So, if there is ever a command that involves risky business (such as permanently deleting files or folders) or if you ever want to purposefully add a layer of safety, use the <code class="code-inline tex2jax_ignore">sudo</code> command. The command is actually very simple: add the word <code class="code-inline tex2jax_ignore">sudo</code> to the beginning of any terminal command and you will be required to enter your computer's password before the command executes.</p></section><section class="paragraphs" id="mv"><h3 class="heading"><span class="title">Using <code class="code-inline tex2jax_ignore">mv</code>.</span></h3>
+<p id="p-397">The <code class="code-inline tex2jax_ignore">mv</code> command has many uses, all revolving around moving and renaming files. There are a few use cases as described below. The title of each case is the situation you may find yourself in followed by a shell of the command, an example command, and a more detailed description of the command. This content is inspired by <a class="external" href="https://sites.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/cmds/aixcmds3/mv.htm" target="_blank">the University of Alberta</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-32" id="fn-32"><sup> 32 </sup></a>.</p>
+<dl class="description-list narrow">
+<dt id="li-144">You already have a file and you want to <em class="emphasis">rename</em> it</dt>
+<dd>
+<pre class="code-display tex2jax_ignore" id="p-398">mv &lt;existing-file-name&gt; &lt;new-file-name&gt;</pre>
+<p id="p-399"><code class="code-inline tex2jax_ignore">mv birds.txt cats.txt</code></p>
+<p id="p-400">Takes prexisting file <code class="code-inline tex2jax_ignore">birds.txt</code> and <em class="emphasis">renames</em> it to <code class="code-inline tex2jax_ignore">cats.txt</code></p>
+</dd>
+<dt id="li-145">You already have a file and you want to <em class="emphasis">move</em> it AND <em class="emphasis">rename</em> the file</dt>
+<dd>
+<pre class="code-display tex2jax_ignore" id="p-401">mv &lt;existing-file-name&gt;
+	&lt;destination-folder-name&gt;/&lt;new-file-name&gt;
+</pre>
+<p id="p-402"><code class="code-inline tex2jax_ignore">mv birds.txt animals/cats.txt</code></p>
+<p id="p-403">Takes prexisting file <code class="code-inline tex2jax_ignore">birds.txt</code>, <em class="emphasis">renames</em> it to <code class="code-inline tex2jax_ignore">cats.txt</code> and <em class="emphasis">moves</em> it to the <code class="code-inline tex2jax_ignore">animals/</code> folder. (Also removes the original <code class="code-inline tex2jax_ignore">birds.txt</code>)</p>
+</dd>
+<dt id="li-146">You already have a file and you want to <em class="emphasis">move</em> it AND keep the same file name</dt>
+<dd>
+<pre class="code-display tex2jax_ignore" id="p-404">mv &lt;existing-file-name&gt; &lt;destination-folder-name&gt;</pre>
+<p id="p-405"><code class="code-inline tex2jax_ignore">mv birds.txt animals/</code></p>
+<p id="p-406">Takes prexisting file <code class="code-inline tex2jax_ignore">birds.txt</code> and <em class="emphasis">moves</em> it to the <code class="code-inline tex2jax_ignore">animals/</code> folder.</p>
+</dd>
+<dt id="li-147">You already have a folder and you want to <em class="emphasis">rename</em> it OR you want to <em class="emphasis">move</em> files and folders in an existing folder to a different folder</dt>
+<dd>
+<pre class="code-display tex2jax_ignore" id="p-407">mv &lt;folder-to-move&gt; &lt;destination-folder-name&gt;</pre>
+<p id="p-408"><code class="code-inline tex2jax_ignore">mv drums/ instruments/</code></p>
+<p id="p-409">Takes prexisting folder <code class="code-inline tex2jax_ignore">drums/</code> and <em class="emphasis">moves</em> it into the folder <code class="code-inline tex2jax_ignore">instruments/</code>. If <code class="code-inline tex2jax_ignore">instruments/</code> didn't exists, <code class="code-inline tex2jax_ignore">drums/</code> would have been <em class="emphasis">renamed</em> to <code class="code-inline tex2jax_ignore">instruments/</code></p>
+</dd>
+<dt id="li-148">You already have <em class="emphasis">multiple</em> files and you want to <em class="emphasis">move</em> them to another folder</dt>
+<dd>
+<pre class="code-display tex2jax_ignore" id="p-410">mv &lt;existing-file-name1&gt; &lt;existing-file-name2&gt; ...
+	&lt;destination-folder-name&gt;
+</pre>
+<p id="p-411"><code class="code-inline tex2jax_ignore">mv dogs.txt cats.txt animals/mammals/</code></p>
+<p id="p-412">Takes prexisting files <code class="code-inline tex2jax_ignore">dogs.txt</code> and <code class="code-inline tex2jax_ignore">cats.txt</code> and <em class="emphasis">moves</em> them to the <code class="code-inline tex2jax_ignore">animals/mammals/</code> folder.</p>
+</dd>
+<dt id="li-149">You already have a file and you want to <em class="emphasis">copy</em> it to another folder</dt>
+<dd>
+<pre class="code-display tex2jax_ignore" id="p-413">cp &lt;existing-file-name&gt; &lt;destination-folder-name&gt;</pre>
+<p id="p-414"><code class="code-inline tex2jax_ignore">cp dogs.txt animals/mammals/</code></p>
+<p id="p-415">(Notice the different command, <code class="code-inline tex2jax_ignore">cp</code>) Takes prexisting file <code class="code-inline tex2jax_ignore">dogs.txt</code> and <em class="emphasis">copies</em> it to the <code class="code-inline tex2jax_ignore">animals/mammals/</code> folder. Keeps the original <code class="code-inline tex2jax_ignore">dogs.txt</code>.</p>
+</dd>
+</dl>
+<p id="p-416">You can also use pattern-matching commands (wildcards) such as the asterisk (*) and period (.) but these are beyond the scope of this book.</p></section><section class="paragraphs" id="which"><h3 class="heading"><span class="title">Using <code class="code-inline tex2jax_ignore">which</code>.</span></h3>
+<p id="p-417">You may never need to use <code class="code-inline tex2jax_ignore">which</code> but it might be useful in the future. <code class="code-inline tex2jax_ignore">which</code> is used for finding the location of certain execetuables on your computer. The syntax follows <code class="code-inline tex2jax_ignore">which &lt;program-to-find&gt;</code> and outputs the file path of that program.</p>
+<p id="p-418">To test this out, try <code class="code-inline tex2jax_ignore">which git</code>, <code class="code-inline tex2jax_ignore">which bash</code>, or <code class="code-inline tex2jax_ignore">which fish</code>.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-31"><div class="fn"><code class="code-inline tex2jax_ignore">kb.iu.edu/d/amyi</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-32"><div class="fn"><code class="code-inline tex2jax_ignore">sites.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/cmds/aixcmds3/mv.htm</code></div></div>
+</div></main>
+</div>
+</body>
+</html>
