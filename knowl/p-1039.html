@@ -11,17 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<p>This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn't want to create them, so it refuses to push or pull until you fix something. This is not the same error as in <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won't Let Me Pull From Upstream or Origin!">Section C.4</a>, although it is closely related. You might get something like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git push
-</b>To &lt;repo-you-are-pushing-to&gt;.git
- ! [rejected]        main -&gt; main (fetch first)
-error: failed to push some refs to '&lt;repo-you-are-pushing-to&gt;.git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-</pre></div> This looks kind of scary. Let's see how to fix this.</p>
-<span class="incontext"><a href="S_diverge_branch.html#p-1039" class="internal">in-context</a></span>
+<h3 class="heading"><span class="type">Paragraph</span></h3>
+<p>Alternatively, you can keep your changes by using <code class="code-inline tex2jax_ignore">git stash</code>. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use <code class="code-inline tex2jax_ignore">git stash pop</code>. In my experience, things have worked out quite nicely with <code class="code-inline tex2jax_ignore">git stash</code>. I just type <code class="code-inline tex2jax_ignore">git stash</code> before pulling, then I pull, then I use <code class="code-inline tex2jax_ignore">git stash pop</code> and my changes are popped right back into where they were. For more information, you might find <a class="external" href="https://opensource.com/article/21/4/git-stash" target="_blank">opensource.com</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-65-hidden.html" title="Footnote 65"><sup> 65 </sup></a> useful.</p>
+<span class="incontext"><a href="S_forcemerge.html#p-1039" class="internal">in-context</a></span>
 </body>
 </html>

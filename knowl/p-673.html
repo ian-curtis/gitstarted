@@ -12,12 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>When you are finished editing your files and are ready to send things back to GitHub, follow the Three-Step Process. Don't forget to use <code class="code-inline tex2jax_ignore">git status</code> throughout this process!</p>
-<ol class="decimal">
-<li><p>Stage your files: <code class="code-inline tex2jax_ignore">git add &lt;files&gt;</code> (<a href="" class="xref" data-knowl="./knowl/try-git-add.html" title="Git Procedure 4.5: Trying git add">Git Procedure 4.5</a>)</p></li>
-<li><p>Commit your staged files: <code class="code-inline tex2jax_ignore">git commit -m "&lt;commit-message&gt;"</code> (<a href="" class="xref" data-knowl="./knowl/try-git-commit.html" title="Git Procedure 4.6: Trying git commit">Git Procedure 4.6</a>)</p></li>
-<li><p>Push your committed files: <code class="code-inline tex2jax_ignore">git push &lt;remote&gt; &lt;branch&gt;</code> (<a href="" class="xref" data-knowl="./knowl/try-git-push.html" title="Git Procedure 4.7: Trying git push">Git Procedure 4.7</a>)</p></li>
-</ol>
+<p>As mentioned earlier, it is possible to have multiple commits per push. An example of such a situation might be typo correction. Suppose I just finished a long novel and now I'm going back to correct all of my typos. So I create a branch called <code class="code-inline tex2jax_ignore">typos</code> and start editing my files to remove my typos. Instead of fixing all of my typos, then staging all of my files, then doing one commit and one push, I could break things up. I could fix all the typos in Chapter 1, then add the files and commit (with a message such as “correct typos ch1”). Then fix typos in Chapter 2 and add and commit. When I'm done, I do one push and Git will push all of the commits to GitHub at one time. Breaking things up like this allows for better version control. More commits leads to more stamps on the version timeline. It also can give you peace of mind. If something horrible happens and I lost all of my book's files, then I only lose the changes for the chapter I'm currenlty working on whereas if I had been editing all at once, I would have lost <em class="emphasis">all</em> of my changes for all of my chapters.</p>
 <span class="incontext"><a href="S_gitfinalize.html#p-673" class="internal">in-context</a></span>
 </body>
 </html>

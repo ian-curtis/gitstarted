@@ -11,28 +11,17 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<p>You might get another error like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull origin main
-</b>remote: Enumerating objects: 1, done.
-remote: Counting objects: 100% (1/1), done.
-remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (1/1), 659 bytes | 659.00 KiB/s, done.
-From &lt;repo-you-are-pushing-to&gt;
-   2417195..8b492ee  main       -&gt; origin/main
-hint: You have divergent branches and need to specify how to reconcile them.
-hint: You can do so by running one of the following commands sometime before
-hint: your next pull:
-hint: 
-hint:   git config pull.rebase false  # merge
-hint:   git config pull.rebase true   # rebase
-hint:   git config pull.ff only       # fast-forward only
-hint: 
-hint: You can replace "git config" with "git config --global" to set a default
-hint: preference for all repositories. You can also pass --rebase, --no-rebase,
-hint: or --ff-only on the command line to override the configured default per
-hint: invocation.
-fatal: Need to specify how to reconcile divergent branches.
-</pre></div> which is quite overwhelming.</p>
+<h2 class="heading"><span class="type">Paragraph</span></h2>
+<p>This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn't want to create them, so it refuses to push or pull until you fix something. This is not the same error as in <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won't Let Me Pull From Upstream or Origin!">Section C.4</a>, although it is closely related. You might get something like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git push
+</b>To &lt;repo-you-are-pushing-to&gt;.git
+ ! [rejected]        main -&gt; main (fetch first)
+error: failed to push some refs to '&lt;repo-you-are-pushing-to&gt;.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+</pre></div> This looks kind of scary. Let's see how to fix this.</p>
 <span class="incontext"><a href="S_diverge_branch.html#p-1041" class="internal">in-context</a></span>
 </body>
 </html>
