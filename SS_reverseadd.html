@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:08-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -181,13 +188,13 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="SS_reverseadd"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.1</span> <span class="title">Uh Oh, I Staged the Wrong Files!</span>
 </h2>
-<section class="introduction" id="introduction-55"><p id="p-1009">Once you get the hang of Git, it's easy to just fly through the three-step process. In doing so, you will inevitably stage (with <code class="code-inline tex2jax_ignore">git add</code>) a file or folder on accident. This is relatively simple to fix. To undo this, follow the next procedure.</p></section><article class="project project-like" id="reverse-git-add"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-reverse-git-add"><h2 class="heading">
+<section class="introduction" id="introduction-55"><p id="p-1010">Once you get the hang of Git, it's easy to just fly through the three-step process. In doing so, you will inevitably stage (with <code class="code-inline tex2jax_ignore">git add</code>) a file or folder on accident. This is relatively simple to fix. To undo this, follow the next procedure.</p></section><article class="project project-like" id="reverse-git-add"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-reverse-git-add"><h2 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">C.1</span><span class="period">.</span><span class="space"> </span><span class="title">Reversing <code class="code-inline tex2jax_ignore">git add</code>.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-reverse-git-add"><article class="project project-like"><div class="introduction" id="introduction-56"><p id="p-1010">Oh shoot. What if you add a file you didn't mean to? This is one reason why there are so many steps to sending files to GitHub. Humans make mistakes and Git gives you the chance to correct any. Should you ever add a file you didn't mean to add, revist this procedure.</p></div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-reverse-git-add"><article class="project project-like"><div class="introduction" id="introduction-56"><p id="p-1011">Oh shoot. What if you add a file you didn't mean to? This is one reason why there are so many steps to sending files to GitHub. Humans make mistakes and Git gives you the chance to correct any. Should you ever add a file you didn't mean to add, revist this procedure.</p></div>
 <article class="task exercise-like" id="task-158"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<p id="p-1011">Identify the file name(s) and extension(s) of the file(s) you mistakenly added.</p></article><article class="task exercise-like" id="task-159"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<p id="p-1012">Use <code class="code-inline tex2jax_ignore">git restore --staged &lt;your-file-name(s)&gt;</code> to un-stage any files. Like <code class="code-inline tex2jax_ignore">git add</code>, this command can be run many times.</p></article><article class="task exercise-like" id="task-160"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<p id="p-1013">It might be wise to verify with <code class="code-inline tex2jax_ignore">git status</code> that everything looks good.</p></article></article></div></section></div></main>
+<p id="p-1012">Identify the file name(s) and extension(s) of the file(s) you mistakenly added.</p></article><article class="task exercise-like" id="task-159"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<p id="p-1013">Use <code class="code-inline tex2jax_ignore">git restore --staged &lt;your-file-name(s)&gt;</code> to un-stage any files. Like <code class="code-inline tex2jax_ignore">git add</code>, this command can be run many times.</p></article><article class="task exercise-like" id="task-160"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<p id="p-1014">It might be wise to verify with <code class="code-inline tex2jax_ignore">git status</code> that everything looks good.</p></article></article></div></section></div></main>
 </div>
 </body>
 </html>

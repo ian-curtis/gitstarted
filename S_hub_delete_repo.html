@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:08-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -181,16 +188,16 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="S_hub_delete_repo"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">B.5</span> <span class="title">Deleting a Repository</span>
 </h2>
-<p id="p-1001">So you really to delete a repository? Think long and hard about this one. Are you sure? Are you really sure? Deleting repos are <em class="emphasis">irreversible</em> and can have lasting effects. For instance, all forks will be broken, but not deleted. If you delete a private repo, all forks will also be deleted. Any website that contains a link to your repo will no longer work and people might wonder where it went. And so on.</p>
-<p id="p-1002">But here you are, so clearly you have decided to delete one. To delete a repository, you have to enter the danger zone (<span class="booktitle">Top Gun</span> anyone?).</p>
+<p id="p-1002">So you really to delete a repository? Think long and hard about this one. Are you sure? Are you really sure? Deleting repos are <em class="emphasis">irreversible</em> and can have lasting effects. For instance, all forks will be broken, but not deleted. If you delete a private repo, all forks will also be deleted. Any website that contains a link to your repo will no longer work and people might wonder where it went. And so on.</p>
+<p id="p-1003">But here you are, so clearly you have decided to delete one. To delete a repository, you have to enter the danger zone (<span class="booktitle">Top Gun</span> anyone?).</p>
 <article class="activity project-like" id="hub-delete-repo"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-hub-delete-repo"><h2 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">B.1</span><span class="period">.</span><span class="space"> </span><span class="title">Deleting a Repository.</span>
 </h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-hub-delete-repo"><article class="activity project-like"><article class="task exercise-like" id="task-153"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<p id="p-1003">Navigate to the repo you want to delete.</p></article><article class="task exercise-like" id="task-154"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<p id="p-1004">Click on the Setting tab. This should be the settings for the repo itself, not the general settings for your profile.</p></article><article class="task exercise-like" id="task-155"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<p id="p-1005">Scroll all the way down to the Danger Zone.</p></article><article class="task exercise-like" id="task-156"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<p id="p-1006">Click on “Delete this repository”</p></article><article class="task exercise-like" id="task-157"><h3 class="heading"><span class="codenumber">(e)</span></h3>
-<p id="p-1007">Read the dialog box that pops up. Once you have decided to delete the repo, type in what GitHub prompts you to type in and hit confirm.</p></article></article></div></section></div></main>
+<p id="p-1004">Navigate to the repo you want to delete.</p></article><article class="task exercise-like" id="task-154"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<p id="p-1005">Click on the Setting tab. This should be the settings for the repo itself, not the general settings for your profile.</p></article><article class="task exercise-like" id="task-155"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<p id="p-1006">Scroll all the way down to the Danger Zone.</p></article><article class="task exercise-like" id="task-156"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<p id="p-1007">Click on “Delete this repository”</p></article><article class="task exercise-like" id="task-157"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<p id="p-1008">Read the dialog box that pops up. Once you have decided to delete the repo, type in what GitHub prompts you to type in and hit confirm.</p></article></article></div></section></div></main>
 </div>
 </body>
 </html>

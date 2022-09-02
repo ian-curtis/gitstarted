@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:08-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -182,8 +189,8 @@
 <section class="section" id="S_diverge_branch"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.5</span> <span class="title">Git Says I Have Divergent Branches!</span>
 </h2>
-<p id="p-1037">I recently experiences this issue for the first time and had to do some searching to figure out how to fix it. I relied on <a class="external" href="https://stackoverflow.com/questions/62653114" target="_blank">Davide Casiraghi's question on StackOverflow</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-66" id="fn-66"><sup> 66 </sup></a> and <a class="external" href="https://stackoverflow.com/questions/29673869/" target="_blank">adrianvlupu's question also on StackOverflow</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-67" id="fn-67"><sup> 67 </sup></a> to create this guide and you might find these resources more helpful than mine.</p>
-<p id="p-1038">This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn't want to create them, so it refuses to push or pull until you fix something. This is not the same error as in <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won't Let Me Pull From Upstream or Origin!">Section C.4</a>, although it is closely related. You might get something like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git push
+<p id="p-1038">I recently experiences this issue for the first time and had to do some searching to figure out how to fix it. I relied on <a class="external" href="https://stackoverflow.com/questions/62653114" target="_blank">Davide Casiraghi's question on StackOverflow</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-66" id="fn-66"><sup> 66 </sup></a> and <a class="external" href="https://stackoverflow.com/questions/29673869/" target="_blank">adrianvlupu's question also on StackOverflow</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-67" id="fn-67"><sup> 67 </sup></a> to create this guide and you might find these resources more helpful than mine.</p>
+<p id="p-1039">This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn't want to create them, so it refuses to push or pull until you fix something. This is not the same error as in <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won't Let Me Pull From Upstream or Origin!">Section C.4</a>, although it is closely related. You might get something like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git push
 </b>To &lt;repo-you-are-pushing-to&gt;.git
  ! [rejected]        main -&gt; main (fetch first)
 error: failed to push some refs to '&lt;repo-you-are-pushing-to&gt;.git'
@@ -196,8 +203,8 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 <article class="project project-like" id="try-git-rebase"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-try-git-rebase"><h2 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">C.5</span><span class="period">.</span><span class="space"> </span><span class="title">Consolidating Divergent Branches.</span>
 </h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-try-git-rebase"><article class="project project-like"><article class="task exercise-like" id="task-171"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<p id="p-1039">The first step will be to try to pull in changes before you push. Use <code class="code-inline tex2jax_ignore">git pull &lt;remote&gt; &lt;branch&gt;</code> as needed. If this works, then try to push and everything should be ok.</p>
-<p id="p-1040">You might get another error like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull origin main
+<p id="p-1040">The first step will be to try to pull in changes before you push. Use <code class="code-inline tex2jax_ignore">git pull &lt;remote&gt; &lt;branch&gt;</code> as needed. If this works, then try to push and everything should be ok.</p>
+<p id="p-1041">You might get another error like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull origin main
 </b>remote: Enumerating objects: 1, done.
 remote: Counting objects: 100% (1/1), done.
 remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
@@ -218,11 +225,11 @@ hint: or --ff-only on the command line to override the configured default per
 hint: invocation.
 fatal: Need to specify how to reconcile divergent branches.
 </pre></div> which is quite overwhelming.</p></article><article class="task exercise-like" id="task-172"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<p id="p-1041">Here, the fix is usually pretty easy but I have to teach you a new term. We need to <dfn class="terminology">rebase</dfn> the branch. When a pull happens, Git fetches new commits from GitHub and merges them into your branch (and this merge is actually a commit in itself). The rebase command will temporarily remove your new commits from the commit history, then pull in the new changes and reinstate your commit into the timeline.</p>
-<p id="p-1042">If you want to avoid potential large error messages like this again, you might consider changing Git's default behavior. Instead of fetching and merging, you can do a fast-forward merge which does not do a merge commit. When a fast forward is not possible, the error message is much shorter and then you can use the rebase command to fix things.</p>
-<p id="p-1043">To begin this process, first enter <code class="code-inline tex2jax_ignore">git config --global pull.ff only</code> into your terminal. This will change the default pull behavior for Git.</p></article><article class="task exercise-like" id="task-173"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<p id="p-1044">Now try <code class="code-inline tex2jax_ignore">git pull</code>. Things might work. Great! But if you get an error message of <code class="code-inline tex2jax_ignore">fatal: Not possible to fast-forward, aborting.</code>, use <code class="code-inline tex2jax_ignore">git pull --rebase</code> to perform a rebase. Then <code class="code-inline tex2jax_ignore">git push</code> back to origin or upstream.</p>
-<p id="p-1045">If you ever want to change the default behavior back to what it was, use <code class="code-inline tex2jax_ignore">git config pull.rebase false</code>. If you want to keep that behavior change we just did and you want to do a one-time fetch-merge pull, use <code class="code-inline tex2jax_ignore">git pull --ff</code>.</p></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-66"><div class="fn"><code class="code-inline tex2jax_ignore">https://stackoverflow.com/questions/62653114</code></div></div>
+<p id="p-1042">Here, the fix is usually pretty easy but I have to teach you a new term. We need to <dfn class="terminology">rebase</dfn> the branch. When a pull happens, Git fetches new commits from GitHub and merges them into your branch (and this merge is actually a commit in itself). The rebase command will temporarily remove your new commits from the commit history, then pull in the new changes and reinstate your commit into the timeline.</p>
+<p id="p-1043">If you want to avoid potential large error messages like this again, you might consider changing Git's default behavior. Instead of fetching and merging, you can do a fast-forward merge which does not do a merge commit. When a fast forward is not possible, the error message is much shorter and then you can use the rebase command to fix things.</p>
+<p id="p-1044">To begin this process, first enter <code class="code-inline tex2jax_ignore">git config --global pull.ff only</code> into your terminal. This will change the default pull behavior for Git.</p></article><article class="task exercise-like" id="task-173"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<p id="p-1045">Now try <code class="code-inline tex2jax_ignore">git pull</code>. Things might work. Great! But if you get an error message of <code class="code-inline tex2jax_ignore">fatal: Not possible to fast-forward, aborting.</code>, use <code class="code-inline tex2jax_ignore">git pull --rebase</code> to perform a rebase. Then <code class="code-inline tex2jax_ignore">git push</code> back to origin or upstream.</p>
+<p id="p-1046">If you ever want to change the default behavior back to what it was, use <code class="code-inline tex2jax_ignore">git config pull.rebase false</code>. If you want to keep that behavior change we just did and you want to do a one-time fetch-merge pull, use <code class="code-inline tex2jax_ignore">git pull --ff</code>.</p></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-66"><div class="fn"><code class="code-inline tex2jax_ignore">https://stackoverflow.com/questions/62653114</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-67"><div class="fn"><code class="code-inline tex2jax_ignore">https://stackoverflow.com/questions/29673869/</code></div></div>
 </div></main>
 </div>

@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:05-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -182,28 +189,28 @@
 <section class="section" id="whereiscommline"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Where is the Command Line?</span>
 </h2>
-<section class="introduction" id="introduction-9"><p id="p-272">If you have a computer, you have a terminal. You may not have ever used it or known it was there, but it's hiding, waiting for use. Let's find it.</p></section><section class="subsection" id="SS_commline-mac"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-9"><p id="p-273">If you have a computer, you have a terminal. You may not have ever used it or known it was there, but it's hiding, waiting for use. Let's find it.</p></section><section class="subsection" id="SS_commline-mac"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">On a Mac</span>
 </h3>
-<p id="p-273">Luckily, the terminal is easy to find on a Mac: it's called <code class="code-inline tex2jax_ignore">terminal.app</code> and can be found in numerous ways.</p>
+<p id="p-274">Luckily, the terminal is easy to find on a Mac: it's called <code class="code-inline tex2jax_ignore">terminal.app</code> and can be found in numerous ways.</p>
 <ul class="disc">
-<li id="li-130"><p id="p-274">(Recommended) Press <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">Space</kbd> to open Spotlight Search. Start typing “terminal” and the app should pop up quickly. Press <kbd class="kbdkey">Enter</kbd> or click on the result.</p></li>
-<li id="li-131"><p id="p-275">Navigate to the Applications folder in the Finder. Then, open the Utilities folder and double click on <code class="code-inline tex2jax_ignore">terminal.app</code></p></li>
+<li id="li-130"><p id="p-275">(Recommended) Press <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">Space</kbd> to open Spotlight Search. Start typing “terminal” and the app should pop up quickly. Press <kbd class="kbdkey">Enter</kbd> or click on the result.</p></li>
+<li id="li-131"><p id="p-276">Navigate to the Applications folder in the Finder. Then, open the Utilities folder and double click on <code class="code-inline tex2jax_ignore">terminal.app</code></p></li>
 <li id="li-132">
-<p id="p-276">Find it through the Launchpad. What's the Launchpad, you ask? On most Mac keyboards, it is on the key corresponding to <kbd class="kbdkey">F4</kbd> and looks like a bunch of boxes arranged in rows. You can also access the Launchpad by clicking the Launchpad icon in the Dock (also boxes arranged in rows) or by going into the Applications folder in the Finder and double clicking on the <code class="code-inline tex2jax_ignore">Launchpad.app</code> icon.</p>
-<p id="p-277">Once in the Launchpad, find the Terminal. You can either search for it in the search bar at the tope of the screen or scroll through your apps until you find it. (Note: it might be in the Other folder).</p>
+<p id="p-277">Find it through the Launchpad. What's the Launchpad, you ask? On most Mac keyboards, it is on the key corresponding to <kbd class="kbdkey">F4</kbd> and looks like a bunch of boxes arranged in rows. You can also access the Launchpad by clicking the Launchpad icon in the Dock (also boxes arranged in rows) or by going into the Applications folder in the Finder and double clicking on the <code class="code-inline tex2jax_ignore">Launchpad.app</code> icon.</p>
+<p id="p-278">Once in the Launchpad, find the Terminal. You can either search for it in the search bar at the tope of the screen or scroll through your apps until you find it. (Note: it might be in the Other folder).</p>
 </li>
 </ul>
 <article class="assemblage assemblage-like" id="assemblage-2"><h4 class="heading"><span class="title">Shells.</span></h4>
-<p id="p-278">At the top of my (Mac) terminal, it says “&lt;my-username&gt;— -bash”. This indicates that I am using the <code class="code-inline tex2jax_ignore">bash</code> shell. This is no longer the default for MacOS Catalina and later (as the terminal states). I will be sticking with <code class="code-inline tex2jax_ignore">bash</code> in this book to avoid major differences between Windows and Mac instructions. If your terminal states something other than <code class="code-inline tex2jax_ignore">bash</code> (such as <code class="code-inline tex2jax_ignore">zsh</code> or <code class="code-inline tex2jax_ignore">fish</code>) and you would like to use <code class="code-inline tex2jax_ignore">bash</code> to follow along, paste <code class="code-inline tex2jax_ignore">chsh -s /bin/bash</code><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-28" id="fn-28"><sup> 28 </sup></a> into the command line, press <kbd class="kbdkey">Enter</kbd>, enter your password to your computer, and restart the terminal. Otherwise, you are free to stick with the default shell; just know that there may be slight differences between this book and your terminal.</p></article></section><section class="subsection" id="S_commline-windows"><h3 class="heading hide-type">
+<p id="p-279">At the top of my (Mac) terminal, it says “&lt;my-username&gt;— -bash”. This indicates that I am using the <code class="code-inline tex2jax_ignore">bash</code> shell. This is no longer the default for MacOS Catalina and later (as the terminal states). I will be sticking with <code class="code-inline tex2jax_ignore">bash</code> in this book to avoid major differences between Windows and Mac instructions. If your terminal states something other than <code class="code-inline tex2jax_ignore">bash</code> (such as <code class="code-inline tex2jax_ignore">zsh</code> or <code class="code-inline tex2jax_ignore">fish</code>) and you would like to use <code class="code-inline tex2jax_ignore">bash</code> to follow along, paste <code class="code-inline tex2jax_ignore">chsh -s /bin/bash</code><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-28" id="fn-28"><sup> 28 </sup></a> into the command line, press <kbd class="kbdkey">Enter</kbd>, enter your password to your computer, and restart the terminal. Otherwise, you are free to stick with the default shell; just know that there may be slight differences between this book and your terminal.</p></article></section><section class="subsection" id="S_commline-windows"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">On Windows</span>
 </h3>
-<p id="p-279">For Windows users, the situation is a slightly more complicated. The underlying makeup of the operating systems on Windows is differet than the basis for MacOS and other Unix-like systems (such as Linux). This means that certain applications for Windows do not have a MacOS compliment (and likewise some Mac applications do not have Windows versions). In addition, the file system and organization are different bewteen the two.</p>
-<p id="p-280">Separate instructions must be given for Windows users for certain tasks. To make life easier for you, me, and everyone else, I recommend <em class="emphasis">not</em> using the default Windows terminal. <aside class="aside aside-like" id="aside-1"><p id="p-281">The default terminal for Windows is usually the Command Prompt. To access it, activate the search feature of your computer by clicking the search box at the bottom of your screen or by typing <kbd class="kbdkey">Windows</kbd> + <kbd class="kbdkey">S</kbd>. Then search for “command prompt” and click on the result that comes up.</p></aside></p>
-<p id="p-282">Instead, let's use a new terminal (Git Bash) that works with Git and conveniently uses the <code class="code-inline tex2jax_ignore">bash</code> shell which allows me to use the same instructions for Mac as Windows. Detailed download instructions can be found in <a href="materials-windows.html" class="internal" title="Preface: Materials (Windows)">Materials (Windows)</a>. I will assume that you are using Git Bash for the remainder of the book.</p></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<p id="p-280">For Windows users, the situation is a slightly more complicated. The underlying makeup of the operating systems on Windows is differet than the basis for MacOS and other Unix-like systems (such as Linux). This means that certain applications for Windows do not have a MacOS compliment (and likewise some Mac applications do not have Windows versions). In addition, the file system and organization are different bewteen the two.</p>
+<p id="p-281">Separate instructions must be given for Windows users for certain tasks. To make life easier for you, me, and everyone else, I recommend <em class="emphasis">not</em> using the default Windows terminal. <aside class="aside aside-like" id="aside-1"><p id="p-282">The default terminal for Windows is usually the Command Prompt. To access it, activate the search feature of your computer by clicking the search box at the bottom of your screen or by typing <kbd class="kbdkey">Windows</kbd> + <kbd class="kbdkey">S</kbd>. Then search for “command prompt” and click on the result that comes up.</p></aside></p>
+<p id="p-283">Instead, let's use a new terminal (Git Bash) that works with Git and conveniently uses the <code class="code-inline tex2jax_ignore">bash</code> shell which allows me to use the same instructions for Mac as Windows. Detailed download instructions can be found in <a href="materials-windows.html" class="internal" title="Preface: Materials (Windows)">Materials (Windows)</a>. I will assume that you are using Git Bash for the remainder of the book.</p></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">On Linux</span>
 </h3>
-<p id="p-283">This will depend on the version and distribution you have installed. For this reason, I will not be able to provide instructions here. Please use the internet for help. Contributions for your specific distribution are welcome through a pull request or issue on GitHub.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-28"><div class="fn">This command stands for “CHange the SHell to the shell called bash in the bin folder”</div></div>
+<p id="p-284">This will depend on the version and distribution you have installed. For this reason, I will not be able to provide instructions here. Please use the internet for help. Contributions for your specific distribution are welcome through a pull request or issue on GitHub.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-28"><div class="fn">This command stands for “CHange the SHell to the shell called bash in the bin folder”</div></div>
 </div></main>
 </div>
 </body>

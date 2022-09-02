@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:08-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -181,16 +188,16 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="S_hub-about"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">B.3</span> <span class="title">The About Panel</span>
 </h2>
-<p id="p-991">Most popular repositories have created and worked hard on their about panel. On any repo, this appears on the right side of the home page (Code tab) and it titled “About”. This panel may include</p>
+<p id="p-992">Most popular repositories have created and worked hard on their about panel. On any repo, this appears on the right side of the home page (Code tab) and it titled “About”. This panel may include</p>
 <ul class="disc">
-<li id="li-247"><p id="p-992">A short description</p></li>
-<li id="li-248"><p id="p-993">A website</p></li>
-<li id="li-249"><p id="p-994">Topics (these are like tags)</p></li>
-<li id="li-250"><p id="p-995">A release version number</p></li>
-<li id="li-251"><p id="p-996">Any packages published in the repository</p></li>
-<li id="li-252"><p id="p-997">Any environments associated with the repository (such as GitHub Pages)</p></li>
+<li id="li-247"><p id="p-993">A short description</p></li>
+<li id="li-248"><p id="p-994">A website</p></li>
+<li id="li-249"><p id="p-995">Topics (these are like tags)</p></li>
+<li id="li-250"><p id="p-996">A release version number</p></li>
+<li id="li-251"><p id="p-997">Any packages published in the repository</p></li>
+<li id="li-252"><p id="p-998">Any environments associated with the repository (such as GitHub Pages)</p></li>
 </ul>
-<p id="p-998">Also on this side of the page is a list of contributors, and the distribution of the langauges of the files in the repo (this can be off since GitHub doesn't recognize some file extensions). It's always nice to glance at this part of the page when looking at a repository just to get a general idea of what's going on or if it's what you are looking for. (A README will also help you understand more specific ideas about the repo content.)</p></section></div></main>
+<p id="p-999">Also on this side of the page is a list of contributors, and the distribution of the langauges of the files in the repo (this can be off since GitHub doesn't recognize some file extensions). It's always nice to glance at this part of the page when looking at a repository just to get a general idea of what's going on or if it's what you are looking for. (A README will also help you understand more specific ideas about the repo content.)</p></section></div></main>
 </div>
 </body>
 </html>

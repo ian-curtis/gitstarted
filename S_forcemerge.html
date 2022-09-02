@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:08-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -182,25 +189,25 @@
 <section class="section" id="S_forcemerge"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.4</span> <span class="title">Git Won't Let Me Pull From Upstream or Origin!</span>
 </h2>
-<section class="introduction" id="introduction-58"><p id="p-1026">Ah, so you forgot to make a branch. This error happens to me a lot when I have a lot of work on the main branch because I never made a separate branch (not smart of me, I know).</p>
-<p id="p-1027">Or maybe not. Either way, Git says you have a problem with your code and won't let you merge from upstream. Maybe you get a message like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull upstream main
+<section class="introduction" id="introduction-58"><p id="p-1027">Ah, so you forgot to make a branch. This error happens to me a lot when I have a lot of work on the main branch because I never made a separate branch (not smart of me, I know).</p>
+<p id="p-1028">Or maybe not. Either way, Git says you have a problem with your code and won't let you merge from upstream. Maybe you get a message like this: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull upstream main
 </b>error: Your local changes to the following files would be overwritten by merge:
         &lt;file-name(s)&gt;
 Please commit your changes or stash them before you merge.
 Aborting
 </pre></div></p>
-<p id="p-1028">This error occurs when you have local, uncommitted changes and a merge from origin or upstream has changes in the same exact places. Git has no idea whose changes to keep so it does nothing. There are a couple of different things you can do in this situation depending on how you feel about your changes.</p></section><section class="paragraphs" id="paragraphs-46"><h2 class="heading"><span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten.</span></h2>
-<p id="p-1029">This definitely happens! Perhaps you tried a few things and they didn't work so you want to pull from upstream or origin and start over. Maybe you corrected some typos and someone else beat you to it so you want to merge their corrections in and keep working. I could go on and on. It's not difficult at all to force Git to make this happen, just make sure this is what you want to do!</p>
+<p id="p-1029">This error occurs when you have local, uncommitted changes and a merge from origin or upstream has changes in the same exact places. Git has no idea whose changes to keep so it does nothing. There are a couple of different things you can do in this situation depending on how you feel about your changes.</p></section><section class="paragraphs" id="paragraphs-46"><h2 class="heading"><span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten.</span></h2>
+<p id="p-1030">This definitely happens! Perhaps you tried a few things and they didn't work so you want to pull from upstream or origin and start over. Maybe you corrected some typos and someone else beat you to it so you want to merge their corrections in and keep working. I could go on and on. It's not difficult at all to force Git to make this happen, just make sure this is what you want to do!</p>
 <article class="project project-like" id="project-15"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-project-15"><h3 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">C.4</span><span class="period">.</span><span class="space"> </span><span class="title">Forcing an Upstream or Origin Merge.</span>
 </h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-project-15"><article class="project project-like"><article class="task exercise-like" id="task-168"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<p id="p-1030">First, create a backup branch just in case things go haywire: <code class="code-inline tex2jax_ignore">git branch backup</code>. Since <code class="code-inline tex2jax_ignore">git branch</code> does not automatically switch you to that branch, you are free to carry on.</p></article><article class="task exercise-like" id="task-169"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<p id="p-1031">Now, just fetch the changes. Remember that merging and fetching are separate processes. Fetching just collects the changes, attempting to merge will throw the error. Use <code class="code-inline tex2jax_ignore">git fetch &lt;remote&gt; &lt;branch-name&gt;</code>. Example: <code class="code-inline tex2jax_ignore">git fetch upstream main</code>.</p></article><article class="task exercise-like" id="task-170"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<p id="p-1032">Now reset your current branch to the contents you just fetched. This is not a merge, this is a complete reset. You are reverting all of your content to match what you just fetched. This is why we created a backup in case something gets deleted that you didn't want to be.</p>
-<p id="p-1033">In the event that a file you created gets deleted from the reset, just navigate to the backup branch, stage just the missing file and commit just the missing file to origin. Then pull from origin.</p>
-<p id="p-1034">But to reset, use <code class="code-inline tex2jax_ignore">git reset --hard &lt;remote&gt;/&lt;branch-name&gt;</code>. Continuing the example from above, <code class="code-inline tex2jax_ignore">git reset --hard upstream/main</code></p></article></article></div></section><section class="paragraphs" id="paragraphs-47"><h2 class="heading"><span class="title">Your Local Changes are Good and You Want to Keep Them.</span></h2>
-<p id="p-1035">Sometimes your changes are valid and you want them to be kept, but you still want to pull in changes. One option is to force a merge conflict and deal with it in your editor, choosing which version to keep. If this is what you want to do, just <code class="code-inline tex2jax_ignore">add</code> the troublesome files, <code class="code-inline tex2jax_ignore">commit</code> them, then <code class="code-inline tex2jax_ignore">pull</code>. Again, this will force a merge conflict but you can fix things from there.</p>
-<p id="p-1036">Alternatively, you can keep your changes by using <code class="code-inline tex2jax_ignore">git stash</code>. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use <code class="code-inline tex2jax_ignore">git stash pop</code>. I have no experience with this command as I have only been in a situation where I need to force a pull with <code class="code-inline tex2jax_ignore">-f</code>. You might find <a class="external" href="https://opensource.com/article/21/4/git-stash" target="_blank">opensource.com</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-65" id="fn-65"><sup> 65 </sup></a> useful.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-65"><div class="fn"><code class="code-inline tex2jax_ignore">opensource.com/article/21/4/git-stash</code></div></div>
+<p id="p-1031">First, create a backup branch just in case things go haywire: <code class="code-inline tex2jax_ignore">git branch backup</code>. Since <code class="code-inline tex2jax_ignore">git branch</code> does not automatically switch you to that branch, you are free to carry on.</p></article><article class="task exercise-like" id="task-169"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<p id="p-1032">Now, just fetch the changes. Remember that merging and fetching are separate processes. Fetching just collects the changes, attempting to merge will throw the error. Use <code class="code-inline tex2jax_ignore">git fetch &lt;remote&gt; &lt;branch-name&gt;</code>. Example: <code class="code-inline tex2jax_ignore">git fetch upstream main</code>.</p></article><article class="task exercise-like" id="task-170"><h4 class="heading"><span class="codenumber">(c)</span></h4>
+<p id="p-1033">Now reset your current branch to the contents you just fetched. This is not a merge, this is a complete reset. You are reverting all of your content to match what you just fetched. This is why we created a backup in case something gets deleted that you didn't want to be.</p>
+<p id="p-1034">In the event that a file you created gets deleted from the reset, just navigate to the backup branch, stage just the missing file and commit just the missing file to origin. Then pull from origin.</p>
+<p id="p-1035">But to reset, use <code class="code-inline tex2jax_ignore">git reset --hard &lt;remote&gt;/&lt;branch-name&gt;</code>. Continuing the example from above, <code class="code-inline tex2jax_ignore">git reset --hard upstream/main</code></p></article></article></div></section><section class="paragraphs" id="paragraphs-47"><h2 class="heading"><span class="title">Your Local Changes are Good and You Want to Keep Them.</span></h2>
+<p id="p-1036">Sometimes your changes are valid and you want them to be kept, but you still want to pull in changes. One option is to force a merge conflict and deal with it in your editor, choosing which version to keep. If this is what you want to do, just <code class="code-inline tex2jax_ignore">add</code> the troublesome files, <code class="code-inline tex2jax_ignore">commit</code> them, then <code class="code-inline tex2jax_ignore">pull</code>. Again, this will force a merge conflict but you can fix things from there.</p>
+<p id="p-1037">Alternatively, you can keep your changes by using <code class="code-inline tex2jax_ignore">git stash</code>. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use <code class="code-inline tex2jax_ignore">git stash pop</code>. I have no experience with this command as I have only been in a situation where I need to force a pull with <code class="code-inline tex2jax_ignore">-f</code>. You might find <a class="external" href="https://opensource.com/article/21/4/git-stash" target="_blank">opensource.com</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-65" id="fn-65"><sup> 65 </sup></a> useful.</p></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-65"><div class="fn"><code class="code-inline tex2jax_ignore">opensource.com/article/21/4/git-stash</code></div></div>
 </div></main>
 </div>
 </body>

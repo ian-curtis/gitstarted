@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:04-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -71,11 +77,11 @@
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
 <button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="colophon-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="preface-1.html" title="Next">Next</a></span>
+<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="dedication-1.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="preface-1.html" title="Next">Next</a></span>
 </div>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="colophon-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="preface-1.html" title="Next">Next</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="dedication-1.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="frontmatter.html" title="Up">Up</a><a class="next-button button toolbar-item" href="preface-1.html" title="Next">Next</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="active">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -182,10 +189,10 @@
 <section class="acknowledgement" id="acknowledgement-1"><h2 class="heading hide-type">
 <span class="type">Acknowledgements</span> <span class="codenumber"></span> <span class="title">Acknowledgements</span>
 </h2>
-<p id="p-1">Thank you to the Grand Valley State University (<abbr class="initialism">GVSU</abbr>) Libraries, specifically the Scholarly Communications section, for their support while writing this book. This book would not have been written had it not been for Matt Ruen of <abbr class="initialism">GVSU</abbr> who provided useful feedback on accessibility, general <abbr class="initialism">OER</abbr> guidance, organization, and who arranged for a university grant to hire me as a student employee to assist with <abbr class="initialism">OER</abbr> creation and mangement at <abbr class="initialism">GVSU</abbr>.</p>
-<p id="p-2">I am also indebted to Alicia Huber and Jackie Rander for their feedback on the clarity, concision, and effectiveness of the book. The book has benefitted because of them.</p>
-<p id="p-3">Kudos also go to David Farmer, Rob Beezer, Oscar Levin, and the many others who work to maintain and update PreTeXt and its functions. PreTeXt is a great, free resource for authors.</p>
-<p id="p-4">All branch diagrams found in this book were created by the author using <a class="external" href="https://miro.com/" target="_blank">the online creator, Miro</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>.</p></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">miro.com/</code></div></div>
+<p id="p-2">Thank you to the Grand Valley State University (<abbr class="initialism">GVSU</abbr>) Libraries, specifically the Scholarly Communications section, for their support while writing this book. This book would not have been written had it not been for Matt Ruen of <abbr class="initialism">GVSU</abbr> who provided useful feedback on accessibility, general <abbr class="initialism">OER</abbr> guidance, organization, and who arranged for a university grant to hire me as a student employee to assist with <abbr class="initialism">OER</abbr> creation and mangement at <abbr class="initialism">GVSU</abbr>.</p>
+<p id="p-3">I am also indebted to Alicia Huber and Jackie Rander for their feedback on the clarity, concision, and effectiveness of the book. The book has benefitted because of them.</p>
+<p id="p-4">Kudos also go to David Farmer, Rob Beezer, Oscar Levin, and the many others who work to maintain and update PreTeXt and its functions. PreTeXt is a great, free resource for authors.</p>
+<p id="p-5">All branch diagrams found in this book were created by the author using <a class="external" href="https://miro.com/" target="_blank">the online creator, Miro</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-2" id="fn-2"><sup> 2 </sup></a>.</p></section><div class="hidden-content tex2jax_ignore" id="hk-fn-2"><div class="fn"><code class="code-inline tex2jax_ignore">miro.com/</code></div></div>
 </div></main>
 </div>
 </body>

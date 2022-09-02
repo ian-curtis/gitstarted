@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:04-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="active">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -183,16 +190,16 @@
 <span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Publisher's Note</span>
 </h2>
 <section class="paragraphs" id="paragraphs-1"><h1 class="heading"><span class="title">About this Edition.</span></h1>
-<p id="p-5"><span class="booktitle">Better Git Started: An Introduction to the Command Line, GitHub, and Git</span> was written by Ian Curtis, a senior at Grand Valley State University and Editorial Assistant for the <abbr class="initialism">GVSU</abbr> Libraries. This text was developed as part of the <a class="external" href="https://www.gvsu.edu/library/sc/AcceleratingOER" target="_blank">Accelerating Open Educational Resources Initiative at Grand Valley State University</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a>, with support from the University Libraries and the President's Innovation Fund.</p>
-<p id="p-6">This edition is released under a Creative Commons - Attribution - Sharealike license (<a class="external" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC-BY-SA 4.0</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a>). This allows users to use, share, and adapt the work as long as they provide attribution to the creator(s) and apply the same license to any derivative work or adaptation.</p>
-<p id="p-7">The code used to generate this book can be found in <a class="external" href="https://github.com/ian-curtis/gitstarted" target="_blank">the author's GitHub repository</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a>. This includes the PreTeXt <abbr class="initialism">XML</abbr> files, figures, customization files (<abbr class="initialism">XSL</abbr>), and the output (<abbr class="initialism">HTML</abbr> and <abbr class="initialism">PDF</abbr>). Contributors are encouraged to submit an issue or a pull request with changes, especially regarding accessibility (as mentioned below).</p>
-<p id="p-8">Suggested Attribution: <span class="booktitle">Better Git Started: An Introduction to the Command Line, GitHub, and Git</span>, by Ian Curtis, published by the Grand Valley State University Libraries, 2022.</p></section><section class="paragraphs" id="paragraphs-2"><h1 class="heading"><span class="title">Accessibility Statement.</span></h1>
-<p id="p-9">The Grand Valley State University Libraries strive to ensure our tools, devices, services, and environments are available to and usable by as many people as possible.</p>
-<p id="p-10">The web version of <span class="booktitle">Better Git Started</span> incorporates the following features to support accessibility:</p>
+<p id="p-6"><span class="booktitle">Better Git Started: An Introduction to the Command Line, GitHub, and Git</span> was written by Ian Curtis, a senior at Grand Valley State University and Editorial Assistant for the <abbr class="initialism">GVSU</abbr> Libraries. This text was developed as part of the <a class="external" href="https://www.gvsu.edu/library/sc/AcceleratingOER" target="_blank">Accelerating Open Educational Resources Initiative at Grand Valley State University</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-3" id="fn-3"><sup> 3 </sup></a>, with support from the University Libraries and the President's Innovation Fund.</p>
+<p id="p-7">This edition is released under a Creative Commons - Attribution - Sharealike license (<a class="external" href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC-BY-SA 4.0</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-4" id="fn-4"><sup> 4 </sup></a>). This allows users to use, share, and adapt the work as long as they provide attribution to the creator(s) and apply the same license to any derivative work or adaptation.</p>
+<p id="p-8">The code used to generate this book can be found in <a class="external" href="https://github.com/ian-curtis/gitstarted" target="_blank">the author's GitHub repository</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-5" id="fn-5"><sup> 5 </sup></a>. This includes the PreTeXt <abbr class="initialism">XML</abbr> files, figures, customization files (<abbr class="initialism">XSL</abbr>), and the output (<abbr class="initialism">HTML</abbr> and <abbr class="initialism">PDF</abbr>). Contributors are encouraged to submit an issue or a pull request with changes, especially regarding accessibility (as mentioned below).</p>
+<p id="p-9">Suggested Attribution: <span class="booktitle">Better Git Started: An Introduction to the Command Line, GitHub, and Git</span>, by Ian Curtis, published by the Grand Valley State University Libraries, 2022.</p></section><section class="paragraphs" id="paragraphs-2"><h1 class="heading"><span class="title">Accessibility Statement.</span></h1>
+<p id="p-10">The Grand Valley State University Libraries strive to ensure our tools, devices, services, and environments are available to and usable by as many people as possible.</p>
+<p id="p-11">The web version of <span class="booktitle">Better Git Started</span> incorporates the following features to support accessibility:</p>
 <ul class="disc">
-<li id="li-1"><p id="p-11">All content can be navigated by use of a keyboard</p></li>
-<li id="li-2"><p id="p-12">Links, headings, and tables have been designed to work with screen readers</p></li>
-<li id="li-3"><p id="p-13">Code in PreTeXt is rendered with separate blocks so they can be understood by using screen readers and/or other assistive devices.</p></li>
+<li id="li-1"><p id="p-12">All content can be navigated by use of a keyboard</p></li>
+<li id="li-2"><p id="p-13">Links, headings, and tables have been designed to work with screen readers</p></li>
+<li id="li-3"><p id="p-14">Code in PreTeXt is rendered with separate blocks so they can be understood by using screen readers and/or other assistive devices.</p></li>
 </ul></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-3"><div class="fn"><code class="code-inline tex2jax_ignore">gvsu.edu/library/sc/AcceleratingOER</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-4"><div class="fn"><code class="code-inline tex2jax_ignore">https://creativecommons.org/licenses/by-sa/4.0/</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-5"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/ian-curtis/gitstarted</code></div></div>

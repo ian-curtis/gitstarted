@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:07-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -181,60 +188,60 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="S_gitcollabpr"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.4</span> <span class="title">The Final Steps</span>
 </h2>
-<p id="p-877">All that's left to do is to create some pull requests. There are technically two ways you could make this work. You can either open a pull request from your new branch directly to the authoritative main branch or you can merge from your new branch to your fork's main branch and then to the authoritative main branch.</p>
+<p id="p-878">All that's left to do is to create some pull requests. There are technically two ways you could make this work. You can either open a pull request from your new branch directly to the authoritative main branch or you can merge from your new branch to your fork's main branch and then to the authoritative main branch.</p>
 <section class="subsection" id="SS_gitcollabpr"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.4.1</span> <span class="title">Opening a Pull Request</span>
 </h3>
-<p id="p-878">Use <a href="" class="xref" data-knowl="./knowl/act-git-pr.html" title="Activity 4.9: Creating a Pull Request">Activity 4.9</a> to go back to GitHub and start opening a pull request. When you arrive at the pull request creation screen (titled “Comparing changes”), you generally have two choices, as mentioned above. The following list describes the branches and repos you should have selected at the top of the screen, under the page heading.</p>
+<p id="p-879">Use <a href="" class="xref" data-knowl="./knowl/act-git-pr.html" title="Activity 4.9: Creating a Pull Request">Activity 4.9</a> to go back to GitHub and start opening a pull request. When you arrive at the pull request creation screen (titled “Comparing changes”), you generally have two choices, as mentioned above. The following list describes the branches and repos you should have selected at the top of the screen, under the page heading.</p>
 <ol class="decimal">
 <li id="li-225">
-<span class="heading"><span class="title">Merge from your new branch to your fork, then to the authoritative.</span></span><p id="p-879">Your base repository should be <code class="code-inline tex2jax_ignore">&lt;your-username&gt;/&lt;your-fork&gt;</code>, base should be <code class="code-inline tex2jax_ignore">main</code>, and compare should be <code class="code-inline tex2jax_ignore">&lt;your-branch</code>. Do note that once you select your fork for the base repository, the page will reload and the base and head repository options will disappear.</p>
-<p id="p-880">Then, click Create pull request and merge in to main. You may now open another pull request with options base repository of <code class="code-inline tex2jax_ignore">&lt;authoritative-username&gt;/&lt;authoritative-repo&gt;</code>, base should be <code class="code-inline tex2jax_ignore">main</code>, head repository should be <code class="code-inline tex2jax_ignore">&lt;your-username&gt;&lt;your-fork&gt;</code> and compare should be <code class="code-inline tex2jax_ignore">main</code>.</p>
+<span class="heading"><span class="title">Merge from your new branch to your fork, then to the authoritative.</span></span><p id="p-880">Your base repository should be <code class="code-inline tex2jax_ignore">&lt;your-username&gt;/&lt;your-fork&gt;</code>, base should be <code class="code-inline tex2jax_ignore">main</code>, and compare should be <code class="code-inline tex2jax_ignore">&lt;your-branch</code>. Do note that once you select your fork for the base repository, the page will reload and the base and head repository options will disappear.</p>
+<p id="p-881">Then, click Create pull request and merge in to main. You may now open another pull request with options base repository of <code class="code-inline tex2jax_ignore">&lt;authoritative-username&gt;/&lt;authoritative-repo&gt;</code>, base should be <code class="code-inline tex2jax_ignore">main</code>, head repository should be <code class="code-inline tex2jax_ignore">&lt;your-username&gt;&lt;your-fork&gt;</code> and compare should be <code class="code-inline tex2jax_ignore">main</code>.</p>
 </li>
 <li id="li-226">
-<span class="heading"><span class="title">Merge from your new branch directly to the authoritative.</span></span><p id="p-881">Your base repository should be <code class="code-inline tex2jax_ignore">&lt;authoritative-username&gt;/&lt;authoritative-repo&gt;</code>, base should be <code class="code-inline tex2jax_ignore">main</code>, head repository should be <code class="code-inline tex2jax_ignore">&lt;your-username&gt;&lt;your-fork&gt;</code> and compare should be <code class="code-inline tex2jax_ignore">&lt;your-branch&gt;</code>.</p>
+<span class="heading"><span class="title">Merge from your new branch directly to the authoritative.</span></span><p id="p-882">Your base repository should be <code class="code-inline tex2jax_ignore">&lt;authoritative-username&gt;/&lt;authoritative-repo&gt;</code>, base should be <code class="code-inline tex2jax_ignore">main</code>, head repository should be <code class="code-inline tex2jax_ignore">&lt;your-username&gt;&lt;your-fork&gt;</code> and compare should be <code class="code-inline tex2jax_ignore">&lt;your-branch&gt;</code>.</p>
 </li>
 </ol>
-<p id="p-882">After either of those two, click on “Create pull request”, enter a title, and click “Create pull request” again. From there, you will have to wait for approval and moderator merge.</p></section><section class="subsection" id="SS_gitcollabpull"><h3 class="heading hide-type">
+<p id="p-883">After either of those two, click on “Create pull request”, enter a title, and click “Create pull request” again. From there, you will have to wait for approval and moderator merge.</p></section><section class="subsection" id="SS_gitcollabpull"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.4.2</span> <span class="title">Pulling/Fetching Upstream</span>
 </h3>
-<p id="p-883">Recall from <a href="S_hubcollabfetch.html" class="internal" title="Section 5.4: Fetching Upstream">Section 5.4</a> that you can update your fork with the latest upstream changes through the “Fetch upstream” button. That works great for updating the fork, but it doesn't update your local clone. There are two main ways in which you can update both your fork and for clone with new changes to upstream.</p>
+<p id="p-884">Recall from <a href="S_hubcollabfetch.html" class="internal" title="Section 5.4: Fetching Upstream">Section 5.4</a> that you can update your fork with the latest upstream changes through the “Fetch upstream” button. That works great for updating the fork, but it doesn't update your local clone. There are two main ways in which you can update both your fork and for clone with new changes to upstream.</p>
 <article class="project project-like" id="try-git-pull-origin"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-try-git-pull-origin"><h4 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">6.1</span><span class="period">.</span><span class="space"> </span><span class="title">Updating Origin and Local, Method 1.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-try-git-pull-origin"><article class="project project-like"><div class="introduction" id="introduction-47"><p id="p-884">This method will first fetch upstream on GitHub, then pull in changes from origin.</p></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-try-git-pull-origin"><article class="project project-like"><div class="introduction" id="introduction-47"><p id="p-885">This method will first fetch upstream on GitHub, then pull in changes from origin.</p></div>
 <article class="task exercise-like" id="task-126"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-885">Use <a href="S_hubcollabfetch.html#SS_fetchupstream" class="internal" title="Subsection 5.4.3: Third, Fetching Upstream">Subsection 5.4.3</a> to fetch (and merge) upstream content into the main branch of your fork (origin).</p></article><article class="task exercise-like" id="task-127"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<p id="p-886">Now, head back to your terminal and make sure you are navigated to your clone. Do a check to make sure you are on your main branch; if not, use <code class="code-inline tex2jax_ignore">git switch main</code>.</p>
-<p id="p-887">If you are planning on making more changes to a branch, but want it updated to the latest upstream changes, you can stay on a branch. If you have any uncommitted changes, you might make a merge conflict.</p></article><article class="task exercise-like" id="task-128"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-888">Now use <code class="code-inline tex2jax_ignore">git pull</code> to pull in the changes from your recently-updated fork. <a href="" class="xref" data-knowl="./knowl/try-git-pull.html" title="Git Procedure 4.10: Trying git pull">Git Procedure 4.10</a> may be helpful. Just remember that you are pulling in changes from the main branch on origin.</p>
+<p id="p-886">Use <a href="S_hubcollabfetch.html#SS_fetchupstream" class="internal" title="Subsection 5.4.3: Third, Fetching Upstream">Subsection 5.4.3</a> to fetch (and merge) upstream content into the main branch of your fork (origin).</p></article><article class="task exercise-like" id="task-127"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-887">Now, head back to your terminal and make sure you are navigated to your clone. Do a check to make sure you are on your main branch; if not, use <code class="code-inline tex2jax_ignore">git switch main</code>.</p>
+<p id="p-888">If you are planning on making more changes to a branch, but want it updated to the latest upstream changes, you can stay on a branch. If you have any uncommitted changes, you might make a merge conflict.</p></article><article class="task exercise-like" id="task-128"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-889">Now use <code class="code-inline tex2jax_ignore">git pull</code> to pull in the changes from your recently-updated fork. <a href="" class="xref" data-knowl="./knowl/try-git-pull.html" title="Git Procedure 4.10: Trying git pull">Git Procedure 4.10</a> may be helpful. Just remember that you are pulling in changes from the main branch on origin.</p>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-44" id="answer-44"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-44"><div class="answer solution-like"><p id="p-889"><code class="code-inline tex2jax_ignore">git pull origin main</code> (if you are pulling from origin, just <code class="code-inline tex2jax_ignore">git pull</code> can work, too)</p></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-44" id="answer-44"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-44"><div class="answer solution-like"><p id="p-890"><code class="code-inline tex2jax_ignore">git pull origin main</code> (if you are pulling from origin, just <code class="code-inline tex2jax_ignore">git pull</code> can work, too)</p></div></div>
 </div></article></article></div>
 <article class="project project-like" id="try-git-pull-upstream"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-try-git-pull-upstream"><h4 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">6.2</span><span class="period">.</span><span class="space"> </span><span class="title">Updating Origin and Local, Method 2.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-try-git-pull-upstream"><article class="project project-like"><div class="introduction" id="introduction-48"><p id="p-890">This method will first set up a remote to upstream, pull in changes from upstream, then push changes to origin.</p></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-try-git-pull-upstream"><article class="project project-like"><div class="introduction" id="introduction-48"><p id="p-891">This method will first set up a remote to upstream, pull in changes from upstream, then push changes to origin.</p></div>
 <article class="task exercise-like" id="task-129"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<p id="p-891">Head to your terminal and make sure you are navigated to your clone. Do a check to make sure you are on your main branch; if not, use <code class="code-inline tex2jax_ignore">git switch main</code>.</p>
-<p id="p-892">If you are planning on making more changes to a branch, but want it updated to the latest upstream changes, you can stay on a branch. If you have any uncommitted changes, you might make a merge conflict.</p></article><article class="task exercise-like" id="task-130"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<p id="p-892">Head to your terminal and make sure you are navigated to your clone. Do a check to make sure you are on your main branch; if not, use <code class="code-inline tex2jax_ignore">git switch main</code>.</p>
+<p id="p-893">If you are planning on making more changes to a branch, but want it updated to the latest upstream changes, you can stay on a branch. If you have any uncommitted changes, you might make a merge conflict.</p></article><article class="task exercise-like" id="task-130"><h5 class="heading"><span class="codenumber">(b)</span></h5>
 <div class="introduction" id="introduction-49">
-<p id="p-893">This step will only have to be done once per repo that you have forked, then cloned. When you clone a fork, the connection between origin and upstream is not carried over. If I tried to pull from upstream without this connection, I would get an error: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">fatal: 'upstream' does not appear to be a git repository
+<p id="p-894">This step will only have to be done once per repo that you have forked, then cloned. When you clone a fork, the connection between origin and upstream is not carried over. If I tried to pull from upstream without this connection, I would get an error: <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console">fatal: 'upstream' does not appear to be a git repository
 fatal: Coult not read from remote repository.
 
 Please make sure you have the correct access rights
 and the repository exists.
 </pre></div></p>
-<p id="p-894">This is troublesome! Clearly upstream exists; how else would we have forked it? To fix this, you need to manually set the remote connection. Again, this only has to be done once per forked/cloned repo.</p>
+<p id="p-895">This is troublesome! Clearly upstream exists; how else would we have forked it? To fix this, you need to manually set the remote connection. Again, this only has to be done once per forked/cloned repo.</p>
 </div>
 <article class="task exercise-like" id="task-131"><h6 class="heading"><span class="codenumber">(i)</span></h6>
-<p id="p-895">Navigate to the authoritative repo's homepage and copy its <abbr class="initialism">HTTPS</abbr> clone link, just as if you were going to clone the repo.</p></article><article class="task exercise-like" id="task-132"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
-<p id="p-896">Head back to your terminal and use <code class="code-inline tex2jax_ignore">git remote add upstream &lt;https-link&gt;</code>. There will be no output.</p></article><article class="task exercise-like" id="task-133"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
-<p id="p-897">Verify that it worked with <code class="code-inline tex2jax_ignore">git remote -v</code>. This will print out the HTTPS links for origin and upstream. Make sure your username is on the origin remotes and the official repo/username is on the upstream remotes.</p></article></article><article class="task exercise-like" id="task-134"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<p id="p-898">Ok, that was the hardest part. Once again, that only has to be done once. After that, every time you want to pull from upstream and update local and origin, you just need two commands: <code class="code-inline tex2jax_ignore">git pull upstream main</code> and <code class="code-inline tex2jax_ignore">git push origin main</code>.</p>
-<p id="p-899"><code class="code-inline tex2jax_ignore">git pull</code> will fetch and merge upstream changes from its main branch and <code class="code-inline tex2jax_ignore">git push</code> will take all of your files and push them to origin, updating them there.</p></article></article></div>
+<p id="p-896">Navigate to the authoritative repo's homepage and copy its <abbr class="initialism">HTTPS</abbr> clone link, just as if you were going to clone the repo.</p></article><article class="task exercise-like" id="task-132"><h6 class="heading"><span class="codenumber">(ii)</span></h6>
+<p id="p-897">Head back to your terminal and use <code class="code-inline tex2jax_ignore">git remote add upstream &lt;https-link&gt;</code>. There will be no output.</p></article><article class="task exercise-like" id="task-133"><h6 class="heading"><span class="codenumber">(iii)</span></h6>
+<p id="p-898">Verify that it worked with <code class="code-inline tex2jax_ignore">git remote -v</code>. This will print out the HTTPS links for origin and upstream. Make sure your username is on the origin remotes and the official repo/username is on the upstream remotes.</p></article></article><article class="task exercise-like" id="task-134"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<p id="p-899">Ok, that was the hardest part. Once again, that only has to be done once. After that, every time you want to pull from upstream and update local and origin, you just need two commands: <code class="code-inline tex2jax_ignore">git pull upstream main</code> and <code class="code-inline tex2jax_ignore">git push origin main</code>.</p>
+<p id="p-900"><code class="code-inline tex2jax_ignore">git pull</code> will fetch and merge upstream changes from its main branch and <code class="code-inline tex2jax_ignore">git push</code> will take all of your files and push them to origin, updating them there.</p></article></article></div>
 <article class="warning remark-like" id="warn-pull-often"><h4 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">6.4.2.1</span><span class="period">.</span><span class="space"> </span><span class="title">Use <code class="code-inline tex2jax_ignore">git pull</code> Frequently.</span>
 </h4>
-<p id="p-900">On a repository for which you are an active editor, do not get behind on your pulls. As mentioned in <a href="" class="xref" data-knowl="./knowl/warn-fetch-often.html" title="Warning 5.4.3.1: Fetch Upstream Often">Warning 5.4.3.1</a>, sometimes changes to upstream can improve or change how you work locally. Pulling often keeps your work at the very edge of the Git tree and reduces the likelihood you create a merge conflict. You also want to push back to origin often to prevent merge conflicts with yourself.</p></article></section></section></div></main>
+<p id="p-901">On a repository for which you are an active editor, do not get behind on your pulls. As mentioned in <a href="" class="xref" data-knowl="./knowl/warn-fetch-often.html" title="Warning 5.4.3.1: Fetch Upstream Often">Warning 5.4.3.1</a>, sometimes changes to upstream can improve or change how you work locally. Pulling often keeps your work at the very edge of the Git tree and reduces the likelihood you create a merge conflict. You also want to push back to origin often to prevent merge conflicts with yourself.</p></article></section></section></div></main>
 </div>
 </body>
 </html>

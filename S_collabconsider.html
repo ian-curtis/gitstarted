@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
-<!--*       on 2022-07-25T10:08:06-04:00       *-->
-<!--*   A recent stable commit (2020-08-09):   *-->
-<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
 <!--*                                          *-->
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
@@ -17,7 +14,8 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>window.MathJax = {
+<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
   tex: {
     inlineMath: [['\\(','\\)']],
     tags: "none",
@@ -37,6 +35,14 @@
     load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
+  startup: {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+},
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
@@ -83,6 +89,7 @@
 <li class="link frontmatter">
 <a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
 <li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
+<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
 <li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
 <li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
 <li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
@@ -181,9 +188,9 @@
 <main class="main"><div id="content" class="pretext-content"><section class="section" id="S_collabconsider"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Before Beginning, Consider This</span>
 </h2>
-<p id="p-768">One of the great features of GitHub is the promotion of collaboration, adding new things, and improving others' work. If your repo is public, anyone can contribute to it. But as the repo owner, you have certain authorities. No one will be able to change things officially without your permission. The main branch will only be changed if you (or other moderators) approve it. This emphasizes the importance of branches (so you can test others' work) and forks (as explored in <a href="S_hubcollabsetup.html" class="internal" title="Section 5.2: Getting Set Up To Collaborate">Section 5.2</a>).</p>
-<p id="p-769">As more people collaborate on a project at the same time, the complexity of the branch and fork system increases. With this, it is important to consider potential conflicts. Especially with larger projects, you could have multiple working on the same area at the same time. If two people decide to change the same part of the project at the same time, which edits win? Who gets the privilege of having their changes incorporated into <code class="code-inline tex2jax_ignore">main</code>? Sadly, GitHub and Git cannot figure that out by themselves and create a merge conflict, leaving you, the repo moderator, to settle the dispute.</p>
-<p id="p-770">Throughout this part, I will guide you through the process of editing with a team while providing warnings and lessons from what I have learned. I should say that the extent of my knowledge of this topic is not as developed as others' might be. With Git, I find it better to stick with the things I know how to do (add, commit, push, pull, fork, clone, etc.) and if a problem arises, I research how to fix it. As I learn how to correct Git errors, I will update this part of the book and especially <a href="app_gittroubles.html" class="internal" title="Appendix C: Common Git Troubles and How To Fix Them">Appendix C</a>. Regardless, the focus of this book is on the basics and what you need to know to have a successful workflow. If that's what you need, read on.</p></section></div></main>
+<p id="p-769">One of the great features of GitHub is the promotion of collaboration, adding new things, and improving others' work. If your repo is public, anyone can contribute to it. But as the repo owner, you have certain authorities. No one will be able to change things officially without your permission. The main branch will only be changed if you (or other moderators) approve it. This emphasizes the importance of branches (so you can test others' work) and forks (as explored in <a href="S_hubcollabsetup.html" class="internal" title="Section 5.2: Getting Set Up To Collaborate">Section 5.2</a>).</p>
+<p id="p-770">As more people collaborate on a project at the same time, the complexity of the branch and fork system increases. With this, it is important to consider potential conflicts. Especially with larger projects, you could have multiple working on the same area at the same time. If two people decide to change the same part of the project at the same time, which edits win? Who gets the privilege of having their changes incorporated into <code class="code-inline tex2jax_ignore">main</code>? Sadly, GitHub and Git cannot figure that out by themselves and create a merge conflict, leaving you, the repo moderator, to settle the dispute.</p>
+<p id="p-771">Throughout this part, I will guide you through the process of editing with a team while providing warnings and lessons from what I have learned. I should say that the extent of my knowledge of this topic is not as developed as others' might be. With Git, I find it better to stick with the things I know how to do (add, commit, push, pull, fork, clone, etc.) and if a problem arises, I research how to fix it. As I learn how to correct Git errors, I will update this part of the book and especially <a href="app_gittroubles.html" class="internal" title="Appendix C: Common Git Troubles and How To Fix Them">Appendix C</a>. Regardless, the focus of this book is on the basics and what you need to know to have a successful workflow. If that's what you need, read on.</p></section></div></main>
 </div>
 </body>
 </html>
