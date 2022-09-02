@@ -152,7 +152,7 @@
     <idx><h>origin</h></idx>
     <introduction>
       <p>
-        Ah, so you forgot to make a branch. This error happens to me a lot when I have a lot of work on the main branch because I never made a separate branch (not smart of me, I know).
+        Ah, perhaps you forgot to make a branch. This error happens to me a lot when I have a lot of work on the main branch because I never made a separate branch (not smart of me, I know).
       </p>
       <p>
         Or maybe not. Either way, Git says you have a problem with your code and won't let you merge from upstream. Maybe you get a message like this:
@@ -173,6 +173,8 @@ Aborting
 
     <paragraphs>
       <title>Your Local Changes Are Irrelevant and You Want Them Overwritten</title>
+      
+      <idx><h>force merge</h></idx>
       <p>
         This definitely happens! Perhaps you tried a few things and they didn't work so you want to pull from upstream or origin and start over. Maybe you corrected some typos and someone else beat you to it so you want to merge their corrections in and keep working. I could go on and on. It's not difficult at all to force Git to make this happen, just make sure this is what you want to do!
       </p>
@@ -215,13 +217,14 @@ Aborting
 
     <paragraphs>
       <title>Your Local Changes are Good and You Want to Keep Them</title>
-      
+      <idx><h>git</h><h>stash</h></idx>
+      <idx><h>stash</h></idx>
       <p>
         Sometimes your changes are valid and you want them to be kept, but you still want to pull in changes. One option is to force a merge conflict and deal with it in your editor, choosing which version to keep. If this is what you want to do, just <c>add</c> the troublesome files, <c>commit</c> them, then <c>pull</c>. Again, this will force a merge conflict but you can fix things from there.
       </p>
 
       <p>
-        Alternatively, you can keep your changes by using <c>git stash</c>. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use <c>git stash pop</c>. I have no experience with this command as I have only been in a situation where I need to force a pull with <c>-f</c>. You might find <url href="https://opensource.com/article/21/4/git-stash" visual="opensource.com/article/21/4/git-stash">opensource.com</url> useful.
+        Alternatively, you can keep your changes by using <c>git stash</c>. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use <c>git stash pop</c>. In my experience, things have worked out quite nicely with <c>git stash</c>. I just type <c>git stash</c> before pulling, then I pull, then I use <c>git stash pop</c> and my changes are popped right back into where they were. For more information, you might find <url href="https://opensource.com/article/21/4/git-stash" visual="opensource.com/article/21/4/git-stash">opensource.com</url> useful.
       </p>
     </paragraphs>
   </section>
@@ -342,6 +345,9 @@ fatal: Need to specify how to reconcile divergent branches.
     </p>
     <p>
       I have accidentally caused a merge conflict with myself and with working on the same repository from two different computers and two different accounts. Oops! This is an easy fix because I made the conflict with myself so I know which version is the correct one. If this happens to you, Git might send you to an unfamiliar screen when you try to push or pull. You'll know you have this case if your terminal asks you to type in a reason why the merge must happen or how the conflict is resolved. This typically happens when you try to merge from an upstream main into a local main that has active changes (so create branches!).
+    </p>
+    <p>
+      If you start to get stuck, do a quick Google search. There are many guides and resources out there to help with merge conflicts. <url href="https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts" visual='https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts'>Jennifer Bryan</url> has a good guide on merge conflict basics (and some other potential Git issues!) so start there are explore more as needed.
     </p>
 
     <project>
