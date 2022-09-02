@@ -25,7 +25,7 @@ git clone https://github.com/ian-curtis/gitstarted.git
 and install PreTeXt on the command line using Python
 
 ```
-pip install pretextbook
+pip install pretext==1.0.2
 ```
 
 To build the HTML, type `pretext build html` and then `pretext view html` on the command line. For PDF builds, use either `pretext build latex-elec` or `pretext build latex-print` and use your LaTeX installation to compile a PDF.
