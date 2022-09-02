@@ -347,7 +347,7 @@ fatal: Need to specify how to reconcile divergent branches.
       I have accidentally caused a merge conflict with myself and with working on the same repository from two different computers and two different accounts. Oops! This is an easy fix because I made the conflict with myself so I know which version is the correct one. If this happens to you, Git might send you to an unfamiliar screen when you try to push or pull. You'll know you have this case if your terminal asks you to type in a reason why the merge must happen or how the conflict is resolved. This typically happens when you try to merge from an upstream main into a local main that has active changes (so create branches!).
     </p>
     <p>
-      If you start to get stuck, do a quick Google search. There are many guides and resources out there to help with merge conflicts. <url href="https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts" visual='https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts'>Jennifer Bryan</url> has a good guide on merge conflict basics (and some other potential Git issues!) so start there are explore more as needed.
+      If you start to get stuck, do a quick Google search. There are many guides and resources out there to help with merge conflicts. <url href="https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts" visual='https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts'>Jennifer Bryan</url> has a good guide on merge conflict basics (and some other potential Git issues!) so start there and explore more as needed.
     </p>
 
     <project>
