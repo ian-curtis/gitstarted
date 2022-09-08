@@ -16,13 +16,13 @@ The HTML version of the book is hosted on [GitHub Pages](https://ian-curtis.gith
 
 *Git Started* was written in PreTeXt (https://pretextbook.org), a markup language designed for authors. Thus, to edit and build the book yourself, you will need to use PreTeXt.
 
-Make sure you have Python, LaTeX (if making a PDF), and a good text editor installed. Fork, then clone this repository with
+Make sure you have Python, LaTeX (if making a PDF), and a good text editor installed. Fork, then clone your forked repository with
 
 ```
-git clone https://github.com/ian-curtis/gitstarted.git
+git clone https://github.com/<your-username>/gitstarted.git
 ```
 
-and install PreTeXt on the command line using Python
+and install PreTeXt on the command line using Python (and probably a virtual environment)
 
 ```
 pip install pretext==1.0.2
