@@ -48,7 +48,9 @@
     <!-- links the html version of asymptote graphics.                -->
   <latex print="yes" sides="two">
     <asymptote links="no"/>
-    
+    <page>
+      <geometry>top=1in, bottom=1in, outer=1.2in, inner=1.8in</geometry>
+    </page>
   </latex>
   
   <html>
