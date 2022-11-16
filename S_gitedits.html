@@ -44,7 +44,8 @@ window.MathJax = {
     )}
 },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -72,6 +73,14 @@ window.MathJax = {
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, GitHub, and Git</span></a></h1>
 <p class="byline">Ian Curtis</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
 </div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
@@ -189,7 +198,7 @@ window.MathJax = {
 <span class="type">Section</span> <span class="codenumber">4.2</span> <span class="title">Editing Files</span>
 </h2>
 <section class="introduction" id="introduction-26"><p id="p-598">Admittedly, the title of this section is a little misleading. You can't edit files with Git. Git just keeps track of your files and your changes. Take this section as a chance to familiarize yourself with your text editor (<abbr class="initialism">VS</abbr> Code is recommended and is demonstrated here).</p></section><p id="p-599">To recap, we used the command line and Git to start the version control process for our next edits. We activated a branch called <code class="code-inline tex2jax_ignore">country</code> which we chose intentionally because we plan on adding our country to the README file. Git will keep the <code class="code-inline tex2jax_ignore">country</code> branch “active” until we tell it to switch to another branch. Any changes you make, files you delete, or files you create will be recorded under this <code class="code-inline tex2jax_ignore">country</code> branch. In other words, only the <code class="code-inline tex2jax_ignore">country</code> branch will change, not <code class="code-inline tex2jax_ignore">main</code>.</p>
-<p id="p-600">But let's try editing our file. This is the main goal after all. Open your README file in your preferred text editor. If you're feeling adventurous, use the terminal to do it. If you are using <abbr class="initialism">VS</abbr> Code, read <a href="" class="xref" data-knowl="./knowl/open-file-vscode.html" title="Assemblage: Opening Files With VS Code">Opening Files With VS Code</a> before using the terminal to open the file.</p>
+<p id="p-600">But let's try editing our file. This is the main goal after all. Open your README file in your preferred text editor. If you're feeling adventurous, use the terminal to do it. If you are using <abbr class="initialism">VS</abbr> Code, read <a href="" class="xref" data-knowl="./knowl/open-file-vscode.html" title="Assemblage: Opening Files With VS Code">Opening Files With <abbr class="initialism">VS</abbr> Code</a> before using the terminal to open the file.</p>
 <article class="assemblage assemblage-like" id="open-file-vscode"><h3 class="heading"><span class="title">Opening Files With <abbr class="initialism">VS</abbr> Code.</span></h3>
 <p id="p-601">Try to open the README file with the terminal. (Remember how? See <a href="S_commands.html" class="internal" title="Section 2.3: Basic Commands">Section 2.3</a> if not.) What happened?</p>
 <p id="p-602">Any number of things could have happened. It might have worked and <abbr class="initialism">VS</abbr> Code opened with your file ready to edit. Maybe it didn't work at all and no applications opened. Maybe your terminal opened up a different app. The problem with the <code class="code-inline tex2jax_ignore">open</code> command is that it picks the default application and opens that. For me, by default, all <code class="code-inline tex2jax_ignore">.md</code> files open in RStudio. So, I have to specifically tell my terminal that I want <abbr class="initialism">VS</abbr> Code to open the file, not anything else.</p>

@@ -44,7 +44,8 @@ window.MathJax = {
     )}
 },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
+<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
 </script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
@@ -72,6 +73,14 @@ window.MathJax = {
 <a id="logo-link" href=""></a><div class="title-container">
 <h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, GitHub, and Git</span></a></h1>
 <p class="byline">Ian Curtis</p>
+</div>
+<div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<ol id="searchresults"></ol>
 </div>
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
@@ -235,7 +244,7 @@ window.MathJax = {
 </h5>
 <article class="task exercise-like" id="task-14"><h6 class="heading"><span class="codenumber">(a)</span></h6>
 <p id="p-311">Enter <code class="code-inline tex2jax_ignore">touch test.txt</code> into your terminal. What happened? Did it work as you expected?</p></article><article class="task exercise-like" id="task-15"><h6 class="heading"><span class="codenumber">(b)</span></h6>
-<p id="p-312">Can you use a command we learned earlier to check if your <code class="code-inline tex2jax_ignore">touch</code> worked?</p></article></article><p id="p-313">Oh dear, nothing happened! When you press enter after a <code class="code-inline tex2jax_ignore">touch</code> command, the terminal gives you no output at all. How can we verify that a <code class="code-inline tex2jax_ignore">test.txt</code> file got created? Let's try <code class="code-inline tex2jax_ignore">ls</code>. Recall from <a href="" class="xref" data-knowl="./knowl/ls.html" title="Paragraphs: Using ls">Using ls</a> that we can use <code class="code-inline tex2jax_ignore">ls</code> to give us a list of all the items in our present working directory. (Remember that term? See <a href="" class="xref" data-knowl="./knowl/pwd.html" title="Paragraphs: Using pwd">Using pwd</a>.) Since we are currently on the Desktop and we want to see what files are on the Desktop, we can use <code class="code-inline tex2jax_ignore">ls</code> to see if our file was created. Try it now!</p>
+<p id="p-312">Can you use a command we learned earlier to check if your <code class="code-inline tex2jax_ignore">touch</code> worked?</p></article></article><p id="p-313">Oh dear, nothing happened! When you press enter after a <code class="code-inline tex2jax_ignore">touch</code> command, the terminal gives you no output at all. How can we verify that a <code class="code-inline tex2jax_ignore">test.txt</code> file got created? Let's try <code class="code-inline tex2jax_ignore">ls</code>. Recall from <a href="" class="xref" data-knowl="./knowl/ls.html" title="Paragraphs: Using ls">Using <code class="code-inline tex2jax_ignore">ls</code></a> that we can use <code class="code-inline tex2jax_ignore">ls</code> to give us a list of all the items in our present working directory. (Remember that term? See <a href="" class="xref" data-knowl="./knowl/pwd.html" title="Paragraphs: Using pwd">Using <code class="code-inline tex2jax_ignore">pwd</code></a>.) Since we are currently on the Desktop and we want to see what files are on the Desktop, we can use <code class="code-inline tex2jax_ignore">ls</code> to see if our file was created. Try it now!</p>
 <article class="activity project-like" id="fileextensions"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-fileextensions"><h5 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">2.1</span><span class="period">.</span><span class="space"> </span><span class="title">File Extensions Matter.</span>
 </h5></a></article><div class="hidden-content tex2jax_ignore" id="hk-fileextensions"><article class="activity project-like"><div class="introduction" id="introduction-12"><p id="p-314">When <code class="code-inline tex2jax_ignore">touch</code>ing a file, you <em class="emphasis">must</em> put the file extension at the end of the file name. Otherwise, your computer won't know what type of file to create!</p></div>
@@ -316,7 +325,7 @@ window.MathJax = {
 <span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Removing Files and Directories</span>
 </h3>
 <section class="introduction" id="introduction-14"><p id="p-351">Over the course of this section, we have added useless files and directories. We do not need our test files or folders anymore, so let's learn how to delete them (with the terminal, of course!)</p></section><section class="paragraphs" id="rm"><h4 class="heading"><span class="title">Using <code class="code-inline tex2jax_ignore">rm</code>.</span></h4>
-<p id="p-352"><dfn class="terminology">Removing</dfn> a file with <code class="code-inline tex2jax_ignore">rm</code> has the exact same syntax as using <code class="code-inline tex2jax_ignore">touch</code> (<a href="" class="xref" data-knowl="./knowl/touch.html" title="Paragraphs: Using touch">Using touch</a>) except that instead of <code class="code-inline tex2jax_ignore">touch</code>, we use <code class="code-inline tex2jax_ignore">rm</code>. To summarize, we would need</p>
+<p id="p-352"><dfn class="terminology">Removing</dfn> a file with <code class="code-inline tex2jax_ignore">rm</code> has the exact same syntax as using <code class="code-inline tex2jax_ignore">touch</code> (<a href="" class="xref" data-knowl="./knowl/touch.html" title="Paragraphs: Using touch">Using <code class="code-inline tex2jax_ignore">touch</code></a>) except that instead of <code class="code-inline tex2jax_ignore">touch</code>, we use <code class="code-inline tex2jax_ignore">rm</code>. To summarize, we would need</p>
 <ul class="disc">
 <li id="li-143"><p id="p-353">The command <code class="code-inline tex2jax_ignore">rm</code>,</p></li>
 <li id="li-144"><p id="p-354">The file name, and</p></li>
