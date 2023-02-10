@@ -21,18 +21,18 @@ window.MathJax = {
     tags: "none",
     tagSide: "right",
     tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
   },
   options: {
     ignoreHtmlClass: "tex2jax_ignore|ignore-math",
     processHtmlClass: "process-math",
   },
   chtml: {
-    scale: 0.88,
+    scale: 0.98,
     mtextInheritFont: true
   },
   loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
     paths: {pretext: "https://pretextbook.org/js/lib"},
   },
   startup: {
@@ -42,24 +42,145 @@ window.MathJax = {
       rsMathReady();
       }
     )}
-},
+  },
 };
-</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.13/pretext_search.js"></script><link href="https://pretextbook.org/css/0.4/pretext_search.css" rel="stylesheet" type="text/css">
-<script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.13/pretext.js"></script><script>miniversion=0.674</script><script src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
-<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/pretext_add_on.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/banner_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/toc_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/knowls_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/style_default.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
-<link href="https://pretextbook.org/css/0.4/setcolors.css" rel="stylesheet" type="text/css">
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://unpkg.com/lunr/lunr.js"></script><script src="lunr-pretext-search-index.js"></script><script src="https://pretextbook.org/js/0.2/pretext_search.js"></script><link href="https://pretextbook.org/css/0.6/pretext_search.css" rel="stylesheet" type="text/css">
+<script>js_version = 0.2</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.2/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.2/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.2/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&amp;family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Tinos:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/dejavu-serif" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wdth,wght@8..144,50..150,100..900&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wdth,wght@75..100,300..800&amp;display=swap" rel="stylesheet">
+<link href="https://pretextbook.org/css/0.6/pretext.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/shell_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/banner_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/navbar_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/toc_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/knowls_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/style_default.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/colors_ruby_turquoise.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.6/setcolors.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 </head>
-<body class="pretext-book ignore-math has-toc has-sidebar-left">
-<a class="assistive" href="#content">Skip to main content</a><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+<body class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead"><div class="ptx-banner">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, GitHub, and Git</span></a></h1>
+<p class="byline">Ian Curtis</p>
+</div>
+<div id="searchresultsplaceholder" style="display: none">
+<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
+</h2>
+<div id="searchempty"><span>No results.</span></div>
+<ol id="searchresults"></ol>
+</div>
+</div></header><nav id="ptx-navbar" class="navbar"><button class="toc-toggle button" aria-label="Show or hide table of contents"><span class="icon">☰</span><span class="name">Contents</span></button><a class="index-button button" href="index-1.html" title="Index"><span class="name">Index</span></a><button id="user-preferences-button" class="user-preferences-button button" title="Modify user preferences"><span id="theavatarbutton" class="name">You!</span><div id="preferences_menu_holder" class="hidden"><ol id="preferences_menu" style="font-family: 'Roboto Serif', serif;">
+<li data-env="avatar" tabindex="-1">Choose avatar<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden avatar">
+<li data-val="You!" tabindex="-1">
+<span id="theYou!" class="avatarcheck">✔️</span>You!</li>
+<li data-val="😺" tabindex="-1">
+<span id="the😺" class="avatarcheck"></span>😺</li>
+<li data-val="👤" tabindex="-1">
+<span id="the👤" class="avatarcheck"></span>👤</li>
+<li data-val="👽" tabindex="-1">
+<span id="the👽" class="avatarcheck"></span>👽</li>
+<li data-val="🐶" tabindex="-1">
+<span id="the🐶" class="avatarcheck"></span>🐶</li>
+<li data-val="🐼" tabindex="-1">
+<span id="the🐼" class="avatarcheck"></span>🐼</li>
+<li data-val="🌈" tabindex="-1">
+<span id="the🌈" class="avatarcheck"></span>🌈</li>
+</ol>
+</li>
+<li data-env="fontfamily" tabindex="-1">Font family<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fontfamily">
+<li data-val="face" data-change="OS" tabindex="-1" style="font-family: 'Open Sans'">
+<span id="theOS" class="ffcheck">✔️</span><span class="name">Open Sans</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+<li data-val="face" data-change="RS" tabindex="-1" style="font-family: 'Roboto Serif'">
+<span id="theRS" class="ffcheck"></span><span class="name">Roboto Serif</span><span class="sample">AaBbCc 123 PreTeXt</span>
+</li>
+</ol>
+</li>
+<li data-env="font" tabindex="-1">Adjust font<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden fonts">
+<li>Size</li>
+<li><span id="thesize">12</span></li>
+<li data-val="size" data-change="-1" tabindex="-1" style="font-size: 80%">Smaller</li>
+<li data-val="size" data-change="1" tabindex="-1" style="font-size: 110%">Larger</li>
+<li>Width</li>
+<li><span id="thewdth">100</span></li>
+<li data-val="wdth" data-change="-5" tabindex="-1" style="font-variation-settings: 'wdth' 60">narrower</li>
+<li data-val="wdth" data-change="5" tabindex="-1" style="font-variation-settings: 'wdth' 150">wider</li>
+<li>Weight</li>
+<li><span id="thewght">400</span></li>
+<li data-val="wght" data-change="-50" tabindex="-1" style="font-weight: 200">thinner</li>
+<li data-val="wght" data-change="50" tabindex="-1" style="font-weight: 700">heavier</li>
+<li>Letter spacing</li>
+<li>
+<span id="thelspace">0</span><span class="byunits">/200</span>
+</li>
+<li data-val="lspace" data-change="-1" tabindex="-1">closer</li>
+<li data-val="lspace" data-change="1" tabindex="-1">f a r t h e r</li>
+<li>Word spacing</li>
+<li>
+<span id="thewspace">0</span><span class="byunits">/50</span>
+</li>
+<li data-val="wspace" data-change="-1" tabindex="-1">smaller gap </li>
+<li data-val="wspace" data-change="1" tabindex="-1">larger gap</li>
+<li>Line Spacing</li>
+<li>
+<span id="theheight">135</span><span class="byunits">/100</span>
+</li>
+<li data-val="height" data-change="-5" tabindex="-1" style="line-height: 1">closer<br>together</li>
+<li data-val="height" data-change="5" tabindex="-1" style="line-height: 1.75">further<br>apart</li>
+</ol>
+</li>
+<li data-env="atmosphere" tabindex="-1">Light/dark mode<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden atmosphere">
+<li data-val="default" tabindex="-1">
+<span id="thedefault" class="atmospherecheck">✔️</span>default</li>
+<li data-val="pastel" tabindex="-1">
+<span id="thepastel" class="atmospherecheck"></span>pastel</li>
+<li data-val="darktwilight" tabindex="-1">
+<span id="thedarktwilight" class="atmospherecheck"></span>twilight</li>
+<li data-val="dark" tabindex="-1">
+<span id="thedark" class="atmospherecheck"></span>dark</li>
+<li data-val="darkmidnight" tabindex="-1">
+<span id="thedarkmidnight" class="atmospherecheck"></span>midnight</li>
+</ol>
+</li>
+<li data-env="ruler" tabindex="-1">Reading ruler<div class="wrap_to_submenu"><span class="to_submenu">▻</span></div>
+<ol class="hidden ruler">
+<li data-val="none" tabindex="-1">
+<span id="thenone" class="rulercheck">✔️</span>none</li>
+<li data-val="underline" tabindex="-1">
+<span id="theunderline" class="rulercheck"></span>underline</li>
+<li data-val="lunderline" tabindex="-1">
+<span id="thelunderline" class="rulercheck"></span>L-underline</li>
+<li data-val="greybar" tabindex="-1">
+<span id="thegreybar" class="rulercheck"></span>grey bar</li>
+<li data-val="lightbox" tabindex="-1">
+<span id="thelightbox" class="rulercheck"></span>light box</li>
+<li data-val="sunrise" tabindex="-1">
+<span id="thesunrise" class="rulercheck"></span>sunrise</li>
+<li data-val="sunriseunderline" tabindex="-1">
+<span id="thesunriseunderline" class="rulercheck"></span>sunrise underline</li>
+<li class="moveQ">Motion by:</li>
+<li data-val="mouse" tabindex="-1">
+<span id="themouse" class="motioncheck">✔️</span>follow the mouse</li>
+<li data-val="arrow" tabindex="-1">
+<span id="thearrow" class="motioncheck"></span>up/down arrows - not yet</li>
+<li data-val="eye" tabindex="-1">
+<span id="theeye" class="motioncheck"></span>eye tracking - not yet</li>
+</ol>
+</li>
+</ol></div></button><span class="treebuttons"><a class="previous-button button" href="S_hub_revert_commit.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="up-button button" href="app_gittroubles.html" title="Up"><span class="icon">^</span><span class="name">Up</span></a><a class="next-button button" href="app_answers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a></span><div class="searchbox"><div class="searchwidget">
+<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
+</div></div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
 \newcommand{\Z}{\mathbb Z}
 \newcommand{\Q}{\mathbb Q}
 \newcommand{\R}{\mathbb R}
@@ -69,151 +190,282 @@ window.MathJax = {
 \definecolor{fillinmathshade}{gray}{0.9}
 \newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
 \)</span></div>
-<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
-<a id="logo-link" href=""></a><div class="title-container">
-<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, GitHub, and Git</span></a></h1>
-<p class="byline">Ian Curtis</p>
-</div>
-<div class="searchbox"><div class="searchwidget">
-<input id="ptxsearch" type="text" name="terms" placeholder="Search" onchange="doSearch()"><button id="searchbutton" type="button" onclick="doSearch()">🔍</button>
-</div></div>
-<div id="searchresultsplaceholder" style="display: none">
-<button id="closesearchresults" onclick="document.getElementById('searchresultsplaceholder').style.display = 'none'; return false;">x</button><h2>Search Results: <span id="searchterms"></span>
-</h2>
-<ol id="searchresults"></ol>
-</div>
-</div></div>
-<nav id="primary-navbar" class="navbar"><div class="container">
-<div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3">
-<a class="index-button toolbar-item button" href="index-1.html" title="Index">Index</a><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="S_hub_revert_commit.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="app_gittroubles.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="app_answers.html" title="Next">Next</a></span>
-</div>
-</div>
-<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="S_hub_revert_commit.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="app_gittroubles.html" title="Up">Up</a><a class="next-button button toolbar-item" href="app_answers.html" title="Next">Next</a>
-</div>
-</div></nav></header><div class="page">
-<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
-<nav id="toc"><ul>
-<li class="link frontmatter">
-<a href="frontmatter.html" data-scroll="frontmatter" class="internal"><span class="title">Front Matter</span></a><ul>
-<li><a href="colophon-1.html" data-scroll="colophon-1" class="internal">Colophon</a></li>
-<li><a href="dedication-1.html" data-scroll="dedication-1" class="internal">Dedication</a></li>
-<li><a href="acknowledgement-1.html" data-scroll="acknowledgement-1" class="internal">Acknowledgements</a></li>
-<li><a href="preface-1.html" data-scroll="preface-1" class="internal">Publisher's Note</a></li>
-<li><a href="fm_howtouse.html" data-scroll="fm_howtouse" class="internal">How To Use This Book</a></li>
-<li><a href="materials-windows.html" data-scroll="materials-windows" class="internal">Materials (Windows)</a></li>
-<li><a href="materials-mac.html" data-scroll="materials-mac" class="internal">Materials (Mac)</a></li>
-<li><a href="materials-linux.html" data-scroll="materials-linux" class="internal">Materials (Linux)</a></li>
+<div class="ptx-page">
+<div id="ptx-sidebar"><nav id="ptx-toc" class="depth3"><ul class="structural">
+<li>
+<div class="toc-item"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="colophon-1.html" class="internal"><span class="title">Colophon</span></a></div></li>
+<li><div class="toc-item"><a href="dedication-1.html" class="internal"><span class="title">Dedication</span></a></div></li>
+<li><div class="toc-item"><a href="acknowledgement-1.html" class="internal"><span class="title">Acknowledgements</span></a></div></li>
+<li><div class="toc-item"><a href="preface-1.html" class="internal"><span class="title">Publisher's Note</span></a></div></li>
+<li><div class="toc-item"><a href="fm_howtouse.html" class="internal"><span class="title">How To Use This Book</span></a></div></li>
+<li><div class="toc-item"><a href="materials-windows.html" class="internal"><span class="title">Materials (Windows)</span></a></div></li>
+<li><div class="toc-item"><a href="materials-mac.html" class="internal"><span class="title">Materials (Mac)</span></a></div></li>
+<li><div class="toc-item"><a href="materials-linux.html" class="internal"><span class="title">Materials (Linux)</span></a></div></li>
 </ul>
 </li>
-<li class="link part"><a href="part-intro.html" data-scroll="part-intro" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></li>
-<li class="link">
-<a href="C_basics.html" data-scroll="C_basics" class="internal"><span class="codenumber">1</span> <span class="title">Computer Basics</span></a><ul>
-<li><a href="S_filenames.html" data-scroll="S_filenames" class="internal">File and Folder Names</a></li>
-<li><a href="S_fileextensions.html" data-scroll="S_fileextensions" class="internal">File Extensions</a></li>
-<li><a href="S_filepaths.html" data-scroll="S_filepaths" class="internal">File Paths</a></li>
+<li>
+<div class="toc-item"><a href="part-intro.html" class="internal"><span class="codenumber">I</span> <span class="title">Introductory Information</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="C_basics.html" class="internal"><span class="codenumber">1</span> <span class="title">Computer Basics</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="S_filenames.html" class="internal"><span class="codenumber">1.1</span> <span class="title">File and Folder Names</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_filenames.html#SS_namingconventions" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Naming Conventions</span></a></div></li>
+<li><div class="toc-item"><a href="S_filenames.html#SS_practicenaming" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Exploring File and Folder Naming Techniques</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="C_commandline.html" data-scroll="C_commandline" class="internal"><span class="codenumber">2</span> <span class="title">The Command Line</span></a><ul>
-<li><a href="S_whatiscommline.html" data-scroll="S_whatiscommline" class="internal">What is the Command Line?</a></li>
-<li><a href="whereiscommline.html" data-scroll="whereiscommline" class="internal">Where is the Command Line?</a></li>
-<li><a href="S_commands.html" data-scroll="S_commands" class="internal">Basic Commands</a></li>
-<li><a href="S_advcommands.html" data-scroll="S_advcommands" class="internal">Advanced Commands</a></li>
+<li>
+<div class="toc-item"><a href="S_fileextensions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">File Extensions</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_fileextensions.html#extensions-images" class="internal"><span class="codenumber">1.2.1</span> <span class="title">Images</span></a></div></li>
+<li><div class="toc-item"><a href="S_fileextensions.html#extensions-videos" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Videos</span></a></div></li>
+<li><div class="toc-item"><a href="S_fileextensions.html#extensions-docs" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Documents</span></a></div></li>
+<li><div class="toc-item"><a href="S_fileextensions.html#extensions-audio" class="internal"><span class="codenumber">1.2.4</span> <span class="title">Audio</span></a></div></li>
+<li><div class="toc-item"><a href="S_fileextensions.html#extensions-coding" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Coding and Programming</span></a></div></li>
+<li><div class="toc-item"><a href="S_fileextensions.html#extensions-data" class="internal"><span class="codenumber">1.2.6</span> <span class="title">Data</span></a></div></li>
+<li><div class="toc-item"><a href="S_fileextensions.html#extensions-other" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Other File Exensions</span></a></div></li>
 </ul>
 </li>
-<li class="link part"><a href="part-solo.html" data-scroll="part-solo" class="internal"><span class="codenumber">II</span> <span class="title">Working Solo</span></a></li>
-<li class="link">
-<a href="C_githubsolo.html" data-scroll="C_githubsolo" class="internal"><span class="codenumber">3</span> <span class="title">GitHub Solo</span></a><ul>
-<li><a href="S_hubnavigate.html" data-scroll="S_hubnavigate" class="internal">Navigating GitHub</a></li>
-<li><a href="S_hubfirstrepo.html" data-scroll="S_hubfirstrepo" class="internal">The First Repository and File</a></li>
-<li><a href="S_hubbranches.html" data-scroll="S_hubbranches" class="internal">Working With Branches</a></li>
+<li>
+<div class="toc-item"><a href="S_filepaths.html" class="internal"><span class="codenumber">1.3</span> <span class="title">File Paths</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_filepaths.html#paths-construct" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Constructing File Paths</span></a></div></li>
+<li><div class="toc-item"><a href="S_filepaths.html#paths-hints" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Helpful Hints and Reminders</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="C_gitsolo.html" data-scroll="C_gitsolo" class="internal"><span class="codenumber">4</span> <span class="title">Git Solo</span></a><ul>
-<li><a href="S_gitsetup.html" data-scroll="S_gitsetup" class="internal">Getting Set Up with Git</a></li>
-<li><a href="S_gitedits.html" data-scroll="S_gitedits" class="internal">Editing Files</a></li>
-<li><a href="S_gitfinalize.html" data-scroll="S_gitfinalize" class="internal">Sending Changes Back To GitHub: The Three-Step Process</a></li>
-<li><a href="S_gitpr.html" data-scroll="S_gitpr" class="internal">The Final Steps</a></li>
-<li><a href="S_gitsumm.html" data-scroll="S_gitsumm" class="internal">Summary</a></li>
-<li><a href="S_gitbigact.html" data-scroll="S_gitbigact" class="internal">Working Solo: The Culminating Experience</a></li>
 </ul>
 </li>
-<li class="link part"><a href="part-collab.html" data-scroll="part-collab" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></li>
-<li class="link">
-<a href="C_githubcollab.html" data-scroll="C_githubcollab" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a><ul>
-<li><a href="S_collabconsider.html" data-scroll="S_collabconsider" class="internal">Before Beginning, Consider This</a></li>
-<li><a href="S_hubcollabsetup.html" data-scroll="S_hubcollabsetup" class="internal">Getting Set Up To Collaborate</a></li>
-<li><a href="S_hubcollabedit.html" data-scroll="S_hubcollabedit" class="internal">Editing</a></li>
-<li><a href="S_hubcollabfetch.html" data-scroll="S_hubcollabfetch" class="internal">Fetching Upstream</a></li>
+<li>
+<div class="toc-item"><a href="C_commandline.html" class="internal"><span class="codenumber">2</span> <span class="title">The Command Line</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_whatiscommline.html" class="internal"><span class="codenumber">2.1</span> <span class="title">What is the Command Line?</span></a></div></li>
+<li>
+<div class="toc-item"><a href="whereiscommline.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Where is the Command Line?</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="whereiscommline.html#SS_commline-mac" class="internal"><span class="codenumber">2.2.1</span> <span class="title">On a Mac</span></a></div></li>
+<li><div class="toc-item"><a href="whereiscommline.html#S_commline-windows" class="internal"><span class="codenumber">2.2.2</span> <span class="title">On Windows</span></a></div></li>
+<li><div class="toc-item"><a href="whereiscommline.html#subsection-14" class="internal"><span class="codenumber">2.2.3</span> <span class="title">On Linux</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="C_gitcollab.html" data-scroll="C_gitcollab" class="internal"><span class="codenumber">6</span> <span class="title">Git Collaboration</span></a><ul>
-<li><a href="S_gitcollabsetup.html" data-scroll="S_gitcollabsetup" class="internal">Getting Set Up: A Few Extra Steps</a></li>
-<li><a href="S_gitcollabedit.html" data-scroll="S_gitcollabedit" class="internal">Collaboration Editing With Git</a></li>
-<li><a href="S_gitcollabfinalize.html" data-scroll="S_gitcollabfinalize" class="internal">Revisiting the Three Step Process</a></li>
-<li><a href="S_gitcollabpr.html" data-scroll="S_gitcollabpr" class="internal">The Final Steps</a></li>
-<li><a href="S_gitcollabsumm.html" data-scroll="S_gitcollabsumm" class="internal">Summary</a></li>
-<li><a href="S_gitcollabbigact.html" data-scroll="S_gitcollabbigact" class="internal">Working Together: The Culminating Experience</a></li>
+<li>
+<div class="toc-item"><a href="S_commands.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Basic Commands</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Adding Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Removing Files and Directories</span></a></div></li>
 </ul>
 </li>
-<li class="link backmatter"><a href="backmatter.html" data-scroll="backmatter" class="internal"><span class="title">Backmatter</span></a></li>
-<li class="link">
-<a href="app_commlinecustom.html" data-scroll="app_commlinecustom" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a><ul>
-<li><a href="S_custterm_mac.html" data-scroll="S_custterm_mac" class="internal">For Mac Users</a></li>
-<li><a href="S_custterm_windows.html" data-scroll="S_custterm_windows" class="internal">For Windows Users (*)</a></li>
-<li><a href="S_custterm_linux.html" data-scroll="S_custterm_linux" class="internal">For Linux Users (*)</a></li>
-<li><a href="S_custterm_all.html" data-scroll="S_custterm_all" class="internal">For All</a></li>
+<li><div class="toc-item"><a href="S_advcommands.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Advanced Commands</span></a></div></li>
 </ul>
 </li>
-<li class="link">
-<a href="app_hubextra.html" data-scroll="app_hubextra" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a><ul>
-<li><a href="S_hubissues.html" data-scroll="S_hubissues" class="internal">The Issues Tab</a></li>
-<li><a href="S_hub-seecommits.html" data-scroll="S_hub-seecommits" class="internal">Commit History</a></li>
-<li><a href="S_hub-about.html" data-scroll="S_hub-about" class="internal">The About Panel</a></li>
-<li><a href="S_hubcollabtree.html" data-scroll="S_hubcollabtree" class="internal">The Branch Tree Diagram (Network Graph)</a></li>
-<li><a href="S_hub_delete_repo.html" data-scroll="S_hub_delete_repo" class="internal">Deleting a Repository</a></li>
 </ul>
 </li>
-<li class="link">
-<a href="app_gittroubles.html" data-scroll="app_gittroubles" class="internal"><span class="codenumber">C</span> <span class="title">Common Git Troubles and How To Fix Them</span></a><ul>
-<li><a href="SS_reverseadd.html" data-scroll="SS_reverseadd" class="internal">Uh Oh, I Staged the Wrong Files!</a></li>
-<li><a href="SS_reversecommit.html" data-scroll="SS_reversecommit" class="internal">Uh Oh, I Committed Too Early!</a></li>
-<li><a href="S_untrackfiles.html" data-scroll="S_untrackfiles" class="internal">Git Has Been Updating Files, But Now I Don't Want It To</a></li>
-<li><a href="S_forcemerge.html" data-scroll="S_forcemerge" class="internal">Git Won't Let Me Pull From Upstream or Origin!</a></li>
-<li><a href="S_diverge_branch.html" data-scroll="S_diverge_branch" class="internal">Git Says I Have Divergent Branches!</a></li>
-<li><a href="S_hub_revert_commit.html" data-scroll="S_hub_revert_commit" class="internal">Reverting To a Previous Commit</a></li>
-<li><a href="S_mergeconflict.html" data-scroll="S_mergeconflict" class="active">Merge Conflicts</a></li>
+<li>
+<div class="toc-item"><a href="part-solo.html" class="internal"><span class="codenumber">II</span> <span class="title">Working Solo</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="C_githubsolo.html" class="internal"><span class="codenumber">3</span> <span class="title">GitHub Solo</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="S_hubnavigate.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Navigating GitHub</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_hubnavigate.html#hub-account" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Creating A GitHub Account</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubnavigate.html#hub-profile" class="internal"><span class="codenumber">3.1.2</span> <span class="title">The Profile Page</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubnavigate.html#hub-settings" class="internal"><span class="codenumber">3.1.3</span> <span class="title">Settings and Customizations</span></a></div></li>
 </ul>
 </li>
-<li class="link"><a href="app_answers.html" data-scroll="app_answers" class="internal"><span class="codenumber">D</span> <span class="title">Answers to All Activities and Exercises</span></a></li>
-<li class="link"><a href="index-1.html" data-scroll="index-1" class="internal"><span class="title">Index</span></a></li>
-<li class="link"><a href="colophon-2.html" data-scroll="colophon-2" class="internal"><span class="title">Colophon</span></a></li>
-</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
-</div></div>
-<main class="main"><div id="content" class="pretext-content">
+<li>
+<div class="toc-item"><a href="S_hubfirstrepo.html" class="internal"><span class="codenumber">3.2</span> <span class="title">The First Repository and File</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_hubfirstrepo.html#hub-createrepo" class="internal"><span class="codenumber">3.2.1</span> <span class="title">Creating a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubfirstrepo.html#hub-explorerepo" class="internal"><span class="codenumber">3.2.2</span> <span class="title">Exploring the Code Tab</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubfirstrepo.html#hub-editfile" class="internal"><span class="codenumber">3.2.3</span> <span class="title">Editing a File</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="S_hubbranches.html" class="internal"><span class="codenumber">3.3</span> <span class="title">Working With Branches</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_hubbranches.html#SS_thinkbranch" class="internal"><span class="codenumber">3.3.1</span> <span class="title">Thinking About Branches</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubbranches.html#SS_makebranch" class="internal"><span class="codenumber">3.3.2</span> <span class="title">Creating a Branch</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubbranches.html#SS_workingbranch" class="internal"><span class="codenumber">3.3.3</span> <span class="title">Working On a Branch</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubbranches.html#SS_pullrequest" class="internal"><span class="codenumber">3.3.4</span> <span class="title">Creating a Pull Request (with Yourself)</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="C_gitsolo.html" class="internal"><span class="codenumber">4</span> <span class="title">Git Solo</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="S_gitsetup.html" class="internal"><span class="codenumber">4.1</span> <span class="title">Getting Set Up with Git</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_gitsetup.html#SS_cloning" class="internal"><span class="codenumber">4.1.1</span> <span class="title">Cloning a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitsetup.html#SS_gitbranches" class="internal"><span class="codenumber">4.1.2</span> <span class="title">Branches With Git</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="S_gitedits.html" class="internal"><span class="codenumber">4.2</span> <span class="title">Editing Files</span></a></div></li>
+<li>
+<div class="toc-item"><a href="S_gitfinalize.html" class="internal"><span class="codenumber">4.3</span> <span class="title">Sending Changes Back To GitHub: The Three-Step Process</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_gitfinalize.html#SS_git-status" class="internal"><span class="codenumber">4.3.1</span> <span class="title">Wait, Which Files Did I Change Again?</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitfinalize.html#SS_git-add" class="internal"><span class="codenumber">4.3.2</span> <span class="title">Step 1: Staging Files</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitfinalize.html#SS_git-commit" class="internal"><span class="codenumber">4.3.3</span> <span class="title">Step 2: Committing Files</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitfinalize.html#SS_git-push" class="internal"><span class="codenumber">4.3.4</span> <span class="title">Step 3: Pushing Files</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="S_gitpr.html" class="internal"><span class="codenumber">4.4</span> <span class="title">The Final Steps</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitsumm.html" class="internal"><span class="codenumber">4.5</span> <span class="title">Summary</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitbigact.html" class="internal"><span class="codenumber">4.6</span> <span class="title">Working Solo: The Culminating Experience</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="part-collab.html" class="internal"><span class="codenumber">III</span> <span class="title">Working With Others</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="C_githubcollab.html" class="internal"><span class="codenumber">5</span> <span class="title">GitHub Collaboration</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_collabconsider.html" class="internal"><span class="codenumber">5.1</span> <span class="title">Before Beginning, Consider This</span></a></div></li>
+<li>
+<div class="toc-item"><a href="S_hubcollabsetup.html" class="internal"><span class="codenumber">5.2</span> <span class="title">Getting Set Up To Collaborate</span></a></div>
+<ul class="structural"><li><div class="toc-item"><a href="S_hubcollabsetup.html#SS_forking" class="internal"><span class="codenumber">5.2.1</span> <span class="title">Forking</span></a></div></li></ul>
+</li>
+<li><div class="toc-item"><a href="S_hubcollabedit.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Editing</span></a></div></li>
+<li>
+<div class="toc-item"><a href="S_hubcollabfetch.html" class="internal"><span class="codenumber">5.4</span> <span class="title">Fetching Upstream</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_hubcollabfetch.html#SS_fetch" class="internal"><span class="codenumber">5.4.1</span> <span class="title">First, Fetching</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubcollabfetch.html#SS_upstream" class="internal"><span class="codenumber">5.4.2</span> <span class="title">Second, Upstream</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubcollabfetch.html#SS_fetchupstream" class="internal"><span class="codenumber">5.4.3</span> <span class="title">Third, Fetching Upstream</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="C_gitcollab.html" class="internal"><span class="codenumber">6</span> <span class="title">Git Collaboration</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="S_gitcollabsetup.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Getting Set Up: A Few Extra Steps</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_gitcollabsetup.html#SS_gitcollabclone" class="internal"><span class="codenumber">6.1.1</span> <span class="title">Cloning A Fork</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitcollabsetup.html#SS_gitcollabbranch" class="internal"><span class="codenumber">6.1.2</span> <span class="title">Don't Forget About Branches!</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="S_gitcollabedit.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Collaboration Editing With Git</span></a></div></li>
+<li>
+<div class="toc-item"><a href="S_gitcollabfinalize.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Revisiting the Three Step Process</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_gitcollabfinalize.html#SS_gitcollabadd" class="internal"><span class="codenumber">6.3.1</span> <span class="title">Staging Files</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitcollabfinalize.html#SS_gitcollabcommit" class="internal"><span class="codenumber">6.3.2</span> <span class="title">Committing Files</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitcollabfinalize.html#SS_gitcollabpush" class="internal"><span class="codenumber">6.3.3</span> <span class="title">Pushing Files</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="S_gitcollabpr.html" class="internal"><span class="codenumber">6.4</span> <span class="title">The Final Steps</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_gitcollabpr.html#SS_gitcollabpr" class="internal"><span class="codenumber">6.4.1</span> <span class="title">Opening a Pull Request</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitcollabpr.html#SS_gitcollabpull" class="internal"><span class="codenumber">6.4.2</span> <span class="title">Pulling/Fetching Upstream</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="S_gitcollabsumm.html" class="internal"><span class="codenumber">6.5</span> <span class="title">Summary</span></a></div></li>
+<li><div class="toc-item"><a href="S_gitcollabbigact.html" class="internal"><span class="codenumber">6.6</span> <span class="title">Working Together: The Culminating Experience</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="app_commlinecustom.html" class="internal"><span class="codenumber">A</span> <span class="title">Customizing the Terminal</span></a></div>
+<ul class="structural">
+<li>
+<div class="toc-item"><a href="S_custterm_mac.html" class="internal"><span class="codenumber">A.1</span> <span class="title">For Mac Users</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_custterm_mac.html#SS_iterm" class="internal"><span class="codenumber">A.1.1</span> <span class="title">A New Terminal: iTerm2</span></a></div></li>
+<li><div class="toc-item"><a href="S_custterm_mac.html#SS_fish" class="internal"><span class="codenumber">A.1.2</span> <span class="title">A New Shell: <code class="code-inline tex2jax_ignore">fish</code></span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="S_custterm_windows.html" class="internal"><span class="codenumber">A.2</span> <span class="title">For Windows Users (*)</span></a></div></li>
+<li><div class="toc-item"><a href="S_custterm_linux.html" class="internal"><span class="codenumber">A.3</span> <span class="title">For Linux Users (*)</span></a></div></li>
+<li>
+<div class="toc-item"><a href="S_custterm_all.html" class="internal"><span class="codenumber">A.4</span> <span class="title">For All</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_custterm_all.html#SS_gitkraken" class="internal"><span class="codenumber">A.4.1</span> <span class="title">A New Git Interface</span></a></div></li>
+<li><div class="toc-item"><a href="S_custterm_all.html#SS_github_desktop" class="internal"><span class="codenumber">A.4.2</span> <span class="title">GitHub Desktop</span></a></div></li>
+<li><div class="toc-item"><a href="S_custterm_all.html#SS_fish_all" class="internal"><span class="codenumber">A.4.3</span> <span class="title">A New Shell: <code class="code-inline tex2jax_ignore">fish</code></span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="app_hubextra.html" class="internal"><span class="codenumber">B</span> <span class="title">Extra GitHub Content</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_hubissues.html" class="internal"><span class="codenumber">B.1</span> <span class="title">The Issues Tab</span></a></div></li>
+<li><div class="toc-item"><a href="S_hub-seecommits.html" class="internal"><span class="codenumber">B.2</span> <span class="title">Commit History</span></a></div></li>
+<li><div class="toc-item"><a href="S_hub-about.html" class="internal"><span class="codenumber">B.3</span> <span class="title">The About Panel</span></a></div></li>
+<li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
+<li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Deleting a Repository</span></a></div></li>
+</ul>
+</li>
+<li>
+<div class="toc-item"><a href="app_gittroubles.html" class="internal"><span class="codenumber">C</span> <span class="title">Common Git Troubles and How To Fix Them</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="SS_reverseadd.html" class="internal"><span class="codenumber">C.1</span> <span class="title">Uh Oh, I Staged the Wrong Files!</span></a></div></li>
+<li><div class="toc-item"><a href="SS_reversecommit.html" class="internal"><span class="codenumber">C.2</span> <span class="title">Uh Oh, I Committed Too Early!</span></a></div></li>
+<li><div class="toc-item"><a href="S_untrackfiles.html" class="internal"><span class="codenumber">C.3</span> <span class="title">Git Has Been Updating Files, But Now I Don't Want It To</span></a></div></li>
+<li>
+<div class="toc-item"><a href="S_forcemerge.html" class="internal"><span class="codenumber">C.4</span> <span class="title">Git Won't Let Me Pull From Upstream or Origin!</span></a></div>
+<ul class="structural">
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-50" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-51" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="S_diverge_branch.html" class="internal"><span class="codenumber">C.5</span> <span class="title">Git Says I Have Divergent Branches!</span></a></div></li>
+<li><div class="toc-item"><a href="S_hub_revert_commit.html" class="internal"><span class="codenumber">C.6</span> <span class="title">Reverting To a Previous Commit</span></a></div></li>
+<li class="active"><div class="toc-item"><a href="S_mergeconflict.html" class="internal"><span class="codenumber">C.7</span> <span class="title">Merge Conflicts</span></a></div></li>
+</ul>
+</li>
+<li><div class="toc-item"><a href="app_answers.html" class="internal"><span class="codenumber">D</span> <span class="title">Answers to All Activities and Exercises</span></a></div></li>
+<li><div class="toc-item"><a href="index-1.html" class="internal"><span class="title">Index</span></a></div></li>
+<li><div class="toc-item"><a href="colophon-2.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
 <section class="section" id="S_mergeconflict"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.7</span> <span class="title">Merge Conflicts</span>
 </h2>
-<p id="p-1051">Hopefully you never have to deal with these. Sometimes, they are pretty simple to fix. Other times, it can cause some headaches. To avoid merge conflicts, pull from upstream often (<a href="" class="xref" data-knowl="./knowl/warn-fetch-often.html" title="Warning 5.4.3.1: Fetch Upstream Often">Warning 5.4.3.1</a> and <a href="" class="xref" data-knowl="./knowl/warn-pull-often.html" title="Warning 6.4.2.1: Use git pull Frequently">Warning 6.4.2.1</a>). Merge conflicts are caused when more than one person edits the same line of a file. It is possible for two people to edit the same file, but on different lines, and not cause a conflict.</p>
-<p id="p-1052">I have never caused or had to deal with a serious merge conflict. <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github" target="_blank">The GitHub documentation</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-69" id="fn-69"><sup> 69 </sup></a> has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line" target="_blank">resolve merge conflicts on the command line</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-70" id="fn-70"><sup> 70 </sup></a> or in your text editor.</p>
-<p id="p-1053">I have accidentally caused a merge conflict with myself and with working on the same repository from two different computers and two different accounts. Oops! This is an easy fix because I made the conflict with myself so I know which version is the correct one. If this happens to you, Git might send you to an unfamiliar screen when you try to push or pull. You'll know you have this case if your terminal asks you to type in a reason why the merge must happen or how the conflict is resolved. This typically happens when you try to merge from an upstream main into a local main that has active changes (so create branches!).</p>
-<p id="p-1054">If you start to get stuck, do a quick Google search. There are many guides and resources out there to help with merge conflicts. <a class="external" href="https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts" target="_blank">Jennifer Bryan</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-71" id="fn-71"><sup> 71 </sup></a> has a good guide on merge conflict basics (and some other potential Git issues!) so start there and explore more as needed.</p>
+<div class="para" id="p-1086">Hopefully you never have to deal with these. Sometimes, they are pretty simple to fix. Other times, it can cause some headaches. To avoid merge conflicts, pull from upstream often (<a href="" class="xref" data-knowl="./knowl/warn-fetch-often.html" title="Warning 5.4.3.1: Fetch Upstream Often">Warning 5.4.3.1</a> and <a href="" class="xref" data-knowl="./knowl/warn-pull-often.html" title="Warning 6.4.2.1: Use git pull Frequently">Warning 6.4.2.1</a>). Merge conflicts are caused when more than one person edits the same line of a file. It is possible for two people to edit the same file, but on different lines, and not cause a conflict.</div>
+<div class="para" id="p-1087">I have never caused or had to deal with a serious merge conflict. <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github" target="_blank">The GitHub documentation</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-69" id="fn-69"><sup> 69 </sup></a> has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line" target="_blank">resolve merge conflicts on the command line</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-70" id="fn-70"><sup> 70 </sup></a> or in your text editor.</div>
+<div class="para" id="p-1088">I have accidentally caused a merge conflict with myself and with working on the same repository from two different computers and two different accounts. Oops! This is an easy fix because I made the conflict with myself so I know which version is the correct one. If this happens to you, Git might send you to an unfamiliar screen when you try to push or pull. You'll know you have this case if your terminal asks you to type in a reason why the merge must happen or how the conflict is resolved. This typically happens when you try to merge from an upstream main into a local main that has active changes (so create branches!).</div>
+<div class="para" id="p-1089">If you start to get stuck, do a quick Google search. There are many guides and resources out there to help with merge conflicts. <a class="external" href="https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts" target="_blank">Jennifer Bryan</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-71" id="fn-71"><sup> 71 </sup></a> has a good guide on merge conflict basics (and some other potential Git issues!) so start there and explore more as needed.</div>
 <article class="project project-like" id="project-17"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-project-17"><h2 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">C.6</span><span class="period">.</span><span class="space"> </span><span class="title">Merging from main to main (remote contains changes not on local).</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-project-17"><article class="project project-like"><div class="introduction" id="introduction-59"><p id="p-1055">This is for when you are sent into a command line editing tool or a default text editor asking you to provide a reason why the merge is necessary.</p></div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-project-17"><article class="project project-like"><div class="introduction" id="introduction-51"><div class="para" id="p-1090">This is for when you are sent into a command line editing tool or a default text editor asking you to provide a reason why the merge is necessary.</div></div>
 <article class="task exercise-like" id="task-174"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<p id="p-1056">Type <code class="code-inline tex2jax_ignore">i</code></p></article><article class="task exercise-like" id="task-175"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<p id="p-1057">Type a merge message. This can be something as simple as “I have to merge to move on” or “I know what I want, let me do it” (yes, I have actually put that as message…is this good? Who knows?).</p></article><article class="task exercise-like" id="task-176"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<p id="p-1058">Press <kbd class="kbdkey">esc</kbd>.</p></article><article class="task exercise-like" id="task-177"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<p id="p-1059">Type <code class="code-inline tex2jax_ignore">:wq</code> (this stands for write and quit)</p></article><article class="task exercise-like" id="task-178"><h3 class="heading"><span class="codenumber">(e)</span></h3>
-<p id="p-1060">Press <kbd class="kbdkey">Enter</kbd> and you should be ok to move forward.</p></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-69"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github</code></div></div>
+<div class="para" id="p-1091">Type <code class="code-inline tex2jax_ignore">i</code>
+</div></article><article class="task exercise-like" id="task-175"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="p-1092">Type a merge message. This can be something as simple as “I have to merge to move on” or “I know what I want, let me do it” (yes, I have actually put that as message…is this good? Who knows?).</div></article><article class="task exercise-like" id="task-176"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="p-1093">Press <kbd class="kbdkey">esc</kbd>.</div></article><article class="task exercise-like" id="task-177"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="p-1094">Type <code class="code-inline tex2jax_ignore">:wq</code> (this stands for write and quit)</div></article><article class="task exercise-like" id="task-178"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<div class="para" id="p-1095">Press <kbd class="kbdkey">Enter</kbd> and you should be ok to move forward.</div></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-69"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-70"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-71"><div class="fn"><code class="code-inline tex2jax_ignore">https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts</code></div></div>
+</div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="S_hub_revert_commit.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="app_answers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
+</div>
+<div class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org"><div class="name">Authored in PreTeXt</div>
+<div class="logo"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="338 3000 8772 6866"><g style="stroke-width:.025in; stroke:black; fill:none"><polyline points="472,3590 472,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259 "></path><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0  472  9732 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,3496 A 4241 4241  0  0  1  4724  3590 "></path><path style="stroke:#000000;stroke-width:126;stroke-linecap:round;" d="M 850,9259 A 4507 4507  0  0  1  4724  9448 "></path><polyline points="5385,4299 4062,8125 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8598,3496 8598,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="850,3496 850,9259 " style="stroke:#000000;stroke-width:126; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="4960,9685 4488,9685 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="3070,4582 1889,6141 3070,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="6418,4582 7600,6141 6418,7700 " style="stroke:#000000;stroke-width:300; stroke-linejoin:miter; stroke-linecap:round; "></polyline><polyline points="8976,3590 8976,9732 " style="stroke:#000000;stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke:#000000;stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732 "></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy"><div class="name">Powered by Runestone</div>
+<img class="logo" title="Powered by Runestone" src="https://runestone.academy/runestone/static/rectangle_badge.png" alt="Powered by Runestone"></a><a class="mathjax-logo" href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a>
 </div>
 </body>
 </html>
