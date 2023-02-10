@@ -57,10 +57,14 @@
     Notice how in <xref ref="fig-branch-poem"/> that the main branch does not move forward when branches are created, it stops once a branch is made. When you first create a new branch, all you have is a copy of the main branch. However, when you edit your new branch, the changes do not appear into the main branch. Branches are like testing grounds. Try some new things, see if you like them, see if they work, then make it official. <q>Making it official</q> with Git and Github is called <term>committing</term> (as we have seen). Two new terms that go with commits<fn>Notice how <q>commit</q> is both a noun and a verb.</fn> are <term>merge</term> and <term>pull request</term>. Oftentimes, you will hear people say that they just merged their changes into main. This means they committed their changes to the main branch and updated the official version. With the poem example, there are two possible merges you could make into main, as diagrammed in <xref ref="fig-merge-poem"/>.
   </p>
   <figure xml:id="fig-merge-poem">
-    <caption>Diagram showing two possible merges into main</caption>
+    <caption>Diagram showing a possible merge into main</caption>
     <image source="merge_poem1" width="90%">
       <description>Arrow Diagram. Main branch splits into two branches, Poem 1 and Poem 2. Poem 1 branch goes back into main.</description>
     </image>
+    
+  </figure>
+  <figure>
+  <caption>Diagram showing another possible merge into main</caption>
     <image source="merge_poem2" width="90%">
       <description>Arrow Diagram. Main branch splits into two branches, Poem 1 and Poem 2. Poem 2 branch goes back into main.</description>
     </image>
@@ -258,9 +262,13 @@
     <p>
     <idx><h>commit</h><h>ahead and behind</h></idx>
       Pull requests are only necessary when using branches (recall how when we edited the README file directly from the main branch we had no pull requests). We are currently in a situation that would require a pull request. How do we create one? First notice (on your GitHub repository for the <c>animal</c> branch) how a new message has appeared. This probably says
+    </p>
       <blockquote>
+        <p>
         This branch is 1 commit ahead of main.
+        </p>
       </blockquote>
+    <p>
       This is GitHub's way of telling you that the branch you are currenlty on has changes that are not reflected on the main branch. Specifically, we have committed one time and the changes from that single commit do not appear on main. We could go and edit the README file some more and commit those changes. In that case, we would be 2 commits ahead of main.
     </p>
     <p>

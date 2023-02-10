@@ -69,6 +69,7 @@
       Separate instructions must be given for Windows users for certain tasks. 
       To make life easier for you, me, and everyone else, I recommend <em>not</em> using the default 
       Windows terminal. 
+    </p>
       <aside>
         <p>
           The default terminal for Windows is usually the Command Prompt. To access it, activate the 
@@ -77,7 +78,7 @@
           and click on the result that comes up.
         </p>
       </aside>
-    </p>
+    
     <p>
       Instead, let's use a new terminal (Git Bash) that works with Git and conveniently uses the <c>bash</c> shell which allows me to use the same instructions for Mac as Windows. Detailed download instructions can be found in <xref text="title" ref="materials-windows"></xref>. I will assume that you are using Git Bash for the remainder of the book.
     </p>

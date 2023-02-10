@@ -295,7 +295,7 @@
     <idx><h>upstream</h></idx>
     <idx><h>push files</h></idx>
     <idx><h>files</h><h>pushings</h></idx>
-    <introduction>
+    
       <p>
         Take a minute and go back to your GitHub repo for your <c>aboutme</c> files. Do the files there reflect your changes of an added country?
       </p>
@@ -305,7 +305,7 @@
       <p>
         Enter the third step in the process: the <c>git push</c>. This step is new; we haven't seen it before. When we worked on GitHub, a commit <em>did</em> did send our changes to GitHub. But now that we are working locally, an extra step is needed to tell Git that we are truly finished editing <em>and</em> that we want our changes to show up on GitHub for the world to see.
       </p>
-    </introduction>
+    
 
     <p>
       In order to understand the syntax of the <c>git push</c> command, we need to talk about remotes. A <term>remote</term> is a connection between a local repo and a GitHub repo. Remotes are also dependent on the branch you are on. By default, when you clone a repo, Git creates a remote from your local main branch to the main branch of the repo on GitHub. It's a connection; when you tell Git to push changes to GitHub, it knows where to send the changes because of the remote.
@@ -489,10 +489,11 @@
     </p>
 
     
-  </subsection>
+  
 
   <p>
     This section deserves a final summary.
+  </p>
 
     <project xml:id="three-step-summ">
       <title>The Three-Step Process</title>
@@ -521,8 +522,8 @@
         </p>
       </statement>
     </project>
-  </p>
-
+  
+</subsection>
   <conclusion>
     <p>
       When we push to GitHub, your files are pushed to the branch you specified. If the branch had not existed before the push, then Git will create the branch for GitHub, but will not merge it with the main branch. To do so, we need to go back to GitHub and create a pull request. The next section revists the process of creating a pull request and builds on the ideas gained in <xref ref="SS_pullrequest"/>.

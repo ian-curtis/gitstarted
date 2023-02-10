@@ -46,7 +46,7 @@
   </p>
 
   <figure xml:id="fig-hub-new-repo">
-    <caption>Various Methods to Create a New Repo</caption>
+    <caption>Various methods to create a new repo</caption>
     <sidebyside widths="45% 45%">
       <image source="hub_new_repo_navbar">
         <description>Where to click for a new repo from the navigation bar</description>
@@ -55,7 +55,9 @@
         <description>Where to click for a new repo from the home page</description>
       </image>
     </sidebyside>
-
+  </figure>
+  <figure>
+    <caption>Another method to create a new repo</caption>
       <image source="hub_new_repo_yourrepos" width="90%">
         <description>Where to click for a new repo from the <q>Your repositories</q> page</description>
       </image>
@@ -183,11 +185,13 @@
     </p>
 
     <figure xml:id="fig-hub-edit-readme">
-      <caption>Two ways to edit a README file</caption>
+      <caption>One way to edit a README file</caption>
       <image source="hub_edit_readme_code" width="90%">
         <description>Pencil icon on the README file found on the Code tab under the list of files.</description>
       </image>
-
+    </figure>
+    <figure>
+      <caption>Another way to edit a README file</caption>
       <image source="hub_edit_readme_file" width="90%">
         <description>Pencil icon on the README file found after clicking on the README file in the list of files.</description>
       </image>

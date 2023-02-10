@@ -13,11 +13,11 @@
     <title>Uh Oh, I Staged the Wrong Files!</title>
     <idx><h>git</h><h>add</h></idx>
     <idx><h>staging</h></idx>
-    <introduction>
+    
       <p>
         Once you get the hang of Git, it's easy to just fly through the three-step process. In doing so, you will inevitably stage (with <c>git add</c>) a file or folder on accident. This is relatively simple to fix. To undo this, follow the next procedure. 
       </p>
-    </introduction>
+    
     
     <project xml:id="reverse-git-add">
       <title>Reversing <c>git add</c></title>
@@ -49,17 +49,17 @@
         </statement>
       </task>
     </project>
+   
   </section>
 
   <section xml:id="SS_reversecommit">
     <title>Uh Oh, I Committed Too Early!</title>
     <idx><h>git</h><h>commit</h></idx>
     <idx><h>commit files</h></idx>
-    <introduction>
+    
       <p>
         We've all been there. You <c>add</c> all the files you need, double check to make sure you aren't missing anything, <c>commit</c> with a message and suddenly remember a file you should have added. Never fear, <c>git reset</c> is here!
       </p>
-    </introduction>
 
     <project xml:id="reverse-git-commit">
       <title>Reversing <c>git commit</c></title>
@@ -85,6 +85,7 @@
         </p>
       </task>
     </project>
+    
     
   </section>
 
@@ -156,6 +157,7 @@
       </p>
       <p>
         Or maybe not. Either way, Git says you have a problem with your code and won't let you merge from upstream. Maybe you get a message like this:
+      </p>
         <console>
           <input>git pull upstream main</input>
           <output>
@@ -165,13 +167,13 @@ Please commit your changes or stash them before you merge.
 Aborting
 </output>
 </console>
-      </p>
+
       <p>
         This error occurs when you have local, uncommitted changes and a merge from origin or upstream has changes in the same exact places. Git has no idea whose changes to keep so it does nothing. There are a couple of different things you can do in this situation depending on how you feel about your changes.
       </p>
     </introduction>
 
-    <paragraphs>
+    <subsection>
       <title>Your Local Changes Are Irrelevant and You Want Them Overwritten</title>
       
       <idx><h>force merge</h></idx>
@@ -213,9 +215,9 @@ Aborting
         </task>
       </project>
 
-    </paragraphs>
+    </subsection>
 
-    <paragraphs>
+    <subsection>
       <title>Your Local Changes are Good and You Want to Keep Them</title>
       <idx><h>git</h><h>stash</h></idx>
       <idx><h>stash</h></idx>
@@ -226,9 +228,9 @@ Aborting
       <p>
         Alternatively, you can keep your changes by using <c>git stash</c>. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use <c>git stash pop</c>. In my experience, things have worked out quite nicely with <c>git stash</c>. I just type <c>git stash</c> before pulling, then I pull, then I use <c>git stash pop</c> and my changes are popped right back into where they were. For more information, you might find <url href="https://opensource.com/article/21/4/git-stash" visual="opensource.com/article/21/4/git-stash">opensource.com</url> useful.
       </p>
-    </paragraphs>
-  </section>
 
+    </subsection>
+  </section>
   <section xml:id="S_diverge_branch">
     <title>Git Says I Have Divergent Branches!</title>
     
@@ -237,6 +239,7 @@ Aborting
     </p>
     <p>
       This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn't want to create them, so it refuses to push or pull until you fix something. This is not the same error as in <xref ref="S_forcemerge"/>, although it is closely related. You might get something like this:
+    </p>
       <console>
         <input>git push</input>
         <output>To &lt;repo-you-are-pushing-to>.git
@@ -249,6 +252,7 @@ hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 </output>
     </console>
+    <p>
     This looks kind of scary. Let's see how to fix this.
     </p>
 
@@ -262,6 +266,7 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
           </p>
           <p>
             You might get another error like this:
+          </p>
             <console>
         <input>git pull origin main</input>
         <output>remote: Enumerating objects: 1, done.
@@ -285,6 +290,7 @@ hint: invocation.
 fatal: Need to specify how to reconcile divergent branches.
 </output>
 </console>
+<p>
             which is quite overwhelming.
           </p>
         </statement>

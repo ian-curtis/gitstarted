@@ -2,11 +2,11 @@
 
 <section xml:id="S_gitcollabpr">
   <title>The Final Steps</title>
-
+  <introduction>
   <p>
     All that's left to do is to create some pull requests. There are technically two ways you could make this work. You can either open a pull request from your new branch directly to the authoritative main branch or you can merge from your new branch to your fork's main branch and then to the authoritative main branch.
   </p>
-
+  </introduction>
   <subsection xml:id="SS_gitcollabpr">
     <title>Opening a Pull Request</title>
     <idx><h>pull request</h></idx>
@@ -129,6 +129,7 @@
         <introduction>
           <p>
             This step will only have to be done once per repo that you have forked, then cloned. When you clone a fork, the connection between origin and upstream is not carried over. If I tried to pull from upstream without this connection, I would get an error:
+          </p>
             <console>
               <output>
               fatal: 'upstream' does not appear to be a git repository
@@ -138,7 +139,7 @@
               and the repository exists.
               </output>
             </console>
-          </p>
+          
           <p>
             This is troublesome! Clearly upstream exists; how else would we have forked it? To fix this, you need to manually set the remote connection. Again, this only has to be done once per forked/cloned repo.
           </p>

@@ -4,12 +4,12 @@
   <idx><h>git</h><h>edit</h></idx>
   <idx><h>edit files</h></idx>
   <idx><h>files</h><h>edit</h></idx>
-  <introduction>
+  
     <p>
       Admittedly, the title of this section is a little misleading. You can't edit files with
       Git. Git just keeps track of your files and your changes. Take this section as a chance to familiarize yourself with your text editor (<init>VS</init> Code is recommended and is demonstrated here).
     </p>
-  </introduction>
+  
 
   <p>
     To recap, we used the command line and Git to start the version control process for our next edits. We activated a branch called <c>country</c> which we chose intentionally because we plan on adding our country to the README file. Git will keep the <c>country</c> branch <q>active</q> until we tell it to switch to another branch. Any changes you make, files you delete, or files you create will be recorded under this <c>country</c> branch. In other words, only the <c>country</c> branch will change, not <c>main</c>. 
@@ -44,10 +44,10 @@
     All files you currently have open appear as tabs at the top of your screen. You might also have noticed that when you saved your file, the name of your README changed from white to a cheddar color and an M appeared. <init>VS</init> Code has Git integrated inside of it (one of the many benefits). As Git keeps track of your changes, <init>VS</init> Code tells you which files you have <em>m</em>odified (M, yellow), <em>d</em>eleted (D, red), or created (U, <em>u</em>ntracked). If you were to undo <em>all</em> of your changes and saved the file again, the M would disappear and the color would go back to white.
   </p>
 
-  <conclusion>
+  
     <p>
       Hopefully editing the file was fairly straightforward. We now have changes that we have made and we want to get those changes back on to GitHub and on the <c>main</c> branch. Don't forget that the changes we made in this section are only local and only on the <c>country</c> branch. The next section covers how to stage, commit, and push your changes.
     </p>
-  </conclusion>
+  
   
 </section>

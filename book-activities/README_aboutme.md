@@ -50,8 +50,7 @@ Below, I have put an image of my two dogs, Sadie and Finn. They are both begging
 
 ### My Favorite Video
 
-I think my current favorite video is [this Vsauce video on counting past infinity](https://www.youtube.com/watch?v=SrU9YDoXE88). It boggles my mind 
-every time I watch it (and I've watched it many times).
+I think my current favorite video is [this Vsauce video on counting past infinity](https://www.youtube.com/watch?v=SrU9YDoXE88). It boggles my mind every time I watch it (and I've watched it many times).
 
 ### Some Code
 

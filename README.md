@@ -12,7 +12,7 @@ This work is licensed under the Creative Commons Attribution-ShareAlike 4.0 Inte
 
 ## Compilation and Build Instructions
 
-The HTML version of the book is hosted on [GitHub Pages](https://ian-curtis.github.io/gitstarted/frontmatter.html). PDF files for both electronic and print platforms can be found in the `output` directory along with their corresponding LaTeX files (note that these files are not meant to be user friendly).
+The HTML version of the book is hosted on [my personal website](https://gitstarted.ianacurtis.com). PDF files for both electronic and print platforms can be found in the `output` directory along with their corresponding LaTeX files (note that these files are not meant to be user friendly).
 
 *Git Started* was written in PreTeXt (https://pretextbook.org), a markup language designed for authors. Thus, to edit and build the book yourself, you will need to use PreTeXt.
 
@@ -25,7 +25,7 @@ git clone https://github.com/<your-username>/gitstarted.git
 and install PreTeXt on the command line using Python (and probably a virtual environment)
 
 ```
-pip install pretext==1.0.2
+pip install pretext==1.3.1
 ```
 
 To build the HTML, type `pretext build html` and then `pretext view html` on the command line. For PDF builds, use either `pretext build latex-elec` or `pretext build latex-print` and use your LaTeX installation to compile a PDF.

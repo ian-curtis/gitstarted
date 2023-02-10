@@ -94,10 +94,13 @@
       <statement>
         <p>
           Edit the markdown file with your contribution. Instructions are in the file are pasted below:
-          <blockquote>
-            Here is the file for the culminating experience of <xref ref="C_gitcollab"/> from <pubtitle>Git Started</pubtitle>. Below, type your GitHub username as a level two heading and then type a short paragraph of the superpower you wish you had and why. This could be anything!! See my example.
-          </blockquote>
         </p>
+          <blockquote>
+            <p>
+            Here is the file for the culminating experience of <xref ref="C_gitcollab"/> from <pubtitle>Git Started</pubtitle>. Below, type your GitHub username as a level two heading and then type a short paragraph of the superpower you wish you had and why. This could be anything!! See my example.
+            </p>
+          </blockquote>
+        
         <p>
           Make sure to save the file when you are done.
         </p>
@@ -265,10 +268,10 @@
 
   </activity>
 
-  <conclusion>
+  
     <p>
       And that's that! Hopefully you're getting the hang of this process with all of this repetition. If you ever need to practice this again (or need a refresher on what to do), revisit this page. It might take a little bit to become fully comfortable with the process and to remember the order in which to do things. In time, you will get it! Good luck in the rest of your Git/GitHub journey!
     </p>
-  </conclusion>
+  
   
 </section>

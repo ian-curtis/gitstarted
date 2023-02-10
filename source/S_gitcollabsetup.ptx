@@ -12,12 +12,13 @@
     </p>
     <p>
       I would also like to repeat something I said back in <xref ref="S_gitsetup"/>:
+    </p>
       <blockquote>
         <p>
           It's not always feasible to edit file on GitHub, as we did in <xref ref="S_hubfirstrepo"/> and <xref ref="S_hubbranches"/>. Certain text editors (for instance, Visual Studio Code which you might also have installed) have features built in to ease coding and file editing. <init>VS</init> Code extensions might add color to text to help you see what's going on in your code. Others provide bug fixing and error catching before the errors actually occur. In general, you will edit files on your personal computer and will want to share them with the world. <em>I would stay away from editing on GitHub unless you have a small correction and/or you don't need any special editing tools.</em>
         </p>
       </blockquote>
-    </p>
+    
     <p>
       The rest of this section and chapter will look a lot like <xref ref="S_gitsetup"/> and <xref ref="C_gitsolo"/> with a few changes. With that being said, do you remember what the first step to editing locally was?
     </p>
@@ -60,7 +61,10 @@
     <idx><h>branches</h></idx>
     <idx><h>git</h><h>branches</h></idx>
     <p>
-      For nearly every edit we've made in this book, we've made a corresponding branch. This is no different. I hope you understand the importance of branches, even if you are working with yourself. Since my repository is public, anyone can edit the files there. Therefore, I will approve pull requests from anyone as I will assume they are working through this book. However, the task in this chapter will be exclusive to just those who are reading this book. There is file called <c>secret.txt</c> with no instructions or anything at all. Later on, you will be adding a line to this text file.
+      For nearly every edit we've made in this book, we've made a corresponding branch. This is no different. I hope you understand the importance of branches, even if you are working with yourself. 
+    </p>
+    <p>
+      Since my repository is public, anyone can edit the files there. Therefore, I will approve pull requests from anyone as I will assume they are working through this book. However, the task in this chapter will be exclusive to just those who are reading this book. There is file called <c>secret.txt</c> with no instructions or anything at all. Later on, you will be adding a line to this text file.
     </p>
     <p>
       For now, create a good branch name for this edit, perhaps <c>secret</c>? Remember that cloning a repo does not navigate inside of the repo so make sure you use <c>cd &lt;your-repo-name></c> before creating a branch.

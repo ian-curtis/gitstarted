@@ -5,11 +5,11 @@
     <idx><h>command line</h><h>advanced</h></idx>
     <idx><h>commands</h><see>command line</see></idx>
     <idx><h>terminal</h><h>advanced</h></idx>
-  <introduction>
+  
     <p>
       If you seek a more advanced glance into the potential of the command line, you have come to the right place. Each of the following commands are not necessary to proceed through this book but may ease your workflow in the future. As you get comfortable with the terminal, consider adopting some of these commands.
     </p>
-  </introduction>
+  
 
   <paragraphs xml:id="sudo">
     <title>Using <c>sudo</c></title>
@@ -17,10 +17,13 @@
     <idx><h>command line</h><h>sudo</h></idx>
     <p>
       According to <url href="https://kb.iu.edu/d/amyi" visual='kb.iu.edu/d/amyi'>University Information Technology Services</url>,
-      <blockquote>
-        The sudo command allows you to run programs with the security privileges of another user (by default, as the superuser). It prompts you for your personal password and confirms your request to execute a command by checking a file, called sudoers, which the system administrator configures. Using the sudoers file, system administrators can give certain users or groups access to some or all commands without those users having to know the root password. It also logs all commands and arguments so there is a record of who used it for what, and when.
-      </blockquote>
     </p>
+      <blockquote>
+        <p>
+        The sudo command allows you to run programs with the security privileges of another user (by default, as the superuser). It prompts you for your personal password and confirms your request to execute a command by checking a file, called sudoers, which the system administrator configures. Using the sudoers file, system administrators can give certain users or groups access to some or all commands without those users having to know the root password. It also logs all commands and arguments so there is a record of who used it for what, and when.
+        </p>
+      </blockquote>
+    
     <p>
       This is a little too much for what is necessary here but has good information. Essentially, <c>sudo</c> exists to allow you to run commands as an admin who, in some cases, might have more permissions to run certain commands. The benefit of <c>sudo</c> is that your password is required.
     </p>
