@@ -15,11 +15,13 @@
   <subsection xml:id="navigatecommline">
     <title>Navigating Your Computer With the Command Line</title>
     <idx><h>command line</h><h>navigate</h></idx>
+    
     <p>
       When your first open your terminal, you aren't given very much information. On Mac and Windows, 
       you get your username and maybe your computer name/id but not much else. This isn't very helpful.
       How can we do anything with our computer when we don't even know where we are on the computer?
     </p>
+    
     
     <paragraphs xml:id="pwd">
       <title>Using <c>pwd</c></title>
@@ -29,6 +31,7 @@
     <p>
       Our first command will show us where we are: <c>pwd</c>, which stands for 
       <term>present working directory</term>. 
+    </p>
       <note xml:id="foldernotdirect">
         <title>Folders Are Not Directories</title>
         <idx><h>folders are not directories</h></idx>
@@ -36,12 +39,16 @@
         <p>
           Until now, I have been using <q>folder</q> when I probably should be using <q>directory</q>.
           From <url href="https://en.wikipedia.org/wiki/Directory_%28computing%29#Folder_metaphor" visual='en.wikipedia.org/wiki/Directory_%28computing%29#Folder_metaphor'>Wikipedia</url> 
-          we can read that 
+          we can read that
+        </p> 
           <blockquote>
+            <p>
             If one is referring to a container of documents, the term folder is more appropriate.
             The term directory refers to the way a structured list of document files and folders are 
             stored on the computer.
+            </p>
           </blockquote>
+        <p>
           That's a little confusing! The difference here is mostly technical. Essentially, a 
           <term>directory</term> is a 
           <q>file system object</q> whereas a <term>folder</term> is just a user-friendly way to 
@@ -53,7 +60,7 @@
           this Quora question</url>.
         </p>
       </note>
-    </p>
+    
 
     <exercise xml:id="try-pwd">
       <title>Trying <c>pwd</c></title>
@@ -63,7 +70,7 @@
     </exercise>
 
     <assemblage>
-      
+      <title>Helpful Hint</title>
       <p>
         Anytime I talk about <q>enter something at your terminal</q>, type in the desired command 
         and press <kbd>Enter</kbd>.
@@ -167,7 +174,7 @@
   <subsection xml:id="createfiles">
     <title>Adding Files and Directories</title>
     <idx><h>command line</h><h>add files</h></idx>
-    <introduction>
+    
       <p>
         Now that we are familiar with navigating our computer with the command line, let's learn a little 
         more. Suppose you are in your Desktop (which we are) and you want to add a text file. Since you 
@@ -177,7 +184,7 @@
         silly, but now suppose you are six folders deep. It would take much more time to navigate to those 
         folders in a file browser than it would in the terminal.
       </p>
-    </introduction>
+   
 
     <paragraphs xml:id="touch">
       <title>Using <c>touch</c></title>
@@ -554,18 +561,19 @@
         </answer>
       </task>
     </activity>
+    
 
   </subsection>
 
   <subsection xml:id="removefiles">
     <title>Removing Files and Directories</title>
     <idx><h>command line</h><h>remove</h></idx>
-    <introduction>
+    
       <p>
         Over the course of this section, we have added useless files and directories. We do not need our 
         test files or folders anymore, so let's learn how to delete them (with the terminal, of course!)
       </p>
-    </introduction>
+    
 
     <paragraphs xml:id="rm">
       <title>Using <c>rm</c></title>
@@ -752,6 +760,8 @@
       </warning>
 
     </paragraphs>
+
+   
     
     <activity xml:id="try-removing">
       <title>Putting It All Together, Part 2</title>
@@ -905,6 +915,8 @@
       </task>
       
     </activity>
+
+   
 
   </subsection>
 </section>

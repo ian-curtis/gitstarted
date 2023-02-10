@@ -5,14 +5,14 @@
   <idx><h>pull request</h></idx>
   <idx><h>push</h></idx>
   <idx><h>pull</h></idx>
-  <introduction>
+ 
     <p>
       We're almost done! At this point, you should have completed the three-step process as outlined in <xref ref="S_gitfinalize"/>. What could be known as the fourth step is to head back to GitHub and submit a pull request. Again, it does seem silly to ask yourself for permission to include your own changes, but it makes more sense when contributing to someone elses repository. In order for your changes to be included into any main branch, you need to ask the repo owner/moderator(s) for permission to pull in your changes.
     </p>
     <p>
       It is important to make a distinction between a <term>push</term> and a <term>pull</term>. When you push changes, you are sending your changes from place to another, such as how we pushed changes from local to origin. Submitting a pull request is equivalent to pushing your changes to the main branch, but since this often requires permission, we typically use the term <term>pull request</term>. In this case, you are asking someone else to pull in your changes to their main branch.
     </p>
-  </introduction>
+  
      
 
   <activity xml:id="act-git-pr">

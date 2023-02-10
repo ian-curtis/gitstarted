@@ -26,23 +26,31 @@
     <idx><h>difference</h><h>mac and windows</h></idx>
     <p>
       What do computer file paths look like? You might have seen one before. Here is an example of a file path on a Mac:
+    </p>
       <blockquote>
+        <p>
         <c>/Users/&lt;username>/Documents/poem.pdf</c>
+        </p>
       </blockquote>
+    <p>
       With this you can see exactly where my poem lies. First, go to a list of all the users on my computer. Second, look at the files for my username, go to the documents folder, and access the file called <c>poem.pdf</c>. Easy!
     </p>
     <p>
       Maybe. Here's what that would look like on a Windows computer:
+    </p>
       <blockquote>
+        <p>
         <c>C:\Users\&lt;username>\Documents\poem.pdf</c>
+        </p>
       </blockquote>
+    <p>
       That looks a little different. This one says to go to the C drive. Then look at the list of the users on the computer. Then go to the files for my username, then the documents folder, then the file <c>poem.pdf</c>. 
     </p>
     <p>
       However, they both work the same. The fundamental structure is <q>start at the outmost folder and work your way in through folders until you get to the file or folder you are looking for</q>. Recall from <xref ref="S_filenames"/> that files must have an extension while folders do not. This is an easy way to differentiate between folders and files.
     </p>
     <p>
-      The key thing to note is that Mac and Windows are designed differently. Mac uses forward slashes to indicate a folder change and Windows uses backslashes (in Git Bash, Windows users can use forward slashes<ellipsis/>one reason for sticking with Git Bash!). But their structures are different as well. Notice that Windows has <q>C:</q> at the beginning. This is the C drive and there are other drives. Other differences are beyond the scope of this book. A brief history on file paths is given by <url href="https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/" visual='howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/'>How-To Geek</url> and a rather hard-to-read explanation can be found on <url href="https://en.wikipedia.org/wiki/Path_(computing)" visual='en.wikipedia.org/wiki/Path_(computing)'>Wikipedia</url>.
+      The key thing to note is that Mac and Windows are designed differently. Mac uses forward slashes to indicate a folder change and Windows uses backslashes (in Git Bash, Windows users can use forward slashes<ellipsis/>one reason for sticking with Git Bash!). But their structures are different as well. Notice that Windows has <q>C:</q> at the beginning. These are called <q>drives</q>; this is the C drive here. There are other drives based on what is stored where but this and other differences are beyond the scope of this book. A brief history on file paths is given by <url href="https://www.howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/" visual='howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/'>How-To Geek</url> and a rather hard-to-read explanation can be found on <url href="https://en.wikipedia.org/wiki/Path_(computing)" visual='en.wikipedia.org/wiki/Path_(computing)'>Wikipedia</url>.
     </p>
     <p>
       There are a few important points to remember when reading or finding a file path. The main goal from 
@@ -51,13 +59,13 @@
         <li>
           <p>
             File paths do not like spaces. Recall the lesson learned in <xref text="title" ref="namesspaces"/>. 
-            To a computer spaces indicate that you are ending the file path and starting something new. 
+            To a computer spaces indicate that you are ending the file path and starting a new command. 
             Do not name folders or files you are planning on accessing with the command line with spaces.
           </p>
         </li>
         <li>
           <p>
-            When you want to enter a new folder, use a slash (forward or backward) to indicate that you are going further in the document tree.
+            When you want to enter a new folder, use a slash to indicate that you are going further in the document tree.
           </p>
         </li>
         <li>
@@ -77,7 +85,7 @@
 
   <subsection xml:id="paths-hints">
     <title>Helpful Hints and Reminders</title>
-    <idx><h>file paths</h>reminders</idx>
+    <idx><h>file paths</h><h>reminders</h></idx>
     <paragraphs>
       <title>File and Folder Naming</title>
       <p>

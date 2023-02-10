@@ -322,7 +322,7 @@
         to continue using the method in <xref ref="gitproc-branches"/>. Each will get you to the same place.
       </p>
     </paragraphs>
-  </subsection>
+  
 
   <paragraphs>
     <title>Note About <c>git switch</c></title>
@@ -336,7 +336,7 @@
       <c>git checkout</c> still exists and you are welcome to use it to switch branches (you would use <c>git checkout -b &lt;branch-name></c>). However, to avoid confusion, I recommend using <c>git switch</c> for changing branches and <c>git restore</c> for restoring files.
     </p>
   </paragraphs>
-
+</subsection>
   <conclusion>
     <p>
       You are now ready to edit files! You determined a chunk of your project to start with
