@@ -11,10 +11,10 @@
     <title>A Text Editor</title>
     
     <p>
-      In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <url href="https://www.sublimetext.com/download" visual="sublimetext.com/download">Sublime Text</url> or <url href="https://atom.io" visual="atom.io">Atom</url>.
+      In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <url href="https://www.sublimetext.com/download" visual="sublimetext.com/download">Sublime Text</url>.
     </p>
     <p>
-      If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer <url href="https:/code.visualstudio.com/Download" visual="code.visualstudio.com/Download">Visual Studio Code</url> which can be downloaded at the previous link. Throughout this book, I will refer to <init>VS</init> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <init>VS</init> Code although as you gain experience you might think about switching to Atom or Sublime Text. I am currently considering a change to Atom myself.
+      If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer <url href="https:/code.visualstudio.com/Download" visual="code.visualstudio.com/Download">Visual Studio Code</url> which can be downloaded at the previous link. Throughout this book, I will refer to <init>VS</init> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <init>VS</init> Code although as you gain experience you might think about switching to Sublime Text.
     </p>
   </paragraphs>
 
