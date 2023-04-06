@@ -78,7 +78,25 @@
       </p>
 
       <p>
-        Installing is very easy, too. If you used Homebrew to install Git (<xref text='title' ref="install-git-mac"/> in <xref text='title' ref="materials-mac"/>) or other things, then installation is even easier. Simply type <c>brew install fish</c> into your terminal, then change your shell to <c>fish</c> with <c>chsh -s /user/local/bin/fish</c>. After restarting your terminal, everything will be ready for use! (<c>fish</c> is installable on Linux and Windows Subsystem for Linux)
+        Installing is not terrible. If you used Homebrew to install Git (<xref text='title' ref="install-git-mac"/> in <xref text='title' ref="materials-mac"/>) or other things, then installation is even easier: 
+        <ol>
+          <li>
+            <p>
+              type <c>brew install fish</c> into your terminal
+            </p>
+          </li>
+          <li>
+            <p>
+              add the shell to your list of approved shells with <c>sudo sh -c 'echo /opt/homebrew/bin/fish &gt;&gt; /etc/shells'</c> (for newer Macs) OR <c>sudo sh -c 'echo /usr/local/bin/fish &gt;&gt; /etc/shells'</c> (for older Macs).
+            </p>
+          </li>
+          <li>
+            <p>
+              change your shell to fish with <c>chsh -s /opt/homebrew/bin/fish</c> (new Macs) or <c>chsh -s /usr/local/bin/fish</c> (older Macs)
+            </p>
+          </li>
+        </ol>
+        After restarting your terminal, everything will be ready for use! For further customization of <c>fish</c>, type <c>fish_config</c> which will open up a web interface. (<c>fish</c> is installable on Linux and Windows Subsystem for Linux)
       </p>
 
       <p>
