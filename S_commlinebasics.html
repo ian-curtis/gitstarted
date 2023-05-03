@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2021-11-19T18:04:07-05:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Command Line Basics</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>window.MathJax = {
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    tags: "none",
+    useLabelIds: true,
+    tagSide: "right",
+    tagIndent: ".8em",
+    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'newcommand', 'knowl']}
+  },
+  options: {
+    ignoreHtmlClass: "tex2jax_ignore",
+    processHtmlClass: "has_am",
+  },
+  chtml: {
+    scale: 0.88,
+    mtextInheritFont: true
+  },
+  loader: {
+    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
+    paths: {pretext: "https://pretextbook.org/js/lib"},
+  },
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext.js"></script><script xmlns:svg="http://www.w3.org/2000/svg">miniversion=0.6</script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/0.13/pretext_add_on.js?x=1"></script><script xmlns:svg="http://www.w3.org/2000/svg" src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script xmlns:svg="http://www.w3.org/2000/svg">sagecellEvalName='Evaluate (Sage)';
+</script><link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/pretext_add_on.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/banner_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/toc_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/knowls_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/style_default.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/colors_blue_red.css" rel="stylesheet" type="text/css">
+<link xmlns:svg="http://www.w3.org/2000/svg" href="https://pretextbook.org/css/0.31/setcolors.css" rel="stylesheet" type="text/css">
+<!-- 2019-10-12: Temporary - CSS file for experiments with styling --><link xmlns:svg="http://www.w3.org/2000/svg" href="developer.css" rel="stylesheet" type="text/css">
+</head>
+<body class="pretext-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div xmlns:svg="http://www.w3.org/2000/svg" id="latex-macros" class="hidden-content" style="display:none">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="git_started.html"><span class="title">Better Git Started:</span> <span class="subtitle">An Introduction to the Command Line, Git, and Github</span></a></h1>
+<p class="byline">Ian Curtis</p>
+</div>
+</div></div>
+<nav xmlns:svg="http://www.w3.org/2000/svg" id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="C_commandline.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="C_commandline.html" title="Up">Up</a><span id="nextbutton" class="next-button button toolbar-item disabled">Next</span></span></div>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="C_commandline.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="C_commandline.html" title="Up">Up</a><span class="next-button button toolbar-item disabled">Next</span>
+</div>
+</div></nav></header><div class="page">
+<div xmlns:svg="http://www.w3.org/2000/svg" id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><ul>
+<li class="link frontmatter">
+<a href="frontmatter.html" data-scroll="frontmatter"><span class="title">Front Matter</span></a><ul>
+<li><a href="colophon-1.html" data-scroll="colophon-1">Colophon</a></li>
+<li><a href="materials.html" data-scroll="materials">Materials</a></li>
+</ul>
+</li>
+<li class="link">
+<a href="C_commandline.html" data-scroll="C_commandline"><span class="codenumber">1</span> <span class="title">The Command Line</span></a><ul><li><a href="S_commlinebasics.html" data-scroll="S_commlinebasics" class="active">Command Line Basics</a></li></ul>
+</li>
+</ul></nav><div class="extras"><nav><a class="pretext-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="pretext-content"><section xmlns:svg="http://www.w3.org/2000/svg" class="section" id="S_commlinebasics"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.1</span> <span class="title">Command Line Basics</span>
+</h2>
+<section class="introduction" id="introduction-2"><p id="p-12">The first step to tackling the command line is to not be scared. Sure, it looks daunting and if you make a mistake you might some lengthy error messages, but at the very least, the command line <em class="emphasis">is just another way to interact with your computer</em>.</p></section><section class="subsection" id="SS_whatiscommline"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.1</span> <span class="title">What is the Command Line?</span>
+</h3>
+<p id="p-13">A great question! The <dfn class="terminology">command line</dfn> (also known as a <dfn class="terminology">command prompt</dfn>, <dfn class="terminology">command-line interface</dfn>, or <dfn class="terminology">terminal</dfn>) is an application that accepts lines of text and sends that text to your computer which performs an action. You may also hear about shells. A <dfn class="terminology">shell</dfn> helps make the command line more interactive and user friendly. Some shells add colors,  informative information, and/or predictive text. We will return to shells and command line customization in <code class="code-inline tex2jax_ignore">[provisional cross-reference: commline customize]</code>. For now, do not worry about the details behind shells. A knowledge of them is not necessary to use Git, but they can help make things a little easier.</p>
+<p id="p-14">Terminals are powerful and fast. Think of them as a more direct way to interact with your computer. You can delete files with the terminal. You can create new files. You can move files. You can open files. And more. There are many, many complicated and hard-to-comprehend functions of the command line. Rest assured, this chapter sticks with the basics; we will learn necessary functions for using Git (and a few others).</p></section><section class="subsection" id="SS_findcommline"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">1.1.2</span> <span class="title">Where Is <em class="emphasis">My</em> Command Line?</span>
+</h3>
+<section class="introduction" id="introduction-3"><p id="p-15">If you have a computer, you have a terminal. You may not have ever used it or known it was there, but it's hiding, waiting for use. Let's find it.</p></section><section class="paragraphs" id="commline-mac"><h4 class="heading"><span class="title">On a Mac.</span></h4>
+<p id="p-16">Luckily, the terminal is easy to find on a Mac: it's called <code class="code-inline tex2jax_ignore">terminal.app</code> and can be found in numerous ways.</p>
+<ul class="disc">
+<li id="li-3"><p id="p-17">(Recommended) Press <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">Space</kbd> to open Spotlight Search. Start typing “terminal” and the app should pop up quickly. Press <kbd class="kbdkey">Enter</kbd> or click on the result.</p></li>
+<li id="li-4"><p id="p-18">Navigate to the Applications folder in the Finder. Then, open the Utilities folder and double click on <code class="code-inline tex2jax_ignore">terminal.app</code></p></li>
+<li id="li-5">
+<p id="p-19">Find it through the Launchpad. What's the Launchpad, you ask? On most Mac keyboards, it is on the key corresponding to <kbd class="kbdkey">F4</kbd> and looks like a bunch of boxes arranged in rows. You can also access the Launchpad by clicking the Launchpad icon in the Dock (also boxes arranged in rows) or by going into the Applications folder in the Finder and double clicking on the <code class="code-inline tex2jax_ignore">Launchpad.app</code> icon.</p>
+<p id="p-20">Once in the Launchpad, find the Terminal. You can either search for it in the search bar at the tope of the screen or scroll through your apps until you find it. (Note: it might be in the Other folder).</p>
+</li>
+</ul>
+<p class="continuation">Once you open the terminal, you should be presented with a blank screen, such as the one shown in <a href="" class="xref" data-knowl="./knowl/mac-term-start.html" title="Figure 1.1.1">Figure 1.1.1</a> <figure class="figure figure-like" id="mac-term-start"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/mac-term-start.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.1<span class="period">.</span></span><span class="space"> </span>Opening Screen for Mac Terminal</figcaption></figure></p>
+<article class="assemblage assemblage-like" id="assemblage-1"><h5 class="heading"><span class="title">Note.</span></h5>
+<p id="p-21">At the top of my terminal, it says “iancurtis— -bash”. This indicates that I am using the <code class="code-inline tex2jax_ignore">bash</code> shell. This is no longer the default for MacOS Catalina and later (as the terminal states). I will be sticking with <code class="code-inline tex2jax_ignore">bash</code> in this book to avoid differences between Windows and Mac instructions. If yours states something else (such as <code class="code-inline tex2jax_ignore">zsh</code> or <code class="code-inline tex2jax_ignore">fish</code>) and you would like to use <code class="code-inline tex2jax_ignore">bash</code> to follow along, paste <code class="code-inline tex2jax_ignore">chsh -s /bin/bash</code> <a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-1" id="fn-1"><sup> 1 </sup></a> into the command line, press <kbd class="kbdkey">Enter</kbd>, enter your password to your computer, and restart the terminal. Otherwise, you are free to stick with the default shell; just know that there may be slight differences between this textbook and your terminal.</p>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-1"><div class="fn">This command stands for “CHange the SHell to the shell called bash in the bin folder”</div></div></article></section><section class="paragraphs" id="paragraphs-2"><h4 class="heading"><span class="title">On Windows.</span></h4>
+<p id="p-22">For Windows users, the situation is a slightly more complicated. The underlying makeup of the operating systems on Windows is differet than the basis for MacOS and other Unix-like systems (such as Linux). This means that certain applications for Windows do not have a MacOS compliment (and likewise some Mac applications do not have Windows versions). In addition, the file system and organization are different bewteen the two, as we shall see later.</p>
+<p id="p-23">All this to say that separate instructions must be given for Windows users for certain tasks. To make life easier for you, me, and everyone else, I recommend <em class="emphasis">not</em> using the default Windows terminal which looks like <a href="" class="xref" data-knowl="./knowl/windows-term-start.html" title="Figure 1.1.2">Figure 1.1.2</a>. <aside class="aside aside-like" id="aside-1"><p id="p-24">The default terminal for Windows is usually the Command Prompt. To access it, activate the search feature of your computer by clicking the search box at the bottom of your screen or by typing <kbd class="kbdkey">Windows</kbd> + <kbd class="kbdkey">S</kbd>. Then search for “command prompt” and click on the result that comes up. You should see a screen that looks like <a href="" class="xref" data-knowl="./knowl/windows-term-start.html" title="Figure 1.1.2">Figure 1.1.2</a>.</p></aside> <figure class="figure figure-like" id="windows-term-start"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/windows-term-start.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.2<span class="period">.</span></span><span class="space"> </span>Opening Screen for Windows Command Prompt</figcaption></figure></p>
+<p id="p-25">Instead, let's use a new terminal (Git Bash) that works well with Git (and conveniently uses the <code class="code-inline tex2jax_ignore">bash</code> shell which allows me to use the same instructions for Mac as Windows). Detailed download instructions can be found in <a href="materials.html" class="internal" title="Preface: Materials">Materials </a>.</p>
+<p id="p-26">Once you open Git Bash for the first time, you should see something like the screen in <a href="" class="xref" data-knowl="./knowl/windows-bash-start.html" title="Figure 1.1.3">Figure 1.1.3</a>. <figure class="figure figure-like" id="windows-bash-start"><div class="image-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><img src="external/windows-bash-start.png" class="contained"></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">1.1.3<span class="period">.</span></span><span class="space"> </span>Opening Screen for Git Bash (Windows)</figcaption></figure></p></section><section class="paragraphs" id="paragraphs-3"><h4 class="heading"><span class="title">On Linux (*).</span></h4>
+<p id="p-27">Contributions to this section are welcome.</p></section></section></section></div></main>
+</div>
+</body>
+</html>

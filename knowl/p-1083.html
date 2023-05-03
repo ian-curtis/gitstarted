@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If you ever want to change the default behavior back to what it was, use <code class="code-inline tex2jax_ignore">git config pull.rebase false</code>. If you want to keep that behavior change we just did and you want to do a one-time fetch-merge pull, use <code class="code-inline tex2jax_ignore">git pull --ff</code>.</div>
+<div class="para">Here, the fix is usually pretty easy but I have to teach you a new term. We need to <dfn class="terminology">rebase</dfn> the branch. When a pull happens, Git fetches new commits from GitHub and merges them into your branch (and this merge is actually a commit in itself). The rebase command will temporarily remove your new commits from the commit history, then pull in the new changes and reinstate your commit into the timeline.</div>
 <span class="incontext"><a href="S_diverge_branch.html#p-1083" class="internal">in-context</a></span>
 </body>
 </html>

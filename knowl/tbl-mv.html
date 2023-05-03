@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*       on 2022-07-22T12:12:44-04:00       *-->
+<!--*   A recent stable commit (2020-08-09):   *-->
+<!--* 98f21740783f166a773df4dc83cab5293ab63a4a *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body class="ignore-math">
+<figure class="table table-like"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">2.4.0.1<span class="period">.</span></span><span class="space"> </span>Use Cases for the <code class="code-inline tex2jax_ignore">mv</code> Command</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr class="header-horizontal">
+<th scope="col" class="l m b2 r1 l0 t0 lines">Goal</th>
+<th scope="col" class="l m b2 r1 l0 t0 lines">Shell Command</th>
+<th scope="col" class="l m b2 r1 l0 t0 lines">Example Command</th>
+<th scope="col" class="l m b2 r0 l0 t0 lines">Example Explanation</th>
+</tr>
+<tr>
+<td class="l m b1 r1 l0 t0" style="max-width:180px;"><p>You already have a file and you want to <em class="emphasis">rename</em> it</p></td>
+<td class="l m b1 r1 l0 t0" style="max-width:120px;"><pre class="code-display tex2jax_ignore">mv &lt;existing-file-name&gt; &lt;new-file-name&gt;</pre></td>
+<td class="l m b1 r1 l0 t0 lines"><pre class="code-display tex2jax_ignore">mv birds.txt cats.txt</pre></td>
+<td class="l m b1 r0 l0 t0" style="max-width:180px;"><p>Takes prexisting file <code class="code-inline tex2jax_ignore">birds.txt</code> and <em class="emphasis">renames</em> it to <code class="code-inline tex2jax_ignore">cats.txt</code></p></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l0 t0" style="max-width:180px;"><p>You already have a file and you want to <em class="emphasis">move</em> it AND <em class="emphasis">rename</em> the file</p></td>
+<td class="l m b1 r1 l0 t0" style="max-width:120px;"><pre class="code-display tex2jax_ignore">mv &lt;existing-file-name&gt; &lt;destination-folder-name&gt;/&lt;new-file-name&gt;</pre></td>
+<td class="l m b1 r1 l0 t0 lines"><pre class="code-display tex2jax_ignore">mv birds.txt animals/cats.txt</pre></td>
+<td class="l m b1 r0 l0 t0" style="max-width:180px;"><p>Takes prexisting file <code class="code-inline tex2jax_ignore">birds.txt</code>, <em class="emphasis">renames</em> it to <code class="code-inline tex2jax_ignore">cats.txt</code> and <em class="emphasis">moves</em> it to the <code class="code-inline tex2jax_ignore">animals/</code> folder. (Also removes the original <code class="code-inline tex2jax_ignore">birds.txt</code>)</p></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l0 t0" style="max-width:180px;"><p>You already have a file and you want to <em class="emphasis">move</em> it AND keep the same file name</p></td>
+<td class="l m b1 r1 l0 t0" style="max-width:120px;"><pre class="code-display tex2jax_ignore">mv &lt;existing-file-name&gt; &lt;destination-folder-name&gt;</pre></td>
+<td class="l m b1 r1 l0 t0 lines"><pre class="code-display tex2jax_ignore">mv birds.txt animals/</pre></td>
+<td class="l m b1 r0 l0 t0" style="max-width:180px;"><p>Takes prexisting file <code class="code-inline tex2jax_ignore">birds.txt</code> and <em class="emphasis">moves</em> it to the <code class="code-inline tex2jax_ignore">animals/</code> folder.</p></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l0 t0" style="max-width:180px;"><p>You already have a folder and you want to <em class="emphasis">rename</em> it OR you want to <em class="emphasis">move</em> files and folders in an existing folder to a different folder</p></td>
+<td class="l m b1 r1 l0 t0" style="max-width:120px;"><pre class="code-display tex2jax_ignore">mv &lt;folder-to-move&gt; &lt;destination-folder-name&gt;</pre></td>
+<td class="l m b1 r1 l0 t0 lines"><pre class="code-display tex2jax_ignore">mv drums/ instruments/</pre></td>
+<td class="l m b1 r0 l0 t0" style="max-width:180px;"><p>Takes prexisting folder <code class="code-inline tex2jax_ignore">drums/</code> and <em class="emphasis">moves</em> it into the folder <code class="code-inline tex2jax_ignore">instruments/</code>. If <code class="code-inline tex2jax_ignore">instruments/</code> didn't exists, <code class="code-inline tex2jax_ignore">drums/</code> would have been <em class="emphasis">renamed</em> to <code class="code-inline tex2jax_ignore">instruments/</code></p></td>
+</tr>
+<tr>
+<td class="l m b1 r1 l0 t0" style="max-width:180px;"><p>You already have <em class="emphasis">multiple</em> files and you want to <em class="emphasis">move</em> them to another folder</p></td>
+<td class="l m b1 r1 l0 t0" style="max-width:120px;"><pre class="code-display tex2jax_ignore">mv &lt;existing-file-name1&gt; &lt;existing-file-name2&gt; ... &lt;destination-folder-name&gt;</pre></td>
+<td class="l m b1 r1 l0 t0 lines"><pre class="code-display tex2jax_ignore">mv dogs.txt cats.txt animals/mammals/</pre></td>
+<td class="l m b1 r0 l0 t0" style="max-width:180px;"><p>Takes prexisting files <code class="code-inline tex2jax_ignore">dogs.txt</code> and <code class="code-inline tex2jax_ignore">cats.txt</code> and <em class="emphasis">moves</em> them to the <code class="code-inline tex2jax_ignore">animals/mammals/</code> folder.</p></td>
+</tr>
+<tr>
+<td class="l m b0 r1 l0 t0" style="max-width:180px;"><p>You already have a file and you want to <em class="emphasis">copy</em> it to another folder</p></td>
+<td class="l m b0 r1 l0 t0" style="max-width:120px;"><pre class="code-display tex2jax_ignore">cp &lt;existing-file-name&gt; &lt;destination-folder-name&gt;</pre></td>
+<td class="l m b0 r1 l0 t0 lines"><pre class="code-display tex2jax_ignore">cp dogs.txt animals/mammals/</pre></td>
+<td class="l m b0 r0 l0 t0" style="max-width:180px;"><p>(Notice the different command, <code class="code-inline tex2jax_ignore">cp</code>) Takes prexisting file <code class="code-inline tex2jax_ignore">dogs.txt</code> and <em class="emphasis">copies</em> it to the <code class="code-inline tex2jax_ignore">animals/mammals/</code> folder. Keeps the original <code class="code-inline tex2jax_ignore">dogs.txt</code>.</p></td>
+</tr>
+</table></div></figure><span class="incontext"><a href="S_advcommands.html#tbl-mv" class="internal">in-context</a></span>
+</body>
+</html>
