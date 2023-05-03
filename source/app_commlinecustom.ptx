@@ -28,7 +28,7 @@
     </p>
 
     <p>
-      This new terminal is free and has <url href="https://iterm2.com/features.html" visual='iterm2.com/features.html'>many nice features</url> such as
+      This new terminal is free and has <url href="https://iterm2.com/features.html" visual='iterm2.com/features.html'>a multitude of nice features</url> such as
       <ol>
         <li>
           <p>
@@ -70,7 +70,7 @@
       <idx><h>shell</h><h>fish</h></idx>
       <idx><h>fish (shell)</h></idx>
       <p>
-        Many computers rely on <c>bash</c> to do most of their work. Mac computers now use <c>zsh</c> as their default shell. Shells have their own unique aspects and differences and frankly, it doesn't really matter which shell you use unless you have a good technical reason to change. Shells are pretty advanced and I honestly don't have much information to provide other than what a simple Google search can do.
+        Many computers rely on the <c>bash</c> shell to do most of their work. Mac computers now use <c>zsh</c> as their default shell. Shells have their own unique aspects and differences and frankly, it doesn't really matter which shell you use unless you have a good technical reason to change. Shells are pretty advanced and I honestly don't have much information to provide other than what a Google search can do since any shell will work for the content provided in this book.
       </p>
 
       <p>
@@ -78,7 +78,7 @@
       </p>
 
       <p>
-        Installing is not terrible. If you used Homebrew to install Git (<xref text='title' ref="install-git-mac"/> in <xref text='title' ref="materials-mac"/>) or other things, then installation is even easier: 
+        Installing is not terrible. I assume you used Homebrew to install Git (<xref text='title' ref="install-git-mac"/> in <xref text='title' ref="materials-mac"/>). If you didn't follow the instructions there to get Homebrew installed as it makes <c>fish</c> installation easy: 
         <ol>
           <li>
             <p>
@@ -96,7 +96,7 @@
             </p>
           </li>
         </ol>
-        After restarting your terminal, everything will be ready for use! For further customization of <c>fish</c>, type <c>fish_config</c> which will open up a web interface. (<c>fish</c> is installable on Linux and Windows Subsystem for Linux)
+        After restarting your terminal, everything will be ready for use! For further customization of <c>fish</c>, type <c>fish_config</c> in the terminal which will open up a web interface.
       </p>
 
       <p>
@@ -118,10 +118,25 @@
   <section xml:id="S_custterm_linux">
     <title>For Linux Users (*)</title>
     <idx><h>command line</h><h>linux</h></idx>
-    <p>
-      TBA
-    </p>
     
+    <introduction>
+      <p>
+        I don't have much experience with Linux distributions but a quick search online has informed me of the following information. You are responsible for determining the exact steps needed to implement anything.
+      </p>
+    </introduction>
+
+    <subsection xml:id="SS_fish_linux">
+      <title>A New Shell: <c>fish</c></title>
+      <idx><h>shell</h><h>fish</h></idx>
+      <idx><h>fish (shell)</h></idx>
+      <p>
+        Many computers rely on the <c>bash</c> shell to do most of their work. Mac computers now use <c>zsh</c> as their default shell. Shells have their own unique aspects and differences and frankly, it doesn't really matter which shell you use unless you have a good technical reason to change. Shells are pretty advanced and I honestly don't have much information to provide other than what a Google search can do since any shell will work for the content provided in this book.
+      </p>
+
+      <p>
+        That being said, I do recommend the shell <url href='https://fishshell.com/' visual='fishshell.com/'><c>fish</c></url> which is advertised as available on Linux distributions. This shell brings more nice colors, autocomplete (it will recommend as you type!) and, in my opinion, organizes the information on your terminal quite nicely. Once installed, you should be able to use the command <c>fish_shell</c> which will open up a web interface with settings.
+      </p>
+    </subsection>
   </section>
 
   <section xml:id="S_custterm_all">
@@ -150,24 +165,20 @@
       
     </subsection>
 
-    <subsection xml:id="SS_fish_all">
-      <title>A New Shell: <c>fish</c></title>
-      <idx><h>shell</h><h>fish</h></idx>
-      <idx><h>fish (shell)</h></idx>
+    <subsection xml:id="SS_git_lens">
+      <title>Understanding Version Control: Git Lens</title>
+      <idx><h>git lens</h></idx>
+      <idx><h>git</h><h>lens</h></idx>
       <p>
-        Many computers rely on <c>bash</c> to do most of their work. Mac computers now use <c>zsh</c> as their default shell. Shells have their own unique aspects and differences and frankly, it doesn't really matter which shell you use unless you have a good technical reason to change. Shells are pretty advanced and I honestly don't have much information to provide other than what a simple Google search can do.
+        My preferred text editor is Visual Studio Code which is developed my Microsoft. There is an extenstion to <init>VS</init> Code called <url href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" visual="marketplace.visualstudio.com">Git Lens</url> which,
       </p>
-
+        <blockquote>
+          <p>
+          ...supercharges Git inside <init>VS</init> Code and unlocks untapped knowledge within each repository. It helps you to visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more.
+          </p>
+        </blockquote>
       <p>
-        That being said, I do recommend the shell <url href='https://fishshell.com/' visual='fishshell.com/'><c>fish</c></url>. This shell brings nice colors, autocomplete and, in my opinion, organizes the information on your terminal quite nicely.
-      </p>
-
-      <p>
-        Installing is very easy, too. If you have used Homebrew to install anything, then installation is even easy. Simply type <c>brew install fish</c> into your terminal, then change your shell to <c>fish</c> (a Google search will likely be necessary unless you are a Mac user, see <xref ref="SS_fish"/>). After restarting your terminal, everything will be ready for use! (<c>fish</c> is installable on Linux and Windows Subsystem for Linux)
-      </p>
-
-      <p>
-        If you don't like <c>fish</c>, you can switch back to <c>bash</c> or <c>zsh</c>.
+        I haven't tried this extension out but it seems like it can be extremely helpful for understanding what files have been changed (and where) as well as for determining what files are in each step of the three-step process. It may even be useful for resolving merge conflicts!
       </p>
       
     </subsection>

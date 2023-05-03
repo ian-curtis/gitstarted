@@ -72,15 +72,15 @@
     <assemblage>
       <title>Helpful Hint</title>
       <p>
-        Anytime I talk about <q>enter something at your terminal</q>, type in the desired command 
+        Anytime I talk about <q>entering something at your terminal</q>, type in the desired command 
         and press <kbd>Enter</kbd>.
       </p>
     </assemblage>
 
     <p>
       <c>pwd</c> prints one thing: the file path to the folder that is <q>active</q> at your terminal. 
-      When you first open your terminal, Mac users might see something like <c>/Users/&lt;your-username></c> 
-      and Windows (Git Bash) users <c>/c/Users/&lt;your-username></c>. If you ever get lost in your terminal, 
+      When you first open your terminal, Mac users might see something like <c>/Users/&lt;your-username&gt;</c> 
+      and Windows (Git Bash) users <c>/c/Users/&lt;your-username&gt;</c>. If you ever get lost in your terminal, 
       type in <c>pwd</c> for some reassurance. 
     </p>
     </paragraphs>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <preface xml:id="materials-mac">
-  <title>Materials (Mac)</title>
+  <title>Materials: Mac</title>
 
   <p>
     As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on if you have a Mac or a <init>PC</init> and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions <em>for those who are using a Mac with macOS</em>.
