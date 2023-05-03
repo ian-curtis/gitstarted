@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <preface xml:id="materials-windows">
-  <title>Materials (Windows)</title>
+  <title>Materials: Windows</title>
 
   <p>
     As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on it you have a Mac or a <init>PC</init> and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions <em>for those who are using Windows</em>. If you are running Windows Subsystem for Linux, instructions might be slightly different; however, start here and jump to a quick Google search if something goes wrong.
