@@ -393,6 +393,21 @@
           </p>
          </li>
          <li>
+          <p>
+            Midnights (3am Edition)
+          </p>
+         </li>
+         <li>
+          <p>
+            Midnights (The Til Dawn Edition)
+          </p>
+         </li>
+         <li>
+          <p>
+            Speak Now (Taylor's Version)
+          </p>
+         </li>
+         <li>
            <p>
              Unreleased Music
            </p>
@@ -624,6 +639,16 @@
                 <c>evermore-dlx</c>
               </p>
             </li>
+            <li>
+              <p>
+                <c>midnights-dlx-3am</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>midnights-dlx-dawn</c>
+              </p>
+            </li>
           </ul>
         </p>
       </solution>
@@ -679,6 +704,11 @@
             <li>
               <p>
                 <c>red-tv</c>
+              </p>
+            </li>
+            <li>
+              <p>
+                <c>speak-now-tv</c>
               </p>
             </li>
           </ul>
