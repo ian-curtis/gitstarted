@@ -31,17 +31,17 @@
         </li>
         <li>
           <p>
-            Start typing <c>terminal.app</c>. When the correct application opens up, click on it.
+            Start typing <c>terminal.app</c>. When the correct application pops up, click on it.
           </p>
         </li>
         <li>
           <p>
-            Your terminal will pop up. Don't be scared of it! Type <c>git --version</c> and press <kbd>Enter</kbd>.
+            Your terminal will appear. Don't be scared of it! Type <c>git --version</c> and press <kbd>Enter</kbd>.
           </p>
         </li>
         <li>
           <p>
-            If it spits out something like <c>git version 2.35.1</c> (the numbers could be different), you're good! If not, carry on.
+            If it spits out something like <c>git version 2.41.0</c> (the numbers could be different), you're good! If not, carry on.
           </p>
         </li>
       </ol>
@@ -49,24 +49,24 @@
 
     <p>
       Even if you do not know what Homebrew is, it recommend using it to install Git. It can also be used to quickly (<ie/> in one line) install other pieces of software. You might find Homebrew useful in the future, even if it can be confusing to install at present:
-
       <ol>
         <li>
           <p>
-            To install Homebrew, go back to your terminal that you opened when checking if Git was installed. Paste in <cd><cline>/bin/bash -c "$(curl -fsSL</cline><cline>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</cline></cd> as one line (not two) and press <kbd>Enter</kbd>. Don't worry about what each part does (to be honest, I'm not entirely sure either). It is safe and trustworthy (I did it on my computer).
+            To install Homebrew, visit <url href="https://brew.sh/" visual='brew.sh'>the Homebrew homepage</url> and navigate to the <q>Install Homebrew</q> heading (see <xref ref="brew-homepage"/>). Copy the long command there and paste it into your terminal (that you used earlier).
           </p>
+          <figure xml:id="brew-homepage">
+            <caption>The Homebrew Homepage, <url href="https://brew.sh/" visual='brew.sh'>brew.sh</url></caption>
+            <image source="brew_homepage" width="60%">
+              <description>The Homebrew Homepage, with the Install Homebrew heading (and command to paste into terminal) pictured.</description>
+            </image>
+          </figure>
           <p>
-            If you want to be sure you're pasting the correct command, you can visit <url href="https://brew.sh/" visual='brew.sh'>the Homebrew homepage</url> and navigate to the <q>Install Homebrew</q> heading.
+            Once you paste in that command, press <kbd>Enter</kbd> and follow the instructions on installation. Don't worry about what each part does (to be honest, I'm not entirely sure either). It is safe and trustworthy (I did it on my computer).
           </p>
         </li>
         <li>
           <p>
-            Follow the instructions and prompts given until Homebrew is installed.
-          </p>
-        </li>
-        <li>
-          <p>
-            To install Git, simply type in <c>brew install git</c> at the terminal and press <kbd>Enter</kbd>.
+            Now, use Homebrew to install Git. Simply type in <c>brew install git</c> at the terminal and press <kbd>Enter</kbd>.
           </p>
         </li>
       </ol>
