@@ -130,7 +130,7 @@
     <idx><h>which</h></idx>
     <idx><h>command line</h><h>which</h></idx>
     <p>
-      You may never need to use <c>which</c> but it might be useful in the future. <c>which</c> is used for finding the location of certain execetuables on your computer. The syntax follows <c>which &lt;program-to-find></c> and outputs the file path of that program.
+      You may never need to use <c>which</c> but it might be useful in the future. <c>which</c> is used for finding the location of certain executables on your computer. The syntax follows <c>which &lt;program-to-find></c> and outputs the file path of that program.
     </p>
     <p>
       To test this out, try <c>which git</c>, <c>which bash</c>, or <c>which fish</c>.

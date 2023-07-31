@@ -180,7 +180,7 @@
         more. Suppose you are in your Desktop (which we are) and you want to add a text file. Since you 
         are already in the terminal, you don't want to open a text editor, create a new file, and save it 
         to your desktop. Or, suppose you have a file on the Desktop that you no longer need and you don't 
-        to open you file browser, navigate to the Desktop, and delete the file. These examples may seem 
+        to open your file browser, navigate to the Desktop, and delete the file. These examples may seem 
         silly, but now suppose you are six folders deep. It would take much more time to navigate to those 
         folders in a file browser than it would in the terminal.
       </p>
