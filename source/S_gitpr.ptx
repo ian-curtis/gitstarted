@@ -38,7 +38,7 @@
     <task>
       <statement>
         <p>
-          Once there, you might see that a nice bar has popped up at the top of the page with a green button that says you can <q>Compare and pull request</q>. If you see this, great! Click on the green button and proceed to <xref ref="git-pr-open"/>. If not, read on.
+          Once there, you might see that a nice bar has popped up at the top of the page with a button that says you can <q>Compare and pull request</q>. If you see this, great! Click on that button and proceed to <xref ref="git-pr-open"/>. If not, read on.
         </p>
       </statement>
     </task>
@@ -61,7 +61,7 @@
             </li>
             <li>
               <p>
-                Navigate to the Pull requests tab. Click on the green button near the top right that says <q>New pull request</q>. Select the branch you want to pull into main from either the <q>Compare</q> drop-down menu at the top or the example comparisons table. Click <q>Create pull request</q>.
+                Navigate to the Pull requests tab. Click on the button near the top right that says <q>New pull request</q>. Select the branch you want to pull into main from either the <q>Compare</q> drop-down menu at the top or the example comparisons table. Click <q>Create pull request</q>.
               </p>
             </li>
           </ol>

@@ -31,13 +31,13 @@
       <li>
         <p>
           From the <url href="https://github.com" visual='github.com'>GitHub homepage</url> there is a section on the left 
-          called <q>Repositories</q>. Next to the title is a green button that says <q>New</q>. Click on that.
+          called <q>Repositories</q>. Next to the title is a button that says <q>New</q>. Click on that.
         </p>
       </li>
       <li>
         <p>
           If you navigate to the profile avatar in the top right, and click on <q>Your repositories</q>, 
-          there will also be a green <q>New</q> button near the top.
+          there will also be a <q>New</q> button near the top.
         </p>
       </li>
     </ol>
@@ -107,7 +107,7 @@
 
   <p>
     You now should have entered <q>aboutme</q> into the name box, selected if you wanted the repo to be 
-    public or private, and checked the <c>README</c> box. Now, click the green <q>Create repository</q> 
+    public or private, and checked the <c>README</c> box. Now, click the <q>Create repository</q> 
     button to finalize the process.
   </p>
 
@@ -274,8 +274,8 @@
         <p>
           Let's practice your markdown skills! Here, you will make the "aboutme" repo name true. Feel 
           free to use the guidelines and sources above. You could also search online if you aren't sure 
-          how to do what you want to do. I have provided my (basic) example <url href='https://github.com/ian-curtis/gitstarted' visual='github.com/ian-curtis/gitstarted'>in the repo for this book</url> (titled <c>README_aboutme.md</c> in the <c>book-activities</c> folder). 
-          But be creative! There aren't any <q>right</q> answers here.
+          how to do what you want to do. I have provided my (basic) example <url href='https://github.com/ian-curtis/gitstarted' visual='github.com/ian-curtis/gitstarted'>in the repo for this book</url> (titled <c>README_aboutme.md</c> in the <c>book-activities</c> folder). There will be extra sections in my document that aren't required of you here (these will come later in future activities).
+          Be creative! There aren't any <q>right</q> answers here.
         </p>
         <p>
           Github is pretty cool in that it will show you realtime updates of what your Markdown file will 
@@ -320,8 +320,7 @@
         <statement>
           <p>
             In a third paragraph, write two sentences with two cool facts about you. These could be made up, 
-            no one will know! After those facts, create an unordered list of your favorite musical artists 
-            after the one in the second paragraph.
+            no one will know! After that paragraph, create an unordered list of your favorite musical artists.
           </p>
         </statement>
       </task>
@@ -361,7 +360,7 @@
     <idx><h>github</h><h>commit</h></idx>
       Right now, we have only edited the file, but we haven't told Github that we wish to keep our edits.
       It's as if we edited a document, but never clicked save! But if you scroll down to the bottom of the 
-      page, you'll see that there is no <q>save</q> button. You should see a green <q>Commit changes</q> 
+      page, you'll see that there is no <q>save</q> button. You should see a <q>Commit changes</q> 
       button, as in <xref ref="fig-hub-commit"/>. This is important. Github uses <term>commit</term> when indicating that you are about to 
       officially upload your changes to your repo. This is your last change to change anything. When you 
       think you are done, go ahead and commit your changes (commit directly to the main branch). Your 
