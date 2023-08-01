@@ -226,26 +226,32 @@
         <ul>
           <li>
             <p>
-              To italicize a word or phrase, put one asterisk around it: <c>*I'm italicized*</c>
+              To italicize a word or phrase, put one asterisk around it: <c>I'm *very* happy I won the lottery!</c>
             </p>
           </li>
           <li>
             <p>
-              To bold a word or phrase, put two asterisks around it: <c>**I'm bold**</c>
+              To bold a word or phrase, put two asterisks around it: <c>If a zombie comes, make sure you **run**.</c>
             </p>
           </li>
           <li>
             <p>
-              To create headings, place hashtags (pound signs, if you insist)  and a space before the text 
+              To create headings, place hashtags (pound signs, if you insist) and a space before the text 
               you wish to be in the heading: <c># A Title</c>. The more hashtags you add, the deeper the 
-              heading level. Thus, <c>## A Subheading</c> is a level two heading whereas <c>### Another Subheading</c> 
-              is a level three heading.
+              heading level. Thus, <c>## A Subheading</c> is a level two heading whereas <c>### Another Subheading</c> is a level three heading.
             </p>
           </li>
           <li>
             <p>
               To create a bulleted list, start a line with an asterisk (*) and a space. For numbered lists, 
-              start a line with a number and a period (and a space). 
+              start a line with a number and a period (and a space). Make sure you start each list item on a new line, like so:
+              <cd>
+                <cline>* Green Eggs and Ham</cline>
+                <cline>* Wocket (it might be in your pocket)</cline>
+                <cline>* Fiffer Feffer Feff</cline>
+                <cline>* Truffula Trees</cline>
+                <cline>* Sneetches and Thneeds</cline>
+              </cd>
             </p>
           </li>
           <li>
@@ -337,7 +343,15 @@
             Extra Credit: Add an image, a nested list of your favorite colors and why they are your favorite, 
             a link to your favorite YouTube video, and, if you know a coding language, some code.
           </p>
+          <p>
+            No worries if you can't get any of these to work! This task is simply here to help you explore Markdown a little bit.
+          </p>
         </statement>
+        <hint>
+          <p>
+            To add images, you will need to make sure you specify the correct filepath to the image. This can be hard to get right as it depends on where the image is saved and where your Markdown file lives on your computer. If the image doesn't appear at first, you might try making sure the image and the Markdown file are in the same folder and seeing if things work out better.
+          </p>
+        </hint>
       </task>
 
       <conclusion>
