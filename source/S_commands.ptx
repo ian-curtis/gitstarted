@@ -180,7 +180,7 @@
         more. Suppose you are in your Desktop (which we are) and you want to add a text file. Since you 
         are already in the terminal, you don't want to open a text editor, create a new file, and save it 
         to your desktop. Or, suppose you have a file on the Desktop that you no longer need and you don't 
-        to open you file browser, navigate to the Desktop, and delete the file. These examples may seem 
+        to open your file browser, navigate to the Desktop, and delete the file. These examples may seem 
         silly, but now suppose you are six folders deep. It would take much more time to navigate to those 
         folders in a file browser than it would in the terminal.
       </p>
@@ -387,12 +387,12 @@
         </ul>
 
         A few remarks: The <term>kill all</term> command will quit the entire application, not just a single 
-        file. Be sure you want to quit (i.e., you have saved any changes) before using kill all. Also, 
-        application names are case sensitive; that is, <c>killall TextEdit</c> will work fine (on a Mac), but 
+        file. Be sure you want to quit (i.e., you have saved any changes) before using <c>killall</c>. Also, 
+        application names are case sensitive; that is, <c>killall TextEdit</c> will work fine, but 
         <c>killall textedit</c> will return an error. Finally, be aware that if an application name has 
-        a space in it (<eg/> Microsoft Word), you will need to enclose that name in quotes: 
+        a space in it (<eg/>, Microsoft Word), you will need to enclose that name in quotes: 
         <c>killall 'Microsoft Word'</c>. You can use single or double quotes as long as you use the 
-        same style for both.
+        same style for both quotes.
       </p>
 
       <exercise xml:id="try-killall">
@@ -406,7 +406,7 @@
         </statement>
         <solution>
           <p>
-            Your computer should have opened up TextEdit (the default text editor for Mac). To close 
+            Your computer should have opened up TextEdit (the default text editor for Mac) when attempting to open the previous file. To close 
             this application, you should enter <c>killall TextEdit</c> at the command line.
           </p>
         </solution>

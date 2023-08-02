@@ -117,13 +117,13 @@
       </task>
       <task xml:id="clone-https">
         <p>
-          Find the green dialog box labeled <q>Code</q> (yes, the Code box inside the Code tab).
+          Find the dialog box labeled <q>Code</q> (yes, the Code box inside the Code tab).
           Notice you are able to add files manually through upload or through GitHub. You certainly 
           could do this but you will most likely be ignoring the version control and the wonderful experience 
           of using Git!
         </p>
         <p>
-          Click on the green Code box. This box is titled <q>Clone</q> which is a good sign. 
+          Click on the Code box. This box is titled <q>Clone</q> which is a good sign. 
           A url-like string should appear (if not, be sure you have the HTTPS tab selected.) Copy this
           string.
         </p>

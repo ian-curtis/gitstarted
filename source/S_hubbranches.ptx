@@ -274,7 +274,7 @@
     <p>
       The dialog box that contains this message also has another feature: a <q>Contribute</q> option.
       If you click on this option, a box pops up telling us again that we are 1 commit ahead of main. 
-      In green is a button inviting us to <q>Open pull request</q>. Click on this. 
+      Here, there is a button inviting us to <q>Open pull request</q>. Click on this. 
     </p>
     <p>
       There is a lot on this page but most of it will be dealt with later. For right now, notice that 
@@ -284,7 +284,7 @@
     </p>
     <p>
       Your cursor should have automatically navigated to a dialog box. This has defaulted to our latest 
-      commit message. You should make sure that you have put an informative message on what your pull request accomplishes as a whole. Remember, it is possible to have multiple commits before opening a pull request so you could have adjusted a few things. For us, <q>add favorite animal</q> is sufficient and we can open the pull request. Click on the green <q>Create pull request</q> button.
+      commit message. You should make sure that you have put an informative message on what your pull request accomplishes as a whole. Remember, it is possible to have multiple commits before opening a pull request so you could have adjusted a few things. For us, <q>add favorite animal</q> is sufficient and we can open the pull request. Click on the <q>Create pull request</q> button.
     </p>
     <p>
       Nice, another new screen. This time notice how we have changed tabs. We are now in the <q>Pull requests</q> area, which should make sense. The pull requests page is for more than just accpeting pull requests. If someone else has contributed to your repo and has opened a pull request, you can start a conversation here. Suppose you have a question about someone's changes or think they should improve their addition before you approve it. You can say that here. 
@@ -293,7 +293,7 @@
       But we have no problems with ourselves. Our pull request has been created and is waiting for permission to be 
       pulled into main. In some instances, you will have to wait for a repo owner to accept your pull request.
       However, you are the repo owner and can <term>merge</term> the changes yourself. You can do this on the 
-      current screen. Find the green <q>Merge pull request</q> button. GitHub will give you the chance to edit 
+      current screen. Find the <q>Merge pull request</q> button. GitHub will give you the chance to edit 
       the message if necessary. Since we have no changes to make, click on <q>Confirm merge</q>.
     </p>
     <p>

@@ -48,9 +48,9 @@
         </ul>
       </p>
       <assemblage>
-        <title>Shells</title>
+        <title>Optional: Shells</title>
         <p>
-          At the top of my (Mac) terminal, it says <q>&lt;my-username><mdash/> -bash</q>. This indicates that I am using the <c>bash</c> shell. This is no longer the default for MacOS Catalina and later (as the terminal states). I will be sticking with <c>bash</c> in this book to avoid major differences between Windows and Mac instructions. If your terminal states something other than <c>bash</c> (such as <c>zsh</c> or <c>fish</c>) and you would like to use <c>bash</c> to follow along, paste <c>chsh -s /bin/bash</c><fn>This command stands for <q>CHange the SHell to the shell called bash in the bin folder</q></fn> into the command line, press <kbd>Enter</kbd>, enter your password to your computer, and restart the terminal. Otherwise, you are free to stick with the default shell; just know that there may be slight differences between this book and your terminal.
+          Over the course of your experiences with the command line and Git, you may hear talk of (or see references to) <q>shells</q>. A shell is an style of program used to interact with and talk to the heart of your computer (see <url href="https://www.ibm.com/docs/en/aix/7.2?topic=administration-operating-system-shells" visual="www.ibm.com/docs/en/aix/7.2?topic=administration-operating-system-shells">IBM</url> for some more information). For the purposes of this book, you will <em>not</em> need to understand shells nor need to change shells. Since you are learning, stick with what ever defaults your terminal gives you. As you become more experienced, you can start thinking about exploring shells in more detail. See <xref ref="app_commlinecustom"/> when you are ready for this.
         </p>
       </assemblage>
   </subsection>

@@ -64,7 +64,7 @@
       <task>
         <statement>
           <p>
-            Notice that the green button now says <q>propose changes</q> rather than <q>commit changes</q>. Again, this is because you do not have permission to commit changes to my repo, just propose them. Click on this button once you have changed the branch name.
+            Notice that the button now says <q>propose changes</q> rather than <q>commit changes</q>. Again, this is because you do not have permission to commit changes to my repo, just propose them. Click on this button once you have changed the branch name.
           </p>
         </statement>
       </task>
@@ -133,7 +133,7 @@
       <task>
         <statement>
           <p>
-            Make sure you are on your fork's home page (the Code tab). Click on the Contribute drop down menu and then the green Open pull request button. This will bring you to a new page containing familiar elements.
+            Make sure you are on your fork's home page (the Code tab). Click on the Contribute drop down menu and then the <q>Open pull request</q> button. This will bring you to a new page containing familiar elements.
           </p>
         </statement>
       </task>

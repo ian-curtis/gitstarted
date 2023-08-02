@@ -46,7 +46,7 @@
       </statement>
       <solution>
         <p>
-          Use the green code tab <em>on your fork</em> to copy the <init>HTTPS</init> link. Then use <c>git clone &lt;https-link></c>. Make sure you have used <c>cd</c> to get to the right place first!
+          Use the code tab <em>on your fork</em> to copy the <init>HTTPS</init> link. Then use <c>git clone &lt;https-link></c>. Make sure you have used <c>cd</c> to get to the right place first!
         </p>
       </solution>
     </exercise>
