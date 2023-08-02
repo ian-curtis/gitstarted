@@ -94,7 +94,7 @@
         <li>
           <p>
             We will be adding a part to our README file: our favorite animal.
-            Type <c>animal</c> in to the textbox that appears. Your cursor should navigate their automatically.
+            Type <c>animal</c> in to the textbox that appears. Your cursor should navigate there automatically.
           </p>
         </li>
         <li>
@@ -209,10 +209,10 @@
     <idx><h>commit message</h></idx>
     <idx><h>message</h><see>commit message</see></idx>
     <idx><h>github</h><h>commit message</h></idx>
-      After you have made some changes, scroll down to the <q>Commit changes</q> section. Now is the time to introduce commit messages. A <term>commit message</term> is a short, but informative (notice a recurring pattern?) note of what your changes do. You may be tempted to skip this when working with yourself. Please try to write the best commit messages <em>at all times</em>. When you look back at your repo in the future, it will be helpful for you to remember what you did. Commit messages also help others who may look at your project know what you did in each commit. You may see my various branch names and commit messages at <url href="https://github.com/ian-curtis/gitstarted/commits/main" visual="github.com/ian-curtis/gitstarted/commits/main">the commit list for this book on GitHub</url>.
+      After you have made some changes, head to the <q>Commit changes</q> dialog (top right). Now, it is time to introduce commit messages. A <term>commit message</term> is a short, but informative (notice a recurring pattern?) note of what your changes do. You may be tempted to skip this when working with yourself. Please try to write the best commit messages <em>at all times</em>. When you look back at your repo in the future, it will be helpful for you to remember what you did. Commit messages also help others who may look at your project know what you did in each commit. You may see my various branch names and commit messages at <url href="https://github.com/ian-curtis/gitstarted/commits/main" visual="github.com/ian-curtis/gitstarted/commits/main">the commit list for this book on GitHub</url>.
     </p>
     <p>
-      Let's create a commit message for our changes on the <c>animal</c> branch. In the <q>Commit changes</q> block, there is a text box that is autofilled with <q>Update README.md</q>. This is the default and for some instances may be enough. But I have the tendency to write slightly more detailed messages for my commit and I recommend you do so as well. Instead, type <q>add favorite animal</q>. There is no need to add the file name as this message will only be tied to the file(s) you have edited. (Later on, we will see that specific commit messages are only associated with the files you have staged and committed but that's a topic for <xref ref="C_gitsolo"/>.)
+      Let's create a commit message for our changes on the <c>animal</c> branch. In the <q>Commit changes</q> dialog, there is a text box that is autofilled with <q>Update README.md</q>. This is the default and for some instances may be enough. But I have the tendency to write slightly more detailed messages for my commits and I recommend you do so as well. Instead, type <q>add favorite animal</q>. There is no need to add the file name as this message will only be tied to the file(s) you have edited. (Later on, we will see that specific commit messages are only associated with the files you have staged and committed but that's a topic for <xref ref="C_gitsolo"/>.)
     </p>
 
     <assemblage xml:id="commitmessages">
@@ -254,10 +254,10 @@
     <idx><h>merge</h></idx>
     <idx><h>github</h><h>merge</h></idx>
     <p>
-      Alright, so you've edited a file on a branch AND you are happy with your changes. Everything looks good and works well on the branch so you are ready to incorporate your changes into the official version of your project. This is called creating a <term>pull request</term>. It may sound odd to call it a pull request when it seems like you are actually <em>pushing</em> your changes toward the main branch. However, often with pull requests when collaborating, you don't have permission to access the main branch of another repo, so you have to request that someone <em>pull</em> your changes into the main branch.
+      Alright, so you've edited a file on a branch AND you are happy with your changes. Everything looks good and works well on the branch so you are ready to incorporate your changes into the official version of your project. This is called creating a <term>pull request</term>. It may sound odd to call it a pull request when it seems like you are actually <em>pushing</em> your changes toward the main branch. However, in cases where you don't have permission to access the main branch of another repo, so you have to request that someone <em>pull</em> your changes into the main branch.
     </p>
     <p>
-      I admit, it is silly to have to work with pull requests when working solo. Why would I need to ask myself permission to pull in my own changes? But pull requests are essential when working with multiple collaborators and I recommend using branches and pull requests in your own individual work for practice and good habits.
+      I admit, it is silly to have to work with pull requests when working solo. Why would I need to ask myself permission to pull in my own changes? But pull requests are essential when working with multiple collaborators and I recommend using branches and pull requests in your own individual work for practice, good habits, and safeguards against code failures.
     </p>
     <p>
     <idx><h>commit</h><h>ahead and behind</h></idx>
@@ -269,7 +269,7 @@
         </p>
       </blockquote>
     <p>
-      This is GitHub's way of telling you that the branch you are currenlty on has changes that are not reflected on the main branch. Specifically, we have committed one time and the changes from that single commit do not appear on main. We could go and edit the README file some more and commit those changes. In that case, we would be 2 commits ahead of main.
+      This is GitHub's way of telling you that the branch you are currently on has changes that are not reflected on the main branch. Specifically, we have committed one time and the changes from that single commit do not appear on main. We could go and edit the README file some more and commit those changes. In that case, we would be 2 commits ahead of main.
     </p>
     <p>
       The dialog box that contains this message also has another feature: a <q>Contribute</q> option.
@@ -287,7 +287,7 @@
       commit message. You should make sure that you have put an informative message on what your pull request accomplishes as a whole. Remember, it is possible to have multiple commits before opening a pull request so you could have adjusted a few things. For us, <q>add favorite animal</q> is sufficient and we can open the pull request. Click on the <q>Create pull request</q> button.
     </p>
     <p>
-      Nice, another new screen. This time notice how we have changed tabs. We are now in the <q>Pull requests</q> area, which should make sense. The pull requests page is for more than just accpeting pull requests. If someone else has contributed to your repo and has opened a pull request, you can start a conversation here. Suppose you have a question about someone's changes or think they should improve their addition before you approve it. You can say that here. 
+      Nice, another new screen. This time notice how we have changed tabs. We are now in the <q>Pull requests</q> area (and not the Code tab), which should make sense. The pull requests page is for more than just accpeting pull requests. If someone else has contributed to your repo and has opened a pull request, you can start a conversation here. Suppose you have a question about someone's changes or think they should improve their addition before you approve it. You can say that here. 
     </p>
     <p>
       But we have no problems with ourselves. Our pull request has been created and is waiting for permission to be 
