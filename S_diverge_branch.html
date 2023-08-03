@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Git Says I Have Divergent Branches!</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -445,8 +488,8 @@ window.MathJax = {
 <section class="section" id="S_diverge_branch"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.5</span> <span class="title">Git Says I Have Divergent Branches!</span>
 </h2>
-<div class="para" id="p-1092">I recently experiences this issue for the first time and had to do some searching to figure out how to fix it. I relied on <a class="external" href="https://stackoverflow.com/questions/62653114" target="_blank">Davide Casiraghi’s question on StackOverflow</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-65" id="fn-65"><sup> 65 </sup></a> and <a class="external" href="https://stackoverflow.com/questions/29673869/" target="_blank">adrianvlupu’s question also on StackOverflow</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-66" id="fn-66"><sup> 66 </sup></a> to create this guide and you might find these resources more helpful than mine.</div>
-<div class="para" id="p-1093">This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn’t want to create them, so it refuses to push or pull until you fix something. This is not the same error as in <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won’t Let Me Pull From Upstream or Origin!">Section C.4</a>, although it is closely related. You might get something like this:</div>
+<div class="para" id="p-1102">I recently experienced this issue for the first time and had to do some searching to figure out how to fix it. I relied on <a class="external" href="https://stackoverflow.com/questions/62653114" target="_blank">Davide Casiraghi’s question on StackOverflow</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-66" id="fn-66"><sup> 66 </sup></a> and <a class="external" href="https://stackoverflow.com/questions/29673869/" target="_blank">adrianvlupu’s question also on StackOverflow</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-67" id="fn-67"><sup> 67 </sup></a> to create this guide and you might find these resources more helpful than mine.</div>
+<div class="para" id="p-1103">This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn’t want to create them, so it refuses to push or pull until you fix something. This is not the same error as in <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won’t Let Me Pull From Upstream or Origin!">Section C.4</a>, although it is closely related. You might get something like this:</div>
 <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git push
 </b>To &lt;repo-you-are-pushing-to&gt;.git
  ! [rejected]        main -&gt; main (fetch first)
@@ -457,11 +500,11 @@ hint: to the same ref. You may want to first integrate the remote changes
 hint: (e.g., 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 </pre></div>
-<div class="para" id="p-1094">This looks kind of scary. Let’s see how to fix this.</div>
+<div class="para" id="p-1104">This looks kind of scary. Let’s see how to fix this.</div>
 <article class="project project-like" id="try-git-rebase"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-try-git-rebase"><h2 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">C.5</span><span class="period">.</span><span class="space"> </span><span class="title">Consolidating Divergent Branches.</span>
 </h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-try-git-rebase"><article class="project project-like"><article class="task exercise-like" id="task-171"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="p-1095">The first step will be to try to pull in changes before you push. Use <code class="code-inline tex2jax_ignore">git pull &lt;remote&gt; &lt;branch&gt;</code> as needed. If this works, then try to push and everything should be ok.</div> <div class="para" id="p-1096">You might get another error like this:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull origin main
+<div class="para" id="p-1105">The first step will be to try to pull in changes before you push. Use <code class="code-inline tex2jax_ignore">git pull &lt;remote&gt; &lt;branch&gt;</code> as needed. If this works, then try to push and everything should be ok.</div> <div class="para" id="p-1106">You might get another error like this:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git pull origin main
 </b>remote: Enumerating objects: 1, done.
 remote: Counting objects: 100% (1/1), done.
 remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
@@ -481,10 +524,10 @@ hint: preference for all repositories. You can also pass --rebase, --no-rebase,
 hint: or --ff-only on the command line to override the configured default per
 hint: invocation.
 fatal: Need to specify how to reconcile divergent branches.
-</pre></div> <div class="para" id="p-1097">which is quite overwhelming.</div></article><article class="task exercise-like" id="task-172"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="p-1098">Here, the fix is usually pretty easy but I have to teach you a new term. We need to <dfn class="terminology">rebase</dfn> the branch. When a pull happens, Git fetches new commits from GitHub and merges them into your branch (and this merge is actually a commit in itself). The rebase command will temporarily remove your new commits from the commit history, then pull in the new changes and reinstate your commit into the timeline.</div> <div class="para" id="p-1099">If you want to avoid potential large error messages like this again, you might consider changing Git’s default behavior. Instead of fetching and merging, you can do a fast-forward merge which does not do a merge commit. When a fast forward is not possible, the error message is much shorter and then you can use the rebase command to fix things.</div> <div class="para" id="p-1100">To begin this process, first enter <code class="code-inline tex2jax_ignore">git config --global pull.ff only</code> into your terminal. This will change the default pull behavior for Git.</div></article><article class="task exercise-like" id="task-173"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="p-1101">Now try <code class="code-inline tex2jax_ignore">git pull</code>. Things might work. Great! But if you get an error message of <code class="code-inline tex2jax_ignore">fatal: Not possible to fast-forward, aborting.</code>, use <code class="code-inline tex2jax_ignore">git pull --rebase</code> to perform a rebase. Then <code class="code-inline tex2jax_ignore">git push</code> back to origin or upstream.</div> <div class="para" id="p-1102">If you ever want to change the default behavior back to what it was, use <code class="code-inline tex2jax_ignore">git config pull.rebase false</code>. If you want to keep that behavior change we just did and you want to do a one-time fetch-merge pull, use <code class="code-inline tex2jax_ignore">git pull --ff</code>.</div></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-65"><div class="fn"><code class="code-inline tex2jax_ignore">https://stackoverflow.com/questions/62653114</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-66"><div class="fn"><code class="code-inline tex2jax_ignore">https://stackoverflow.com/questions/29673869/</code></div></div>
+</pre></div> <div class="para" id="p-1107">which is quite overwhelming.</div></article><article class="task exercise-like" id="task-172"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="p-1108">Here, the fix is usually pretty easy but I have to teach you a new term. We need to <dfn class="terminology">rebase</dfn> the branch. When a pull happens, Git fetches new commits from GitHub and merges them into your branch (and this merge is actually a commit in itself). The rebase command will temporarily remove your new commits from the commit history, then pull in the new changes and reinstate your commit into the timeline.</div> <div class="para" id="p-1109">If you want to avoid potential large error messages like this again, you might consider changing Git’s default behavior. Instead of fetching and merging, you can do a fast-forward merge which does not do a merge commit. When a fast forward is not possible, the error message is much shorter and then you can use the rebase command to fix things.</div> <div class="para" id="p-1110">To begin this process, first enter <code class="code-inline tex2jax_ignore">git config pull.ff only</code> into your terminal. This will change the default pull behavior for Git (for your current repository only).</div></article><article class="task exercise-like" id="task-173"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="p-1111">Now try <code class="code-inline tex2jax_ignore">git pull</code>. Things might work. Great! But if you get an error message of <code class="code-inline tex2jax_ignore">fatal: Not possible to fast-forward, aborting.</code>, use <code class="code-inline tex2jax_ignore">git pull --rebase</code> to perform a rebase. Then <code class="code-inline tex2jax_ignore">git push</code> back to origin or upstream.</div> <div class="para" id="p-1112">If you ever want to change the default behavior back to what it was, use <code class="code-inline tex2jax_ignore">git config pull.rebase false</code>. If you want to keep that behavior change we just did and you want to do a one-time fetch-merge pull (the old way), use <code class="code-inline tex2jax_ignore">git pull --ff</code>.</div></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-66"><div class="fn"><code class="code-inline tex2jax_ignore">https://stackoverflow.com/questions/62653114</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-67"><div class="fn"><code class="code-inline tex2jax_ignore">https://stackoverflow.com/questions/29673869/</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_forcemerge.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="S_hub_revert_commit.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

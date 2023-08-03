@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Materials: Mac</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -446,34 +489,29 @@ window.MathJax = {
 <span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Materials: Mac</span>
 </h2>
 <div class="para" id="p-46">As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on if you have a Mac or a <abbr class="initialism">PC</abbr> and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions <em class="emphasis">for those who are using a Mac with macOS</em>.</div>
-<section class="paragraphs" id="paragraphs-7"><h1 class="heading"><span class="title">A Text Editor.</span></h1> <div class="para" id="p-47">In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <a class="external" href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 11 </sup></a>.</div> <div class="para" id="p-48">If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer <a class="external" href="https:/code.visualstudio.com/Download" target="_blank">Visual Studio Code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a> which can be downloaded at the previous link. Throughout this book, I will refer to <abbr class="initialism">VS</abbr> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <abbr class="initialism">VS</abbr> Code although as you gain experience you might think about switching to Sublime Text.</div></section><section class="paragraphs" id="install-git-mac"><h1 class="heading"><span class="title">Git.</span></h1> <div class="para logical" id="p-49">
+<section class="paragraphs" id="paragraphs-7"><h1 class="heading"><span class="title">A Text Editor.</span></h1> <div class="para" id="p-47">In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <a class="external" href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-11" id="fn-11"><sup> 11 </sup></a>.</div> <div class="para" id="p-48">If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer <a class="external" href="https://code.visualstudio.com/Download" target="_blank">Visual Studio (VS) Code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-12" id="fn-12"><sup> 12 </sup></a> which can be downloaded at the previous link. Throughout this book, I will refer to <abbr class="initialism">VS</abbr> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <abbr class="initialism">VS</abbr> Code although as you gain experience you might think about switching to Sublime Text.</div></section><section class="paragraphs" id="install-git-mac"><h1 class="heading"><span class="title">Git.</span></h1> <div class="para logical" id="p-49">
 <div class="para">To use Git, you need to download and install it on your computer. You already have a command line, you just need to make sure that you have Git. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). First, run a check to see if it is already installed. Don’t worry about how or why these steps work, all will be explained later on.</div>
 <ol class="decimal">
 <li id="li-19"><div class="para" id="p-50">Press <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">Space</kbd> to open Spotlight Search.</div></li>
-<li id="li-20"><div class="para" id="p-51">Start typing <code class="code-inline tex2jax_ignore">terminal.app</code>. When the correct application opens up, click on it.</div></li>
-<li id="li-21"><div class="para" id="p-52">Your terminal will pop up. Don’t be scared of it! Type <code class="code-inline tex2jax_ignore">git --version</code> and press <kbd class="kbdkey">Enter</kbd>.</div></li>
-<li id="li-22"><div class="para" id="p-53">If it spits out something like <code class="code-inline tex2jax_ignore">git version 2.35.1</code> (the numbers could be different), you’re good! If not, carry on.</div></li>
+<li id="li-20"><div class="para" id="p-51">Start typing <code class="code-inline tex2jax_ignore">terminal.app</code>. When the correct application pops up, click on it.</div></li>
+<li id="li-21"><div class="para" id="p-52">Your terminal will appear. Don’t be scared of it! Type <code class="code-inline tex2jax_ignore">git --version</code> and press <kbd class="kbdkey">Enter</kbd>.</div></li>
+<li id="li-22"><div class="para" id="p-53">If it spits out something like <code class="code-inline tex2jax_ignore">git version 2.41.0</code> (the numbers could be different), you’re good! If not, carry on.</div></li>
 </ol>
 </div> <div class="para logical" id="p-54">
 <div class="para">Even if you do not know what Homebrew is, it recommend using it to install Git. It can also be used to quickly (i.e. in one line) install other pieces of software. You might find Homebrew useful in the future, even if it can be confusing to install at present:</div>
 <ol class="decimal">
 <li id="li-23">
-<div class="para logical" id="p-55">
-<div class="para">To install Homebrew, go back to your terminal that you opened when checking if Git was installed. Paste in</div>
-<pre class="code-display tex2jax_ignore">/bin/bash -c "$(curl -fsSL
-https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-</pre>
-<div class="para">as one line (not two) and press <kbd class="kbdkey">Enter</kbd>. Don’t worry about what each part does (to be honest, I’m not entirely sure either). It is safe and trustworthy (I did it on my computer).</div>
-</div>
-<div class="para" id="p-56">If you want to be sure you’re pasting the correct command, you can visit <a class="external" href="https://brew.sh/" target="_blank">the Homebrew homepage</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 13 </sup></a> and navigate to the “Install Homebrew” heading.</div>
+<div class="para" id="p-55">To install Homebrew, visit <a class="external" href="https://brew.sh/" target="_blank">the Homebrew homepage</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-13" id="fn-13"><sup> 13 </sup></a> and navigate to the “Install Homebrew” heading (see <a href="" class="xref" data-knowl="./knowl/brew-homepage.html" title="Figure 0.0.0.0.1">Figure 0.0.0.0.1</a>). Copy the long command there and paste it into your terminal (that you used earlier).</div>
+<figure class="figure figure-like" id="brew-homepage"><div class="image-box" style="width: 60%; margin-left: 20%; margin-right: 20%;"><img src="external/brew_homepage.svg" role="img" class="contained" alt="The Homebrew Homepage, with the Install Homebrew heading (and command to paste into terminal) pictured."></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">0.0.0.0.1<span class="period">.</span></span><span class="space"> </span>The Homebrew Homepage, <a class="external" href="https://brew.sh/" target="_blank">brew.sh</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 14 </sup></a></figcaption></figure><div class="para" id="p-56">Once you paste in that command, press <kbd class="kbdkey">Enter</kbd> and follow the instructions on installation. Don’t worry about what each part does (to be honest, I’m not entirely sure either). It is safe and trustworthy (I did it on my computer).</div>
 </li>
-<li id="li-24"><div class="para" id="p-57">Follow the instructions and prompts given until Homebrew is installed.</div></li>
-<li id="li-25"><div class="para" id="p-58">To install Git, simply type in <code class="code-inline tex2jax_ignore">brew install git</code> at the terminal and press <kbd class="kbdkey">Enter</kbd>.</div></li>
+<li id="li-24"><div class="para" id="p-57">Now, use Homebrew to install Git. Simply type in <code class="code-inline tex2jax_ignore">brew install git</code> at the terminal and press <kbd class="kbdkey">Enter</kbd>.</div></li>
 </ol>
 <div class="para">And that’s it!</div>
-</div></section><section class="paragraphs" id="paragraphs-9"><h1 class="heading"><span class="title">GitHub.</span></h1> <div class="para" id="p-59">You will also need a GitHub account. Since this is an extensive topic, this is covered in <a href="S_hubnavigate.html#hub-account" class="internal" title="Subsection 3.1.1: Creating A GitHub Account">Subsection 3.1.1</a>.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn"><code class="code-inline tex2jax_ignore">sublimetext.com/download</code></div></div>
+</div></section><section class="paragraphs" id="paragraphs-9"><h1 class="heading"><span class="title">GitHub.</span></h1> <div class="para" id="p-58">You will also need a GitHub account. Since this is an extensive topic, this is covered in <a href="S_hubnavigate.html#hub-account" class="internal" title="Subsection 3.1.1: Creating A GitHub Account">Subsection 3.1.1</a>.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-11"><div class="fn"><code class="code-inline tex2jax_ignore">sublimetext.com/download</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-12"><div class="fn"><code class="code-inline tex2jax_ignore">code.visualstudio.com/Download</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-13"><div class="fn"><code class="code-inline tex2jax_ignore">brew.sh</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn"><code class="code-inline tex2jax_ignore">brew.sh</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="materials-windows.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="materials-linux.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

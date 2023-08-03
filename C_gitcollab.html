@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Git Collaboration</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -444,7 +487,7 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="C_gitcollab"><h2 class="heading">
 <span class="type">Chapter</span> <span class="codenumber">6</span> <span class="title">Git Collaboration</span>
 </h2>
-<section class="introduction" id="introduction-37"><div class="para" id="p-875">This chapter is closely related to <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a> and <a href="C_githubcollab.html" class="internal" title="Chapter 5: GitHub Collaboration">Chapter 5</a> in that the concepts there carry over and are combined together here. The workflow and steps described in this chapter are most similar to the typical day-to-day work from many people around the world when it comes to Git and GitHub.</div></section><nav class="summary-links"><ul>
+<section class="introduction" id="introduction-37"><div class="para" id="p-878">This chapter is closely related to <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a> and <a href="C_githubcollab.html" class="internal" title="Chapter 5: GitHub Collaboration">Chapter 5</a> in that the concepts there carry over and are combined together here. The workflow and steps described in this chapter are most similar to the typical day-to-day work from many people around the world when it comes to Git and GitHub.</div></section><nav class="summary-links"><ul>
 <li><a href="S_gitcollabsetup.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Getting Set Up: A Few Extra Steps</span></a></li>
 <li><a href="S_gitcollabedit.html" class="internal"><span class="codenumber">6.2</span> <span class="title">Collaboration Editing With Git</span></a></li>
 <li><a href="S_gitcollabfinalize.html" class="internal"><span class="codenumber">6.3</span> <span class="title">Revisiting the Three Step Process</span></a></li>

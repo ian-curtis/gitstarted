@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Working Together: The Culminating Experience</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -445,83 +488,83 @@ window.MathJax = {
 <section class="section" id="S_gitcollabbigact"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.6</span> <span class="title">Working Together: The Culminating Experience</span>
 </h2>
-<div class="para" id="p-956">As in <a href="S_gitbigact.html" class="internal" title="Section 4.6: Working Solo: The Culminating Experience">Section 4.6</a>, this part is a large activity designed to help you practice the skills and ideas learned in the previous sections. It also represents an example of what a typical workflow might look like. You are welcome and encouraged to refer back to the summary and the sections themselves.</div>
-<div class="para" id="p-957">As before, the activity below is broken up into multiple parts. In order to help you remember the procedures, I will not be adding in cross references to the corresponding chapters. That being said, I will add in hints and answers where applicable. Do note that some of the steps have no “correct” answer. This will be noted in the corresponding answer.</div>
+<div class="para" id="p-959">As in <a href="S_gitbigact.html" class="internal" title="Section 4.6: Working Solo: The Culminating Experience">Section 4.6</a>, this part is a large activity designed to help you practice the skills and ideas learned in the previous sections. It also represents an example of what a typical workflow might look like. You are welcome and encouraged to refer back to the summary and the sections themselves.</div>
+<div class="para" id="p-960">As before, the activity below is broken up into multiple parts. In order to help you remember the procedures, I will not be adding in cross references to the corresponding chapters. That being said, I will add in hints and answers where applicable. Do note that some of the steps have no “correct” answer. This will be noted in the corresponding answer.</div>
 <article class="activity project-like" id="bigact-gitcollab"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-bigact-gitcollab"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">6.3</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-bigact-gitcollab"><article class="activity project-like"><div class="introduction" id="introduction-44"><div class="para" id="p-958">This activity will involve you contributing to the repository for this book. This will help me get an estimate of how many people are reading the book (since I can see the number of forks). You will be typing a short paragraph of your desired superpower.</div></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-bigact-gitcollab"><article class="activity project-like"><div class="introduction" id="introduction-44"><div class="para" id="p-961">This activity will involve you contributing to the repository for this book. This will help me get an estimate of how many people are reading the book (since I can see the number of forks). You will be typing a short paragraph of your desired superpower.</div></div>
 <article class="task exercise-like" id="task-135"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-959">Navigate to the <a class="external" href="https://github.com/ian-curtis/gitstarted" target="_blank">GitHub repository for this book</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-52" id="fn-52"><sup> 52 </sup></a>, <code class="code-inline tex2jax_ignore">ian-curtis/gitstarted</code>.</div></article><article class="task exercise-like" id="task-136"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-960">Fork the repository.</div>
+<div class="para" id="p-962">Navigate to the <a class="external" href="https://github.com/ian-curtis/gitstarted" target="_blank">GitHub repository for this book</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-53" id="fn-53"><sup> 53 </sup></a>, <code class="code-inline tex2jax_ignore">ian-curtis/gitstarted</code>.</div></article><article class="task exercise-like" id="task-136"><h4 class="heading"><span class="codenumber">(b)</span></h4>
+<div class="para" id="p-963">Fork the repository.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-45" id="answer-45"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-45"><div class="answer solution-like"><div class="para" id="p-961">Click on the “Fork” button in the top right. (You can keep the same name.)</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-45" id="answer-45"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-45"><div class="answer solution-like"><div class="para" id="p-964">Click on the “Fork” button in the top right. (You can keep the same name.)</div></div></div>
 </div></article><article class="task exercise-like" id="task-137"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-962">Make sure your branch is up to date with <code class="code-inline tex2jax_ignore">ian-curtis/gitstarted:main</code>.</div></article><article class="task exercise-like" id="task-138"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-963">Clone your fork on to your computer. Navigate to the repo using your terminal.</div>
+<div class="para" id="p-965">Make sure your branch is up to date with <code class="code-inline tex2jax_ignore">ian-curtis/gitstarted:main</code>.</div></article><article class="task exercise-like" id="task-138"><h4 class="heading"><span class="codenumber">(d)</span></h4>
+<div class="para" id="p-966">Clone your fork on to your computer. Navigate to the repo using your terminal.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-46" id="answer-46"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-46"><div class="answer solution-like"><div class="para" id="p-964">Copy the <abbr class="initialism">HTTPS</abbr> link <em class="emphasis">to your fork</em> on GitHub. Use <code class="code-inline tex2jax_ignore">git clone &lt;copied-link&gt;</code>. Use <code class="code-inline tex2jax_ignore">cd &lt;repo-name&gt;</code> to move your terminal into that repo.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-46" id="answer-46"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-46"><div class="answer solution-like"><div class="para" id="p-967">Copy the <abbr class="initialism">HTTPS</abbr> link <em class="emphasis">to your fork</em> on GitHub. Use <code class="code-inline tex2jax_ignore">git clone &lt;copied-link&gt;</code>. Use <code class="code-inline tex2jax_ignore">cd &lt;repo-name&gt;</code> to move your terminal into that repo.</div></div></div>
 </div></article><article class="task exercise-like" id="task-139"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-965">Create a new, appropriately-named branch. Switch to that branch.</div>
+<div class="para" id="p-968">Create a new, appropriately-named branch. Switch to that branch.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-47" id="answer-47"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-47"><div class="answer solution-like"><div class="para" id="p-966">This could vary. Perhaps <code class="code-inline tex2jax_ignore">superpower</code>, <code class="code-inline tex2jax_ignore">power</code>, or <code class="code-inline tex2jax_ignore">add-superpower</code>?</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-47" id="answer-47"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-47"><div class="answer solution-like"><div class="para" id="p-969">This could vary. Perhaps <code class="code-inline tex2jax_ignore">superpower</code>, <code class="code-inline tex2jax_ignore">power</code>, or <code class="code-inline tex2jax_ignore">add-superpower</code>?</div></div></div>
 </div></article><article class="task exercise-like" id="task-140"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="p-967">There is a file called <code class="code-inline tex2jax_ignore">superpower.md</code> inside of the <code class="code-inline tex2jax_ignore">book-activities</code> folder. Use your terminal to open that file (if using <abbr class="initialism">VS</abbr> Code, use the terminal; if not, try to use your terminal).</div>
+<div class="para" id="p-970">There is a file called <code class="code-inline tex2jax_ignore">superpower.md</code> inside of the <code class="code-inline tex2jax_ignore">book-activities</code> folder. Use your terminal to open that file (if using <abbr class="initialism">VS</abbr> Code, use the terminal; if not, try to use your terminal).</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-48" id="answer-48"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-48"><div class="answer solution-like">
-<div class="para" id="p-968">
-<code class="code-inline tex2jax_ignore">cd book-activities</code> first, then <code class="code-inline tex2jax_ignore">code superpower.md</code> to open just the markdown file (not the entire repository) (if using <abbr class="initialism">VS</abbr> Code); if using a different editor, use Google to find a good terminal command (or do it manually)</div> <div class="para" id="p-969">OR <code class="code-inline tex2jax_ignore">cd ..</code> to go backwards a folder, then <code class="code-inline tex2jax_ignore">code gitstarted</code> to open the entire repository, then open the markdown file using work (to use Git functions again, you may have to <code class="code-inline tex2jax_ignore">cd gitstarted</code> again)</div>
+<div class="para" id="p-971">
+<code class="code-inline tex2jax_ignore">cd book-activities</code> first, then <code class="code-inline tex2jax_ignore">code superpower.md</code> to open just the markdown file (not the entire repository) (if using <abbr class="initialism">VS</abbr> Code); if using a different editor, use Google to find a good terminal command (or do it manually)</div> <div class="para" id="p-972">OR <code class="code-inline tex2jax_ignore">cd ..</code> to go backwards a folder, then <code class="code-inline tex2jax_ignore">code gitstarted</code> to open the entire repository, then open the markdown file using work (to use Git functions again, you may have to <code class="code-inline tex2jax_ignore">cd gitstarted</code> again)</div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-141"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="p-970">Edit the markdown file with your contribution. Instructions are in the file are pasted below:</div> <blockquote class="blockquote" id="blockquote-18"><div class="para" id="p-971">Here is the file for the culminating experience of <a href="C_gitcollab.html" class="internal" title="Chapter 6: Git Collaboration">Chapter 6</a> from <span class="booktitle">Git Started</span>. Below, type your GitHub username as a level two heading and then type a short paragraph of the superpower you wish you had and why. This could be anything!! See my example.</div></blockquote> <div class="para" id="p-972">Make sure to save the file when you are done.</div></article><article class="task exercise-like" id="task-142"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="p-973">Make sure Git is tracking your file.</div>
+<div class="para" id="p-973">Edit the markdown file with your contribution. Instructions are in the file and are pasted below:</div> <blockquote class="blockquote" id="blockquote-18"><div class="para" id="p-974">Here is the file for the culminating experience of <a href="C_gitcollab.html" class="internal" title="Chapter 6: Git Collaboration">Chapter 6</a> from <span class="booktitle">Git Started</span>. Below, type your GitHub username as a level two heading and then type a short paragraph of the superpower you wish you had and why. This could be anything!! See my example.</div></blockquote> <div class="para" id="p-975">Make sure to save the file when you are done.</div></article><article class="task exercise-like" id="task-142"><h4 class="heading"><span class="codenumber">(h)</span></h4>
+<div class="para" id="p-976">Make sure Git is tracking your file.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-49" id="answer-49"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-49"><div class="answer solution-like"><div class="para" id="p-974"><code class="code-inline tex2jax_ignore">git status</code></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-49" id="answer-49"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-49"><div class="answer solution-like"><div class="para" id="p-977"><code class="code-inline tex2jax_ignore">git status</code></div></div></div>
 </div></article><article class="task exercise-like" id="task-143"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="p-975">Stage your file.</div>
+<div class="para" id="p-978">Stage your file.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-50" id="answer-50"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-50"><div class="answer solution-like"><div class="para logical" id="p-976"><ul class="disc">
-<li id="li-246"><div class="para" id="p-977">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-50" id="answer-50"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-50"><div class="answer solution-like"><div class="para logical" id="p-979"><ul class="disc">
+<li id="li-245"><div class="para" id="p-980">
 <code class="code-inline tex2jax_ignore">git add .</code> or</div></li>
-<li id="li-247"><div class="para" id="p-978">
+<li id="li-246"><div class="para" id="p-981">
 <code class="code-inline tex2jax_ignore">git add book-activities/</code> or</div></li>
-<li id="li-248"><div class="para" id="p-979"><code class="code-inline tex2jax_ignore">git add book-activities/superpower.md</code></div></li>
+<li id="li-247"><div class="para" id="p-982"><code class="code-inline tex2jax_ignore">git add book-activities/superpower.md</code></div></li>
 </ul></div></div></div>
 </div></article><article class="task exercise-like" id="task-144"><h4 class="heading"><span class="codenumber">(j)</span></h4>
-<div class="para" id="p-980">Check to make sure your file got staged correctly.</div>
+<div class="para" id="p-983">Check to make sure your file got staged correctly.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-51"><div class="answer solution-like"><div class="para" id="p-981"><code class="code-inline tex2jax_ignore">git status</code></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-51" id="answer-51"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-51"><div class="answer solution-like"><div class="para" id="p-984"><code class="code-inline tex2jax_ignore">git status</code></div></div></div>
 </div></article><article class="task exercise-like" id="task-145"><h4 class="heading"><span class="codenumber">(k)</span></h4>
-<div class="para" id="p-982">Commit your file with a good commit message.</div>
+<div class="para" id="p-985">Commit your file with a good commit message.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-52"><div class="answer solution-like"><div class="para" id="p-983"><code class="code-inline tex2jax_ignore">git commit -m '&lt;your-message&gt;'</code></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-52" id="answer-52"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-52"><div class="answer solution-like"><div class="para" id="p-986"><code class="code-inline tex2jax_ignore">git commit -m '&lt;your-message&gt;'</code></div></div></div>
 </div></article><article class="task exercise-like" id="task-146"><h4 class="heading"><span class="codenumber">(l)</span></h4>
-<div class="para" id="p-984">Push your changes back to your fork on GitHub</div>
+<div class="para" id="p-987">Push your changes back to your fork on GitHub</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-53"><div class="answer solution-like"><div class="para" id="p-985"><code class="code-inline tex2jax_ignore">git push origin superpower</code></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-53" id="answer-53"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-53"><div class="answer solution-like"><div class="para" id="p-988"><code class="code-inline tex2jax_ignore">git push origin superpower</code></div></div></div>
 </div></article><article class="task exercise-like" id="task-147"><h4 class="heading"><span class="codenumber">(m)</span></h4>
-<div class="para" id="p-986">Go back to GitHub and merge your changes into your fork’s main branch, then into the upstream main branch.</div> <div class="para" id="p-987">OR Go back to GitHub and open a pull request to merge your changes directly into the upstream branch.</div>
+<div class="para" id="p-989">Go back to GitHub and merge your changes into your fork’s main branch, then into the upstream main branch.</div> <div class="para" id="p-990">OR Go back to GitHub and open a pull request to merge your changes directly into the upstream branch.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-54" id="answer-54"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-54"><div class="answer solution-like">
-<div class="para" id="p-988">Create a pull reqeust from <code class="code-inline tex2jax_ignore">superpower</code> to your fork’s <code class="code-inline tex2jax_ignore">main</code> then from your fork’s <code class="code-inline tex2jax_ignore">main</code> to upstream <code class="code-inline tex2jax_ignore">main</code>.</div> <div class="para" id="p-989">OR Create a pull request from <code class="code-inline tex2jax_ignore">superpower</code> directly to the upstream <code class="code-inline tex2jax_ignore">main</code>.</div>
+<div class="para" id="p-991">Create a pull reqeust from <code class="code-inline tex2jax_ignore">superpower</code> to your fork’s <code class="code-inline tex2jax_ignore">main</code> then from your fork’s <code class="code-inline tex2jax_ignore">main</code> to upstream <code class="code-inline tex2jax_ignore">main</code>.</div> <div class="para" id="p-992">OR Create a pull request from <code class="code-inline tex2jax_ignore">superpower</code> directly to the upstream <code class="code-inline tex2jax_ignore">main</code>.</div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-148"><h4 class="heading"><span class="codenumber">(n)</span></h4>
-<div class="para" id="p-990">Wait for me to accept your pull request and merge your changes into the main branch.</div></article><article class="task exercise-like" id="task-149"><h4 class="heading"><span class="codenumber">(o)</span></h4>
-<div class="para" id="p-991">In the meantime, switch back to main and set an upstream branch for your clone.</div>
+<div class="para" id="p-993">Wait for me to accept your pull request and merge your changes into the main branch.</div></article><article class="task exercise-like" id="task-149"><h4 class="heading"><span class="codenumber">(o)</span></h4>
+<div class="para" id="p-994">In the meantime, switch back to main and set an upstream remote for your clone.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-55" id="answer-55"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-55"><div class="answer solution-like">
-<div class="para" id="p-992">
-<code class="code-inline tex2jax_ignore">git switch main</code>, then</div> <div class="para" id="p-993"><code class="code-inline tex2jax_ignore">git remote add upstream https://github.com/ian-curtis/gitstarted.git</code></div> <div class="para" id="p-994">It is important to switch back to main or you will set an upstream remote for just your branch which is sometimes useful, but not here.</div>
+<div class="para" id="p-995">
+<code class="code-inline tex2jax_ignore">git switch main</code>, then</div> <div class="para" id="p-996"><code class="code-inline tex2jax_ignore">git remote add upstream https://github.com/ian-curtis/gitstarted.git</code></div> <div class="para" id="p-997">It is important to switch back to main or you will set an upstream remote for just your branch which is sometimes useful, but not here.</div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-150"><h4 class="heading"><span class="codenumber">(p)</span></h4>
-<div class="para" id="p-995">Once I have accepted your changes, make sure your fork and your clone both have those changes.</div>
+<div class="para" id="p-998">Once I have accepted your changes, make sure your fork and your clone both have those changes.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-56"><div class="answer solution-like"><div class="para" id="p-996">(on main branch) <code class="code-inline tex2jax_ignore">git pull upstream main</code>, <code class="code-inline tex2jax_ignore">git push origin main</code>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-56" id="answer-56"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-56"><div class="answer solution-like"><div class="para" id="p-999">(on main branch) <code class="code-inline tex2jax_ignore">git pull upstream main</code>, <code class="code-inline tex2jax_ignore">git push origin main</code>
 </div></div></div>
 </div></article><article class="task exercise-like" id="task-151"><h4 class="heading"><span class="codenumber">(q)</span></h4>
-<div class="para" id="p-997">For extra credit, create a new branch and do some typo correction on this book. If you do more than one chapter/section, try to do multiple commits. Submit a pull request explaining your changes and I might merge it!</div> <div class="para" id="p-998">Or, learn <a class="external" href="https://pretextbook.org" target="_blank">PreTeXt, the markup language this book is written in</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-53" id="fn-53"><sup> 53 </sup></a> and suggest some edits or new content.</div></article><article class="task exercise-like" id="task-152"><h4 class="heading"><span class="codenumber">(r)</span></h4>
-<div class="para" id="p-999">For as long as you wish to stay up-to-date on the code for this book, pull from upstream often.</div></article></article></div>
-<div class="para" id="p-1000">And that’s that! Hopefully you’re getting the hang of this process with all of this repetition. If you ever need to practice this again (or need a refresher on what to do), revisit this page. It might take a little bit to become fully comfortable with the process and to remember the order in which to do things. In time, you will get it! Good luck in the rest of your Git/GitHub journey!</div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-52"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/ian-curtis/gitstarted</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-53"><div class="fn"><code class="code-inline tex2jax_ignore">pretextbook.org</code></div></div>
+<div class="para" id="p-1000">For extra credit, create a new branch and do some typo correction on this book. If you do more than one chapter/section, try to do multiple commits. Submit a pull request explaining your changes and I might merge it!</div> <div class="para" id="p-1001">Or, learn <a class="external" href="https://pretextbook.org" target="_blank">PreTeXt, the markup language this book is written in</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-54" id="fn-54"><sup> 54 </sup></a> and suggest some edits or new content.</div></article><article class="task exercise-like" id="task-152"><h4 class="heading"><span class="codenumber">(r)</span></h4>
+<div class="para" id="p-1002">For as long as you wish to stay up-to-date on the code for this book, pull from upstream often.</div></article></article></div>
+<div class="para" id="p-1003">And that’s that! Hopefully you’re getting the hang of this process with all of this repetition. If you ever need to practice this again (or need a refresher on what to do), revisit this page. It might take a little bit to become fully comfortable with the process and to remember the order in which to do things. In time, you will get it! Good luck in the rest of your Git/GitHub journey!</div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-53"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/ian-curtis/gitstarted</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-54"><div class="fn"><code class="code-inline tex2jax_ignore">pretextbook.org</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_gitcollabsumm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

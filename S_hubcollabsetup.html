@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Getting Set Up To Collaborate</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -445,23 +488,23 @@ window.MathJax = {
 <section class="section" id="S_hubcollabsetup"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.2</span> <span class="title">Getting Set Up To Collaborate</span>
 </h2>
-<section class="introduction" id="introduction-32"><div class="para" id="p-806">The first step to collaborating is to recognize that you usually do not have the permissions to edit others’ repositories directly. We might say that you do not have <dfn class="terminology">write access</dfn> to those repositories. You won’t be able to edit files on GitHub like we did in <a href="C_githubsolo.html" class="internal" title="Chapter 3: GitHub Solo">Chapter 3</a>. So how do you contribute to someone else’s repository?</div></section><section class="subsection" id="SS_forking"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-32"><div class="para" id="p-809">The first step to collaborating is to recognize that you usually do not have the permissions to edit others’ repositories directly. We might say that you do not have <dfn class="terminology">write access</dfn> to those repositories. You won’t be able to edit files on GitHub like we did in <a href="C_githubsolo.html" class="internal" title="Chapter 3: GitHub Solo">Chapter 3</a>. So how do you contribute to someone else’s repository?</div></section><section class="subsection" id="SS_forking"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.2.1</span> <span class="title">Forking</span>
 </h3>
-<div class="para" id="p-807">Recall from <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a> that in order to edit files on our computer, we had to clone the respository from GitHub. Essentially, this was a copy of your repository on your computer. In order to edit someone else’s files, we need to create a copy of their repository <em class="emphasis">on GitHub</em>. Then, we edit our copied files and submit a pull request asking the moderator to incorporate our changes.</div>
-<div class="para" id="p-808">This process should seem familiar! But how do we make this copy? You can’t clone a repository on GitHub (this is a Git concept), but GitHub does provide the ability to <dfn class="terminology">fork</dfn>. Like “commit”, “fork” is both a noun, referring to a user’s copy of the authority repo, and a verb, referring to the action of making that copy.</div>
-<div class="para" id="p-809">You may have noticed that GitHub provides a “Fork” button in the top right corner of a repo’s webpage (note that you cannot fork your own repos). See <a href="" class="xref" data-knowl="./knowl/fig-hub-fork.html" title="Figure 5.2.1.1">Figure 5.2.1.1</a> for a visual reference then proceed to try your hand at forking.</div>
+<div class="para" id="p-810">Recall from <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a> that in order to edit files on our computer, we had to clone the respository from GitHub. Essentially, this was a copy of your repository on your computer. In order to edit someone else’s files, we need to create a copy of their repository <em class="emphasis">on GitHub</em>. Then, we edit our copied files and submit a pull request asking the moderator to incorporate our changes.</div>
+<div class="para" id="p-811">This process should seem familiar! But how do we make this copy? You can’t clone a repository on GitHub (this is a Git concept), but GitHub does provide the ability to <dfn class="terminology">fork</dfn>. Like “commit”, “fork” is both a noun, referring to a user’s copy of the authority repo, and a verb, referring to the action of making that copy.</div>
+<div class="para" id="p-812">You may have noticed that GitHub provides a “Fork” button in the top right corner of a repo’s webpage (note that you cannot fork your own repos). See <a href="" class="xref" data-knowl="./knowl/fig-hub-fork.html" title="Figure 5.2.1.1">Figure 5.2.1.1</a> for a visual reference then proceed to try your hand at forking.</div>
 <figure class="figure figure-like" id="fig-hub-fork"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/hub_fork.svg" role="img" class="contained" alt="Location of the fork button on GitHub (near Watch button and Star button)"></div>
 <figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">5.2.1.1<span class="period">.</span></span><span class="space"> </span>The Fork Button on GitHub</figcaption></figure><article class="activity project-like" id="act-hub-fork"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-act-hub-fork"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.1</span><span class="period">.</span><span class="space"> </span><span class="title">Forking On GitHub.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-act-hub-fork"><article class="activity project-like"><div class="introduction" id="introduction-33"><div class="para" id="p-810">This activity focuses on forking a repo and getting a new project started that we will carry throughout this chapter: editing a file on a repository I created.</div></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-act-hub-fork"><article class="activity project-like"><div class="introduction" id="introduction-33"><div class="para" id="p-813">This activity focuses on forking a repo and getting a new project started that we will carry throughout this chapter: editing a file on a repository I created.</div></div>
 <article class="task exercise-like" id="task-108"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-811">First, navigate to my <a class="external" href="https://github.com/ian-curtis/aboutme" target="_blank"><code class="code-inline tex2jax_ignore">aboutme</code> repository on GitHub</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-51" id="fn-51"><sup> 51 </sup></a>.</div></article><article class="task exercise-like" id="task-109"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-812">Locate the “Fork” button in the top right corner.</div> <div class="para" id="p-813">Note the number next to it. This indicates the number of people who have forked a repo. This also applies to the Watch (people who receive notifications for the repo) and Star buttons. A good sense of how popular and how useful the contents of the repo are can be gained from looking at these numbers (where higher is better.)</div></article><article class="task exercise-like" id="task-110"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-814">Click on the Fork button. A new webpage will appear allowing you to rename your fork and add a description. I recommend keeping the same name as the parent repository, as GitHub suggests. This will make it easier to remember what the repo is for.</div> <div class="para" id="p-815">That being said, you cannot have two repos with the same name. If you have been following along with the book, you might already have a repository named <code class="code-inline tex2jax_ignore">aboutme</code>. In that case, you should choose a different name, but one that is close or similar to the parent repo’s.</div> <div class="para" id="p-816">Click on the Create Fork button.</div></article><article class="task exercise-like" id="task-111"><h5 class="heading"><span class="codenumber">(d)</span></h5>
-<div class="para" id="p-817">After a few seconds, your own fork will appear! Take a look at the top left corner where the name of the repo is displayed. You should notice that your personal username and repo name are there. But underneath that, in smaller font, GitHub tells you the username and repo name from which you forked. This is useful for reminding yourself that you are working on a copy of a repository, not the authoritative one.</div></article></article></div>
-<div class="para" id="p-818">Congrats! You’ve just forked a repository! If you plan on collaborating with others forking will become something you get very used to.</div>
-<div class="para" id="p-819">Remember that you just created a copy of my repository. You can make all the changes you want on your copy without asking for permisson from me. But as soon as you try to update my repo, you will have to submit a pull request. A fork is where you edit some things, try some things, and break some things before making a final product of whatever it is you were working on. Then send the changes over to the main repo!</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-51"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/ian-curtis/aboutme</code></div></div>
+<div class="para" id="p-814">First, navigate to my <a class="external" href="https://github.com/ian-curtis/aboutme" target="_blank"><code class="code-inline tex2jax_ignore">aboutme</code> repository on GitHub</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-52" id="fn-52"><sup> 52 </sup></a>.</div></article><article class="task exercise-like" id="task-109"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-815">Locate the “Fork” button in the top right corner.</div> <div class="para" id="p-816">Note the number next to it. This indicates the number of people who have forked a repo. This also applies to the Watch (people who receive notifications for the repo) and Star buttons. A good sense of how popular and how useful the contents of the repo are can be gained from looking at these numbers (where higher is better.)</div></article><article class="task exercise-like" id="task-110"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-817">Click on the Fork button. A new webpage will appear allowing you to rename your fork and add a description. I recommend keeping the same name as the parent repository, as GitHub suggests. This will make it easier to remember what the repo is for.</div> <div class="para" id="p-818">That being said, you cannot have two repos with the same name. If you have been following along with the book, you might already have a repository named <code class="code-inline tex2jax_ignore">aboutme</code>. In that case, you should choose a different name, but one that is close or similar to the parent repo’s.</div> <div class="para" id="p-819">Click on the Create Fork button.</div></article><article class="task exercise-like" id="task-111"><h5 class="heading"><span class="codenumber">(d)</span></h5>
+<div class="para" id="p-820">After a few seconds, your own fork will appear! Take a look at the top left corner where the name of the repo is displayed. You should notice that your personal username and repo name are there. But underneath that, in smaller font, GitHub tells you the username and repo name from which you forked. This is useful for reminding yourself that you are working on a copy of a repository, not the authoritative one.</div></article></article></div>
+<div class="para" id="p-821">Congrats! You’ve just forked a repository! If you plan on collaborating with others forking will become something you get very used to.</div>
+<div class="para" id="p-822">Remember that you just created a copy of my repository. You can make all the changes you want on your copy without asking for permisson from me. But as soon as you try to update my repo, you will have to submit a pull request. A fork is where you edit some things, try some things, and break some things before making a final product of whatever it is you were working on. Then send the changes over to the main repo!</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-52"><div class="fn"><code class="code-inline tex2jax_ignore">github.com/ian-curtis/aboutme</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_collabconsider.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="S_hubcollabedit.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

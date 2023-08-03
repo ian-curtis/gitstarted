@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Collaboration Editing With Git</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -444,17 +487,17 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_gitcollabedit"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.2</span> <span class="title">Collaboration Editing With Git</span>
 </h2>
-<div class="para" id="p-895">As before, the title is a little misleading. Git does not offer editing features, but, once again, it does keep track of your edits and commits for version control.</div>
-<div class="para logical" id="p-896">
+<div class="para" id="p-898">As before, the title is a little misleading. Git does not offer editing features, but, once again, it does keep track of your edits and commits for version control.</div>
+<div class="para logical" id="p-899">
 <div class="para">This section will be very short. All you need to do is open <code class="code-inline tex2jax_ignore">secret.txt</code> and type one line of whatever you want (G-rated of course). Literally could be anything. Just something random. Maybe the following will inspire you:</div>
 <ul class="disc">
-<li id="li-226"><div class="para" id="p-897">“Tick tock” went the tick tock croc.</div></li>
-<li id="li-227"><div class="para" id="p-898">Have you ever tried ham and peanut butter?</div></li>
-<li id="li-228"><div class="para" id="p-899">The jalapeño, who was too hot, walked into the ocean to cool off and was eaten by a shark who became the first creature to breath fire underwater.</div></li>
-<li id="li-229"><div class="para" id="p-900">I recently tripped up the stairs.</div></li>
+<li id="li-225"><div class="para" id="p-900">“Tick tock” went the tick tock croc.</div></li>
+<li id="li-226"><div class="para" id="p-901">Have you ever tried ham and peanut butter?</div></li>
+<li id="li-227"><div class="para" id="p-902">The jalapeño, who was too hot, walked into the ocean to cool off and was eaten by a shark who became the first creature to breath fire underwater.</div></li>
+<li id="li-228"><div class="para" id="p-903">I recently tripped up the stairs.</div></li>
 </ul>
 </div>
-<div class="para" id="p-901">Whatever you choose, try to stick to one line. When you are done, save the file (which will tell Git that there are active changes) and move on. The next steps are similar, but not exactly the same as those in <a href="S_gitfinalize.html" class="internal" title="Section 4.3: Sending Changes Back To GitHub: The Three-Step Process">Section 4.3</a>.</div></section></div>
+<div class="para" id="p-904">Whatever you choose, try to stick to one or two lines. When you are done, save the file (which will tell Git that there are active changes) and move on. The next steps are similar, but not exactly the same as those in <a href="S_gitfinalize.html" class="internal" title="Section 4.3: Sending Changes Back To GitHub: The Three-Step Process">Section 4.3</a>.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_gitcollabsetup.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="S_gitcollabfinalize.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

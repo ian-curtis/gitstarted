@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Answers to All Activities and Exercises</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -525,8 +568,15 @@ window.MathJax = {
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-17-hidden.html" title="Answer 2.3.g.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 2.3.h"><span class="codenumber">2.3.h</span></h5>
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-18-hidden.html" title="Answer 2.3.h.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 2.3.i"><span class="codenumber">2.3.i</span></h5>
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-19-hidden.html" title="Answer 2.3.i.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 2.3.j"><span class="codenumber">2.3.j</span></h5>
-<div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-20-hidden.html" title="Answer 2.3.j.1"><span class="type">Answer</span><span class="period">.</span></a></div></article></article><h3 class="heading hide-type" title="Subsection 4.3.1: Wait, Which Files Did I Change Again?">
-<span class="codenumber">II</span><span class="space"> </span><span class="title">Working Solo</span><br><span class="codenumber">4</span><span class="space"> </span><span class="title">Git Solo</span><br><span class="codenumber">4.3</span><span class="space"> </span><span class="title">Sending Changes Back To GitHub: The Three-Step Process</span><br><span class="codenumber">4.3.1</span><span class="space"> </span><span class="title">Wait, Which Files Did I Change Again?</span>
+<div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-20-hidden.html" title="Answer 2.3.j.1"><span class="type">Answer</span><span class="period">.</span></a></div></article></article><h3 class="heading hide-type" title="Subsection 3.2.3: Editing a File">
+<span class="codenumber">II</span><span class="space"> </span><span class="title">Working Solo</span><br><span class="codenumber">3</span><span class="space"> </span><span class="title">GitHub Solo</span><br><span class="codenumber">3.2</span><span class="space"> </span><span class="title">The First Repository and File</span><br><span class="codenumber">3.2.3</span><span class="space"> </span><span class="title">Editing a File</span>
+</h3>
+<article class="exercise-like"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">3.2.3.4</span><span class="period">.</span>
+</h4>
+<article class="exercise-like"><h5 class="heading hide-type" title="Task 3.2.3.4.g"><span class="codenumber">3.2.3.4.g</span></h5>
+<div class="solutions"><a href="" class="hint-knowl original" data-knowl="./knowl/hint-4-hidden.html" title="Hint 3.2.3.4.g.1"><span class="type">Hint</span><span class="period">.</span></a></div></article></article><h3 class="heading hide-type" title="Subsection 4.3.1: Wait, Which Files Did I Change Again?">
+<span class="codenumber">4</span><span class="space"> </span><span class="title">Git Solo</span><br><span class="codenumber">4.3</span><span class="space"> </span><span class="title">Sending Changes Back To GitHub: The Three-Step Process</span><br><span class="codenumber">4.3.1</span><span class="space"> </span><span class="title">Wait, Which Files Did I Change Again?</span>
 </h3>
 <article class="project-like"><h4 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">4.4</span><span class="period">.</span><span class="space"> </span><span class="title">Trying <code class="code-inline tex2jax_ignore">git status</code>.</span>
@@ -539,7 +589,7 @@ window.MathJax = {
 </h4>
 <article class="exercise-like"><h5 class="heading hide-type" title="Task 4.5.b"><span class="codenumber">4.5.b</span></h5>
 <div class="solutions">
-<a href="" class="hint-knowl original" data-knowl="./knowl/hint-4-hidden.html" title="Hint 4.5.b.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="answer-knowl original" data-knowl="./knowl/answer-21-hidden.html" title="Answer 4.5.b.1"><span class="type">Answer</span><span class="period">.</span></a>
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-5-hidden.html" title="Hint 4.5.b.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="answer-knowl original" data-knowl="./knowl/answer-21-hidden.html" title="Answer 4.5.b.1"><span class="type">Answer</span><span class="period">.</span></a>
 </div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.5.c"><span class="codenumber">4.5.c</span></h5>
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-22-hidden.html" title="Answer 4.5.c.1"><span class="type">Answer</span><span class="period">.</span></a></div></article></article><h3 class="heading hide-type" title="Subsection 4.3.3: Step 2: Committing Files">
 <span class="codenumber">4.3.3</span><span class="space"> </span><span class="title">Step 2: Committing Files</span>
@@ -578,7 +628,7 @@ window.MathJax = {
 <article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.a"><span class="codenumber">4.11.a</span></h5>
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-27-hidden.html" title="Answer 4.11.a.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.b"><span class="codenumber">4.11.b</span></h5>
 <div class="solutions">
-<a href="" class="hint-knowl original" data-knowl="./knowl/hint-5-hidden.html" title="Hint 4.11.b.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="answer-knowl original" data-knowl="./knowl/answer-28-hidden.html" title="Answer 4.11.b.1"><span class="type">Answer</span><span class="period">.</span></a>
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-6-hidden.html" title="Hint 4.11.b.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="answer-knowl original" data-knowl="./knowl/answer-28-hidden.html" title="Answer 4.11.b.1"><span class="type">Answer</span><span class="period">.</span></a>
 </div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.c"><span class="codenumber">4.11.c</span></h5>
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-29-hidden.html" title="Answer 4.11.c.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.d"><span class="codenumber">4.11.d</span></h5>
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-30-hidden.html" title="Answer 4.11.d.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.e"><span class="codenumber">4.11.e</span></h5>
@@ -590,7 +640,7 @@ window.MathJax = {
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-36-hidden.html" title="Answer 4.11.j.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.k"><span class="codenumber">4.11.k</span></h5>
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-37-hidden.html" title="Answer 4.11.k.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.l"><span class="codenumber">4.11.l</span></h5>
 <div class="solutions">
-<a href="" class="hint-knowl original" data-knowl="./knowl/hint-6-hidden.html" title="Hint 4.11.l.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="answer-knowl original" data-knowl="./knowl/answer-38-hidden.html" title="Answer 4.11.l.1"><span class="type">Answer</span><span class="period">.</span></a>
+<a href="" class="hint-knowl original" data-knowl="./knowl/hint-7-hidden.html" title="Hint 4.11.l.1"><span class="type">Hint</span><span class="period">.</span></a><a href="" class="answer-knowl original" data-knowl="./knowl/answer-38-hidden.html" title="Answer 4.11.l.1"><span class="type">Answer</span><span class="period">.</span></a>
 </div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.n"><span class="codenumber">4.11.n</span></h5>
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-39-hidden.html" title="Answer 4.11.n.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.o"><span class="codenumber">4.11.o</span></h5>
 <div class="solutions"><a href="" class="answer-knowl original" data-knowl="./knowl/answer-40-hidden.html" title="Answer 4.11.o.1"><span class="type">Answer</span><span class="period">.</span></a></div></article><article class="exercise-like"><h5 class="heading hide-type" title="Task 4.11.p"><span class="codenumber">4.11.p</span></h5>

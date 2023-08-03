@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>For All</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -448,19 +491,19 @@ window.MathJax = {
 <section class="subsection" id="SS_gitkraken"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">A.4.1</span> <span class="title">A New Git Interface</span>
 </h3>
-<div class="para" id="p-1022">Now that you know Git basics and terminology, you might like interfaces that reduce your terminal usage. <a class="external" href="https://www.gitkraken.com/" target="_blank">GitKraken</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-58" id="fn-58"><sup> 58 </sup></a> is one of those choices. Although I haven’t used it, it does look nice. It is free with a paid option and is available on Windows, Mac, and Linux.</div>
-<div class="para" id="p-1023">From a simple browse of the website there appears to be a good brach/contribution graph and clear tabs with specific functions. Perhaps worth trying out!</div></section><section class="subsection" id="SS_github_desktop"><h3 class="heading hide-type">
+<div class="para" id="p-1025">Now that you know Git basics and terminology, you might like interfaces that reduce your terminal usage. <a class="external" href="https://www.gitkraken.com/" target="_blank">GitKraken</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-59" id="fn-59"><sup> 59 </sup></a> is one of those choices. Although I haven’t used it, it does look nice. It is free with a paid option and is available on Windows, Mac, and Linux.</div>
+<div class="para" id="p-1026">From a simple browse of the website there appears to be a good brach/contribution graph and clear tabs with specific functions. Perhaps worth trying out!</div></section><section class="subsection" id="SS_github_desktop"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">A.4.2</span> <span class="title">GitHub Desktop</span>
 </h3>
-<div class="para" id="p-1024">GitHub does offer a <a class="external" href="https://desktop.github.com/" target="_blank">desktop interface</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-59" id="fn-59"><sup> 59 </sup></a> to help you with Git features and managing collaboration. If you would rather do these things with an app (as opposed to switching from your text editor to a website) it might be worth downloading GitHug Desktop. The website itself is pretty basic, but <a class="external" href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop" target="_blank">the GitHub documentation</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-60" id="fn-60"><sup> 60 </sup></a> has a good start-up guide and more.</div></section><section class="subsection" id="SS_git_lens"><h3 class="heading hide-type">
+<div class="para" id="p-1027">GitHub does offer a <a class="external" href="https://desktop.github.com/" target="_blank">desktop interface</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-60" id="fn-60"><sup> 60 </sup></a> to help you with Git features and managing collaboration. If you would rather do these things with an app (as opposed to switching from your text editor to a website) it might be worth downloading GitHug Desktop. The website itself is pretty basic, but <a class="external" href="https://docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop" target="_blank">the GitHub documentation</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-61" id="fn-61"><sup> 61 </sup></a> has a good start-up guide and more.</div></section><section class="subsection" id="SS_git_lens"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">A.4.3</span> <span class="title">Understanding Version Control: Git Lens</span>
 </h3>
-<div class="para" id="p-1025">My preferred text editor is Visual Studio Code which is developed my Microsoft. There is an extenstion to <abbr class="initialism">VS</abbr> Code called <a class="external" href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target="_blank">Git Lens</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-61" id="fn-61"><sup> 61 </sup></a> which,</div>
-<blockquote class="blockquote" id="blockquote-19"><div class="para" id="p-1026">...supercharges Git inside <abbr class="initialism">VS</abbr> Code and unlocks untapped knowledge within each repository. It helps you to visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more.</div></blockquote>
-<div class="para" id="p-1027">I haven’t tried this extension out but it seems like it can be extremely helpful for understanding what files have been changed (and where) as well as for determining what files are in each step of the three-step process. It may even be useful for resolving merge conflicts!</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-58"><div class="fn"><code class="code-inline tex2jax_ignore">gitkraken.com/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-59"><div class="fn"><code class="code-inline tex2jax_ignore">desktop.github.com/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-60"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-61"><div class="fn"><code class="code-inline tex2jax_ignore">marketplace.visualstudio.com</code></div></div>
+<div class="para" id="p-1028">My preferred text editor is Visual Studio Code which is developed my Microsoft. There is an extenstion to <abbr class="initialism">VS</abbr> Code called <a class="external" href="https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens" target="_blank">Git Lens</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-62" id="fn-62"><sup> 62 </sup></a> which,</div>
+<blockquote class="blockquote" id="blockquote-19"><div class="para" id="p-1029">...supercharges Git inside <abbr class="initialism">VS</abbr> Code and unlocks untapped knowledge within each repository. It helps you to visualize code authorship at a glance via Git blame annotations and CodeLens, seamlessly navigate and explore Git repositories, gain valuable insights via rich visualizations and powerful comparison commands, and so much more.</div></blockquote>
+<div class="para" id="p-1030">I haven’t tried this extension out but it seems like it can be extremely helpful for understanding what files have been changed (and where) as well as for determining what files are in each step of the three-step process. It may even be useful for resolving merge conflicts!</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-59"><div class="fn"><code class="code-inline tex2jax_ignore">gitkraken.com/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-60"><div class="fn"><code class="code-inline tex2jax_ignore">desktop.github.com/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-61"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-62"><div class="fn"><code class="code-inline tex2jax_ignore">marketplace.visualstudio.com</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_custterm_linux.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="app_hubextra.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

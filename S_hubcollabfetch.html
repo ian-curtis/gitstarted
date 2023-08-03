@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Fetching Upstream</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -447,31 +490,31 @@ window.MathJax = {
 <section class="subsection" id="SS_fetch"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.4.1</span> <span class="title">First, Fetching</span>
 </h3>
-<div class="para" id="p-852">To answer the question in <a href="S_hubcollabedit.html" class="internal" title="Section 5.3: Editing">Section 5.3</a>, we are not quite done. See, even though your fork and the parent repository are connected, updates in one are not automatically reflected in the other. So if you just contributed to a repository and the pull request was accepted, you should be fine. But if someone else’s pull request also got approved, your fork will not have those changes. You have to tell GitHub to grab those changes and update your fork.</div>
-<div class="para" id="p-853">The act of grabbing changes from the parent repository is called <dfn class="terminology">fetching</dfn>, aptly named since that is exactly what you are doing: fetching changes. Technically this is distinct from a related <dfn class="terminology">merge</dfn>. First, you fetch the changes, then you merge the changes into your fork.</div>
-<div class="para" id="p-854">You might remember using <code class="code-inline tex2jax_ignore">git pull</code> to fetch in changes. As we will see later, this essentially is the same thing. Pulling fetches and merges at the same time.</div>
-<div class="para" id="p-855">Before continuing, you must wait until I accept your pull request from <a href="S_hubcollabedit.html" class="internal" title="Section 5.3: Editing">Section 5.3</a>.</div></section><section class="subsection" id="SS_upstream"><h3 class="heading hide-type">
+<div class="para" id="p-855">To answer the question in <a href="S_hubcollabedit.html" class="internal" title="Section 5.3: Editing">Section 5.3</a>, we are not quite done. See, even though your fork and the parent repository are connected, updates in one are not automatically reflected in the other. So if you just contributed to a repository and the pull request was accepted, you should be fine. But if someone else’s pull request also got approved, your fork will not have those changes. You have to tell GitHub to grab those changes and update your fork.</div>
+<div class="para" id="p-856">The act of grabbing changes from the parent repository is called <dfn class="terminology">fetching</dfn>, aptly named since that is exactly what you are doing: fetching changes. Technically, this is distinct from a related <dfn class="terminology">merge</dfn>. First, you fetch the changes, then you merge the changes into your fork.</div>
+<div class="para" id="p-857">You might remember from previous sections using <code class="code-inline tex2jax_ignore">git pull</code> to fetch changes. In essence, using this command will fetch your changes. But it also merges the changes into your fork. In most cases, using <code class="code-inline tex2jax_ignore">git pull</code> is fine and is a great shortcut. But as you get more experienced in the git world, you may want to fetch changes and then merge them later. We will explore pulling changes more in future sections.</div>
+<div class="para" id="p-858">Before continuing, you must wait until I accept your pull request from <a href="S_hubcollabedit.html" class="internal" title="Section 5.3: Editing">Section 5.3</a>.</div></section><section class="subsection" id="SS_upstream"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.4.2</span> <span class="title">Second, Upstream</span>
 </h3>
-<div class="para" id="p-856">Another important concept is that of <dfn class="terminology">upstream</dfn>. Remember from <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.4: Step 3: Pushing Files">Subsection 4.3.4</a> when we talked about remotes? Back there, I mentioned that there were two types of remotes: origin and upstream and that we would talk about upstream later. Well, now it’s later! This idea will become important again when we use Git to collaborate (see if you can figure out why).</div>
-<div class="para" id="p-857">Any repository you own will have the remote identifier of “origin”, for you. Any repo you do not own <em class="emphasis">and that you fork</em> will have the remote identifier of “upstream”. Remember that a remote is like a connection between repositories; it’s the definition of the link between them. When you fork a repo, you are creating a remote connection between the parent repo (upstream) and your newly-created fork (origin). As we will explore in <a href="C_gitcollab.html" class="internal" title="Chapter 6: Git Collaboration">Chapter 6</a>, when you clone a repo, you are create a remote connection between your repo (origin), which would be a fork, and your personal computer (local).</div></section><section class="subsection" id="SS_fetchupstream"><h3 class="heading hide-type">
+<div class="para" id="p-859">Another important concept is that of <dfn class="terminology">upstream</dfn>. Remember from <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.4: Step 3: Pushing Files">Subsection 4.3.4</a> when we talked about remotes? Back there, I mentioned that there were two types of remotes (origin and upstream) and that we would talk about upstream later. Well, now it’s later! This idea will become important again when we use Git to collaborate (see if you can figure out why).</div>
+<div class="para" id="p-860">Any repository you own or that you clone will have the remote identifier of “origin”, for you. Any repo you do not own <em class="emphasis">and that you fork</em> will have the remote identifier of “upstream”. Remember that a remote is like a connection between repositories; it’s the definition of the link between them. When you fork a repo, you are creating a remote connection between the parent repo (upstream) and your newly-created fork (origin). As we will explore in <a href="C_gitcollab.html" class="internal" title="Chapter 6: Git Collaboration">Chapter 6</a>, when you clone a repo, you are creating a remote connection between your fork (origin) and your personal computer (local) with the future ability to be connected to the authoritative repo (upstream).</div></section><section class="subsection" id="SS_fetchupstream"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">5.4.3</span> <span class="title">Third, Fetching Upstream</span>
 </h3>
-<div class="para" id="p-858">So in order to have changes from the parent repository reflected in your own fork, you have to <dfn class="terminology">fetch upstream</dfn>. GitHub makes this easy! Remember that dialog box from <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity 5.3</a>? Back then, we used the “Contribute” button to start a pull request. Here, we will use the option right next to it: “Fetch upstream”.</div>
-<div class="para" id="p-859">First, though, go back to the homepage of your fork. You might notice that a slightly different box has appeared. Now it might say something like “This branch is 1 commit <em class="emphasis">behind</em> <code class="code-inline tex2jax_ignore">ian-curtis:main</code>” (you could have a different number). Earlier you were <em class="emphasis">ahead</em> of <code class="code-inline tex2jax_ignore">ian-curtis:main</code>. What’s going on here?</div>
+<div class="para" id="p-861">So in order to have changes from the parent repository reflected in your own fork, you have to <dfn class="terminology">fetch upstream</dfn>. GitHub makes this easy! Remember that dialog box from <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity 5.3</a>? Back then, we used the “Contribute” button to start a pull request. Here, we will use the option right next to it: “Fetch upstream”.</div>
+<div class="para" id="p-862">First, though, go back to the homepage of your fork. You might notice that a slightly different box has appeared. Now it might say something like “This branch is 1 commit <em class="emphasis">behind</em> <code class="code-inline tex2jax_ignore">ian-curtis:main</code>” (you could have a different number). Earlier you were <em class="emphasis">ahead</em> of <code class="code-inline tex2jax_ignore">ian-curtis:main</code>. What’s going on here?</div>
 <article class="assemblage assemblage-like" id="ahead-behind"><h4 class="heading"><span class="title">Ahead vs. Behind.</span></h4>
-<div class="para" id="p-860">GitHub uses <dfn class="terminology">ahead</dfn> and <dfn class="terminology">behind</dfn> to tell you how your fork currently sits compared to the repo you forked from. Any commit that you have made to your fork that has not been merged into the parent repo ticks up the number of commits ahead you are. Any commit that has been made to the parent repo that is not reflected in your fork ticks up the number of commits behind you are.</div>
-<div class="para" id="p-861">As an example, you might have a message like “This branch is 2 commits ahead, 3 commits behind <code class="code-inline tex2jax_ignore">&lt;parent-repo&gt;:main</code>”. This means you have made 2 commits that are not on the parent repo and that the parent repo has 3 commits that you have not fetched.</div></article><article class="warning remark-like" id="warn-fetch-often"><h4 class="heading">
+<div class="para" id="p-863">GitHub uses <dfn class="terminology">ahead</dfn> and <dfn class="terminology">behind</dfn> to tell you how your fork currently sits compared to the repo you forked from. Any commit that you have made to your fork that has not been merged into the parent repo ticks up the number of commits ahead you are. Any commit that has been made to the parent repo that is not reflected in your fork ticks up the number of commits behind you are.</div>
+<div class="para" id="p-864">As an example, you might have a message like “This branch is 2 commits ahead, 3 commits behind <code class="code-inline tex2jax_ignore">&lt;parent-repo&gt;:main</code>”. This means you have made 2 commits that are not on the parent repo and that the parent repo has 3 commits that you have not fetched.</div></article><article class="warning remark-like" id="warn-fetch-often"><h4 class="heading">
 <span class="type">Warning</span><span class="space"> </span><span class="codenumber">5.4.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">Fetch Upstream Often.</span>
-</h4> <div class="para" id="p-862">In my opinion, you want to keep the least amount of commits behind. If you are working on someone else’s work, you want to stay up to date. If some big change happens, you should make sure you have that change on your fork. Why? Well, you don’t want to overwrite anything someone else just did. You also don’t want to work on adding a new feature that is already incorporated. Maybe the new change helps you do your work better/faster. You also want to avoid potential merge conflicts because someone else changed the same files you are working on.</div> <div class="para" id="p-863">Therefore, it is usually recommended practice to fetch upstream as often as you can. At the very least, daily, especially if the project is popular and updated frequently. It is possible that there is no new upstream content to fetch but hey, at least you checked!</div> <div class="para" id="p-864">This warning will repeat in <a href="C_gitcollab.html" class="internal" title="Chapter 6: Git Collaboration">Chapter 6</a> when we talk about pulling and pushing.</div></article><div class="para" id="p-865">You may be wondering why you are even any commits behind! If your addition to my repository was accepted, then our repos should match, right? Not quite. Actually, that act of accepting your pull request and merging into my main branch was a commit in itself which is where the mystery commit comes from.</div>
+</h4> <div class="para" id="p-865">In my opinion, you want to keep the least amount of commits behind. If you are working on someone else’s work, you want to stay up to date. If some big change happens, you should make sure you have that change on your fork. Why? Well, you don’t want to overwrite anything someone else just did. You also don’t want to work on adding a new feature that is already incorporated. Maybe the new change helps you do your work better/faster. You also want to avoid potential merge conflicts because someone else changed the same files you are working on.</div> <div class="para" id="p-866">Therefore, it is usually recommended practice to fetch upstream as often as you can. At the very least, daily, especially if the project is popular and updated frequently. It is possible that there is no new upstream content to fetch but hey, at least you checked!</div> <div class="para" id="p-867">This warning will repeat in <a href="C_gitcollab.html" class="internal" title="Chapter 6: Git Collaboration">Chapter 6</a> when we talk about pulling and pushing.</div></article><div class="para" id="p-868">You may be wondering why you are even any commits behind! If your addition to my repository was accepted, then our repos should match, right? Not quite. Actually, that act of accepting your pull request and merging into my main branch was a commit in itself which is where the mystery commit comes from.</div>
 <article class="activity project-like" id="act-fetch-upstream"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-act-fetch-upstream"><h4 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">5.4</span><span class="period">.</span><span class="space"> </span><span class="title">Fetching Upstream.</span>
-</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-act-fetch-upstream"><article class="activity project-like"><div class="introduction" id="introduction-36"><div class="para" id="p-866">Enough talk, let’s fetch that upstream!</div></div>
+</h4></a></article><div class="hidden-content tex2jax_ignore" id="hk-act-fetch-upstream"><article class="activity project-like"><div class="introduction" id="introduction-36"><div class="para" id="p-869">Enough talk, let’s fetch that upstream!</div></div>
 <article class="task exercise-like" id="task-123"><h5 class="heading"><span class="codenumber">(a)</span></h5>
-<div class="para" id="p-867">Find the “Fetch upstream” dialog box on the home page of your fork.</div></article><article class="task exercise-like" id="task-124"><h5 class="heading"><span class="codenumber">(b)</span></h5>
-<div class="para" id="p-868">Notice that GitHub will fetch and merge the upstream changes in one step (even though it is technically two steps). Great!</div> <div class="para" id="p-869">It also emphasizes <a href="" class="xref" data-knowl="./knowl/warn-fetch-often.html" title="Warning 5.4.3.1: Fetch Upstream Often">Warning 5.4.3.1</a> through a somewhat passive-aggressive reminder: “Keep your fork up-to-date with the upstream repository”.</div> <div class="para" id="p-870">To make the magic happen, click on “Fetch and merge”.</div></article><article class="task exercise-like" id="task-125"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para" id="p-871">Bam. Done. But do make sure your fork now says</div> <blockquote class="blockquote" id="blockquote-16"><div class="para" id="p-872">This branch is up to date with <code class="code-inline tex2jax_ignore">ian-curtis/aboutme:main</code>
-</div></blockquote> <div class="para" id="p-873">(in general, this would be the name of whatever repo you forked from). Yours may also say, depending on when you fetched, that your branch is a number of commits ahead (but none behind).</div></article></article></div></section><section class="conclusion" id="conclusion-14"><div class="para" id="p-874">And there you go! Now you are ready to keep on editing or to go about your day. If you are interested in some other GitHub features related to collaborating, continue to <a href="app_hubextra.html" class="internal" title="Appendix B: Extra GitHub Content">Appendix B</a>. Otherwise, go to <a href="C_gitcollab.html" class="internal" title="Chapter 6: Git Collaboration">Chapter 6</a> to see how to use Git commands and local edits to collaborate.</div></section></section></div>
+<div class="para" id="p-870">Find the “Fetch upstream” dialog box on the home page of your fork.</div></article><article class="task exercise-like" id="task-124"><h5 class="heading"><span class="codenumber">(b)</span></h5>
+<div class="para" id="p-871">Notice that GitHub will fetch and merge the upstream changes in one step (even though it is technically two steps). Great!</div> <div class="para" id="p-872">It also emphasizes <a href="" class="xref" data-knowl="./knowl/warn-fetch-often.html" title="Warning 5.4.3.1: Fetch Upstream Often">Warning 5.4.3.1</a> through a somewhat passive-aggressive reminder: “Keep your fork up-to-date with the upstream repository”.</div> <div class="para" id="p-873">To make the magic happen, click on “Fetch and merge”.</div></article><article class="task exercise-like" id="task-125"><h5 class="heading"><span class="codenumber">(c)</span></h5>
+<div class="para" id="p-874">Bam. Done. But do make sure your fork now says</div> <blockquote class="blockquote" id="blockquote-16"><div class="para" id="p-875">This branch is up to date with <code class="code-inline tex2jax_ignore">ian-curtis/aboutme:main</code>
+</div></blockquote> <div class="para" id="p-876">(in general, this would be the name of whatever repo you forked from). Yours may also say, depending on when you fetched, that your branch is a number of commits ahead (but none behind).</div></article></article></div></section><section class="conclusion" id="conclusion-14"><div class="para" id="p-877">And there you go! Now you are ready to keep on editing or to go about your day. If you are interested in some other GitHub features related to collaborating, continue to <a href="app_hubextra.html" class="internal" title="Appendix B: Extra GitHub Content">Appendix B</a>. Otherwise, go to <a href="C_gitcollab.html" class="internal" title="Chapter 6: Git Collaboration">Chapter 6</a> to see how to use Git commands and local edits to collaborate.</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_hubcollabedit.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="C_gitcollab.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

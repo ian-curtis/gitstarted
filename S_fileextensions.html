@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>File Extensions</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -445,10 +488,10 @@ window.MathJax = {
 <section class="section" id="S_fileextensions"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">1.2</span> <span class="title">File Extensions</span>
 </h2>
-<section class="introduction" id="introduction-5"><div class="para" id="p-262">There are many different types of files. At the very basics, we have images, videos, documents, and songs, but there are so many more. Even within each of those categories, there are numerous types. You may be familiar with a PDF and a Word Document. Both of those could be classified as “documents”, but are interacted with very differently. Whether you are an advanced computer programmer or someone who uses a computer for every-day purposes, an understanding of file extensions is essential. <dfn class="terminology">File extensions</dfn> help us understand what type of file we are working with and give us an idea of how we can interact with that file. The following chunks give common (and some not so common) extensions for various categories. Refer back to this section often, espeically if you find yourself forgetting what a file is.</div> <div class="para" id="p-263">Hint: <kbd class="kbdkey">Control</kbd> + <kbd class="kbdkey">F</kbd> or <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">F</kbd> work well on this page.</div></section><section class="subsection" id="extensions-images"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-5"><div class="para" id="p-261">There are many different types of files. At the very basics, we have images, videos, documents, and songs, but there are so many more. Even within each of those categories, there are numerous types. You may be familiar with a PDF and a Word Document. Both of those could be classified as “documents”, but are interacted with very differently. Whether you are an advanced computer programmer or someone who uses a computer for every-day purposes, an understanding of file extensions is essential. <dfn class="terminology">File extensions</dfn> help us understand what type of file we are working with and give us an idea of how we can interact with that file. The following chunks give common (and some not so common) extensions for various categories. Refer back to this section often, especially if you find yourself forgetting what a file is.</div> <div class="para" id="p-262">Hint: <kbd class="kbdkey">Control</kbd> + <kbd class="kbdkey">F</kbd> or <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">F</kbd> work well on this page.</div></section><section class="subsection" id="extensions-images"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.1</span> <span class="title">Images</span>
 </h3>
-<div class="para" id="p-264">Why would we need more than on extension for an image? A photo is a photo, right? Wrong. Each of the file extensions have unique aspects and features. For instance, the Apple <code class="code-inline tex2jax_ignore">.heic</code> file often takes up less storage space. However, not all programs can open them. The <a class="external" href="https://guides.lib.umich.edu/c.php?g=282942&amp;p=1885348" target="_blank">University of Michigan</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-18" id="fn-18"><sup> 18 </sup></a> and <a class="external" href="https://kinsta.com/blog/image-file-types/" target="_blank">Kinsta</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 19 </sup></a> have great guides on the differences between some image file extensions. The table here just lists the extensions and what they are, not the details on their use.</div>
+<div class="para" id="p-263">Why would we need more than on extension for an image? A photo is a photo, right? Wrong. Each of the file extensions have unique aspects and features. For instance, the Apple <code class="code-inline tex2jax_ignore">.heic</code> file often takes up less storage space. However, not all programs can open them. The <a class="external" href="https://guides.lib.umich.edu/c.php?g=282942&amp;p=1885348" target="_blank">University of Michigan</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-19" id="fn-19"><sup> 19 </sup></a> and <a class="external" href="https://kinsta.com/blog/image-file-types/" target="_blank">Kinsta</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 20 </sup></a> have great guides on the differences between some image file extensions. The table here just lists the extensions and what they are, not the details on their use.</div>
 <figure class="table table-like" id="tbl-image-extensions"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.1.1<span class="period">.</span></span><span class="space"> </span>Image File Extensions</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
@@ -509,8 +552,8 @@ window.MathJax = {
 </table></div></figure></section><section class="subsection" id="extensions-videos"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.2</span> <span class="title">Videos</span>
 </h3>
-<div class="para" id="p-265">
-<a class="external" href="https://www.adobe.com/creativecloud/video/discover/best-video-format.html" target="_blank">Adobe</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-20" id="fn-20"><sup> 20 </sup></a> has a great guide on the differences between some video file extensions. The table here just lists the extensions and what they are, not the details on their use.</div>
+<div class="para" id="p-264">
+<a class="external" href="https://www.adobe.com/creativecloud/video/discover/best-video-format.html" target="_blank">Adobe</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 21 </sup></a> has a great guide on the differences between some video file extensions. The table here just lists the extensions and what they are, not the details on their use.</div>
 <figure class="table table-like" id="tbl-video-extensions"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.2.2.1<span class="period">.</span></span><span class="space"> </span>Video File Extensions</figcaption><div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
@@ -555,7 +598,7 @@ window.MathJax = {
 </table></div></figure></section><section class="subsection" id="extensions-docs"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.3</span> <span class="title">Documents</span>
 </h3>
-<div class="para" id="p-266">There are many different file extensions that refer to documents. Many of them you will never encounter. Only the main file types are listed here. <a class="external" href="https://blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/" target="_blank">File Stack</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-21" id="fn-21"><sup> 21 </sup></a> has a good explanation on some of the file types here.</div>
+<div class="para" id="p-265">There are many different file extensions that refer to documents. Many of them you will never encounter. Only the main file types are listed here. <a class="external" href="https://blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/" target="_blank">File Stack</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-22" id="fn-22"><sup> 22 </sup></a> has a good explanation on some of the file types here.</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
@@ -616,11 +659,11 @@ window.MathJax = {
 <td class="c m b0 r0 l0 t0 lines">MarkDown Document for use in R</td>
 </tr>
 </table></div>
-<div class="para" id="p-267">Note: technically, <code class="code-inline tex2jax_ignore">.html</code> and <code class="code-inline tex2jax_ignore">.xml</code> are considered document-type files. I am choosing to place them under coding-type files instead.</div></section><section class="subsection" id="extensions-audio"><h3 class="heading hide-type">
+<div class="para" id="p-266">Note: technically, <code class="code-inline tex2jax_ignore">.html</code> and <code class="code-inline tex2jax_ignore">.xml</code> are considered document-type files. I am choosing to place them under coding-type files instead.</div></section><section class="subsection" id="extensions-audio"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.4</span> <span class="title">Audio</span>
 </h3>
-<div class="para" id="p-268">
-<a class="external" href="https://www.makeuseof.com/tag/audio-file-format-right-needs/" target="_blank">makeuseof.com</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-22" id="fn-22"><sup> 22 </sup></a> has great descriptions of the most common audio file types.</div>
+<div class="para" id="p-267">
+<a class="external" href="https://www.makeuseof.com/tag/audio-file-format-right-needs/" target="_blank">makeuseof.com</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-23" id="fn-23"><sup> 23 </sup></a> has great descriptions of the most common audio file types.</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
@@ -667,7 +710,7 @@ window.MathJax = {
 </table></div></section><section class="subsection" id="extensions-coding"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.5</span> <span class="title">Coding and Programming</span>
 </h3>
-<div class="para" id="p-269">There is a plethora of programming languages, software, and interfaces and each of them uses a different file extension.</div>
+<div class="para" id="p-268">There is a plethora of programming languages, software, and interfaces and each of them uses a different file extension.</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
@@ -744,7 +787,7 @@ window.MathJax = {
 </table></div></section><section class="subsection" id="extensions-data"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">1.2.6</span> <span class="title">Data</span>
 </h3>
-<div class="para" id="p-270">Many of these extensions also belong in <a href="S_fileextensions.html#extensions-docs" class="internal" title="Subsection 1.2.3: Documents">Subsection 1.2.3</a> but are related enough to merit another subsection.</div>
+<div class="para" id="p-269">Many of these extensions also belong in <a href="S_fileextensions.html#extensions-docs" class="internal" title="Subsection 1.2.3: Documents">Subsection 1.2.3</a> but are related enough to merit another subsection.</div>
 <div class="tabular-box natural-width"><table class="tabular">
 <tr class="header-horizontal">
 <th scope="col" class="c m b0 r0 l0 t0 lines">Extension</th>
@@ -832,11 +875,11 @@ window.MathJax = {
 <td class="c m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">.ttf</code></td>
 <td class="c m b0 r0 l0 t0 lines">TrueType Font</td>
 </tr>
-</table></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-18"><div class="fn"><code class="code-inline tex2jax_ignore">guides.lib.umich.edu/c.php?g=282942&amp;p=1885348</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn"><code class="code-inline tex2jax_ignore">kinsta.com/blog/image-file-types/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn"><code class="code-inline tex2jax_ignore">adobe.com/creativecloud/video/discover/best-video-format.html</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn"><code class="code-inline tex2jax_ignore">blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn"><code class="code-inline tex2jax_ignore">makeuseof.com/tag/audio-file-format-right-needs/</code></div></div>
+</table></div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-19"><div class="fn"><code class="code-inline tex2jax_ignore">guides.lib.umich.edu/c.php?g=282942&amp;p=1885348</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-20"><div class="fn"><code class="code-inline tex2jax_ignore">kinsta.com/blog/image-file-types/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-21"><div class="fn"><code class="code-inline tex2jax_ignore">adobe.com/creativecloud/video/discover/best-video-format.html</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-22"><div class="fn"><code class="code-inline tex2jax_ignore">blog.filestack.com/thoughts-and-knowledge/document-file-extensions-list/</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-23"><div class="fn"><code class="code-inline tex2jax_ignore">makeuseof.com/tag/audio-file-format-right-needs/</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_filenames.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="S_filepaths.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

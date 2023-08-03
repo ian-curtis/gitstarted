@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Where is the Command Line?</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -445,31 +488,31 @@ window.MathJax = {
 <section class="section" id="whereiscommline"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.2</span> <span class="title">Where is the Command Line?</span>
 </h2>
-<section class="introduction" id="introduction-8"><div class="para" id="p-302">If you have a computer, you have a terminal. You may not have ever used it or known it was there, but it’s hiding, waiting for use. Let’s find it.</div></section><section class="subsection" id="SS_commline-mac"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-8"><div class="para" id="p-301">If you have a computer, you have a terminal. You may not have ever used it or known it was there, but it’s hiding, waiting for use. Let’s find it.</div></section><section class="subsection" id="SS_commline-mac"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.1</span> <span class="title">On a Mac</span>
 </h3>
-<div class="para logical" id="p-303">
+<div class="para logical" id="p-302">
 <div class="para">Luckily, the terminal is easy to find on a Mac: it’s called <code class="code-inline tex2jax_ignore">terminal.app</code> and can be found in numerous ways.</div>
 <ul class="disc">
-<li id="li-138"><div class="para" id="p-304">(Recommended) Press <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">Space</kbd> to open Spotlight Search. Start typing “terminal” and the app should pop up quickly. Press <kbd class="kbdkey">Enter</kbd> or click on the result.</div></li>
-<li id="li-139"><div class="para" id="p-305">Navigate to the Applications folder in the Finder. Then, open the Utilities folder and double click on <code class="code-inline tex2jax_ignore">terminal.app</code>
+<li id="li-137"><div class="para" id="p-303">(Recommended) Press <kbd class="kbdkey">Command</kbd> + <kbd class="kbdkey">Space</kbd> to open Spotlight Search. Start typing “terminal” and the app should pop up quickly. Press <kbd class="kbdkey">Enter</kbd> or click on the result.</div></li>
+<li id="li-138"><div class="para" id="p-304">Navigate to the Applications folder in the Finder. Then, open the Utilities folder and double click on <code class="code-inline tex2jax_ignore">terminal.app</code>
 </div></li>
-<li id="li-140">
-<div class="para" id="p-306">Find it through the Launchpad. What’s the Launchpad, you ask? On most Mac keyboards, it is on the key corresponding to <kbd class="kbdkey">F4</kbd> and looks like a bunch of boxes arranged in rows. You can also access the Launchpad by clicking the Launchpad icon in the Dock (also boxes arranged in rows) or by going into the Applications folder in the Finder and double clicking on the <code class="code-inline tex2jax_ignore">Launchpad.app</code> icon.</div>
-<div class="para" id="p-307">Once in the Launchpad, find the Terminal. You can either search for it in the search bar at the tope of the screen or scroll through your apps until you find it. (Note: it might be in the Other folder).</div>
+<li id="li-139">
+<div class="para" id="p-305">Find it through the Launchpad. What’s the Launchpad, you ask? On most Mac keyboards, it is on the key corresponding to <kbd class="kbdkey">F4</kbd> and looks like a bunch of boxes arranged in rows. You can also access the Launchpad by clicking the Launchpad icon in the Dock (also boxes arranged in rows) or by going into the Applications folder in the Finder and double clicking on the <code class="code-inline tex2jax_ignore">Launchpad.app</code> icon.</div>
+<div class="para" id="p-306">Once in the Launchpad, find the Terminal. You can either search for it in the search bar at the tope of the screen or scroll through your apps until you find it. (Note: it might be in the Other folder).</div>
 </li>
 </ul>
 </div>
-<article class="assemblage assemblage-like" id="assemblage-2"><h4 class="heading"><span class="title">Shells.</span></h4>
-<div class="para" id="p-308">At the top of my (Mac) terminal, it says “&lt;my-username&gt;— -bash”. This indicates that I am using the <code class="code-inline tex2jax_ignore">bash</code> shell. This is no longer the default for MacOS Catalina and later (as the terminal states). I will be sticking with <code class="code-inline tex2jax_ignore">bash</code> in this book to avoid major differences between Windows and Mac instructions. If your terminal states something other than <code class="code-inline tex2jax_ignore">bash</code> (such as <code class="code-inline tex2jax_ignore">zsh</code> or <code class="code-inline tex2jax_ignore">fish</code>) and you would like to use <code class="code-inline tex2jax_ignore">bash</code> to follow along, paste <code class="code-inline tex2jax_ignore">chsh -s /bin/bash</code><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-25" id="fn-25"><sup> 25 </sup></a> into the command line, press <kbd class="kbdkey">Enter</kbd>, enter your password to your computer, and restart the terminal. Otherwise, you are free to stick with the default shell; just know that there may be slight differences between this book and your terminal.</div></article></section><section class="subsection" id="S_commline-windows"><h3 class="heading hide-type">
+<article class="assemblage assemblage-like" id="assemblage-2"><h4 class="heading"><span class="title">Optional: Shells.</span></h4>
+<div class="para" id="p-307">Over the course of your experiences with the command line and Git, you may hear talk of (or see references to) “shells”. A shell is an style of program used to interact with and talk to the heart of your computer (see <a class="external" href="https://www.ibm.com/docs/en/aix/7.2?topic=administration-operating-system-shells" target="_blank">IBM</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-26" id="fn-26"><sup> 26 </sup></a> for some more information). For the purposes of this book, you will <em class="emphasis">not</em> need to understand shells nor need to change shells. Since you are learning, stick with what ever defaults your terminal gives you. As you become more experienced, you can start thinking about exploring shells in more detail. See <a href="app_commlinecustom.html" class="internal" title="Appendix A: Customizing the Terminal">Appendix A</a> when you are ready for this.</div></article></section><section class="subsection" id="S_commline-windows"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.2</span> <span class="title">On Windows</span>
 </h3>
-<div class="para" id="p-309">For Windows users, the situation is a slightly more complicated. The underlying makeup of the operating systems on Windows is differet than the basis for MacOS and other Unix-like systems (such as Linux). This means that certain applications for Windows do not have a MacOS compliment (and likewise some Mac applications do not have Windows versions). In addition, the file system and organization are different bewteen the two.</div>
-<div class="para" id="p-310">Separate instructions must be given for Windows users for certain tasks. To make life easier for you, me, and everyone else, I recommend <em class="emphasis">not</em> using the default Windows terminal.</div>
-<aside class="aside aside-like" id="aside-1"><div class="para" id="p-311">The default terminal for Windows is usually the Command Prompt. To access it, activate the search feature of your computer by clicking the search box at the bottom of your screen or by typing <kbd class="kbdkey">Windows</kbd> + <kbd class="kbdkey">S</kbd>. Then search for “command prompt” and click on the result that comes up.</div></aside><div class="para" id="p-312">Instead, let’s use a new terminal (Git Bash) that works with Git and conveniently uses the <code class="code-inline tex2jax_ignore">bash</code> shell which allows me to use the same instructions for Mac as Windows. Detailed download instructions can be found in <a href="materials-windows.html" class="internal" title="Preface: Materials: Windows">Materials: Windows</a>. I will assume that you are using Git Bash for the remainder of the book.</div></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
+<div class="para" id="p-308">For Windows users, the situation is a slightly more complicated. The underlying makeup of the operating systems on Windows is differet than the basis for MacOS and other Unix-like systems (such as Linux). This means that certain applications for Windows do not have a MacOS compliment (and likewise some Mac applications do not have Windows versions). In addition, the file system and organization are different bewteen the two.</div>
+<div class="para" id="p-309">Separate instructions must be given for Windows users for certain tasks. To make life easier for you, me, and everyone else, I recommend <em class="emphasis">not</em> using the default Windows terminal.</div>
+<aside class="aside aside-like" id="aside-1"><div class="para" id="p-310">The default terminal for Windows is usually the Command Prompt. To access it, activate the search feature of your computer by clicking the search box at the bottom of your screen or by typing <kbd class="kbdkey">Windows</kbd> + <kbd class="kbdkey">S</kbd>. Then search for “command prompt” and click on the result that comes up.</div></aside><div class="para" id="p-311">Instead, let’s use a new terminal (Git Bash) that works with Git and conveniently uses the <code class="code-inline tex2jax_ignore">bash</code> shell which allows me to use the same instructions for Mac as Windows. Detailed download instructions can be found in <a href="materials-windows.html" class="internal" title="Preface: Materials: Windows">Materials: Windows</a>. I will assume that you are using Git Bash for the remainder of the book.</div></section><section class="subsection" id="subsection-14"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.2.3</span> <span class="title">On Linux</span>
 </h3>
-<div class="para" id="p-313">This will depend on the version and distribution you have installed. For this reason, I will not be able to provide instructions here. Please use the internet for help. Contributions for your specific distribution are welcome through a pull request or issue on GitHub.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-25"><div class="fn">This command stands for “CHange the SHell to the shell called bash in the bin folder”</div></div>
+<div class="para" id="p-312">This will depend on the version and distribution you have installed. For this reason, I will not be able to provide instructions here. Please use the internet for help. Contributions for your specific distribution are welcome through a pull request or issue on GitHub.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-26"><div class="fn"><code class="code-inline tex2jax_ignore">www.ibm.com/docs/en/aix/7.2?topic=administration-operating-system-shells</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_whatiscommline.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="S_commands.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

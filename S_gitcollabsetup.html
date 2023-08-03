@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Getting Set Up: A Few Extra Steps</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -444,40 +487,40 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_gitcollabsetup"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.1</span> <span class="title">Getting Set Up: A Few Extra Steps</span>
 </h2>
-<section class="introduction" id="introduction-38"><div class="para" id="p-876">Before you are able to jump right in and start editing files locally, there are some things that have to happen first. Like in <a href="S_hubcollabsetup.html" class="internal" title="Section 5.2: Getting Set Up To Collaborate">Section 5.2</a>, we need to fork the repository you would like to edit. Although it is possible to use Git to edit on a repository that has not been forked, you will find problems when you try to push your changes since you do not have write access to the repo.</div> <div class="para" id="p-877">So, to continue on with this section, make sure you have my <code class="code-inline tex2jax_ignore">aboutme</code> repository forked. Recall that we did this in <a href="S_hubcollabsetup.html#SS_forking" class="internal" title="Subsection 5.2.1: Forking">Subsection 5.2.1</a>. If you’ve done this already, you do not need to do it again. If you haven’t, review the instructions in <a href="S_hubcollabsetup.html#SS_forking" class="internal" title="Subsection 5.2.1: Forking">Subsection 5.2.1</a>.</div> <div class="para" id="p-878">I would also like to repeat something I said back in <a href="S_gitsetup.html" class="internal" title="Section 4.1: Getting Set Up with Git">Section 4.1</a>:</div> <blockquote class="blockquote" id="blockquote-17"><div class="para" id="p-879">It’s not always feasible to edit file on GitHub, as we did in <a href="S_hubfirstrepo.html" class="internal" title="Section 3.2: The First Repository and File">Section 3.2</a> and <a href="S_hubbranches.html" class="internal" title="Section 3.3: Working With Branches">Section 3.3</a>. Certain text editors (for instance, Visual Studio Code which you might also have installed) have features built in to ease coding and file editing. <abbr class="initialism">VS</abbr> Code extensions might add color to text to help you see what’s going on in your code. Others provide bug fixing and error catching before the errors actually occur. In general, you will edit files on your personal computer and will want to share them with the world. <em class="emphasis">I would stay away from editing on GitHub unless you have a small correction and/or you don’t need any special editing tools.</em>
-</div></blockquote> <div class="para" id="p-880">The rest of this section and chapter will look a lot like <a href="S_gitsetup.html" class="internal" title="Section 4.1: Getting Set Up with Git">Section 4.1</a> and <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a> with a few changes. With that being said, do you remember what the first step to editing locally was?</div></section><section class="subsection" id="SS_gitcollabclone"><h3 class="heading hide-type">
+<section class="introduction" id="introduction-38"><div class="para" id="p-879">Before you are able to jump right in and start editing files locally, there are some things that have to happen first. Like in <a href="S_hubcollabsetup.html" class="internal" title="Section 5.2: Getting Set Up To Collaborate">Section 5.2</a>, we need to fork the repository you would like to edit. Although it is possible to use Git to edit on a repository that has not been forked, you will find problems when you try to push your changes since you do not have write access to the repo.</div> <div class="para" id="p-880">So, to continue on with this section, make sure you have my <code class="code-inline tex2jax_ignore">aboutme</code> repository forked. Recall that we did this in <a href="S_hubcollabsetup.html#SS_forking" class="internal" title="Subsection 5.2.1: Forking">Subsection 5.2.1</a>. If you’ve done this already, you do not need to do it again. If you haven’t, review the instructions in <a href="S_hubcollabsetup.html#SS_forking" class="internal" title="Subsection 5.2.1: Forking">Subsection 5.2.1</a>.</div> <div class="para" id="p-881">I would also like to repeat something I said back in <a href="S_gitsetup.html" class="internal" title="Section 4.1: Getting Set Up with Git">Section 4.1</a>:</div> <blockquote class="blockquote" id="blockquote-17"><div class="para" id="p-882">It’s not always feasible to edit file on GitHub, as we did in <a href="S_hubfirstrepo.html" class="internal" title="Section 3.2: The First Repository and File">Section 3.2</a> and <a href="S_hubbranches.html" class="internal" title="Section 3.3: Working With Branches">Section 3.3</a>. Certain text editors (for instance, Visual Studio Code which you might also have installed) have features built in to ease coding and file editing. <abbr class="initialism">VS</abbr> Code extensions might add color to text to help you see what’s going on in your code. Others provide bug fixing and error catching before the errors actually occur. In general, you will edit files on your personal computer and will want to share them with the world. <em class="emphasis">I would stay away from editing on GitHub unless you have a small correction and/or you don’t need any special editing tools.</em>
+</div></blockquote> <div class="para" id="p-883">The rest of this section and chapter will look a lot like <a href="S_gitsetup.html" class="internal" title="Section 4.1: Getting Set Up with Git">Section 4.1</a> and <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter 4</a> with a few changes. With that being said, do you remember what the first step to editing locally was?</div></section><section class="subsection" id="SS_gitcollabclone"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.1</span> <span class="title">Cloning A Fork</span>
 </h3>
-<div class="para" id="p-881">Hopefully you didn’t peek ahead! The first step is to clone our repo. Remember that in order to edit files locally, we need a copy of the repository on our computer and the way to do that is to clone.</div>
-<div class="para" id="p-882">This again increases the complexity of the Git tree. From an authoritative repo we made a copy on GitHub, called a fork. We did this so that we could have all freedom to edit the files as we pleased without breaking any of the official files. From there, we need to clone to make a copy of the fork on our computer. Do make sure you are cloning your fork, <em class="emphasis">not the repo you forked</em>.</div>
+<div class="para" id="p-884">Hopefully you didn’t peek ahead! The first step is to clone our repo. Remember that in order to edit files locally, we need a copy of the repository on our computer and the way to do that is to clone.</div>
+<div class="para" id="p-885">This again increases the complexity of the Git tree. From an authoritative repo we made a copy on GitHub, called a fork. We did this so that we could have all freedom to edit the files as we pleased without breaking any of the official files. From there, we need to clone to make a copy of the fork on our computer. Do make sure you are cloning your fork, <em class="emphasis">not the repo you forked</em>.</div>
 <article class="exercise exercise-like" id="exercise-16"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.1.1</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-883">So go ahead, use your terminal clone your fork of my <code class="code-inline tex2jax_ignore">aboutme</code> repository. Before you do so, make sure that your branch is up to date with <code class="code-inline tex2jax_ignore">ian-curtis/aboutme:main</code>.</div> <div class="para" id="p-884">Don’t remember how to do this? <a href="" class="xref" data-knowl="./knowl/try-git-clone.html" title="Git Procedure 4.2: Cloning from GitHub">Git Procedure 4.2</a> might be useful, as may be the solution to this exercise.</div>
+<div class="para" id="p-886">So go ahead, use your terminal clone your fork of my <code class="code-inline tex2jax_ignore">aboutme</code> repository. Before you do so, make sure that your branch is up to date with <code class="code-inline tex2jax_ignore">ian-curtis/aboutme:main</code>.</div> <div class="para" id="p-887">Don’t remember how to do this? <a href="" class="xref" data-knowl="./knowl/try-git-clone.html" title="Git Procedure 4.2: Cloning from GitHub">Git Procedure 4.2</a> might be useful, as may be the solution to this exercise.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><div class="para" id="p-885">Use the green code tab <em class="emphasis">on your fork</em> to copy the <abbr class="initialism">HTTPS</abbr> link. Then use <code class="code-inline tex2jax_ignore">git clone &lt;https-link&gt;</code>. Make sure you have used <code class="code-inline tex2jax_ignore">cd</code> to get to the right place first!</div></div></div>
-</div></article><div class="para" id="p-886">Great! Your repo should now be cloned on to your computer. Carry on.</div></section><section class="subsection" id="SS_gitcollabbranch"><h3 class="heading hide-type">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-23" id="solution-23"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-23"><div class="solution solution-like"><div class="para" id="p-888">Use the code tab <em class="emphasis">on your fork</em> to copy the <abbr class="initialism">HTTPS</abbr> link. Then use <code class="code-inline tex2jax_ignore">git clone &lt;https-link&gt;</code>. Make sure you have used <code class="code-inline tex2jax_ignore">cd</code> to get to the right place first!</div></div></div>
+</div></article><div class="para" id="p-889">Great! Your repo should now be cloned on to your computer. Carry on.</div></section><section class="subsection" id="SS_gitcollabbranch"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.1.2</span> <span class="title">Don’t Forget About Branches!</span>
 </h3>
-<div class="para" id="p-887">For nearly every edit we’ve made in this book, we’ve made a corresponding branch. This is no different. I hope you understand the importance of branches, even if you are working with yourself.</div>
-<div class="para" id="p-888">Since my repository is public, anyone can edit the files there. Therefore, I will approve pull requests from anyone as I will assume they are working through this book. However, the task in this chapter will be exclusive to just those who are reading this book. There is file called <code class="code-inline tex2jax_ignore">secret.txt</code> with no instructions or anything at all. Later on, you will be adding a line to this text file.</div>
-<div class="para" id="p-889">For now, create a good branch name for this edit, perhaps <code class="code-inline tex2jax_ignore">secret</code>? Remember that cloning a repo does not navigate inside of the repo so make sure you use <code class="code-inline tex2jax_ignore">cd &lt;your-repo-name&gt;</code> before creating a branch.</div>
+<div class="para" id="p-890">For nearly every edit we’ve made in this book, we’ve made a corresponding branch. This is no different. I hope you understand the importance of branches, even if you are working with yourself.</div>
+<div class="para" id="p-891">Since my repository is public, anyone can edit the files there. Therefore, I will approve pull requests from anyone as I will assume they are working through this book. However, the task in this chapter will be exclusive to just those who are reading this book. There is file called <code class="code-inline tex2jax_ignore">secret.txt</code> with no instructions or anything at all. Later on, you will be adding a line to this text file.</div>
+<div class="para" id="p-892">For now, create a good branch name for this edit, perhaps <code class="code-inline tex2jax_ignore">secret</code>? Remember that cloning a repo does not navigate inside of the repo so make sure you use <code class="code-inline tex2jax_ignore">cd &lt;your-repo-name&gt;</code> before creating a branch.</div>
 <article class="exercise exercise-like" id="exercise-17"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">6.1.2.1</span><span class="period">.</span>
 </h4>
-<div class="para" id="p-890">Make a new branch. Switch to that branch. See <a href="S_gitsetup.html#SS_gitbranches" class="internal" title="Subsection 4.1.2: Branches With Git">Subsection 4.1.2</a> if you need a refresher.</div>
+<div class="para" id="p-893">Make a new branch. Switch to that branch. See <a href="S_gitsetup.html#SS_gitbranches" class="internal" title="Subsection 4.1.2: Branches With Git">Subsection 4.1.2</a> if you need a refresher.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><div class="para logical" id="p-891">
+<a href="" data-knowl="" class="id-ref solution-knowl original" data-refid="hk-solution-24" id="solution-24"><span class="type">Solution</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-solution-24"><div class="solution solution-like"><div class="para logical" id="p-894">
 <div class="para">There are a couple of choices here.</div>
 <ol class="decimal">
-<li id="li-224"><div class="para" id="p-892">
+<li id="li-223"><div class="para" id="p-895">
 <code class="code-inline tex2jax_ignore">git branch &lt;name&gt;</code> then <code class="code-inline tex2jax_ignore">git switch &lt;name&gt;</code>
 </div></li>
-<li id="li-225"><div class="para" id="p-893"><code class="code-inline tex2jax_ignore">git switch -c &lt;name&gt;</code></div></li>
+<li id="li-224"><div class="para" id="p-896"><code class="code-inline tex2jax_ignore">git switch -c &lt;name&gt;</code></div></li>
 </ol>
 </div></div></div>
 </div></article><figure class="figure figure-like" id="fig-git-fork-clone"><div class="image-box" style="width: 80%; margin-left: 10%; margin-right: 10%;"><img src="external/git_fork_clone.svg" role="img" class="contained" alt="Arrow diagram depicting main repo copied to a fork, then a clone. Edits on a branch from the clone are merged into main branch of the fork, then merged in to main branch of authoritative repo."></div>
-<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.2.2<span class="period">.</span></span><span class="space"> </span>Diagram of a fork, a clone, and a branch</figcaption></figure><div class="para" id="p-894">Take a look at <a href="" class="xref" data-knowl="./knowl/fig-git-fork-clone.html" title="Figure 6.1.2.2">Figure 6.1.2.2</a> for a visualization of what the Git tree might look like at the end of the editing process. This is the end goal. Then, let’s get to editing.</div></section></section></div>
+<figcaption><span class="type">Figure</span><span class="space"> </span><span class="codenumber">6.1.2.2<span class="period">.</span></span><span class="space"> </span>Diagram of a fork, a clone, and a branch</figcaption></figure><div class="para" id="p-897">Take a look at <a href="" class="xref" data-knowl="./knowl/fig-git-fork-clone.html" title="Figure 6.1.2.2">Figure 6.1.2.2</a> for a visualization of what the Git tree might look like at the end of the editing process. This is the end goal. Then, let’s get to editing.</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="C_gitcollab.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="S_gitcollabedit.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

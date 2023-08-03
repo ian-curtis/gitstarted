@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Materials: Linux</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -445,11 +488,11 @@ window.MathJax = {
 <section class="preface" id="materials-linux"><h2 class="heading hide-type">
 <span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Materials: Linux</span>
 </h2>
-<div class="para" id="p-60">As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on it you have a Mac or a <abbr class="initialism">PC</abbr> and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions <em class="emphasis">for those who are using Linux</em>.</div>
-<div class="para" id="p-61">Please note that I have no experience with using Linux. These instructions will likely be superficial and without detail. I simply provide you with links; I am currently not able to provide information on how to install software correctly.</div>
-<section class="paragraphs" id="paragraphs-10"><h1 class="heading"><span class="title">A Text Editor.</span></h1> <div class="para" id="p-62">In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <a class="external" href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-14" id="fn-14"><sup> 14 </sup></a> which has a Linux download.</div> <div class="para" id="p-63">If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer <a class="external" href="https:/code.visualstudio.com/Download" target="_blank">Visual Studio Code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 15 </sup></a> which can be downloaded at the previous link (there is a Linux download). Throughout this book, I will refer to <abbr class="initialism">VS</abbr> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <abbr class="initialism">VS</abbr> Code although as you gain experience you might think about switching to Sublime Text.</div></section><section class="paragraphs" id="paragraphs-11"><h1 class="heading"><span class="title">Git.</span></h1> <div class="para" id="p-64">To use Git, you need to download and install it on your computer. You already have a command line, you just need to make sure that you have Git. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). You can install Git for Linux from the many options <a class="external" href="https://git-scm.com/download/linux" target="_blank">at the GitHub download page</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-16" id="fn-16"><sup> 16 </sup></a>.</div></section><section class="paragraphs" id="paragraphs-12"><h1 class="heading"><span class="title">GitHub.</span></h1> <div class="para" id="p-65">You will also need a GitHub account. Since this is an extensive topic, this is covered in <a href="S_hubnavigate.html#hub-account" class="internal" title="Subsection 3.1.1: Creating A GitHub Account">Subsection 3.1.1</a>.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-14"><div class="fn"><code class="code-inline tex2jax_ignore">sublimetext.com/download</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn"><code class="code-inline tex2jax_ignore">code.visualstudio.com/Download</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn"><code class="code-inline tex2jax_ignore">git-scm.com/download/linux</code></div></div>
+<div class="para" id="p-59">As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on it you have a Mac or a <abbr class="initialism">PC</abbr> and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions <em class="emphasis">for those who are using Linux</em>.</div>
+<div class="para" id="p-60">Please note that I have no experience with using Linux. These instructions will likely be superficial and without detail. I simply provide you with links; I am currently not able to provide information on how to install software correctly.</div>
+<section class="paragraphs" id="paragraphs-10"><h1 class="heading"><span class="title">A Text Editor.</span></h1> <div class="para" id="p-61">In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <a class="external" href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-15" id="fn-15"><sup> 15 </sup></a> which has a Linux download.</div> <div class="para" id="p-62">If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer <a class="external" href="https://code.visualstudio.com/Download" target="_blank">Visual Studio (VS) Code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-16" id="fn-16"><sup> 16 </sup></a> which can be downloaded at the previous link (there is a Linux download). Throughout this book, I will refer to <abbr class="initialism">VS</abbr> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <abbr class="initialism">VS</abbr> Code although as you gain experience you might think about switching to Sublime Text.</div></section><section class="paragraphs" id="paragraphs-11"><h1 class="heading"><span class="title">Git.</span></h1> <div class="para" id="p-63">To use Git, you need to download and install it on your computer. You already have a command line, you just need to make sure that you have Git. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). You can install Git for Linux from the many options <a class="external" href="https://git-scm.com/download/linux" target="_blank">at the GitHub download page</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-17" id="fn-17"><sup> 17 </sup></a>.</div></section><section class="paragraphs" id="paragraphs-12"><h1 class="heading"><span class="title">GitHub.</span></h1> <div class="para" id="p-64">You will also need a GitHub account. Since this is an extensive topic, this is covered in <a href="S_hubnavigate.html#hub-account" class="internal" title="Subsection 3.1.1: Creating A GitHub Account">Subsection 3.1.1</a>.</div></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-15"><div class="fn"><code class="code-inline tex2jax_ignore">sublimetext.com/download</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-16"><div class="fn"><code class="code-inline tex2jax_ignore">code.visualstudio.com/Download</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-17"><div class="fn"><code class="code-inline tex2jax_ignore">git-scm.com/download/linux</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="materials-mac.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="part-intro.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Revisiting the Three Step Process</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -444,29 +487,29 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_gitcollabfinalize"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">6.3</span> <span class="title">Revisiting the Three Step Process</span>
 </h2>
-<section class="introduction" id="introduction-39"><div class="para" id="p-902">Just as in <a href="S_gitfinalize.html" class="internal" title="Section 4.3: Sending Changes Back To GitHub: The Three-Step Process">Section 4.3</a>, this is a very important section. Take care to do everything in the correct order and with the correct keywords.</div> <div class="para logical" id="p-903">
+<section class="introduction" id="introduction-39"><div class="para" id="p-905">Just as in <a href="S_gitfinalize.html" class="internal" title="Section 4.3: Sending Changes Back To GitHub: The Three-Step Process">Section 4.3</a>, this is a very important section. Take care to do everything in the correct order and with the correct keywords.</div> <div class="para logical" id="p-906">
 <div class="para">Recall that the three step process for sending changes back to GitHub consists of</div>
 <ol class="decimal">
-<li id="li-230"><div class="para" id="p-904">Staging your files for sending</div></li>
-<li id="li-231"><div class="para" id="p-905">Commiting your changes</div></li>
-<li id="li-232"><div class="para" id="p-906">Pushing your changes to GitHub</div></li>
+<li id="li-229"><div class="para" id="p-907">Staging your files for sending</div></li>
+<li id="li-230"><div class="para" id="p-908">Commiting your changes</div></li>
+<li id="li-231"><div class="para" id="p-909">Pushing your changes to GitHub</div></li>
 </ol>
-</div> <div class="para" id="p-907">Since we’ve already covered much of this material, I won’t go into as much detail. I will, however, point out any significant differences. As you move forward, don’t forget about the handy <code class="code-inline tex2jax_ignore">git status</code> command to remind you what files have been edited, staged, or committed.</div></section><section class="subsection" id="SS_gitcollabadd"><h3 class="heading hide-type">
+</div> <div class="para" id="p-910">Since we’ve already covered much of this material, I won’t go into as much detail. I will, however, point out any significant differences. As you move forward, don’t forget about the handy <code class="code-inline tex2jax_ignore">git status</code> command to remind you what files have been edited, staged, or committed.</div></section><section class="subsection" id="SS_gitcollabadd"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.1</span> <span class="title">Staging Files</span>
 </h3>
-<div class="para" id="p-908">This step will not be any different from before. Use <a href="" class="xref" data-knowl="./knowl/try-git-add.html" title="Git Procedure 4.5: Trying git add">Git Procedure 4.5</a> to stage your edited <code class="code-inline tex2jax_ignore">secret.txt</code> file.</div>
-<div class="para" id="p-909">Remember that <code class="code-inline tex2jax_ignore">git add</code> is pretty flexible. If you’ve edited more than one file, you can choose which files to add. Maybe you want to make two commits. In that case, stage some files and commit them, then stage the other files and commit them.</div></section><section class="subsection" id="SS_gitcollabcommit"><h3 class="heading hide-type">
+<div class="para" id="p-911">This step will not be any different from before. Use <a href="" class="xref" data-knowl="./knowl/try-git-add.html" title="Git Procedure 4.5: Trying git add">Git Procedure 4.5</a> to stage your edited <code class="code-inline tex2jax_ignore">secret.txt</code> file.</div>
+<div class="para" id="p-912">Remember that <code class="code-inline tex2jax_ignore">git add</code> is pretty flexible. If you’ve edited more than one file, you can choose which files to add. Maybe you want to make two commits. In that case, stage some files and commit them, then stage the other files and commit them.</div></section><section class="subsection" id="SS_gitcollabcommit"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.2</span> <span class="title">Committing Files</span>
 </h3>
-<div class="para" id="p-910">This step will also not be any different from before. Just remember that you should try to design your commit messages to be short and descriptive. If the repo you are contributing to has a preference for how commit messages are written, you should try to follow that as best you can. Otherwise, don’t be offended when your commit message is changed.</div>
-<div class="para" id="p-911">
+<div class="para" id="p-913">This step will also not be any different from before. Just remember that you should try to design your commit messages to be short and descriptive. If the repo you are contributing to has a preference for how commit messages are written, you should try to follow that as best you can. Otherwise, don’t be offended when your commit message is changed.</div>
+<div class="para" id="p-914">
 <a href="" class="xref" data-knowl="./knowl/try-git-commit.html" title="Git Procedure 4.6: Trying git commit">Git Procedure 4.6</a> will probably be helpful as will the reminders at the end of <a href="S_gitfinalize.html#SS_git-commit" class="internal" title="Subsection 4.3.3: Step 2: Committing Files">Subsection 4.3.3</a>. Commit your <code class="code-inline tex2jax_ignore">secret.txt</code> file and provide an apt commit message (especially one that shows you were reading this book).</div></section><section class="subsection" id="SS_gitcollabpush"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">6.3.3</span> <span class="title">Pushing Files</span>
 </h3>
-<div class="para" id="p-912">Alright, here is where some small changes come up. In <a href="S_gitfinalize.html" class="internal" title="Section 4.3: Sending Changes Back To GitHub: The Three-Step Process">Section 4.3</a>, we pushed to the origin repository. But from <a href="S_hubcollabsetup.html" class="internal" title="Section 5.2: Getting Set Up To Collaborate">Section 5.2</a> and <a href="S_hubcollabfetch.html" class="internal" title="Section 5.4: Fetching Upstream">Section 5.4</a>, when you fork, you introduce another remote: upstream. And now that we have a clone, we also have a local repo.</div>
-<div class="para" id="p-913">Alright, so what about right now? You have your changes staged and committed, but to where do you push? Local? That won’t work since you already have the changes locally. Upstream? It might make sense to push directly to the authoritative repo, but since you don’t have write access, this will likely not work. The right thing to do here is push to origin. Remember, “origin” in this case, refers to your fork.</div>
-<div class="para" id="p-914">From <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.4: Step 3: Pushing Files">Subsection 4.3.4</a> (and <a href="" class="xref" data-knowl="./knowl/try-git-push.html" title="Git Procedure 4.7: Trying git push">Git Procedure 4.7</a>) can you figure out what to type into the terminal to push to origin?</div>
-<div class="para" id="p-915">Remember you need to specify the remote and the branch you are pushing to so <code class="code-inline tex2jax_ignore">git push origin &lt;branch-name&gt;</code> will do nicely.</div></section><section class="conclusion" id="conclusion-15"><div class="para" id="p-916">Believe it or not, <a href="" class="xref" data-knowl="./knowl/three-step-summ.html" title="Git Procedure 4.8: The Three-Step Process">Git Procedure 4.8</a> was written in generic terms, so it applies here as well! Keep it handy, or perhaps keep <a href="S_gitsumm.html" class="internal" title="Section 4.5: Summary">Section 4.5</a> and <a href="S_gitcollabsumm.html" class="internal" title="Section 6.5: Summary">Section 6.5</a> in mind as you proceed in your Git career. Now let’s go create a pull request from that push we just made.</div></section></section></div>
+<div class="para" id="p-915">Alright, here is where some small changes come up. In <a href="S_gitfinalize.html" class="internal" title="Section 4.3: Sending Changes Back To GitHub: The Three-Step Process">Section 4.3</a>, we pushed to the origin repository. But from <a href="S_hubcollabsetup.html" class="internal" title="Section 5.2: Getting Set Up To Collaborate">Section 5.2</a> and <a href="S_hubcollabfetch.html" class="internal" title="Section 5.4: Fetching Upstream">Section 5.4</a>, when you fork, you introduce another remote: upstream. And now that we have a clone, we also have a local repo.</div>
+<div class="para" id="p-916">Alright, so what about right now? You have your changes staged and committed, but to where do you push? Local? That won’t work since you already have the changes locally. Upstream? It might make sense to push directly to the authoritative repo, but since you don’t have write access, this will likely not work. The right thing to do here is push to origin. Remember, “origin” in this case, refers to your fork.</div>
+<div class="para" id="p-917">From <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.4: Step 3: Pushing Files">Subsection 4.3.4</a> (and <a href="" class="xref" data-knowl="./knowl/try-git-push.html" title="Git Procedure 4.7: Trying git push">Git Procedure 4.7</a>) can you figure out what to type into the terminal to push to origin?</div>
+<div class="para" id="p-918">Remember you need to specify the remote and the branch you are pushing to so <code class="code-inline tex2jax_ignore">git push origin &lt;branch-name&gt;</code> will do nicely.</div></section><section class="conclusion" id="conclusion-15"><div class="para" id="p-919">Believe it or not, <a href="" class="xref" data-knowl="./knowl/three-step-summ.html" title="Git Procedure 4.8: The Three-Step Process">Git Procedure 4.8</a> was written in generic terms, so it applies here as well! Keep it handy, or perhaps keep <a href="S_gitsumm.html" class="internal" title="Section 4.5: Summary">Section 4.5</a> and <a href="S_gitcollabsumm.html" class="internal" title="Section 6.5: Summary">Section 6.5</a> in mind as you proceed in your Git career. Now let’s go create a pull request from that push we just made.</div></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_gitcollabedit.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="S_gitcollabpr.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

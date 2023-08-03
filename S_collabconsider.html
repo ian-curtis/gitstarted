@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Before Beginning, Consider This</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -444,9 +487,9 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_collabconsider"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">5.1</span> <span class="title">Before Beginning, Consider This</span>
 </h2>
-<div class="para" id="p-803">One of the great features of GitHub is the promotion of collaboration, adding new things, and improving others’ work. If your repo is public, anyone can contribute to it. But as the repo owner, you have certain authorities. No one will be able to change things officially without your permission. The main branch will only be changed if you (or other moderators) approve it. This emphasizes the importance of branches (so you can test others’ work) and forks (as explored in <a href="S_hubcollabsetup.html" class="internal" title="Section 5.2: Getting Set Up To Collaborate">Section 5.2</a>).</div>
-<div class="para" id="p-804">As more people collaborate on a project at the same time, the complexity of the branch and fork system increases. With this, it is important to consider potential conflicts. Especially with larger projects, you could have multiple working on the same area at the same time. If two people decide to change the same part of the project at the same time, which edits win? Who gets the privilege of having their changes incorporated into <code class="code-inline tex2jax_ignore">main</code>? Sadly, GitHub and Git cannot figure that out by themselves and create a merge conflict, leaving you, the repo moderator, to settle the dispute.</div>
-<div class="para" id="p-805">Throughout this part, I will guide you through the process of editing with a team while providing warnings and lessons from what I have learned. I should say that the extent of my knowledge of this topic is not as developed as others’ might be. With Git, I find it better to stick with the things I know how to do (add, commit, push, pull, fork, clone, etc.) and if a problem arises, I research how to fix it. As I learn how to correct Git errors, I will update this part of the book and especially <a href="app_gittroubles.html" class="internal" title="Appendix C: Common Git Troubles and How To Fix Them">Appendix C</a>. Regardless, the focus of this book is on the basics and what you need to know to have a successful workflow. If that’s what you need, read on.</div></section></div>
+<div class="para" id="p-806">One of the great features of GitHub is the promotion of collaboration, adding new things, and improving others’ work. If your repo is public, anyone can contribute to it. But as the repo owner, you have certain authorities. No one will be able to change things officially without your permission. The main branch will only be changed if you (or other moderators) approve it. This emphasizes the importance of branches (so you can test others’ work) and forks (as explored in <a href="S_hubcollabsetup.html" class="internal" title="Section 5.2: Getting Set Up To Collaborate">Section 5.2</a>).</div>
+<div class="para" id="p-807">As more people collaborate on a project at the same time, the complexity of the branch and fork system increases. With this, it is important to consider potential conflicts. Especially with larger projects, you could have multiple working on the same area at the same time. If two people decide to change the same part of the project at the same time, which edits win? Who gets the privilege of having their changes incorporated into <code class="code-inline tex2jax_ignore">main</code>? Sadly, GitHub and Git cannot figure that out by themselves and create a merge conflict, leaving you, the repo moderator, to settle the dispute.</div>
+<div class="para" id="p-808">Throughout this part, I will guide you through the process of editing with a team while providing warnings and lessons from what I have learned. I should say that the extent of my knowledge of this topic is not as developed as others’ might be. With Git, I find it better to stick with the things I know how to do (add, commit, push, pull, fork, clone, etc.) and if a problem arises, I research how to fix it. As I learn how to correct Git errors, I will update this part of the book and especially <a href="app_gittroubles.html" class="internal" title="Appendix C: Common Git Troubles and How To Fix Them">Appendix C</a>. Regardless, the focus of this book is on the basics and what you need to know to have a successful workflow. If that’s what you need, read on.</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="C_githubcollab.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="S_hubcollabsetup.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

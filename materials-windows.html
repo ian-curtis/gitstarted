@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Materials: Windows</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -446,7 +489,7 @@ window.MathJax = {
 <span class="type">Preface</span> <span class="codenumber"></span> <span class="title">Materials: Windows</span>
 </h2>
 <div class="para" id="p-33">As this book was written on the assumption that you have no experience with Git or the command line, it also assumes you do not have necessary materials (software). Downloads will differ slightly depending on it you have a Mac or a <abbr class="initialism">PC</abbr> and if you are running Linux. The following will provide necessary materials to use this book as well as links and some relevant instructions <em class="emphasis">for those who are using Windows</em>. If you are running Windows Subsystem for Linux, instructions might be slightly different; however, start here and jump to a quick Google search if something goes wrong.</div>
-<section class="paragraphs" id="paragraphs-4"><h1 class="heading"><span class="title">A Text Editor.</span></h1> <div class="para" id="p-34">In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <a class="external" href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a>.</div> <div class="para" id="p-35">If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer <a class="external" href="https:/code.visualstudio.com/Download" target="_blank">Visual Studio Code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a> which can be downloaded at the previous link. Throughout this book, I will refer to <abbr class="initialism">VS</abbr> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <abbr class="initialism">VS</abbr> Code although as you gain experience you might think about switching to Sublime Text.</div></section><section class="paragraphs" id="paragraphs-5"><h1 class="heading"><span class="title">Git/Git Bash.</span></h1> <div class="para" id="p-36">To use Git, you need to download and install it on your computer. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). To run a quick check, use <kbd class="kbdkey">Windows</kbd> + <kbd class="kbdkey">S</kbd> and search for “git bash”. If an application pops up, great! You do not need to install anything. If not, carry on.</div> <div class="para" id="p-37">Windows does come with its own command prompt. (What’s a command prompt? See <a href="S_whatiscommline.html" class="internal" title="Section 2.1: What is the Command Line?">Section 2.1</a>.) However, its syntax doesn’t match other terminals and notably is different from Macs. Thus, to ensure that everyone is on the same page, we will download a piece of software called Git Bash that allows everyone to use the same commands.</div> <div class="para logical" id="p-38">
+<section class="paragraphs" id="paragraphs-4"><h1 class="heading"><span class="title">A Text Editor.</span></h1> <div class="para" id="p-34">In order to edit files as demonstrated in this book, you will need a text editor outside of the basic default editor. Any editor will work such as <a class="external" href="https://www.sublimetext.com/download" target="_blank">Sublime Text</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-6" id="fn-6"><sup> 6 </sup></a>.</div> <div class="para" id="p-35">If you are already familiar with an editor or if you like a particular one, use it! However, I personally prefer <a class="external" href="https://code.visualstudio.com/Download" target="_blank">Visual Studio (VS) Code</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-7" id="fn-7"><sup> 7 </sup></a> which can be downloaded at the previous link. Throughout this book, I will refer to <abbr class="initialism">VS</abbr> Code with some guidelines on how to find certain features. Should you decide to use another editor, it is up to you to learn how to use it. If you are a beginner with Git and the command line, I would stick with <abbr class="initialism">VS</abbr> Code although as you gain experience you might think about switching to Sublime Text.</div></section><section class="paragraphs" id="paragraphs-5"><h1 class="heading"><span class="title">Git/Git Bash.</span></h1> <div class="para" id="p-36">To use Git, you need to download and install it on your computer. Depending on your computer and where you got it, you may actually already have Git (for instance, university laptops). To run a quick check, use <kbd class="kbdkey">Windows</kbd> + <kbd class="kbdkey">S</kbd> and search for “git bash”. If an application pops up, great! You do not need to install anything. If not, carry on.</div> <div class="para" id="p-37">Windows does come with its own command prompt. (What’s a command prompt? See <a href="S_whatiscommline.html" class="internal" title="Section 2.1: What is the Command Line?">Section 2.1</a>.) However, its syntax doesn’t match other terminals and notably is different from Macs. Thus, to ensure that everyone is on the same page, we will download a piece of software called Git Bash that allows everyone to use the same commands.</div> <div class="para logical" id="p-38">
 <div class="para">To install Git Bash, follow these next steps. Yuvraj Chandra wrote <a class="external" href="https://www.makeuseof.com/install-git-git-bash-windows/" target="_blank">a useful Git Bash installation guide</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-8" id="fn-8"><sup> 8 </sup></a> that may help you if you get stuck.</div>
 <ol class="decimal">
 <li id="li-13"><div class="para" id="p-39">Visit the <a class="external" href="https://git-scm.com/downloads" target="_blank">Git website</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-9" id="fn-9"><sup> 9 </sup></a> and select the download for Windows.</div></li>

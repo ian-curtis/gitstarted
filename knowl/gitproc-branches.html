@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <!--********************************************-->
 <!--*       Generated from PreTeXt source      *-->
 <!--*                                          *-->
@@ -20,7 +20,7 @@
 <div class="para">Remember that each Git command begins with <code class="code-inline tex2jax_ignore">git</code> to let your computer know you will be using Git. To create a new branch, use the following:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git branch &lt;branch-name&gt;
 </b></pre></div> <div class="para">where <code class="code-inline tex2jax_ignore">&lt;branch-name&gt;</code> is the non-spaced name of your new branch. Try creating a new branch now, with the name of <code class="code-inline tex2jax_ignore">country</code>. So,</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git branch country
 </b></pre></div></article><article class="task exercise-like"><h5 class="heading"><span class="codenumber">(c)</span></h5>
-<div class="para">Well shoot. Git still says we’re on the main branch. We want it to tell us that we are on the <code class="code-inline tex2jax_ignore">country</code> branch. That’s because we need to tell Git what we want to work on that new branch. Git doesn’t move you to that branch in case you want to make more than one branch at one time.</div> <div class="para">With Git, navigating to a new branch is done with <code class="code-inline tex2jax_ignore">switch</code>. In general,</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git switch &lt;branch-name&gt;
+<div class="para">Well, shoot. Git still says we’re on the main branch. We want it to tell us that we are on the <code class="code-inline tex2jax_ignore">country</code> branch. That’s because we need to tell Git that we want to work on that new branch. Git doesn’t move you to that branch in case you want to make more than one branch at one time.</div> <div class="para">With Git, navigating to a new branch is done with the <code class="code-inline tex2jax_ignore">switch</code> command. In general,</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git switch &lt;branch-name&gt;
 </b>Switched to branch '&lt;branch-name&gt;'
 </pre></div> <div class="para">If done correctly, Git will tell you that it switched to the new branch. This should be reflected in the branch name indicator. Switch to your new branch <code class="code-inline tex2jax_ignore">country</code>:</div> <div class="code-box" style="width: 100%; margin-left: 0%; margin-right: 0%;"><pre class="console"><b>git switch country
 </b>Switched to branch 'country'

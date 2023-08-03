@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Merge Conflicts</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -445,22 +488,22 @@ window.MathJax = {
 <section class="section" id="S_mergeconflict"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.7</span> <span class="title">Merge Conflicts</span>
 </h2>
-<div class="para" id="p-1105">Hopefully you never have to deal with these. Sometimes, they are pretty simple to fix. Other times, it can cause some headaches. To avoid merge conflicts, pull from upstream often (<a href="" class="xref" data-knowl="./knowl/warn-fetch-often.html" title="Warning 5.4.3.1: Fetch Upstream Often">Warning 5.4.3.1</a> and <a href="" class="xref" data-knowl="./knowl/warn-pull-often.html" title="Warning 6.4.2.1: Use git pull Frequently">Warning 6.4.2.1</a>). Merge conflicts are caused when more than one person edits the same line of a file. It is possible for two people to edit the same file, but on different lines, and not cause a conflict.</div>
-<div class="para" id="p-1106">I have never caused or had to deal with a serious merge conflict. <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github" target="_blank">The GitHub documentation</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-68" id="fn-68"><sup> 68 </sup></a> has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line" target="_blank">resolve merge conflicts on the command line</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-69" id="fn-69"><sup> 69 </sup></a> or in your text editor.</div>
-<div class="para" id="p-1107">I have accidentally caused a merge conflict with myself and with working on the same repository from two different computers and two different accounts. Oops! This is an easy fix because I made the conflict with myself so I know which version is the correct one. If this happens to you, Git might send you to an unfamiliar screen when you try to push or pull. You’ll know you have this case if your terminal asks you to type in a reason why the merge must happen or how the conflict is resolved. This typically happens when you try to merge from an upstream main into a local main that has active changes (so create branches!).</div>
-<div class="para" id="p-1108">If you start to get stuck, do a quick Google search. There are many guides and resources out there to help with merge conflicts. <a class="external" href="https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts" target="_blank">Jennifer Bryan</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-70" id="fn-70"><sup> 70 </sup></a> has a good guide on merge conflict basics (and some other potential Git issues!) so start there and explore more as needed.</div>
+<div class="para" id="p-1115">Hopefully you never have to deal with these. Sometimes, they are pretty simple to fix. Other times, it can cause some headaches. To avoid merge conflicts, pull from upstream often (<a href="" class="xref" data-knowl="./knowl/warn-fetch-often.html" title="Warning 5.4.3.1: Fetch Upstream Often">Warning 5.4.3.1</a> and <a href="" class="xref" data-knowl="./knowl/warn-pull-often.html" title="Warning 6.4.2.1: Use git pull Frequently">Warning 6.4.2.1</a>). Merge conflicts are caused when more than one person edits the same line of a file. It is possible for two people to edit the same file, but on different lines, and not cause a conflict.</div>
+<div class="para" id="p-1116">I have never caused or had to deal with a serious merge conflict. <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github" target="_blank">The GitHub documentation</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-69" id="fn-69"><sup> 69 </sup></a> has a good post on how to resolve conflicts on GitHub. GitHub will even show you the two (or more) versions and let you choose how to resolve them. You can also <a class="external" href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line" target="_blank">resolve merge conflicts on the command line</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-70" id="fn-70"><sup> 70 </sup></a> or in your text editor.</div>
+<div class="para" id="p-1117">I have accidentally caused a merge conflict with myself and with working on the same repository from two different computers and two different accounts. Oops! This is an easy fix because I made the conflict with myself so I know which version is the correct one. If this happens to you, Git might send you to an unfamiliar screen when you try to push or pull. You’ll know you have this case if your terminal asks you to type in a reason why the merge must happen or how the conflict is resolved. This typically happens when you try to merge from an upstream main into a local main that has active changes (so create branches!).</div>
+<div class="para" id="p-1118">If you start to get stuck, do a quick Google search. There are many guides and resources out there to help with merge conflicts. <a class="external" href="https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts" target="_blank">Jennifer Bryan</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-71" id="fn-71"><sup> 71 </sup></a> has a good guide on merge conflict basics (and some other potential Git issues!) so start there and explore more as needed.</div>
 <article class="project project-like" id="project-17"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-project-17"><h2 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">C.6</span><span class="period">.</span><span class="space"> </span><span class="title">Merging from main to main (remote contains changes not on local).</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-project-17"><article class="project project-like"><div class="introduction" id="introduction-52"><div class="para" id="p-1109">This is for when you are sent into a command line editing tool or a default text editor asking you to provide a reason why the merge is necessary.</div></div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-project-17"><article class="project project-like"><div class="introduction" id="introduction-52"><div class="para" id="p-1119">This is for when you are sent into a command line editing tool or a default text editor asking you to provide a reason why the merge is necessary. This may not solve your problem but sometimes all a merge conflict needs is to bypass this screen.</div></div>
 <article class="task exercise-like" id="task-174"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="p-1110">Type <code class="code-inline tex2jax_ignore">i</code>
+<div class="para" id="p-1120">Type <code class="code-inline tex2jax_ignore">i</code>
 </div></article><article class="task exercise-like" id="task-175"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="p-1111">Type a merge message. This can be something as simple as “I have to merge to move on” or “I know what I want, let me do it” (yes, I have actually put that as message…is this good? Who knows?).</div></article><article class="task exercise-like" id="task-176"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="p-1112">Press <kbd class="kbdkey">esc</kbd>.</div></article><article class="task exercise-like" id="task-177"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<div class="para" id="p-1113">Type <code class="code-inline tex2jax_ignore">:wq</code> (this stands for write and quit)</div></article><article class="task exercise-like" id="task-178"><h3 class="heading"><span class="codenumber">(e)</span></h3>
-<div class="para" id="p-1114">Press <kbd class="kbdkey">Enter</kbd> and you should be ok to move forward.</div></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-68"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-69"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line</code></div></div>
-<div class="hidden-content tex2jax_ignore" id="hk-fn-70"><div class="fn"><code class="code-inline tex2jax_ignore">https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts</code></div></div>
+<div class="para" id="p-1121">Type a merge message. This can be something as simple as “I have to merge to move on” or “I know what I want, let me do it” (yes, I have actually put that as a message…is this good? Who knows?).</div></article><article class="task exercise-like" id="task-176"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="p-1122">Press <kbd class="kbdkey">esc</kbd>.</div></article><article class="task exercise-like" id="task-177"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="p-1123">Type <code class="code-inline tex2jax_ignore">:wq</code> (this stands for write and quit)</div></article><article class="task exercise-like" id="task-178"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<div class="para" id="p-1124">Press <kbd class="kbdkey">Enter</kbd> and you may be ok to move forward with the pushing, pulling, and creating of pull requests.</div></article></article></div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-69"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-on-github</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-70"><div class="fn"><code class="code-inline tex2jax_ignore">docs.github.com/en/pull-requests/collaborating-with-pull-requests/addressing-merge-conflicts/resolving-a-merge-conflict-using-the-command-line</code></div></div>
+<div class="hidden-content tex2jax_ignore" id="hk-fn-71"><div class="fn"><code class="code-inline tex2jax_ignore">https://happygitwithr.com/git-branches.html?q=merge%20confli#dealing-with-conflicts</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_hub_revert_commit.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="app_answers.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

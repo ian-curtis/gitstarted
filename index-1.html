@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Index</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -418,6 +460,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -548,9 +591,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">commands<span class="indexknowl">. <span class="see"><em>See</em> command line</span><span class="see">; command line</span></span>
 </div>
-<div class="indexitem">commit<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-530.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/ex-commit.html" title="Assemblage: An Extra Commit Example">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-544.html" title="Paragraph">Paragraph</a> <a href="S_gitfinalize.html#SS_git-commit" class="internal" title="Subsection 4.3.3: Step 2: Committing Files">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-677.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">commit<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-531.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/ex-commit.html" title="Assemblage: An Extra Commit Example">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-546.html" title="Paragraph">Paragraph</a> <a href="S_gitfinalize.html#SS_git-commit" class="internal" title="Subsection 4.3.3: Step 2: Committing Files">Subsection</a> <a href="" class="xref" data-knowl="./knowl/p-680.html" title="Paragraph">Paragraph</a></span>
 </div>
-<div class="subindexitem">ahead and behind<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-568.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/ahead-behind.html" title="Assemblage: Ahead vs. Behind">Assemblage</a></span>
+<div class="subindexitem">ahead and behind<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-570.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/ahead-behind.html" title="Assemblage: Ahead vs. Behind">Assemblage</a></span>
 </div>
 <div class="subindexitem">hash<span class="indexknowl">, <a href="S_hub_revert_commit.html" class="internal" title="Section C.6: Reverting To a Previous Commit">Section</a></span>
 </div>
@@ -564,7 +607,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">commit history<span class="indexknowl">, <a href="S_hub-seecommits.html" class="internal" title="Section B.2: Commit History">Section</a></span>
 </div>
-<div class="indexitem">commit message<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-560.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/commitmessages.html" title="Assemblage: A Note On Commit Messages">Assemblage</a> <a href="S_gitfinalize.html#SS_git-commit" class="internal" title="Subsection 4.3.3: Step 2: Committing Files">Subsection</a></span>
+<div class="indexitem">commit message<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-562.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/commitmessages.html" title="Assemblage: A Note On Commit Messages">Assemblage</a> <a href="S_gitfinalize.html#SS_git-commit" class="internal" title="Subsection 4.3.3: Step 2: Committing Files">Subsection</a></span>
 </div>
 <div class="indexitem">cp<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/mv.html" title="Paragraphs: Using mv">Paragraphs</a></span>
 </div>
@@ -677,7 +720,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">lens<span class="indexknowl">, <a href="S_custterm_all.html#SS_git_lens" class="internal" title="Subsection A.4.3: Understanding Version Control: Git Lens">Subsection</a></span>
 </div>
-<div class="subindexitem">pull<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-727.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull.html" title="Git Procedure 4.10: Trying git pull">Git Procedure</a> <a href="S_gitcollabpr.html#SS_gitcollabpull" class="internal" title="Subsection 6.4.2: Pulling/Fetching Upstream">Subsection</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-origin.html" title="Git Procedure 6.1: Updating Origin and Local, Method 1">Git Procedure</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-upstream.html" title="Git Procedure 6.2: Updating Origin and Local, Method 2">Git Procedure</a> <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won’t Let Me Pull From Upstream or Origin!">Section</a></span>
+<div class="subindexitem">pull<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-730.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull.html" title="Git Procedure 4.10: Trying git pull">Git Procedure</a> <a href="S_gitcollabpr.html#SS_gitcollabpull" class="internal" title="Subsection 6.4.2: Pulling/Fetching Upstream">Subsection</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-origin.html" title="Git Procedure 6.1: Updating Origin and Local, Method 1">Git Procedure</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-upstream.html" title="Git Procedure 6.2: Updating Origin and Local, Method 2">Git Procedure</a> <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won’t Let Me Pull From Upstream or Origin!">Section</a></span>
 </div>
 <div class="subindexitem">push<span class="indexknowl">, <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.4: Step 3: Pushing Files">Subsection</a> <a href="S_gitcollabfinalize.html#SS_gitcollabpush" class="internal" title="Subsection 6.3.3: Pushing Files">Subsection</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-upstream.html" title="Git Procedure 6.2: Updating Origin and Local, Method 2">Git Procedure</a></span>
 </div>
@@ -717,11 +760,11 @@ window.MathJax = {
 </div>
 <div class="subindexitem">collaborate<span class="indexknowl">, <a href="S_collabconsider.html" class="internal" title="Section 5.1: Before Beginning, Consider This">Section</a> <a href="S_hubcollabsetup.html" class="internal" title="Section 5.2: Getting Set Up To Collaborate">Section</a> <a href="S_hubcollabedit.html" class="internal" title="Section 5.3: Editing">Section</a></span>
 </div>
-<div class="subindexitem">commit<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-530.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/ex-commit.html" title="Assemblage: An Extra Commit Example">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-544.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">commit<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-531.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/ex-commit.html" title="Assemblage: An Extra Commit Example">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/p-546.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">commit history<span class="indexknowl">, <a href="S_hub-seecommits.html" class="internal" title="Section B.2: Commit History">Section</a></span>
 </div>
-<div class="subindexitem">commit message<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-560.html" title="Paragraph">Paragraph</a></span>
+<div class="subindexitem">commit message<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-562.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="subindexitem">create account<span class="indexknowl">, <a href="S_hubnavigate.html#hub-account" class="internal" title="Subsection 3.1.1: Creating A GitHub Account">Subsection</a></span>
 </div>
@@ -745,7 +788,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">issues<span class="indexknowl">, <a href="S_hubissues.html" class="internal" title="Section B.1: The Issues Tab">Section</a></span>
 </div>
-<div class="subindexitem">merge<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-544.html" title="Paragraph">Paragraph</a> <a href="S_hubbranches.html#SS_pullrequest" class="internal" title="Subsection 3.3.4: Creating a Pull Request (with Yourself)">Subsection</a> <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity</a> <a href="S_gitcollabpr.html#SS_gitcollabpr" class="internal" title="Subsection 6.4.1: Opening a Pull Request">Subsection</a></span>
+<div class="subindexitem">merge<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-546.html" title="Paragraph">Paragraph</a> <a href="S_hubbranches.html#SS_pullrequest" class="internal" title="Subsection 3.3.4: Creating a Pull Request (with Yourself)">Subsection</a> <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity</a> <a href="S_gitcollabpr.html#SS_gitcollabpr" class="internal" title="Subsection 6.4.1: Opening a Pull Request">Subsection</a></span>
 </div>
 <div class="subindexitem">navigate<span class="indexknowl">, <a href="S_hubnavigate.html" class="internal" title="Section 3.1: Navigating GitHub">Section</a></span>
 </div>
@@ -756,7 +799,7 @@ window.MathJax = {
 </div>
 <div class="subindexitem">profile<span class="indexknowl">, <a href="S_hubnavigate.html#hub-profile" class="internal" title="Subsection 3.1.2: The Profile Page">Subsection</a> <a href="" class="xref" data-knowl="./knowl/paragraphs-34.html" title="Paragraphs: Profile">Paragraphs</a></span>
 </div>
-<div class="subindexitem">pull request<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-544.html" title="Paragraph">Paragraph</a> <a href="S_hubbranches.html#SS_pullrequest" class="internal" title="Subsection 3.3.4: Creating a Pull Request (with Yourself)">Subsection</a> <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity</a> <a href="S_gitcollabpr.html#SS_gitcollabpr" class="internal" title="Subsection 6.4.1: Opening a Pull Request">Subsection</a></span>
+<div class="subindexitem">pull request<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-546.html" title="Paragraph">Paragraph</a> <a href="S_hubbranches.html#SS_pullrequest" class="internal" title="Subsection 3.3.4: Creating a Pull Request (with Yourself)">Subsection</a> <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity</a> <a href="S_gitcollabpr.html#SS_gitcollabpr" class="internal" title="Subsection 6.4.1: Opening a Pull Request">Subsection</a></span>
 </div>
 <div class="subindexitem">repo<span class="indexknowl">, <a href="S_hubnavigate.html#hub-profile" class="internal" title="Subsection 3.1.2: The Profile Page">Subsection</a></span>
 </div>
@@ -770,7 +813,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">github desktop<span class="indexknowl">, <a href="S_custterm_all.html#SS_github_desktop" class="internal" title="Subsection A.4.2: GitHub Desktop">Subsection</a></span>
 </div>
-<div class="indexitem">gitignore<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-499.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">gitignore<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-498.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">gitkraken<span class="indexknowl">, <a href="S_custterm_all.html#SS_gitkraken" class="internal" title="Subsection A.4.1: A New Git Interface">Subsection</a></span>
 </div>
@@ -787,7 +830,7 @@ window.MathJax = {
 <code class="code-inline tex2jax_ignore">killall</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/killall.html" title="Paragraphs: Using killall">Paragraphs</a></span>
 </div></div>
 <div class="indexletter" id="indexletter-l">
-<div class="indexitem">license<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-499.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">license<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-498.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">list contents<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/ls.html" title="Paragraphs: Using ls">Paragraphs</a></span>
 </div>
@@ -804,7 +847,7 @@ window.MathJax = {
 </div>
 <div class="indexitem">markdown<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/markdown.html" title="Assemblage: Markdown Basics">Assemblage</a> <a href="" class="xref" data-knowl="./knowl/try-markdown.html" title="Checkpoint 3.2.3.4">Checkpoint</a> <a href="S_hubcollabedit.html" class="internal" title="Section 5.3: Editing">Section</a></span>
 </div>
-<div class="indexitem">merge<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-544.html" title="Paragraph">Paragraph</a> <a href="S_hubbranches.html#SS_pullrequest" class="internal" title="Subsection 3.3.4: Creating a Pull Request (with Yourself)">Subsection</a> <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity</a> <a href="S_gitcollabpr.html#SS_gitcollabpr" class="internal" title="Subsection 6.4.1: Opening a Pull Request">Subsection</a></span>
+<div class="indexitem">merge<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-546.html" title="Paragraph">Paragraph</a> <a href="S_hubbranches.html#SS_pullrequest" class="internal" title="Subsection 3.3.4: Creating a Pull Request (with Yourself)">Subsection</a> <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity</a> <a href="S_gitcollabpr.html#SS_gitcollabpr" class="internal" title="Subsection 6.4.1: Opening a Pull Request">Subsection</a></span>
 </div>
 <div class="indexitem">merge conflict<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/warning-3.html" title="Warning 4.4.0.1">Warning</a> <a href="S_collabconsider.html" class="internal" title="Section 5.1: Before Beginning, Consider This">Section</a></span>
 </div>
@@ -839,9 +882,9 @@ window.MathJax = {
 </div>
 <div class="indexitem">present working directory<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/pwd.html" title="Paragraphs: Using pwd">Paragraphs</a></span>
 </div>
-<div class="indexitem">pull<span class="indexknowl">, <a href="S_gitpr.html" class="internal" title="Section 4.4: The Final Steps">Section</a> <a href="" class="xref" data-knowl="./knowl/p-727.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull.html" title="Git Procedure 4.10: Trying git pull">Git Procedure</a> <a href="S_gitcollabpr.html#SS_gitcollabpull" class="internal" title="Subsection 6.4.2: Pulling/Fetching Upstream">Subsection</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-origin.html" title="Git Procedure 6.1: Updating Origin and Local, Method 1">Git Procedure</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-upstream.html" title="Git Procedure 6.2: Updating Origin and Local, Method 2">Git Procedure</a></span>
+<div class="indexitem">pull<span class="indexknowl">, <a href="S_gitpr.html" class="internal" title="Section 4.4: The Final Steps">Section</a> <a href="" class="xref" data-knowl="./knowl/p-730.html" title="Paragraph">Paragraph</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull.html" title="Git Procedure 4.10: Trying git pull">Git Procedure</a> <a href="S_gitcollabpr.html#SS_gitcollabpull" class="internal" title="Subsection 6.4.2: Pulling/Fetching Upstream">Subsection</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-origin.html" title="Git Procedure 6.1: Updating Origin and Local, Method 1">Git Procedure</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-upstream.html" title="Git Procedure 6.2: Updating Origin and Local, Method 2">Git Procedure</a></span>
 </div>
-<div class="indexitem">pull request<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-544.html" title="Paragraph">Paragraph</a> <a href="S_hubbranches.html#SS_pullrequest" class="internal" title="Subsection 3.3.4: Creating a Pull Request (with Yourself)">Subsection</a> <a href="S_gitpr.html" class="internal" title="Section 4.4: The Final Steps">Section</a> <a href="" class="xref" data-knowl="./knowl/act-git-pr.html" title="Activity 4.9: Creating a Pull Request">Activity</a> <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity</a> <a href="S_gitcollabpr.html#SS_gitcollabpr" class="internal" title="Subsection 6.4.1: Opening a Pull Request">Subsection</a></span>
+<div class="indexitem">pull request<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-546.html" title="Paragraph">Paragraph</a> <a href="S_hubbranches.html#SS_pullrequest" class="internal" title="Subsection 3.3.4: Creating a Pull Request (with Yourself)">Subsection</a> <a href="S_gitpr.html" class="internal" title="Section 4.4: The Final Steps">Section</a> <a href="" class="xref" data-knowl="./knowl/act-git-pr.html" title="Activity 4.9: Creating a Pull Request">Activity</a> <a href="" class="xref" data-knowl="./knowl/collab-pr.html" title="Activity 5.3: Collaboration Editing: Sending Your Changes Away">Activity</a> <a href="S_gitcollabpr.html#SS_gitcollabpr" class="internal" title="Subsection 6.4.1: Opening a Pull Request">Subsection</a></span>
 </div>
 <div class="indexitem">push<span class="indexknowl">, <a href="S_gitpr.html" class="internal" title="Section 4.4: The Final Steps">Section</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-upstream.html" title="Git Procedure 6.2: Updating Origin and Local, Method 2">Git Procedure</a></span>
 </div>
@@ -852,7 +895,7 @@ window.MathJax = {
 </div>
 </div>
 <div class="indexletter" id="indexletter-r">
-<div class="indexitem">readme<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-499.html" title="Paragraph">Paragraph</a></span>
+<div class="indexitem">readme<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/p-498.html" title="Paragraph">Paragraph</a></span>
 </div>
 <div class="indexitem">remote<span class="indexknowl">, <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.4: Step 3: Pushing Files">Subsection</a></span>
 </div>
@@ -919,13 +962,19 @@ window.MathJax = {
 <div class="indexitem">
 <code class="code-inline tex2jax_ignore">touch</code><span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/touch.html" title="Paragraphs: Using touch">Paragraphs</a></span>
 </div>
+<div class="indexitem">tracked files<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/try-git-status.html" title="Git Procedure 4.4: Trying git status">Git Procedure</a></span>
+</div>
 <div class="indexitem">tracking<span class="indexknowl">, <a href="S_untrackfiles.html" class="internal" title="Section C.3: Git Has Been Updating Files, But Now I Don’t Want It To">Section</a></span>
 </div>
 <div class="indexitem">tree diagram<span class="indexknowl">, <a href="S_hubcollabtree.html" class="internal" title="Section B.4: The Branch Tree Diagram (Network Graph)">Section</a></span>
 </div>
 </div>
-<div class="indexletter" id="indexletter-u"><div class="indexitem">upstream<span class="indexknowl">, <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.4: Step 3: Pushing Files">Subsection</a> <a href="S_hubcollabfetch.html#SS_upstream" class="internal" title="Subsection 5.4.2: Second, Upstream">Subsection</a> <a href="S_gitcollabpr.html#SS_gitcollabpull" class="internal" title="Subsection 6.4.2: Pulling/Fetching Upstream">Subsection</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-upstream.html" title="Git Procedure 6.2: Updating Origin and Local, Method 2">Git Procedure</a> <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won’t Let Me Pull From Upstream or Origin!">Section</a></span>
-</div></div>
+<div class="indexletter" id="indexletter-u">
+<div class="indexitem">untracked files<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/try-git-status.html" title="Git Procedure 4.4: Trying git status">Git Procedure</a></span>
+</div>
+<div class="indexitem">upstream<span class="indexknowl">, <a href="S_gitfinalize.html#SS_git-push" class="internal" title="Subsection 4.3.4: Step 3: Pushing Files">Subsection</a> <a href="S_hubcollabfetch.html#SS_upstream" class="internal" title="Subsection 5.4.2: Second, Upstream">Subsection</a> <a href="S_gitcollabpr.html#SS_gitcollabpull" class="internal" title="Subsection 6.4.2: Pulling/Fetching Upstream">Subsection</a> <a href="" class="xref" data-knowl="./knowl/try-git-pull-upstream.html" title="Git Procedure 6.2: Updating Origin and Local, Method 2">Git Procedure</a> <a href="S_forcemerge.html" class="internal" title="Section C.4: Git Won’t Let Me Pull From Upstream or Origin!">Section</a></span>
+</div>
+</div>
 <div class="indexletter" id="indexletter-v"><div class="indexitem">version control<span class="indexknowl">, <a href="" class="xref" data-knowl="./knowl/namesrevisions.html" title="Paragraphs: File Names With Revisions">Paragraphs</a> <a href="C_gitsolo.html" class="internal" title="Chapter 4: Git Solo">Chapter</a></span>
 </div></div>
 <div class="indexletter" id="indexletter-w">

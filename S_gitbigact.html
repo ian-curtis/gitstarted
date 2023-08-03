@@ -5,7 +5,7 @@
 <!--*         https://pretextbook.org          *-->
 <!--*                                          *-->
 <!--********************************************-->
-<html lang="en-US">
+<html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Working Solo: The Culminating Experience</title>
@@ -14,35 +14,77 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script>var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
-  tex: {
-    inlineMath: [['\\(','\\)']],
-    tags: "none",
-    tagSide: "right",
-    tagIndent: ".8em",
-    packages: {'[+]': ['base', 'extpfeil', 'ams', 'amscd', 'color', 'newcommand', 'knowl']}
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
   },
-  options: {
-    ignoreHtmlClass: "tex2jax_ignore|ignore-math",
-    processHtmlClass: "process-math",
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
   },
-  chtml: {
-    scale: 0.98,
-    mtextInheritFont: true
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
   },
-  loader: {
-    load: ['input/asciimath', '[tex]/extpfeil', '[tex]/amscd', '[tex]/color', '[tex]/newcommand', '[pretext]/mathjaxknowl3.js'],
-    paths: {pretext: "https://pretextbook.org/js/lib"},
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "https://pretextbook.org/js/lib"
+    }
   },
-  startup: {
+  "startup": {
     pageReady() {
       return MathJax.startup.defaultPageReady().then(function () {
       console.log("in ready function");
       rsMathReady();
       }
     )}
-  },
+  }
 };
 </script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="https://pretextbook.org/js/0.3/pretext_search.js"></script><link href="https://pretextbook.org/css/0.7/pretext_search.css" rel="stylesheet" type="text/css">
 <script>js_version = 0.3</script><script src="https://pretextbook.org/js/lib/jquery.min.js"></script><script src="https://pretextbook.org/js/lib/jquery.sticky.js"></script><script src="https://pretextbook.org/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.3/pretext.js"></script><script>miniversion=0.1</script><script src="https://pretextbook.org/js/0.3/pretext_add_on.js?x=1"></script><script src="https://pretextbook.org/js/0.3/user_preferences.js"></script><script src="https://pretextbook.org/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
@@ -415,6 +457,7 @@ window.MathJax = {
 <li><div class="toc-item"><a href="S_hubcollabtree.html" class="internal"><span class="codenumber">B.4</span> <span class="title">The Branch Tree Diagram (Network Graph)</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_codespace.html" class="internal"><span class="codenumber">B.5</span> <span class="title">Codespaces</span></a></div></li>
 <li><div class="toc-item"><a href="S_hub_delete_repo.html" class="internal"><span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span></a></div></li>
+<li><div class="toc-item"><a href="sec-hub-gitignore.html" class="internal"><span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span></a></div></li>
 </ul>
 </li>
 <li>
@@ -444,110 +487,110 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_gitbigact"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">4.6</span> <span class="title">Working Solo: The Culminating Experience</span>
 </h2>
-<div class="para" id="p-751">As mentioned above, this part is a large activity designed to help you practice the skills and ideas learned in the previous sections. It also represents and example of what a typical workflow might look like. You are welcome and encouraged to refer back to the summary and the sections themselves.</div>
-<div class="para" id="p-752">The activity below is broken up into multiple parts. In order to help you remember the procedures, I will not be adding in cross references to the corresponding chapters. That being said, I will add in hints and answers where applicable. Do note that some of the steps have no “correct” answer. This will be noted in the corresponding answer.</div>
+<div class="para" id="p-754">As mentioned above, this part is a large activity designed to help you practice the skills and ideas learned in the previous sections. It also represents an example of what a typical workflow might look like. You are welcome and encouraged to refer back to the summary and the sections themselves.</div>
+<div class="para" id="p-755">The activity below is broken up into multiple parts. In order to help you remember the procedures, I will not be adding in cross references to the corresponding chapters (but feel free to go back to them if you need to!). That being said, I will add in hints and answers where applicable. Do note that some of the steps have no “correct” answer. This will be noted in the corresponding answer.</div>
 <article class="activity project-like" id="git-big-act"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-git-big-act"><h3 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">4.11</span><span class="period">.</span>
-</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-git-big-act"><article class="activity project-like"><div class="introduction" id="introduction-30"><div class="para" id="p-753">The goal of this activity will be to create a new repository and write two poems (or paste your favorite poems, with attributions). Good luck and have fun!</div></div>
+</h3></a></article><div class="hidden-content tex2jax_ignore" id="hk-git-big-act"><article class="activity project-like"><div class="introduction" id="introduction-30"><div class="para" id="p-756">The goal of this activity will be to create a new repository and write two poems (or paste your favorite poems, with attributions). Good luck and have fun!</div></div>
 <article class="task exercise-like" id="git-ba-newrepo"><h4 class="heading"><span class="codenumber">(a)</span></h4>
-<div class="para" id="p-754">First, you need to create a new repository. Navigate to GitHub and create a new repository. Name it appropriately for the end goal — you can’t change it later. Make sure you initialize with a README file.</div>
+<div class="para" id="p-757">First, you need to create a new repository. Navigate to GitHub and create this. Name it appropriately for the end goal — you can’t change it later. Make sure you initialize with a README file.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><div class="para" id="p-755">Use one of the multiple methods to create a new repo in GitHub. Perhaps name it <code class="code-inline tex2jax_ignore">poems</code> or <code class="code-inline tex2jax_ignore">fav-poems</code>? This part is up to you as long as the name accurately describes the future repo contents. Check the box that says to add a README file.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-27" id="answer-27"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-27"><div class="answer solution-like"><div class="para" id="p-758">Use one of the multiple methods to create a new repo in GitHub. Perhaps name it <code class="code-inline tex2jax_ignore">poems</code> or <code class="code-inline tex2jax_ignore">fav-poems</code>? This part is up to you as long as the name accurately describes the future repo contents. Check the box that says to add a README file.</div></div></div>
 </div></article><article class="task exercise-like" id="git-ba-clone"><h4 class="heading"><span class="codenumber">(b)</span></h4>
-<div class="para" id="p-756">Clone your repo on your computer. Navigate to the new repo using your terminal.</div>
+<div class="para" id="p-759">Clone your repo on your computer. Navigate to the new repo using your terminal.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-5" id="hint-5"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-5"><div class="hint solution-like"><div class="para" id="p-757">Make sure you are not “inside” your previous repositories. Nested repositories will not work. So <code class="code-inline tex2jax_ignore">cd</code> to the folder in which you want to place your new repo.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><div class="para" id="p-758">Copy the HTTPS link on GitHub. Use <code class="code-inline tex2jax_ignore">git clone &lt;copied-link&gt;</code>. Use <code class="code-inline tex2jax_ignore">cd &lt;repo-name&gt;</code> to move your terminal into that repo.</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><div class="para" id="p-760">Make sure you are not “inside” your previous repositories. Nested repositories will not work. So <code class="code-inline tex2jax_ignore">cd</code> to the folder in which you want to place your new repo.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-28" id="answer-28"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-28"><div class="answer solution-like"><div class="para" id="p-761">Copy the HTTPS link on GitHub. Use <code class="code-inline tex2jax_ignore">git clone &lt;copied-link&gt;</code>. Use <code class="code-inline tex2jax_ignore">cd &lt;repo-name&gt;</code> to move your terminal into that repo.</div></div></div>
 </div></article><article class="task exercise-like" id="task-91"><h4 class="heading"><span class="codenumber">(c)</span></h4>
-<div class="para" id="p-759">You will edit your README file first. Create and switch to a new branch, named appropriately.</div>
+<div class="para" id="p-762">You will edit your README file first. Create and switch to a new branch, named appropriately.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-29" id="answer-29"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-29"><div class="answer solution-like">
-<div class="para" id="p-760">
+<div class="para" id="p-763">
 <code class="code-inline tex2jax_ignore">git branch readme</code> then <code class="code-inline tex2jax_ignore">git switch readme</code> OR <code class="code-inline tex2jax_ignore">git switch -c readme</code>
-</div> <div class="para" id="p-761">You may use any branch name you like as long as it’s clear what the branch is for. “readme” seems like it will work nicely.</div>
+</div> <div class="para" id="p-764">You may use any branch name you like as long as it’s clear what the branch is for. “readme” seems like it will work nicely.</div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-92"><h4 class="heading"><span class="codenumber">(d)</span></h4>
-<div class="para" id="p-762">Open the README file. Change the default title to a better title. Add a sentence or two explaining what this repo is and why you are creating it. Add any other relevant information you think might help other people looking at your repo would need or like. Save the file.</div>
+<div class="para" id="p-765">Open the README file. Change the default title to a better title. Add a sentence or two explaining what this repo is and why you are creating it. Add any other relevant information you think might help other people looking at your repo would need or like. Save the file.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-30" id="answer-30"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-30"><div class="answer solution-like"><div class="para" id="p-763">Perhaps a better title would be “My Favorite Poems” or “Two Original Poems”. This can vary. You might explain that this repository contains two of your favorite poems (or two poems you wrote yourself) and this it was born from a project in <span class="booktitle">Better Git Started</span> to help you get more familiar with GitHub and Git functions. This can also vary.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-30" id="answer-30"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-30"><div class="answer solution-like"><div class="para" id="p-766">Perhaps a better title would be “My Favorite Poems” or “Two Original Poems”. This can vary. You might explain that this repository contains two of your favorite poems (or two poems you wrote yourself) and this it was born from a project in <span class="booktitle">Better Git Started</span> to help you get more familiar with GitHub and Git functions. This can also vary.</div></div></div>
 </div></article><article class="task exercise-like" id="task-93"><h4 class="heading"><span class="codenumber">(e)</span></h4>
-<div class="para" id="p-764">Check if Git is tracking the README file you just edited.</div>
+<div class="para" id="p-767">Check if Git is tracking the README file you just edited.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-31" id="answer-31"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-31"><div class="answer solution-like"><div class="para" id="p-765"><code class="code-inline tex2jax_ignore">git status</code></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-31" id="answer-31"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-31"><div class="answer solution-like"><div class="para" id="p-768"><code class="code-inline tex2jax_ignore">git status</code></div></div></div>
 </div></article><article class="task exercise-like" id="task-94"><h4 class="heading"><span class="codenumber">(f)</span></h4>
-<div class="para" id="p-766">Stage your file for committing.</div>
+<div class="para" id="p-769">Stage your file for committing.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-32" id="answer-32"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like"><div class="para" id="p-767">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-32" id="answer-32"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-32"><div class="answer solution-like"><div class="para" id="p-770">
 <code class="code-inline tex2jax_ignore">git add .</code> OR <code class="code-inline tex2jax_ignore">git add README.md</code>, maybe <code class="code-inline tex2jax_ignore">git status</code> to confirm?</div></div></div>
 </div></article><article class="task exercise-like" id="task-95"><h4 class="heading"><span class="codenumber">(g)</span></h4>
-<div class="para" id="p-768">Commit your changes. Add an informative commit message.</div>
+<div class="para" id="p-771">Commit your changes. Add an informative commit message.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-33" id="answer-33"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-33"><div class="answer solution-like">
-<div class="para" id="p-769">
-<code class="code-inline tex2jax_ignore">git commit -m 'edit readme with repo info'</code>, maybe <code class="code-inline tex2jax_ignore">git status</code> to confirm?</div> <div class="para" id="p-770">Of course, your commit message may be different. Perhaps “edit readme” and enough for you.</div>
+<div class="para" id="p-772">
+<code class="code-inline tex2jax_ignore">git commit -m 'edit readme with repo info'</code>, maybe <code class="code-inline tex2jax_ignore">git status</code> to confirm?</div> <div class="para" id="p-773">Of course, your commit message may be different. Perhaps “edit readme” and enough for you.</div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-96"><h4 class="heading"><span class="codenumber">(h)</span></h4>
-<div class="para" id="p-771">Push your changes to GitHub.</div>
+<div class="para" id="p-774">Push your changes to GitHub.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><div class="para" id="p-772"><code class="code-inline tex2jax_ignore">git push origin &lt;your-branch-name&gt;</code></div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-34" id="answer-34"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-34"><div class="answer solution-like"><div class="para" id="p-775"><code class="code-inline tex2jax_ignore">git push origin &lt;your-branch-name&gt;</code></div></div></div>
 </div></article><article class="task exercise-like" id="task-97"><h4 class="heading"><span class="codenumber">(i)</span></h4>
-<div class="para" id="p-773">Go to GitHub and open a pull request. Merge your changes into your main branch. You may delete the old branch.</div>
+<div class="para" id="p-776">Go to GitHub and open a pull request. Merge your changes into your main branch. You may delete the old branch.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like"><div class="para" id="p-774">“Compare and pull request”, “Merge”, “Confirm merge”. (Check the main branch on GitHub to make sure this worked.)</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-35" id="answer-35"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-35"><div class="answer solution-like"><div class="para" id="p-777">“Compare and pull request”, “Merge”, “Confirm merge”. (Check the main branch on GitHub to make sure this worked.)</div></div></div>
 </div></article><article class="task exercise-like" id="task-98"><h4 class="heading"><span class="codenumber">(j)</span></h4>
-<div class="para" id="p-775">Go back to your local computer. Switch back to main and pull in your changes.</div>
+<div class="para" id="p-778">Go back to your local computer. Switch back to main and pull in your changes.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><div class="para" id="p-776">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-36" id="answer-36"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-36"><div class="answer solution-like"><div class="para" id="p-779">
 <code class="code-inline tex2jax_ignore">git switch main</code> then <code class="code-inline tex2jax_ignore">git pull origin main</code>
 </div></div></div>
 </div></article><article class="task exercise-like" id="task-99"><h4 class="heading"><span class="codenumber">(k)</span></h4>
-<div class="para" id="p-777">You will now create your poems. Create and switch to an appropriately-named branch.</div>
+<div class="para" id="p-780">You will now create your poems. Create and switch to an appropriately-named branch.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-37" id="answer-37"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-37"><div class="answer solution-like">
-<div class="para" id="p-778">
+<div class="para" id="p-781">
 <code class="code-inline tex2jax_ignore">git branch poems</code> then <code class="code-inline tex2jax_ignore">git switch poems</code> OR <code class="code-inline tex2jax_ignore">git switch -c poems</code>
-</div> <div class="para" id="p-779">You may use any branch name you like as long as it’s clear what the branch is for. “poems” works for me.</div> <div class="para" id="p-780">Note that you could split up each poem into its own branch. Depending on the length of your poems, you may want to do that in practice but here we will edit both on one branch. That way you can practice two commits in one push!</div>
+</div> <div class="para" id="p-782">You may use any branch name you like as long as it’s clear what the branch is for. “poems” works for me.</div> <div class="para" id="p-783">Note that you could split up each poem into its own branch. Depending on the length of your poems, you may want to do that in practice but here we will edit both on one branch. That way you can practice two commits in one push!</div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-100"><h4 class="heading"><span class="codenumber">(l)</span></h4>
-<div class="para" id="p-781">Create a new <code class="code-inline tex2jax_ignore">.md</code> file called <code class="code-inline tex2jax_ignore">poem1.md</code>.</div>
+<div class="para" id="p-784">Create a new <code class="code-inline tex2jax_ignore">.md</code> file called <code class="code-inline tex2jax_ignore">poem1.md</code>.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-6" id="hint-6"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-6"><div class="hint solution-like"><div class="para" id="p-782">In <abbr class="initialism">VS</abbr> Code, you can create a new file with the paper-with-a-plus icon in the “Explorer” panel in the top left.</div></div></div>
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><div class="para" id="p-783">Use the hint or use your terminal (<code class="code-inline tex2jax_ignore">touch poem1.md</code>).</div></div></div>
+<a href="" data-knowl="" class="id-ref hint-knowl original" data-refid="hk-hint-7" id="hint-7"><span class="type">Hint</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-hint-7"><div class="hint solution-like"><div class="para" id="p-785">In <abbr class="initialism">VS</abbr> Code, you can create a new file with the paper-with-a-plus icon in the “Explorer” panel in the top left.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-38" id="answer-38"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-38"><div class="answer solution-like"><div class="para" id="p-786">Use the hint or use your terminal (<code class="code-inline tex2jax_ignore">touch poem1.md</code>).</div></div></div>
 </div></article><article class="task exercise-like" id="task-101"><h4 class="heading"><span class="codenumber">(m)</span></h4>
-<div class="para" id="p-784">Open the file and use Markdown to write one original poem or paste one of your favorite poems. Make sure to add a title!</div> <div class="para" id="p-785">If you are pasting someone else’s poem, use proper attribution. They may include, but is not necessarily limited to, name, collection/book from which you found the poem, date published, page numbers, etc.</div></article><article class="task exercise-like" id="task-102"><h4 class="heading"><span class="codenumber">(n)</span></h4>
-<div class="para" id="p-786">Stage your new file. Verify that it is in fact staged.</div>
+<div class="para" id="p-787">Open the file and use Markdown to write one original poem or paste one of your favorite poems. Make sure to add a title!</div> <div class="para" id="p-788">If you are pasting someone else’s poem, use proper attribution. This may include, but is not necessarily limited to, name, collection/book from which you found the poem, date published, page numbers, etc.</div></article><article class="task exercise-like" id="task-102"><h4 class="heading"><span class="codenumber">(n)</span></h4>
+<div class="para" id="p-789">Stage your new file. Verify that it is in fact staged.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-39" id="answer-39"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-39"><div class="answer solution-like">
-<div class="para" id="p-787">
+<div class="para" id="p-790">
 <code class="code-inline tex2jax_ignore">git add .</code> OR <code class="code-inline tex2jax_ignore">git add poem1.md</code>, then <code class="code-inline tex2jax_ignore">git status</code>
-</div> <div class="para" id="p-788">Your text editor might also indicate that this worked. For instance, <abbr class="initialism">VS</abbr> Code will show an “A” next to the file name.</div>
+</div> <div class="para" id="p-791">Your text editor might also indicate that this worked. For instance, <abbr class="initialism">VS</abbr> Code will show an “A” next to the file name.</div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-103"><h4 class="heading"><span class="codenumber">(o)</span></h4>
-<div class="para" id="p-789">Commit your new file with a good commit message. Verify that it is committed.</div>
+<div class="para" id="p-792">Commit your new file with a good commit message. Verify that it is committed.</div>
 <div class="solutions">
 <a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-40" id="answer-40"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-40"><div class="answer solution-like">
-<div class="para" id="p-790">
+<div class="para" id="p-793">
 <code class="code-inline tex2jax_ignore">git commit -m "&lt;commit-message&gt;"</code>, <code class="code-inline tex2jax_ignore">git status</code>
-</div> <div class="para" id="p-791">Your text editor might also indicate that this worked. For instance, <abbr class="initialism">VS</abbr> Code will remove and letters and colors next to the file name. It will also show your commit message in the “Timeline” panel on the bottom left.</div>
+</div> <div class="para" id="p-794">Your text editor might also indicate that this worked. For instance, <abbr class="initialism">VS</abbr> Code will remove and letters and colors next to the file name. It will also show your commit message in the “Timeline” panel on the bottom left.</div>
 </div></div>
 </div></article><article class="task exercise-like" id="task-104"><h4 class="heading"><span class="codenumber">(p)</span></h4>
-<div class="para" id="p-792">Do not push yet! You will add your second poem in a second commit before you push. (So this push will have two commits at one time.)</div> <div class="para" id="p-793">Create a new file titled <code class="code-inline tex2jax_ignore">poem2.md</code>. Open it and add your second original poem or paste your second-favorite poem (with attribution, of course!). Stage this file and commit it with a good commit message.</div>
+<div class="para" id="p-795">Do not push yet! You will add your second poem in a second commit before you push. (So this push will have two commits at one time.)</div> <div class="para" id="p-796">Create a new file titled <code class="code-inline tex2jax_ignore">poem2.md</code>. Open it and add your second original poem or paste your second-favorite poem (with attribution, of course!). Stage this file and commit it with a good commit message.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-41" id="answer-41"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like"><div class="para" id="p-794">After editing, <code class="code-inline tex2jax_ignore">git add .</code> or <code class="code-inline tex2jax_ignore">git add poem2.md</code>. Then <code class="code-inline tex2jax_ignore">git commit -m "&lt;message&gt;"</code>. <code class="code-inline tex2jax_ignore">git status</code> might be useful here.</div></div></div>
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-41" id="answer-41"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-41"><div class="answer solution-like"><div class="para" id="p-797">After editing, <code class="code-inline tex2jax_ignore">git add .</code> or <code class="code-inline tex2jax_ignore">git add poem2.md</code>. Then <code class="code-inline tex2jax_ignore">git commit -m "&lt;message&gt;"</code>. <code class="code-inline tex2jax_ignore">git status</code> might be useful here.</div></div></div>
 </div></article><article class="task exercise-like" id="task-105"><h4 class="heading"><span class="codenumber">(q)</span></h4>
-<div class="para" id="p-795">Push your new files to GitHub, open a pull request, and merge your changes into <code class="code-inline tex2jax_ignore">main</code>.</div>
+<div class="para" id="p-798">Push your new files to GitHub, open a pull request, and merge your changes into <code class="code-inline tex2jax_ignore">main</code>.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-42" id="answer-42"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like"><div class="para" id="p-796">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-42" id="answer-42"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-42"><div class="answer solution-like"><div class="para" id="p-799">
 <code class="code-inline tex2jax_ignore">git push origin &lt;branch-name&gt;</code>, “Compare and pull request”, “Merge”, “Confirm merge”.</div></div></div>
 </div></article><article class="task exercise-like" id="task-106"><h4 class="heading"><span class="codenumber">(r)</span></h4>
-<div class="para" id="p-797">Go back to local and pull in your new changes on main.</div>
+<div class="para" id="p-800">Go back to local and pull in your new changes on main.</div>
 <div class="solutions">
-<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-43" id="answer-43"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-43"><div class="answer solution-like"><div class="para" id="p-798">
+<a href="" data-knowl="" class="id-ref answer-knowl original" data-refid="hk-answer-43" id="answer-43"><span class="type">Answer</span><span class="period">.</span></a><div class="hidden-content tex2jax_ignore" id="hk-answer-43"><div class="answer solution-like"><div class="para" id="p-801">
 <code class="code-inline tex2jax_ignore">git switch main</code>, then <code class="code-inline tex2jax_ignore">git pull origin main</code>
 </div></div></div>
 </div></article><article class="task exercise-like" id="task-107"><h4 class="heading"><span class="codenumber">(s)</span></h4>
-<div class="para" id="p-799">For extra credit, create a new branch and write/paste a third poem. Follow the same processes as above.</div></article><div class="conclusion" id="conclusion-13"><div class="para" id="p-800">If you’d like, use <a href="S_hub_delete_repo.html" class="internal" title="Section B.6: Deleting a Repository">Section B.6</a> to delete your repository. I won’t be using it again in this book and this might be good practice to see what deleting a repo looks like. On the contrary, it might be nice to keep the repository to show other people that you are active on GitHub and are open to learning how things work. You can always write this fact in a statement on your README.</div></div></article></div>
-<div class="para" id="p-801">And that’s that! Hopefully you’re starting to get the hang of this process. If you ever need to practice this again (or need a refresher on what to do), revisit this page. It might take a little bit to become fully comfortable with the process and to remember the order in which to do things. In time, you will get it!</div></section></div>
+<div class="para" id="p-802">For extra credit, create a new branch and write/paste a third poem. Follow the same processes as above.</div></article><div class="conclusion" id="conclusion-13"><div class="para" id="p-803">If you’d like, use <a href="S_hub_delete_repo.html" class="internal" title="Section B.6: Deleting a Repository">Section B.6</a> to delete your repository. I won’t be using it again in this book and this might be good practice to see what deleting a repo looks like. On the contrary, it might be nice to keep the repository to show other people that you are active on GitHub and are open to learning how things work. You can always write this fact in a statement on your README.</div></div></article></div>
+<div class="para" id="p-804">And that’s that! Hopefully you’re starting to get the hang of this process. If you ever need to practice this again (or need a refresher on what to do), revisit this page. It might take a little bit to become fully comfortable with the process and to remember the order in which to do things. In time, you will get it!</div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_gitsumm.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="part-collab.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>
