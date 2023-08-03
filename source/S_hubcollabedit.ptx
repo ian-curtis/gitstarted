@@ -32,7 +32,7 @@
           </p>
             <blockquote>
               <p>
-                To contribute, add your name as a level two heading. This can be just your first name, just your last name, both, all names, initials, a name you like, etc. In a paragraph, type the month, year, and the country and/or state/province you are contributing from. If you feel like it, tell us something cool about you! (See my example.)
+                To contribute, add your name as a level two heading. This can be just your first name, just your last name, both, all names, initials, a name you like, your GitHub username, etc. In a paragraph, type the month, year, and the country and/or state/province you are contributing from. If you feel like it, tell us something cool about you! (See my example.)
               </p>
               <p>
                 Responses will be moderated. No explicit content whatsoever will be accepted (keep things G rated please!).
@@ -45,7 +45,7 @@
       <task>
         <statement>
           <p>
-            Once you are done editing, scroll to the bottom of the page, to the Commit changes block. In the box that is autofilled with <q>Update aboutyou.md</q>, type a more informative commit message. A description is not necessary.
+            Once you are done editing, head to the Commit changes dialog. In the box that is autofilled with <q>Update aboutyou.md</q>, type a more informative commit message. A description is not necessary.
           </p>
         </statement>
       </task>
@@ -83,7 +83,7 @@
               </p>
             </blockquote>
           <p>
-            This means that you are taking your branch and attempting to merge your changes into the main branch from the <q>base</q> repository, or <em>your repo</em>.
+            If not, use the dropdown menus to make yours look like the above. This means that you are taking your branch and attempting to merge your changes into the main branch from the <q>base</q> repository, or <em>your repo</em>.
           </p>
           <p>
             Like before, if you scroll down, you can see all of the changes you made. Later, I will be able to see this too, to make sure that you only changed what you were supposed to and didn't write anything R-rated.

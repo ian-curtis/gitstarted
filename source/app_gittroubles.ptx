@@ -5,7 +5,7 @@
   <idx><h>git</h><h>troubles</h></idx>
   <introduction>
     <p>
-      We all make mistakes, especially with Git. You don't know how many times I have staged the wrong files or committed my changes before realizing I did something wrong. Of coursre, it's best to try and avoid these issues becasue they can cause headaches and frustration. Plus there's usually a little fear involved (did I just erase my edits?) as well as hesitation (Git only does what I tell it, so I have to make sure I do it right). But just in case something happened that you didn't expect or you made a mistake, I have your back. Below are some common mistakes and questions you might ask. 
+      We all make mistakes, especially with Git. You don't know how many times I have staged the wrong files or committed my changes before realizing I did something wrong. Of course, it's best to try and avoid these issues becasue they can cause headaches and frustration. Plus there's usually a little fear involved (did I just erase my edits?) as well as hesitation (Git only does what I tell it, so I have to make sure I do it right). But just in case something happened that you didn't expect or you made a mistake, I have your back. Below are some common mistakes and questions you might ask. 
     </p>
   </introduction>
 
@@ -100,7 +100,7 @@
       When Git is keeping track of files, we say that it is <term>tracking</term> files. Untracking files is not super difficult, but does, like all Git commands, require the command line.
     </p>
 
-    <warning>
+    <warning xml:id="warn-untrack-delete">
       <p>
         Untracking files from Git <em>does not delete them from your local computer</em>. However, the next time you push to GitHub, they will no longer be there. Thus, the next time your collaborators pull from the repository, their copy of the file will be deleted.
       </p>
@@ -228,6 +228,9 @@ Aborting
       <p>
         Alternatively, you can keep your changes by using <c>git stash</c>. Stashing will store your changes locally without committing and will let you pull. To bring your changes back you can use <c>git stash pop</c>. In my experience, things have worked out quite nicely with <c>git stash</c>. I just type <c>git stash</c> before pulling, then I pull, then I use <c>git stash pop</c> and my changes are popped right back into where they were. For more information, you might find <url href="https://opensource.com/article/21/4/git-stash" visual="opensource.com/article/21/4/git-stash">opensource.com</url> useful.
       </p>
+      <p>
+        If <c>git stash pop</c> doesn't work, you may have a bigger problem on your hands. You will want to do a Google search if this is your case. This happened to me at one point and unfortunately I had to completely reset my local repository to what was appearing on GitHub. In such an extreme case, I even made a copy of some of my files with my edits before doing any resetting so I could easily add my changes back in.
+      </p>
 
     </subsection>
   </section>
@@ -235,7 +238,7 @@ Aborting
     <title>Git Says I Have Divergent Branches!</title>
     
     <p>
-      I recently experiences this issue for the first time and had to do some searching to figure out how to fix it. I relied on <url href="https://stackoverflow.com/questions/62653114" visual='https://stackoverflow.com/questions/62653114'>Davide Casiraghi's question on StackOverflow</url> and <url href="https://stackoverflow.com/questions/29673869/" visual='https://stackoverflow.com/questions/29673869/'>adrianvlupu's question also on StackOverflow</url> to create this guide and you might find these resources more helpful than mine.
+      I recently experienced this issue for the first time and had to do some searching to figure out how to fix it. I relied on <url href="https://stackoverflow.com/questions/62653114" visual='https://stackoverflow.com/questions/62653114'>Davide Casiraghi's question on StackOverflow</url> and <url href="https://stackoverflow.com/questions/29673869/" visual='https://stackoverflow.com/questions/29673869/'>adrianvlupu's question also on StackOverflow</url> to create this guide and you might find these resources more helpful than mine.
     </p>
     <p>
       This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn't want to create them, so it refuses to push or pull until you fix something. This is not the same error as in <xref ref="S_forcemerge"/>, although it is closely related. You might get something like this:
@@ -305,7 +308,7 @@ fatal: Need to specify how to reconcile divergent branches.
             If you want to avoid potential large error messages like this again, you might consider changing Git's default behavior. Instead of fetching and merging, you can do a fast-forward merge which does not do a merge commit. When a fast forward is not possible, the error message is much shorter and then you can use the rebase command to fix things.
           </p>
           <p>
-            To begin this process, first enter <c>git config --global pull.ff only</c> into your terminal. This will change the default pull behavior for Git.
+            To begin this process, first enter <c>git config pull.ff only</c> into your terminal. This will change the default pull behavior for Git (for your current repository only).
           </p>
         </statement>
       </task>
@@ -316,7 +319,7 @@ fatal: Need to specify how to reconcile divergent branches.
             Now try <c>git pull</c>. Things might work. Great! But if you get an error message of <c>fatal: Not possible to fast-forward, aborting.</c>, use <c>git pull --rebase</c> to perform a rebase. Then <c>git push</c> back to origin or upstream.
           </p>
           <p>
-            If you ever want to change the default behavior back to what it was, use <c>git config pull.rebase false</c>. If you want to keep that behavior change we just did and you want to do a one-time fetch-merge pull, use <c>git pull --ff</c>.
+            If you ever want to change the default behavior back to what it was, use <c>git config pull.rebase false</c>. If you want to keep that behavior change we just did and you want to do a one-time fetch-merge pull (the old way), use <c>git pull --ff</c>.
           </p>
         </statement>
       </task>
@@ -361,7 +364,7 @@ fatal: Need to specify how to reconcile divergent branches.
       
       <introduction>
         <p>
-          This is for when you are sent into a command line editing tool or a default text editor asking you to provide a reason why the merge is necessary.
+          This is for when you are sent into a command line editing tool or a default text editor asking you to provide a reason why the merge is necessary. This may not solve your problem but sometimes all a merge conflict needs is to bypass this screen.
         </p>
       </introduction>
 
@@ -376,7 +379,7 @@ fatal: Need to specify how to reconcile divergent branches.
       <task>
         <statement>
           <p>
-            Type a merge message. This can be something as simple as <q>I have to merge to move on</q> or <q>I know what I want, let me do it</q> (yes, I have actually put that as message<ellipsis/>is this good? Who knows?).
+            Type a merge message. This can be something as simple as <q>I have to merge to move on</q> or <q>I know what I want, let me do it</q> (yes, I have actually put that as a message<ellipsis/>is this good? Who knows?).
           </p>
         </statement>
       </task>
@@ -400,7 +403,7 @@ fatal: Need to specify how to reconcile divergent branches.
       <task>
         <statement>
           <p>
-            Press <kbd>Enter</kbd> and you should be ok to move forward.
+            Press <kbd>Enter</kbd> and you may be ok to move forward with the pushing, pulling, and creating of pull requests.
           </p>
         </statement>
       </task>

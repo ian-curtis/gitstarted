@@ -14,10 +14,10 @@
   </p>
 
   <p>
-    The act of grabbing changes from the parent repository is called <term>fetching</term>, aptly named since that is exactly what you are doing: fetching changes. Technically this is distinct from a related <term>merge</term>. First, you fetch the changes, then you merge the changes into your fork.
+    The act of grabbing changes from the parent repository is called <term>fetching</term>, aptly named since that is exactly what you are doing: fetching changes. Technically, this is distinct from a related <term>merge</term>. First, you fetch the changes, then you merge the changes into your fork.
   </p>
   <p>
-    You might remember using <c>git pull</c> to fetch in changes. As we will see later, this essentially is the same thing. Pulling fetches and merges at the same time.
+    You might remember from previous sections using <c>git pull</c> to fetch changes. In essence, using this command will fetch your changes. But it also merges the changes into your fork. In most cases, using <c>git pull</c> is fine and is a great shortcut. But as you get more experienced in the git world, you may want to fetch changes and then merge them later. We will explore pulling changes more in future sections.
   </p>
   <p>
     Before continuing, you must wait until I accept your pull request from <xref ref="S_hubcollabedit"/>.
@@ -30,11 +30,11 @@
   <idx><h>remote</h><h>upstream</h></idx>
   
   <p>
-    Another important concept is that of <term>upstream</term>. Remember from <xref ref="SS_git-push"/> when we talked about remotes? Back there, I mentioned that there were two types of remotes: origin and upstream and that we would talk about upstream later. Well, now it's later! This idea will become important again when we use Git to collaborate (see if you can figure out why).
+    Another important concept is that of <term>upstream</term>. Remember from <xref ref="SS_git-push"/> when we talked about remotes? Back there, I mentioned that there were two types of remotes (origin and upstream) and that we would talk about upstream later. Well, now it's later! This idea will become important again when we use Git to collaborate (see if you can figure out why).
   </p>
 
   <p>
-    Any repository you own will have the remote identifier of <q>origin</q>, for you. Any repo you do not own <em>and that you fork</em> will have the remote identifier of <q>upstream</q>. Remember that a remote is like a connection between repositories; it's the definition of the link between them. When you fork a repo, you are creating a remote connection between the parent repo (upstream) and your newly-created fork (origin). As we will explore in <xref ref="C_gitcollab"/>, when you clone a repo, you are create a remote connection between your repo (origin), which would be a fork, and your personal computer (local). 
+    Any repository you own or that you clone will have the remote identifier of <q>origin</q>, for you. Any repo you do not own <em>and that you fork</em> will have the remote identifier of <q>upstream</q>. Remember that a remote is like a connection between repositories; it's the definition of the link between them. When you fork a repo, you are creating a remote connection between the parent repo (upstream) and your newly-created fork (origin). As we will explore in <xref ref="C_gitcollab"/>, when you clone a repo, you are creating a remote connection between your fork (origin) and your personal computer (local) with the future ability to be connected to the authoritative repo (upstream). 
   </p>
 
   </subsection>

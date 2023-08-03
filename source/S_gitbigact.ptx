@@ -4,11 +4,11 @@
   <title>Working Solo: The Culminating Experience</title>
   <idx><h>culminating experience</h><h>git solo</h></idx>
     <p>
-      As mentioned above, this part is a large activity designed to help you practice the skills and ideas learned in the previous sections. It also represents and example of what a typical workflow might look like. You are welcome and encouraged to refer back to the summary and the sections themselves.
+      As mentioned above, this part is a large activity designed to help you practice the skills and ideas learned in the previous sections. It also represents an example of what a typical workflow might look like. You are welcome and encouraged to refer back to the summary and the sections themselves.
     </p>
 
     <p>
-      The activity below is broken up into multiple parts. In order to help you remember the procedures, I will not be adding in cross references to the corresponding chapters. That being said, I will add in hints and answers where applicable. Do note that some of the steps have no <q>correct</q> answer. This will be noted in the corresponding answer. 
+      The activity below is broken up into multiple parts. In order to help you remember the procedures, I will not be adding in cross references to the corresponding chapters (but feel free to go back to them if you need to!). That being said, I will add in hints and answers where applicable. Do note that some of the steps have no <q>correct</q> answer. This will be noted in the corresponding answer. 
     </p>
 
 
@@ -22,7 +22,7 @@
       <task xml:id="git-ba-newrepo">
         <statement>
           <p>
-            First, you need to create a new repository. Navigate to GitHub and create a new repository. Name it appropriately for the end goal <mdash/> you can't change it later. Make sure you initialize with a README file.
+            First, you need to create a new repository. Navigate to GitHub and create this. Name it appropriately for the end goal <mdash/> you can't change it later. Make sure you initialize with a README file.
           </p>
         </statement>
         <answer>
@@ -203,7 +203,7 @@
             Open the file and use Markdown to write one original poem or paste one of your favorite poems. Make sure to add a title!
           </p>
           <p>
-            If you are pasting someone else's poem, use proper attribution. They may include, but is not necessarily limited to, name, collection/book from which you found the poem, date published, page numbers, etc.
+            If you are pasting someone else's poem, use proper attribution. This may include, but is not necessarily limited to, name, collection/book from which you found the poem, date published, page numbers, etc.
           </p>
         </statement>
       </task>

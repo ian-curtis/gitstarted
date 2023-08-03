@@ -93,7 +93,7 @@
     <task>
       <statement>
         <p>
-          Edit the markdown file with your contribution. Instructions are in the file are pasted below:
+          Edit the markdown file with your contribution. Instructions are in the file and are pasted below:
         </p>
           <blockquote>
             <p>
@@ -218,7 +218,7 @@
     <task>
       <statement>
         <p>
-          In the meantime, switch back to main and set an upstream branch for your clone.
+          In the meantime, switch back to main and set an upstream remote for your clone.
         </p>
       </statement>
       <answer>

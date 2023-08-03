@@ -50,7 +50,7 @@
     <idx><h>pull</h></idx>
     <idx><h>git</h><h>pull</h></idx>
     <p>
-      Recall from <xref ref="S_hubcollabfetch"/> that you can update your fork with the latest upstream changes through the <q>Fetch upstream</q> button. That works great for updating the fork, but it doesn't update your local clone. There are two main ways in which you can update both your fork and for clone with new changes to upstream.
+      Recall from <xref ref="S_hubcollabfetch"/> that you can update your fork with the latest upstream changes through the <q>Fetch upstream</q> button. That works great for updating the fork, but it doesn't update your local clone. There are two main ways in which you can update both your fork and your clone with new changes to upstream.
     </p>
 
     <project xml:id="try-git-pull-origin">
