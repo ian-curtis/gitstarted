@@ -186,6 +186,6 @@
   </p>
 
   <p>
-    This might seem like a lot of work for one tiny edit. And you're right. We edited four lines and it probably would have been easier to use GitHub for that edit. But it's always nice to start simple. But as it turns out, the steps discussed in this chapter are the same for each time you want to update GitHub with changes from local. The next section puts your skills to the test with an extensive activity and also provides a (hopefully) useful summary of the Git process. 
+    This might seem like a lot of work for one tiny edit. And you're right. We edited four lines and it probably would have been easier to use GitHub for that edit. But it's always nice to start simple. As it turns out, the steps discussed in this chapter are the same for each time you want to update GitHub with changes from local. The next section puts your skills to the test with an extensive activity and also provides a (hopefully) useful summary of the Git process. 
   </p>
 </section>

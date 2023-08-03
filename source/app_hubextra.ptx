@@ -142,7 +142,15 @@
       I personally prefer doing Git-related things on my personal computer (offline) and then updating GitHub when I'm ready. To me, it helps avoid unnecessary merge conflicts and make sure that my edits are only committed and pushed when I'm ready.
     </p>
     <p> 
-      However, you don't have to work completely on your local computer. If you don't want to have all of this software downloaded (perhaps you're running out of storage space on your computer), there is another option: codespaces. This is <url href="https://github.com/features/codespaces" visual="github.com/features/codespaces"> hosted by GitHub</url> and created an online, virtual instance of your code files. By creating a codespace, you are using a virtual machine which runs the <init>VS</init> Code and is automatically connected to your GitHub repo. Codespaces could be useful if you need to edit something quickly and/or don't have access to your personal computer but make sure you create a branch before making a codespace.
+      However, you don't have to work completely on your local computer. If you don't want to have all of this software downloaded (perhaps you're running out of storage space on your computer), there is another option: codespaces. This is <url href="https://github.com/features/codespaces" visual="github.com/features/codespaces"> hosted by GitHub</url> and create<sage>
+        <input>
+          
+        </input>
+        <output>
+          (for static output)
+        </output>
+      </sage>
+       an online, virtual instance of your code files. By creating a codespace, you are using a virtual machine which runs the <init>VS</init> Code and is automatically connected to your GitHub repo. Codespaces could be useful if you need to edit something quickly and/or don't have access to your personal computer but make sure you create a branch before making a codespace.
     </p>
     <p>
       If you choose to use this route, know that you are limited to 60 hours a month if you do not want to pay. You also should know that this is not available offline; an internet connection is required to work on a codespace. 
@@ -181,7 +189,7 @@
     <idx><h>repository</h><h>delete</h></idx>
     <idx><h>github</h><h>delete repository</h></idx>
     <p>
-      So you really to delete a repository? Think long and hard about this one. Are you sure? Are you really sure? Deleting repos are <em>irreversible</em> and can have lasting effects. For instance, all forks will be broken, but not deleted. If you delete a private repo, all forks will also be deleted. Any website that contains a link to your repo will no longer work and people might wonder where it went. And so on.
+      So you really to delete a repository? Think long and hard about this one. Are you sure? Are you really sure? Deleting repos is <em>irreversible</em> and can have lasting effects. For instance, all forks will be broken, but not deleted. If you delete a private repo, all forks will also be deleted. Any website that contains a link to your repo will no longer work and people might wonder where it went. And so on.
     </p>
     <p>
       But here you are, so clearly you have decided to delete one. To delete a repository, you have to enter the danger zone (<pubtitle>Top Gun</pubtitle> anyone?).
@@ -201,7 +209,7 @@
       <task>
         <statement>
           <p>
-            Click on the Setting tab. This should be the settings for the repo itself, not the general settings for your profile.
+            Click on the Settings tab. This should be the settings for the repo itself, not the general settings for your profile.
           </p>
         </statement>
       </task>
@@ -232,6 +240,38 @@
       
     </activity>
     
+  </section>
+
+  <section xml:id="sec-hub-gitignore">
+    <title>The <c>.gitignore</c> File</title>
+    
+    <p>
+      As you gain more experience with Git and GitHub, you may start wondering if there is a way to hide files from public view. Your project may come with files that are private to you/your company and are not necessary to share with everyone else. You also may have programs that generate files that are used by a second program and these intermediate files do not need to be shared. Whatever the circumstance, you can choose to block a file or folder from being tracked by Git.
+    </p>
+    <p>
+      The file for this is <c>.gitignore</c>. The dot in front of the file name is necessary as this specifies that the file is, by default, <q>hidden</q> when being viewed in a file browser (to prevent accidentaly deletion). You should be able to edit this file on GitHub or access it with your text editor.
+    </p>
+    <p>
+      It is possible to generate a <c>gitignore</c> template when creating a repo. These can be helpful but for my projects, I prefer to add the file manually and fill it in myself as I go.
+    </p>
+    <p>
+      All that goes in this file is a list of file/folder names and/or extensions you wish for Git to ignore. Keep one name per line. You can add comments to the file (to help break up sections) by starting a line with a hashtag (fine, a pound sign) and a space: <c># This is a comment</c>. For example,
+      <cd>
+        <cline># Ignore generated images folder</cline>
+        <cline>generated-images/</cline>
+        <cline></cline>
+        <cline># Random files to ignore</cline>
+        <cline>secret.txt</cline>
+        <cline>private_data.csv</cline>
+      </cd>
+    </p>
+    <p>
+      As a bonus, <c>gitignore</c> files accept standard generalizing arguments and wildcards. For example, <c>*.pdf</c> will ignore anything with the <c>.pdf</c> file extension.
+    </p>
+    <p>
+      You should know that once Git tracks a file (or folder), you can't just add that file's name (or folder) to the <c>gitignore</c> file and expect it to disappear. For any files you had Git tracking that you wish it would now ignore, see the instructions in <xref ref="S_untrackfiles"/>. Note that any files you treat in this manner will still exist in the commit history of your repo and on any forks for your repo (the next time a user pulls changes from your repo, their copy of the file will be deleted). See <xref ref="warn-untrack-delete"/>
+    </p>
+
   </section>
 
   

@@ -24,7 +24,7 @@
       In order to make Git work, we need to set up a connection between your computer and your GitHub repo. From here on, I might refer to your personal files as your <term>local files</term>. A file is typically considered <q>local</q> if it does not exist on GitHub (or anywhere else on the internet). It is local because only you have access to it. You will likely hear other people use this term and its derivatives (such as <q>editing locally</q>). Whenever it comes up, it refers to work/files/things on your computer and not online.
     </p>
     <p>
-      So let's use the new vocab. We need a way to edit our GitHub repo locally but still have version control and GitHub tools. Git is the right tool for the job. Performing this connection is called cloning. A <term>clone</term> of a repository is a local version of a repo that exists on GitHub. Luckily for us, GitHub expects us to do this and makes is rather simple to do.
+      So let's use the new vocab. We need a way to edit our GitHub repo locally but still have version control and GitHub tools. Git is the right tool for the job. Performing this connection is called cloning. A <term>clone</term> of a repository is a local version of a repo that exists on GitHub. Luckily for us, GitHub expects us to do this and makes it rather simple to do.
     </p>
     <p>
       Somewhat unfortunately, one thing must be done before we are able to clone a repo. Interacting with your GitHub materials in this way will require authentication; in other words, your password. This is necessary for safety and is a smart feature. However, Git/GitHub has deprecated the use of passwords on the command line so we must generate an Personal Access Token (<acro>PAT</acro>). The following procedure guides you through this process. I recommend creating a new <acro>PAT</acro> for each repo to ensure that if anyone gets unauthorized access of one repo, they won't be able to get to your others.
@@ -45,13 +45,13 @@
       </task>
       <task>
         <p>
-          Click on <q>Personal access tokens</q>. This page will give you an overview of all the tokens 
+          Click on <q>Personal access tokens</q> and then <q>Tokens (classic)</q>. This page will give you an overview of all the tokens 
           you have created, their expiration dates, and the things they have access to.
         </p>
       </task>
       <task>
         <p>
-          Click on <q>Generate new token</q>. Your GitHub password may be required.
+          Click on <q>Generate new token</q> and then <q>Generate new token (classic)</q>. Your GitHub password may be required.
         </p>
       </task>
       <task>
@@ -75,8 +75,7 @@
       <task>
         <p>
           Select a scope or scopes. What do you want this <acro>PAT</acro> to give you access to? This will depend on 
-          your project but less is better (for privacy in the event of hacking). Don't be super concerned as 
-          it is difficult to hack <acro>PAT</acro>s. If you do not give a <acro>PAT</acro> permission to do something, that something will not be 
+          your project but less is better (for privacy and security). If you do not give a <acro>PAT</acro> permission to do something, that something will not be 
           able to be done locally, even by you. 
         </p>
         <p>
@@ -117,16 +116,22 @@
       </task>
       <task xml:id="clone-https">
         <p>
-          Find the dialog box labeled <q>Code</q> (yes, the Code box inside the Code tab).
-          Notice you are able to add files manually through upload or through GitHub. You certainly 
-          could do this but you will most likely be ignoring the version control and the wonderful experience 
-          of using Git!
+          Find the dialog box labeled <q>Code</q> (yes, the Code box inside the Code tab). This can be found above your list of files.
         </p>
         <p>
-          Click on the Code box. This box is titled <q>Clone</q> which is a good sign. 
+          Click on this Code box and make sure you have the <q>Local</q> sub tab selected. This part is titled <q>Clone</q> which is a good sign. 
           A url-like string should appear (if not, be sure you have the HTTPS tab selected.) Copy this
           string.
         </p>
+        <p>
+          See <xref ref="fig-hub-clone-box"/> for what the Code submenu might look like.
+        </p>
+        <figure xml:id="fig-hub-clone-box">
+          <caption>The cloning dialog box on GitHub</caption>
+          <image source="hub_clone_box" width="60%">
+            <description>The Code box which contains the Local tab which contains an HTTPS link to copy.</description>
+          </image>
+        </figure>
       </task>
       <task>
         <p>
@@ -159,7 +164,7 @@
           </console>
         <p>
           where &lt;copied-https-string> is replaced with the HTTPS string you copied in <xref ref="clone-https"/>.
-          Press enter to run the command.
+          Press <kbd>Enter</kbd> to run the command.
         </p>
         <p>
           Your terminal may ask you for your GitHub username and password. This is ok: enter your username
@@ -204,7 +209,7 @@
     </p>
     <p>
       We saw earlier how to work with branches on GitHub, but you can also do this right from the command
-      line. This can be done with one command and doesn't involve navigating multiple pages as we did on
+      line. This can be done with two commands (or one, see <xref ref="branch-shortcut"/>) and doesn't involve navigating multiple pages as we did on
       GitHub (<xref ref="S_hubbranches"/>). 
     </p>
 
@@ -260,13 +265,13 @@
       <task>
         <statement>
           <p>
-            Well shoot. Git still says we're on the main branch. We want it to tell us that we are on
-            the <c>country</c> branch. That's because we need to tell Git what we want to work on
+            Well, shoot. Git still says we're on the main branch. We want it to tell us that we are on
+            the <c>country</c> branch. That's because we need to tell Git that we want to work on
             that new branch. Git doesn't move you to that branch in case you want to make more than
             one branch at one time.
           </p>
           <p>
-            With Git, navigating to a new branch is done with <c>switch</c>. In general,
+            With Git, navigating to a new branch is done with the <c>switch</c> command. In general,
           </p>
 
           <console>
@@ -300,11 +305,11 @@
       </task>
     </project>
 
-    <paragraphs>
+    <paragraphs xml:id="branch-shortcut">
       <title>Branch/Checkout Shortcut</title>
       <p>
         Using a little terminal trick, we can actually create a branch and switch to that branch at
-        the same time. This uses the <c>-c</c> switch. For our example in <xref ref="gitproc-branches"/>,
+        the same time. This uses the <c>-c</c> argument. For our example in <xref ref="gitproc-branches"/>,
       </p>
       <console>
         <input>
@@ -325,7 +330,7 @@
   
 
   <paragraphs>
-    <title>Note About <c>git switch</c></title>
+    <title>Note About <c>git switch</c> (Optional)</title>
     <p>
       The <c>git switch</c> command was introduced to help remove user confusion. Previously, 
       the command was <c>git checkout &lt;branch-name></c>. However <c>checkout</c> has two functions:

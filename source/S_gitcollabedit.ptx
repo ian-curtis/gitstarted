@@ -33,6 +33,6 @@
     </ul>
   </p>
   <p>
-    Whatever you choose, try to stick to one line. When you are done, save the file (which will tell Git that there are active changes) and move on. The next steps are similar, but not exactly the same as those in <xref ref="S_gitfinalize"/>.
+    Whatever you choose, try to stick to one or two lines. When you are done, save the file (which will tell Git that there are active changes) and move on. The next steps are similar, but not exactly the same as those in <xref ref="S_gitfinalize"/>.
   </p>
 </section>
