@@ -1603,11 +1603,29 @@ var ptx_lunr_docs = [
   "body": " Merging from main to main (remote contains changes not on local)   This is for when you are sent into a command line editing tool or a default text editor asking you to provide a reason why the merge is necessary. This may not solve your problem but sometimes all a merge conflict needs is to bypass this screen.    Type i     Type a merge message. This can be something as simple as I have to merge to move on or I know what I want, let me do it (yes, I have actually put that as a message is this good? Who knows?).    Press esc .    Type :wq (this stands for write and quit)    Press Enter and you may be ok to move forward with the pushing, pulling, and creating of pull requests.   "
 },
 {
+  "id": "common-commands",
+  "level": "1",
+  "url": "common-commands.html",
+  "type": "Section",
+  "number": "D.1",
+  "title": "General Commands",
+  "body": " General Commands  Here you find a list of commands that can be used at the command line anywhere (and aren't necessarily associated with Git).   pwd  Used to find the present working directory ( , the current active folder).    cd  Used to change the active directory (folder) in the terminal. Requires either the file path to move into or .. to move backwards one level.    ls  Used to list the contents of the active folder.    touch  Used to create files. Also requires the filename and file extension of the file you wish to create.    open (or start )  Used to open a file, folder, or application using the defualt application\/service    killall (Mac only)  Used to close an entire application    mkdir  Used to create a new folder. Also requires the name of the folder to create.    rm  Used to remove a file (without warnings). Also requires the file name and extension you want to remove.    rmdir  Used to remove a folder (without warnings). Also requires the folder name to remove.    code  Used to open files or folders with the application VS Code.     "
+},
+{
+  "id": "git-commands",
+  "level": "1",
+  "url": "git-commands.html",
+  "type": "Section",
+  "number": "D.2",
+  "title": "Git Commands",
+  "body": " Git Commands  This section contains the most common commands used at the command line to interact with Git. To see these commands in the context of a workflow, see and .   git clone  Used to copy ( clone ) a repository from GitHub to a local source. Also requires an HTTPS link copied from GitHub.    git branch  Used to create a new branch in the background. Also requires the name of the branch you wish to create.    git switch  Used to change branches. Also requires the branch name you wish to change to.  Can be used as git switch -c with a branch name to create and change to a branch automatically ( , git branch is not required).    git status  Used to check up on the state of Git operations. Can be entered at any time in the Git process.    git add  Used to stage files to prepare them for committing and attaching a commit message. Requires either a . (to add all modified\/new files) or a number of file and folder names.    git commit -m  Used to commit files and to attach a commit message (surrounded in quotes). Automatically attaches this message to the files staged using git add and makes a stamp in the respective file timelines.    git push  Used to push changes from a local source to GitHub. Requires the remote repository ( origin or upstream ) and the branch name you wish to send changes to.    git pull  Used to pull in changes from GitHub to a local repository. Requires the remote repository ( origin or upstream ) and the branch name you wish to pull changes from.     "
+},
+{
   "id": "app_answers",
   "level": "1",
   "url": "app_answers.html",
   "type": "Appendix",
-  "number": "D",
+  "number": "E",
   "title": "Answers to All Activities and Exercises",
   "body": " Answers to All Activities and Exercises  "
 },
