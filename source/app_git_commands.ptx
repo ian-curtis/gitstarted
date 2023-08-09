@@ -72,6 +72,12 @@
           </p>
         </li>
         <li>
+          <title><c>clear</c></title>
+          <p>
+            Used to clear the terminal screen and bring the cursor back to the top of the window.
+          </p>
+        </li>
+        <li>
           <title><c>code</c></title>
           <p>
             Used to open files or folders with the application <init>VS</init> Code.
