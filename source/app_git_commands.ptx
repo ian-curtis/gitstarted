@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<appendix xml:id="app-git-commands">
+  <title>Common Commands</title>
+
+  <introduction>
+
+  <p>
+    Need a little help remembering all of the commands discussed in this book? Look no further! Use this page as a cheat sheet to help you keep track of the common commands used here (you will also likely use these often in your future endeavors).
+  </p>
+
+  </introduction>
+
+  <section xml:id="common-commands">
+    <title>General Commands</title>
+
+    <p>
+      Here you find a list of commands that can be used at the command line anywhere (and aren't necessarily associated with Git).
+      <dl>
+        <li>
+          <title><c>pwd</c></title>
+          <p>
+            Used to find the present working directory (<ie/>, the current active folder).
+          </p>
+        </li>
+        <li>
+          <title><c>cd</c></title>
+          <p>
+            Used to change the active directory (folder) in the terminal. Requires either the file path to move into or <c>..</c> to move backwards one level.
+          </p>
+        </li>
+        <li>
+          <title><c>ls</c></title>
+          <p>
+            Used to list the contents of the active folder.
+          </p>
+        </li>
+        <li>
+          <title><c>touch</c></title>
+          <p>
+            Used to create files. Also requires the filename and file extension of the file you wish to create.
+          </p>
+        </li>
+        <li>
+          <title><c>open</c> (or <c>start</c>)</title>
+          <p>
+            Used to open a file, folder, or application using the defualt application/service
+          </p>
+        </li>
+        <li>
+          <title><c>killall</c> (Mac only)</title>
+          <p>
+            Used to close an entire application
+          </p>
+        </li>
+        <li>
+          <title><c>mkdir</c></title>
+          <p>
+            Used to create a new folder. Also requires the name of the folder to create.
+          </p>
+        </li>
+        <li>
+          <title><c>rm</c></title>
+          <p>
+            Used to remove a file (without warnings). Also requires the file name and extension you want to remove.
+          </p>
+        </li>
+        <li>
+          <title><c>rmdir</c></title>
+          <p>
+            Used to remove a folder (without warnings). Also requires the folder name to remove.
+          </p>
+        </li>
+        <li>
+          <title><c>code</c></title>
+          <p>
+            Used to open files or folders with the application <init>VS</init> Code.
+          </p>
+        </li>
+      </dl>
+    </p>
+    
+  </section>
+
+  <section xml:id="git-commands">
+    <title>Git Commands</title>
+
+    <p>
+      This section contains the most common commands used at the command line to interact with Git. To see these commands in the context of a workflow, see <xref ref="S_gitsumm"/> and <xref ref="S_gitcollabsumm"/>.
+
+      <dl>
+        <li>
+          <title><c>git clone</c></title>
+          <p>
+            Used to copy (<q>clone</q>) a repository from GitHub to a local source. Also requires an HTTPS link copied from GitHub.
+          </p>
+        </li>
+        <li>
+          <title><c>git branch</c></title>
+          <p>
+            Used to create a new branch in the background. Also requires the name of the branch you wish to create.
+          </p>
+        </li>
+        <li>
+          <title><c>git switch</c></title>
+          <p>
+            Used to change branches. Also requires the branch name you wish to change to.
+          </p>
+          <p>
+            Can be used as <c>git switch -c</c> with a branch name to create and change to a branch automatically (<ie/>, <c>git branch</c> is not required).
+          </p>
+        </li>
+        <li>
+          <title><c>git status</c></title>
+          <p>
+            Used to check up on the state of Git operations. Can be entered at any time in the Git process.
+          </p>
+        </li>
+        <li>
+          <title><c>git add</c></title>
+          <p>
+            Used to stage files to prepare them for committing and attaching a commit message. Requires either a <c>.</c> (to add all modified/new files) or a number of file and folder names.
+          </p>
+        </li>
+        <li>
+          <title><c>git commit -m</c></title>
+          <p>
+            Used to commit files and to attach a commit message (surrounded in quotes). Automatically attaches this message to the files staged using <c>git add</c> and makes a stamp in the respective file timelines.
+          </p>
+        </li>
+        <li>
+          <title><c>git push</c></title>
+          <p>
+            Used to push changes from a local source to GitHub. Requires the remote repository (<c>origin</c> or <c>upstream</c>) and the branch name you wish to send changes to.
+          </p>
+        </li>
+        <li>
+          <title><c>git pull</c></title>
+          <p>
+            Used to pull in changes from GitHub to a local repository. Requires the remote repository (<c>origin</c> or <c>upstream</c>) and the branch name you wish to pull changes from.
+          </p>
+        </li>
+      </dl>
+    </p>
+    
+  </section>
+
+</appendix>

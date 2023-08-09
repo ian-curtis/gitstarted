@@ -209,7 +209,7 @@
     </p>
     <p>
       We saw earlier how to work with branches on GitHub, but you can also do this right from the command
-      line. This can be done with two commands (or one, see <xref ref="branch-shortcut"/>) and doesn't involve navigating multiple pages as we did on
+      line. This can be done with two commands (or one, see <xref text="title" ref="branch-shortcut"/>) and doesn't involve navigating multiple pages as we did on
       GitHub (<xref ref="S_hubbranches"/>). 
     </p>
 

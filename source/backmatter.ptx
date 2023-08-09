@@ -11,6 +11,7 @@
   <xi:include href="app_commlinecustom.ptx" />
   <xi:include href="app_hubextra.ptx" />
   <xi:include href="app_gittroubles.ptx" />
+  <xi:include href="app_git_commands.ptx" />
 
 
   <!-- <appendix>
