@@ -14,7 +14,7 @@
 <meta property="og:type" content="book">
 <meta property="book:title" content="Better Git Started">
 <meta property="book:author" content="Ian Curtis">
-<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script>
+<script>
 var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
 window.MathJax = {
   "tex": {
@@ -41,24 +41,7 @@ window.MathJax = {
   },
   "options": {
     "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
-    "processHtmlClass": "process-math",
-    "renderActions": {
-      "findScript": [
-        10,
-        function (doc) {
-            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
-                var display = !!node.type.match(/; *mode=display/);
-                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-                var text = document.createTextNode('');
-                node.parentNode.replaceChild(text, node);
-                math.start = {node: text, delim: '', n: 0};
-                math.end = {node: text, delim: '', n: 0};
-                doc.math.push(math);
-            });
-        },
-        ""
-      ]
-    }
+    "processHtmlClass": "process-math"
   },
   "chtml": {
     "scale": 0.98,
@@ -276,7 +259,7 @@ window.MathJax = {
 <div class="toc-item"><a href="S_filepaths.html" class="internal"><span class="codenumber">1.3</span> <span class="title">File Paths</span></a></div>
 <ul class="structural">
 <li><div class="toc-item"><a href="S_filepaths.html#paths-construct" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Constructing File Paths</span></a></div></li>
-<li><div class="toc-item"><a href="S_filepaths.html#paths-hints" class="internal"><span class="codenumber">1.3.2</span> <span class="title">s and Reminders</span></a></div></li>
+<li><div class="toc-item"><a href="S_filepaths.html#paths-hints" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Hints and Reminders</span></a></div></li>
 </ul>
 </li>
 </ul>
@@ -518,7 +501,7 @@ window.MathJax = {
 </li>
 </ul>
 </div></section><section class="subsection" id="paths-hints"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">s and Reminders</span>
+<span class="type">Subsection</span> <span class="codenumber">1.3.2</span> <span class="title">Hints and Reminders</span>
 </h3>
 <section class="paragraphs" id="paragraphs-18"><h4 class="heading"><span class="title">File and Folder Naming.</span></h4> <div class="para" id="p-287">Recall <a href="" class="xref" data-knowl="./knowl/filenamecases.html" title="Note 1.1.1.1: Alternative Naming Options">Note 1.1.1.1</a> for alternative naming methods for files and folders. Please, please, please do not use spaces (and consider renaming your existing files that you plan to use with the terminal). I know it looks weird to name things using these cases, but if you really are set on learning Git and the command line, you will want to follow this convention.</div></section><section class="paragraphs" id="findingpaths"><h4 class="heading"><span class="title">Finding File Paths.</span></h4>  <div class="para" id="p-288">In theory, you will never need to type out the full file path. Your computer actually records this information for you to just copy.</div> <div class="para" id="p-289">On a Mac, right click on any file or folder you want the path for. Click “Get Info”. Under a label called “Where:” you can find the path. Right click on that path and hit “Copy as pathname” to copy the path in the same format as the paths above.</div> <div class="para" id="p-290">On Windows, right click on any file or folder you want the path for. Click “Properties”. Under a label called “Location:” you can find the path. Highlight the text and copy it.</div></section><section class="paragraphs" id="pathsfish"><h4 class="heading"><span class="title">Using the fish Shell.</span></h4>  <div class="para" id="p-291"><em class="alert">Advanced users only.</em></div> <div class="para" id="p-292">If you changed your shell to fish as described in <a href="app_commlinecustom.html" class="internal" title="Appendix A: Customizing the Terminal">Appendix A</a>, you won’t even have to copy a path or remember a path. fish contains autocomplete that looks for files and folders in your current folder and recommends completions.</div></section></section></section><div class="hidden-content tex2jax_ignore" id="hk-fn-24"><div class="fn"><code class="code-inline tex2jax_ignore">howtogeek.com/181774/why-windows-uses-backslashes-and-everything-else-uses-forward-slashes/</code></div></div>
 <div class="hidden-content tex2jax_ignore" id="hk-fn-25"><div class="fn"><code class="code-inline tex2jax_ignore">en.wikipedia.org/wiki/Path_(computing)</code></div></div>
