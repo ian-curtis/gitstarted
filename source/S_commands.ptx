@@ -12,6 +12,39 @@
     </p>
   </introduction>
 
+  <subsection xml:id="command-structure">
+    <title>What is a Command?</title>
+
+    <p>
+      Commands are pieces of text that are entered at the terminal and that can be understood by a computer. In general, commands are made up of three pieces:
+      <dl>
+        <li>
+          <title>Service Name</title>
+          <p>
+            Many commands come from external sources. To access these commands, we need to specify the source we are pulling the command from. Example service names are <c>python</c>, <c>pretext</c>, <c>brew</c>, and <c>git</c>.
+          </p>
+        </li>
+        <li>
+          <title>Command Name</title>
+          <p>
+            Once we have selected the command source, we need the command name itself. This is often a verb such as <c>push</c>, <c>pull</c>, <c>build</c>, or <c>install</c>.
+          </p>
+        </li>
+        <li>
+          <title>Extra Arguments</title>
+          <p>
+            Some commands come with extra options or required arguments. For example, building on the previous examples, you may need to supply locations to <c>push</c> to or <c>pull</c> from or what to <c>build</c> or <c>install</c>. A command could have many arguments.
+          </p>
+        </li>
+      </dl>
+    </p>
+
+    <p>
+      Not all commands have all three of these parts but it's important to know the basic command structure. For example, some commands (such as <c>git status</c>, which we will explore later) do not require any arguments. Other commands don't need a service name since they are built into your terminal by default. To start simple, we will explore these latter types of commands first and add in commands from the <c>git</c> service later on in the book.
+    </p>
+    
+  </subsection>
+
   <subsection xml:id="navigatecommline">
     <title>Navigating Your Computer With the Command Line</title>
     <idx><h>command line</h><h>navigate</h></idx>
