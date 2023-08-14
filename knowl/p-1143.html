@@ -11,8 +11,31 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h3 class="heading"><span class="type">Paragraph</span></h3>
-<div class="para">Used to check up on the state of Git operations. Can be entered at any time in the Git process.</div>
+<h2 class="heading"><span class="type">Paragraph</span></h2>
+<div class="para logical">
+<div class="para">This section contains the most common commands used at the command line to interact with Git. To see these commands in the context of a workflow, see <a href="S_gitsumm.html" class="internal" title="Section 4.5: Summary">Section 4.5</a> and <a href="S_gitcollabsumm.html" class="internal" title="Section 6.5: Summary">Section 6.5</a>.</div>
+<dl class="description-list">
+<dt><code class="code-inline tex2jax_ignore">git clone</code></dt>
+<dd><div class="para">Used to copy (“clone”) a repository from GitHub to a local source. Also requires an HTTPS link copied from GitHub.</div></dd>
+<dt><code class="code-inline tex2jax_ignore">git branch</code></dt>
+<dd><div class="para">Used to create a new branch in the background. Also requires the name of the branch you wish to create.</div></dd>
+<dt><code class="code-inline tex2jax_ignore">git switch</code></dt>
+<dd>
+<div class="para">Used to change branches. Also requires the branch name you wish to change to.</div>
+<div class="para">Can be used as <code class="code-inline tex2jax_ignore">git switch -c</code> with a branch name to create and change to a branch automatically (i.e., <code class="code-inline tex2jax_ignore">git branch</code> is not required).</div>
+</dd>
+<dt><code class="code-inline tex2jax_ignore">git status</code></dt>
+<dd><div class="para">Used to check up on the state of Git operations. Can be entered at any time in the Git process.</div></dd>
+<dt><code class="code-inline tex2jax_ignore">git add</code></dt>
+<dd><div class="para">Used to stage files to prepare them for committing and attaching a commit message. Requires either a <code class="code-inline tex2jax_ignore">.</code> (to add all modified/new files) or a number of file and folder names.</div></dd>
+<dt><code class="code-inline tex2jax_ignore">git commit -m</code></dt>
+<dd><div class="para">Used to commit files and to attach a commit message (surrounded in quotes). Automatically attaches this message to the files staged using <code class="code-inline tex2jax_ignore">git add</code> and makes a stamp in the respective file timelines.</div></dd>
+<dt><code class="code-inline tex2jax_ignore">git push</code></dt>
+<dd><div class="para">Used to push changes from a local source to GitHub. Requires the remote repository (<code class="code-inline tex2jax_ignore">origin</code> or <code class="code-inline tex2jax_ignore">upstream</code>) and the branch name you wish to send changes to.</div></dd>
+<dt><code class="code-inline tex2jax_ignore">git pull</code></dt>
+<dd><div class="para">Used to pull in changes from GitHub to a local repository. Requires the remote repository (<code class="code-inline tex2jax_ignore">origin</code> or <code class="code-inline tex2jax_ignore">upstream</code>) and the branch name you wish to pull changes from.</div></dd>
+</dl>
+</div>
 <span class="incontext"><a href="git-commands.html#p-1143" class="internal">in-context</a></span>
 </body>
 </html>

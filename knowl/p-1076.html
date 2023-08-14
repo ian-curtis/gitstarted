@@ -11,8 +11,9 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">Use <code class="code-inline tex2jax_ignore">git restore --staged &lt;your-file-name(s)&gt;</code> to un-stage any files. Like <code class="code-inline tex2jax_ignore">git add</code>, this command can be run many times.</div>
-<span class="incontext"><a href="SS_reverseadd.html#p-1076" class="internal">in-context</a></span>
+<h2 class="heading"><span class="type">Paragraph</span></h2>
+<div class="para">You should know that once Git tracks a file (or folder), you can’t just add that file’s name (or folder) to the <code class="code-inline tex2jax_ignore">gitignore</code> file and expect it to disappear. For any files you had Git tracking that you wish it would now ignore, see the instructions in <a href="S_untrackfiles.html" class="internal" title="Section C.3: Git Has Been Updating Files, But Now I Don’t Want It To">Section C.3</a>. Note that any files you treat in this manner will still exist in the commit history of your repo and on any forks for your repo (the next time a user pulls changes from your repo, their copy of the file will be deleted). See <a href="" class="xref" data-knowl="./knowl/warn-untrack-delete.html" title="Warning C.3.0.1">Warning C.3.0.1</a>
+</div>
+<span class="incontext"><a href="sec-hub-gitignore.html#p-1076" class="internal">in-context</a></span>
 </body>
 </html>

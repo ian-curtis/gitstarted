@@ -12,7 +12,15 @@
 </head>
 <body class="ignore-math">
 <h5 class="heading"><span class="type">Paragraph</span></h5>
-<div class="para">We’ve seen how to use the terminal to create new files; however, sometimes files aren’t enough. With the command line, we can also create new directories (represented by folders) for us with <code class="code-inline tex2jax_ignore">mkdir</code>. The <dfn class="terminology">make directory</dfn> command does exactly that: makes a new directory.</div>
+<div class="para logical">
+<div class="para">Closing a file is less trivial. It can be tricky to close a <em class="emphasis">single</em> file, but closing an <em class="emphasis">entire application</em> is not too bad. You need two pieces:</div>
+<ul class="disc">
+<li><div class="para">The command <code class="code-inline tex2jax_ignore">killall</code>
+</div></li>
+<li><div class="para">The name of the application you wish to close.</div></li>
+</ul>
+<div class="para">A few remarks: The <dfn class="terminology">kill all</dfn> command will quit the entire application, not just a single file. Be sure you want to quit (i.e., you have saved any changes) before using <code class="code-inline tex2jax_ignore">killall</code>. Also, application names are case sensitive; that is, <code class="code-inline tex2jax_ignore">killall TextEdit</code> will work fine, but <code class="code-inline tex2jax_ignore">killall textedit</code> will return an error. Finally, be aware that if an application name has a space in it (e.g., Microsoft Word), you will need to enclose that name in quotes: <code class="code-inline tex2jax_ignore">killall 'Microsoft Word'</code>. You can use single or double quotes as long as you use the same style for both quotes.</div>
+</div>
 <span class="incontext"><a href="S_commands.html#p-361" class="internal">in-context</a></span>
 </body>
 </html>

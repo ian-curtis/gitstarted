@@ -296,9 +296,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_commands.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Basic Commands</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Adding Files and Directories</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Removing Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#command-structure" class="internal"><span class="codenumber">2.3.1</span> <span class="title">What is a Command?</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Adding Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Removing Files and Directories</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_advcommands.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Advanced Commands</span></a></div></li>
@@ -469,8 +470,8 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_forcemerge.html" class="internal"><span class="codenumber">C.4</span> <span class="title">Git Won’t Let Me Pull From Upstream or Origin!</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-51" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-53" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_diverge_branch.html" class="internal"><span class="codenumber">C.5</span> <span class="title">Git Says I Have Divergent Branches!</span></a></div></li>
@@ -494,14 +495,14 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="SS_reverseadd"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.1</span> <span class="title">Uh Oh, I Staged the Wrong Files!</span>
 </h2>
-<div class="para" id="p-1073">Once you get the hang of Git, it’s easy to just fly through the three-step process. In doing so, you will inevitably stage (with <code class="code-inline tex2jax_ignore">git add</code>) a file or folder on accident. This is relatively simple to fix. To undo this, follow the next procedure.</div>
+<div class="para" id="p-1078">Once you get the hang of Git, it’s easy to just fly through the three-step process. In doing so, you will inevitably stage (with <code class="code-inline tex2jax_ignore">git add</code>) a file or folder on accident. This is relatively simple to fix. To undo this, follow the next procedure.</div>
 <article class="project project-like" id="reverse-git-add"><a href="" data-knowl="" class="id-ref project-knowl original" data-refid="hk-reverse-git-add"><h2 class="heading">
 <span class="type">Git Procedure</span><span class="space"> </span><span class="codenumber">C.1</span><span class="period">.</span><span class="space"> </span><span class="title">Reversing <code class="code-inline tex2jax_ignore">git add</code>.</span>
-</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-reverse-git-add"><article class="project project-like"><div class="introduction" id="introduction-50"><div class="para" id="p-1074">Oh shoot. What if you add a file you didn’t mean to? This is one reason why there are so many steps to sending files to GitHub. Humans make mistakes and Git gives you the chance to correct any. Should you ever add a file you didn’t mean to add, revist this procedure.</div></div>
+</h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-reverse-git-add"><article class="project project-like"><div class="introduction" id="introduction-50"><div class="para" id="p-1079">Oh shoot. What if you add a file you didn’t mean to? This is one reason why there are so many steps to sending files to GitHub. Humans make mistakes and Git gives you the chance to correct any. Should you ever add a file you didn’t mean to add, revist this procedure.</div></div>
 <article class="task exercise-like" id="task-158"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="p-1075">Identify the file name(s) and extension(s) of the file(s) you mistakenly added.</div></article><article class="task exercise-like" id="task-159"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="p-1076">Use <code class="code-inline tex2jax_ignore">git restore --staged &lt;your-file-name(s)&gt;</code> to un-stage any files. Like <code class="code-inline tex2jax_ignore">git add</code>, this command can be run many times.</div></article><article class="task exercise-like" id="task-160"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="p-1077">It might be wise to verify with <code class="code-inline tex2jax_ignore">git status</code> that everything looks good.</div></article></article></div></section></div>
+<div class="para" id="p-1080">Identify the file name(s) and extension(s) of the file(s) you mistakenly added.</div></article><article class="task exercise-like" id="task-159"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="p-1081">Use <code class="code-inline tex2jax_ignore">git restore --staged &lt;your-file-name(s)&gt;</code> to un-stage any files. Like <code class="code-inline tex2jax_ignore">git add</code>, this command can be run many times.</div></article><article class="task exercise-like" id="task-160"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="p-1082">It might be wise to verify with <code class="code-inline tex2jax_ignore">git status</code> that everything looks good.</div></article></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="app_gittroubles.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="SS_reversecommit.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

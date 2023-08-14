@@ -11,8 +11,54 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h5 class="heading"><span class="type">Paragraph</span></h5>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para logical">
+<div class="para">The <code class="code-inline tex2jax_ignore">mv</code> command has many uses, all revolving around moving and renaming files. There are a few use cases as described below. The title of each case is the situation you may find yourself in followed by a shell of the command, an example command, and a more detailed description of the command. This content is inspired by <a class="external" href="https://sites.ualberta.ca/dept/chemeng/AIX-43/share/man/info/C/a_doc_lib/cmds/aixcmds3/mv.htm" target="_blank">the University of Alberta</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-30-hidden.html" title="Footnote 30"><sup> 30 </sup></a>.</div>
+<dl class="description-list narrow">
+<dt>You already have a file and you want to <em class="emphasis">rename</em> it</dt>
+<dd>
+<div class="para logical"><pre class="code-display tex2jax_ignore">mv &lt;existing-file-name&gt; &lt;new-file-name&gt;</pre></div>
+<div class="para"><code class="code-inline tex2jax_ignore">mv birds.txt cats.txt</code></div>
+<div class="para">Takes prexisting file <code class="code-inline tex2jax_ignore">birds.txt</code> and <em class="emphasis">renames</em> it to <code class="code-inline tex2jax_ignore">cats.txt</code>
+</div>
+</dd>
+<dt>You already have a file and you want to <em class="emphasis">move</em> it AND <em class="emphasis">rename</em> the file</dt>
+<dd>
+<div class="para logical"><pre class="code-display tex2jax_ignore">mv &lt;existing-file-name&gt;
+	&lt;destination-folder-name&gt;/&lt;new-file-name&gt;
+</pre></div>
 <div class="para"><code class="code-inline tex2jax_ignore">mv birds.txt animals/cats.txt</code></div>
+<div class="para">Takes prexisting file <code class="code-inline tex2jax_ignore">birds.txt</code>, <em class="emphasis">renames</em> it to <code class="code-inline tex2jax_ignore">cats.txt</code> and <em class="emphasis">moves</em> it to the <code class="code-inline tex2jax_ignore">animals/</code> folder. (Also removes the original <code class="code-inline tex2jax_ignore">birds.txt</code>)</div>
+</dd>
+<dt>You already have a file and you want to <em class="emphasis">move</em> it AND keep the same file name</dt>
+<dd>
+<div class="para logical"><pre class="code-display tex2jax_ignore">mv &lt;existing-file-name&gt; &lt;destination-folder-name&gt;</pre></div>
+<div class="para"><code class="code-inline tex2jax_ignore">mv birds.txt animals/</code></div>
+<div class="para">Takes prexisting file <code class="code-inline tex2jax_ignore">birds.txt</code> and <em class="emphasis">moves</em> it to the <code class="code-inline tex2jax_ignore">animals/</code> folder.</div>
+</dd>
+<dt>You already have a folder and you want to <em class="emphasis">rename</em> it OR you want to <em class="emphasis">move</em> files and folders in an existing folder to a different folder</dt>
+<dd>
+<div class="para logical"><pre class="code-display tex2jax_ignore">mv &lt;folder-to-move&gt; &lt;destination-folder-name&gt;</pre></div>
+<div class="para"><code class="code-inline tex2jax_ignore">mv drums/ instruments/</code></div>
+<div class="para">Takes prexisting folder <code class="code-inline tex2jax_ignore">drums/</code> and <em class="emphasis">moves</em> it into the folder <code class="code-inline tex2jax_ignore">instruments/</code>. If <code class="code-inline tex2jax_ignore">instruments/</code> didn’t exists, <code class="code-inline tex2jax_ignore">drums/</code> would have been <em class="emphasis">renamed</em> to <code class="code-inline tex2jax_ignore">instruments/</code>
+</div>
+</dd>
+<dt>You already have <em class="emphasis">multiple</em> files and you want to <em class="emphasis">move</em> them to another folder</dt>
+<dd>
+<div class="para logical"><pre class="code-display tex2jax_ignore">mv &lt;existing-file-name1&gt; &lt;existing-file-name2&gt; ...
+	&lt;destination-folder-name&gt;
+</pre></div>
+<div class="para"><code class="code-inline tex2jax_ignore">mv dogs.txt cats.txt animals/mammals/</code></div>
+<div class="para">Takes prexisting files <code class="code-inline tex2jax_ignore">dogs.txt</code> and <code class="code-inline tex2jax_ignore">cats.txt</code> and <em class="emphasis">moves</em> them to the <code class="code-inline tex2jax_ignore">animals/mammals/</code> folder.</div>
+</dd>
+<dt>You already have a file and you want to <em class="emphasis">copy</em> it to another folder</dt>
+<dd>
+<div class="para logical"><pre class="code-display tex2jax_ignore">cp &lt;existing-file-name&gt; &lt;destination-folder-name&gt;</pre></div>
+<div class="para"><code class="code-inline tex2jax_ignore">cp dogs.txt animals/mammals/</code></div>
+<div class="para">(Notice the different command, <code class="code-inline tex2jax_ignore">cp</code>) Takes prexisting file <code class="code-inline tex2jax_ignore">dogs.txt</code> and <em class="emphasis">copies</em> it to the <code class="code-inline tex2jax_ignore">animals/mammals/</code> folder. Keeps the original <code class="code-inline tex2jax_ignore">dogs.txt</code>.</div>
+</dd>
+</dl>
+</div>
 <span class="incontext"><a href="S_advcommands.html#p-434" class="internal">in-context</a></span>
 </body>
 </html>

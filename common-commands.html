@@ -296,9 +296,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_commands.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Basic Commands</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Adding Files and Directories</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Removing Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#command-structure" class="internal"><span class="codenumber">2.3.1</span> <span class="title">What is a Command?</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Adding Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Removing Files and Directories</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_advcommands.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Advanced Commands</span></a></div></li>
@@ -469,8 +470,8 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_forcemerge.html" class="internal"><span class="codenumber">C.4</span> <span class="title">Git Won’t Let Me Pull From Upstream or Origin!</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-51" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-53" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_diverge_branch.html" class="internal"><span class="codenumber">C.5</span> <span class="title">Git Says I Have Divergent Branches!</span></a></div></li>
@@ -494,33 +495,33 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="common-commands"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">D.1</span> <span class="title">General Commands</span>
 </h2>
-<div class="para logical" id="p-1126">
+<div class="para logical" id="p-1131">
 <div class="para">Here you find a list of commands that can be used at the command line anywhere (and aren’t necessarily associated with Git).</div>
 <dl class="description-list">
-<dt id="li-267"><code class="code-inline tex2jax_ignore">pwd</code></dt>
-<dd><div class="para" id="p-1127">Used to find the present working directory (i.e., the current active folder).</div></dd>
-<dt id="li-268"><code class="code-inline tex2jax_ignore">cd</code></dt>
-<dd><div class="para" id="p-1128">Used to change the active directory (folder) in the terminal. Requires either the file path to move into or <code class="code-inline tex2jax_ignore">..</code> to move backwards one level.</div></dd>
-<dt id="li-269"><code class="code-inline tex2jax_ignore">ls</code></dt>
-<dd><div class="para" id="p-1129">Used to list the contents of the active folder.</div></dd>
-<dt id="li-270"><code class="code-inline tex2jax_ignore">touch</code></dt>
-<dd><div class="para" id="p-1130">Used to create files. Also requires the filename and file extension of the file you wish to create.</div></dd>
-<dt id="li-271">
+<dt id="li-270"><code class="code-inline tex2jax_ignore">pwd</code></dt>
+<dd><div class="para" id="p-1132">Used to find the present working directory (i.e., the current active folder).</div></dd>
+<dt id="li-271"><code class="code-inline tex2jax_ignore">cd</code></dt>
+<dd><div class="para" id="p-1133">Used to change the active directory (folder) in the terminal. Requires either the file path to move into or <code class="code-inline tex2jax_ignore">..</code> to move backwards one level.</div></dd>
+<dt id="li-272"><code class="code-inline tex2jax_ignore">ls</code></dt>
+<dd><div class="para" id="p-1134">Used to list the contents of the active folder.</div></dd>
+<dt id="li-273"><code class="code-inline tex2jax_ignore">touch</code></dt>
+<dd><div class="para" id="p-1135">Used to create files. Also requires the filename and file extension of the file you wish to create.</div></dd>
+<dt id="li-274">
 <code class="code-inline tex2jax_ignore">open</code> (or <code class="code-inline tex2jax_ignore">start</code>)</dt>
-<dd><div class="para" id="p-1131">Used to open a file, folder, or application using the defualt application/service</div></dd>
-<dt id="li-272">
+<dd><div class="para" id="p-1136">Used to open a file, folder, or application using the defualt application/service</div></dd>
+<dt id="li-275">
 <code class="code-inline tex2jax_ignore">killall</code> (Mac only)</dt>
-<dd><div class="para" id="p-1132">Used to close an entire application</div></dd>
-<dt id="li-273"><code class="code-inline tex2jax_ignore">mkdir</code></dt>
-<dd><div class="para" id="p-1133">Used to create a new folder. Also requires the name of the folder to create.</div></dd>
-<dt id="li-274"><code class="code-inline tex2jax_ignore">rm</code></dt>
-<dd><div class="para" id="p-1134">Used to remove a file (without warnings). Also requires the file name and extension you want to remove.</div></dd>
-<dt id="li-275"><code class="code-inline tex2jax_ignore">rmdir</code></dt>
-<dd><div class="para" id="p-1135">Used to remove a folder (without warnings). Also requires the folder name to remove.</div></dd>
-<dt id="li-276"><code class="code-inline tex2jax_ignore">clear</code></dt>
-<dd><div class="para" id="p-1136">Used to clear the terminal screen and bring the cursor back to the top of the window.</div></dd>
-<dt id="li-277"><code class="code-inline tex2jax_ignore">code</code></dt>
-<dd><div class="para" id="p-1137">Used to open files or folders with the application <abbr class="initialism">VS</abbr> Code.</div></dd>
+<dd><div class="para" id="p-1137">Used to close an entire application</div></dd>
+<dt id="li-276"><code class="code-inline tex2jax_ignore">mkdir</code></dt>
+<dd><div class="para" id="p-1138">Used to create a new folder. Also requires the name of the folder to create.</div></dd>
+<dt id="li-277"><code class="code-inline tex2jax_ignore">rm</code></dt>
+<dd><div class="para" id="p-1139">Used to remove a file (without warnings). Also requires the file name and extension you want to remove.</div></dd>
+<dt id="li-278"><code class="code-inline tex2jax_ignore">rmdir</code></dt>
+<dd><div class="para" id="p-1140">Used to remove a folder (without warnings). Also requires the folder name to remove.</div></dd>
+<dt id="li-279"><code class="code-inline tex2jax_ignore">clear</code></dt>
+<dd><div class="para" id="p-1141">Used to clear the terminal screen and bring the cursor back to the top of the window.</div></dd>
+<dt id="li-280"><code class="code-inline tex2jax_ignore">code</code></dt>
+<dd><div class="para" id="p-1142">Used to open files or folders with the application <abbr class="initialism">VS</abbr> Code.</div></dd>
 </dl>
 </div></section></div>
 <div class="ptx-content-footer">

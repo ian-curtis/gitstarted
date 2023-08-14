@@ -296,9 +296,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_commands.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Basic Commands</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Adding Files and Directories</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Removing Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#command-structure" class="internal"><span class="codenumber">2.3.1</span> <span class="title">What is a Command?</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Adding Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Removing Files and Directories</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_advcommands.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Advanced Commands</span></a></div></li>
@@ -469,8 +470,8 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_forcemerge.html" class="internal"><span class="codenumber">C.4</span> <span class="title">Git Won’t Let Me Pull From Upstream or Origin!</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-51" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-53" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_diverge_branch.html" class="internal"><span class="codenumber">C.5</span> <span class="title">Git Says I Have Divergent Branches!</span></a></div></li>
@@ -495,8 +496,8 @@ window.MathJax = {
 <section class="section" id="S_hub_revert_commit"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">C.6</span> <span class="title">Reverting To a Previous Commit</span>
 </h2>
-<div class="para" id="p-1113">I have never had to do this (yet) so I don’t have direct experience here. However, <a class="external" href="https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6" target="_blank">user gunjanpatel on GitHub</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-68" id="fn-68"><sup> 68 </sup></a> has created a nice guide. It appears that <code class="code-inline tex2jax_ignore">git reset HEAD^ --hard</code> and then <code class="code-inline tex2jax_ignore">git push origin -f</code> will work. The <code class="code-inline tex2jax_ignore">-f</code> switch forces the push and ignores errors.</div>
-<div class="para" id="p-1114">Some of the guide above refers to what is known as a <dfn class="terminology">commit hash</dfn>, a unique string that identifies each commit on GitHub. These are actually so unique that we only need the first few characters of the string to identify the commit. You can find the hash by using <a href="S_hub-seecommits.html" class="internal" title="Section B.2: Commit History">Section B.2</a>. The string is the random numbers/letters found on the right side of each commit.</div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-68"><div class="fn"><code class="code-inline tex2jax_ignore">gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6</code></div></div>
+<div class="para" id="p-1118">I have never had to do this (yet) so I don’t have direct experience here. However, <a class="external" href="https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6" target="_blank">user gunjanpatel on GitHub</a><a href="" data-knowl="" class="id-ref fn-knowl original" data-refid="hk-fn-68" id="fn-68"><sup> 68 </sup></a> has created a nice guide. It appears that <code class="code-inline tex2jax_ignore">git reset HEAD^ --hard</code> and then <code class="code-inline tex2jax_ignore">git push origin -f</code> will work. The <code class="code-inline tex2jax_ignore">-f</code> switch forces the push and ignores errors.</div>
+<div class="para" id="p-1119">Some of the guide above refers to what is known as a <dfn class="terminology">commit hash</dfn>, a unique string that identifies each commit on GitHub. These are actually so unique that we only need the first few characters of the string to identify the commit. You can find the hash by using <a href="S_hub-seecommits.html" class="internal" title="Section B.2: Commit History">Section B.2</a>. The string is the random numbers/letters found on the right side of each commit.</div></section><div class="hidden-content tex2jax_ignore" id="hk-fn-68"><div class="fn"><code class="code-inline tex2jax_ignore">gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6</code></div></div>
 </div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_diverge_branch.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="S_mergeconflict.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

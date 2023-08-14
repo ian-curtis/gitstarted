@@ -296,9 +296,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_commands.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Basic Commands</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Adding Files and Directories</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Removing Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#command-structure" class="internal"><span class="codenumber">2.3.1</span> <span class="title">What is a Command?</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Adding Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Removing Files and Directories</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_advcommands.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Advanced Commands</span></a></div></li>
@@ -469,8 +470,8 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_forcemerge.html" class="internal"><span class="codenumber">C.4</span> <span class="title">Git Won’t Let Me Pull From Upstream or Origin!</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-51" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-53" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_diverge_branch.html" class="internal"><span class="codenumber">C.5</span> <span class="title">Git Says I Have Divergent Branches!</span></a></div></li>
@@ -494,10 +495,10 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="sec-hub-gitignore"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">B.7</span> <span class="title">The <code class="code-inline tex2jax_ignore">.gitignore</code> File</span>
 </h2>
-<div class="para" id="p-1066">As you gain more experience with Git and GitHub, you may start wondering if there is a way to hide files from public view. Your project may come with files that are private to you/your company and are not necessary to share with everyone else. You also may have programs that generate files that are used by a second program and these intermediate files do not need to be shared. Whatever the circumstance, you can choose to block a file or folder from being tracked by Git.</div>
-<div class="para" id="p-1067">The file for this is <code class="code-inline tex2jax_ignore">.gitignore</code>. The dot in front of the file name is necessary as this specifies that the file is, by default, “hidden” when being viewed in a file browser (to prevent accidentaly deletion). You should be able to edit this file on GitHub or access it with your text editor.</div>
-<div class="para" id="p-1068">It is possible to generate a <code class="code-inline tex2jax_ignore">gitignore</code> template when creating a repo. These can be helpful but for my projects, I prefer to add the file manually and fill it in myself as I go.</div>
-<div class="para logical" id="p-1069">
+<div class="para" id="p-1071">As you gain more experience with Git and GitHub, you may start wondering if there is a way to hide files from public view. Your project may come with files that are private to you/your company and are not necessary to share with everyone else. You also may have programs that generate files that are used by a second program and these intermediate files do not need to be shared. Whatever the circumstance, you can choose to block a file or folder from being tracked by Git.</div>
+<div class="para" id="p-1072">The file for this is <code class="code-inline tex2jax_ignore">.gitignore</code>. The dot in front of the file name is necessary as this specifies that the file is, by default, “hidden” when being viewed in a file browser (to prevent accidentaly deletion). You should be able to edit this file on GitHub or access it with your text editor.</div>
+<div class="para" id="p-1073">It is possible to generate a <code class="code-inline tex2jax_ignore">gitignore</code> template when creating a repo. These can be helpful but for my projects, I prefer to add the file manually and fill it in myself as I go.</div>
+<div class="para logical" id="p-1074">
 <div class="para">All that goes in this file is a list of file/folder names and/or extensions you wish for Git to ignore. Keep one name per line. You can add comments to the file (to help break up sections) by starting a line with a hashtag (fine, a pound sign) and a space: <code class="code-inline tex2jax_ignore"># This is a comment</code>. For example,</div>
 <pre class="code-display tex2jax_ignore"># Ignore generated images folder
 generated-images/
@@ -507,8 +508,8 @@ secret.txt
 private_data.csv
 </pre>
 </div>
-<div class="para" id="p-1070">As a bonus, <code class="code-inline tex2jax_ignore">gitignore</code> files accept standard generalizing arguments and wildcards. For example, <code class="code-inline tex2jax_ignore">*.pdf</code> will ignore anything with the <code class="code-inline tex2jax_ignore">.pdf</code> file extension.</div>
-<div class="para" id="p-1071">You should know that once Git tracks a file (or folder), you can’t just add that file’s name (or folder) to the <code class="code-inline tex2jax_ignore">gitignore</code> file and expect it to disappear. For any files you had Git tracking that you wish it would now ignore, see the instructions in <a href="S_untrackfiles.html" class="internal" title="Section C.3: Git Has Been Updating Files, But Now I Don’t Want It To">Section C.3</a>. Note that any files you treat in this manner will still exist in the commit history of your repo and on any forks for your repo (the next time a user pulls changes from your repo, their copy of the file will be deleted). See <a href="" class="xref" data-knowl="./knowl/warn-untrack-delete.html" title="Warning C.3.0.1">Warning C.3.0.1</a>
+<div class="para" id="p-1075">As a bonus, <code class="code-inline tex2jax_ignore">gitignore</code> files accept standard generalizing arguments and wildcards. For example, <code class="code-inline tex2jax_ignore">*.pdf</code> will ignore anything with the <code class="code-inline tex2jax_ignore">.pdf</code> file extension.</div>
+<div class="para" id="p-1076">You should know that once Git tracks a file (or folder), you can’t just add that file’s name (or folder) to the <code class="code-inline tex2jax_ignore">gitignore</code> file and expect it to disappear. For any files you had Git tracking that you wish it would now ignore, see the instructions in <a href="S_untrackfiles.html" class="internal" title="Section C.3: Git Has Been Updating Files, But Now I Don’t Want It To">Section C.3</a>. Note that any files you treat in this manner will still exist in the commit history of your repo and on any forks for your repo (the next time a user pulls changes from your repo, their copy of the file will be deleted). See <a href="" class="xref" data-knowl="./knowl/warn-untrack-delete.html" title="Warning C.3.0.1">Warning C.3.0.1</a>
 </div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_hub_delete_repo.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="app_gittroubles.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>

@@ -296,9 +296,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_commands.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Basic Commands</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Adding Files and Directories</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Removing Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#command-structure" class="internal"><span class="codenumber">2.3.1</span> <span class="title">What is a Command?</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Adding Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Removing Files and Directories</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_advcommands.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Advanced Commands</span></a></div></li>
@@ -469,8 +470,8 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_forcemerge.html" class="internal"><span class="codenumber">C.4</span> <span class="title">Git Won’t Let Me Pull From Upstream or Origin!</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-51" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-53" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_diverge_branch.html" class="internal"><span class="codenumber">C.5</span> <span class="title">Git Says I Have Divergent Branches!</span></a></div></li>
@@ -494,16 +495,16 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="S_hub_delete_repo"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">B.6</span> <span class="title">Deleting a Repository</span>
 </h2>
-<div class="para" id="p-1059">So you really to delete a repository? Think long and hard about this one. Are you sure? Are you really sure? Deleting repos is <em class="emphasis">irreversible</em> and can have lasting effects. For instance, all forks will be broken, but not deleted. If you delete a private repo, all forks will also be deleted. Any website that contains a link to your repo will no longer work and people might wonder where it went. And so on.</div>
-<div class="para" id="p-1060">But here you are, so clearly you have decided to delete one. To delete a repository, you have to enter the danger zone (<span class="booktitle">Top Gun</span> anyone?).</div>
+<div class="para" id="p-1064">So you really to delete a repository? Think long and hard about this one. Are you sure? Are you really sure? Deleting repos is <em class="emphasis">irreversible</em> and can have lasting effects. For instance, all forks will be broken, but not deleted. If you delete a private repo, all forks will also be deleted. Any website that contains a link to your repo will no longer work and people might wonder where it went. And so on.</div>
+<div class="para" id="p-1065">But here you are, so clearly you have decided to delete one. To delete a repository, you have to enter the danger zone (<span class="booktitle">Top Gun</span> anyone?).</div>
 <article class="activity project-like" id="hub-delete-repo"><a href="" data-knowl="" class="id-ref activity-knowl original" data-refid="hk-hub-delete-repo"><h2 class="heading">
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">B.1</span><span class="period">.</span><span class="space"> </span><span class="title">Deleting a Repository.</span>
 </h2></a></article><div class="hidden-content tex2jax_ignore" id="hk-hub-delete-repo"><article class="activity project-like"><article class="task exercise-like" id="task-153"><h3 class="heading"><span class="codenumber">(a)</span></h3>
-<div class="para" id="p-1061">Navigate to the repo you want to delete.</div></article><article class="task exercise-like" id="task-154"><h3 class="heading"><span class="codenumber">(b)</span></h3>
-<div class="para" id="p-1062">Click on the Settings tab. This should be the settings for the repo itself, not the general settings for your profile.</div></article><article class="task exercise-like" id="task-155"><h3 class="heading"><span class="codenumber">(c)</span></h3>
-<div class="para" id="p-1063">Scroll all the way down to the Danger Zone.</div></article><article class="task exercise-like" id="task-156"><h3 class="heading"><span class="codenumber">(d)</span></h3>
-<div class="para" id="p-1064">Click on “Delete this repository”</div></article><article class="task exercise-like" id="task-157"><h3 class="heading"><span class="codenumber">(e)</span></h3>
-<div class="para" id="p-1065">Read the dialog box that pops up. Once you have decided to delete the repo, type in what GitHub prompts you to type in and hit confirm.</div></article></article></div></section></div>
+<div class="para" id="p-1066">Navigate to the repo you want to delete.</div></article><article class="task exercise-like" id="task-154"><h3 class="heading"><span class="codenumber">(b)</span></h3>
+<div class="para" id="p-1067">Click on the Settings tab. This should be the settings for the repo itself, not the general settings for your profile.</div></article><article class="task exercise-like" id="task-155"><h3 class="heading"><span class="codenumber">(c)</span></h3>
+<div class="para" id="p-1068">Scroll all the way down to the Danger Zone.</div></article><article class="task exercise-like" id="task-156"><h3 class="heading"><span class="codenumber">(d)</span></h3>
+<div class="para" id="p-1069">Click on “Delete this repository”</div></article><article class="task exercise-like" id="task-157"><h3 class="heading"><span class="codenumber">(e)</span></h3>
+<div class="para" id="p-1070">Read the dialog box that pops up. Once you have decided to delete the repo, type in what GitHub prompts you to type in and hit confirm.</div></article></article></div></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="S_hub_codespace.html" title="Previous"><span class="icon">&lt;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon">^</span><span class="name">Top</span></a><a class="next-button button" href="sec-hub-gitignore.html" title="Next"><span class="name">Next</span><span class="icon">&gt;</span></a>
 </div></main>

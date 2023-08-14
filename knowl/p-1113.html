@@ -11,8 +11,8 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body class="ignore-math">
-<h2 class="heading"><span class="type">Paragraph</span></h2>
-<div class="para">I have never had to do this (yet) so I don’t have direct experience here. However, <a class="external" href="https://gist.github.com/gunjanpatel/18f9e4d1eb609597c50c2118e416e6a6" target="_blank">user gunjanpatel on GitHub</a><a href="" class="fn-knowl original" data-knowl="./knowl/fn-68-hidden.html" title="Footnote 68"><sup> 68 </sup></a> has created a nice guide. It appears that <code class="code-inline tex2jax_ignore">git reset HEAD^ --hard</code> and then <code class="code-inline tex2jax_ignore">git push origin -f</code> will work. The <code class="code-inline tex2jax_ignore">-f</code> switch forces the push and ignores errors.</div>
-<span class="incontext"><a href="S_hub_revert_commit.html#p-1113" class="internal">in-context</a></span>
+<h4 class="heading"><span class="type">Paragraph</span></h4>
+<div class="para">Here, the fix is usually pretty easy but I have to teach you a new term. We need to <dfn class="terminology">rebase</dfn> the branch. When a pull happens, Git fetches new commits from GitHub and merges them into your branch (and this merge is actually a commit in itself). The rebase command will temporarily remove your new commits from the commit history, then pull in the new changes and reinstate your commit into the timeline.</div>
+<span class="incontext"><a href="S_diverge_branch.html#p-1113" class="internal">in-context</a></span>
 </body>
 </html>

@@ -296,9 +296,10 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_commands.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Basic Commands</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.1</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Adding Files and Directories</span></a></div></li>
-<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Removing Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#command-structure" class="internal"><span class="codenumber">2.3.1</span> <span class="title">What is a Command?</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#navigatecommline" class="internal"><span class="codenumber">2.3.2</span> <span class="title">Navigating Your Computer With the Command Line</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#createfiles" class="internal"><span class="codenumber">2.3.3</span> <span class="title">Adding Files and Directories</span></a></div></li>
+<li><div class="toc-item"><a href="S_commands.html#removefiles" class="internal"><span class="codenumber">2.3.4</span> <span class="title">Removing Files and Directories</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_advcommands.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Advanced Commands</span></a></div></li>
@@ -469,8 +470,8 @@ window.MathJax = {
 <li>
 <div class="toc-item"><a href="S_forcemerge.html" class="internal"><span class="codenumber">C.4</span> <span class="title">Git Won’t Let Me Pull From Upstream or Origin!</span></a></div>
 <ul class="structural">
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-51" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
-<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-52" class="internal"><span class="codenumber">C.4.1</span> <span class="title">Your Local Changes Are Irrelevant and You Want Them Overwritten</span></a></div></li>
+<li><div class="toc-item"><a href="S_forcemerge.html#subsection-53" class="internal"><span class="codenumber">C.4.2</span> <span class="title">Your Local Changes are Good and You Want to Keep Them</span></a></div></li>
 </ul>
 </li>
 <li><div class="toc-item"><a href="S_diverge_branch.html" class="internal"><span class="codenumber">C.5</span> <span class="title">Git Says I Have Divergent Branches!</span></a></div></li>
@@ -494,28 +495,28 @@ window.MathJax = {
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="section" id="git-commands"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">D.2</span> <span class="title">Git Commands</span>
 </h2>
-<div class="para logical" id="p-1138">
+<div class="para logical" id="p-1143">
 <div class="para">This section contains the most common commands used at the command line to interact with Git. To see these commands in the context of a workflow, see <a href="S_gitsumm.html" class="internal" title="Section 4.5: Summary">Section 4.5</a> and <a href="S_gitcollabsumm.html" class="internal" title="Section 6.5: Summary">Section 6.5</a>.</div>
 <dl class="description-list">
-<dt id="li-278"><code class="code-inline tex2jax_ignore">git clone</code></dt>
-<dd><div class="para" id="p-1139">Used to copy (“clone”) a repository from GitHub to a local source. Also requires an HTTPS link copied from GitHub.</div></dd>
-<dt id="li-279"><code class="code-inline tex2jax_ignore">git branch</code></dt>
-<dd><div class="para" id="p-1140">Used to create a new branch in the background. Also requires the name of the branch you wish to create.</div></dd>
-<dt id="li-280"><code class="code-inline tex2jax_ignore">git switch</code></dt>
+<dt id="li-281"><code class="code-inline tex2jax_ignore">git clone</code></dt>
+<dd><div class="para" id="p-1144">Used to copy (“clone”) a repository from GitHub to a local source. Also requires an HTTPS link copied from GitHub.</div></dd>
+<dt id="li-282"><code class="code-inline tex2jax_ignore">git branch</code></dt>
+<dd><div class="para" id="p-1145">Used to create a new branch in the background. Also requires the name of the branch you wish to create.</div></dd>
+<dt id="li-283"><code class="code-inline tex2jax_ignore">git switch</code></dt>
 <dd>
-<div class="para" id="p-1141">Used to change branches. Also requires the branch name you wish to change to.</div>
-<div class="para" id="p-1142">Can be used as <code class="code-inline tex2jax_ignore">git switch -c</code> with a branch name to create and change to a branch automatically (i.e., <code class="code-inline tex2jax_ignore">git branch</code> is not required).</div>
+<div class="para" id="p-1146">Used to change branches. Also requires the branch name you wish to change to.</div>
+<div class="para" id="p-1147">Can be used as <code class="code-inline tex2jax_ignore">git switch -c</code> with a branch name to create and change to a branch automatically (i.e., <code class="code-inline tex2jax_ignore">git branch</code> is not required).</div>
 </dd>
-<dt id="li-281"><code class="code-inline tex2jax_ignore">git status</code></dt>
-<dd><div class="para" id="p-1143">Used to check up on the state of Git operations. Can be entered at any time in the Git process.</div></dd>
-<dt id="li-282"><code class="code-inline tex2jax_ignore">git add</code></dt>
-<dd><div class="para" id="p-1144">Used to stage files to prepare them for committing and attaching a commit message. Requires either a <code class="code-inline tex2jax_ignore">.</code> (to add all modified/new files) or a number of file and folder names.</div></dd>
-<dt id="li-283"><code class="code-inline tex2jax_ignore">git commit -m</code></dt>
-<dd><div class="para" id="p-1145">Used to commit files and to attach a commit message (surrounded in quotes). Automatically attaches this message to the files staged using <code class="code-inline tex2jax_ignore">git add</code> and makes a stamp in the respective file timelines.</div></dd>
-<dt id="li-284"><code class="code-inline tex2jax_ignore">git push</code></dt>
-<dd><div class="para" id="p-1146">Used to push changes from a local source to GitHub. Requires the remote repository (<code class="code-inline tex2jax_ignore">origin</code> or <code class="code-inline tex2jax_ignore">upstream</code>) and the branch name you wish to send changes to.</div></dd>
-<dt id="li-285"><code class="code-inline tex2jax_ignore">git pull</code></dt>
-<dd><div class="para" id="p-1147">Used to pull in changes from GitHub to a local repository. Requires the remote repository (<code class="code-inline tex2jax_ignore">origin</code> or <code class="code-inline tex2jax_ignore">upstream</code>) and the branch name you wish to pull changes from.</div></dd>
+<dt id="li-284"><code class="code-inline tex2jax_ignore">git status</code></dt>
+<dd><div class="para" id="p-1148">Used to check up on the state of Git operations. Can be entered at any time in the Git process.</div></dd>
+<dt id="li-285"><code class="code-inline tex2jax_ignore">git add</code></dt>
+<dd><div class="para" id="p-1149">Used to stage files to prepare them for committing and attaching a commit message. Requires either a <code class="code-inline tex2jax_ignore">.</code> (to add all modified/new files) or a number of file and folder names.</div></dd>
+<dt id="li-286"><code class="code-inline tex2jax_ignore">git commit -m</code></dt>
+<dd><div class="para" id="p-1150">Used to commit files and to attach a commit message (surrounded in quotes). Automatically attaches this message to the files staged using <code class="code-inline tex2jax_ignore">git add</code> and makes a stamp in the respective file timelines.</div></dd>
+<dt id="li-287"><code class="code-inline tex2jax_ignore">git push</code></dt>
+<dd><div class="para" id="p-1151">Used to push changes from a local source to GitHub. Requires the remote repository (<code class="code-inline tex2jax_ignore">origin</code> or <code class="code-inline tex2jax_ignore">upstream</code>) and the branch name you wish to send changes to.</div></dd>
+<dt id="li-288"><code class="code-inline tex2jax_ignore">git pull</code></dt>
+<dd><div class="para" id="p-1152">Used to pull in changes from GitHub to a local repository. Requires the remote repository (<code class="code-inline tex2jax_ignore">origin</code> or <code class="code-inline tex2jax_ignore">upstream</code>) and the branch name you wish to pull changes from.</div></dd>
 </dl>
 </div></section></div>
 <div class="ptx-content-footer">
