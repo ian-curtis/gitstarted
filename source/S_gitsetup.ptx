@@ -321,7 +321,7 @@
       </console>
 
       <p>
-        By adding the <c>-c</c> switch to the <c>switch</c> command, Git creates a new branch with
+        By adding the <c>-c</c> argument to the <c>switch</c> command, Git creates a new branch with
         the title given and checks out that branch. This is quite useful if you are only creating
         one branch and want to switch right to it. If you are uncomfortable with this, then feel free
         to continue using the method in <xref ref="gitproc-branches"/>. Each will get you to the same place.
