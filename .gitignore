@@ -28,3 +28,7 @@ error_syntax.log
 *.synctex.gz
 *.toc
 *.synctex(busy)
+
+logs/
+codechat_config.yaml
+*.bak

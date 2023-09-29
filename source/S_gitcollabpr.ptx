@@ -130,7 +130,8 @@
           <p>
             This step will only have to be done once per repo that you have forked, then cloned. When you clone a fork, the connection between origin and upstream is not carried over. If I tried to pull from upstream without this connection, I would get an error:
           </p>
-            <console>
+            <console prompt="> ">
+              <input>git pull upstream main</input>
               <output>
               fatal: 'upstream' does not appear to be a git repository
               fatal: Coult not read from remote repository.
