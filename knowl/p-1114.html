@@ -12,7 +12,7 @@
 </head>
 <body class="ignore-math">
 <h4 class="heading"><span class="type">Paragraph</span></h4>
-<div class="para">If you want to avoid potential large error messages like this again, you might consider changing Git’s default behavior. Instead of fetching and merging, you can do a fast-forward merge which does not do a merge commit. When a fast forward is not possible, the error message is much shorter and then you can use the rebase command to fix things.</div>
+<div class="para">Here, the fix is usually pretty easy but I have to teach you a new term. We need to <dfn class="terminology">rebase</dfn> the branch. When a pull happens, Git fetches new commits from GitHub and merges them into your branch (and this merge is actually a commit in itself). The rebase command will temporarily remove your new commits from the commit history, then pull in the new changes and reinstate your commit into the timeline.</div>
 <span class="incontext"><a href="S_diverge_branch.html#p-1114" class="internal">in-context</a></span>
 </body>
 </html>
