@@ -4,6 +4,7 @@
 output/html
 output/html-subset
 output/latex-subset
+output/stage
 
 # assets generated from source
 generated-assets
