@@ -129,7 +129,7 @@
         <figure xml:id="fig-hub-clone-box">
           <caption>The cloning dialog box on GitHub</caption>
           <image source="hub_clone_box" width="60%">
-            <description>The Code box which contains the Local tab which contains an HTTPS link to copy.</description>
+            <description><p>The Code box which contains the Local tab which contains an HTTPS link to copy.</p></description>
           </image>
         </figure>
       </task>
@@ -148,7 +148,7 @@
           time you use a Git command, you start with <c>git</c>, then the command. For cloning:
         </p>
 
-          <console>
+          <console prompt="> ">
             <input>
               git clone &lt;copied-https-string>
             </input>
@@ -242,7 +242,7 @@
           be using Git. To create a new branch, use the following:
         </p>
 
-        <console>
+        <console prompt="> ">
           <input>
             git branch &lt;branch-name>
           </input>
@@ -253,7 +253,7 @@
           branch now, with the name of <c>country</c>. So,
         </p>
 
-        <console>
+        <console prompt="> ">
           <input>
             git branch country
           </input>
@@ -274,7 +274,7 @@
             With Git, navigating to a new branch is done with the <c>switch</c> command. In general,
           </p>
 
-          <console>
+          <console prompt="> ">
             <input>
               git switch &lt;branch-name>
             </input>
@@ -288,7 +288,7 @@
             reflected in the branch name indicator. Switch to your new branch <c>country</c>:
           </p>
 
-          <console>
+          <console prompt="> ">
             <input>
               git switch country
             </input>
@@ -311,7 +311,7 @@
         Using a little terminal trick, we can actually create a branch and switch to that branch at
         the same time. This uses the <c>-c</c> argument. For our example in <xref ref="gitproc-branches"/>,
       </p>
-      <console>
+      <console prompt="> ">
         <input>
           git switch -c &lt;branch-name>
         </input>

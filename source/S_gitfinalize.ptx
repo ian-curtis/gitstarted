@@ -60,7 +60,7 @@
         <p>
           You might see a console output such as the one below.
         </p>
-        <console>
+        <console prompt="> ">
           <input>
             git status
           </input>
@@ -167,7 +167,7 @@
           </p>
         </statement>
         <answer>
-          <console>
+          <console prompt="> ">
             <input>git status</input>
             <output>
             On branch country
@@ -228,7 +228,7 @@
         <p>
           Type <c>git commit -m "&lt;your-commit-message>"</c> into the command line. For our working example, I might type <c>git commit -m "add birth country"</c>.
         </p>
-        <console>
+        <console prompt="> ">
           <input>git commit -m "add birth country"</input>
           <output>
           [country 137b0bc] add birth country
@@ -251,7 +251,7 @@
         </p>
         </statement>
         <answer>
-          <console>
+          <console prompt="> ">
             <input>git status</input>
             <output>
             On branch country
@@ -365,7 +365,7 @@
               </p>
             </statement>
             <solution>
-              <console>
+              <console prompt="> ">
                 <input>git push</input>
                 <output>
                 fatal: The current branch country has no upstream branch.
@@ -387,7 +387,7 @@
               </p>
             </statement>
             <solution>
-              <console>
+              <console prompt="> ">
               <input>git push origin</input>
                 <output>
                 fatal: The current branch country has no upstream branch.
@@ -409,7 +409,7 @@
               </p>
             </statement>
             <solution>
-              <console>
+              <console prompt="> ">
               <input>git push country</input>
                 <output>
                 fatal: 'country' does not appear to be a git repository
@@ -453,7 +453,7 @@
             </p>
           </statement>
           <solution>
-            <console>
+            <console prompt="> ">
             <input>git push origin country</input>
               <output>
               Enumerating objects: 5, done.
