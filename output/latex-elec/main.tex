@@ -1,6 +1,6 @@
 %********************************************%
 %*       Generated from PreTeXt source      *%
-%*       on 2023-08-14T11:50:33-04:00       *%
+%*       on 2023-09-29T14:39:12-04:00       *%
 %*   A recent stable commit (2022-07-01):   *%
 %* 6c761d3dba23af92cba35001c852aac04ae99a5f *%
 %*                                          *%
@@ -58,6 +58,11 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% and is necessary for some smaller documents that use partial tcolor boxes
 %% See:  https://github.com/PreTeXtBook/pretext/issues/1624
 \usetikzlibrary{calc}
+%% We use some more exotic tcolorbox keys to restore indentation to parboxes
+\tcbuselibrary{hooks}
+%% Save default paragraph indentation for use later, when adjusting parboxes
+\newlength{\normalparindent}
+\AtBeginDocument{\setlength{\normalparindent}{\parindent}}
 %% Hyperref should be here, but likes to be loaded late
 %%
 %% Inline math delimiters, \(, \), need to be robust
@@ -475,11 +480,11 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 %% End: Semantic Macros
 %% begin: environments for duplicates in solutions divisions
 %% Solutions to inline exercises, style and environment
-\tcbset{ inlinesolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, parbox=false } }
+\tcbset{ inlinesolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, before upper app={\setlength{\parindent}{\normalparindent}} } }
 \newtcolorbox{inlinesolution}[4]{inlinesolutionstyle, title={\hyperref[#4]{#1~#2}\notblank{#3}{\space#3}{}}}
-\tcbset{ activitysolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, parbox=false } }
+\tcbset{ activitysolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, before upper app={\setlength{\parindent}{\normalparindent}} } }
 \newtcolorbox{activitysolution}[4]{activitysolutionstyle, title={\hyperref[#4]{#1~#2}\notblank{#3}{\space#3}{}}}
-\tcbset{ projectsolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, parbox=false } }
+\tcbset{ projectsolutionstyle/.style={bwminimalstyle, runintitlestyle, exercisespacingstyle, after title={\space}, breakable, before upper app={\setlength{\parindent}{\normalparindent}} } }
 \newtcolorbox{projectsolution}[4]{projectsolutionstyle, title={\hyperref[#4]{#1~#2}\notblank{#3}{\space#3}{}}}
 %% "tcolorbox" environment for a single image, occupying entire \linewidth
 %% arguments are left-margin, width, right-margin, as multiples of
@@ -564,7 +569,7 @@ colback=white, colbacktitle=white, coltitle=black, opacityfill=0.0} }
 \tcbset{ consoleboxstyle/.style={left=0pt, right=0pt, top=0ex, bottom=0ex, middle=0pt, toptitle=0pt, bottomtitle=0pt, boxsep=0pt,
 listing only, fontupper=\small\ttfamily,
 colback=white, boxrule=-0.3pt, toprule at break=-0.3pt, bottomrule at break=-0.3pt,
-breakable, parbox=false,
+breakable,
 } }
 \newtcblisting{console}[3]{consoleboxstyle, left skip=#1\linewidth, width=#2\linewidth, listing options={style=consolecodestyle}}
 %% Fancy Verbatim for consoles, preformatted, code display, literate programming
@@ -660,41 +665,41 @@ breakable, parbox=false,
 %% tcolorbox, with styles, for REMARK-LIKE
 %%
 %% note: fairly simple numbered block/structure
-\tcbset{ notestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter from=block]{note}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, notestyle, }
+\tcbset{ notestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\setlength{\parindent}{\normalparindent}}, } }
+\newtcolorbox[use counter from=block]{note}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, notestyle, }
 %% warning: fairly simple numbered block/structure
-\tcbset{ warningstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter from=block]{warning}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, warningstyle, }
+\tcbset{ warningstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\setlength{\parindent}{\normalparindent}}, } }
+\newtcolorbox[use counter from=block]{warning}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, warningstyle, }
 %%
 %% tcolorbox, with styles, for inline exercises
 %%
 %% inlineexercise: fairly simple numbered block/structure
-\tcbset{ inlineexercisestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter from=block]{inlineexercise}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, inlineexercisestyle, }
+\tcbset{ inlineexercisestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\setlength{\parindent}{\normalparindent}}, } }
+\newtcolorbox[use counter from=block]{inlineexercise}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, inlineexercisestyle, }
 %%
 %% tcolorbox, with styles, for PROJECT-LIKE
 %%
 %% activity: fairly simple numbered block/structure
-\tcbset{ activitystyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter from=project-distinct]{activity}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, activitystyle, }
+\tcbset{ activitystyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\setlength{\parindent}{\normalparindent}}, } }
+\newtcolorbox[use counter from=project-distinct]{activity}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, activitystyle, }
 %% project: fairly simple numbered block/structure
-\tcbset{ projectstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox[use counter from=project-distinct]{project}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, parbox=false, after={\par}, projectstyle, }
+\tcbset{ projectstyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\setlength{\parindent}{\normalparindent}}, } }
+\newtcolorbox[use counter from=project-distinct]{project}[3]{title={{#1~\thetcbcounter\notblank{#2}{\space\space#2}{}}}, phantomlabel={#3}, breakable, after={\par}, projectstyle, }
 %%
 %% tcolorbox, with styles, for ASIDE-LIKE
 %%
 %% aside: fairly simple un-numbered block/structure
-\tcbset{ asidestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, } }
-\newtcolorbox{aside}[3]{title={\notblank{#2}{#2}{}}, phantomlabel={#3}, breakable, parbox=false, asidestyle}
+\tcbset{ asidestyle/.style={bwminimalstyle, runintitlestyle, blockspacingstyle, after title={\space}, before upper app={\setlength{\parindent}{\normalparindent}}, } }
+\newtcolorbox{aside}[3]{title={\notblank{#2}{#2}{}}, phantomlabel={#3}, breakable, before upper app={\setlength{\parindent}{\normalparindent}}, asidestyle}
 %%
 %% tcolorbox, with styles, for FIGURE-LIKE
 %%
 %% figureptx: 2-D display structure
 \tcbset{ figureptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, fontlower=\blocktitlefont} }
-\newtcolorbox[use counter from=block]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, parbox=false, figureptxstyle, }
+\newtcolorbox[use counter from=block]{figureptx}[4]{lower separated=false, before lower={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, figureptxstyle, }
 %% tableptx: 2-D display structure
 \tcbset{ tableptxstyle/.style={bwminimalstyle, middle=1ex, blockspacingstyle, coltitle=black, bottomtitle=2ex, titlerule=-0.3pt, fonttitle=\blocktitlefont, breakable} }
-\newtcolorbox[use counter from=block]{tableptx}[4]{title={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, parbox=false, tableptxstyle, }
+\newtcolorbox[use counter from=block]{tableptx}[4]{title={{\textbf{#1~\thetcbcounter}\space#2}}, phantomlabel={#3}, unbreakable, tableptxstyle, }
 %%
 %% xparse environments for introductions and conclusions of divisions
 %%
@@ -715,10 +720,10 @@ breakable, parbox=false,
 {\subparagraph*{#1}\hypertarget{#2}{}}{}
 %% assemblage: fairly simple un-numbered block/structure
 \tcbset{ assemblagestyle/.style={size=normal, colback=white, colbacktitle=white, coltitle=black, colframe=black, rounded corners, titlerule=0.0pt, center title, fonttitle=\blocktitlefont\bfseries, blockspacingstyle, } }
-\newtcolorbox{assemblage}[3]{title={\notblank{#2}{#2}{}}, phantomlabel={#3}, breakable, parbox=false, assemblagestyle}
+\newtcolorbox{assemblage}[3]{title={\notblank{#2}{#2}{}}, phantomlabel={#3}, breakable, before upper app={\setlength{\parindent}{\normalparindent}}, assemblagestyle}
 %% back colophon, at the very end, typically on its own page
 \tcbset{ backcolophonstyle/.style={bwminimalstyle, blockspacingstyle, before skip=5ex, left skip=0.15\textwidth, right skip=0.15\textwidth, fonttitle=\blocktitlefont\large\bfseries, center title, halign=center, bottomtitle=2ex} }
-\newtcolorbox{backcolophon}[2]{title={#1}, phantom={\hypertarget{#2}{}}, breakable, parbox=false, backcolophonstyle}
+\newtcolorbox{backcolophon}[2]{title={#1}, phantom={\hypertarget{#2}{}}, breakable, before upper app={\setlength{\parindent}{\normalparindent}}, backcolophonstyle}
 %% Graphics Preamble Entries
 \usepackage{tikz, pgfplots}
 \usetikzlibrary{positioning,matrix,arrows}
@@ -799,7 +804,7 @@ breakable, parbox=false,
 {\LARGE An Introduction to the Command Line, GitHub, and Git}\\[3\baselineskip]
 {\Large Ian Curtis}\\[3\baselineskip]
 {\Large Published: September 2, 2022}\\[3\baselineskip]
-{\Large Last Updated: August 14, 2023}\\}
+{\Large Last Updated: September 29, 2023}\\}
 \clearpage
 %% end:   title page
 %% begin: copyright-page
@@ -2727,7 +2732,7 @@ See \hyperref[figure-fig-hub-clone-box]{Figure~{\xreffont\ref{figure-fig-hub-clo
 \item{}Open your terminal. Use \mono{cd} to navigate to a folder where you want your repo to live locally. Remember that repositories are essentially folders. When you clone your repo, it will look like a folder on your computer. In some cases, it might not make sense to create a folder and then clone your repo as it will look like a folder that contains a folder. Note that the name of the cloned repo\slash{}folder will be the name of your repository.%
 \item{}You should be at the location you want your repo to be. It is now time to activate Git. Every time you use a Git command, you start with \mono{git}, then the command. For cloning:%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git clone <copied-https-string>}*)
+> (*\consoleinput{git clone <copied-https-string>}*)
 Cloning into 'aboutme'...
 remote: Enumerating objects: 17, done.
 remote: Counting objects: 100% (14/14), done.
@@ -2767,22 +2772,22 @@ Later on in this chapter, you will be adding to your README file. You first will
 \item{}Ensure that your terminal is navigated into your repo. You may have noticed that your terminal changed! The name of your active branch is displayed by the file path. Mine now has a \mono{(main)}. This is how you remember which branch you are editing on.%
 \item{}Remember that each Git command begins with \mono{git} to let your computer know you will be using Git. To create a new branch, use the following:%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git branch <branch-name>}*)
+> (*\consoleinput{git branch <branch-name>}*)
 \end{console}
 where \mono{<branch-name>} is the non-spaced name of your new branch. Try creating a new branch now, with the name of \mono{country}. So,%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git branch country}*)
+> (*\consoleinput{git branch country}*)
 \end{console}
 \item{}Well, shoot. Git still says we're on the main branch. We want it to tell us that we are on the \mono{country} branch. That's because we need to tell Git that we want to work on that new branch. Git doesn't move you to that branch in case you want to make more than one branch at one time.%
 \par
 With Git, navigating to a new branch is done with the \mono{switch} command. In general,%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git switch <branch-name>}*)
+> (*\consoleinput{git switch <branch-name>}*)
 Switched to branch '<branch-name>'
 \end{console}
 If done correctly, Git will tell you that it switched to the new branch. This should be reflected in the branch name indicator. Switch to your new branch \mono{country}:%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git switch country}*)
+> (*\consoleinput{git switch country}*)
 Switched to branch 'country'
 \end{console}
 My terminal now says \mono{(country)} instead of \mono{(main)} so I have verification that the process worked.%
@@ -2791,7 +2796,7 @@ My terminal now says \mono{(country)} instead of \mono{(main)} so I have verific
 \begin{paragraphs}{Branch\slash{}Checkout Shortcut.}{paragraphs-branch-shortcut}%
 Using a little terminal trick, we can actually create a branch and switch to that branch at the same time. This uses the \mono{-c} argument. For our example in \hyperref[project-gitproc-branches]{Git Procedure~{\xreffont\ref{project-gitproc-branches}}},%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git switch -c <branch-name>}*)
+> (*\consoleinput{git switch -c <branch-name>}*)
 Switched to new branch '<branch-name>'
 \end{console}
 By adding the \mono{-c} argument to the \mono{switch} command, Git creates a new branch with the title given and checks out that branch. This is quite useful if you are only creating one branch and want to switch right to it. If you are uncomfortable with this, then feel free to continue using the method in \hyperref[project-gitproc-branches]{Git Procedure~{\xreffont\ref{project-gitproc-branches}}}. Each will get you to the same place.%
@@ -2942,7 +2947,7 @@ The basic command to commit files is (conveniently) \mono{git commit}; \mono{git
 Do keep in mind the guidelines expressed in \hyperref[assemblage-commitmessages]{A Note On Commit Messages}. They apply here, too! (And any other time you are committing.)%
 \item{}Type \mono{git commit -m \textquotedbl{}<your-commit-message>\textquotedbl{}} into the command line. For our working example, I might type \mono{git commit -m \textquotedbl{}add birth country\textquotedbl{}}.%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git commit -m \textquotedbl{}add birth country\textquotedbl{}}*)
+> (*\consoleinput{git commit -m \textquotedbl{}add birth country\textquotedbl{}}*)
 [country 137b0bc] add birth country
  1 file changed, 4 insertions(+)
 \end{console}
@@ -3662,6 +3667,7 @@ This method will first set up a remote to upstream, pull in changes from upstrea
 If you are planning on making more changes to a branch, but want it updated to the latest upstream changes, you can stay on a branch. If you have any uncommitted changes, you might make a merge conflict.%
 \item{}This step will only have to be done once per repo that you have forked, then cloned. When you clone a fork, the connection between origin and upstream is not carried over. If I tried to pull from upstream without this connection, I would get an error:%
 \begin{console}{0}{1}{0}
+> (*\consoleinput{git pull upstream main}*)
 fatal: 'upstream' does not appear to be a git repository
 fatal: Coult not read from remote repository.
 
@@ -4193,7 +4199,7 @@ Ah, perhaps you forgot to make a branch. This error happens to me a lot when I h
 \par
 Or maybe not. Either way, Git says you have a problem with your code and won't let you merge from upstream. Maybe you get a message like this:%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git pull upstream main}*)
+> (*\consoleinput{git pull upstream main}*)
 error: Your local changes to the following files would be overwritten by merge:
         <file-name(s)>
 Please commit your changes or stash them before you merge.
@@ -4249,7 +4255,7 @@ I recently experienced this issue for the first time and had to do some searchin
 \par
 This is a preemptive warning of a merge conflict and occurs when you are trying to pull in or push out a commit and another commit gets in the way. Git doesn't want to create them, so it refuses to push or pull until you fix something. This is not the same error as in \hyperref[section-S_forcemerge]{Section~{\xreffont\ref{section-S_forcemerge}}}, although it is closely related. You might get something like this:%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git push}*)
+> (*\consoleinput{git push}*)
 To <repo-you-are-pushing-to>.git
  ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to '<repo-you-are-pushing-to>.git'
@@ -4266,7 +4272,7 @@ This looks kind of scary. Let's see how to fix this.%
 \par
 You might get another error like this:%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git pull origin main}*)
+> (*\consoleinput{git pull origin main}*)
 remote: Enumerating objects: 1, done.
 remote: Counting objects: 100% (1/1), done.
 remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
@@ -4664,7 +4670,7 @@ Windows: \mono{start food.txt}, \mono{start hobbies.docx}, \mono{start smells.xs
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Solution}.\hypertarget{solution-try-git-status-e-back}{}\quad{}You might see a console output such as the one below.%
 \begin{console}{0}{1}{0}
-(*\consoleinput{git status}*)
+> (*\consoleinput{git status}*)
 On branch country
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -4683,7 +4689,7 @@ We get a lot more information than needed right now, but we will break this outp
 \par\smallskip%
 \noindent\textbf{\blocktitlefont Answer}.\hypertarget{answer-try-git-add-d-c-back}{}\quad{}\mono{git add README.md} OR \mono{git add .}. Neither will produce any output.%
 \item[(c)]\noindent\textbf{\blocktitlefont Answer}.\hypertarget{answer-try-git-add-e-b-back}{}\quad{}\begin{console}{0}{1}{0}
-(*\consoleinput{git status}*)
+> (*\consoleinput{git status}*)
 On branch country
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -4697,7 +4703,7 @@ The text color has changed to green which indicates the process worked.%
 \begin{projectsolution}{Git Procedure}{4.6}{Trying \mono{git commit}.}{project-try-git-commit}%
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
 \item[(c)]\noindent\textbf{\blocktitlefont Answer}.\hypertarget{answer-try-git-commit-e-b-back}{}\quad{}\begin{console}{0}{1}{0}
-(*\consoleinput{git status}*)
+> (*\consoleinput{git status}*)
 On branch country
 nothing to commit, working tree clean
 \end{console}
@@ -4710,7 +4716,7 @@ This output is what is to be expected! Don't fret that it says nothing to commit
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
 \item[(a)]\begin{enumerate}[font=\bfseries,label=(\roman*),ref=\theenumi.\roman*]%
 \item[(i)]\noindent\textbf{\blocktitlefont Solution}.\hypertarget{solution-try-git-push-c-b-b-back}{}\quad{}\begin{console}{0}{1}{0}
-(*\consoleinput{git push}*)
+> (*\consoleinput{git push}*)
 fatal: The current branch country has no upstream branch.
 To push the current branch and set the remote as upstream, use
 
@@ -4718,7 +4724,7 @@ To push the current branch and set the remote as upstream, use
 \end{console}
 Well that looks a little scary. Fatal! That just means that git wansn't able to complete your request and stopped trying. The reason this failed is because the branch \mono{country} is only on your computer, it hasn't yet made it to GitHub (which is what we are trying to do). It is possible to create a remote connection between branches but I often don't especially if I am only working on one branch at a time and if I plan on deleting a branch when I'm done with it. Should you want to create a remote, use the command Git provided.%
 \item[(ii)]\noindent\textbf{\blocktitlefont Solution}.\hypertarget{solution-try-git-push-c-c-b-back}{}\quad{}\begin{console}{0}{1}{0}
-(*\consoleinput{git push origin}*)
+> (*\consoleinput{git push origin}*)
 fatal: The current branch country has no upstream branch.
 To push the current branch and set the remote as upstream, use
 
@@ -4726,7 +4732,7 @@ To push the current branch and set the remote as upstream, use
 \end{console}
 Well, look at that, the same error. This should make sense. You are telling Git to push changes to the origin repo but \mono{country}, the current branch, doesn't have an origin since we created the branch locally.%
 \item[(iii)]\noindent\textbf{\blocktitlefont Solution}.\hypertarget{solution-try-git-push-c-d-b-back}{}\quad{}\begin{console}{0}{1}{0}
-(*\consoleinput{git push country}*)
+> (*\consoleinput{git push country}*)
 fatal: 'country' does not appear to be a git repository
 fatal: Could not read from remote repository.
 
@@ -4738,7 +4744,7 @@ Remember the four parts to \mono{git push}? Well since we forgot Step 3, the rem
 \item[(b)]\begin{enumerate}[font=\bfseries,label=(\roman*),ref=\theenumi.\roman*]%
 \item[(i)]\noindent\textbf{\blocktitlefont Answer}.\hypertarget{answer-try-git-push-d-b-b-back}{}\quad{}Here, to follow with the example, we will use \mono{origin} and the branch name \mono{country}.%
 \item[(ii)]\noindent\textbf{\blocktitlefont Solution}.\hypertarget{solution-try-git-push-d-c-b-back}{}\quad{}\begin{console}{0}{1}{0}
-(*\consoleinput{git push origin country}*)
+> (*\consoleinput{git push origin country}*)
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 4 threads
@@ -4763,7 +4769,7 @@ We get a lot of output for a successful push. Most of it is just information tha
 \begin{enumerate}[font=\bfseries,label=(\alph*),ref=\alph*]%
 \item[(b)]\noindent\textbf{\blocktitlefont Answer}.\hypertarget{answer-try-git-pull-f-b-back}{}\quad{}\mono{git switch main}%
 \item[(c)]\noindent\textbf{\blocktitlefont Answer}.\hypertarget{answer-try-git-pull-g-b-back}{}\quad{}\begin{console}{0}{1}{0}
-(*\consoleinput{git pull origin main}*)
+> (*\consoleinput{git pull origin main}*)
 remote: Enumerating objects: 1, done.
 remote: Counting objects: 100% (1/1), done.
 remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
